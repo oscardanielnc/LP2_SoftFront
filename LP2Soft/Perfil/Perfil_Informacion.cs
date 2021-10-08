@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2Soft
+namespace LP2Soft.Perfil
 {
-    public partial class Form1 : Form
+    public partial class Perfil_Informacion : Form
     {
-        public Form1()
+        public Perfil_Informacion()
         {
             InitializeComponent();
         }
