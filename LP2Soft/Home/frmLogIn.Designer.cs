@@ -1,7 +1,7 @@
 ﻿
 namespace LP2Soft.Home
 {
-    partial class Home_LogIn
+    partial class frmLogIn
     {
         /// <summary>
         /// Required designer variable.

@@ -47,11 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Home\Home_LogIn.cs">
+    <Compile Include="Home\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home\Home_LogIn.Designer.cs">
-      <DependentUpon>Home_LogIn.cs</DependentUpon>
+    <Compile Include="Home\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Perfil\Perfil_Informacion.cs">
       <SubType>Form</SubType>
@@ -61,8 +73,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Home\Home_LogIn.resx">
-      <DependentUpon>Home_LogIn.cs</DependentUpon>
+    <EmbeddedResource Include="Home\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil\Perfil_Informacion.resx">
       <DependentUpon>Perfil_Informacion.cs</DependentUpon>

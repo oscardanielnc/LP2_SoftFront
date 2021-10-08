@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Home
 {
-    public partial class Home_LogIn : Form
+    public partial class frmLogIn : Form
     {
-        public Home_LogIn()
+        public frmLogIn()
         {
             InitializeComponent();
         }

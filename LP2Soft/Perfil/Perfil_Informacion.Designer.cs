@@ -79,6 +79,7 @@ namespace LP2Soft.Perfil
             // 
             // button2
             // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
@@ -87,7 +88,7 @@ namespace LP2Soft.Perfil
             this.button2.ForeColor = System.Drawing.SystemColors.InfoText;
             this.button2.Image = global::LP2Soft.Properties.Resources.exit;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 94);
+            this.button2.Location = new System.Drawing.Point(0, 100);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 50);
             this.button2.TabIndex = 2;
@@ -96,6 +97,7 @@ namespace LP2Soft.Perfil
             // 
             // button1
             // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
@@ -104,7 +106,7 @@ namespace LP2Soft.Perfil
             this.button1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.button1.Image = global::LP2Soft.Properties.Resources.book;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 47);
+            this.button1.Location = new System.Drawing.Point(0, 50);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 50);
             this.button1.TabIndex = 1;
@@ -113,6 +115,7 @@ namespace LP2Soft.Perfil
             // 
             // btnNovedades
             // 
+            this.btnNovedades.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNovedades.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnNovedades.FlatAppearance.BorderSize = 2;
             this.btnNovedades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
