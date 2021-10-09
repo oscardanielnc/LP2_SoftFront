@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Perfil
 {
-    public partial class Perfil_Informacion : Form
+    public partial class frmPerfil_Resenias : Form
     {
-        public Perfil_Informacion()
+        public frmPerfil_Resenias()
         {
             InitializeComponent();
         }

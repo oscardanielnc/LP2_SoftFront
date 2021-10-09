@@ -63,6 +63,16 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap address_book {
+            get {
+                object obj = ResourceManager.GetObject("address-book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bell {
             get {
                 object obj = ResourceManager.GetObject("bell", resourceCulture);
@@ -106,6 +116,16 @@ namespace LP2Soft.Properties {
         internal static System.Drawing.Bitmap campus_pucp_cia_letras_2020_03_1920x1080_1___copia {
             get {
                 object obj = ResourceManager.GetObject("campus-pucp-cia-letras-2020_03-1920x1080-1 - copia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cog {
+            get {
+                object obj = ResourceManager.GetObject("cog", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +193,16 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plus {
+            get {
+                object obj = ResourceManager.GetObject("plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
@@ -186,6 +216,26 @@ namespace LP2Soft.Properties {
         internal static System.Drawing.Bitmap search1 {
             get {
                 object obj = ResourceManager.GetObject("search1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_minus {
+            get {
+                object obj = ResourceManager.GetObject("user-minus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_plus {
+            get {
+                object obj = ResourceManager.GetObject("user-plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
