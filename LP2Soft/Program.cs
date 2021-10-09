@@ -1,4 +1,6 @@
-﻿using LP2Soft.Home;
+﻿using LP2Soft.Cursos;
+using LP2Soft.Cursos.Ciclo7;
+using LP2Soft.Home;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,7 @@ namespace LP2Soft
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogIn());
+            Application.Run(new frmCursosHome());
         }
     }
 }

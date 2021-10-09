@@ -47,6 +47,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cursos\Ciclo7\frmCiclo7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\frmCiclo7.Designer.cs">
+      <DependentUpon>frmCiclo7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.Designer.cs">
+      <DependentUpon>frmCiclo7LP2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\Practica2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\Practica2.Designer.cs">
+      <DependentUpon>Practica2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practicas.Designer.cs">
+      <DependentUpon>Practicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmCursosHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmCursosHome.Designer.cs">
+      <DependentUpon>frmCursosHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +103,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cursos\Ciclo7\frmCiclo7.resx">
+      <DependentUpon>frmCiclo7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.resx">
+      <DependentUpon>frmCiclo7LP2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\Practica2\Practica2.resx">
+      <DependentUpon>Practica2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\Practicas.resx">
+      <DependentUpon>Practicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmCursosHome.resx">
+      <DependentUpon>frmCursosHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,5 +192,21 @@
   <ItemGroup>
     <None Include="Resources\bubble.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-circle-regular-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-regular-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\share-alt-regular-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-circle-regular-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevrons-right-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
