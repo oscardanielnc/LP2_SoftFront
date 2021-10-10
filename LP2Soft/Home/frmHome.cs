@@ -1,4 +1,6 @@
-﻿using LP2Soft.Cursos;
+﻿using LP2Soft.Asesor;
+using LP2Soft.Cursos;
+using LP2Soft.Eventos;
 using LP2Soft.Perfil;
 using System;
 using System.Collections.Generic;
@@ -46,6 +48,21 @@ namespace LP2Soft.Home
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmPerfil());
+        }
+
+        private void btnNovedades_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmHomePage());
+        }
+
+        private void btnEventos_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmVerEventos());
+        }
+
+        private void btnAsesores_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmBuscarAsesor());
         }
     }
 }

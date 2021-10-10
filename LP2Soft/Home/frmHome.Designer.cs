@@ -35,12 +35,6 @@ namespace LP2Soft.Home
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelHeader = new System.Windows.Forms.Panel();
-            this.imgLogo = new System.Windows.Forms.PictureBox();
-            this.imgUsuario = new System.Windows.Forms.PictureBox();
-            this.btnMensajes = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
-            this.btnNotificaciones = new System.Windows.Forms.PictureBox();
             this.btnEventos = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -48,6 +42,12 @@ namespace LP2Soft.Home
             this.btnAsesores = new System.Windows.Forms.Button();
             this.btnCursos = new System.Windows.Forms.Button();
             this.btnNovedades = new System.Windows.Forms.Button();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.imgLogo = new System.Windows.Forms.PictureBox();
+            this.imgUsuario = new System.Windows.Forms.PictureBox();
+            this.btnMensajes = new System.Windows.Forms.PictureBox();
+            this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.btnNotificaciones = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -118,75 +118,6 @@ namespace LP2Soft.Home
             this.panelMenu.Size = new System.Drawing.Size(179, 492);
             this.panelMenu.TabIndex = 11;
             // 
-            // panelHeader
-            // 
-            this.panelHeader.BackColor = System.Drawing.SystemColors.Window;
-            this.panelHeader.Controls.Add(this.lblNombreUsuario);
-            this.panelHeader.Controls.Add(this.imgLogo);
-            this.panelHeader.Controls.Add(this.lblNumMensajes);
-            this.panelHeader.Controls.Add(this.imgUsuario);
-            this.panelHeader.Controls.Add(this.lblNumNotificaciones);
-            this.panelHeader.Controls.Add(this.btnMensajes);
-            this.panelHeader.Controls.Add(this.txtBusqueda);
-            this.panelHeader.Controls.Add(this.btnBuscar);
-            this.panelHeader.Controls.Add(this.btnNotificaciones);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1008, 62);
-            this.panelHeader.TabIndex = 13;
-            // 
-            // imgLogo
-            // 
-            this.imgLogo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.imgLogo.Image = global::LP2Soft.Properties.Resources.Logo_INFunables;
-            this.imgLogo.Location = new System.Drawing.Point(0, 0);
-            this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(120, 62);
-            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgLogo.TabIndex = 13;
-            this.imgLogo.TabStop = false;
-            // 
-            // imgUsuario
-            // 
-            this.imgUsuario.Image = global::LP2Soft.Properties.Resources.DSC_0498;
-            this.imgUsuario.Location = new System.Drawing.Point(779, 5);
-            this.imgUsuario.Name = "imgUsuario";
-            this.imgUsuario.Size = new System.Drawing.Size(50, 50);
-            this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgUsuario.TabIndex = 14;
-            this.imgUsuario.TabStop = false;
-            // 
-            // btnMensajes
-            // 
-            this.btnMensajes.Image = global::LP2Soft.Properties.Resources.bubble;
-            this.btnMensajes.Location = new System.Drawing.Point(711, 16);
-            this.btnMensajes.Name = "btnMensajes";
-            this.btnMensajes.Size = new System.Drawing.Size(30, 30);
-            this.btnMensajes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMensajes.TabIndex = 19;
-            this.btnMensajes.TabStop = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = global::LP2Soft.Properties.Resources.search;
-            this.btnBuscar.Location = new System.Drawing.Point(491, 16);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnBuscar.TabIndex = 17;
-            this.btnBuscar.TabStop = false;
-            // 
-            // btnNotificaciones
-            // 
-            this.btnNotificaciones.Image = global::LP2Soft.Properties.Resources.bell;
-            this.btnNotificaciones.Location = new System.Drawing.Point(643, 16);
-            this.btnNotificaciones.Name = "btnNotificaciones";
-            this.btnNotificaciones.Size = new System.Drawing.Size(30, 30);
-            this.btnNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnNotificaciones.TabIndex = 18;
-            this.btnNotificaciones.TabStop = false;
-            // 
             // btnEventos
             // 
             this.btnEventos.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -203,6 +134,7 @@ namespace LP2Soft.Home
             this.btnEventos.TabIndex = 11;
             this.btnEventos.Text = "Eventos";
             this.btnEventos.UseVisualStyleBackColor = true;
+            this.btnEventos.Click += new System.EventHandler(this.btnEventos_Click);
             // 
             // btnPerfil
             // 
@@ -274,6 +206,7 @@ namespace LP2Soft.Home
             this.btnAsesores.TabIndex = 6;
             this.btnAsesores.Text = "Asesores";
             this.btnAsesores.UseVisualStyleBackColor = true;
+            this.btnAsesores.Click += new System.EventHandler(this.btnAsesores_Click);
             // 
             // btnCursos
             // 
@@ -310,6 +243,76 @@ namespace LP2Soft.Home
             this.btnNovedades.TabIndex = 0;
             this.btnNovedades.Text = "Novedades";
             this.btnNovedades.UseVisualStyleBackColor = true;
+            this.btnNovedades.Click += new System.EventHandler(this.btnNovedades_Click);
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.SystemColors.Window;
+            this.panelHeader.Controls.Add(this.lblNombreUsuario);
+            this.panelHeader.Controls.Add(this.imgLogo);
+            this.panelHeader.Controls.Add(this.lblNumMensajes);
+            this.panelHeader.Controls.Add(this.imgUsuario);
+            this.panelHeader.Controls.Add(this.lblNumNotificaciones);
+            this.panelHeader.Controls.Add(this.btnMensajes);
+            this.panelHeader.Controls.Add(this.txtBusqueda);
+            this.panelHeader.Controls.Add(this.btnBuscar);
+            this.panelHeader.Controls.Add(this.btnNotificaciones);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1008, 62);
+            this.panelHeader.TabIndex = 13;
+            // 
+            // imgLogo
+            // 
+            this.imgLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imgLogo.Image = global::LP2Soft.Properties.Resources.Logo_INFunables;
+            this.imgLogo.Location = new System.Drawing.Point(0, 0);
+            this.imgLogo.Name = "imgLogo";
+            this.imgLogo.Size = new System.Drawing.Size(120, 62);
+            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgLogo.TabIndex = 13;
+            this.imgLogo.TabStop = false;
+            // 
+            // imgUsuario
+            // 
+            this.imgUsuario.Image = global::LP2Soft.Properties.Resources.DSC_0498;
+            this.imgUsuario.Location = new System.Drawing.Point(779, 5);
+            this.imgUsuario.Name = "imgUsuario";
+            this.imgUsuario.Size = new System.Drawing.Size(50, 50);
+            this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUsuario.TabIndex = 14;
+            this.imgUsuario.TabStop = false;
+            // 
+            // btnMensajes
+            // 
+            this.btnMensajes.Image = global::LP2Soft.Properties.Resources.bubble;
+            this.btnMensajes.Location = new System.Drawing.Point(711, 16);
+            this.btnMensajes.Name = "btnMensajes";
+            this.btnMensajes.Size = new System.Drawing.Size(30, 30);
+            this.btnMensajes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMensajes.TabIndex = 19;
+            this.btnMensajes.TabStop = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = global::LP2Soft.Properties.Resources.search;
+            this.btnBuscar.Location = new System.Drawing.Point(491, 16);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnBuscar.TabIndex = 17;
+            this.btnBuscar.TabStop = false;
+            // 
+            // btnNotificaciones
+            // 
+            this.btnNotificaciones.Image = global::LP2Soft.Properties.Resources.bell;
+            this.btnNotificaciones.Location = new System.Drawing.Point(643, 16);
+            this.btnNotificaciones.Name = "btnNotificaciones";
+            this.btnNotificaciones.Size = new System.Drawing.Size(30, 30);
+            this.btnNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnNotificaciones.TabIndex = 18;
+            this.btnNotificaciones.TabStop = false;
             // 
             // frmHome
             // 
