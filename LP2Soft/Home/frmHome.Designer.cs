@@ -31,26 +31,26 @@ namespace LP2Soft.Home
         {
             this.lblNumMensajes = new System.Windows.Forms.Label();
             this.lblNumNotificaciones = new System.Windows.Forms.Label();
-            this.btnMensajes = new System.Windows.Forms.PictureBox();
-            this.btnNotificaciones = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.imgUsuario = new System.Windows.Forms.PictureBox();
-            this.imgLogo = new System.Windows.Forms.PictureBox();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnNovedades = new System.Windows.Forms.Button();
             this.panelHeader = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMensajes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNotificaciones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
+            this.imgLogo = new System.Windows.Forms.PictureBox();
+            this.imgUsuario = new System.Windows.Forms.PictureBox();
+            this.btnMensajes = new System.Windows.Forms.PictureBox();
+            this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.btnNotificaciones = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMensajes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNotificaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumMensajes
@@ -71,41 +71,12 @@ namespace LP2Soft.Home
             this.lblNumNotificaciones.TabIndex = 20;
             this.lblNumNotificaciones.Text = "10";
             // 
-            // btnMensajes
-            // 
-            this.btnMensajes.Image = global::LP2Soft.Properties.Resources.bubble;
-            this.btnMensajes.Location = new System.Drawing.Point(711, 16);
-            this.btnMensajes.Name = "btnMensajes";
-            this.btnMensajes.Size = new System.Drawing.Size(30, 30);
-            this.btnMensajes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMensajes.TabIndex = 19;
-            this.btnMensajes.TabStop = false;
-            // 
-            // btnNotificaciones
-            // 
-            this.btnNotificaciones.Image = global::LP2Soft.Properties.Resources.bell;
-            this.btnNotificaciones.Location = new System.Drawing.Point(643, 16);
-            this.btnNotificaciones.Name = "btnNotificaciones";
-            this.btnNotificaciones.Size = new System.Drawing.Size(30, 30);
-            this.btnNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnNotificaciones.TabIndex = 18;
-            this.btnNotificaciones.TabStop = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = global::LP2Soft.Properties.Resources.search;
-            this.btnBuscar.Location = new System.Drawing.Point(491, 16);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnBuscar.TabIndex = 17;
-            this.btnBuscar.TabStop = false;
-            // 
             // txtBusqueda
             // 
+            this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.Location = new System.Drawing.Point(185, 22);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(300, 20);
+            this.txtBusqueda.Size = new System.Drawing.Size(300, 21);
             this.txtBusqueda.TabIndex = 16;
             this.txtBusqueda.Text = "Buscar a un usuario";
             // 
@@ -118,27 +89,6 @@ namespace LP2Soft.Home
             this.lblNombreUsuario.Size = new System.Drawing.Size(97, 30);
             this.lblNombreUsuario.TabIndex = 15;
             this.lblNombreUsuario.Text = "Oscar Daniel\r\nNavarro Cieza";
-            // 
-            // imgUsuario
-            // 
-            this.imgUsuario.Image = global::LP2Soft.Properties.Resources.images;
-            this.imgUsuario.Location = new System.Drawing.Point(779, 5);
-            this.imgUsuario.Name = "imgUsuario";
-            this.imgUsuario.Size = new System.Drawing.Size(50, 50);
-            this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgUsuario.TabIndex = 14;
-            this.imgUsuario.TabStop = false;
-            // 
-            // imgLogo
-            // 
-            this.imgLogo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.imgLogo.Image = global::LP2Soft.Properties.Resources.Logo_INFunables;
-            this.imgLogo.Location = new System.Drawing.Point(0, 0);
-            this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(120, 62);
-            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgLogo.TabIndex = 13;
-            this.imgLogo.TabStop = false;
             // 
             // panelContenido
             // 
@@ -165,7 +115,7 @@ namespace LP2Soft.Home
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -183,7 +133,7 @@ namespace LP2Soft.Home
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -201,7 +151,7 @@ namespace LP2Soft.Home
             this.btnNovedades.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNovedades.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnNovedades.FlatAppearance.BorderSize = 2;
-            this.btnNovedades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnNovedades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.btnNovedades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovedades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovedades.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -232,6 +182,57 @@ namespace LP2Soft.Home
             this.panelHeader.Size = new System.Drawing.Size(1008, 62);
             this.panelHeader.TabIndex = 13;
             // 
+            // imgLogo
+            // 
+            this.imgLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imgLogo.Image = global::LP2Soft.Properties.Resources.Logo_INFunables;
+            this.imgLogo.Location = new System.Drawing.Point(0, 0);
+            this.imgLogo.Name = "imgLogo";
+            this.imgLogo.Size = new System.Drawing.Size(120, 62);
+            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgLogo.TabIndex = 13;
+            this.imgLogo.TabStop = false;
+            // 
+            // imgUsuario
+            // 
+            this.imgUsuario.Image = global::LP2Soft.Properties.Resources.images;
+            this.imgUsuario.Location = new System.Drawing.Point(779, 5);
+            this.imgUsuario.Name = "imgUsuario";
+            this.imgUsuario.Size = new System.Drawing.Size(50, 50);
+            this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUsuario.TabIndex = 14;
+            this.imgUsuario.TabStop = false;
+            // 
+            // btnMensajes
+            // 
+            this.btnMensajes.Image = global::LP2Soft.Properties.Resources.bubble;
+            this.btnMensajes.Location = new System.Drawing.Point(711, 16);
+            this.btnMensajes.Name = "btnMensajes";
+            this.btnMensajes.Size = new System.Drawing.Size(30, 30);
+            this.btnMensajes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMensajes.TabIndex = 19;
+            this.btnMensajes.TabStop = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = global::LP2Soft.Properties.Resources.search;
+            this.btnBuscar.Location = new System.Drawing.Point(491, 16);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnBuscar.TabIndex = 17;
+            this.btnBuscar.TabStop = false;
+            // 
+            // btnNotificaciones
+            // 
+            this.btnNotificaciones.Image = global::LP2Soft.Properties.Resources.bell;
+            this.btnNotificaciones.Location = new System.Drawing.Point(643, 16);
+            this.btnNotificaciones.Name = "btnNotificaciones";
+            this.btnNotificaciones.Size = new System.Drawing.Size(30, 30);
+            this.btnNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnNotificaciones.TabIndex = 18;
+            this.btnNotificaciones.TabStop = false;
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,14 +243,14 @@ namespace LP2Soft.Home
             this.Controls.Add(this.panelMenu);
             this.Name = "frmHome";
             this.Text = "frmHome";
-            ((System.ComponentModel.ISupportInitialize)(this.btnMensajes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNotificaciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMensajes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNotificaciones)).EndInit();
             this.ResumeLayout(false);
 
         }

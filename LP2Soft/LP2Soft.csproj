@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asesor\frmAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmAsesor.Designer.cs">
+      <DependentUpon>frmAsesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asesor\frmBuscarAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmBuscarAsesor.Designer.cs">
+      <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,7 @@
     <Compile Include="Cursos\frmCursosHome.Designer.cs">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enumerados\MenuPerfil.cs" />
     <Compile Include="Home\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,20 +114,62 @@
     <Compile Include="Home\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\frmLoginSingin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\frmLoginSingin.Designer.cs">
+      <DependentUpon>frmLoginSingin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\frmSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\frmSignIn.Designer.cs">
+      <DependentUpon>frmSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_CursosAsesorados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_CursosAsesorados.Designer.cs">
+      <DependentUpon>frmPerfil_CursosAsesorados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfil\frmPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Perfil\frmPerfil.Designer.cs">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Perfil\Perfil_Informacion.cs">
+    <Compile Include="Perfil\frmPerfil_Amigos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Perfil\Perfil_Informacion.Designer.cs">
-      <DependentUpon>Perfil_Informacion.cs</DependentUpon>
+    <Compile Include="Perfil\frmPerfil_Amigos.Designer.cs">
+      <DependentUpon>frmPerfil_Amigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_Informacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_Informacion.Designer.cs">
+      <DependentUpon>frmPerfil_Informacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_Publicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_Publicaciones.Designer.cs">
+      <DependentUpon>frmPerfil_Publicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_Resenias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_Resenias.Designer.cs">
+      <DependentUpon>frmPerfil_Resenias.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Asesor\frmAsesor.resx">
+      <DependentUpon>frmAsesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
+      <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmAgregarMaterial.resx">
       <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,11 +197,29 @@
     <EmbeddedResource Include="Home\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home\frmLoginSingin.resx">
+      <DependentUpon>frmLoginSingin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\frmSignIn.resx">
+      <DependentUpon>frmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Perfil\Perfil_Informacion.resx">
-      <DependentUpon>Perfil_Informacion.cs</DependentUpon>
+    <EmbeddedResource Include="Perfil\frmPerfil_Amigos.resx">
+      <DependentUpon>frmPerfil_Amigos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmPerfil_CursosAsesorados.resx">
+      <DependentUpon>frmPerfil_CursosAsesorados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmPerfil_Informacion.resx">
+      <DependentUpon>frmPerfil_Informacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmPerfil_Publicaciones.resx">
+      <DependentUpon>frmPerfil_Publicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmPerfil_Resenias.resx">
+      <DependentUpon>frmPerfil_Resenias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -228,5 +301,21 @@
   <ItemGroup>
     <None Include="Resources\upload-regular-24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address-book.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

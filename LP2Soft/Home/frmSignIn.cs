@@ -1,5 +1,4 @@
-﻿using LP2Soft.Perfil;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,22 +10,17 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Home
 {
-    public partial class frmLogIn : Form
+    public partial class frmSignIn : Form
     {
-        public frmLogIn()
+        public frmSignIn()
         {
             InitializeComponent();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             frmHome formHome = new frmHome();
             formHome.ShowDialog();
-        }
-
-        private void btnNuevoUsuario_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
