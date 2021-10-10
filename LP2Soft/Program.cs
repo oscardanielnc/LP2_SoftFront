@@ -20,7 +20,7 @@ namespace LP2Soft
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCursosHome());
+            Application.Run(new frmLogIn());
         }
     }
 }

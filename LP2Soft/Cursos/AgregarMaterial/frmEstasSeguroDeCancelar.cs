@@ -19,11 +19,13 @@ namespace LP2Soft.Cursos.AgregarMaterial
 
         private void btnCancelaCancelar_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 
         private void lblAceptaCancelar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Se agregó satisfactoriamente");
             this.Close();
         }
     }
