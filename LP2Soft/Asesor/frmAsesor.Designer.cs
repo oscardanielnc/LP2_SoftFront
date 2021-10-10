@@ -41,9 +41,18 @@ namespace LP2Soft.Asesor
             this.btnAplicarFiltros = new System.Windows.Forms.Button();
             this.panelAlumnos = new System.Windows.Forms.Panel();
             this.panelAlumno2 = new System.Windows.Forms.Panel();
+            this.eliminar2 = new System.Windows.Forms.PictureBox();
+            this.btnVerPerfil2 = new System.Windows.Forms.Button();
+            this.lblCurso2 = new System.Windows.Forms.Label();
             this.lblNombreAlumno2 = new System.Windows.Forms.Label();
+            this.lblHorario2 = new System.Windows.Forms.Label();
             this.pictureBoxAlumno2 = new System.Windows.Forms.PictureBox();
+            this.lblContacto2 = new System.Windows.Forms.Label();
+            this.lblCelular2 = new System.Windows.Forms.Label();
+            this.lblCorreo2 = new System.Windows.Forms.Label();
             this.panelAlumno1 = new System.Windows.Forms.Panel();
+            this.eliminar1 = new System.Windows.Forms.PictureBox();
+            this.btnVerPerfil1 = new System.Windows.Forms.Button();
             this.lblCurso1 = new System.Windows.Forms.Label();
             this.lblHorario1 = new System.Windows.Forms.Label();
             this.lblContacto1 = new System.Windows.Forms.Label();
@@ -51,22 +60,13 @@ namespace LP2Soft.Asesor
             this.lblCelular1 = new System.Windows.Forms.Label();
             this.lblNombreAlumno1 = new System.Windows.Forms.Label();
             this.pictureBoxAlumno1 = new System.Windows.Forms.PictureBox();
-            this.lblCurso2 = new System.Windows.Forms.Label();
-            this.lblHorario2 = new System.Windows.Forms.Label();
-            this.lblContacto2 = new System.Windows.Forms.Label();
-            this.lblCorreo2 = new System.Windows.Forms.Label();
-            this.lblCelular2 = new System.Windows.Forms.Label();
-            this.btnVerPerfil1 = new System.Windows.Forms.Button();
-            this.btnVerPerfil2 = new System.Windows.Forms.Button();
-            this.eliminar1 = new System.Windows.Forms.PictureBox();
-            this.eliminar2 = new System.Windows.Forms.PictureBox();
             this.panelAlumnos.SuspendLayout();
             this.panelAlumno2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumno2)).BeginInit();
             this.panelAlumno1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumno1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eliminar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eliminar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumno1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFiltros
@@ -180,6 +180,35 @@ namespace LP2Soft.Asesor
             this.panelAlumno2.Size = new System.Drawing.Size(466, 154);
             this.panelAlumno2.TabIndex = 1;
             // 
+            // eliminar2
+            // 
+            this.eliminar2.Image = ((System.Drawing.Image)(resources.GetObject("eliminar2.Image")));
+            this.eliminar2.Location = new System.Drawing.Point(429, 12);
+            this.eliminar2.Name = "eliminar2";
+            this.eliminar2.Size = new System.Drawing.Size(30, 30);
+            this.eliminar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.eliminar2.TabIndex = 17;
+            this.eliminar2.TabStop = false;
+            // 
+            // btnVerPerfil2
+            // 
+            this.btnVerPerfil2.Location = new System.Drawing.Point(384, 124);
+            this.btnVerPerfil2.Name = "btnVerPerfil2";
+            this.btnVerPerfil2.Size = new System.Drawing.Size(75, 23);
+            this.btnVerPerfil2.TabIndex = 16;
+            this.btnVerPerfil2.Text = "Ver Perfil";
+            this.btnVerPerfil2.UseVisualStyleBackColor = true;
+            // 
+            // lblCurso2
+            // 
+            this.lblCurso2.AutoSize = true;
+            this.lblCurso2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso2.Location = new System.Drawing.Point(156, 22);
+            this.lblCurso2.Name = "lblCurso2";
+            this.lblCurso2.Size = new System.Drawing.Size(174, 20);
+            this.lblCurso2.TabIndex = 19;
+            this.lblCurso2.Text = "Sistemas Operativos";
+            // 
             // lblNombreAlumno2
             // 
             this.lblNombreAlumno2.AutoSize = true;
@@ -190,6 +219,16 @@ namespace LP2Soft.Asesor
             this.lblNombreAlumno2.TabIndex = 11;
             this.lblNombreAlumno2.Text = "Sandro Huaylla";
             // 
+            // lblHorario2
+            // 
+            this.lblHorario2.AutoSize = true;
+            this.lblHorario2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorario2.Location = new System.Drawing.Point(157, 49);
+            this.lblHorario2.Name = "lblHorario2";
+            this.lblHorario2.Size = new System.Drawing.Size(200, 16);
+            this.lblHorario2.TabIndex = 18;
+            this.lblHorario2.Text = "Horario: Lunes 7:00-9:00 PM";
+            // 
             // pictureBoxAlumno2
             // 
             this.pictureBoxAlumno2.Image = global::LP2Soft.Properties.Resources.images;
@@ -199,6 +238,36 @@ namespace LP2Soft.Asesor
             this.pictureBoxAlumno2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAlumno2.TabIndex = 8;
             this.pictureBoxAlumno2.TabStop = false;
+            // 
+            // lblContacto2
+            // 
+            this.lblContacto2.AutoSize = true;
+            this.lblContacto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContacto2.Location = new System.Drawing.Point(157, 70);
+            this.lblContacto2.Name = "lblContacto2";
+            this.lblContacto2.Size = new System.Drawing.Size(73, 16);
+            this.lblContacto2.TabIndex = 17;
+            this.lblContacto2.Text = "Contacto:";
+            // 
+            // lblCelular2
+            // 
+            this.lblCelular2.AutoSize = true;
+            this.lblCelular2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular2.Location = new System.Drawing.Point(157, 89);
+            this.lblCelular2.Name = "lblCelular2";
+            this.lblCelular2.Size = new System.Drawing.Size(119, 16);
+            this.lblCelular2.TabIndex = 15;
+            this.lblCelular2.Text = "Celular: 998234657";
+            // 
+            // lblCorreo2
+            // 
+            this.lblCorreo2.AutoSize = true;
+            this.lblCorreo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo2.Location = new System.Drawing.Point(157, 108);
+            this.lblCorreo2.Name = "lblCorreo2";
+            this.lblCorreo2.Size = new System.Drawing.Size(198, 16);
+            this.lblCorreo2.TabIndex = 16;
+            this.lblCorreo2.Text = "Correo: sandroking@gmail.com";
             // 
             // panelAlumno1
             // 
@@ -216,6 +285,26 @@ namespace LP2Soft.Asesor
             this.panelAlumno1.Name = "panelAlumno1";
             this.panelAlumno1.Size = new System.Drawing.Size(466, 154);
             this.panelAlumno1.TabIndex = 0;
+            // 
+            // eliminar1
+            // 
+            this.eliminar1.Image = ((System.Drawing.Image)(resources.GetObject("eliminar1.Image")));
+            this.eliminar1.Location = new System.Drawing.Point(429, 14);
+            this.eliminar1.Name = "eliminar1";
+            this.eliminar1.Size = new System.Drawing.Size(30, 30);
+            this.eliminar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.eliminar1.TabIndex = 16;
+            this.eliminar1.TabStop = false;
+            // 
+            // btnVerPerfil1
+            // 
+            this.btnVerPerfil1.Location = new System.Drawing.Point(384, 124);
+            this.btnVerPerfil1.Name = "btnVerPerfil1";
+            this.btnVerPerfil1.Size = new System.Drawing.Size(75, 23);
+            this.btnVerPerfil1.TabIndex = 15;
+            this.btnVerPerfil1.Text = "Ver Perfil";
+            this.btnVerPerfil1.UseVisualStyleBackColor = true;
+            this.btnVerPerfil1.Click += new System.EventHandler(this.btnVerPerfil1_Click);
             // 
             // lblCurso1
             // 
@@ -287,93 +376,6 @@ namespace LP2Soft.Asesor
             this.pictureBoxAlumno1.TabIndex = 7;
             this.pictureBoxAlumno1.TabStop = false;
             // 
-            // lblCurso2
-            // 
-            this.lblCurso2.AutoSize = true;
-            this.lblCurso2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso2.Location = new System.Drawing.Point(156, 22);
-            this.lblCurso2.Name = "lblCurso2";
-            this.lblCurso2.Size = new System.Drawing.Size(174, 20);
-            this.lblCurso2.TabIndex = 19;
-            this.lblCurso2.Text = "Sistemas Operativos";
-            // 
-            // lblHorario2
-            // 
-            this.lblHorario2.AutoSize = true;
-            this.lblHorario2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorario2.Location = new System.Drawing.Point(157, 49);
-            this.lblHorario2.Name = "lblHorario2";
-            this.lblHorario2.Size = new System.Drawing.Size(200, 16);
-            this.lblHorario2.TabIndex = 18;
-            this.lblHorario2.Text = "Horario: Lunes 7:00-9:00 PM";
-            // 
-            // lblContacto2
-            // 
-            this.lblContacto2.AutoSize = true;
-            this.lblContacto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContacto2.Location = new System.Drawing.Point(157, 70);
-            this.lblContacto2.Name = "lblContacto2";
-            this.lblContacto2.Size = new System.Drawing.Size(73, 16);
-            this.lblContacto2.TabIndex = 17;
-            this.lblContacto2.Text = "Contacto:";
-            // 
-            // lblCorreo2
-            // 
-            this.lblCorreo2.AutoSize = true;
-            this.lblCorreo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo2.Location = new System.Drawing.Point(157, 108);
-            this.lblCorreo2.Name = "lblCorreo2";
-            this.lblCorreo2.Size = new System.Drawing.Size(198, 16);
-            this.lblCorreo2.TabIndex = 16;
-            this.lblCorreo2.Text = "Correo: sandroking@gmail.com";
-            // 
-            // lblCelular2
-            // 
-            this.lblCelular2.AutoSize = true;
-            this.lblCelular2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelular2.Location = new System.Drawing.Point(157, 89);
-            this.lblCelular2.Name = "lblCelular2";
-            this.lblCelular2.Size = new System.Drawing.Size(119, 16);
-            this.lblCelular2.TabIndex = 15;
-            this.lblCelular2.Text = "Celular: 998234657";
-            // 
-            // btnVerPerfil1
-            // 
-            this.btnVerPerfil1.Location = new System.Drawing.Point(384, 124);
-            this.btnVerPerfil1.Name = "btnVerPerfil1";
-            this.btnVerPerfil1.Size = new System.Drawing.Size(75, 23);
-            this.btnVerPerfil1.TabIndex = 15;
-            this.btnVerPerfil1.Text = "Ver Perfil";
-            this.btnVerPerfil1.UseVisualStyleBackColor = true;
-            this.btnVerPerfil1.Click += new System.EventHandler(this.btnVerPerfil1_Click);
-            // 
-            // btnVerPerfil2
-            // 
-            this.btnVerPerfil2.Location = new System.Drawing.Point(384, 124);
-            this.btnVerPerfil2.Name = "btnVerPerfil2";
-            this.btnVerPerfil2.Size = new System.Drawing.Size(75, 23);
-            this.btnVerPerfil2.TabIndex = 16;
-            this.btnVerPerfil2.Text = "Ver Perfil";
-            this.btnVerPerfil2.UseVisualStyleBackColor = true;
-            // 
-            // eliminar1
-            // 
-            this.eliminar1.Image = ((System.Drawing.Image)(resources.GetObject("eliminar1.Image")));
-            this.eliminar1.Location = new System.Drawing.Point(411, 11);
-            this.eliminar1.Name = "eliminar1";
-            this.eliminar1.Size = new System.Drawing.Size(48, 55);
-            this.eliminar1.TabIndex = 16;
-            this.eliminar1.TabStop = false;
-            // 
-            // eliminar2
-            // 
-            this.eliminar2.Image = ((System.Drawing.Image)(resources.GetObject("eliminar2.Image")));
-            this.eliminar2.Location = new System.Drawing.Point(411, 10);
-            this.eliminar2.Name = "eliminar2";
-            this.eliminar2.Size = new System.Drawing.Size(48, 55);
-            this.eliminar2.TabIndex = 17;
-            this.eliminar2.TabStop = false;
-            // 
             // frmAsesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,12 +398,12 @@ namespace LP2Soft.Asesor
             this.panelAlumnos.ResumeLayout(false);
             this.panelAlumno2.ResumeLayout(false);
             this.panelAlumno2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumno2)).EndInit();
             this.panelAlumno1.ResumeLayout(false);
             this.panelAlumno1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumno1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eliminar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eliminar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumno1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

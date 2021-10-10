@@ -53,6 +53,18 @@
     <Compile Include="Asesor\frmAsesor.Designer.cs">
       <DependentUpon>frmAsesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Asesor\frmAsesorBuscarFiltros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmAsesorBuscarFiltros.Designer.cs">
+      <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asesor\frmAsesorPostular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmAsesorPostular.Designer.cs">
+      <DependentUpon>frmAsesorPostular.cs</DependentUpon>
+    </Compile>
     <Compile Include="Asesor\frmBuscarAsesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Asesor\frmAsesor.resx">
       <DependentUpon>frmAsesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
+      <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asesor\frmAsesorPostular.resx">
+      <DependentUpon>frmAsesorPostular.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
