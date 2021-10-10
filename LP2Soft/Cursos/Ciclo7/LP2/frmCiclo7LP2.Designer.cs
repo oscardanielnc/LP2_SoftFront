@@ -185,6 +185,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2DescargarPcs.Size = new System.Drawing.Size(33, 34);
             this.btnLP2DescargarPcs.TabIndex = 25;
             this.btnLP2DescargarPcs.UseVisualStyleBackColor = true;
+            this.btnLP2DescargarPcs.Click += new System.EventHandler(this.btnLP2DescargarPcs_Click);
             // 
             // btnLP2CompartirPcs
             // 
@@ -194,6 +195,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2CompartirPcs.Size = new System.Drawing.Size(33, 34);
             this.btnLP2CompartirPcs.TabIndex = 24;
             this.btnLP2CompartirPcs.UseVisualStyleBackColor = true;
+            this.btnLP2CompartirPcs.Click += new System.EventHandler(this.btnLP2CompartirPcs_Click);
             // 
             // btnLP2DescargarLabs
             // 
@@ -262,6 +264,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Practicas.Text = "Prácticas";
             this.btnLP2Practicas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Practicas.UseVisualStyleBackColor = true;
+            this.btnLP2Practicas.Click += new System.EventHandler(this.btnLP2Practicas_Click);
             // 
             // btnLP2Laboratorios
             // 
@@ -289,6 +292,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Material.TabIndex = 8;
             this.btnLP2Material.Text = "Material";
             this.btnLP2Material.UseVisualStyleBackColor = true;
+            this.btnLP2Material.Click += new System.EventHandler(this.btnLP2Material_Click);
             // 
             // pictureLP2Referencia1
             // 
@@ -308,6 +312,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Ciclo7.TabIndex = 10;
             this.btnLP2Ciclo7.Text = "Ciclo 7";
             this.btnLP2Ciclo7.UseVisualStyleBackColor = true;
+            this.btnLP2Ciclo7.Click += new System.EventHandler(this.btnLP2Ciclo7_Click);
             // 
             // pictureLP2Referencia2
             // 

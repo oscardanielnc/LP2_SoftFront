@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Soft.Cursos.Ciclo7.LP2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace LP2Soft.Cursos.Ciclo7
         public frmCiclo7()
         {
             InitializeComponent();
+        }
+
+        private void btnCiclo7LP2_Click(object sender, EventArgs e)
+        {
+            frmCiclo7LP2 ciclo7LP2 = new frmCiclo7LP2();
+            ciclo7LP2.ShowDialog();
+        }
+
+        private void btnCiclo7Material_Click(object sender, EventArgs e)
+        {
+            frmCursosHome cursosHome = new frmCursosHome();
+            cursosHome.ShowDialog();
         }
     }
 }

@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.Designer.cs">
+      <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.Designer.cs">
+      <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos\Ciclo7\frmCiclo7.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,17 +71,17 @@
     <Compile Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.Designer.cs">
       <DependentUpon>frmCiclo7LP2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\Practica2.cs">
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\frmPractica2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\Practica2.Designer.cs">
-      <DependentUpon>Practica2.cs</DependentUpon>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\frmPractica2.Designer.cs">
+      <DependentUpon>frmPractica2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practicas.cs">
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practicas.Designer.cs">
-      <DependentUpon>Practicas.cs</DependentUpon>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.Designer.cs">
+      <DependentUpon>frmPracticas.cs</DependentUpon>
     </Compile>
     <Compile Include="Cursos\frmCursosHome.cs">
       <SubType>Form</SubType>
@@ -103,17 +115,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cursos\AgregarMaterial\frmAgregarMaterial.resx">
+      <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.resx">
+      <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cursos\Ciclo7\frmCiclo7.resx">
       <DependentUpon>frmCiclo7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.resx">
       <DependentUpon>frmCiclo7LP2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\Practica2\Practica2.resx">
-      <DependentUpon>Practica2.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\Practica2\frmPractica2.resx">
+      <DependentUpon>frmPractica2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\Practicas.resx">
-      <DependentUpon>Practicas.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.resx">
+      <DependentUpon>frmPracticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\frmCursosHome.resx">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
@@ -207,6 +225,8 @@
   <ItemGroup>
     <None Include="Resources\chevrons-right-regular-24.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\upload-regular-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -35,7 +35,7 @@ namespace LP2Soft.Cursos
             this.btnLP2Descargar = new System.Windows.Forms.Button();
             this.btnLP2Compartir = new System.Windows.Forms.Button();
             this.btnLP2AgregarFavorito = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLP2 = new System.Windows.Forms.Button();
             this.btnCiclo7 = new System.Windows.Forms.Button();
             this.btnInformacion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -64,11 +64,11 @@ namespace LP2Soft.Cursos
             this.panel1.Controls.Add(this.btnLP2Descargar);
             this.panel1.Controls.Add(this.btnLP2Compartir);
             this.panel1.Controls.Add(this.btnLP2AgregarFavorito);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnLP2);
             this.panel1.Controls.Add(this.btnCiclo7);
             this.panel1.Location = new System.Drawing.Point(12, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(620, 216);
+            this.panel1.Size = new System.Drawing.Size(611, 216);
             this.panel1.TabIndex = 3;
             // 
             // btnLP2Descargar
@@ -101,15 +101,16 @@ namespace LP2Soft.Cursos
             this.btnLP2AgregarFavorito.UseVisualStyleBackColor = true;
             this.btnLP2AgregarFavorito.Click += new System.EventHandler(this.btnLP2AgregarFavorito_Click);
             // 
-            // button2
+            // btnLP2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 41);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 101);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "INF282\r\n\r\n\r\nLenguaje de Programación\r\n5.00 Créditos";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLP2.Location = new System.Drawing.Point(0, 41);
+            this.btnLP2.Name = "btnLP2";
+            this.btnLP2.Size = new System.Drawing.Size(143, 101);
+            this.btnLP2.TabIndex = 5;
+            this.btnLP2.Text = "INF282\r\n\r\n\r\nLenguaje de Programación\r\n5.00 Créditos";
+            this.btnLP2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnLP2.UseVisualStyleBackColor = true;
+            this.btnLP2.Click += new System.EventHandler(this.btnLP2_Click);
             // 
             // btnCiclo7
             // 
@@ -119,6 +120,7 @@ namespace LP2Soft.Cursos
             this.btnCiclo7.TabIndex = 4;
             this.btnCiclo7.Text = "Ciclo 7";
             this.btnCiclo7.UseVisualStyleBackColor = true;
+            this.btnCiclo7.Click += new System.EventHandler(this.btnCiclo7_Click);
             // 
             // btnInformacion
             // 
@@ -155,7 +157,7 @@ namespace LP2Soft.Cursos
         private System.Windows.Forms.Button btnLP2Descargar;
         private System.Windows.Forms.Button btnLP2Compartir;
         private System.Windows.Forms.Button btnLP2AgregarFavorito;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLP2;
         private System.Windows.Forms.Button btnCiclo7;
     }
 }

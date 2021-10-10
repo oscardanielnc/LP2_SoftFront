@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LP2Soft.Cursos.Ciclo7;
+using LP2Soft.Cursos.Ciclo7.LP2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +38,20 @@ namespace LP2Soft.Cursos
         private void btnLP2AgregarFavorito_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Se agrego a favorito");
+        }
+
+        private void btnLP2_Click(object sender, EventArgs e)
+        {
+            frmCiclo7LP2 Ciclo7LP2 = new frmCiclo7LP2();
+            Ciclo7LP2.ShowDialog();
+            this.Close();
+        }
+
+        private void btnCiclo7_Click(object sender, EventArgs e)
+        {
+            frmCiclo7 Ciclo7 = new frmCiclo7();
+            Ciclo7.ShowDialog();
+            this.Close();
         }
     }
 }

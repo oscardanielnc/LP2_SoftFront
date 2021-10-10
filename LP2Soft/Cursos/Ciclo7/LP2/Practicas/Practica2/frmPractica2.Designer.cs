@@ -1,7 +1,7 @@
 ﻿
 namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
 {
-    partial class Practica2
+    partial class frmPractica2
     {
         /// <summary>
         /// Required designer variable.
@@ -73,6 +73,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnLP2Practica2Ciclo7.TabIndex = 30;
             this.btnLP2Practica2Ciclo7.Text = "Ciclo 7";
             this.btnLP2Practica2Ciclo7.UseVisualStyleBackColor = true;
+            this.btnLP2Practica2Ciclo7.Click += new System.EventHandler(this.btnLP2Practica2Ciclo7_Click);
             // 
             // btnLP2Practica2Material
             // 
@@ -82,6 +83,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnLP2Practica2Material.TabIndex = 28;
             this.btnLP2Practica2Material.Text = "Material";
             this.btnLP2Practica2Material.UseVisualStyleBackColor = true;
+            this.btnLP2Practica2Material.Click += new System.EventHandler(this.btnLP2Practica2Material_Click);
             // 
             // btnLLP2Practica2Practicas
             // 
@@ -91,6 +93,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnLLP2Practica2Practicas.TabIndex = 27;
             this.btnLLP2Practica2Practicas.Text = "Prácticas";
             this.btnLLP2Practica2Practicas.UseVisualStyleBackColor = true;
+            this.btnLLP2Practica2Practicas.Click += new System.EventHandler(this.btnLLP2Practica2Practicas_Click);
             // 
             // btnLP2Practica2LP2
             // 
@@ -100,6 +103,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnLP2Practica2LP2.TabIndex = 25;
             this.btnLP2Practica2LP2.Text = "Lenguaje de Programación 2";
             this.btnLP2Practica2LP2.UseVisualStyleBackColor = true;
+            this.btnLP2Practica2LP2.Click += new System.EventHandler(this.btnLP2Practica2LP2_Click);
             // 
             // pictureLP2Practica2Referencia4
             // 
@@ -167,6 +171,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnLLP2Practica2AgregarMaterial.TabIndex = 34;
             this.btnLLP2Practica2AgregarMaterial.Text = "Agregar Material";
             this.btnLLP2Practica2AgregarMaterial.UseVisualStyleBackColor = true;
+            this.btnLLP2Practica2AgregarMaterial.Click += new System.EventHandler(this.btnLLP2Practica2AgregarMaterial_Click);
             // 
             // btnLLP2Practica2DescargarSeleccionado
             // 
@@ -347,7 +352,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.label4.TabIndex = 40;
             this.label4.Text = "falta lo de abajo poner nombre";
             // 
-            // Practica2
+            // frmPractica2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -369,8 +374,8 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.Controls.Add(this.pictureLP2Practica2Referencia3);
             this.Controls.Add(this.btnLP2Practica2LP2);
             this.Controls.Add(this.pictureLP2Practica2Referencia2);
-            this.Name = "Practica2";
-            this.Text = "Practica2";
+            this.Name = "frmPractica2";
+            this.Text = "frmPractica2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia3)).EndInit();

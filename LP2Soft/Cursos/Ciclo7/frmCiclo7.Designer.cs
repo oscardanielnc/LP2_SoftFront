@@ -54,6 +54,7 @@ namespace LP2Soft.Cursos.Ciclo7
             this.btnCiclo7Material.TabIndex = 3;
             this.btnCiclo7Material.Text = "Material";
             this.btnCiclo7Material.UseVisualStyleBackColor = true;
+            this.btnCiclo7Material.Click += new System.EventHandler(this.btnCiclo7Material_Click);
             // 
             // lblCiclo7NotaInformativa
             // 
@@ -83,6 +84,7 @@ namespace LP2Soft.Cursos.Ciclo7
             this.btnCiclo7LP2.Text = "       Lenguaje de Programación 2";
             this.btnCiclo7LP2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCiclo7LP2.UseVisualStyleBackColor = true;
+            this.btnCiclo7LP2.Click += new System.EventHandler(this.btnCiclo7LP2_Click);
             // 
             // btnCiclo7Sis2
             // 

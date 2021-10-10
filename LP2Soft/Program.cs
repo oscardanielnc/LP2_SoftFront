@@ -1,5 +1,6 @@
 ﻿using LP2Soft.Cursos;
 using LP2Soft.Cursos.Ciclo7;
+using LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2;
 using LP2Soft.Home;
 using System;
 using System.Collections.Generic;
