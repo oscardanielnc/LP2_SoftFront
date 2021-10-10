@@ -9,24 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2Soft.Home
+namespace LP2Soft.Asesor
 {
-    public partial class frmLogIn : Form
+    public partial class frmAsesor : Form
     {
-        public frmLogIn()
+        public frmAsesor()
         {
             InitializeComponent();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void btnVerPerfil1_Click(object sender, EventArgs e)
         {
-            frmHome formHome = new frmHome();
-            formHome.ShowDialog();
-        }
-
-        private void btnNuevoUsuario_Click(object sender, EventArgs e)
-        {
-
+            frmPerfil formPerfil = new frmPerfil();
+            formPerfil.ShowDialog();
         }
     }
 }
