@@ -47,7 +47,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Enumerados\MenuPerfil.cs" />
+=======
+    <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.Designer.cs">
+      <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.Designer.cs">
+      <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\frmCiclo7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\frmCiclo7.Designer.cs">
+      <DependentUpon>frmCiclo7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.Designer.cs">
+      <DependentUpon>frmCiclo7LP2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\frmPractica2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\frmPractica2.Designer.cs">
+      <DependentUpon>frmPractica2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.Designer.cs">
+      <DependentUpon>frmPracticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmCursosHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmCursosHome.Designer.cs">
+      <DependentUpon>frmCursosHome.cs</DependentUpon>
+    </Compile>
+>>>>>>> 05ab18fd69341ace2e8b02ebeadba98a9425fecf
     <Compile Include="Home\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +155,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cursos\AgregarMaterial\frmAgregarMaterial.resx">
+      <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.resx">
+      <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Ciclo7\frmCiclo7.resx">
+      <DependentUpon>frmCiclo7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.resx">
+      <DependentUpon>frmCiclo7LP2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\Practica2\frmPractica2.resx">
+      <DependentUpon>frmPractica2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.resx">
+      <DependentUpon>frmPracticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmCursosHome.resx">
+      <DependentUpon>frmCursosHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +269,7 @@
     <None Include="Resources\bubble.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\cog.png" />
   </ItemGroup>
   <ItemGroup>
@@ -216,6 +283,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\address-book.png" />
+=======
+    <None Include="Resources\error-circle-regular-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-regular-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\share-alt-regular-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-circle-regular-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevrons-right-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload-regular-24.png" />
+>>>>>>> 05ab18fd69341ace2e8b02ebeadba98a9425fecf
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

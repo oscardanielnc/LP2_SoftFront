@@ -123,9 +123,15 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap cog {
             get {
                 object obj = ResourceManager.GetObject("cog", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap chevrons_right_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("chevrons-right-regular-24", resourceCulture);
+>>>>>>> 05ab18fd69341ace2e8b02ebeadba98a9425fecf
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +149,29 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("download-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DSC_0498 {
             get {
                 object obj = ResourceManager.GetObject("DSC_0498", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap error_circle_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("error-circle-regular-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +219,15 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap plus {
             get {
                 object obj = ResourceManager.GetObject("plus", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap plus_circle_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("plus-circle-regular-24", resourceCulture);
+>>>>>>> 05ab18fd69341ace2e8b02ebeadba98a9425fecf
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +255,15 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap user_minus {
             get {
                 object obj = ResourceManager.GetObject("user-minus", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap share_alt_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("share-alt-regular-24", resourceCulture);
+>>>>>>> 05ab18fd69341ace2e8b02ebeadba98a9425fecf
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +271,15 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap user_plus {
             get {
                 object obj = ResourceManager.GetObject("user-plus", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap upload_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("upload-regular-24", resourceCulture);
+>>>>>>> 05ab18fd69341ace2e8b02ebeadba98a9425fecf
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
