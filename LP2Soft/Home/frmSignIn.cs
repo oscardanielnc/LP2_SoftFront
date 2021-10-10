@@ -22,5 +22,10 @@ namespace LP2Soft.Home
             frmHome formHome = new frmHome();
             formHome.ShowDialog();
         }
+
+        private void linkLblRegresarLogIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
     }
 }
