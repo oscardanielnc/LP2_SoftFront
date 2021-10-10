@@ -35,15 +35,19 @@ namespace LP2Soft.Home
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnNovedades = new System.Windows.Forms.Button();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.imgUsuario = new System.Windows.Forms.PictureBox();
             this.btnMensajes = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnNotificaciones = new System.Windows.Forms.PictureBox();
+            this.btnEventos = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnProfesores = new System.Windows.Forms.Button();
+            this.btnAsesores = new System.Windows.Forms.Button();
+            this.btnCursos = new System.Windows.Forms.Button();
+            this.btnNovedades = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -102,67 +106,17 @@ namespace LP2Soft.Home
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.panelMenu.Controls.Add(this.button2);
-            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.btnEventos);
+            this.panelMenu.Controls.Add(this.btnPerfil);
+            this.panelMenu.Controls.Add(this.btnCerrar);
+            this.panelMenu.Controls.Add(this.btnProfesores);
+            this.panelMenu.Controls.Add(this.btnAsesores);
+            this.panelMenu.Controls.Add(this.btnCursos);
             this.panelMenu.Controls.Add(this.btnNovedades);
             this.panelMenu.Location = new System.Drawing.Point(0, 61);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(179, 492);
             this.panelMenu.TabIndex = 11;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button2.Image = global::LP2Soft.Properties.Resources.exit;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 100);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 50);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cerrar sesión";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button1.Image = global::LP2Soft.Properties.Resources.book;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cursos";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnNovedades
-            // 
-            this.btnNovedades.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNovedades.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnNovedades.FlatAppearance.BorderSize = 2;
-            this.btnNovedades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnNovedades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovedades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovedades.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnNovedades.Image = global::LP2Soft.Properties.Resources.newspaper;
-            this.btnNovedades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovedades.Location = new System.Drawing.Point(0, 0);
-            this.btnNovedades.Name = "btnNovedades";
-            this.btnNovedades.Size = new System.Drawing.Size(179, 50);
-            this.btnNovedades.TabIndex = 0;
-            this.btnNovedades.Text = "Novedades";
-            this.btnNovedades.UseVisualStyleBackColor = true;
             // 
             // panelHeader
             // 
@@ -195,7 +149,7 @@ namespace LP2Soft.Home
             // 
             // imgUsuario
             // 
-            this.imgUsuario.Image = global::LP2Soft.Properties.Resources.images;
+            this.imgUsuario.Image = global::LP2Soft.Properties.Resources.DSC_0498;
             this.imgUsuario.Location = new System.Drawing.Point(779, 5);
             this.imgUsuario.Name = "imgUsuario";
             this.imgUsuario.Size = new System.Drawing.Size(50, 50);
@@ -233,6 +187,130 @@ namespace LP2Soft.Home
             this.btnNotificaciones.TabIndex = 18;
             this.btnNotificaciones.TabStop = false;
             // 
+            // btnEventos
+            // 
+            this.btnEventos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEventos.FlatAppearance.BorderSize = 2;
+            this.btnEventos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEventos.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnEventos.Image = global::LP2Soft.Properties.Resources.calendar;
+            this.btnEventos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEventos.Location = new System.Drawing.Point(0, 150);
+            this.btnEventos.Name = "btnEventos";
+            this.btnEventos.Size = new System.Drawing.Size(179, 50);
+            this.btnEventos.TabIndex = 11;
+            this.btnEventos.Text = "Eventos";
+            this.btnEventos.UseVisualStyleBackColor = true;
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPerfil.FlatAppearance.BorderSize = 2;
+            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnPerfil.Image = global::LP2Soft.Properties.Resources.user;
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 50);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(179, 50);
+            this.btnPerfil.TabIndex = 1;
+            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCerrar.FlatAppearance.BorderSize = 2;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnCerrar.Image = global::LP2Soft.Properties.Resources.exit;
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.Location = new System.Drawing.Point(0, 300);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(179, 50);
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.Text = "Cerrar sesión";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnProfesores
+            // 
+            this.btnProfesores.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnProfesores.FlatAppearance.BorderSize = 2;
+            this.btnProfesores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnProfesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfesores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfesores.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnProfesores.Image = global::LP2Soft.Properties.Resources.heart;
+            this.btnProfesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfesores.Location = new System.Drawing.Point(0, 250);
+            this.btnProfesores.Name = "btnProfesores";
+            this.btnProfesores.Size = new System.Drawing.Size(179, 50);
+            this.btnProfesores.TabIndex = 9;
+            this.btnProfesores.Text = "Profesores";
+            this.btnProfesores.UseVisualStyleBackColor = true;
+            // 
+            // btnAsesores
+            // 
+            this.btnAsesores.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAsesores.FlatAppearance.BorderSize = 2;
+            this.btnAsesores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnAsesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsesores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsesores.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnAsesores.Image = global::LP2Soft.Properties.Resources.address_book;
+            this.btnAsesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsesores.Location = new System.Drawing.Point(0, 200);
+            this.btnAsesores.Name = "btnAsesores";
+            this.btnAsesores.Size = new System.Drawing.Size(179, 50);
+            this.btnAsesores.TabIndex = 6;
+            this.btnAsesores.Text = "Asesores";
+            this.btnAsesores.UseVisualStyleBackColor = true;
+            // 
+            // btnCursos
+            // 
+            this.btnCursos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCursos.FlatAppearance.BorderSize = 2;
+            this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursos.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnCursos.Image = global::LP2Soft.Properties.Resources.book;
+            this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCursos.Location = new System.Drawing.Point(0, 100);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(179, 50);
+            this.btnCursos.TabIndex = 2;
+            this.btnCursos.Text = "Cursos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            // 
+            // btnNovedades
+            // 
+            this.btnNovedades.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNovedades.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNovedades.FlatAppearance.BorderSize = 2;
+            this.btnNovedades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnNovedades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovedades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovedades.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnNovedades.Image = global::LP2Soft.Properties.Resources.newspaper;
+            this.btnNovedades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovedades.Location = new System.Drawing.Point(0, 0);
+            this.btnNovedades.Name = "btnNovedades";
+            this.btnNovedades.Size = new System.Drawing.Size(179, 50);
+            this.btnNovedades.TabIndex = 0;
+            this.btnNovedades.Text = "Novedades";
+            this.btnNovedades.UseVisualStyleBackColor = true;
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,9 +346,13 @@ namespace LP2Soft.Home
         private System.Windows.Forms.PictureBox imgLogo;
         private System.Windows.Forms.Panel panelContenido;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAsesores;
+        private System.Windows.Forms.Button btnCursos;
         private System.Windows.Forms.Button btnNovedades;
         private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnProfesores;
+        private System.Windows.Forms.Button btnPerfil;
+        private System.Windows.Forms.Button btnEventos;
     }
 }
