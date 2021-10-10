@@ -47,9 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Enumerados\MenuPerfil.cs" />
-=======
     <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,7 +89,7 @@
     <Compile Include="Cursos\frmCursosHome.Designer.cs">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
     </Compile>
->>>>>>> 05ab18fd69341ace2e8b02ebeadba98a9425fecf
+    <Compile Include="Enumerados\MenuPerfil.cs" />
     <Compile Include="Home\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,21 +266,6 @@
     <None Include="Resources\bubble.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <None Include="Resources\cog.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user-plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user-minus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\address-book.png" />
-=======
     <None Include="Resources\error-circle-regular-241.png" />
   </ItemGroup>
   <ItemGroup>
@@ -300,7 +282,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\upload-regular-24.png" />
->>>>>>> 05ab18fd69341ace2e8b02ebeadba98a9425fecf
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address-book.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
