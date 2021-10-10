@@ -36,8 +36,6 @@ namespace LP2Soft.Eventos
             this.lblPublicacionesGenerales = new System.Windows.Forms.Label();
             this.panelTendenciasMateriales = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.scrollPG = new System.Windows.Forms.VScrollBar();
-            this.scrolltendencias = new System.Windows.Forms.VScrollBar();
             this.panelPublicacionesGenerales.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
@@ -46,6 +44,7 @@ namespace LP2Soft.Eventos
             // 
             // panelPublicacionesGenerales
             // 
+            this.panelPublicacionesGenerales.AutoScroll = true;
             this.panelPublicacionesGenerales.Controls.Add(this.panel1);
             this.panelPublicacionesGenerales.Controls.Add(this.lblPublicacionesGenerales);
             this.panelPublicacionesGenerales.Location = new System.Drawing.Point(12, 12);
@@ -107,27 +106,11 @@ namespace LP2Soft.Eventos
             this.label1.TabIndex = 3;
             this.label1.Text = "Tendencias en Materiales";
             // 
-            // scrollPG
-            // 
-            this.scrollPG.Location = new System.Drawing.Point(403, 12);
-            this.scrollPG.Name = "scrollPG";
-            this.scrollPG.Size = new System.Drawing.Size(17, 565);
-            this.scrollPG.TabIndex = 5;
-            // 
-            // scrolltendencias
-            // 
-            this.scrolltendencias.Location = new System.Drawing.Point(716, 12);
-            this.scrolltendencias.Name = "scrolltendencias";
-            this.scrolltendencias.Size = new System.Drawing.Size(17, 565);
-            this.scrolltendencias.TabIndex = 6;
-            // 
             // frmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 589);
-            this.Controls.Add(this.scrolltendencias);
-            this.Controls.Add(this.scrollPG);
             this.Controls.Add(this.panelTendenciasMateriales);
             this.Controls.Add(this.panelPublicacionesGenerales);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -153,7 +136,5 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label lblPublicacionesGenerales;
         private System.Windows.Forms.Panel panelTendenciasMateriales;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.VScrollBar scrollPG;
-        private System.Windows.Forms.VScrollBar scrolltendencias;
     }
 }
