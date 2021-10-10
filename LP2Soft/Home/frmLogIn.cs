@@ -26,7 +26,7 @@ namespace LP2Soft.Home
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
         {
-
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

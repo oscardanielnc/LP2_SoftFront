@@ -217,6 +217,7 @@ namespace LP2Soft.Home
             this.linkLblRegresarLogIn.TabIndex = 27;
             this.linkLblRegresarLogIn.TabStop = true;
             this.linkLblRegresarLogIn.Text = "Regresar al LogIn";
+            this.linkLblRegresarLogIn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblRegresarLogIn_LinkClicked);
             // 
             // frmSignIn
             // 
