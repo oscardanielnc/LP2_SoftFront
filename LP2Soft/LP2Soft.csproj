@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asesor\frmAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmAsesor.Designer.cs">
+      <DependentUpon>frmAsesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asesor\frmBuscarAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmBuscarAsesor.Designer.cs">
+      <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,42 @@
       <DependentUpon>frmCursosHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Enumerados\MenuPerfil.cs" />
+    <Compile Include="Eventos\frmCrearComentario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmCrearComentario.Designer.cs">
+      <DependentUpon>frmCrearComentario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmCrearPostGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmCrearPostGeneral.Designer.cs">
+      <DependentUpon>frmCrearPostGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmVerEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmVerEventos.Designer.cs">
+      <DependentUpon>frmVerEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmHomePage.Designer.cs">
+      <DependentUpon>frmHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmPostEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmPostEvento.Designer.cs">
+      <DependentUpon>frmPostEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmTendenciaMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmTendenciaMaterial.Designer.cs">
+      <DependentUpon>frmTendenciaMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +200,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Asesor\frmAsesor.resx">
+      <DependentUpon>frmAsesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
+      <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmAgregarMaterial.resx">
       <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +226,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\frmCursosHome.resx">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmCrearComentario.resx">
+      <DependentUpon>frmCrearComentario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmCrearPostGeneral.resx">
+      <DependentUpon>frmCrearPostGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmVerEventos.resx">
+      <DependentUpon>frmVerEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmHomePage.resx">
+      <DependentUpon>frmHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmPostEvento.resx">
+      <DependentUpon>frmPostEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmTendenciaMaterial.resx">
+      <DependentUpon>frmTendenciaMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
@@ -266,6 +338,33 @@
     <None Include="Resources\bubble.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dowload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat-de-burbujas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anadir-evento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filtrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filtrar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\error-circle-regular-241.png" />
   </ItemGroup>
   <ItemGroup>
@@ -298,6 +397,7 @@
   <ItemGroup>
     <None Include="Resources\address-book.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\user.png" />
   </ItemGroup>
