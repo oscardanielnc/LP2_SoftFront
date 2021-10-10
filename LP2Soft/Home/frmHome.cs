@@ -1,4 +1,7 @@
-﻿using LP2Soft.Perfil;
+﻿using LP2Soft.Asesor;
+using LP2Soft.Cursos;
+using LP2Soft.Eventos;
+using LP2Soft.Perfil;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +33,36 @@ namespace LP2Soft.Home
             _formActivo.Dock = DockStyle.Fill; // para que el contenido se ajuste a todo el panel
             panelContenido.Controls.Add(_formActivo); // para que el contenedor contenga el formulario
             _formActivo.Show(); // ambos formularios deben ser independientes, no se cancelen sus controles
+        }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmCursosHome());
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmPerfil());
+        }
+
+        private void btnNovedades_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmHomePage());
+        }
+
+        private void btnEventos_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmVerEventos());
+        }
+
+        private void btnAsesores_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmBuscarAsesor());
         }
     }
 }
