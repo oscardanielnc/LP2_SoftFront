@@ -35,6 +35,9 @@ namespace LP2Soft.Home
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.subPanelCursos = new System.Windows.Forms.Panel();
+            this.btnCursosFavoritos = new System.Windows.Forms.Button();
+            this.btnTodosMisCursos = new System.Windows.Forms.Button();
             this.btnEventos = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -49,6 +52,7 @@ namespace LP2Soft.Home
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnNotificaciones = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
+            this.subPanelCursos.SuspendLayout();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
@@ -96,6 +100,7 @@ namespace LP2Soft.Home
             // 
             // panelContenido
             // 
+            this.panelContenido.AutoScroll = true;
             this.panelContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panelContenido.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelContenido.Location = new System.Drawing.Point(185, 61);
@@ -106,6 +111,7 @@ namespace LP2Soft.Home
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.panelMenu.Controls.Add(this.subPanelCursos);
             this.panelMenu.Controls.Add(this.btnEventos);
             this.panelMenu.Controls.Add(this.btnPerfil);
             this.panelMenu.Controls.Add(this.btnCerrar);
@@ -118,6 +124,47 @@ namespace LP2Soft.Home
             this.panelMenu.Size = new System.Drawing.Size(179, 492);
             this.panelMenu.TabIndex = 11;
             // 
+            // subPanelCursos
+            // 
+            this.subPanelCursos.Controls.Add(this.btnCursosFavoritos);
+            this.subPanelCursos.Controls.Add(this.btnTodosMisCursos);
+            this.subPanelCursos.Location = new System.Drawing.Point(0, 149);
+            this.subPanelCursos.Name = "subPanelCursos";
+            this.subPanelCursos.Size = new System.Drawing.Size(179, 64);
+            this.subPanelCursos.TabIndex = 3;
+            this.subPanelCursos.Visible = false;
+            // 
+            // btnCursosFavoritos
+            // 
+            this.btnCursosFavoritos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCursosFavoritos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCursosFavoritos.FlatAppearance.BorderSize = 2;
+            this.btnCursosFavoritos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnCursosFavoritos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCursosFavoritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursosFavoritos.Location = new System.Drawing.Point(0, 31);
+            this.btnCursosFavoritos.Name = "btnCursosFavoritos";
+            this.btnCursosFavoritos.Size = new System.Drawing.Size(179, 31);
+            this.btnCursosFavoritos.TabIndex = 1;
+            this.btnCursosFavoritos.Text = "Favoritos";
+            this.btnCursosFavoritos.UseVisualStyleBackColor = true;
+            // 
+            // btnTodosMisCursos
+            // 
+            this.btnTodosMisCursos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTodosMisCursos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnTodosMisCursos.FlatAppearance.BorderSize = 2;
+            this.btnTodosMisCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnTodosMisCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTodosMisCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTodosMisCursos.Location = new System.Drawing.Point(0, 0);
+            this.btnTodosMisCursos.Name = "btnTodosMisCursos";
+            this.btnTodosMisCursos.Size = new System.Drawing.Size(179, 31);
+            this.btnTodosMisCursos.TabIndex = 0;
+            this.btnTodosMisCursos.Text = "Todos mis cursos";
+            this.btnTodosMisCursos.UseVisualStyleBackColor = true;
+            this.btnTodosMisCursos.Click += new System.EventHandler(this.btnTodosMisCursos_Click);
+            // 
             // btnEventos
             // 
             this.btnEventos.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -128,7 +175,7 @@ namespace LP2Soft.Home
             this.btnEventos.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnEventos.Image = global::LP2Soft.Properties.Resources.calendar;
             this.btnEventos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEventos.Location = new System.Drawing.Point(0, 150);
+            this.btnEventos.Location = new System.Drawing.Point(0, 211);
             this.btnEventos.Name = "btnEventos";
             this.btnEventos.Size = new System.Drawing.Size(179, 50);
             this.btnEventos.TabIndex = 11;
@@ -165,7 +212,7 @@ namespace LP2Soft.Home
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnCerrar.Image = global::LP2Soft.Properties.Resources.exit;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(0, 300);
+            this.btnCerrar.Location = new System.Drawing.Point(0, 361);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(179, 50);
             this.btnCerrar.TabIndex = 10;
@@ -183,7 +230,7 @@ namespace LP2Soft.Home
             this.btnProfesores.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnProfesores.Image = global::LP2Soft.Properties.Resources.heart;
             this.btnProfesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfesores.Location = new System.Drawing.Point(0, 250);
+            this.btnProfesores.Location = new System.Drawing.Point(0, 311);
             this.btnProfesores.Name = "btnProfesores";
             this.btnProfesores.Size = new System.Drawing.Size(179, 50);
             this.btnProfesores.TabIndex = 9;
@@ -200,7 +247,7 @@ namespace LP2Soft.Home
             this.btnAsesores.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnAsesores.Image = global::LP2Soft.Properties.Resources.address_book;
             this.btnAsesores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAsesores.Location = new System.Drawing.Point(0, 200);
+            this.btnAsesores.Location = new System.Drawing.Point(0, 261);
             this.btnAsesores.Name = "btnAsesores";
             this.btnAsesores.Size = new System.Drawing.Size(179, 50);
             this.btnAsesores.TabIndex = 6;
@@ -325,6 +372,7 @@ namespace LP2Soft.Home
             this.Name = "frmHome";
             this.Text = "frmHome";
             this.panelMenu.ResumeLayout(false);
+            this.subPanelCursos.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
@@ -357,5 +405,8 @@ namespace LP2Soft.Home
         private System.Windows.Forms.Button btnProfesores;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnEventos;
+        private System.Windows.Forms.Panel subPanelCursos;
+        private System.Windows.Forms.Button btnCursosFavoritos;
+        private System.Windows.Forms.Button btnTodosMisCursos;
     }
 }

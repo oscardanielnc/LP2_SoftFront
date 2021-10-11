@@ -101,6 +101,7 @@
     <Compile Include="Cursos\frmCursosHome.Designer.cs">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enumerados\MenuHome.cs" />
     <Compile Include="Enumerados\MenuPerfil.cs" />
     <Compile Include="Eventos\frmCrearComentario.cs">
       <SubType>Form</SubType>

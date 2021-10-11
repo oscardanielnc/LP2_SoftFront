@@ -159,16 +159,18 @@ namespace LP2Soft.Perfil
             // 
             // panelContenido
             // 
+            this.panelContenido.AutoSize = true;
             this.panelContenido.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelContenido.Location = new System.Drawing.Point(12, 249);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(799, 231);
+            this.panelContenido.Size = new System.Drawing.Size(799, 234);
             this.panelContenido.TabIndex = 11;
             // 
             // frmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 492);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panel1);
