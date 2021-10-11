@@ -29,26 +29,25 @@ namespace LP2Soft.Perfil
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelInfo = new System.Windows.Forms.Label();
+            this.panelPost1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // labelInfo
+            // panelPost1
             // 
-            this.labelInfo.AutoSize = true;
-            this.labelInfo.Location = new System.Drawing.Point(154, 196);
-            this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(456, 13);
-            this.labelInfo.TabIndex = 0;
-            this.labelInfo.Text = "Aquí se van a mostrar las publicaciones, tan pronto este bandido de mi compa pase" +
-    " su modelo.";
+            this.panelPost1.AutoSize = true;
+            this.panelPost1.Location = new System.Drawing.Point(205, 12);
+            this.panelPost1.Name = "panelPost1";
+            this.panelPost1.Size = new System.Drawing.Size(400, 244);
+            this.panelPost1.TabIndex = 0;
             // 
             // frmPerfil_Publicaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(799, 424);
-            this.Controls.Add(this.labelInfo);
+            this.ClientSize = new System.Drawing.Size(799, 270);
+            this.Controls.Add(this.panelPost1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfil_Publicaciones";
             this.Text = "frmPerfil_Publicaciones";
@@ -59,6 +58,6 @@ namespace LP2Soft.Perfil
 
         #endregion
 
-        private System.Windows.Forms.Label labelInfo;
+        private System.Windows.Forms.Panel panelPost1;
     }
 }
