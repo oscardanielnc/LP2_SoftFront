@@ -31,8 +31,8 @@ namespace LP2Soft.Eventos
         {
             this.txtComentario = new System.Windows.Forms.TextBox();
             this.btnPublicar = new System.Windows.Forms.Button();
-            this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.lbComentario = new System.Windows.Forms.Label();
+            this.pbPerfil = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,14 +53,6 @@ namespace LP2Soft.Eventos
             this.btnPublicar.Text = "Publicar";
             this.btnPublicar.UseVisualStyleBackColor = true;
             // 
-            // pbPerfil
-            // 
-            this.pbPerfil.Location = new System.Drawing.Point(15, 66);
-            this.pbPerfil.Name = "pbPerfil";
-            this.pbPerfil.Size = new System.Drawing.Size(50, 46);
-            this.pbPerfil.TabIndex = 3;
-            this.pbPerfil.TabStop = false;
-            // 
             // lbComentario
             // 
             this.lbComentario.AutoSize = true;
@@ -71,6 +63,16 @@ namespace LP2Soft.Eventos
             this.lbComentario.TabIndex = 6;
             this.lbComentario.Text = "Crear comentario";
             // 
+            // pbPerfil
+            // 
+            this.pbPerfil.Image = global::LP2Soft.Properties.Resources.DSC_0498;
+            this.pbPerfil.Location = new System.Drawing.Point(15, 66);
+            this.pbPerfil.Name = "pbPerfil";
+            this.pbPerfil.Size = new System.Drawing.Size(50, 46);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPerfil.TabIndex = 3;
+            this.pbPerfil.TabStop = false;
+            // 
             // frmCrearComentario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,7 +82,6 @@ namespace LP2Soft.Eventos
             this.Controls.Add(this.btnPublicar);
             this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.pbPerfil);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCrearComentario";
             this.Text = "frmComentario";
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();

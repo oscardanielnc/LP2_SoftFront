@@ -17,5 +17,22 @@ namespace LP2Soft.Eventos
             InitializeComponent();
         }
 
+        private void btnComentar_Click(object sender, EventArgs e)
+        {
+            frmCrearComentario frmCrearComentario = new frmCrearComentario();
+            frmCrearComentario.ShowDialog();
+        }
+
+        private void lblComentar_Click(object sender, EventArgs e)
+        {
+            frmCrearComentario frmCrearComentario = new frmCrearComentario();
+            frmCrearComentario.ShowDialog();
+        }
+
+        private void lblCrearPublicación_Click(object sender, EventArgs e)
+        {
+            frmCrearPostGeneral frmCrearPostGeneral = new frmCrearPostGeneral();
+            frmCrearPostGeneral.ShowDialog();
+        }
     }
 }

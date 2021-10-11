@@ -114,6 +114,30 @@
     <Compile Include="Eventos\frmCrearPostGeneral.Designer.cs">
       <DependentUpon>frmCrearPostGeneral.cs</DependentUpon>
     </Compile>
+    <Compile Include="Eventos\frmEventoProximo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmEventoProximo.Designer.cs">
+      <DependentUpon>frmEventoProximo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmFiltro.Designer.cs">
+      <DependentUpon>frmFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmNuevoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmNuevoEvento.Designer.cs">
+      <DependentUpon>frmNuevoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmPostGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmPostGeneral.Designer.cs">
+      <DependentUpon>frmPostGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Eventos\frmVerEventos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +256,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmCrearPostGeneral.resx">
       <DependentUpon>frmCrearPostGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmEventoProximo.resx">
+      <DependentUpon>frmEventoProximo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmFiltro.resx">
+      <DependentUpon>frmFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmNuevoEvento.resx">
+      <DependentUpon>frmNuevoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmPostGeneral.resx">
+      <DependentUpon>frmPostGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmVerEventos.resx">
       <DependentUpon>frmVerEventos.cs</DependentUpon>
