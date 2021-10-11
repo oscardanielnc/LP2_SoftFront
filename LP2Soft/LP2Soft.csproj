@@ -71,6 +71,12 @@
     <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.Designer.cs">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cursos\Calificación\Calificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Calificación\Calificacion.Designer.cs">
+      <DependentUpon>Calificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos\Ciclo7\frmCiclo7.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.resx">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Calificación\Calificacion.resx">
+      <DependentUpon>Calificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\Ciclo7\frmCiclo7.resx">
       <DependentUpon>frmCiclo7.cs</DependentUpon>
