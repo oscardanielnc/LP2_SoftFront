@@ -1,5 +1,4 @@
-﻿using LP2Soft.Perfil;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,17 +10,16 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Asesor
 {
-    public partial class frmAsesor : Form
+    public partial class frmAsesorBuscarFiltros : Form
     {
-        public frmAsesor()
+        public frmAsesorBuscarFiltros()
         {
             InitializeComponent();
         }
 
-        private void btnVerPerfil1_Click(object sender, EventArgs e)
+        private void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
-            frmPerfil formPerfil = new frmPerfil();
-            formPerfil.ShowDialog();
+            this.Close();
         }
     }
 }

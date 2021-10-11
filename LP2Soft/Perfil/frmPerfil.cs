@@ -18,7 +18,7 @@ namespace LP2Soft.Perfil
         public frmPerfil()
         {
             InitializeComponent();
-            btnInformacion.BackColor = System.Drawing.Color.FromArgb(3, 86, 171);
+            btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             _menuSeleccionado = MenuPerfil.Informacion; // se muestra el menu de información por defecto
             abrirFormulario(new frmPerfil_Informacion());
         }
@@ -28,7 +28,7 @@ namespace LP2Soft.Perfil
             _formActivo = formulario;
             _formActivo.TopLevel = false;
             _formActivo.FormBorderStyle = FormBorderStyle.None;
-            _formActivo.Dock = DockStyle.Fill;
+            /*_formActivo.Dock = DockStyle.Fill;*/
             panelContenido.Controls.Add(_formActivo);
             _formActivo.Show();
         }
@@ -45,7 +45,7 @@ namespace LP2Soft.Perfil
             if(_menuSeleccionado != MenuPerfil.Informacion)
             {
                 inicializarColorBotones();
-                btnInformacion.BackColor = System.Drawing.Color.FromArgb(3, 86, 171);
+                btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Informacion;
                 abrirFormulario(new frmPerfil_Informacion());
             }
@@ -56,7 +56,7 @@ namespace LP2Soft.Perfil
             if (_menuSeleccionado != MenuPerfil.Publicaciones)
             {
                 inicializarColorBotones();
-                btnPublicaciones.BackColor = System.Drawing.Color.FromArgb(3, 86, 171);
+                btnPublicaciones.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Publicaciones;
                 abrirFormulario(new frmPerfil_Publicaciones());
             }
@@ -67,7 +67,7 @@ namespace LP2Soft.Perfil
             if (_menuSeleccionado != MenuPerfil.Amigos)
             {
                 inicializarColorBotones();
-                btnAmigos.BackColor = System.Drawing.Color.FromArgb(3, 86, 171);
+                btnAmigos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Amigos;
                 abrirFormulario(new frmPerfil_Amigos());
             }
@@ -78,7 +78,7 @@ namespace LP2Soft.Perfil
             if (_menuSeleccionado != MenuPerfil.Cursos)
             {
                 inicializarColorBotones();
-                btnCursos.BackColor = System.Drawing.Color.FromArgb(3, 86, 171);
+                btnCursos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Cursos;
                 abrirFormulario(new frmPerfil_CursosAsesorados());
             }
@@ -89,7 +89,7 @@ namespace LP2Soft.Perfil
             if (_menuSeleccionado != MenuPerfil.Resenias)
             {
                 inicializarColorBotones();
-                btnResenias.BackColor = System.Drawing.Color.FromArgb(3, 86, 171);
+                btnResenias.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Resenias;
                 abrirFormulario(new frmPerfil_Resenias());
             }

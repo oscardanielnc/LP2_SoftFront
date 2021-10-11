@@ -8,24 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2Soft.Cursos.AgregarMaterial
+namespace LP2Soft.Asesor
 {
-    public partial class frmEstasSeguroDeCancelar : Form
+    public partial class frmAsesorPostular : Form
     {
-        public frmEstasSeguroDeCancelar()
+        public frmAsesorPostular()
         {
             InitializeComponent();
         }
 
-        private void btnCancelaCancelar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-
             this.Close();
         }
 
-        private void lblAceptaCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se agregó satisfactoriamente");
             this.Close();
         }
     }

@@ -47,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asesor\frmAsesor.cs">
+    <Compile Include="Asesor\frmAsesorBuscarFiltros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Asesor\frmAsesor.Designer.cs">
-      <DependentUpon>frmAsesor.cs</DependentUpon>
+    <Compile Include="Asesor\frmAsesorBuscarFiltros.Designer.cs">
+      <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asesor\frmAsesorPostular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmAsesorPostular.Designer.cs">
+      <DependentUpon>frmAsesorPostular.cs</DependentUpon>
     </Compile>
     <Compile Include="Asesor\frmBuscarAsesor.cs">
       <SubType>Form</SubType>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.Designer.cs">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\Calificación\Calificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Calificación\Calificacion.Designer.cs">
+      <DependentUpon>Calificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Cursos\Ciclo7\frmCiclo7.cs">
       <SubType>Form</SubType>
@@ -101,6 +113,7 @@
     <Compile Include="Cursos\frmCursosHome.Designer.cs">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enumerados\MenuHome.cs" />
     <Compile Include="Enumerados\MenuPerfil.cs" />
     <Compile Include="Eventos\frmCrearComentario.cs">
       <SubType>Form</SubType>
@@ -224,8 +237,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Asesor\frmAsesor.resx">
-      <DependentUpon>frmAsesor.cs</DependentUpon>
+    <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
+      <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asesor\frmAsesorPostular.resx">
+      <DependentUpon>frmAsesorPostular.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
@@ -235,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.resx">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Calificación\Calificacion.resx">
+      <DependentUpon>Calificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\Ciclo7\frmCiclo7.resx">
       <DependentUpon>frmCiclo7.cs</DependentUpon>
