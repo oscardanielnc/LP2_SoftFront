@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asesor\frmAsesor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Asesor\frmAsesor.Designer.cs">
-      <DependentUpon>frmAsesor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Asesor\frmAsesorBuscarFiltros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,9 +206,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Asesor\frmAsesor.resx">
-      <DependentUpon>frmAsesor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
       <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
     </EmbeddedResource>

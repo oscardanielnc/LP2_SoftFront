@@ -16,5 +16,10 @@ namespace LP2Soft.Asesor
         {
             InitializeComponent();
         }
+
+        private void btnAplicarFiltros_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

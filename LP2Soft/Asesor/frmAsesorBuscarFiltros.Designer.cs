@@ -48,6 +48,7 @@ namespace LP2Soft.Asesor
             this.btnAplicarFiltros.TabIndex = 16;
             this.btnAplicarFiltros.Text = "Aplicar Filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = true;
+            this.btnAplicarFiltros.Click += new System.EventHandler(this.btnAplicarFiltros_Click);
             // 
             // txtNombre
             // 
