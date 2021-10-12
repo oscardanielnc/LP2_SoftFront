@@ -89,7 +89,7 @@ namespace LP2Soft.Home
                 inicializarColorBotones();
                 btnEventos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
                 _menuSeleccionado = MenuHome.Eventos;
-                abrirFormulario(new frmVerEventos());
+                abrirFormulario(new frmEventosAgendados());
             }
         }
 
