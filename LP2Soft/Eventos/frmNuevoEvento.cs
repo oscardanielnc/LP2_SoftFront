@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Eventos
 {
-    public partial class frmPostEvento : Form
+    public partial class frmNuevoEvento : Form
     {
-        public frmPostEvento()
+        public frmNuevoEvento()
         {
             InitializeComponent();
         }
-
-        
     }
 }

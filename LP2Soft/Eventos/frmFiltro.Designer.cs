@@ -1,7 +1,7 @@
 ﻿
-namespace LP2Soft.Perfil
+namespace LP2Soft.Eventos
 {
-    partial class frmPerfil_Publicaciones
+    partial class frmFiltro
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,19 @@ namespace LP2Soft.Perfil
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelPost1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // panelPost1
-            // 
-            this.panelPost1.AutoSize = true;
-            this.panelPost1.Location = new System.Drawing.Point(205, 12);
-            this.panelPost1.Name = "panelPost1";
-            this.panelPost1.Size = new System.Drawing.Size(400, 244);
-            this.panelPost1.TabIndex = 0;
-            // 
-            // frmPerfil_Publicaciones
+            // frmFiltro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(799, 270);
-            this.Controls.Add(this.panelPost1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPerfil_Publicaciones";
-            this.Text = "frmPerfil_Publicaciones";
+            this.ClientSize = new System.Drawing.Size(392, 265);
+            this.Name = "frmFiltro";
+            this.Text = "frmFiltro";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelPost1;
     }
 }

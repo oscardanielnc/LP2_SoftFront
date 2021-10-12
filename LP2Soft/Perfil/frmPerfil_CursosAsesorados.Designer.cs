@@ -36,11 +36,11 @@ namespace LP2Soft.Perfil
             // labelinfo
             // 
             this.labelinfo.AutoSize = true;
-            this.labelinfo.Location = new System.Drawing.Point(315, 66);
+            this.labelinfo.Location = new System.Drawing.Point(298, 66);
             this.labelinfo.Name = "labelinfo";
-            this.labelinfo.Size = new System.Drawing.Size(155, 13);
+            this.labelinfo.Size = new System.Drawing.Size(184, 13);
             this.labelinfo.TabIndex = 0;
-            this.labelinfo.Text = "Aquí vienen los cursos de José";
+            this.labelinfo.Text = "Este usuario no asesora ningún curso";
             // 
             // btnAniadirCurso
             // 
@@ -55,15 +55,15 @@ namespace LP2Soft.Perfil
             this.btnAniadirCurso.Text = "+ Añadir nuevo curso";
             this.btnAniadirCurso.UseVisualStyleBackColor = false;
             // 
-            // frmPerfil_CursosReseniados
+            // frmPerfil_CursosAsesorados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 424);
+            this.ClientSize = new System.Drawing.Size(799, 236);
             this.Controls.Add(this.btnAniadirCurso);
             this.Controls.Add(this.labelinfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPerfil_CursosReseniados";
+            this.Name = "frmPerfil_CursosAsesorados";
             this.Text = "frmCursosReseniados";
             this.ResumeLayout(false);
             this.PerformLayout();
