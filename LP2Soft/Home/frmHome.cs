@@ -49,17 +49,6 @@ namespace LP2Soft.Home
             _formActivo.Show(); // ambos formularios deben ser independientes, no se cancelen sus controles
         }
 
-        private void btnCursos_Click(object sender, EventArgs e)
-        {
-            if (subPanelCursos.Visible == false)
-                subPanelCursos.Visible = true;
-            else subPanelCursos.Visible = false;
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
@@ -94,15 +83,11 @@ namespace LP2Soft.Home
             }
         }
 
-        private void btnAsesores_Click(object sender, EventArgs e)
+        private void btnCursos_Click(object sender, EventArgs e)
         {
-            if (_menuSeleccionado != MenuHome.Asesores)
-            {
-                inicializarColorBotones();
-                btnAsesores.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.Asesores;
-                abrirFormulario(new frmBuscarAsesor());
-            }
+            if (subPanelCursos.Visible == false)
+                subPanelCursos.Visible = true;
+            else subPanelCursos.Visible = false;
         }
 
         private void btnTodosMisCursos_Click(object sender, EventArgs e)
@@ -116,6 +101,17 @@ namespace LP2Soft.Home
             }
         }
 
+        private void btnAsesores_Click(object sender, EventArgs e)
+        {
+            if (_menuSeleccionado != MenuHome.Asesores)
+            {
+                inicializarColorBotones();
+                btnAsesores.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
+                _menuSeleccionado = MenuHome.Asesores;
+                abrirFormulario(new frmBuscarAsesor());
+            }
+        }
+
         private void btnProfesores_Click(object sender, EventArgs e)
         {
             if (_menuSeleccionado != MenuHome.Profesores)
@@ -125,6 +121,11 @@ namespace LP2Soft.Home
                 _menuSeleccionado = MenuHome.Profesores;
                 abrirFormulario(new frmProfesores());
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
