@@ -112,13 +112,15 @@ namespace LP2Soft.Eventos
             // 
             // pbPerfil
             // 
+            this.pbPerfil.Image = global::LP2Soft.Properties.Resources.DSC_0498;
             this.pbPerfil.Location = new System.Drawing.Point(16, 48);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(74, 65);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPerfil.TabIndex = 1;
             this.pbPerfil.TabStop = false;
             // 
-            // frmCrearPublicacion
+            // frmCrearPostGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,8 +133,7 @@ namespace LP2Soft.Eventos
             this.Controls.Add(this.lbQueEstasPensando);
             this.Controls.Add(this.pbPerfil);
             this.Controls.Add(this.lbCrearPublicacion);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCrearPublicacion";
+            this.Name = "frmCrearPostGeneral";
             this.Text = "frmCrearPublicacion";
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPublicacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();

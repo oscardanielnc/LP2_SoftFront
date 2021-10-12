@@ -16,5 +16,17 @@ namespace LP2Soft.Asesor
         {
             InitializeComponent();
         }
+
+        private void lblFiltros_Click(object sender, EventArgs e)
+        {
+            frmAsesorBuscarFiltros formFiltros = new frmAsesorBuscarFiltros();
+            formFiltros.ShowDialog();
+        }
+
+        private void btnPostular_Click(object sender, EventArgs e)
+        {
+            frmAsesorPostular formPostular = new frmAsesorPostular();
+            formPostular.ShowDialog();
+        }
     }
 }

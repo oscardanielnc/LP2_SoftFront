@@ -30,6 +30,8 @@ namespace LP2Soft.Eventos
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantidadComentarios = new System.Windows.Forms.Label();
+            this.lblCantidadLikes = new System.Windows.Forms.Label();
             this.lblComentar = new System.Windows.Forms.Label();
             this.lblMeGusta = new System.Windows.Forms.Label();
             this.btnComentar = new System.Windows.Forms.Button();
@@ -41,14 +43,13 @@ namespace LP2Soft.Eventos
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
-            this.lblCantidadLikes = new System.Windows.Forms.Label();
-            this.lblCantidadComentarios = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblCantidadComentarios);
             this.panel1.Controls.Add(this.lblCantidadLikes);
             this.panel1.Controls.Add(this.lblComentar);
@@ -66,6 +67,26 @@ namespace LP2Soft.Eventos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(334, 208);
             this.panel1.TabIndex = 0;
+            // 
+            // lblCantidadComentarios
+            // 
+            this.lblCantidadComentarios.AutoSize = true;
+            this.lblCantidadComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadComentarios.Location = new System.Drawing.Point(289, 174);
+            this.lblCantidadComentarios.Name = "lblCantidadComentarios";
+            this.lblCantidadComentarios.Size = new System.Drawing.Size(21, 15);
+            this.lblCantidadComentarios.TabIndex = 20;
+            this.lblCantidadComentarios.Text = "10";
+            // 
+            // lblCantidadLikes
+            // 
+            this.lblCantidadLikes.AutoSize = true;
+            this.lblCantidadLikes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadLikes.Location = new System.Drawing.Point(126, 174);
+            this.lblCantidadLikes.Name = "lblCantidadLikes";
+            this.lblCantidadLikes.Size = new System.Drawing.Size(21, 15);
+            this.lblCantidadLikes.TabIndex = 19;
+            this.lblCantidadLikes.Text = "10";
             // 
             // lblComentar
             // 
@@ -184,26 +205,6 @@ namespace LP2Soft.Eventos
             this.pbPerfil.Size = new System.Drawing.Size(50, 46);
             this.pbPerfil.TabIndex = 2;
             this.pbPerfil.TabStop = false;
-            // 
-            // lblCantidadLikes
-            // 
-            this.lblCantidadLikes.AutoSize = true;
-            this.lblCantidadLikes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadLikes.Location = new System.Drawing.Point(126, 174);
-            this.lblCantidadLikes.Name = "lblCantidadLikes";
-            this.lblCantidadLikes.Size = new System.Drawing.Size(21, 15);
-            this.lblCantidadLikes.TabIndex = 19;
-            this.lblCantidadLikes.Text = "10";
-            // 
-            // lblCantidadComentarios
-            // 
-            this.lblCantidadComentarios.AutoSize = true;
-            this.lblCantidadComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadComentarios.Location = new System.Drawing.Point(289, 174);
-            this.lblCantidadComentarios.Name = "lblCantidadComentarios";
-            this.lblCantidadComentarios.Size = new System.Drawing.Size(21, 15);
-            this.lblCantidadComentarios.TabIndex = 20;
-            this.lblCantidadComentarios.Text = "10";
             // 
             // frmTendenciaMaterial
             // 
