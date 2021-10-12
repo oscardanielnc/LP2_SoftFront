@@ -71,11 +71,11 @@
     <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.Designer.cs">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Calificación\Calificacion.cs">
+    <Compile Include="Cursos\Calificación\frmCalificacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\Calificación\Calificacion.Designer.cs">
-      <DependentUpon>Calificacion.cs</DependentUpon>
+    <Compile Include="Cursos\Calificación\frmCalificacion.Designer.cs">
+      <DependentUpon>frmCalificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Cursos\Ciclo7\frmCiclo7.cs">
       <SubType>Form</SubType>
@@ -218,8 +218,8 @@
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.resx">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Calificación\Calificacion.resx">
-      <DependentUpon>Calificacion.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\Calificación\frmCalificacion.resx">
+      <DependentUpon>frmCalificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\Ciclo7\frmCiclo7.resx">
       <DependentUpon>frmCiclo7.cs</DependentUpon>
@@ -406,7 +406,9 @@
   <ItemGroup>
     <None Include="Resources\address-book.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\star-full.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
   </ItemGroup>
