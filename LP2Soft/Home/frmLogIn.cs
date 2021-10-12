@@ -13,9 +13,15 @@ namespace LP2Soft.Home
 {
     public partial class frmLogIn : Form
     {
+        private Panel _panelPadre;
         public frmLogIn()
         {
             InitializeComponent();
+        }
+        public frmLogIn(Panel panel)
+        {
+            InitializeComponent();
+            _panelPadre = panel;
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -26,7 +32,11 @@ namespace LP2Soft.Home
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            _panelPadre.Controls.Clear();
+            frmSignIn frmSignin = new frmSignIn(_panelPadre);
+            frmSignin.TopLevel = false;
+            _panelPadre.Controls.Add(frmSignin);
+            frmSignin.Show();
         }
     }
 }
