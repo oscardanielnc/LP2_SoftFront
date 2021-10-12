@@ -3,6 +3,7 @@ using LP2Soft.Cursos;
 using LP2Soft.Enumerados;
 using LP2Soft.Eventos;
 using LP2Soft.Perfil;
+using LP2Soft.Profesor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -112,6 +113,17 @@ namespace LP2Soft.Home
                 btnTodosMisCursos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
                 _menuSeleccionado = MenuHome.Asesores;
                 abrirFormulario(new frmCursosHome());
+            }
+        }
+
+        private void btnProfesores_Click(object sender, EventArgs e)
+        {
+            if (_menuSeleccionado != MenuHome.Profesores)
+            {
+                inicializarColorBotones();
+                btnProfesores.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
+                _menuSeleccionado = MenuHome.Profesores;
+                abrirFormulario(new frmProfesores());
             }
         }
     }

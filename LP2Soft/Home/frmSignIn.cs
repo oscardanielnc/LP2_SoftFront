@@ -12,11 +12,16 @@ namespace LP2Soft.Home
 {
     public partial class frmSignIn : Form
     {
+        private Panel _panelPadre;
         public frmSignIn()
         {
             InitializeComponent();
         }
-
+        public frmSignIn(Panel panel)
+        {
+            InitializeComponent();
+            _panelPadre = panel;
+        }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             frmHome formHome = new frmHome();
@@ -25,7 +30,11 @@ namespace LP2Soft.Home
 
         private void linkLblRegresarLogIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            _panelPadre.Controls.Clear();
+            frmLogIn frmLogin = new frmLogIn(_panelPadre);
+            frmLogin.TopLevel = false;
+            _panelPadre.Controls.Add(frmLogin);
+            frmLogin.Show();
         }
     }
 }

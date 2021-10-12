@@ -43,7 +43,6 @@ namespace LP2Soft.Home
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnProfesores = new System.Windows.Forms.Button();
             this.btnAsesores = new System.Windows.Forms.Button();
-            this.btnCursos = new System.Windows.Forms.Button();
             this.btnNovedades = new System.Windows.Forms.Button();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.imgLogo = new System.Windows.Forms.PictureBox();
@@ -51,6 +50,7 @@ namespace LP2Soft.Home
             this.btnMensajes = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnNotificaciones = new System.Windows.Forms.PictureBox();
+            this.btnCursos = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.subPanelCursos.SuspendLayout();
             this.panelHeader.SuspendLayout();
@@ -111,13 +111,13 @@ namespace LP2Soft.Home
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.panelMenu.Controls.Add(this.btnCursos);
             this.panelMenu.Controls.Add(this.subPanelCursos);
             this.panelMenu.Controls.Add(this.btnEventos);
             this.panelMenu.Controls.Add(this.btnPerfil);
             this.panelMenu.Controls.Add(this.btnCerrar);
             this.panelMenu.Controls.Add(this.btnProfesores);
             this.panelMenu.Controls.Add(this.btnAsesores);
-            this.panelMenu.Controls.Add(this.btnCursos);
             this.panelMenu.Controls.Add(this.btnNovedades);
             this.panelMenu.Location = new System.Drawing.Point(0, 61);
             this.panelMenu.Name = "panelMenu";
@@ -236,6 +236,7 @@ namespace LP2Soft.Home
             this.btnProfesores.TabIndex = 9;
             this.btnProfesores.Text = "Profesores";
             this.btnProfesores.UseVisualStyleBackColor = true;
+            this.btnProfesores.Click += new System.EventHandler(this.btnProfesores_Click);
             // 
             // btnAsesores
             // 
@@ -254,24 +255,6 @@ namespace LP2Soft.Home
             this.btnAsesores.Text = "Asesores";
             this.btnAsesores.UseVisualStyleBackColor = true;
             this.btnAsesores.Click += new System.EventHandler(this.btnAsesores_Click);
-            // 
-            // btnCursos
-            // 
-            this.btnCursos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCursos.FlatAppearance.BorderSize = 2;
-            this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCursos.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnCursos.Image = global::LP2Soft.Properties.Resources.book;
-            this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCursos.Location = new System.Drawing.Point(0, 100);
-            this.btnCursos.Name = "btnCursos";
-            this.btnCursos.Size = new System.Drawing.Size(179, 50);
-            this.btnCursos.TabIndex = 2;
-            this.btnCursos.Text = "Cursos";
-            this.btnCursos.UseVisualStyleBackColor = true;
-            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
             // 
             // btnNovedades
             // 
@@ -361,6 +344,24 @@ namespace LP2Soft.Home
             this.btnNotificaciones.TabIndex = 18;
             this.btnNotificaciones.TabStop = false;
             // 
+            // btnCursos
+            // 
+            this.btnCursos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCursos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCursos.FlatAppearance.BorderSize = 2;
+            this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursos.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnCursos.Image = global::LP2Soft.Properties.Resources.book;
+            this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCursos.Location = new System.Drawing.Point(0, 100);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(179, 50);
+            this.btnCursos.TabIndex = 12;
+            this.btnCursos.Text = "Cursos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,7 +399,6 @@ namespace LP2Soft.Home
         private System.Windows.Forms.Panel panelContenido;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnAsesores;
-        private System.Windows.Forms.Button btnCursos;
         private System.Windows.Forms.Button btnNovedades;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Button btnCerrar;
@@ -408,5 +408,6 @@ namespace LP2Soft.Home
         private System.Windows.Forms.Panel subPanelCursos;
         private System.Windows.Forms.Button btnCursosFavoritos;
         private System.Windows.Forms.Button btnTodosMisCursos;
+        private System.Windows.Forms.Button btnCursos;
     }
 }
