@@ -241,6 +241,30 @@
     <Compile Include="Perfil\frmPerfil_Resenias.Designer.cs">
       <DependentUpon>frmPerfil_Resenias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\frmEjemplo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmEjemplo.Designer.cs">
+      <DependentUpon>frmEjemplo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmProfesores.Designer.cs">
+      <DependentUpon>frmProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmProfesor_Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmProfesor_Perfil.Designer.cs">
+      <DependentUpon>frmProfesor_Perfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmProfesor_Perfil_Informacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmProfesor_Perfil_Informacion.Designer.cs">
+      <DependentUpon>frmProfesor_Perfil_Informacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
@@ -338,6 +362,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil_Resenias.resx">
       <DependentUpon>frmPerfil_Resenias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmEjemplo.resx">
+      <DependentUpon>frmEjemplo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmProfesores.resx">
+      <DependentUpon>frmProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmProfesor_Perfil.resx">
+      <DependentUpon>frmProfesor_Perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmProfesor_Perfil_Informacion.resx">
+      <DependentUpon>frmProfesor_Perfil_Informacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -461,7 +497,9 @@
   <ItemGroup>
     <None Include="Resources\address-book.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\FreedyPaz.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
   </ItemGroup>
@@ -470,6 +508,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MiguelGuanira.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RonyCueva.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EderQuispe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LaylaHirsh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IsaacYrigoyen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\67092642_375243393186725_3715283641414021357_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

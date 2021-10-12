@@ -30,8 +30,8 @@ namespace LP2Soft.Home
         private void InitializeComponent()
         {
             this.panelContenido = new System.Windows.Forms.Panel();
-            this.richTextBoxInfo = new System.Windows.Forms.RichTextBox();
             this.imgLogo = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,17 +43,6 @@ namespace LP2Soft.Home
             this.panelContenido.Size = new System.Drawing.Size(400, 440);
             this.panelContenido.TabIndex = 5;
             // 
-            // richTextBoxInfo
-            // 
-            this.richTextBoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxInfo.Location = new System.Drawing.Point(71, 265);
-            this.richTextBoxInfo.Name = "richTextBoxInfo";
-            this.richTextBoxInfo.ReadOnly = true;
-            this.richTextBoxInfo.Size = new System.Drawing.Size(340, 115);
-            this.richTextBoxInfo.TabIndex = 4;
-            this.richTextBoxInfo.Text = "¡Bienvenido a INFUNABLES, una página dónde podrás encontrar todo lo que necesitas" +
-    " para triunfar en la universidad!";
-            // 
             // imgLogo
             // 
             this.imgLogo.Image = global::LP2Soft.Properties.Resources.Logo_INFunables;
@@ -64,26 +53,38 @@ namespace LP2Soft.Home
             this.imgLogo.TabIndex = 3;
             this.imgLogo.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(67, 279);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(383, 60);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "¡Bienvenido a INFUNABLES, una página \r\ndónde podrás encontrar todo lo que necesit" +
+    "as \r\npara triunfar en la universidad!";
+            // 
             // frmLoginSingin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(964, 521);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelContenido);
-            this.Controls.Add(this.richTextBoxInfo);
             this.Controls.Add(this.imgLogo);
             this.Name = "frmLoginSingin";
             this.Text = "frmLoginSingin";
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panelContenido;
-        private System.Windows.Forms.RichTextBox richTextBoxInfo;
         private System.Windows.Forms.PictureBox imgLogo;
+        private System.Windows.Forms.Label label1;
     }
 }
