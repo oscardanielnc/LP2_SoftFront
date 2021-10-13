@@ -151,11 +151,17 @@
     <Compile Include="Eventos\frmCrearEvento.Designer.cs">
       <DependentUpon>frmCrearEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Eventos\frmMisEventos.cs">
+    <Compile Include="Eventos\frmMisPublicaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Eventos\frmMisEventos.Designer.cs">
-      <DependentUpon>frmMisEventos.cs</DependentUpon>
+    <Compile Include="Eventos\frmMisPublicaciones.Designer.cs">
+      <DependentUpon>frmMisPublicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmModificarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmModificarEvento.Designer.cs">
+      <DependentUpon>frmModificarEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Eventos\frmPostGeneral.cs">
       <SubType>Form</SubType>
@@ -324,8 +330,11 @@
     <EmbeddedResource Include="Eventos\frmCrearEvento.resx">
       <DependentUpon>frmCrearEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Eventos\frmMisEventos.resx">
-      <DependentUpon>frmMisEventos.cs</DependentUpon>
+    <EmbeddedResource Include="Eventos\frmMisPublicaciones.resx">
+      <DependentUpon>frmMisPublicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmModificarEvento.resx">
+      <DependentUpon>frmModificarEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmPostGeneral.resx">
       <DependentUpon>frmPostGeneral.cs</DependentUpon>

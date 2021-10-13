@@ -34,5 +34,11 @@ namespace LP2Soft.Eventos
             }
 
         }
+
+        private void btnAgendarEvento_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se eliminó el evento de tu agenda", "Mensaje Confirmación",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
