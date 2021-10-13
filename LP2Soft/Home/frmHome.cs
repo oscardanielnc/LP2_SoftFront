@@ -54,29 +54,24 @@ namespace LP2Soft.Home
             panelContenido.Controls.Add(_formActivo); // para que el contenedor contenga el formulario
             _formActivo.Show(); // ambos formularios deben ser independientes, no se cancelen sus controles
         }
-
-
-        public void btnPerfil_Click(object sender, EventArgs e)
+        public void abrirFormularioHome(Form formulario, MenuHome menuSeleccionar)
         {
-            if (_menuSeleccionado != MenuHome.Perfil)
+            if (_menuSeleccionado != menuSeleccionar)
             {
                 inicializarColorBotones();
                 btnPerfil.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.Perfil;
-                abrirFormulario(new frmPerfil());
+                _menuSeleccionado = menuSeleccionar;
+                abrirFormulario(formulario);
             }
         }
 
-        public void btnNovedades_Click(object sender, EventArgs e)
-        {
-            if (_menuSeleccionado != MenuHome.Novedades)
-            {
-                inicializarColorBotones();
-                btnNovedades.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.Novedades;
-                abrirFormulario(new frmHomePage());
-            }
-        }
+
+        public void btnPerfil_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmPerfil(), MenuHome.Perfil);
+
+
+        public void btnNovedades_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmHomePage(), MenuHome.Novedades);
 
         public void btnCursos_Click(object sender, EventArgs e)
         {
@@ -85,26 +80,11 @@ namespace LP2Soft.Home
             else subPanelCursos.Visible = false;
         }
 
-        public void btnTodosMisCursos_Click(object sender, EventArgs e)
-        {
-            if (_menuSeleccionado != MenuHome.CursosTodos)
-            {
-                inicializarColorBotones();
-                btnTodosMisCursos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.CursosTodos;
-                abrirFormulario(new frmCursosHome());
-            }
-        }
+        public void btnTodosMisCursos_Click(object sender, EventArgs e) => 
+            abrirFormularioHome(new frmCursosHome(), MenuHome.CursosTodos);
 
-        public void btnMensajes_Click(object sender, EventArgs e)
-        {
-            if (_menuSeleccionado != MenuHome.Mensajes)
-            {
-                inicializarColorBotones();
-                _menuSeleccionado = MenuHome.Mensajes;
-                abrirFormulario(new frmMensajes(this));
-            }
-        }
+        public void btnMensajes_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmMensajes(this), MenuHome.Mensajes);
 
         public void btnEventos_Click(object sender, EventArgs e)
         {
@@ -115,60 +95,29 @@ namespace LP2Soft.Home
 
         public void btnVerEventos_Click(object sender, EventArgs e)
         {
-/*            if (_menuSeleccionado != MenuHome.VerEventos)
-            {
-                inicializarColorBotones();
-                btnVerEventos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.VerEventos;
-                abrirFormulario(new frmEventosAgendados());
-            }*/
+            /*            if (_menuSeleccionado != MenuHome.VerEventos)
+                        {
+                            inicializarColorBotones();
+                            btnVerEventos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
+                            _menuSeleccionado = MenuHome.VerEventos;
+                            abrirFormulario(new frmEventosAgendados());
+                        }*/
+            /*abrirFormularioHome(new frmEventosAgendados(), MenuHome.VerEventos);*/
         }
 
-        public void btnEventosAgendados_Click(object sender, EventArgs e)
-        {
-            if (_menuSeleccionado != MenuHome.EventosAgendados)
-            {
-                inicializarColorBotones();
-                btnEventosAgendados.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.EventosAgendados;
-                abrirFormulario(new frmEventosAgendados());
-            }
-        }
+        public void btnEventosAgendados_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmEventosAgendados(), MenuHome.EventosAgendados);
 
-        public void btnAsesores_Click(object sender, EventArgs e)
-        {
-            if (_menuSeleccionado != MenuHome.Asesores)
-            {
-                inicializarColorBotones();
-                _menuSeleccionado = MenuHome.Asesores;
-                abrirFormulario(new frmBuscarAsesor(this));
-            }
-        }
+        public void btnAsesores_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmBuscarAsesor(this), MenuHome.Asesores);
 
-        public void btnProfesores_Click(object sender, EventArgs e)
-        {
-            if (_menuSeleccionado != MenuHome.Profesores)
-            {
-                inicializarColorBotones();
-                btnProfesores.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.Profesores;
-                abrirFormulario(new frmProfesores());
-            }
-        }
+        public void btnProfesores_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmProfesores(), MenuHome.Profesores);
 
-        public void btnCerrar_Click(object sender, EventArgs e)
-        {
+        public void btnCerrar_Click(object sender, EventArgs e) =>
             _formPrincipal.abrirFormulario(new frmLoginSingin(_formPrincipal));
-        }
 
-        public void btnNotificaciones_Click(object sender, EventArgs e)
-        {
-            if (_menuSeleccionado != MenuHome.Notificaciones)
-            {
-                inicializarColorBotones();
-                _menuSeleccionado = MenuHome.Notificaciones;
-                abrirFormulario(new frmNotificaciones());
-            }
-        }
+        public void btnNotificaciones_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmNotificaciones(), MenuHome.Notificaciones);
     }
 }

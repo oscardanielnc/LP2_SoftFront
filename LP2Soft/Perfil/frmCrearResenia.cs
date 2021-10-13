@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Perfil
 {
-    public partial class frmPerfil_Resenias : Form
+    public partial class frmCrearResenia : Form
     {
-        public frmPerfil_Resenias()
+        public frmCrearResenia()
         {
             InitializeComponent();
         }
 
-        private void btnNuevaResenia_Click(object sender, EventArgs e)
+        private void btnPublicar_Click(object sender, EventArgs e)
         {
-            frmCrearResenia formCrearResenia = new frmCrearResenia();
-            formCrearResenia.ShowDialog();
+            this.Close();
         }
     }
 }
