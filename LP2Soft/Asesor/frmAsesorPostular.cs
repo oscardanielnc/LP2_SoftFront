@@ -12,11 +12,16 @@ namespace LP2Soft.Asesor
 {
     public partial class frmAsesorPostular : Form
     {
+        private Panel _panelPadre;
         public frmAsesorPostular()
         {
             InitializeComponent();
         }
-
+        public frmAsesorPostular(Panel panel)
+        {
+            InitializeComponent();
+            _panelPadre = panel;
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             this.Close();
