@@ -12,9 +12,15 @@ namespace LP2Soft.Asesor
 {
     public partial class frmBuscarAsesor : Form
     {
+        private Panel _panelPadre;
         public frmBuscarAsesor()
         {
             InitializeComponent();
+        }
+        public frmBuscarAsesor(Panel panel)
+        {
+            InitializeComponent();
+            _panelPadre = panel;
         }
 
         private void lblFiltros_Click(object sender, EventArgs e)
@@ -25,8 +31,11 @@ namespace LP2Soft.Asesor
 
         private void btnPostular_Click(object sender, EventArgs e)
         {
-            frmAsesorPostular formPostular = new frmAsesorPostular();
-            formPostular.ShowDialog();
+            _panelPadre.Controls.Clear();
+            frmAsesorPostular frmPostular = new frmAsesorPostular(_panelPadre);
+            frmPostular.TopLevel = false;
+            _panelPadre.Controls.Add(frmPostular);
+            frmPostular.Show();
         }
     }
 }

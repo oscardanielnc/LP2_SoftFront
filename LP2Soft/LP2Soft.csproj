@@ -217,6 +217,12 @@
     <Compile Include="Home\frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notificaciones\Notificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notificaciones\Notificaciones.Designer.cs">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfil\frmPerfil_CursosAsesorados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notificaciones\Notificaciones.resx">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
