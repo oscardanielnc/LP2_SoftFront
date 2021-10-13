@@ -30,7 +30,7 @@ namespace LP2Soft.Home
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             _formPrincipal.PanelPrincipal.Controls.Clear();
-            frmHome formHome = new frmHome();
+            frmHome formHome = new frmHome(_formPrincipal);
             formHome.TopLevel = false;
             formHome.FormBorderStyle = FormBorderStyle.None;
             _formPrincipal.PanelPrincipal.Controls.Add(formHome);

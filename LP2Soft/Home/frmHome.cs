@@ -18,11 +18,13 @@ namespace LP2Soft.Home
 {
     public partial class frmHome : Form
     {
-        private static Form _formActivo = null;
-        private static MenuHome _menuSeleccionado;
+        private Form _formActivo = null;
+        private MenuHome _menuSeleccionado;
+        private frmPrincipal _formPrincipal;
 
-        public frmHome()
+        public frmHome(frmPrincipal formPrincipal)
         {
+            _formPrincipal = formPrincipal;
             InitializeComponent();
             btnNovedades.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
             _menuSeleccionado = MenuHome.Novedades; // se muestra el menu de perfil por defecto
@@ -125,7 +127,7 @@ namespace LP2Soft.Home
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            _formPrincipal.Close();
         }
     }
 }
