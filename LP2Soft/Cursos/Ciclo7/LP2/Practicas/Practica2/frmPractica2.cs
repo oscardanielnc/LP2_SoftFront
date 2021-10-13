@@ -1,5 +1,6 @@
 ﻿using LP2Soft.Cursos.AgregarMaterial;
 using LP2Soft.Cursos.Calificación;
+using LP2Soft.Cursos.Flitro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -93,6 +94,18 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         private void pBLP2Practica1Compartir_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Compartiendo");
+        }
+
+        private void btnLLP2Practica2Filtrar_Click(object sender, EventArgs e)
+        {
+            frmFiltro filtro = new frmFiltro();
+            filtro.Show();
+        }
+
+        private void pBFiltro_Click(object sender, EventArgs e)
+        {
+            frmFiltro filtro = new frmFiltro();
+            filtro.Show();
         }
     }
 }

@@ -76,5 +76,14 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         {
             MessageBox.Show("Descargando");
         }
+
+        private void btnLike1_Click(object sender, EventArgs e)
+        {
+            if (btnLike1.ForeColor == Color.Black)
+                btnLike1.ForeColor = Color.Blue;
+            else {
+                btnLike1.ForeColor = Color.Black;
+            }
+        }
     }
 }

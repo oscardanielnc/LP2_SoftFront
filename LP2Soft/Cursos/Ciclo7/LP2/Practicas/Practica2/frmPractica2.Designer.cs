@@ -34,12 +34,20 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnLLP2Practica2Practicas = new System.Windows.Forms.Button();
             this.btnLP2Practica2LP2 = new System.Windows.Forms.Button();
             this.btnLLP2Practica2Practica2 = new System.Windows.Forms.Button();
-            this.btnLLP2Practica2Filtrar = new System.Windows.Forms.Button();
             this.btnLLP2Practica2AgregarMaterial = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panelLP2Practicas = new System.Windows.Forms.Panel();
+            this.btnLP2Practicas4 = new System.Windows.Forms.Button();
+            this.btnLP2Practicas3 = new System.Windows.Forms.Button();
+            this.btnLP2Practicas2 = new System.Windows.Forms.Button();
+            this.btnLP2Practicas1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnLLP2Practica2Filtrar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pBFiltro = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -56,16 +64,12 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnestrella1 = new System.Windows.Forms.Button();
-            this.btnLP2Practicas4 = new System.Windows.Forms.Button();
-            this.btnLP2Practicas3 = new System.Windows.Forms.Button();
-            this.btnLP2Practicas2 = new System.Windows.Forms.Button();
-            this.btnLP2Practicas1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureLP2Practica2Referencia4 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia1 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia3 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia2 = new System.Windows.Forms.PictureBox();
             this.panelLP2Practicas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBFiltro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -133,15 +137,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnLLP2Practica2Practica2.Text = "Practica 2";
             this.btnLLP2Practica2Practica2.UseVisualStyleBackColor = true;
             // 
-            // btnLLP2Practica2Filtrar
-            // 
-            this.btnLLP2Practica2Filtrar.Location = new System.Drawing.Point(12, 104);
-            this.btnLLP2Practica2Filtrar.Name = "btnLLP2Practica2Filtrar";
-            this.btnLLP2Practica2Filtrar.Size = new System.Drawing.Size(143, 35);
-            this.btnLLP2Practica2Filtrar.TabIndex = 33;
-            this.btnLLP2Practica2Filtrar.Text = "Filtrar";
-            this.btnLLP2Practica2Filtrar.UseVisualStyleBackColor = true;
-            // 
             // btnLLP2Practica2AgregarMaterial
             // 
             this.btnLLP2Practica2AgregarMaterial.Location = new System.Drawing.Point(170, 104);
@@ -158,21 +153,19 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Location = new System.Drawing.Point(45, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 15);
+            this.label1.Size = new System.Drawing.Size(157, 15);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Nombre                                                                           " +
-    "                  ";
+            this.label1.Text = "Nombre                                     ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(319, 153);
+            this.label2.Location = new System.Drawing.Point(431, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(308, 15);
+            this.label2.Size = new System.Drawing.Size(188, 15);
             this.label2.TabIndex = 37;
-            this.label2.Text = "Propietario                                                                      " +
-    "             ";
+            this.label2.Text = "Propietario                                           ";
             // 
             // label3
             // 
@@ -211,6 +204,106 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.panelLP2Practicas.Size = new System.Drawing.Size(783, 230);
             this.panelLP2Practicas.TabIndex = 39;
             // 
+            // btnLP2Practicas4
+            // 
+            this.btnLP2Practicas4.Location = new System.Drawing.Point(33, 120);
+            this.btnLP2Practicas4.Name = "btnLP2Practicas4";
+            this.btnLP2Practicas4.Size = new System.Drawing.Size(750, 34);
+            this.btnLP2Practicas4.TabIndex = 20;
+            this.btnLP2Practicas4.Text = "Practica 2 2022-0 (zip)          Freddy  Paz                                 19  " +
+    "                          Juan Lora                                          5.0" +
+    "";
+            this.btnLP2Practicas4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLP2Practicas4.UseVisualStyleBackColor = true;
+            // 
+            // btnLP2Practicas3
+            // 
+            this.btnLP2Practicas3.Location = new System.Drawing.Point(33, 80);
+            this.btnLP2Practicas3.Name = "btnLP2Practicas3";
+            this.btnLP2Practicas3.Size = new System.Drawing.Size(750, 34);
+            this.btnLP2Practicas3.TabIndex = 16;
+            this.btnLP2Practicas3.Text = "Practica 2 2021-2 (zip)          Freddy  Paz                                 19  " +
+    "                          Juan Lora                                          4.5" +
+    "";
+            this.btnLP2Practicas3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLP2Practicas3.UseVisualStyleBackColor = true;
+            // 
+            // btnLP2Practicas2
+            // 
+            this.btnLP2Practicas2.Location = new System.Drawing.Point(33, 40);
+            this.btnLP2Practicas2.Name = "btnLP2Practicas2";
+            this.btnLP2Practicas2.Size = new System.Drawing.Size(750, 34);
+            this.btnLP2Practicas2.TabIndex = 12;
+            this.btnLP2Practicas2.Text = "Practica 2 2021-1 (zip)          Freddy  Paz                                 19  " +
+    "                          Juan Lora                                          5.0" +
+    "";
+            this.btnLP2Practicas2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLP2Practicas2.UseVisualStyleBackColor = true;
+            // 
+            // btnLP2Practicas1
+            // 
+            this.btnLP2Practicas1.Location = new System.Drawing.Point(33, 0);
+            this.btnLP2Practicas1.Name = "btnLP2Practicas1";
+            this.btnLP2Practicas1.Size = new System.Drawing.Size(750, 34);
+            this.btnLP2Practicas1.TabIndex = 8;
+            this.btnLP2Practicas1.Text = "Practica 2 2021-0 (zip)          Freddy  Paz                                 19  " +
+    "                          Juan Lora                                          5.0" +
+    "";
+            this.btnLP2Practicas1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLP2Practicas1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Location = new System.Drawing.Point(12, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 15);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Votar";
+            // 
+            // btnLLP2Practica2Filtrar
+            // 
+            this.btnLLP2Practica2Filtrar.Location = new System.Drawing.Point(12, 104);
+            this.btnLLP2Practica2Filtrar.Name = "btnLLP2Practica2Filtrar";
+            this.btnLLP2Practica2Filtrar.Size = new System.Drawing.Size(143, 35);
+            this.btnLLP2Practica2Filtrar.TabIndex = 33;
+            this.btnLLP2Practica2Filtrar.Text = "       Filtrar";
+            this.btnLLP2Practica2Filtrar.UseVisualStyleBackColor = true;
+            this.btnLLP2Practica2Filtrar.Click += new System.EventHandler(this.btnLLP2Practica2Filtrar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(186, 153);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 15);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Profesor                                      ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Location = new System.Drawing.Point(339, 153);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 15);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Nota                     ";
+            // 
+            // pBFiltro
+            // 
+            this.pBFiltro.BackColor = System.Drawing.Color.LightGray;
+            this.pBFiltro.Image = global::LP2Soft.Properties.Resources.filtrar__1_;
+            this.pBFiltro.Location = new System.Drawing.Point(54, 114);
+            this.pBFiltro.Name = "pBFiltro";
+            this.pBFiltro.Size = new System.Drawing.Size(16, 16);
+            this.pBFiltro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBFiltro.TabIndex = 41;
+            this.pBFiltro.TabStop = false;
+            this.pBFiltro.Click += new System.EventHandler(this.pBFiltro_Click);
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::LP2Soft.Properties.Resources.star_full_1;
@@ -223,6 +316,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox3.Image = global::LP2Soft.Properties.Resources.star_full_1;
             this.pictureBox3.Location = new System.Drawing.Point(571, 85);
             this.pictureBox3.Name = "pictureBox3";
@@ -233,6 +327,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox2.Image = global::LP2Soft.Properties.Resources.star_full_1;
             this.pictureBox2.Location = new System.Drawing.Point(571, 45);
             this.pictureBox2.Name = "pictureBox2";
@@ -243,6 +338,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox1.Image = global::LP2Soft.Properties.Resources.star_full_1;
             this.pictureBox1.Location = new System.Drawing.Point(571, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -376,64 +472,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnestrella1.UseVisualStyleBackColor = true;
             this.btnestrella1.Click += new System.EventHandler(this.btnestrella1_Click);
             // 
-            // btnLP2Practicas4
-            // 
-            this.btnLP2Practicas4.Location = new System.Drawing.Point(33, 120);
-            this.btnLP2Practicas4.Name = "btnLP2Practicas4";
-            this.btnLP2Practicas4.Size = new System.Drawing.Size(750, 34);
-            this.btnLP2Practicas4.TabIndex = 20;
-            this.btnLP2Practicas4.Text = "Practica 2 2022-0 (zip)                                                       Jua" +
-    "n Lora                                                                          " +
-    "       5.0";
-            this.btnLP2Practicas4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLP2Practicas4.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2Practicas3
-            // 
-            this.btnLP2Practicas3.Location = new System.Drawing.Point(33, 80);
-            this.btnLP2Practicas3.Name = "btnLP2Practicas3";
-            this.btnLP2Practicas3.Size = new System.Drawing.Size(750, 34);
-            this.btnLP2Practicas3.TabIndex = 16;
-            this.btnLP2Practicas3.Text = "Practica 2 2021-2 (zip)                                                       Jua" +
-    "n Lora                                                                          " +
-    "       4.5";
-            this.btnLP2Practicas3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLP2Practicas3.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2Practicas2
-            // 
-            this.btnLP2Practicas2.Location = new System.Drawing.Point(33, 40);
-            this.btnLP2Practicas2.Name = "btnLP2Practicas2";
-            this.btnLP2Practicas2.Size = new System.Drawing.Size(750, 34);
-            this.btnLP2Practicas2.TabIndex = 12;
-            this.btnLP2Practicas2.Text = "Practica 2 2021-1 (zip)                                                       Jua" +
-    "n Lora                                                                          " +
-    "       5.0";
-            this.btnLP2Practicas2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLP2Practicas2.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2Practicas1
-            // 
-            this.btnLP2Practicas1.Location = new System.Drawing.Point(33, 0);
-            this.btnLP2Practicas1.Name = "btnLP2Practicas1";
-            this.btnLP2Practicas1.Size = new System.Drawing.Size(750, 34);
-            this.btnLP2Practicas1.TabIndex = 8;
-            this.btnLP2Practicas1.Text = "Practica 2 2021-0 (zip)                                                       Jua" +
-    "n Lora                                                                          " +
-    "       5.0";
-            this.btnLP2Practicas1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLP2Practicas1.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(12, 153);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 15);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Votar";
-            // 
             // pictureLP2Practica2Referencia4
             // 
             this.pictureLP2Practica2Referencia4.Image = global::LP2Soft.Properties.Resources.chevrons_right_regular_24;
@@ -479,6 +517,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 453);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pBFiltro);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panelLP2Practicas);
             this.Controls.Add(this.label3);
@@ -499,6 +540,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.Text = "frmPractica2";
             this.panelLP2Practicas.ResumeLayout(false);
             this.panelLP2Practicas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBFiltro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -531,7 +573,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         private System.Windows.Forms.PictureBox pictureLP2Practica2Referencia2;
         private System.Windows.Forms.PictureBox pictureLP2Practica2Referencia4;
         private System.Windows.Forms.Button btnLLP2Practica2Practica2;
-        private System.Windows.Forms.Button btnLLP2Practica2Filtrar;
         private System.Windows.Forms.Button btnLLP2Practica2AgregarMaterial;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -558,5 +599,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pBFiltro;
+        private System.Windows.Forms.Button btnLLP2Practica2Filtrar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

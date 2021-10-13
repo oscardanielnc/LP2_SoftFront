@@ -113,6 +113,12 @@
     <Compile Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.Designer.cs">
       <DependentUpon>frmPracticas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cursos\Flitro\frmFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Flitro\frmFiltro.Designer.cs">
+      <DependentUpon>frmFiltro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos\frmCursosHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.resx">
       <DependentUpon>frmPracticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Flitro\frmFiltro.resx">
+      <DependentUpon>frmFiltro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\frmCursosHome.resx">
       <DependentUpon>frmCursosHome.cs</DependentUpon>

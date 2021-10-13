@@ -36,6 +36,24 @@ namespace LP2Soft.Cursos.AgregarMaterial
             MessageBox.Show("Cuadrito para seleccionar y subir");
         }
 
+        private void checkbSi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbSi.Checked == true)
+            {
+                checkBNo.Checked = false;
+            }
+            
+        }
+
+        private void checkBNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBNo.Checked == true)
+            {
+                checkbSi.Checked = false;
+            }
+            
+        }
+
         
     }
 }
