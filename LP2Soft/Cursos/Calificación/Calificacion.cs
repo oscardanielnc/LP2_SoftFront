@@ -16,7 +16,5 @@ namespace LP2Soft.Cursos.Calificación
         {
             InitializeComponent();
         }
-
-        
     }
 }
