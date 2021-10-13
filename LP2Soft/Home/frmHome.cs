@@ -43,7 +43,11 @@ namespace LP2Soft.Home
             btnAsesores.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnProfesores.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
         }
+/*        public static void abrirFormularioCualquiera(Form formulario)
+        {
+            panelContenido.Controls.Clear();
 
+        }*/
         public void abrirFormulario(Form formulario)
         {
             if (_formActivo != null) _formActivo.Close();
