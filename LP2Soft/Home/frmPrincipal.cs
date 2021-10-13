@@ -12,12 +12,17 @@ namespace LP2Soft.Home
 {
     public partial class frmPrincipal : Form
     {
-        private static Form _formActivo = null;
+        private Form _formActivo = null;
+        private Panel _panelPrincipal;
         public frmPrincipal()
         {
             InitializeComponent();
-            abrirFormulario(new frmLoginSingin(panelPrincipal));
+            abrirFormulario(new frmLoginSingin(this));
+            _panelPrincipal = panelPrincipal;
         }
+
+        public Panel PanelPrincipal { get => _panelPrincipal; set => _panelPrincipal = value; }
+
         public void abrirFormulario(Form formulario)
         {
             if (_formActivo != null) _formActivo.Close();
