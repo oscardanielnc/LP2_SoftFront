@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2Soft.Cursos.Calificación
+namespace LP2Soft.Asesor
 {
-    public partial class Calificacion : Form
+    public partial class frmMisAsesores : Form
     {
-        public Calificacion()
+        public frmMisAsesores()
         {
             InitializeComponent();
         }

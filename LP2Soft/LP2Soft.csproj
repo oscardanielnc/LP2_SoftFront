@@ -65,6 +65,12 @@
     <Compile Include="Asesor\frmBuscarAsesor.Designer.cs">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Asesor\frmMisAsesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmMisAsesores.Designer.cs">
+      <DependentUpon>frmMisAsesores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +83,11 @@
     <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.Designer.cs">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Calificación\Calificacion.cs">
+    <Compile Include="Cursos\Calificación\frmCalificacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\Calificación\Calificacion.Designer.cs">
-      <DependentUpon>Calificacion.cs</DependentUpon>
+    <Compile Include="Cursos\Calificación\frmCalificacion.Designer.cs">
+      <DependentUpon>frmCalificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Cursos\Ciclo7\frmCiclo7.cs">
       <SubType>Form</SubType>
@@ -217,6 +223,18 @@
     <Compile Include="Home\frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensajes\frmMensajeChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensajes\frmMensajeChat.Designer.cs">
+      <DependentUpon>frmMensajeChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensajes\frmMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensajes\frmMensajes.Designer.cs">
+      <DependentUpon>frmMensajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfil\frmPerfil_CursosAsesorados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,14 +300,17 @@
     <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Asesor\frmMisAsesores.resx">
+      <DependentUpon>frmMisAsesores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmAgregarMaterial.resx">
       <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.resx">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Calificación\Calificacion.resx">
-      <DependentUpon>Calificacion.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\Calificación\frmCalificacion.resx">
+      <DependentUpon>frmCalificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\Ciclo7\frmCiclo7.resx">
       <DependentUpon>frmCiclo7.cs</DependentUpon>
@@ -357,6 +378,12 @@
     <EmbeddedResource Include="Home\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mensajes\frmMensajeChat.resx">
+      <DependentUpon>frmMensajeChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensajes\frmMensajes.resx">
+      <DependentUpon>frmMensajes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,18 +413,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -507,6 +534,9 @@
     <None Include="Resources\address-book.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\star-full.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\FreedyPaz.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -553,6 +583,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\67092642_375243393186725_3715283641414021357_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Notificaciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

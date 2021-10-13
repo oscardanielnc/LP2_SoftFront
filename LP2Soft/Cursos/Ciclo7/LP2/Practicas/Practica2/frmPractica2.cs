@@ -1,4 +1,5 @@
 ﻿using LP2Soft.Cursos.AgregarMaterial;
+using LP2Soft.Cursos.Calificación;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +47,12 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         {
             frmAgregarMaterial agregarMaterial = new frmAgregarMaterial();
             agregarMaterial.ShowDialog();
+        }
+
+        private void btnestrella1_Click(object sender, EventArgs e)
+        {
+            frmCalificacion calificacion = new frmCalificacion();
+            calificacion.ShowDialog();
         }
     }
 }
