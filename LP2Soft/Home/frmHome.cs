@@ -98,7 +98,7 @@ namespace LP2Soft.Home
             {
                 inicializarColorBotones();
                 btnTodosMisCursos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.Asesores;
+                _menuSeleccionado = MenuHome.CursosTodos;
                 abrirFormulario(new frmCursosHome());
             }
         }
