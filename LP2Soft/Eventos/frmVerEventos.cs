@@ -40,5 +40,11 @@ namespace LP2Soft.Eventos
             }
 
         }
+
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se agendó el evento", "Mensaje Confirmación",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

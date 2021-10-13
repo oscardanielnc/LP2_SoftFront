@@ -40,7 +40,7 @@ namespace LP2Soft.Eventos
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnAgendar = new System.Windows.Forms.Button();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
@@ -231,7 +231,7 @@ namespace LP2Soft.Eventos
             this.panel10.Controls.Add(this.label60);
             this.panel10.Controls.Add(this.label61);
             this.panel10.Controls.Add(this.pictureBox11);
-            this.panel10.Controls.Add(this.button10);
+            this.panel10.Controls.Add(this.btnAgendar);
             this.panel10.Controls.Add(this.label62);
             this.panel10.Controls.Add(this.label63);
             this.panel10.Controls.Add(this.label64);
@@ -328,18 +328,19 @@ namespace LP2Soft.Eventos
             this.pictureBox11.TabIndex = 30;
             this.pictureBox11.TabStop = false;
             // 
-            // button10
+            // btnAgendar
             // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = global::LP2Soft.Properties.Resources.anadir_evento;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(326, 15);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(31, 29);
-            this.button10.TabIndex = 29;
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnAgendar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgendar.BackgroundImage = global::LP2Soft.Properties.Resources.anadir_evento;
+            this.btnAgendar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgendar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendar.Location = new System.Drawing.Point(326, 15);
+            this.btnAgendar.Name = "btnAgendar";
+            this.btnAgendar.Size = new System.Drawing.Size(31, 29);
+            this.btnAgendar.TabIndex = 29;
+            this.btnAgendar.UseVisualStyleBackColor = false;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // label62
             // 
@@ -1566,7 +1567,7 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
