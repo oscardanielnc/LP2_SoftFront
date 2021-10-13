@@ -140,9 +140,8 @@ namespace LP2Soft.Home
             if (_menuSeleccionado != MenuHome.Asesores)
             {
                 inicializarColorBotones();
-                btnAsesores.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
                 _menuSeleccionado = MenuHome.Asesores;
-                abrirFormulario(new frmBuscarAsesor(panelContenido));
+                abrirFormulario(new frmBuscarAsesor(this));
             }
         }
 
