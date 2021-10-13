@@ -40,15 +40,15 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.checkbSi = new System.Windows.Forms.CheckBox();
             this.checkBNo = new System.Windows.Forms.CheckBox();
             this.txtNota = new System.Windows.Forms.TextBox();
-            this.txtProfesor = new System.Windows.Forms.TextBox();
-            this.txtSemestre = new System.Windows.Forms.TextBox();
             this.lblCiclo = new System.Windows.Forms.Label();
-            this.txtCiclo = new System.Windows.Forms.TextBox();
             this.flpCargarMaterial = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTituloPanel = new System.Windows.Forms.Label();
             this.btbCargarDocs = new System.Windows.Forms.Button();
             this.lblProfesorMsj = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.flpCargarMaterial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,20 +159,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.txtNota.Size = new System.Drawing.Size(122, 20);
             this.txtNota.TabIndex = 10;
             // 
-            // txtProfesor
-            // 
-            this.txtProfesor.Location = new System.Drawing.Point(134, 126);
-            this.txtProfesor.Name = "txtProfesor";
-            this.txtProfesor.Size = new System.Drawing.Size(233, 20);
-            this.txtProfesor.TabIndex = 11;
-            // 
-            // txtSemestre
-            // 
-            this.txtSemestre.Location = new System.Drawing.Point(134, 87);
-            this.txtSemestre.Name = "txtSemestre";
-            this.txtSemestre.Size = new System.Drawing.Size(79, 20);
-            this.txtSemestre.TabIndex = 12;
-            // 
             // lblCiclo
             // 
             this.lblCiclo.AutoSize = true;
@@ -182,13 +168,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.lblCiclo.Size = new System.Drawing.Size(46, 18);
             this.lblCiclo.TabIndex = 13;
             this.lblCiclo.Text = "Ciclo:";
-            // 
-            // txtCiclo
-            // 
-            this.txtCiclo.Location = new System.Drawing.Point(283, 87);
-            this.txtCiclo.Name = "txtCiclo";
-            this.txtCiclo.Size = new System.Drawing.Size(84, 20);
-            this.txtCiclo.TabIndex = 14;
             // 
             // flpCargarMaterial
             // 
@@ -237,18 +216,42 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 18;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(139, 125);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(228, 21);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(283, 86);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(84, 21);
+            this.comboBox2.TabIndex = 20;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(139, 85);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(79, 21);
+            this.comboBox3.TabIndex = 21;
+            // 
             // frmAgregarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 375);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblProfesorMsj);
             this.Controls.Add(this.flpCargarMaterial);
-            this.Controls.Add(this.txtCiclo);
             this.Controls.Add(this.lblCiclo);
-            this.Controls.Add(this.txtSemestre);
-            this.Controls.Add(this.txtProfesor);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.checkBNo);
             this.Controls.Add(this.checkbSi);
@@ -282,14 +285,14 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.CheckBox checkbSi;
         private System.Windows.Forms.CheckBox checkBNo;
         private System.Windows.Forms.TextBox txtNota;
-        private System.Windows.Forms.TextBox txtProfesor;
-        private System.Windows.Forms.TextBox txtSemestre;
         private System.Windows.Forms.Label lblCiclo;
-        private System.Windows.Forms.TextBox txtCiclo;
         private System.Windows.Forms.FlowLayoutPanel flpCargarMaterial;
         private System.Windows.Forms.Label lblTituloPanel;
         private System.Windows.Forms.Button btbCargarDocs;
         private System.Windows.Forms.Label lblProfesorMsj;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

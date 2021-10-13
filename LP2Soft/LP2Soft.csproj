@@ -113,6 +113,12 @@
     <Compile Include="Cursos\frmCursosHome.Designer.cs">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cursos\frmHomeFavoritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmHomeFavoritos.Designer.cs">
+      <DependentUpon>frmHomeFavoritos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enumerados\MenuHome.cs" />
     <Compile Include="Enumerados\MenuPerfil.cs" />
     <Compile Include="Eventos\frmCrearComentario.cs">
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\frmCursosHome.resx">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmHomeFavoritos.resx">
+      <DependentUpon>frmHomeFavoritos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmCrearComentario.resx">
       <DependentUpon>frmCrearComentario.cs</DependentUpon>
@@ -565,6 +574,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\67092642_375243393186725_3715283641414021357_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_empty_icon_178700.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like_favorite_heart_5759.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-full-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

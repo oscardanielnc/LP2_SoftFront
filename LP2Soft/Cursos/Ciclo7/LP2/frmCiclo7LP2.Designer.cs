@@ -33,18 +33,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.lblLP2Descripcion = new System.Windows.Forms.Label();
             this.lblLP2NombreCurso = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLP2DescargasExtras = new System.Windows.Forms.Button();
-            this.btnLP2CompartirExtras = new System.Windows.Forms.Button();
-            this.btnLP2DescargarLibros = new System.Windows.Forms.Button();
-            this.btnLP2CompartirLibros = new System.Windows.Forms.Button();
-            this.btnLP2DescargarFinales = new System.Windows.Forms.Button();
-            this.btnLP2CompartirFinales = new System.Windows.Forms.Button();
-            this.btnLP2DescargarParciales = new System.Windows.Forms.Button();
-            this.btnLP2CompartirParciales = new System.Windows.Forms.Button();
-            this.btnLP2DescargarPcs = new System.Windows.Forms.Button();
-            this.btnLP2CompartirPcs = new System.Windows.Forms.Button();
-            this.btnLP2DescargarLabs = new System.Windows.Forms.Button();
-            this.btnLP2CompartirLabs = new System.Windows.Forms.Button();
             this.btnLP2Extras = new System.Windows.Forms.Button();
             this.btnLP2Libros = new System.Windows.Forms.Button();
             this.btnLP2Finales = new System.Windows.Forms.Button();
@@ -53,13 +41,25 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Laboratorios = new System.Windows.Forms.Button();
             this.txtLP2Comentario = new System.Windows.Forms.TextBox();
             this.btnLP2Material = new System.Windows.Forms.Button();
-            this.pictureLP2Referencia1 = new System.Windows.Forms.PictureBox();
             this.btnLP2Ciclo7 = new System.Windows.Forms.Button();
-            this.pictureLP2Referencia2 = new System.Windows.Forms.PictureBox();
             this.btnLP2LP2 = new System.Windows.Forms.Button();
+            this.pictureLP2Referencia2 = new System.Windows.Forms.PictureBox();
+            this.pictureLP2Referencia1 = new System.Windows.Forms.PictureBox();
+            this.pBLP2DescargarLabs = new System.Windows.Forms.PictureBox();
+            this.pBLP2DescargarPcs = new System.Windows.Forms.PictureBox();
+            this.pBLP2DescargarParciales = new System.Windows.Forms.PictureBox();
+            this.pBLP2DescargarFinales = new System.Windows.Forms.PictureBox();
+            this.pBLP2DescargarLibros = new System.Windows.Forms.PictureBox();
+            this.pBLP2DescargasExtras = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLabs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarPcs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarParciales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarFinales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargasExtras)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLP2Descripcion
@@ -82,144 +82,28 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnLP2DescargasExtras);
-            this.panel1.Controls.Add(this.btnLP2CompartirExtras);
-            this.panel1.Controls.Add(this.btnLP2DescargarLibros);
-            this.panel1.Controls.Add(this.btnLP2CompartirLibros);
-            this.panel1.Controls.Add(this.btnLP2DescargarFinales);
-            this.panel1.Controls.Add(this.btnLP2CompartirFinales);
-            this.panel1.Controls.Add(this.btnLP2DescargarParciales);
-            this.panel1.Controls.Add(this.btnLP2CompartirParciales);
-            this.panel1.Controls.Add(this.btnLP2DescargarPcs);
-            this.panel1.Controls.Add(this.btnLP2CompartirPcs);
-            this.panel1.Controls.Add(this.btnLP2DescargarLabs);
-            this.panel1.Controls.Add(this.btnLP2CompartirLabs);
+            this.panel1.Controls.Add(this.pBLP2DescargasExtras);
+            this.panel1.Controls.Add(this.pBLP2DescargarLibros);
+            this.panel1.Controls.Add(this.pBLP2DescargarFinales);
+            this.panel1.Controls.Add(this.pBLP2DescargarParciales);
+            this.panel1.Controls.Add(this.pBLP2DescargarPcs);
+            this.panel1.Controls.Add(this.pBLP2DescargarLabs);
             this.panel1.Controls.Add(this.btnLP2Extras);
             this.panel1.Controls.Add(this.btnLP2Libros);
             this.panel1.Controls.Add(this.btnLP2Finales);
             this.panel1.Controls.Add(this.btnLP2Parciales);
             this.panel1.Controls.Add(this.btnLP2Practicas);
             this.panel1.Controls.Add(this.btnLP2Laboratorios);
-            this.panel1.Location = new System.Drawing.Point(547, 253);
+            this.panel1.Location = new System.Drawing.Point(592, 223);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(241, 218);
+            this.panel1.Size = new System.Drawing.Size(203, 218);
             this.panel1.TabIndex = 15;
-            // 
-            // btnLP2DescargasExtras
-            // 
-            this.btnLP2DescargasExtras.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2DescargasExtras.Location = new System.Drawing.Point(169, 155);
-            this.btnLP2DescargasExtras.Name = "btnLP2DescargasExtras";
-            this.btnLP2DescargasExtras.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2DescargasExtras.TabIndex = 33;
-            this.btnLP2DescargasExtras.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2CompartirExtras
-            // 
-            this.btnLP2CompartirExtras.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2CompartirExtras.Location = new System.Drawing.Point(208, 155);
-            this.btnLP2CompartirExtras.Name = "btnLP2CompartirExtras";
-            this.btnLP2CompartirExtras.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2CompartirExtras.TabIndex = 32;
-            this.btnLP2CompartirExtras.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2DescargarLibros
-            // 
-            this.btnLP2DescargarLibros.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2DescargarLibros.Location = new System.Drawing.Point(169, 124);
-            this.btnLP2DescargarLibros.Name = "btnLP2DescargarLibros";
-            this.btnLP2DescargarLibros.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2DescargarLibros.TabIndex = 31;
-            this.btnLP2DescargarLibros.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2CompartirLibros
-            // 
-            this.btnLP2CompartirLibros.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2CompartirLibros.Location = new System.Drawing.Point(208, 124);
-            this.btnLP2CompartirLibros.Name = "btnLP2CompartirLibros";
-            this.btnLP2CompartirLibros.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2CompartirLibros.TabIndex = 30;
-            this.btnLP2CompartirLibros.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2DescargarFinales
-            // 
-            this.btnLP2DescargarFinales.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2DescargarFinales.Location = new System.Drawing.Point(169, 93);
-            this.btnLP2DescargarFinales.Name = "btnLP2DescargarFinales";
-            this.btnLP2DescargarFinales.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2DescargarFinales.TabIndex = 29;
-            this.btnLP2DescargarFinales.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2CompartirFinales
-            // 
-            this.btnLP2CompartirFinales.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2CompartirFinales.Location = new System.Drawing.Point(208, 93);
-            this.btnLP2CompartirFinales.Name = "btnLP2CompartirFinales";
-            this.btnLP2CompartirFinales.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2CompartirFinales.TabIndex = 28;
-            this.btnLP2CompartirFinales.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2DescargarParciales
-            // 
-            this.btnLP2DescargarParciales.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2DescargarParciales.Location = new System.Drawing.Point(169, 64);
-            this.btnLP2DescargarParciales.Name = "btnLP2DescargarParciales";
-            this.btnLP2DescargarParciales.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2DescargarParciales.TabIndex = 27;
-            this.btnLP2DescargarParciales.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2CompartirParciales
-            // 
-            this.btnLP2CompartirParciales.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2CompartirParciales.Location = new System.Drawing.Point(208, 64);
-            this.btnLP2CompartirParciales.Name = "btnLP2CompartirParciales";
-            this.btnLP2CompartirParciales.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2CompartirParciales.TabIndex = 26;
-            this.btnLP2CompartirParciales.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2DescargarPcs
-            // 
-            this.btnLP2DescargarPcs.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2DescargarPcs.Location = new System.Drawing.Point(169, 32);
-            this.btnLP2DescargarPcs.Name = "btnLP2DescargarPcs";
-            this.btnLP2DescargarPcs.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2DescargarPcs.TabIndex = 25;
-            this.btnLP2DescargarPcs.UseVisualStyleBackColor = true;
-            this.btnLP2DescargarPcs.Click += new System.EventHandler(this.btnLP2DescargarPcs_Click);
-            // 
-            // btnLP2CompartirPcs
-            // 
-            this.btnLP2CompartirPcs.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2CompartirPcs.Location = new System.Drawing.Point(208, 32);
-            this.btnLP2CompartirPcs.Name = "btnLP2CompartirPcs";
-            this.btnLP2CompartirPcs.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2CompartirPcs.TabIndex = 24;
-            this.btnLP2CompartirPcs.UseVisualStyleBackColor = true;
-            this.btnLP2CompartirPcs.Click += new System.EventHandler(this.btnLP2CompartirPcs_Click);
-            // 
-            // btnLP2DescargarLabs
-            // 
-            this.btnLP2DescargarLabs.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2DescargarLabs.Location = new System.Drawing.Point(169, 0);
-            this.btnLP2DescargarLabs.Name = "btnLP2DescargarLabs";
-            this.btnLP2DescargarLabs.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2DescargarLabs.TabIndex = 23;
-            this.btnLP2DescargarLabs.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2CompartirLabs
-            // 
-            this.btnLP2CompartirLabs.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2CompartirLabs.Location = new System.Drawing.Point(208, 0);
-            this.btnLP2CompartirLabs.Name = "btnLP2CompartirLabs";
-            this.btnLP2CompartirLabs.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2CompartirLabs.TabIndex = 22;
-            this.btnLP2CompartirLabs.UseVisualStyleBackColor = true;
             // 
             // btnLP2Extras
             // 
             this.btnLP2Extras.Location = new System.Drawing.Point(0, 155);
             this.btnLP2Extras.Name = "btnLP2Extras";
-            this.btnLP2Extras.Size = new System.Drawing.Size(241, 35);
+            this.btnLP2Extras.Size = new System.Drawing.Size(202, 35);
             this.btnLP2Extras.TabIndex = 21;
             this.btnLP2Extras.Text = "Extras";
             this.btnLP2Extras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,7 +113,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             this.btnLP2Libros.Location = new System.Drawing.Point(0, 124);
             this.btnLP2Libros.Name = "btnLP2Libros";
-            this.btnLP2Libros.Size = new System.Drawing.Size(241, 35);
+            this.btnLP2Libros.Size = new System.Drawing.Size(202, 35);
             this.btnLP2Libros.TabIndex = 20;
             this.btnLP2Libros.Text = "Libros";
             this.btnLP2Libros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -239,7 +123,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             this.btnLP2Finales.Location = new System.Drawing.Point(0, 92);
             this.btnLP2Finales.Name = "btnLP2Finales";
-            this.btnLP2Finales.Size = new System.Drawing.Size(241, 35);
+            this.btnLP2Finales.Size = new System.Drawing.Size(202, 35);
             this.btnLP2Finales.TabIndex = 19;
             this.btnLP2Finales.Text = "Finales";
             this.btnLP2Finales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,7 +133,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             this.btnLP2Parciales.Location = new System.Drawing.Point(0, 63);
             this.btnLP2Parciales.Name = "btnLP2Parciales";
-            this.btnLP2Parciales.Size = new System.Drawing.Size(241, 35);
+            this.btnLP2Parciales.Size = new System.Drawing.Size(202, 35);
             this.btnLP2Parciales.TabIndex = 18;
             this.btnLP2Parciales.Text = "Parciales";
             this.btnLP2Parciales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -259,7 +143,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             this.btnLP2Practicas.Location = new System.Drawing.Point(0, 32);
             this.btnLP2Practicas.Name = "btnLP2Practicas";
-            this.btnLP2Practicas.Size = new System.Drawing.Size(241, 35);
+            this.btnLP2Practicas.Size = new System.Drawing.Size(202, 35);
             this.btnLP2Practicas.TabIndex = 17;
             this.btnLP2Practicas.Text = "Prácticas";
             this.btnLP2Practicas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,7 +154,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             this.btnLP2Laboratorios.Location = new System.Drawing.Point(0, 0);
             this.btnLP2Laboratorios.Name = "btnLP2Laboratorios";
-            this.btnLP2Laboratorios.Size = new System.Drawing.Size(241, 35);
+            this.btnLP2Laboratorios.Size = new System.Drawing.Size(202, 35);
             this.btnLP2Laboratorios.TabIndex = 16;
             this.btnLP2Laboratorios.Text = "Laboratorios";
             this.btnLP2Laboratorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,10 +162,10 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             // txtLP2Comentario
             // 
-            this.txtLP2Comentario.Location = new System.Drawing.Point(20, 253);
+            this.txtLP2Comentario.Location = new System.Drawing.Point(13, 223);
             this.txtLP2Comentario.Multiline = true;
             this.txtLP2Comentario.Name = "txtLP2Comentario";
-            this.txtLP2Comentario.Size = new System.Drawing.Size(521, 87);
+            this.txtLP2Comentario.Size = new System.Drawing.Size(573, 87);
             this.txtLP2Comentario.TabIndex = 16;
             // 
             // btnLP2Material
@@ -294,16 +178,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Material.UseVisualStyleBackColor = true;
             this.btnLP2Material.Click += new System.EventHandler(this.btnLP2Material_Click);
             // 
-            // pictureLP2Referencia1
-            // 
-            this.pictureLP2Referencia1.Image = global::LP2Soft.Properties.Resources.chevrons_right_regular_24;
-            this.pictureLP2Referencia1.Location = new System.Drawing.Point(163, 14);
-            this.pictureLP2Referencia1.Name = "pictureLP2Referencia1";
-            this.pictureLP2Referencia1.Size = new System.Drawing.Size(35, 35);
-            this.pictureLP2Referencia1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureLP2Referencia1.TabIndex = 9;
-            this.pictureLP2Referencia1.TabStop = false;
-            // 
             // btnLP2Ciclo7
             // 
             this.btnLP2Ciclo7.Location = new System.Drawing.Point(204, 14);
@@ -313,6 +187,15 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Ciclo7.Text = "Ciclo 7";
             this.btnLP2Ciclo7.UseVisualStyleBackColor = true;
             this.btnLP2Ciclo7.Click += new System.EventHandler(this.btnLP2Ciclo7_Click);
+            // 
+            // btnLP2LP2
+            // 
+            this.btnLP2LP2.Location = new System.Drawing.Point(394, 14);
+            this.btnLP2LP2.Name = "btnLP2LP2";
+            this.btnLP2LP2.Size = new System.Drawing.Size(143, 35);
+            this.btnLP2LP2.TabIndex = 12;
+            this.btnLP2LP2.Text = "Lenguaje de Programación 2";
+            this.btnLP2LP2.UseVisualStyleBackColor = true;
             // 
             // pictureLP2Referencia2
             // 
@@ -324,20 +207,87 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pictureLP2Referencia2.TabIndex = 11;
             this.pictureLP2Referencia2.TabStop = false;
             // 
-            // btnLP2LP2
+            // pictureLP2Referencia1
             // 
-            this.btnLP2LP2.Location = new System.Drawing.Point(394, 14);
-            this.btnLP2LP2.Name = "btnLP2LP2";
-            this.btnLP2LP2.Size = new System.Drawing.Size(143, 35);
-            this.btnLP2LP2.TabIndex = 12;
-            this.btnLP2LP2.Text = "Lenguaje de Programación 2";
-            this.btnLP2LP2.UseVisualStyleBackColor = true;
+            this.pictureLP2Referencia1.Image = global::LP2Soft.Properties.Resources.chevrons_right_regular_24;
+            this.pictureLP2Referencia1.Location = new System.Drawing.Point(163, 14);
+            this.pictureLP2Referencia1.Name = "pictureLP2Referencia1";
+            this.pictureLP2Referencia1.Size = new System.Drawing.Size(35, 35);
+            this.pictureLP2Referencia1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureLP2Referencia1.TabIndex = 9;
+            this.pictureLP2Referencia1.TabStop = false;
+            // 
+            // pBLP2DescargarLabs
+            // 
+            this.pBLP2DescargarLabs.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2DescargarLabs.Location = new System.Drawing.Point(175, 9);
+            this.pBLP2DescargarLabs.Name = "pBLP2DescargarLabs";
+            this.pBLP2DescargarLabs.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2DescargarLabs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2DescargarLabs.TabIndex = 34;
+            this.pBLP2DescargarLabs.TabStop = false;
+            this.pBLP2DescargarLabs.Click += new System.EventHandler(this.pBLP2DescargarLabs_Click);
+            // 
+            // pBLP2DescargarPcs
+            // 
+            this.pBLP2DescargarPcs.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2DescargarPcs.Location = new System.Drawing.Point(175, 39);
+            this.pBLP2DescargarPcs.Name = "pBLP2DescargarPcs";
+            this.pBLP2DescargarPcs.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2DescargarPcs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2DescargarPcs.TabIndex = 35;
+            this.pBLP2DescargarPcs.TabStop = false;
+            this.pBLP2DescargarPcs.Click += new System.EventHandler(this.pBLP2DescargarPcs_Click);
+            // 
+            // pBLP2DescargarParciales
+            // 
+            this.pBLP2DescargarParciales.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2DescargarParciales.Location = new System.Drawing.Point(176, 69);
+            this.pBLP2DescargarParciales.Name = "pBLP2DescargarParciales";
+            this.pBLP2DescargarParciales.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2DescargarParciales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2DescargarParciales.TabIndex = 36;
+            this.pBLP2DescargarParciales.TabStop = false;
+            this.pBLP2DescargarParciales.Click += new System.EventHandler(this.pBLP2DescargarParciales_Click);
+            // 
+            // pBLP2DescargarFinales
+            // 
+            this.pBLP2DescargarFinales.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2DescargarFinales.Location = new System.Drawing.Point(176, 99);
+            this.pBLP2DescargarFinales.Name = "pBLP2DescargarFinales";
+            this.pBLP2DescargarFinales.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2DescargarFinales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2DescargarFinales.TabIndex = 37;
+            this.pBLP2DescargarFinales.TabStop = false;
+            this.pBLP2DescargarFinales.Click += new System.EventHandler(this.pBLP2DescargarFinales_Click);
+            // 
+            // pBLP2DescargarLibros
+            // 
+            this.pBLP2DescargarLibros.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2DescargarLibros.Location = new System.Drawing.Point(176, 129);
+            this.pBLP2DescargarLibros.Name = "pBLP2DescargarLibros";
+            this.pBLP2DescargarLibros.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2DescargarLibros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2DescargarLibros.TabIndex = 38;
+            this.pBLP2DescargarLibros.TabStop = false;
+            this.pBLP2DescargarLibros.Click += new System.EventHandler(this.pBLP2DescargarLibros_Click);
+            // 
+            // pBLP2DescargasExtras
+            // 
+            this.pBLP2DescargasExtras.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2DescargasExtras.Location = new System.Drawing.Point(176, 159);
+            this.pBLP2DescargasExtras.Name = "pBLP2DescargasExtras";
+            this.pBLP2DescargasExtras.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2DescargasExtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2DescargasExtras.TabIndex = 39;
+            this.pBLP2DescargasExtras.TabStop = false;
+            this.pBLP2DescargasExtras.Click += new System.EventHandler(this.pBLP2DescargasExtras_Click);
             // 
             // frmCiclo7LP2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(807, 453);
             this.Controls.Add(this.txtLP2Comentario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblLP2NombreCurso);
@@ -350,8 +300,15 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.Name = "frmCiclo7LP2";
             this.Text = "                                ";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia1)).EndInit();
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLabs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarPcs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarParciales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarFinales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargasExtras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,23 +324,17 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private System.Windows.Forms.Button btnLP2Extras;
         private System.Windows.Forms.Button btnLP2Libros;
         private System.Windows.Forms.Button btnLP2Finales;
-        private System.Windows.Forms.Button btnLP2DescargasExtras;
-        private System.Windows.Forms.Button btnLP2CompartirExtras;
-        private System.Windows.Forms.Button btnLP2DescargarLibros;
-        private System.Windows.Forms.Button btnLP2CompartirLibros;
-        private System.Windows.Forms.Button btnLP2DescargarFinales;
-        private System.Windows.Forms.Button btnLP2CompartirFinales;
-        private System.Windows.Forms.Button btnLP2DescargarParciales;
-        private System.Windows.Forms.Button btnLP2CompartirParciales;
-        private System.Windows.Forms.Button btnLP2DescargarPcs;
-        private System.Windows.Forms.Button btnLP2CompartirPcs;
-        private System.Windows.Forms.Button btnLP2DescargarLabs;
-        private System.Windows.Forms.Button btnLP2CompartirLabs;
         private System.Windows.Forms.TextBox txtLP2Comentario;
         private System.Windows.Forms.Button btnLP2Material;
         private System.Windows.Forms.PictureBox pictureLP2Referencia1;
         private System.Windows.Forms.Button btnLP2Ciclo7;
         private System.Windows.Forms.PictureBox pictureLP2Referencia2;
         private System.Windows.Forms.Button btnLP2LP2;
+        private System.Windows.Forms.PictureBox pBLP2DescargasExtras;
+        private System.Windows.Forms.PictureBox pBLP2DescargarLibros;
+        private System.Windows.Forms.PictureBox pBLP2DescargarFinales;
+        private System.Windows.Forms.PictureBox pBLP2DescargarParciales;
+        private System.Windows.Forms.PictureBox pBLP2DescargarPcs;
+        private System.Windows.Forms.PictureBox pBLP2DescargarLabs;
     }
 }

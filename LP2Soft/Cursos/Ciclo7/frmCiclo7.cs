@@ -29,5 +29,25 @@ namespace LP2Soft.Cursos.Ciclo7
             frmCursosHome cursosHome = new frmCursosHome();
             cursosHome.ShowDialog();
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBCiclo7LP2Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBCiclo7Sis2Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
     }
 }

@@ -32,16 +32,8 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.btnPracticasLP2 = new System.Windows.Forms.Button();
             this.btnPracticasPracticas = new System.Windows.Forms.Button();
             this.panelLP2Practicas = new System.Windows.Forms.Panel();
-            this.btnLP2Practica4Descargar = new System.Windows.Forms.Button();
-            this.btnLP2Practica4Compartir = new System.Windows.Forms.Button();
             this.btnLP2Practicas4 = new System.Windows.Forms.Button();
-            this.btnLP2Practica3Descargar = new System.Windows.Forms.Button();
-            this.btnLP2Practica3Compartir = new System.Windows.Forms.Button();
             this.btnLP2Practicas3 = new System.Windows.Forms.Button();
-            this.btnLP2Practica2Descargar = new System.Windows.Forms.Button();
-            this.btnLP2Practica2Compartir = new System.Windows.Forms.Button();
-            this.btnLP2Practica1Compartir = new System.Windows.Forms.Button();
-            this.btnLP2Practica1Descargar = new System.Windows.Forms.Button();
             this.btnLP2Practicas2 = new System.Windows.Forms.Button();
             this.btnLP2Practicas1 = new System.Windows.Forms.Button();
             this.btnPracticasCiclo7 = new System.Windows.Forms.Button();
@@ -49,10 +41,18 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.picturePracticasReferencia1 = new System.Windows.Forms.PictureBox();
             this.picturePracticasReferencia3 = new System.Windows.Forms.PictureBox();
             this.picturePracticasReferencia2 = new System.Windows.Forms.PictureBox();
+            this.pBLP2Practica1Descargar = new System.Windows.Forms.PictureBox();
+            this.pBLP2Practica4Descargar = new System.Windows.Forms.PictureBox();
+            this.pBLP2Practica3Descargar = new System.Windows.Forms.PictureBox();
+            this.pBLP2Practica2Descargar = new System.Windows.Forms.PictureBox();
             this.panelLP2Practicas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePracticasReferencia1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePracticasReferencia3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePracticasReferencia2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica1Descargar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica4Descargar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica3Descargar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica2Descargar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPracticasLP2
@@ -76,120 +76,44 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             // 
             // panelLP2Practicas
             // 
-            this.panelLP2Practicas.Controls.Add(this.btnLP2Practica4Descargar);
-            this.panelLP2Practicas.Controls.Add(this.btnLP2Practica4Compartir);
+            this.panelLP2Practicas.Controls.Add(this.pBLP2Practica2Descargar);
+            this.panelLP2Practicas.Controls.Add(this.pBLP2Practica3Descargar);
+            this.panelLP2Practicas.Controls.Add(this.pBLP2Practica4Descargar);
+            this.panelLP2Practicas.Controls.Add(this.pBLP2Practica1Descargar);
             this.panelLP2Practicas.Controls.Add(this.btnLP2Practicas4);
-            this.panelLP2Practicas.Controls.Add(this.btnLP2Practica3Descargar);
-            this.panelLP2Practicas.Controls.Add(this.btnLP2Practica3Compartir);
             this.panelLP2Practicas.Controls.Add(this.btnLP2Practicas3);
-            this.panelLP2Practicas.Controls.Add(this.btnLP2Practica2Descargar);
-            this.panelLP2Practicas.Controls.Add(this.btnLP2Practica2Compartir);
-            this.panelLP2Practicas.Controls.Add(this.btnLP2Practica1Compartir);
-            this.panelLP2Practicas.Controls.Add(this.btnLP2Practica1Descargar);
             this.panelLP2Practicas.Controls.Add(this.btnLP2Practicas2);
             this.panelLP2Practicas.Controls.Add(this.btnLP2Practicas1);
             this.panelLP2Practicas.Location = new System.Drawing.Point(12, 83);
             this.panelLP2Practicas.Name = "panelLP2Practicas";
-            this.panelLP2Practicas.Size = new System.Drawing.Size(740, 243);
+            this.panelLP2Practicas.Size = new System.Drawing.Size(783, 243);
             this.panelLP2Practicas.TabIndex = 24;
-            // 
-            // btnLP2Practica4Descargar
-            // 
-            this.btnLP2Practica4Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2Practica4Descargar.Location = new System.Drawing.Point(668, 120);
-            this.btnLP2Practica4Descargar.Name = "btnLP2Practica4Descargar";
-            this.btnLP2Practica4Descargar.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2Practica4Descargar.TabIndex = 23;
-            this.btnLP2Practica4Descargar.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2Practica4Compartir
-            // 
-            this.btnLP2Practica4Compartir.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2Practica4Compartir.Location = new System.Drawing.Point(707, 120);
-            this.btnLP2Practica4Compartir.Name = "btnLP2Practica4Compartir";
-            this.btnLP2Practica4Compartir.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2Practica4Compartir.TabIndex = 21;
-            this.btnLP2Practica4Compartir.UseVisualStyleBackColor = true;
             // 
             // btnLP2Practicas4
             // 
             this.btnLP2Practicas4.Location = new System.Drawing.Point(0, 120);
             this.btnLP2Practicas4.Name = "btnLP2Practicas4";
-            this.btnLP2Practicas4.Size = new System.Drawing.Size(740, 34);
+            this.btnLP2Practicas4.Size = new System.Drawing.Size(783, 34);
             this.btnLP2Practicas4.TabIndex = 20;
             this.btnLP2Practicas4.Text = "      Práctica 4";
             this.btnLP2Practicas4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Practicas4.UseVisualStyleBackColor = true;
             // 
-            // btnLP2Practica3Descargar
-            // 
-            this.btnLP2Practica3Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2Practica3Descargar.Location = new System.Drawing.Point(668, 80);
-            this.btnLP2Practica3Descargar.Name = "btnLP2Practica3Descargar";
-            this.btnLP2Practica3Descargar.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2Practica3Descargar.TabIndex = 19;
-            this.btnLP2Practica3Descargar.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2Practica3Compartir
-            // 
-            this.btnLP2Practica3Compartir.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2Practica3Compartir.Location = new System.Drawing.Point(707, 80);
-            this.btnLP2Practica3Compartir.Name = "btnLP2Practica3Compartir";
-            this.btnLP2Practica3Compartir.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2Practica3Compartir.TabIndex = 17;
-            this.btnLP2Practica3Compartir.UseVisualStyleBackColor = true;
-            // 
             // btnLP2Practicas3
             // 
             this.btnLP2Practicas3.Location = new System.Drawing.Point(0, 80);
             this.btnLP2Practicas3.Name = "btnLP2Practicas3";
-            this.btnLP2Practicas3.Size = new System.Drawing.Size(740, 34);
+            this.btnLP2Practicas3.Size = new System.Drawing.Size(783, 34);
             this.btnLP2Practicas3.TabIndex = 16;
             this.btnLP2Practicas3.Text = "      Práctica 3";
             this.btnLP2Practicas3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Practicas3.UseVisualStyleBackColor = true;
             // 
-            // btnLP2Practica2Descargar
-            // 
-            this.btnLP2Practica2Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2Practica2Descargar.Location = new System.Drawing.Point(668, 40);
-            this.btnLP2Practica2Descargar.Name = "btnLP2Practica2Descargar";
-            this.btnLP2Practica2Descargar.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2Practica2Descargar.TabIndex = 15;
-            this.btnLP2Practica2Descargar.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2Practica2Compartir
-            // 
-            this.btnLP2Practica2Compartir.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2Practica2Compartir.Location = new System.Drawing.Point(707, 40);
-            this.btnLP2Practica2Compartir.Name = "btnLP2Practica2Compartir";
-            this.btnLP2Practica2Compartir.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2Practica2Compartir.TabIndex = 13;
-            this.btnLP2Practica2Compartir.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2Practica1Compartir
-            // 
-            this.btnLP2Practica1Compartir.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnLP2Practica1Compartir.Location = new System.Drawing.Point(707, 0);
-            this.btnLP2Practica1Compartir.Name = "btnLP2Practica1Compartir";
-            this.btnLP2Practica1Compartir.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2Practica1Compartir.TabIndex = 9;
-            this.btnLP2Practica1Compartir.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2Practica1Descargar
-            // 
-            this.btnLP2Practica1Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnLP2Practica1Descargar.Location = new System.Drawing.Point(668, 0);
-            this.btnLP2Practica1Descargar.Name = "btnLP2Practica1Descargar";
-            this.btnLP2Practica1Descargar.Size = new System.Drawing.Size(33, 34);
-            this.btnLP2Practica1Descargar.TabIndex = 11;
-            this.btnLP2Practica1Descargar.UseVisualStyleBackColor = true;
-            // 
             // btnLP2Practicas2
             // 
             this.btnLP2Practicas2.Location = new System.Drawing.Point(0, 40);
             this.btnLP2Practicas2.Name = "btnLP2Practicas2";
-            this.btnLP2Practicas2.Size = new System.Drawing.Size(740, 34);
+            this.btnLP2Practicas2.Size = new System.Drawing.Size(783, 34);
             this.btnLP2Practicas2.TabIndex = 12;
             this.btnLP2Practicas2.Text = "      Práctica 2";
             this.btnLP2Practicas2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -200,7 +124,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             // 
             this.btnLP2Practicas1.Location = new System.Drawing.Point(0, 0);
             this.btnLP2Practicas1.Name = "btnLP2Practicas1";
-            this.btnLP2Practicas1.Size = new System.Drawing.Size(740, 34);
+            this.btnLP2Practicas1.Size = new System.Drawing.Size(783, 34);
             this.btnLP2Practicas1.TabIndex = 8;
             this.btnLP2Practicas1.Text = "       Práctica 1";
             this.btnLP2Practicas1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,11 +180,55 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.picturePracticasReferencia2.TabIndex = 16;
             this.picturePracticasReferencia2.TabStop = false;
             // 
+            // pBLP2Practica1Descargar
+            // 
+            this.pBLP2Practica1Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2Practica1Descargar.Location = new System.Drawing.Point(756, 4);
+            this.pBLP2Practica1Descargar.Name = "pBLP2Practica1Descargar";
+            this.pBLP2Practica1Descargar.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2Practica1Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2Practica1Descargar.TabIndex = 24;
+            this.pBLP2Practica1Descargar.TabStop = false;
+            this.pBLP2Practica1Descargar.Click += new System.EventHandler(this.pBLP2Practica1Descargar_Click);
+            // 
+            // pBLP2Practica4Descargar
+            // 
+            this.pBLP2Practica4Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2Practica4Descargar.Location = new System.Drawing.Point(756, 124);
+            this.pBLP2Practica4Descargar.Name = "pBLP2Practica4Descargar";
+            this.pBLP2Practica4Descargar.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2Practica4Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2Practica4Descargar.TabIndex = 25;
+            this.pBLP2Practica4Descargar.TabStop = false;
+            this.pBLP2Practica4Descargar.Click += new System.EventHandler(this.pBLP2Practica4Descargar_Click);
+            // 
+            // pBLP2Practica3Descargar
+            // 
+            this.pBLP2Practica3Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2Practica3Descargar.Location = new System.Drawing.Point(756, 87);
+            this.pBLP2Practica3Descargar.Name = "pBLP2Practica3Descargar";
+            this.pBLP2Practica3Descargar.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2Practica3Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2Practica3Descargar.TabIndex = 26;
+            this.pBLP2Practica3Descargar.TabStop = false;
+            this.pBLP2Practica3Descargar.Click += new System.EventHandler(this.pBLP2Practica3Descargar_Click);
+            // 
+            // pBLP2Practica2Descargar
+            // 
+            this.pBLP2Practica2Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBLP2Practica2Descargar.Location = new System.Drawing.Point(756, 46);
+            this.pBLP2Practica2Descargar.Name = "pBLP2Practica2Descargar";
+            this.pBLP2Practica2Descargar.Size = new System.Drawing.Size(24, 24);
+            this.pBLP2Practica2Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBLP2Practica2Descargar.TabIndex = 27;
+            this.pBLP2Practica2Descargar.TabStop = false;
+            this.pBLP2Practica2Descargar.Click += new System.EventHandler(this.pBLP2Practica2Descargar_Click);
+            // 
             // frmPracticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(807, 453);
             this.Controls.Add(this.panelLP2Practicas);
             this.Controls.Add(this.btnPracticasCiclo7);
             this.Controls.Add(this.picturePracticasReferencia1);
@@ -272,9 +240,14 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.Name = "frmPracticas";
             this.Text = "Practicas";
             this.panelLP2Practicas.ResumeLayout(false);
+            this.panelLP2Practicas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePracticasReferencia1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePracticasReferencia3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePracticasReferencia2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica1Descargar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica4Descargar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica3Descargar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica2Descargar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,20 +259,16 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
         private System.Windows.Forms.PictureBox picturePracticasReferencia3;
         private System.Windows.Forms.Button btnPracticasPracticas;
         private System.Windows.Forms.Panel panelLP2Practicas;
-        private System.Windows.Forms.Button btnLP2Practica3Descargar;
-        private System.Windows.Forms.Button btnLP2Practica3Compartir;
         private System.Windows.Forms.Button btnLP2Practicas3;
-        private System.Windows.Forms.Button btnLP2Practica2Descargar;
-        private System.Windows.Forms.Button btnLP2Practica2Compartir;
-        private System.Windows.Forms.Button btnLP2Practica1Compartir;
-        private System.Windows.Forms.Button btnLP2Practica1Descargar;
         private System.Windows.Forms.Button btnLP2Practicas2;
         private System.Windows.Forms.Button btnLP2Practicas1;
         private System.Windows.Forms.Button btnPracticasCiclo7;
         private System.Windows.Forms.PictureBox picturePracticasReferencia1;
         private System.Windows.Forms.Button btnPracticasMaterial;
-        private System.Windows.Forms.Button btnLP2Practica4Descargar;
-        private System.Windows.Forms.Button btnLP2Practica4Compartir;
         private System.Windows.Forms.Button btnLP2Practicas4;
+        private System.Windows.Forms.PictureBox pBLP2Practica2Descargar;
+        private System.Windows.Forms.PictureBox pBLP2Practica3Descargar;
+        private System.Windows.Forms.PictureBox pBLP2Practica4Descargar;
+        private System.Windows.Forms.PictureBox pBLP2Practica1Descargar;
     }
 }

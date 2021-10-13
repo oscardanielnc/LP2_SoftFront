@@ -54,5 +54,45 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             frmCalificacion calificacion = new frmCalificacion();
             calificacion.ShowDialog();
         }
+
+        private void pBLP2Practica4Compartir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compartiendo");
+        }
+
+        private void pBLP2Practica4Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica3Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica2Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica1Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica3Compartir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compartiendo");
+        }
+
+        private void pBLP2Practica2Compartir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compartiendo");
+        }
+
+        private void pBLP2Practica1Compartir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compartiendo");
+        }
     }
 }
