@@ -12,6 +12,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
 {
     public partial class frmAgregarMaterial : Form
     {
+        int _cancelar;
         public frmAgregarMaterial()
         {
             InitializeComponent();
@@ -36,12 +37,11 @@ namespace LP2Soft.Cursos.AgregarMaterial
             if (txtProfesor.Text.Length != 0)
             {
                 frmEstasSeguroDeCancelar estasSeguroDeCancelar = new frmEstasSeguroDeCancelar();
-                estasSeguroDeCancelar.ShowDialog();
+                if(estasSeguroDeCancelar.ShowDialog()==DialogResult.OK)
+                    this.Close();
+                
             }
-            else 
-            {
-                this.Close();
-            }
+            
             
         }
 

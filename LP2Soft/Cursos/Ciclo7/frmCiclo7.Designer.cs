@@ -179,7 +179,7 @@ namespace LP2Soft.Cursos.Ciclo7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(724, 450);
             this.Controls.Add(this.panelCiclo7);
             this.Controls.Add(this.btnCiclo7);
             this.Controls.Add(this.pictureCiclo7Referencia1);

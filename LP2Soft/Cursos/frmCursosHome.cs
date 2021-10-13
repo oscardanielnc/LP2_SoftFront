@@ -18,23 +18,7 @@ namespace LP2Soft.Cursos
         {
             InitializeComponent();
         }
-
-        private void btnInformacion_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Puede agregar a favoritos con el botón + " +
-                "así te llegarán las notificaciones si existe nuevo material");
-        }
-
-        private void btnLP2Descargar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Descargando");
-        }
-
-        private void btnLP2Compartir_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Compartiendo");
-        }
-
+              
         private void btnLP2AgregarFavorito_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Se agrego a favorito");
@@ -53,5 +37,44 @@ namespace LP2Soft.Cursos
             Ciclo7.ShowDialog();
             this.Close();
         }
+
+        
+
+        
+
+        private void pictureLP2Compartir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compartiendo");
+        }
+
+        
+
+        
+
+        private void pictureLP2Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        
+
+        
+        private void pictureLP2Favorito_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se agregó a favoritos");
+        }
+
+        
+
+        
+
+        private void pictureInformativo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Puede agregar a favoritos con el botón + " +
+                "así te llegarán las notificaciones si existe nuevo material");
+        }
     }
+
+        
+    
 }
