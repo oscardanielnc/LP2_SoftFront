@@ -39,7 +39,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Parciales = new System.Windows.Forms.Button();
             this.btnLP2Practicas = new System.Windows.Forms.Button();
             this.btnLP2Laboratorios = new System.Windows.Forms.Button();
-            this.txtLP2Comentario = new System.Windows.Forms.TextBox();
             this.btnLP2Material = new System.Windows.Forms.Button();
             this.btnLP2Ciclo7 = new System.Windows.Forms.Button();
             this.btnLP2LP2 = new System.Windows.Forms.Button();
@@ -65,6 +64,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.lblNombreRecomendado1 = new System.Windows.Forms.Label();
             this.pictureFotoAsesor1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargasExtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLibros)).BeginInit();
@@ -181,14 +181,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Laboratorios.Text = "Laboratorios";
             this.btnLP2Laboratorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Laboratorios.UseVisualStyleBackColor = true;
-            // 
-            // txtLP2Comentario
-            // 
-            this.txtLP2Comentario.Location = new System.Drawing.Point(48, 252);
-            this.txtLP2Comentario.Multiline = true;
-            this.txtLP2Comentario.Name = "txtLP2Comentario";
-            this.txtLP2Comentario.Size = new System.Drawing.Size(511, 42);
-            this.txtLP2Comentario.TabIndex = 16;
             // 
             // btnLP2Material
             // 
@@ -451,18 +443,28 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(13, 322);
+            this.panel2.Location = new System.Drawing.Point(13, 291);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(564, 115);
+            this.panel2.Size = new System.Drawing.Size(564, 150);
             this.panel2.TabIndex = 18;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(45, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(202, 35);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Nuevo Post";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmCiclo7LP2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 453);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txtLP2Comentario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblLP2NombreCurso);
             this.Controls.Add(this.lblLP2Descripcion);
@@ -507,7 +509,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private System.Windows.Forms.Button btnLP2Extras;
         private System.Windows.Forms.Button btnLP2Libros;
         private System.Windows.Forms.Button btnLP2Finales;
-        private System.Windows.Forms.TextBox txtLP2Comentario;
         private System.Windows.Forms.Button btnLP2Material;
         private System.Windows.Forms.PictureBox pictureLP2Referencia1;
         private System.Windows.Forms.Button btnLP2Ciclo7;
@@ -533,5 +534,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private System.Windows.Forms.Label lblNombreRecomendado1;
         private System.Windows.Forms.PictureBox pictureFotoAsesor1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
     }
 }
