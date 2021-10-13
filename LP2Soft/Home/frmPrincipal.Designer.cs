@@ -1,7 +1,7 @@
 ﻿
-namespace LP2Soft.Eventos
+namespace LP2Soft.Home
 {
-    partial class frmNuevoEvento
+    partial class frmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,34 @@ namespace LP2Soft.Eventos
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // frmNuevoEvento
+            // panelPrincipal
+            // 
+            this.panelPrincipal.AutoSize = true;
+            this.panelPrincipal.Location = new System.Drawing.Point(1, 1);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(802, 465);
+            this.panelPrincipal.TabIndex = 0;
+            // 
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 634);
-            this.Name = "frmNuevoEvento";
-            this.Text = "frmNuevoEvento";
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(803, 465);
+            this.Controls.Add(this.panelPrincipal);
+            this.Name = "frmPrincipal";
+            this.Text = "INFUNABLES";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panelPrincipal;
     }
 }

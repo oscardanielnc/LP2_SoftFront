@@ -34,14 +34,14 @@ namespace LP2Soft.Eventos
             this.lblCantidadLikes = new System.Windows.Forms.Label();
             this.lblComentar = new System.Windows.Forms.Label();
             this.lblMeGusta = new System.Windows.Forms.Label();
-            this.btnComentar = new System.Windows.Forms.Button();
-            this.btnMeGusta = new System.Windows.Forms.Button();
             this.txtDescripcionMaterial = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDescargar = new System.Windows.Forms.Button();
             this.lblMaterial = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.btnComentar = new System.Windows.Forms.Button();
+            this.btnMeGusta = new System.Windows.Forms.Button();
+            this.btnDescargar = new System.Windows.Forms.Button();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
@@ -108,32 +108,6 @@ namespace LP2Soft.Eventos
             this.lblMeGusta.TabIndex = 17;
             this.lblMeGusta.Text = "Me gusta";
             // 
-            // btnComentar
-            // 
-            this.btnComentar.BackColor = System.Drawing.Color.Transparent;
-            this.btnComentar.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
-            this.btnComentar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnComentar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnComentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComentar.Location = new System.Drawing.Point(171, 170);
-            this.btnComentar.Name = "btnComentar";
-            this.btnComentar.Size = new System.Drawing.Size(26, 23);
-            this.btnComentar.TabIndex = 16;
-            this.btnComentar.UseVisualStyleBackColor = false;
-            // 
-            // btnMeGusta
-            // 
-            this.btnMeGusta.BackColor = System.Drawing.Color.Transparent;
-            this.btnMeGusta.BackgroundImage = global::LP2Soft.Properties.Resources.like;
-            this.btnMeGusta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMeGusta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnMeGusta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMeGusta.Location = new System.Drawing.Point(12, 170);
-            this.btnMeGusta.Name = "btnMeGusta";
-            this.btnMeGusta.Size = new System.Drawing.Size(26, 23);
-            this.btnMeGusta.TabIndex = 15;
-            this.btnMeGusta.UseVisualStyleBackColor = false;
-            // 
             // txtDescripcionMaterial
             // 
             this.txtDescripcionMaterial.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -154,19 +128,6 @@ namespace LP2Soft.Eventos
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Prof. Freddy Paz";
-            // 
-            // btnDescargar
-            // 
-            this.btnDescargar.BackColor = System.Drawing.Color.Transparent;
-            this.btnDescargar.BackgroundImage = global::LP2Soft.Properties.Resources.dowload;
-            this.btnDescargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDescargar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescargar.Location = new System.Drawing.Point(292, 79);
-            this.btnDescargar.Name = "btnDescargar";
-            this.btnDescargar.Size = new System.Drawing.Size(26, 23);
-            this.btnDescargar.TabIndex = 12;
-            this.btnDescargar.UseVisualStyleBackColor = false;
             // 
             // lblMaterial
             // 
@@ -197,6 +158,45 @@ namespace LP2Soft.Eventos
             this.lblNombre.Size = new System.Drawing.Size(104, 15);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Antony Romero";
+            // 
+            // btnComentar
+            // 
+            this.btnComentar.BackColor = System.Drawing.Color.Transparent;
+            this.btnComentar.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
+            this.btnComentar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnComentar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnComentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComentar.Location = new System.Drawing.Point(171, 170);
+            this.btnComentar.Name = "btnComentar";
+            this.btnComentar.Size = new System.Drawing.Size(26, 23);
+            this.btnComentar.TabIndex = 16;
+            this.btnComentar.UseVisualStyleBackColor = false;
+            // 
+            // btnMeGusta
+            // 
+            this.btnMeGusta.BackColor = System.Drawing.Color.Transparent;
+            this.btnMeGusta.BackgroundImage = global::LP2Soft.Properties.Resources.like;
+            this.btnMeGusta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMeGusta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnMeGusta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMeGusta.Location = new System.Drawing.Point(12, 170);
+            this.btnMeGusta.Name = "btnMeGusta";
+            this.btnMeGusta.Size = new System.Drawing.Size(26, 23);
+            this.btnMeGusta.TabIndex = 15;
+            this.btnMeGusta.UseVisualStyleBackColor = false;
+            // 
+            // btnDescargar
+            // 
+            this.btnDescargar.BackColor = System.Drawing.Color.Transparent;
+            this.btnDescargar.BackgroundImage = global::LP2Soft.Properties.Resources.dowload;
+            this.btnDescargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDescargar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescargar.Location = new System.Drawing.Point(292, 79);
+            this.btnDescargar.Name = "btnDescargar";
+            this.btnDescargar.Size = new System.Drawing.Size(26, 23);
+            this.btnDescargar.TabIndex = 12;
+            this.btnDescargar.UseVisualStyleBackColor = false;
             // 
             // pbPerfil
             // 
