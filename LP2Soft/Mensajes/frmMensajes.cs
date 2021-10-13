@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Soft.Home;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +13,17 @@ namespace LP2Soft.Mensajes
 {
     public partial class frmMensajes : Form
     {
-        private Panel _panelPadre;
-        public frmMensajes()
+        private frmHome _formHome;
+
+        public frmMensajes(frmHome formHome)
         {
             InitializeComponent();
-        }
-        public frmMensajes(Panel panel)
-        {
-            InitializeComponent();
-            _panelPadre = panel;
+            _formHome = formHome;
         }
 
-        private void pictureBoxUser1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            _panelPadre.Controls.Clear();
-            frmMensajeChat frmChat = new frmMensajeChat(_panelPadre);
-            frmChat.TopLevel = false;
-            _panelPadre.Controls.Add(frmChat);
-            frmChat.Show();
+            _formHome.abrirFormulario(new frmMensajeChat());
         }
     }
 }

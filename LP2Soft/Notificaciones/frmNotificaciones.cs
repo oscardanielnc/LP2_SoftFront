@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2Soft.Mensajes
+namespace LP2Soft.Notificaciones
 {
-    public partial class frmMensajeChat : Form
+    public partial class frmNotificaciones : Form
     {
-        public frmMensajeChat()
+        public frmNotificaciones()
         {
             InitializeComponent();
         }

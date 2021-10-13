@@ -3,6 +3,7 @@ using LP2Soft.Cursos;
 using LP2Soft.Enumerados;
 using LP2Soft.Eventos;
 using LP2Soft.Mensajes;
+using LP2Soft.Notificaciones;
 using LP2Soft.Perfil;
 using LP2Soft.Profesor;
 using System;
@@ -55,7 +56,7 @@ namespace LP2Soft.Home
         }
 
 
-        private void btnPerfil_Click(object sender, EventArgs e)
+        public void btnPerfil_Click(object sender, EventArgs e)
         {
             if (_menuSeleccionado != MenuHome.Perfil)
             {
@@ -66,7 +67,7 @@ namespace LP2Soft.Home
             }
         }
 
-        private void btnNovedades_Click(object sender, EventArgs e)
+        public void btnNovedades_Click(object sender, EventArgs e)
         {
             if (_menuSeleccionado != MenuHome.Novedades)
             {
@@ -77,14 +78,14 @@ namespace LP2Soft.Home
             }
         }
 
-        private void btnCursos_Click(object sender, EventArgs e)
+        public void btnCursos_Click(object sender, EventArgs e)
         {
             if (subPanelCursos.Visible == false)
                 subPanelCursos.Visible = true;
             else subPanelCursos.Visible = false;
         }
 
-        private void btnTodosMisCursos_Click(object sender, EventArgs e)
+        public void btnTodosMisCursos_Click(object sender, EventArgs e)
         {
             if (_menuSeleccionado != MenuHome.CursosTodos)
             {
@@ -95,25 +96,24 @@ namespace LP2Soft.Home
             }
         }
 
-        private void btnMensajes_Click(object sender, EventArgs e)
+        public void btnMensajes_Click(object sender, EventArgs e)
         {
             if (_menuSeleccionado != MenuHome.Mensajes)
             {
                 inicializarColorBotones();
-                btnProfesores.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
                 _menuSeleccionado = MenuHome.Mensajes;
-                abrirFormulario(new frmMensajes(panelContenido));
+                abrirFormulario(new frmMensajes(this));
             }
         }
 
-        private void btnEventos_Click(object sender, EventArgs e)
+        public void btnEventos_Click(object sender, EventArgs e)
         {
             if (subPanelEventos.Visible == false)
                 subPanelEventos.Visible = true;
             else subPanelEventos.Visible = false;
         }
 
-        private void btnVerEventos_Click(object sender, EventArgs e)
+        public void btnVerEventos_Click(object sender, EventArgs e)
         {
 /*            if (_menuSeleccionado != MenuHome.VerEventos)
             {
@@ -124,7 +124,7 @@ namespace LP2Soft.Home
             }*/
         }
 
-        private void btnEventosAgendados_Click(object sender, EventArgs e)
+        public void btnEventosAgendados_Click(object sender, EventArgs e)
         {
             if (_menuSeleccionado != MenuHome.EventosAgendados)
             {
@@ -135,7 +135,7 @@ namespace LP2Soft.Home
             }
         }
 
-        private void btnAsesores_Click(object sender, EventArgs e)
+        public void btnAsesores_Click(object sender, EventArgs e)
         {
             if (_menuSeleccionado != MenuHome.Asesores)
             {
@@ -146,7 +146,7 @@ namespace LP2Soft.Home
             }
         }
 
-        private void btnProfesores_Click(object sender, EventArgs e)
+        public void btnProfesores_Click(object sender, EventArgs e)
         {
             if (_menuSeleccionado != MenuHome.Profesores)
             {
@@ -157,9 +157,19 @@ namespace LP2Soft.Home
             }
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        public void btnCerrar_Click(object sender, EventArgs e)
         {
             _formPrincipal.abrirFormulario(new frmLoginSingin(_formPrincipal));
+        }
+
+        public void btnNotificaciones_Click(object sender, EventArgs e)
+        {
+            if (_menuSeleccionado != MenuHome.Notificaciones)
+            {
+                inicializarColorBotones();
+                _menuSeleccionado = MenuHome.Notificaciones;
+                abrirFormulario(new frmNotificaciones());
+            }
         }
     }
 }
