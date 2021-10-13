@@ -133,17 +133,29 @@
     <Compile Include="Eventos\frmEventoProximo.Designer.cs">
       <DependentUpon>frmEventoProximo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Eventos\frmEventosAgendados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmEventosAgendados.Designer.cs">
+      <DependentUpon>frmEventosAgendados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Eventos\frmFiltro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Eventos\frmFiltro.Designer.cs">
       <DependentUpon>frmFiltro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Eventos\frmNuevoEvento.cs">
+    <Compile Include="Eventos\frmCrearEvento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Eventos\frmNuevoEvento.Designer.cs">
-      <DependentUpon>frmNuevoEvento.cs</DependentUpon>
+    <Compile Include="Eventos\frmCrearEvento.Designer.cs">
+      <DependentUpon>frmCrearEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmMisEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmMisEventos.Designer.cs">
+      <DependentUpon>frmMisEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="Eventos\frmPostGeneral.cs">
       <SubType>Form</SubType>
@@ -303,11 +315,17 @@
     <EmbeddedResource Include="Eventos\frmEventoProximo.resx">
       <DependentUpon>frmEventoProximo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmEventosAgendados.resx">
+      <DependentUpon>frmEventosAgendados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmFiltro.resx">
       <DependentUpon>frmFiltro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Eventos\frmNuevoEvento.resx">
-      <DependentUpon>frmNuevoEvento.cs</DependentUpon>
+    <EmbeddedResource Include="Eventos\frmCrearEvento.resx">
+      <DependentUpon>frmCrearEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmMisEventos.resx">
+      <DependentUpon>frmMisEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmPostGeneral.resx">
       <DependentUpon>frmPostGeneral.cs</DependentUpon>
@@ -492,6 +510,9 @@
     <None Include="Resources\FreedyPaz.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\cancelar-evento.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
@@ -499,6 +520,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuraciones %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuraciones %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuraciones %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuraciones %284%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MiguelGuanira.jpg" />
