@@ -65,6 +65,12 @@
     <Compile Include="Asesor\frmBuscarAsesor.Designer.cs">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Asesor\frmMisAsesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmMisAsesores.Designer.cs">
+      <DependentUpon>frmMisAsesores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,11 +223,17 @@
     <Compile Include="Home\frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Notificaciones\Notificaciones.cs">
+    <Compile Include="Mensajes\frmMensajeChat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Notificaciones\Notificaciones.Designer.cs">
-      <DependentUpon>Notificaciones.cs</DependentUpon>
+    <Compile Include="Mensajes\frmMensajeChat.Designer.cs">
+      <DependentUpon>frmMensajeChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensajes\frmMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensajes\frmMensajes.Designer.cs">
+      <DependentUpon>frmMensajes.cs</DependentUpon>
     </Compile>
     <Compile Include="Perfil\frmPerfil_CursosAsesorados.cs">
       <SubType>Form</SubType>
@@ -287,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asesor\frmMisAsesores.resx">
+      <DependentUpon>frmMisAsesores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmAgregarMaterial.resx">
       <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
@@ -363,8 +378,11 @@
     <EmbeddedResource Include="Home\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notificaciones\Notificaciones.resx">
-      <DependentUpon>Notificaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Mensajes\frmMensajeChat.resx">
+      <DependentUpon>frmMensajeChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensajes\frmMensajes.resx">
+      <DependentUpon>frmMensajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
@@ -562,6 +580,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\67092642_375243393186725_3715283641414021357_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Notificaciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

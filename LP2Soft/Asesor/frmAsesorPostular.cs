@@ -24,12 +24,20 @@ namespace LP2Soft.Asesor
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            _panelPadre.Controls.Clear();
+            frmBuscarAsesor frmAsesor = new frmBuscarAsesor(_panelPadre);
+            frmAsesor.TopLevel = false;
+            _panelPadre.Controls.Add(frmAsesor);
+            frmAsesor.Show();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            _panelPadre.Controls.Clear();
+            frmBuscarAsesor frmAsesor = new frmBuscarAsesor(_panelPadre);
+            frmAsesor.TopLevel = false;
+            _panelPadre.Controls.Add(frmAsesor);
+            frmAsesor.Show();
         }
     }
 }

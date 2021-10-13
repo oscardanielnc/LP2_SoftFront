@@ -2,6 +2,7 @@
 using LP2Soft.Cursos;
 using LP2Soft.Enumerados;
 using LP2Soft.Eventos;
+using LP2Soft.Mensajes;
 using LP2Soft.Perfil;
 using LP2Soft.Profesor;
 using System;
@@ -128,6 +129,17 @@ namespace LP2Soft.Home
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             _formPrincipal.Close();
+        }
+
+        private void btnMensajes_Click(object sender, EventArgs e)
+        {
+            if (_menuSeleccionado != MenuHome.Mensajes)
+            {
+                inicializarColorBotones();
+                btnProfesores.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
+                _menuSeleccionado = MenuHome.Mensajes;
+                abrirFormulario(new frmMensajes(panelContenido));
+            }
         }
     }
 }
