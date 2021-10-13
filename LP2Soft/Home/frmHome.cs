@@ -36,7 +36,9 @@ namespace LP2Soft.Home
             btnNovedades.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnPerfil.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnTodosMisCursos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
-            btnEventos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+            btnVerEventos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+            btnEventosAgendados.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+            btnMisEventos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnAsesores.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnProfesores.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
         }
@@ -75,17 +77,6 @@ namespace LP2Soft.Home
             }
         }
 
-        private void btnEventos_Click(object sender, EventArgs e)
-        {
-            if (_menuSeleccionado != MenuHome.Eventos)
-            {
-                inicializarColorBotones();
-                btnEventos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.Eventos;
-                abrirFormulario(new frmEventosAgendados());
-            }
-        }
-
         private void btnCursos_Click(object sender, EventArgs e)
         {
             if (subPanelCursos.Visible == false)
@@ -101,6 +92,46 @@ namespace LP2Soft.Home
                 btnTodosMisCursos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
                 _menuSeleccionado = MenuHome.CursosTodos;
                 abrirFormulario(new frmCursosHome());
+            }
+        }
+
+        private void btnMensajes_Click(object sender, EventArgs e)
+        {
+            if (_menuSeleccionado != MenuHome.Mensajes)
+            {
+                inicializarColorBotones();
+                btnProfesores.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
+                _menuSeleccionado = MenuHome.Mensajes;
+                abrirFormulario(new frmMensajes(panelContenido));
+            }
+        }
+
+        private void btnEventos_Click(object sender, EventArgs e)
+        {
+            if (subPanelEventos.Visible == false)
+                subPanelEventos.Visible = true;
+            else subPanelEventos.Visible = false;
+        }
+
+        private void btnVerEventos_Click(object sender, EventArgs e)
+        {
+/*            if (_menuSeleccionado != MenuHome.VerEventos)
+            {
+                inicializarColorBotones();
+                btnVerEventos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
+                _menuSeleccionado = MenuHome.VerEventos;
+                abrirFormulario(new frmEventosAgendados());
+            }*/
+        }
+
+        private void btnEventosAgendados_Click(object sender, EventArgs e)
+        {
+            if (_menuSeleccionado != MenuHome.EventosAgendados)
+            {
+                inicializarColorBotones();
+                btnEventosAgendados.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
+                _menuSeleccionado = MenuHome.EventosAgendados;
+                abrirFormulario(new frmEventosAgendados());
             }
         }
 
@@ -128,18 +159,7 @@ namespace LP2Soft.Home
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            _formPrincipal.Close();
-        }
-
-        private void btnMensajes_Click(object sender, EventArgs e)
-        {
-            if (_menuSeleccionado != MenuHome.Mensajes)
-            {
-                inicializarColorBotones();
-                btnProfesores.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = MenuHome.Mensajes;
-                abrirFormulario(new frmMensajes(panelContenido));
-            }
+            _formPrincipal.abrirFormulario(new frmLoginSingin(_formPrincipal));
         }
     }
 }

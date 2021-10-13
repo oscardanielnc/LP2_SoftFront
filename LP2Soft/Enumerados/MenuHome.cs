@@ -8,6 +8,6 @@ namespace LP2Soft.Enumerados
 {
     public enum MenuHome
     {
-        Novedades, Perfil, CursosTodos, CursosFavoritos, Eventos, Asesores, Profesores, Mensajes
+        Novedades, Perfil, CursosTodos, CursosFavoritos, MisEventos, EventosAgendados, VerEventos, Asesores, Profesores, Mensajes
     }
 }
