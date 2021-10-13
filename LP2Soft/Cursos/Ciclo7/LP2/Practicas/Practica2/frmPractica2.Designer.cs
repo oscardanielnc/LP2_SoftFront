@@ -40,12 +40,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panelLP2Practicas = new System.Windows.Forms.Panel();
-            this.btnLP2Practicas4 = new System.Windows.Forms.Button();
-            this.btnLP2Practicas3 = new System.Windows.Forms.Button();
-            this.btnLP2Practicas2 = new System.Windows.Forms.Button();
-            this.btnLP2Practicas1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pBLP2Practica2Compartir = new System.Windows.Forms.PictureBox();
             this.pBLP2Practica3Compartir = new System.Windows.Forms.PictureBox();
@@ -59,14 +56,19 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnestrella1 = new System.Windows.Forms.Button();
+            this.btnLP2Practicas4 = new System.Windows.Forms.Button();
+            this.btnLP2Practicas3 = new System.Windows.Forms.Button();
+            this.btnLP2Practicas2 = new System.Windows.Forms.Button();
+            this.btnLP2Practicas1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureLP2Practica2Referencia4 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia1 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia3 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelLP2Practicas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica2Compartir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica3Compartir)).BeginInit();
@@ -80,9 +82,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLP2Practica2Ciclo7
@@ -212,70 +211,35 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.panelLP2Practicas.Size = new System.Drawing.Size(783, 230);
             this.panelLP2Practicas.TabIndex = 39;
             // 
-            // btnLP2Practicas4
+            // pictureBox4
             // 
-            this.btnLP2Practicas4.Location = new System.Drawing.Point(33, 120);
-            this.btnLP2Practicas4.Name = "btnLP2Practicas4";
-            this.btnLP2Practicas4.Size = new System.Drawing.Size(750, 34);
-            this.btnLP2Practicas4.TabIndex = 20;
-            this.btnLP2Practicas4.Text = "Practica 2 2022-0 (zip)                                                       Jua" +
-    "n Lora                                                                          " +
-    "       5.0";
-            this.btnLP2Practicas4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLP2Practicas4.UseVisualStyleBackColor = true;
+            this.pictureBox4.Image = global::LP2Soft.Properties.Resources.star_full_1;
+            this.pictureBox4.Location = new System.Drawing.Point(571, 124);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 49;
+            this.pictureBox4.TabStop = false;
             // 
-            // btnLP2Practicas3
+            // pictureBox3
             // 
-            this.btnLP2Practicas3.Location = new System.Drawing.Point(33, 80);
-            this.btnLP2Practicas3.Name = "btnLP2Practicas3";
-            this.btnLP2Practicas3.Size = new System.Drawing.Size(750, 34);
-            this.btnLP2Practicas3.TabIndex = 16;
-            this.btnLP2Practicas3.Text = "Practica 2 2021-2 (zip)                                                       Jua" +
-    "n Lora                                                                          " +
-    "       4.5";
-            this.btnLP2Practicas3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLP2Practicas3.UseVisualStyleBackColor = true;
+            this.pictureBox3.Image = global::LP2Soft.Properties.Resources.star_full_1;
+            this.pictureBox3.Location = new System.Drawing.Point(571, 85);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 48;
+            this.pictureBox3.TabStop = false;
             // 
-            // btnLP2Practicas2
+            // pictureBox2
             // 
-            this.btnLP2Practicas2.Location = new System.Drawing.Point(33, 40);
-            this.btnLP2Practicas2.Name = "btnLP2Practicas2";
-            this.btnLP2Practicas2.Size = new System.Drawing.Size(750, 34);
-            this.btnLP2Practicas2.TabIndex = 12;
-            this.btnLP2Practicas2.Text = "Practica 2 2021-1 (zip)                                                       Jua" +
-    "n Lora                                                                          " +
-    "       5.0";
-            this.btnLP2Practicas2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLP2Practicas2.UseVisualStyleBackColor = true;
-            // 
-            // btnLP2Practicas1
-            // 
-            this.btnLP2Practicas1.Location = new System.Drawing.Point(33, 0);
-            this.btnLP2Practicas1.Name = "btnLP2Practicas1";
-            this.btnLP2Practicas1.Size = new System.Drawing.Size(750, 34);
-            this.btnLP2Practicas1.TabIndex = 8;
-            this.btnLP2Practicas1.Text = "Practica 2 2021-0 (zip)                                                       Jua" +
-    "n Lora                                                                          " +
-    "       5.0";
-            this.btnLP2Practicas1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLP2Practicas1.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(12, 153);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 15);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Votar";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 41;
+            this.pictureBox2.Image = global::LP2Soft.Properties.Resources.star_full_1;
+            this.pictureBox2.Location = new System.Drawing.Point(571, 45);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -412,6 +376,64 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnestrella1.UseVisualStyleBackColor = true;
             this.btnestrella1.Click += new System.EventHandler(this.btnestrella1_Click);
             // 
+            // btnLP2Practicas4
+            // 
+            this.btnLP2Practicas4.Location = new System.Drawing.Point(33, 120);
+            this.btnLP2Practicas4.Name = "btnLP2Practicas4";
+            this.btnLP2Practicas4.Size = new System.Drawing.Size(750, 34);
+            this.btnLP2Practicas4.TabIndex = 20;
+            this.btnLP2Practicas4.Text = "Practica 2 2022-0 (zip)                                                       Jua" +
+    "n Lora                                                                          " +
+    "       5.0";
+            this.btnLP2Practicas4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLP2Practicas4.UseVisualStyleBackColor = true;
+            // 
+            // btnLP2Practicas3
+            // 
+            this.btnLP2Practicas3.Location = new System.Drawing.Point(33, 80);
+            this.btnLP2Practicas3.Name = "btnLP2Practicas3";
+            this.btnLP2Practicas3.Size = new System.Drawing.Size(750, 34);
+            this.btnLP2Practicas3.TabIndex = 16;
+            this.btnLP2Practicas3.Text = "Practica 2 2021-2 (zip)                                                       Jua" +
+    "n Lora                                                                          " +
+    "       4.5";
+            this.btnLP2Practicas3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLP2Practicas3.UseVisualStyleBackColor = true;
+            // 
+            // btnLP2Practicas2
+            // 
+            this.btnLP2Practicas2.Location = new System.Drawing.Point(33, 40);
+            this.btnLP2Practicas2.Name = "btnLP2Practicas2";
+            this.btnLP2Practicas2.Size = new System.Drawing.Size(750, 34);
+            this.btnLP2Practicas2.TabIndex = 12;
+            this.btnLP2Practicas2.Text = "Practica 2 2021-1 (zip)                                                       Jua" +
+    "n Lora                                                                          " +
+    "       5.0";
+            this.btnLP2Practicas2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLP2Practicas2.UseVisualStyleBackColor = true;
+            // 
+            // btnLP2Practicas1
+            // 
+            this.btnLP2Practicas1.Location = new System.Drawing.Point(33, 0);
+            this.btnLP2Practicas1.Name = "btnLP2Practicas1";
+            this.btnLP2Practicas1.Size = new System.Drawing.Size(750, 34);
+            this.btnLP2Practicas1.TabIndex = 8;
+            this.btnLP2Practicas1.Text = "Practica 2 2021-0 (zip)                                                       Jua" +
+    "n Lora                                                                          " +
+    "       5.0";
+            this.btnLP2Practicas1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLP2Practicas1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Location = new System.Drawing.Point(12, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 15);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Votar";
+            // 
             // pictureLP2Practica2Referencia4
             // 
             this.pictureLP2Practica2Referencia4.Image = global::LP2Soft.Properties.Resources.chevrons_right_regular_24;
@@ -452,42 +474,11 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.pictureLP2Practica2Referencia2.TabIndex = 24;
             this.pictureLP2Practica2Referencia2.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::LP2Soft.Properties.Resources.star_full_1;
-            this.pictureBox2.Location = new System.Drawing.Point(571, 45);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::LP2Soft.Properties.Resources.star_full_1;
-            this.pictureBox3.Location = new System.Drawing.Point(571, 85);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 48;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::LP2Soft.Properties.Resources.star_full_1;
-            this.pictureBox4.Location = new System.Drawing.Point(571, 124);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 49;
-            this.pictureBox4.TabStop = false;
-            // 
             // frmPractica2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 453);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panelLP2Practicas);
             this.Controls.Add(this.label3);
@@ -508,6 +499,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.Text = "frmPractica2";
             this.panelLP2Practicas.ResumeLayout(false);
             this.panelLP2Practicas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica2Compartir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica3Compartir)).EndInit();
@@ -521,9 +515,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,7 +554,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         private System.Windows.Forms.PictureBox pBLP2Practica4Compartir;
         private System.Windows.Forms.PictureBox pBLP2Practica1Compartir;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
