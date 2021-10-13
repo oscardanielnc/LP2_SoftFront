@@ -37,11 +37,12 @@ namespace LP2Soft.Perfil
             // labelinfo
             // 
             this.labelinfo.AutoSize = true;
-            this.labelinfo.Location = new System.Drawing.Point(260, 100);
+            this.labelinfo.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.labelinfo.Location = new System.Drawing.Point(201, 99);
             this.labelinfo.Name = "labelinfo";
-            this.labelinfo.Size = new System.Drawing.Size(281, 13);
+            this.labelinfo.Size = new System.Drawing.Size(406, 13);
             this.labelinfo.TabIndex = 1;
-            this.labelinfo.Text = "Aquí vienen las reseñas de quien sea que le tocó diseñar.";
+            this.labelinfo.Text = "Esperando a que el bandido de mi compañero nos envíe sus modelos de reseñas 🥵";
             // 
             // btnNuevaResenia
             // 

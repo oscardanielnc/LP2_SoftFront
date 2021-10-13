@@ -21,7 +21,7 @@ namespace LP2Soft
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLoginSingin());
+            Application.Run(new frmPrincipal());
         }
     }
 }

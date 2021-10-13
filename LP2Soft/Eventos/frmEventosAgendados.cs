@@ -10,20 +10,14 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Eventos
 {
-    public partial class frmVerEventos : Form
+    public partial class frmEventosAgendados : Form
     {
-        public frmVerEventos()
+        public frmEventosAgendados()
         {
             InitializeComponent();
         }
 
         private void btnFiltros_Click(object sender, EventArgs e)
-        {
-            frmFiltro frmFiltro = new frmFiltro();
-            frmFiltro.ShowDialog();
-        }
-
-        private void btnCrearEvento_Click(object sender, EventArgs e)
         {
             frmCrearEvento frmCrearEvento = new frmCrearEvento();
             frmCrearEvento.ShowDialog();
@@ -31,7 +25,7 @@ namespace LP2Soft.Eventos
 
         private void panelPublicacionesEventos_Scroll(object sender, ScrollEventArgs e)
         {
-            if (e.NewValue == panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange + 1)
+            if (e.NewValue == panelPublicacionesEventos.VerticalScroll.Maximum - panelPublicacionesEventos.VerticalScroll.LargeChange + 1)
             {
                 if (e.NewValue != e.OldValue) // Checking when the scrollbar is at bottom and user clicks/scrolls the scrollbar      
                 {

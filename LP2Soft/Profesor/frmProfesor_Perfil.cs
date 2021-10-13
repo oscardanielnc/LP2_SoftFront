@@ -8,16 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2Soft.Home
+namespace LP2Soft.Profesor
 {
-    public partial class frmLoginSingin : Form
+    public partial class frmProfesor_Perfil : Form
     {
         private static Form _formActivo = null;
-
-        public frmLoginSingin(frmPrincipal formPrincipal)
+        public frmProfesor_Perfil()
         {
             InitializeComponent();
-            abrirFormulario(new frmLogIn(panelContenido, formPrincipal));
+            abrirFormulario(new frmProfesor_Perfil_Informacion());
         }
         public void abrirFormulario(Form formulario)
         {
@@ -25,7 +24,7 @@ namespace LP2Soft.Home
             _formActivo = formulario;
             _formActivo.TopLevel = false;
             _formActivo.FormBorderStyle = FormBorderStyle.None;
-            _formActivo.Dock = DockStyle.Fill;
+            /*_formActivo.Dock = DockStyle.Fill;*/
             panelContenido.Controls.Add(_formActivo);
             _formActivo.Show();
         }

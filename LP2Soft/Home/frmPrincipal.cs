@@ -10,23 +10,27 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Home
 {
-    public partial class frmLoginSingin : Form
+    public partial class frmPrincipal : Form
     {
-        private static Form _formActivo = null;
-
-        public frmLoginSingin(frmPrincipal formPrincipal)
+        private Form _formActivo = null;
+        private Panel _panelPrincipal;
+        public frmPrincipal()
         {
             InitializeComponent();
-            abrirFormulario(new frmLogIn(panelContenido, formPrincipal));
+            abrirFormulario(new frmLoginSingin(this));
+            _panelPrincipal = panelPrincipal;
         }
+
+        public Panel PanelPrincipal { get => _panelPrincipal; set => _panelPrincipal = value; }
+
         public void abrirFormulario(Form formulario)
         {
             if (_formActivo != null) _formActivo.Close();
             _formActivo = formulario;
             _formActivo.TopLevel = false;
             _formActivo.FormBorderStyle = FormBorderStyle.None;
-            _formActivo.Dock = DockStyle.Fill;
-            panelContenido.Controls.Add(_formActivo);
+            /*_formActivo.Dock = DockStyle.Fill;*/
+            panelPrincipal.Controls.Add(_formActivo);
             _formActivo.Show();
         }
     }
