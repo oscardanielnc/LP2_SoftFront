@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Soft.Home;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,15 @@ namespace LP2Soft.Asesor
 {
     public partial class frmBuscarAsesor : Form
     {
-        private Panel _panelPadre;
+        private frmHome _formHome;
         public frmBuscarAsesor()
         {
             InitializeComponent();
         }
-        public frmBuscarAsesor(Panel panel)
+        public frmBuscarAsesor(frmHome formHome)
         {
             InitializeComponent();
-            _panelPadre = panel;
+            _formHome = formHome;
         }
 
         private void lblFiltros_Click(object sender, EventArgs e)
@@ -31,11 +32,7 @@ namespace LP2Soft.Asesor
 
         private void btnPostular_Click(object sender, EventArgs e)
         {
-            _panelPadre.Controls.Clear();
-            frmAsesorPostular frmPostular = new frmAsesorPostular(_panelPadre);
-            frmPostular.TopLevel = false;
-            _panelPadre.Controls.Add(frmPostular);
-            frmPostular.Show();
+            _formHome.abrirFormulario(new frmAsesorPostular(_formHome));
         }
     }
 }

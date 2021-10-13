@@ -64,6 +64,7 @@ namespace LP2Soft.Home
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -123,6 +124,7 @@ namespace LP2Soft.Home
             // 
             // btnNuevoUsuario
             // 
+            this.btnNuevoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoUsuario.Image = global::LP2Soft.Properties.Resources.customers_icon_3;
             this.btnNuevoUsuario.Location = new System.Drawing.Point(161, 291);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";

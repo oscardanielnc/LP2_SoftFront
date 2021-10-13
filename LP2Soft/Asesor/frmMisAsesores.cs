@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2Soft.Notificaciones
+namespace LP2Soft.Asesor
 {
-    public partial class Notificaciones : Form
+    public partial class frmMisAsesores : Form
     {
-        public Notificaciones()
+        public frmMisAsesores()
         {
             InitializeComponent();
         }
