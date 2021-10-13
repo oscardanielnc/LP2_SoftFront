@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2Soft.Cursos.Calificación
+namespace LP2Soft.Cursos
 {
-    public partial class Calificacion : Form
+    public partial class frmHomeFavoritos : Form
     {
-        public Calificacion()
+        public frmHomeFavoritos()
         {
             InitializeComponent();
         }
-
-        
     }
 }

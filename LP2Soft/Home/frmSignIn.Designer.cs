@@ -72,6 +72,7 @@ namespace LP2Soft.Home
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -211,6 +212,7 @@ namespace LP2Soft.Home
             // linkLblRegresarLogIn
             // 
             this.linkLblRegresarLogIn.AutoSize = true;
+            this.linkLblRegresarLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLblRegresarLogIn.Location = new System.Drawing.Point(242, 390);
             this.linkLblRegresarLogIn.Name = "linkLblRegresarLogIn";
             this.linkLblRegresarLogIn.Size = new System.Drawing.Size(91, 13);

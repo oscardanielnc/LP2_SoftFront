@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblLP2Descripcion.Text" xml:space="preserve">
-    <value>*Código:* INF250
-*Créditos:* 5.00
-*Carrera: * Ingeniería informática
-* Descripción:* Conceptos generales. Ciclo de desarrollo de sistemas. Obtención de requisitos. Análisis de un sistema de información
-  Diseño de un sistema de información con UML: arquitectura de software, patrones arquitectónicos, diseño detallado.
+    <value>Código: INF282
+Créditos: 5.00
+Carrera:  Ingeniería informática
+Descripción: Conceptos generales. Ciclo de desarrollo de sistemas. Obtención de requisitos. Análisis de un sistema de información
+Diseño de un sistema de información con UML: arquitectura de software, patrones arquitectónicos, diseño detallado.
 
-*Créditos requeridos:* -
-*Cursos requeridos:*
-* Sistemas de información 1 (obligatorio)
-*Lenguaje de programación 1 (obligatorio)</value>
+Créditos requeridos: -
+Cursos requeridos:
+ Sistemas de información 1 (obligatorio)
+Lenguaje de programación 1 (obligatorio)</value>
   </data>
 </root>

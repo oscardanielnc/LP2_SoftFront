@@ -16,5 +16,11 @@ namespace LP2Soft.Perfil
         {
             InitializeComponent();
         }
+
+        private void btnNuevaResenia_Click(object sender, EventArgs e)
+        {
+            frmCrearResenia formCrearResenia = new frmCrearResenia();
+            formCrearResenia.ShowDialog();
+        }
     }
 }

@@ -29,7 +29,6 @@ namespace LP2Soft.Asesor
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelBackground = new System.Windows.Forms.Panel();
             this.lblPostularCurso = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblAddDatos = new System.Windows.Forms.Label();
@@ -54,20 +53,10 @@ namespace LP2Soft.Asesor
             this.cboHoraFin = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.panelBackground.SuspendLayout();
+            this.panelBackground = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            this.panelBackground.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelBackground
-            // 
-            this.panelBackground.AutoScrollMargin = new System.Drawing.Size(0, 15);
-            this.panelBackground.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelBackground.Controls.Add(this.panel2);
-            this.panelBackground.Controls.Add(this.lblPostularCurso);
-            this.panelBackground.Location = new System.Drawing.Point(12, 12);
-            this.panelBackground.Name = "panelBackground";
-            this.panelBackground.Size = new System.Drawing.Size(783, 429);
-            this.panelBackground.TabIndex = 0;
             // 
             // lblPostularCurso
             // 
@@ -109,7 +98,7 @@ namespace LP2Soft.Asesor
             this.panel2.Controls.Add(this.lblAddDatos);
             this.panel2.Location = new System.Drawing.Point(10, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(762, 373);
+            this.panel2.Size = new System.Drawing.Size(774, 405);
             this.panel2.TabIndex = 4;
             // 
             // lblAddDatos
@@ -329,33 +318,39 @@ namespace LP2Soft.Asesor
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // panelBackground
+            // 
+            this.panelBackground.AutoScrollMargin = new System.Drawing.Size(0, 15);
+            this.panelBackground.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelBackground.Controls.Add(this.panel2);
+            this.panelBackground.Controls.Add(this.lblPostularCurso);
+            this.panelBackground.Location = new System.Drawing.Point(12, 12);
+            this.panelBackground.Name = "panelBackground";
+            this.panelBackground.Size = new System.Drawing.Size(799, 468);
+            this.panelBackground.TabIndex = 0;
+            // 
             // frmAsesorPostular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(807, 453);
+            this.ClientSize = new System.Drawing.Size(823, 492);
             this.Controls.Add(this.panelBackground);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAsesorPostular";
             this.Text = "frmAsesorPostular";
-            this.panelBackground.ResumeLayout(false);
-            this.panelBackground.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelBackground.ResumeLayout(false);
+            this.panelBackground.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelBackground;
         private System.Windows.Forms.Label lblPostularCurso;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cboEspecialidad;
-        private System.Windows.Forms.Label lblSelectCiclo;
-        private System.Windows.Forms.Label lblSelectCurso;
-        private System.Windows.Forms.Label lblSelectEspecialidad;
-        private System.Windows.Forms.Label lblAddDatos;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cboHoraFin;
@@ -373,5 +368,11 @@ namespace LP2Soft.Asesor
         private System.Windows.Forms.Label lblInfoAsesoría;
         private System.Windows.Forms.ComboBox cboCurso;
         private System.Windows.Forms.ComboBox cboCiclo;
+        private System.Windows.Forms.ComboBox cboEspecialidad;
+        private System.Windows.Forms.Label lblSelectCiclo;
+        private System.Windows.Forms.Label lblSelectCurso;
+        private System.Windows.Forms.Label lblSelectEspecialidad;
+        private System.Windows.Forms.Label lblAddDatos;
+        private System.Windows.Forms.Panel panelBackground;
     }
 }

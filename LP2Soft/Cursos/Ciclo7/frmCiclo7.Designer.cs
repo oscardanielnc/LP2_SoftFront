@@ -35,15 +35,13 @@ namespace LP2Soft.Cursos.Ciclo7
             this.btnCiclo7LP2 = new System.Windows.Forms.Button();
             this.btnCiclo7Sis2 = new System.Windows.Forms.Button();
             this.panelCiclo7 = new System.Windows.Forms.Panel();
-            this.btnCiclo7Sis2Descargar = new System.Windows.Forms.Button();
-            this.btnCiclo7LP2AgregarFavorito = new System.Windows.Forms.Button();
-            this.btnCiclo7Sis2Compartir = new System.Windows.Forms.Button();
-            this.btnCiclo7LP2Compartir = new System.Windows.Forms.Button();
-            this.btnCiclo7Sis2AgregarFavorito = new System.Windows.Forms.Button();
-            this.btnCiclo7LP2Descargar = new System.Windows.Forms.Button();
             this.pictureCiclo7Referencia1 = new System.Windows.Forms.PictureBox();
+            this.pBCiclo7LP2Descargar = new System.Windows.Forms.PictureBox();
+            this.pBCiclo7Sis2Descargar = new System.Windows.Forms.PictureBox();
             this.panelCiclo7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCiclo7Referencia1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCiclo7LP2Descargar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCiclo7Sis2Descargar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCiclo7Material
@@ -79,7 +77,7 @@ namespace LP2Soft.Cursos.Ciclo7
             // 
             this.btnCiclo7LP2.Location = new System.Drawing.Point(0, 0);
             this.btnCiclo7LP2.Name = "btnCiclo7LP2";
-            this.btnCiclo7LP2.Size = new System.Drawing.Size(740, 34);
+            this.btnCiclo7LP2.Size = new System.Drawing.Size(783, 34);
             this.btnCiclo7LP2.TabIndex = 8;
             this.btnCiclo7LP2.Text = "       Lenguaje de Programación 2";
             this.btnCiclo7LP2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -90,7 +88,7 @@ namespace LP2Soft.Cursos.Ciclo7
             // 
             this.btnCiclo7Sis2.Location = new System.Drawing.Point(0, 40);
             this.btnCiclo7Sis2.Name = "btnCiclo7Sis2";
-            this.btnCiclo7Sis2.Size = new System.Drawing.Size(740, 34);
+            this.btnCiclo7Sis2.Size = new System.Drawing.Size(783, 34);
             this.btnCiclo7Sis2.TabIndex = 12;
             this.btnCiclo7Sis2.Text = "       Sistemas de Información 2";
             this.btnCiclo7Sis2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,72 +96,14 @@ namespace LP2Soft.Cursos.Ciclo7
             // 
             // panelCiclo7
             // 
-            this.panelCiclo7.Controls.Add(this.btnCiclo7Sis2Descargar);
-            this.panelCiclo7.Controls.Add(this.btnCiclo7LP2AgregarFavorito);
-            this.panelCiclo7.Controls.Add(this.btnCiclo7Sis2Compartir);
-            this.panelCiclo7.Controls.Add(this.btnCiclo7LP2Compartir);
-            this.panelCiclo7.Controls.Add(this.btnCiclo7Sis2AgregarFavorito);
-            this.panelCiclo7.Controls.Add(this.btnCiclo7LP2Descargar);
+            this.panelCiclo7.Controls.Add(this.pBCiclo7Sis2Descargar);
+            this.panelCiclo7.Controls.Add(this.pBCiclo7LP2Descargar);
             this.panelCiclo7.Controls.Add(this.btnCiclo7Sis2);
             this.panelCiclo7.Controls.Add(this.btnCiclo7LP2);
             this.panelCiclo7.Location = new System.Drawing.Point(12, 85);
             this.panelCiclo7.Name = "panelCiclo7";
-            this.panelCiclo7.Size = new System.Drawing.Size(740, 159);
+            this.panelCiclo7.Size = new System.Drawing.Size(783, 231);
             this.panelCiclo7.TabIndex = 16;
-            // 
-            // btnCiclo7Sis2Descargar
-            // 
-            this.btnCiclo7Sis2Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnCiclo7Sis2Descargar.Location = new System.Drawing.Point(668, 40);
-            this.btnCiclo7Sis2Descargar.Name = "btnCiclo7Sis2Descargar";
-            this.btnCiclo7Sis2Descargar.Size = new System.Drawing.Size(33, 34);
-            this.btnCiclo7Sis2Descargar.TabIndex = 15;
-            this.btnCiclo7Sis2Descargar.UseVisualStyleBackColor = true;
-            // 
-            // btnCiclo7LP2AgregarFavorito
-            // 
-            this.btnCiclo7LP2AgregarFavorito.Image = global::LP2Soft.Properties.Resources.plus_circle_regular_24;
-            this.btnCiclo7LP2AgregarFavorito.Location = new System.Drawing.Point(629, 0);
-            this.btnCiclo7LP2AgregarFavorito.Name = "btnCiclo7LP2AgregarFavorito";
-            this.btnCiclo7LP2AgregarFavorito.Size = new System.Drawing.Size(33, 34);
-            this.btnCiclo7LP2AgregarFavorito.TabIndex = 10;
-            this.btnCiclo7LP2AgregarFavorito.UseVisualStyleBackColor = true;
-            // 
-            // btnCiclo7Sis2Compartir
-            // 
-            this.btnCiclo7Sis2Compartir.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnCiclo7Sis2Compartir.Location = new System.Drawing.Point(707, 40);
-            this.btnCiclo7Sis2Compartir.Name = "btnCiclo7Sis2Compartir";
-            this.btnCiclo7Sis2Compartir.Size = new System.Drawing.Size(33, 34);
-            this.btnCiclo7Sis2Compartir.TabIndex = 13;
-            this.btnCiclo7Sis2Compartir.UseVisualStyleBackColor = true;
-            // 
-            // btnCiclo7LP2Compartir
-            // 
-            this.btnCiclo7LP2Compartir.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.btnCiclo7LP2Compartir.Location = new System.Drawing.Point(707, 0);
-            this.btnCiclo7LP2Compartir.Name = "btnCiclo7LP2Compartir";
-            this.btnCiclo7LP2Compartir.Size = new System.Drawing.Size(33, 34);
-            this.btnCiclo7LP2Compartir.TabIndex = 9;
-            this.btnCiclo7LP2Compartir.UseVisualStyleBackColor = true;
-            // 
-            // btnCiclo7Sis2AgregarFavorito
-            // 
-            this.btnCiclo7Sis2AgregarFavorito.Image = global::LP2Soft.Properties.Resources.plus_circle_regular_24;
-            this.btnCiclo7Sis2AgregarFavorito.Location = new System.Drawing.Point(629, 40);
-            this.btnCiclo7Sis2AgregarFavorito.Name = "btnCiclo7Sis2AgregarFavorito";
-            this.btnCiclo7Sis2AgregarFavorito.Size = new System.Drawing.Size(33, 34);
-            this.btnCiclo7Sis2AgregarFavorito.TabIndex = 14;
-            this.btnCiclo7Sis2AgregarFavorito.UseVisualStyleBackColor = true;
-            // 
-            // btnCiclo7LP2Descargar
-            // 
-            this.btnCiclo7LP2Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.btnCiclo7LP2Descargar.Location = new System.Drawing.Point(668, 0);
-            this.btnCiclo7LP2Descargar.Name = "btnCiclo7LP2Descargar";
-            this.btnCiclo7LP2Descargar.Size = new System.Drawing.Size(33, 34);
-            this.btnCiclo7LP2Descargar.TabIndex = 11;
-            this.btnCiclo7LP2Descargar.UseVisualStyleBackColor = true;
             // 
             // pictureCiclo7Referencia1
             // 
@@ -175,11 +115,33 @@ namespace LP2Soft.Cursos.Ciclo7
             this.pictureCiclo7Referencia1.TabIndex = 6;
             this.pictureCiclo7Referencia1.TabStop = false;
             // 
+            // pBCiclo7LP2Descargar
+            // 
+            this.pBCiclo7LP2Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBCiclo7LP2Descargar.Location = new System.Drawing.Point(756, 5);
+            this.pBCiclo7LP2Descargar.Name = "pBCiclo7LP2Descargar";
+            this.pBCiclo7LP2Descargar.Size = new System.Drawing.Size(24, 24);
+            this.pBCiclo7LP2Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBCiclo7LP2Descargar.TabIndex = 17;
+            this.pBCiclo7LP2Descargar.TabStop = false;
+            this.pBCiclo7LP2Descargar.Click += new System.EventHandler(this.pBCiclo7LP2Descargar_Click);
+            // 
+            // pBCiclo7Sis2Descargar
+            // 
+            this.pBCiclo7Sis2Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
+            this.pBCiclo7Sis2Descargar.Location = new System.Drawing.Point(756, 45);
+            this.pBCiclo7Sis2Descargar.Name = "pBCiclo7Sis2Descargar";
+            this.pBCiclo7Sis2Descargar.Size = new System.Drawing.Size(24, 24);
+            this.pBCiclo7Sis2Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pBCiclo7Sis2Descargar.TabIndex = 18;
+            this.pBCiclo7Sis2Descargar.TabStop = false;
+            this.pBCiclo7Sis2Descargar.Click += new System.EventHandler(this.pBCiclo7Sis2Descargar_Click);
+            // 
             // frmCiclo7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(807, 453);
             this.Controls.Add(this.panelCiclo7);
             this.Controls.Add(this.btnCiclo7);
             this.Controls.Add(this.pictureCiclo7Referencia1);
@@ -188,7 +150,10 @@ namespace LP2Soft.Cursos.Ciclo7
             this.Name = "frmCiclo7";
             this.Text = " frmCiclo7";
             this.panelCiclo7.ResumeLayout(false);
+            this.panelCiclo7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCiclo7Referencia1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCiclo7LP2Descargar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCiclo7Sis2Descargar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,12 +167,8 @@ namespace LP2Soft.Cursos.Ciclo7
         private System.Windows.Forms.Button btnCiclo7;
         private System.Windows.Forms.Button btnCiclo7LP2;
         private System.Windows.Forms.Button btnCiclo7Sis2;
-        private System.Windows.Forms.Button btnCiclo7LP2Descargar;
-        private System.Windows.Forms.Button btnCiclo7Sis2AgregarFavorito;
-        private System.Windows.Forms.Button btnCiclo7LP2Compartir;
-        private System.Windows.Forms.Button btnCiclo7Sis2Compartir;
-        private System.Windows.Forms.Button btnCiclo7LP2AgregarFavorito;
-        private System.Windows.Forms.Button btnCiclo7Sis2Descargar;
         private System.Windows.Forms.Panel panelCiclo7;
+        private System.Windows.Forms.PictureBox pBCiclo7Sis2Descargar;
+        private System.Windows.Forms.PictureBox pBCiclo7LP2Descargar;
     }
 }

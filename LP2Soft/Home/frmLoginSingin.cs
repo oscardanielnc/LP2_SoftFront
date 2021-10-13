@@ -13,10 +13,11 @@ namespace LP2Soft.Home
     public partial class frmLoginSingin : Form
     {
         private static Form _formActivo = null;
-        public frmLoginSingin()
+
+        public frmLoginSingin(frmPrincipal formPrincipal)
         {
             InitializeComponent();
-            abrirFormulario(new frmLogIn(panelContenido));
+            abrirFormulario(new frmLogIn(panelContenido, formPrincipal));
         }
         public void abrirFormulario(Form formulario)
         {

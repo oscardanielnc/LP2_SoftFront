@@ -93,6 +93,7 @@ namespace LP2Soft.Perfil
             this.btnResenias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnResenias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResenias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResenias.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnResenias.Location = new System.Drawing.Point(560, 0);
             this.btnResenias.Name = "btnResenias";
             this.btnResenias.Size = new System.Drawing.Size(140, 31);
@@ -107,6 +108,7 @@ namespace LP2Soft.Perfil
             this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCursos.Location = new System.Drawing.Point(420, 0);
             this.btnCursos.Name = "btnCursos";
             this.btnCursos.Size = new System.Drawing.Size(140, 31);
@@ -121,6 +123,7 @@ namespace LP2Soft.Perfil
             this.btnAmigos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnAmigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAmigos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAmigos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAmigos.Location = new System.Drawing.Point(280, 0);
             this.btnAmigos.Name = "btnAmigos";
             this.btnAmigos.Size = new System.Drawing.Size(140, 31);
@@ -135,6 +138,7 @@ namespace LP2Soft.Perfil
             this.btnPublicaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnPublicaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPublicaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPublicaciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPublicaciones.Location = new System.Drawing.Point(140, 0);
             this.btnPublicaciones.Name = "btnPublicaciones";
             this.btnPublicaciones.Size = new System.Drawing.Size(140, 31);
@@ -149,6 +153,7 @@ namespace LP2Soft.Perfil
             this.btnInformacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnInformacion.Location = new System.Drawing.Point(0, 0);
             this.btnInformacion.Name = "btnInformacion";
             this.btnInformacion.Size = new System.Drawing.Size(140, 31);

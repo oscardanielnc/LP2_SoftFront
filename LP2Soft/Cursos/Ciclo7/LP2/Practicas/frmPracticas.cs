@@ -41,5 +41,27 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             frmPractica2 practica2 = new frmPractica2();
             practica2.ShowDialog();
         }
+
+        private void pBLP2Practica1Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica2Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica3Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica4Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace LP2Soft.Cursos.Calificación
 {
-    partial class Calificacion
+    partial class frmCalificacion
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@ namespace LP2Soft.Cursos.Calificación
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calificacion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCalificacion));
             this.lblCalificación = new System.Windows.Forms.Label();
             this.imgCalificacion = new System.Windows.Forms.ImageList(this.components);
-            this.lblEstrellas = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblEstrella1 = new System.Windows.Forms.Label();
+            this.lblEstrella2 = new System.Windows.Forms.Label();
+            this.lblEstrella3 = new System.Windows.Forms.Label();
+            this.lblEstrella4 = new System.Windows.Forms.Label();
+            this.lblEstrella5 = new System.Windows.Forms.Label();
             this.btnCalificacionAceptar = new System.Windows.Forms.Button();
             this.btnCalificacioCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -59,50 +59,55 @@ namespace LP2Soft.Cursos.Calificación
             this.imgCalificacion.Images.SetKeyName(0, "star-empty.png");
             this.imgCalificacion.Images.SetKeyName(1, "star-full.png");
             // 
-            // lblEstrellas
+            // lblEstrella1
             // 
-            this.lblEstrellas.ImageIndex = 0;
-            this.lblEstrellas.ImageList = this.imgCalificacion;
-            this.lblEstrellas.Location = new System.Drawing.Point(183, 92);
-            this.lblEstrellas.Name = "lblEstrellas";
-            this.lblEstrellas.Size = new System.Drawing.Size(36, 36);
-            this.lblEstrellas.TabIndex = 1;
+            this.lblEstrella1.ImageIndex = 0;
+            this.lblEstrella1.ImageList = this.imgCalificacion;
+            this.lblEstrella1.Location = new System.Drawing.Point(183, 92);
+            this.lblEstrella1.Name = "lblEstrella1";
+            this.lblEstrella1.Size = new System.Drawing.Size(36, 36);
+            this.lblEstrella1.TabIndex = 1;
+            this.lblEstrella1.Click += new System.EventHandler(this.lblEstrellas_Click);
             // 
-            // label2
+            // lblEstrella2
             // 
-            this.label2.ImageIndex = 0;
-            this.label2.ImageList = this.imgCalificacion;
-            this.label2.Location = new System.Drawing.Point(225, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 36);
-            this.label2.TabIndex = 2;
+            this.lblEstrella2.ImageIndex = 0;
+            this.lblEstrella2.ImageList = this.imgCalificacion;
+            this.lblEstrella2.Location = new System.Drawing.Point(225, 92);
+            this.lblEstrella2.Name = "lblEstrella2";
+            this.lblEstrella2.Size = new System.Drawing.Size(36, 36);
+            this.lblEstrella2.TabIndex = 2;
+            this.lblEstrella2.Click += new System.EventHandler(this.lblEstrella2_Click);
             // 
-            // label3
+            // lblEstrella3
             // 
-            this.label3.ImageIndex = 0;
-            this.label3.ImageList = this.imgCalificacion;
-            this.label3.Location = new System.Drawing.Point(267, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 36);
-            this.label3.TabIndex = 3;
+            this.lblEstrella3.ImageIndex = 0;
+            this.lblEstrella3.ImageList = this.imgCalificacion;
+            this.lblEstrella3.Location = new System.Drawing.Point(267, 92);
+            this.lblEstrella3.Name = "lblEstrella3";
+            this.lblEstrella3.Size = new System.Drawing.Size(36, 36);
+            this.lblEstrella3.TabIndex = 3;
+            this.lblEstrella3.Click += new System.EventHandler(this.lblEstrella3_Click);
             // 
-            // label4
+            // lblEstrella4
             // 
-            this.label4.ImageIndex = 0;
-            this.label4.ImageList = this.imgCalificacion;
-            this.label4.Location = new System.Drawing.Point(309, 92);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 36);
-            this.label4.TabIndex = 4;
+            this.lblEstrella4.ImageIndex = 0;
+            this.lblEstrella4.ImageList = this.imgCalificacion;
+            this.lblEstrella4.Location = new System.Drawing.Point(309, 92);
+            this.lblEstrella4.Name = "lblEstrella4";
+            this.lblEstrella4.Size = new System.Drawing.Size(36, 36);
+            this.lblEstrella4.TabIndex = 4;
+            this.lblEstrella4.Click += new System.EventHandler(this.lblEstrella4_Click);
             // 
-            // label5
+            // lblEstrella5
             // 
-            this.label5.ImageIndex = 0;
-            this.label5.ImageList = this.imgCalificacion;
-            this.label5.Location = new System.Drawing.Point(351, 92);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 36);
-            this.label5.TabIndex = 5;
+            this.lblEstrella5.ImageIndex = 0;
+            this.lblEstrella5.ImageList = this.imgCalificacion;
+            this.lblEstrella5.Location = new System.Drawing.Point(351, 92);
+            this.lblEstrella5.Name = "lblEstrella5";
+            this.lblEstrella5.Size = new System.Drawing.Size(36, 36);
+            this.lblEstrella5.TabIndex = 5;
+            this.lblEstrella5.Click += new System.EventHandler(this.lblEstrella5_Click);
             // 
             // btnCalificacionAceptar
             // 
@@ -112,6 +117,7 @@ namespace LP2Soft.Cursos.Calificación
             this.btnCalificacionAceptar.TabIndex = 6;
             this.btnCalificacionAceptar.Text = "Aceptar";
             this.btnCalificacionAceptar.UseVisualStyleBackColor = true;
+            this.btnCalificacionAceptar.Click += new System.EventHandler(this.btnCalificacionAceptar_Click);
             // 
             // btnCalificacioCancelar
             // 
@@ -121,21 +127,22 @@ namespace LP2Soft.Cursos.Calificación
             this.btnCalificacioCancelar.TabIndex = 7;
             this.btnCalificacioCancelar.Text = "Cancelar";
             this.btnCalificacioCancelar.UseVisualStyleBackColor = true;
+            this.btnCalificacioCancelar.Click += new System.EventHandler(this.btnCalificacioCancelar_Click);
             // 
-            // Calificacion
+            // frmCalificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 215);
             this.Controls.Add(this.btnCalificacioCancelar);
             this.Controls.Add(this.btnCalificacionAceptar);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblEstrellas);
+            this.Controls.Add(this.lblEstrella5);
+            this.Controls.Add(this.lblEstrella4);
+            this.Controls.Add(this.lblEstrella3);
+            this.Controls.Add(this.lblEstrella2);
+            this.Controls.Add(this.lblEstrella1);
             this.Controls.Add(this.lblCalificación);
-            this.Name = "Calificacion";
+            this.Name = "frmCalificacion";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -146,11 +153,11 @@ namespace LP2Soft.Cursos.Calificación
 
         private System.Windows.Forms.Label lblCalificación;
         private System.Windows.Forms.ImageList imgCalificacion;
-        private System.Windows.Forms.Label lblEstrellas;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblEstrella1;
+        private System.Windows.Forms.Label lblEstrella2;
+        private System.Windows.Forms.Label lblEstrella3;
+        private System.Windows.Forms.Label lblEstrella4;
+        private System.Windows.Forms.Label lblEstrella5;
         private System.Windows.Forms.Button btnCalificacionAceptar;
         private System.Windows.Forms.Button btnCalificacioCancelar;
     }
