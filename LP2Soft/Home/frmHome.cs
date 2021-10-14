@@ -58,12 +58,27 @@ namespace LP2Soft.Home
             panelContenido.Controls.Add(_formActivo); // para que el contenedor contenga el formulario
             _formActivo.Show(); // ambos formularios deben ser independientes, no se cancelen sus controles
         }
+        private Button obtenerBoton(MenuHome menuSeleccionar)
+        {
+            switch (menuSeleccionar)
+            {
+                case MenuHome.Perfil: return btnPerfil;
+                case MenuHome.CursosFavoritos: return btnCursosFavoritos;
+                case MenuHome.CursosTodos: return btnTodosMisCursos;
+                case MenuHome.VerEventos: return btnVerEventos;
+                case MenuHome.EventosAgendados: return btnEventosAgendados;
+                case MenuHome.MisEventos: return btnMisEventos;
+                case MenuHome.Asesores: return btnAsesores;
+                case MenuHome.Profesores: return btnProfesores;
+                default: return btnNovedades;
+            }
+        }
         public void abrirFormularioHome(Form formulario, MenuHome menuSeleccionar)
         {
             if (_menuSeleccionado != menuSeleccionar)
             {
                 inicializarColorBotones();
-                btnPerfil.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
+                obtenerBoton(menuSeleccionar).BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
                 _menuSeleccionado = menuSeleccionar;
                 abrirFormulario(formulario);
             }
