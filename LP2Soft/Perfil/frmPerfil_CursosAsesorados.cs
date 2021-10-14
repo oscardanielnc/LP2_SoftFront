@@ -21,7 +21,7 @@ namespace LP2Soft.Perfil
 
         private void btnAniadirCurso_Click(object sender, EventArgs e)
         {
-            frmAsesorPostular fromPostular = new frmAsesorPostular();
+            frmPostularAsesor fromPostular = new frmPostularAsesor();
             fromPostular.ShowDialog();
         }
 
