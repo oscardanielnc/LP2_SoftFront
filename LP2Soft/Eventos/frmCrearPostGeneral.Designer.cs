@@ -34,10 +34,7 @@ namespace LP2Soft.Eventos
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnPublicar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.btnSubirImagen = new System.Windows.Forms.Button();
-            this.pbImagenPublicacion = new System.Windows.Forms.PictureBox();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenPublicacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +68,7 @@ namespace LP2Soft.Eventos
             // 
             // btnPublicar
             // 
-            this.btnPublicar.Location = new System.Drawing.Point(311, 404);
+            this.btnPublicar.Location = new System.Drawing.Point(311, 274);
             this.btnPublicar.Name = "btnPublicar";
             this.btnPublicar.Size = new System.Drawing.Size(75, 23);
             this.btnPublicar.TabIndex = 7;
@@ -84,31 +81,9 @@ namespace LP2Soft.Eventos
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(96, 48);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(114, 16);
+            this.lblNombre.Size = new System.Drawing.Size(109, 16);
             this.lblNombre.TabIndex = 8;
-            this.lblNombre.Text = "Antony Romero";
-            // 
-            // btnSubirImagen
-            // 
-            this.btnSubirImagen.BackColor = System.Drawing.Color.Transparent;
-            this.btnSubirImagen.BackgroundImage = global::LP2Soft.Properties.Resources.add__1_;
-            this.btnSubirImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSubirImagen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnSubirImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubirImagen.Location = new System.Drawing.Point(184, 290);
-            this.btnSubirImagen.Name = "btnSubirImagen";
-            this.btnSubirImagen.Size = new System.Drawing.Size(42, 31);
-            this.btnSubirImagen.TabIndex = 6;
-            this.btnSubirImagen.UseVisualStyleBackColor = false;
-            // 
-            // pbImagenPublicacion
-            // 
-            this.pbImagenPublicacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbImagenPublicacion.Location = new System.Drawing.Point(16, 245);
-            this.pbImagenPublicacion.Name = "pbImagenPublicacion";
-            this.pbImagenPublicacion.Size = new System.Drawing.Size(370, 135);
-            this.pbImagenPublicacion.TabIndex = 5;
-            this.pbImagenPublicacion.TabStop = false;
+            this.lblNombre.Text = "Oscar Navarro";
             // 
             // pbPerfil
             // 
@@ -124,18 +99,15 @@ namespace LP2Soft.Eventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 448);
+            this.ClientSize = new System.Drawing.Size(398, 308);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnPublicar);
-            this.Controls.Add(this.btnSubirImagen);
-            this.Controls.Add(this.pbImagenPublicacion);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lbQueEstasPensando);
             this.Controls.Add(this.pbPerfil);
             this.Controls.Add(this.lbCrearPublicacion);
             this.Name = "frmCrearPostGeneral";
             this.Text = "frmCrearPublicacion";
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenPublicacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,9 +120,7 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.Label lbQueEstasPensando;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pbImagenPublicacion;
         private System.Windows.Forms.Button btnPublicar;
-        private System.Windows.Forms.Button btnSubirImagen;
         private System.Windows.Forms.Label lblNombre;
     }
 }
