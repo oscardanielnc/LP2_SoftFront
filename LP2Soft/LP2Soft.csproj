@@ -295,6 +295,12 @@
     <Compile Include="Profesor\frmProfesor_Perfil.Designer.cs">
       <DependentUpon>frmProfesor_Perfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\frmProfesor_Perfil_Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmProfesor_Perfil_Cursos.Designer.cs">
+      <DependentUpon>frmProfesor_Perfil_Cursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profesor\frmProfesor_Perfil_Informacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -425,6 +431,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Profesor\frmProfesor_Perfil.resx">
       <DependentUpon>frmProfesor_Perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmProfesor_Perfil_Cursos.resx">
+      <DependentUpon>frmProfesor_Perfil_Cursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profesor\frmProfesor_Perfil_Informacion.resx">
       <DependentUpon>frmProfesor_Perfil_Informacion.cs</DependentUpon>
@@ -617,8 +626,6 @@
   <ItemGroup>
     <None Include="Resources\pp.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="No Tocar\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
