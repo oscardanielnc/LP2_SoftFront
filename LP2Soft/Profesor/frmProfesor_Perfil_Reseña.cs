@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Profesor
 {
-    public partial class frmProfesor_Perfil_Cursos : Form
+    public partial class frmProfesor_Perfil_Reseña : Form
     {
-        public frmProfesor_Perfil_Cursos()
+        public frmProfesor_Perfil_Reseña()
         {
             InitializeComponent();
         }
 
-        private void btnLP3_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

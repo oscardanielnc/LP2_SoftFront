@@ -74,6 +74,7 @@ namespace LP2Soft.Profesor
             this.btnResenias.TabIndex = 4;
             this.btnResenias.Text = "Reseñas";
             this.btnResenias.UseVisualStyleBackColor = true;
+            this.btnResenias.Click += new System.EventHandler(this.btnResenias_Click);
             // 
             // btnCursos
             // 
@@ -85,8 +86,9 @@ namespace LP2Soft.Profesor
             this.btnCursos.Name = "btnCursos";
             this.btnCursos.Size = new System.Drawing.Size(230, 31);
             this.btnCursos.TabIndex = 3;
-            this.btnCursos.Text = "Cursos Asesorados";
+            this.btnCursos.Text = "Cursos ";
             this.btnCursos.UseVisualStyleBackColor = true;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
             // 
             // btnInformacion
             // 
@@ -100,6 +102,7 @@ namespace LP2Soft.Profesor
             this.btnInformacion.TabIndex = 0;
             this.btnInformacion.Text = "Información";
             this.btnInformacion.UseVisualStyleBackColor = true;
+            this.btnInformacion.Click += new System.EventHandler(this.btnInformacion_Click);
             // 
             // lblTituloNombre
             // 

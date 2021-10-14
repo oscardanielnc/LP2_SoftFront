@@ -133,6 +133,7 @@
     </Compile>
     <Compile Include="Enumerados\MenuHome.cs" />
     <Compile Include="Enumerados\MenuPerfil.cs" />
+    <Compile Include="Enumerados\MenuProfesor.cs" />
     <Compile Include="Eventos\frmCrearComentario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +326,12 @@
     <Compile Include="Profesor\frmProfesor_Perfil_Informacion.Designer.cs">
       <DependentUpon>frmProfesor_Perfil_Informacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\frmProfesor_Perfil_Reseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmProfesor_Perfil_Reseña.Designer.cs">
+      <DependentUpon>frmProfesor_Perfil_Reseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
@@ -464,6 +471,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Profesor\frmProfesor_Perfil_Informacion.resx">
       <DependentUpon>frmProfesor_Perfil_Informacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmProfesor_Perfil_Reseña.resx">
+      <DependentUpon>frmProfesor_Perfil_Reseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
