@@ -37,6 +37,7 @@ namespace LP2Soft.Home
             btnNovedades.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnPerfil.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnTodosMisCursos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+            btnCursosFavoritos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnVerEventos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnEventosAgendados.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             btnMisEventos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);

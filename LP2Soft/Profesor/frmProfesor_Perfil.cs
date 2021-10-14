@@ -18,6 +18,8 @@ namespace LP2Soft.Profesor
         public frmProfesor_Perfil()
         {
             InitializeComponent();
+            btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+            _menuSeleccionado = MenuProfesor.Informacion;
             abrirFormulario(new frmProfesor_Perfil_Informacion());
         }
         public void abrirFormulario(Form formulario)
@@ -66,7 +68,7 @@ namespace LP2Soft.Profesor
             if (_menuSeleccionado != MenuProfesor.Resenias)
             {
                 inicializarColorBotones();
-                btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+                btnResenias.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuProfesor.Resenias;
                 abrirFormulario(new frmProfesor_Perfil_Reseña());
             }
