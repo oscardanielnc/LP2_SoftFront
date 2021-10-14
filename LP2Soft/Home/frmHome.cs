@@ -101,6 +101,8 @@ namespace LP2Soft.Home
 
         public void btnTodosMisCursos_Click(object sender, EventArgs e) => 
             abrirFormularioHome(new frmCursosHome(), MenuHome.CursosTodos);
+        private void btnCursosFavoritos_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmHomeFavoritos(), MenuHome.CursosFavoritos);
 
         public void btnMensajes_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmMensajes(this), MenuHome.Mensajes);
@@ -112,21 +114,14 @@ namespace LP2Soft.Home
             else subPanelEventos.Visible = false;
         }
 
-        public void btnVerEventos_Click(object sender, EventArgs e)
-        {
-            /*            if (_menuSeleccionado != MenuHome.VerEventos)
-                        {
-                            inicializarColorBotones();
-                            btnVerEventos.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-                            _menuSeleccionado = MenuHome.VerEventos;
-                            abrirFormulario(new frmEventosAgendados());
-                        }*/
-            /*abrirFormularioHome(new frmEventosAgendados(), MenuHome.VerEventos);*/
-        }
+        public void btnVerEventos_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmVerEventos(), MenuHome.VerEventos);
 
         public void btnEventosAgendados_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmEventosAgendados(), MenuHome.EventosAgendados);
 
+        private void btnMisEventos_Click(object sender, EventArgs e) =>
+            abrirFormularioHome(new frmMisPublicaciones(), MenuHome.MisEventos);
         public void btnAsesores_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmBuscarAsesor(this), MenuHome.Asesores);
 
@@ -138,5 +133,6 @@ namespace LP2Soft.Home
 
         public void btnNotificaciones_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmNotificaciones(), MenuHome.Notificaciones);
+
     }
 }
