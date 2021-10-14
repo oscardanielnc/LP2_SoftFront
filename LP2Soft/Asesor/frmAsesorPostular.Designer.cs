@@ -31,28 +31,28 @@ namespace LP2Soft.Asesor
         {
             this.lblPostularCurso = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblAddDatos = new System.Windows.Forms.Label();
-            this.lblSelectEspecialidad = new System.Windows.Forms.Label();
-            this.lblSelectCurso = new System.Windows.Forms.Label();
-            this.lblSelectCiclo = new System.Windows.Forms.Label();
-            this.cboEspecialidad = new System.Windows.Forms.ComboBox();
-            this.cboCiclo = new System.Windows.Forms.ComboBox();
-            this.cboCurso = new System.Windows.Forms.ComboBox();
-            this.lblInfoAsesoría = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblSol = new System.Windows.Forms.Label();
-            this.textBoxPrecio = new System.Windows.Forms.TextBox();
-            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
-            this.lblElegirHorario = new System.Windows.Forms.Label();
-            this.lblElegirDia = new System.Windows.Forms.Label();
-            this.lblHoraIni = new System.Windows.Forms.Label();
-            this.lblHoraFin = new System.Windows.Forms.Label();
-            this.cboDia = new System.Windows.Forms.ComboBox();
-            this.cboHoraIni = new System.Windows.Forms.ComboBox();
-            this.cboHoraFin = new System.Windows.Forms.ComboBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.cboHoraFin = new System.Windows.Forms.ComboBox();
+            this.cboHoraIni = new System.Windows.Forms.ComboBox();
+            this.cboDia = new System.Windows.Forms.ComboBox();
+            this.lblHoraFin = new System.Windows.Forms.Label();
+            this.lblHoraIni = new System.Windows.Forms.Label();
+            this.lblElegirDia = new System.Windows.Forms.Label();
+            this.lblElegirHorario = new System.Windows.Forms.Label();
+            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
+            this.textBoxPrecio = new System.Windows.Forms.TextBox();
+            this.lblSol = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblInfoAsesoría = new System.Windows.Forms.Label();
+            this.cboCurso = new System.Windows.Forms.ComboBox();
+            this.cboCiclo = new System.Windows.Forms.ComboBox();
+            this.cboEspecialidad = new System.Windows.Forms.ComboBox();
+            this.lblSelectCiclo = new System.Windows.Forms.Label();
+            this.lblSelectCurso = new System.Windows.Forms.Label();
+            this.lblSelectEspecialidad = new System.Windows.Forms.Label();
+            this.lblAddDatos = new System.Windows.Forms.Label();
             this.panelBackground = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panelBackground.SuspendLayout();
@@ -101,200 +101,16 @@ namespace LP2Soft.Asesor
             this.panel2.Size = new System.Drawing.Size(774, 405);
             this.panel2.TabIndex = 4;
             // 
-            // lblAddDatos
+            // btnGuardar
             // 
-            this.lblAddDatos.AutoSize = true;
-            this.lblAddDatos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAddDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddDatos.Location = new System.Drawing.Point(12, 11);
-            this.lblAddDatos.Name = "lblAddDatos";
-            this.lblAddDatos.Size = new System.Drawing.Size(276, 29);
-            this.lblAddDatos.TabIndex = 5;
-            this.lblAddDatos.Text = "Información del Curso:";
-            // 
-            // lblSelectEspecialidad
-            // 
-            this.lblSelectEspecialidad.AutoSize = true;
-            this.lblSelectEspecialidad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSelectEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectEspecialidad.Location = new System.Drawing.Point(36, 54);
-            this.lblSelectEspecialidad.Name = "lblSelectEspecialidad";
-            this.lblSelectEspecialidad.Size = new System.Drawing.Size(228, 24);
-            this.lblSelectEspecialidad.TabIndex = 6;
-            this.lblSelectEspecialidad.Text = "Seleccionar Especialidad:";
-            // 
-            // lblSelectCurso
-            // 
-            this.lblSelectCurso.AutoSize = true;
-            this.lblSelectCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSelectCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectCurso.Location = new System.Drawing.Point(36, 236);
-            this.lblSelectCurso.Name = "lblSelectCurso";
-            this.lblSelectCurso.Size = new System.Drawing.Size(170, 24);
-            this.lblSelectCurso.TabIndex = 7;
-            this.lblSelectCurso.Text = "Seleccionar Curso:";
-            // 
-            // lblSelectCiclo
-            // 
-            this.lblSelectCiclo.AutoSize = true;
-            this.lblSelectCiclo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSelectCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectCiclo.Location = new System.Drawing.Point(36, 143);
-            this.lblSelectCiclo.Name = "lblSelectCiclo";
-            this.lblSelectCiclo.Size = new System.Drawing.Size(162, 24);
-            this.lblSelectCiclo.TabIndex = 8;
-            this.lblSelectCiclo.Text = "Seleccionar Ciclo:";
-            // 
-            // cboEspecialidad
-            // 
-            this.cboEspecialidad.FormattingEnabled = true;
-            this.cboEspecialidad.Location = new System.Drawing.Point(40, 94);
-            this.cboEspecialidad.Name = "cboEspecialidad";
-            this.cboEspecialidad.Size = new System.Drawing.Size(224, 21);
-            this.cboEspecialidad.TabIndex = 9;
-            // 
-            // cboCiclo
-            // 
-            this.cboCiclo.FormattingEnabled = true;
-            this.cboCiclo.Location = new System.Drawing.Point(40, 183);
-            this.cboCiclo.Name = "cboCiclo";
-            this.cboCiclo.Size = new System.Drawing.Size(224, 21);
-            this.cboCiclo.TabIndex = 10;
-            // 
-            // cboCurso
-            // 
-            this.cboCurso.FormattingEnabled = true;
-            this.cboCurso.Location = new System.Drawing.Point(40, 276);
-            this.cboCurso.Name = "cboCurso";
-            this.cboCurso.Size = new System.Drawing.Size(224, 21);
-            this.cboCurso.TabIndex = 11;
-            // 
-            // lblInfoAsesoría
-            // 
-            this.lblInfoAsesoría.AutoSize = true;
-            this.lblInfoAsesoría.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblInfoAsesoría.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoAsesoría.Location = new System.Drawing.Point(12, 325);
-            this.lblInfoAsesoría.Name = "lblInfoAsesoría";
-            this.lblInfoAsesoría.Size = new System.Drawing.Size(276, 29);
-            this.lblInfoAsesoría.TabIndex = 12;
-            this.lblInfoAsesoría.Text = "Información del Curso:";
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(36, 418);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(115, 24);
-            this.lblDescripcion.TabIndex = 13;
-            this.lblDescripcion.Text = "Descripción:";
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(36, 368);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(145, 24);
-            this.lblPrecio.TabIndex = 14;
-            this.lblPrecio.Text = "Precio por hora:";
-            // 
-            // lblSol
-            // 
-            this.lblSol.AutoSize = true;
-            this.lblSol.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSol.Location = new System.Drawing.Point(190, 368);
-            this.lblSol.Name = "lblSol";
-            this.lblSol.Size = new System.Drawing.Size(32, 24);
-            this.lblSol.TabIndex = 15;
-            this.lblSol.Text = "S/.";
-            // 
-            // textBoxPrecio
-            // 
-            this.textBoxPrecio.Location = new System.Drawing.Point(222, 371);
-            this.textBoxPrecio.Name = "textBoxPrecio";
-            this.textBoxPrecio.Size = new System.Drawing.Size(42, 20);
-            this.textBoxPrecio.TabIndex = 16;
-            // 
-            // textBoxDescripcion
-            // 
-            this.textBoxDescripcion.Location = new System.Drawing.Point(157, 422);
-            this.textBoxDescripcion.Multiline = true;
-            this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.Size = new System.Drawing.Size(559, 83);
-            this.textBoxDescripcion.TabIndex = 17;
-            // 
-            // lblElegirHorario
-            // 
-            this.lblElegirHorario.AutoSize = true;
-            this.lblElegirHorario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblElegirHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElegirHorario.Location = new System.Drawing.Point(36, 522);
-            this.lblElegirHorario.Name = "lblElegirHorario";
-            this.lblElegirHorario.Size = new System.Drawing.Size(128, 24);
-            this.lblElegirHorario.TabIndex = 18;
-            this.lblElegirHorario.Text = "Elegir horario:";
-            // 
-            // lblElegirDia
-            // 
-            this.lblElegirDia.AutoSize = true;
-            this.lblElegirDia.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblElegirDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElegirDia.Location = new System.Drawing.Point(78, 559);
-            this.lblElegirDia.Name = "lblElegirDia";
-            this.lblElegirDia.Size = new System.Drawing.Size(37, 24);
-            this.lblElegirDia.TabIndex = 19;
-            this.lblElegirDia.Text = "Dia";
-            // 
-            // lblHoraIni
-            // 
-            this.lblHoraIni.AutoSize = true;
-            this.lblHoraIni.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblHoraIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraIni.Location = new System.Drawing.Point(169, 559);
-            this.lblHoraIni.Name = "lblHoraIni";
-            this.lblHoraIni.Size = new System.Drawing.Size(127, 24);
-            this.lblHoraIni.TabIndex = 20;
-            this.lblHoraIni.Text = "Hora de inicio";
-            // 
-            // lblHoraFin
-            // 
-            this.lblHoraFin.AutoSize = true;
-            this.lblHoraFin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblHoraFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraFin.Location = new System.Drawing.Point(353, 559);
-            this.lblHoraFin.Name = "lblHoraFin";
-            this.lblHoraFin.Size = new System.Drawing.Size(102, 24);
-            this.lblHoraFin.TabIndex = 21;
-            this.lblHoraFin.Text = "Hora de fin";
-            // 
-            // cboDia
-            // 
-            this.cboDia.FormattingEnabled = true;
-            this.cboDia.Location = new System.Drawing.Point(66, 586);
-            this.cboDia.Name = "cboDia";
-            this.cboDia.Size = new System.Drawing.Size(61, 21);
-            this.cboDia.TabIndex = 22;
-            // 
-            // cboHoraIni
-            // 
-            this.cboHoraIni.FormattingEnabled = true;
-            this.cboHoraIni.Location = new System.Drawing.Point(173, 586);
-            this.cboHoraIni.Name = "cboHoraIni";
-            this.cboHoraIni.Size = new System.Drawing.Size(112, 21);
-            this.cboHoraIni.TabIndex = 23;
-            // 
-            // cboHoraFin
-            // 
-            this.cboHoraFin.FormattingEnabled = true;
-            this.cboHoraFin.Location = new System.Drawing.Point(348, 586);
-            this.cboHoraFin.Name = "cboHoraFin";
-            this.cboHoraFin.Size = new System.Drawing.Size(112, 21);
-            this.cboHoraFin.TabIndex = 24;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(249, 667);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(103, 35);
+            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -307,16 +123,200 @@ namespace LP2Soft.Asesor
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnGuardar
+            // cboHoraFin
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(249, 667);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(103, 35);
-            this.btnGuardar.TabIndex = 26;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.cboHoraFin.FormattingEnabled = true;
+            this.cboHoraFin.Location = new System.Drawing.Point(348, 586);
+            this.cboHoraFin.Name = "cboHoraFin";
+            this.cboHoraFin.Size = new System.Drawing.Size(112, 21);
+            this.cboHoraFin.TabIndex = 24;
+            // 
+            // cboHoraIni
+            // 
+            this.cboHoraIni.FormattingEnabled = true;
+            this.cboHoraIni.Location = new System.Drawing.Point(173, 586);
+            this.cboHoraIni.Name = "cboHoraIni";
+            this.cboHoraIni.Size = new System.Drawing.Size(112, 21);
+            this.cboHoraIni.TabIndex = 23;
+            // 
+            // cboDia
+            // 
+            this.cboDia.FormattingEnabled = true;
+            this.cboDia.Location = new System.Drawing.Point(66, 586);
+            this.cboDia.Name = "cboDia";
+            this.cboDia.Size = new System.Drawing.Size(61, 21);
+            this.cboDia.TabIndex = 22;
+            // 
+            // lblHoraFin
+            // 
+            this.lblHoraFin.AutoSize = true;
+            this.lblHoraFin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblHoraFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraFin.Location = new System.Drawing.Point(353, 559);
+            this.lblHoraFin.Name = "lblHoraFin";
+            this.lblHoraFin.Size = new System.Drawing.Size(102, 24);
+            this.lblHoraFin.TabIndex = 21;
+            this.lblHoraFin.Text = "Hora de fin";
+            // 
+            // lblHoraIni
+            // 
+            this.lblHoraIni.AutoSize = true;
+            this.lblHoraIni.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblHoraIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraIni.Location = new System.Drawing.Point(169, 559);
+            this.lblHoraIni.Name = "lblHoraIni";
+            this.lblHoraIni.Size = new System.Drawing.Size(127, 24);
+            this.lblHoraIni.TabIndex = 20;
+            this.lblHoraIni.Text = "Hora de inicio";
+            // 
+            // lblElegirDia
+            // 
+            this.lblElegirDia.AutoSize = true;
+            this.lblElegirDia.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblElegirDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElegirDia.Location = new System.Drawing.Point(78, 559);
+            this.lblElegirDia.Name = "lblElegirDia";
+            this.lblElegirDia.Size = new System.Drawing.Size(37, 24);
+            this.lblElegirDia.TabIndex = 19;
+            this.lblElegirDia.Text = "Dia";
+            // 
+            // lblElegirHorario
+            // 
+            this.lblElegirHorario.AutoSize = true;
+            this.lblElegirHorario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblElegirHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElegirHorario.Location = new System.Drawing.Point(36, 522);
+            this.lblElegirHorario.Name = "lblElegirHorario";
+            this.lblElegirHorario.Size = new System.Drawing.Size(128, 24);
+            this.lblElegirHorario.TabIndex = 18;
+            this.lblElegirHorario.Text = "Elegir horario:";
+            // 
+            // textBoxDescripcion
+            // 
+            this.textBoxDescripcion.Location = new System.Drawing.Point(157, 422);
+            this.textBoxDescripcion.Multiline = true;
+            this.textBoxDescripcion.Name = "textBoxDescripcion";
+            this.textBoxDescripcion.Size = new System.Drawing.Size(559, 83);
+            this.textBoxDescripcion.TabIndex = 17;
+            // 
+            // textBoxPrecio
+            // 
+            this.textBoxPrecio.Location = new System.Drawing.Point(222, 371);
+            this.textBoxPrecio.Name = "textBoxPrecio";
+            this.textBoxPrecio.Size = new System.Drawing.Size(42, 20);
+            this.textBoxPrecio.TabIndex = 16;
+            // 
+            // lblSol
+            // 
+            this.lblSol.AutoSize = true;
+            this.lblSol.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSol.Location = new System.Drawing.Point(190, 368);
+            this.lblSol.Name = "lblSol";
+            this.lblSol.Size = new System.Drawing.Size(32, 24);
+            this.lblSol.TabIndex = 15;
+            this.lblSol.Text = "S/.";
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(36, 368);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(145, 24);
+            this.lblPrecio.TabIndex = 14;
+            this.lblPrecio.Text = "Precio por hora:";
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(36, 418);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(115, 24);
+            this.lblDescripcion.TabIndex = 13;
+            this.lblDescripcion.Text = "Descripción:";
+            // 
+            // lblInfoAsesoría
+            // 
+            this.lblInfoAsesoría.AutoSize = true;
+            this.lblInfoAsesoría.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblInfoAsesoría.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoAsesoría.Location = new System.Drawing.Point(12, 325);
+            this.lblInfoAsesoría.Name = "lblInfoAsesoría";
+            this.lblInfoAsesoría.Size = new System.Drawing.Size(276, 29);
+            this.lblInfoAsesoría.TabIndex = 12;
+            this.lblInfoAsesoría.Text = "Información del Curso:";
+            // 
+            // cboCurso
+            // 
+            this.cboCurso.FormattingEnabled = true;
+            this.cboCurso.Location = new System.Drawing.Point(40, 276);
+            this.cboCurso.Name = "cboCurso";
+            this.cboCurso.Size = new System.Drawing.Size(224, 21);
+            this.cboCurso.TabIndex = 11;
+            // 
+            // cboCiclo
+            // 
+            this.cboCiclo.FormattingEnabled = true;
+            this.cboCiclo.Location = new System.Drawing.Point(40, 183);
+            this.cboCiclo.Name = "cboCiclo";
+            this.cboCiclo.Size = new System.Drawing.Size(224, 21);
+            this.cboCiclo.TabIndex = 10;
+            // 
+            // cboEspecialidad
+            // 
+            this.cboEspecialidad.FormattingEnabled = true;
+            this.cboEspecialidad.Location = new System.Drawing.Point(40, 94);
+            this.cboEspecialidad.Name = "cboEspecialidad";
+            this.cboEspecialidad.Size = new System.Drawing.Size(224, 21);
+            this.cboEspecialidad.TabIndex = 9;
+            // 
+            // lblSelectCiclo
+            // 
+            this.lblSelectCiclo.AutoSize = true;
+            this.lblSelectCiclo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSelectCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectCiclo.Location = new System.Drawing.Point(36, 143);
+            this.lblSelectCiclo.Name = "lblSelectCiclo";
+            this.lblSelectCiclo.Size = new System.Drawing.Size(162, 24);
+            this.lblSelectCiclo.TabIndex = 8;
+            this.lblSelectCiclo.Text = "Seleccionar Ciclo:";
+            // 
+            // lblSelectCurso
+            // 
+            this.lblSelectCurso.AutoSize = true;
+            this.lblSelectCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSelectCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectCurso.Location = new System.Drawing.Point(36, 236);
+            this.lblSelectCurso.Name = "lblSelectCurso";
+            this.lblSelectCurso.Size = new System.Drawing.Size(170, 24);
+            this.lblSelectCurso.TabIndex = 7;
+            this.lblSelectCurso.Text = "Seleccionar Curso:";
+            // 
+            // lblSelectEspecialidad
+            // 
+            this.lblSelectEspecialidad.AutoSize = true;
+            this.lblSelectEspecialidad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSelectEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectEspecialidad.Location = new System.Drawing.Point(36, 54);
+            this.lblSelectEspecialidad.Name = "lblSelectEspecialidad";
+            this.lblSelectEspecialidad.Size = new System.Drawing.Size(228, 24);
+            this.lblSelectEspecialidad.TabIndex = 6;
+            this.lblSelectEspecialidad.Text = "Seleccionar Especialidad:";
+            // 
+            // lblAddDatos
+            // 
+            this.lblAddDatos.AutoSize = true;
+            this.lblAddDatos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAddDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddDatos.Location = new System.Drawing.Point(12, 11);
+            this.lblAddDatos.Name = "lblAddDatos";
+            this.lblAddDatos.Size = new System.Drawing.Size(276, 29);
+            this.lblAddDatos.TabIndex = 5;
+            this.lblAddDatos.Text = "Información del Curso:";
             // 
             // panelBackground
             // 
@@ -336,7 +336,6 @@ namespace LP2Soft.Asesor
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(823, 492);
             this.Controls.Add(this.panelBackground);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAsesorPostular";
             this.Text = "frmAsesorPostular";
             this.panel2.ResumeLayout(false);
