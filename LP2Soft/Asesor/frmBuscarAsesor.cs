@@ -32,7 +32,8 @@ namespace LP2Soft.Asesor
 
         private void btnPostular_Click(object sender, EventArgs e)
         {
-            _formHome.abrirFormulario(new frmAsesorPostular(_formHome));
+            frmPostularAsesor formPostular = new frmPostularAsesor();
+            formPostular.ShowDialog();
         }
     }
 }

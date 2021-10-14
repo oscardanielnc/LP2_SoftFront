@@ -53,12 +53,6 @@
     <Compile Include="Asesor\frmAsesorBuscarFiltros.Designer.cs">
       <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Asesor\frmAsesorPostular.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Asesor\frmAsesorPostular.Designer.cs">
-      <DependentUpon>frmAsesorPostular.cs</DependentUpon>
-    </Compile>
     <Compile Include="Asesor\frmBuscarAsesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +64,12 @@
     </Compile>
     <Compile Include="Asesor\frmMisAsesores.Designer.cs">
       <DependentUpon>frmMisAsesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asesor\frmPostularAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmPostularAsesor.Designer.cs">
+      <DependentUpon>frmPostularAsesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.cs">
       <SubType>Form</SubType>
@@ -324,14 +324,14 @@
     <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
       <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Asesor\frmAsesorPostular.resx">
-      <DependentUpon>frmAsesorPostular.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmMisAsesores.resx">
       <DependentUpon>frmMisAsesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asesor\frmPostularAsesor.resx">
+      <DependentUpon>frmPostularAsesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmAgregarMaterial.resx">
       <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
