@@ -19,8 +19,8 @@ namespace LP2Soft.Eventos
 
         private void btnFiltros_Click(object sender, EventArgs e)
         {
-            frmCrearEvento frmCrearEvento = new frmCrearEvento();
-            frmCrearEvento.ShowDialog();
+            frmFiltro frmFiltro = new frmFiltro();
+            frmFiltro.ShowDialog();
         }
 
         private void panelPublicacionesEventos_Scroll(object sender, ScrollEventArgs e)
