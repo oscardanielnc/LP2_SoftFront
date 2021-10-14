@@ -34,5 +34,17 @@ namespace LP2Soft.Eventos
             frmCrearPostGeneral frmCrearPostGeneral = new frmCrearPostGeneral();
             frmCrearPostGeneral.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmCrearComentario frmCrearComentario = new frmCrearComentario();
+            frmCrearComentario.ShowDialog();
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+            frmCrearComentario frmCrearComentario = new frmCrearComentario();
+            frmCrearComentario.ShowDialog();
+        }
     }
 }
