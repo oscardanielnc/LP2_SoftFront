@@ -53,12 +53,6 @@
     <Compile Include="Asesor\frmAsesorBuscarFiltros.Designer.cs">
       <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Asesor\frmAsesorPostular.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Asesor\frmAsesorPostular.Designer.cs">
-      <DependentUpon>frmAsesorPostular.cs</DependentUpon>
-    </Compile>
     <Compile Include="Asesor\frmBuscarAsesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +64,12 @@
     </Compile>
     <Compile Include="Asesor\frmMisAsesores.Designer.cs">
       <DependentUpon>frmMisAsesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asesor\frmPostularAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asesor\frmPostularAsesor.Designer.cs">
+      <DependentUpon>frmPostularAsesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Cursos\AgregarMaterial\frmAgregarMaterial.cs">
       <SubType>Form</SubType>
@@ -113,11 +113,23 @@
     <Compile Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.Designer.cs">
       <DependentUpon>frmPracticas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cursos\Flitro\frmFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\Flitro\frmFiltro.Designer.cs">
+      <DependentUpon>frmFiltro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos\frmCursosHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cursos\frmCursosHome.Designer.cs">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmHomeFavoritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmHomeFavoritos.Designer.cs">
+      <DependentUpon>frmHomeFavoritos.cs</DependentUpon>
     </Compile>
     <Compile Include="Enumerados\MenuHome.cs" />
     <Compile Include="Enumerados\MenuPerfil.cs" />
@@ -157,11 +169,17 @@
     <Compile Include="Eventos\frmCrearEvento.Designer.cs">
       <DependentUpon>frmCrearEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Eventos\frmMisEventos.cs">
+    <Compile Include="Eventos\frmMisPublicaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Eventos\frmMisEventos.Designer.cs">
-      <DependentUpon>frmMisEventos.cs</DependentUpon>
+    <Compile Include="Eventos\frmMisPublicaciones.Designer.cs">
+      <DependentUpon>frmMisPublicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmModificarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmModificarEvento.Designer.cs">
+      <DependentUpon>frmModificarEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Eventos\frmPostGeneral.cs">
       <SubType>Form</SubType>
@@ -312,14 +330,14 @@
     <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
       <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Asesor\frmAsesorPostular.resx">
-      <DependentUpon>frmAsesorPostular.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmMisAsesores.resx">
       <DependentUpon>frmMisAsesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asesor\frmPostularAsesor.resx">
+      <DependentUpon>frmPostularAsesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmAgregarMaterial.resx">
       <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
@@ -342,8 +360,14 @@
     <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.resx">
       <DependentUpon>frmPracticas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\Flitro\frmFiltro.resx">
+      <DependentUpon>frmFiltro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cursos\frmCursosHome.resx">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmHomeFavoritos.resx">
+      <DependentUpon>frmHomeFavoritos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmCrearComentario.resx">
       <DependentUpon>frmCrearComentario.cs</DependentUpon>
@@ -363,8 +387,11 @@
     <EmbeddedResource Include="Eventos\frmCrearEvento.resx">
       <DependentUpon>frmCrearEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Eventos\frmMisEventos.resx">
-      <DependentUpon>frmMisEventos.cs</DependentUpon>
+    <EmbeddedResource Include="Eventos\frmMisPublicaciones.resx">
+      <DependentUpon>frmMisPublicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmModificarEvento.resx">
+      <DependentUpon>frmModificarEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmPostGeneral.resx">
       <DependentUpon>frmPostGeneral.cs</DependentUpon>
@@ -625,6 +652,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_empty_icon_178700.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like_favorite_heart_5759.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-full-1.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

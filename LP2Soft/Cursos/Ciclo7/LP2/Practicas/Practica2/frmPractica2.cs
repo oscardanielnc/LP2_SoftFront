@@ -1,5 +1,6 @@
 ﻿using LP2Soft.Cursos.AgregarMaterial;
 using LP2Soft.Cursos.Calificación;
+using LP2Soft.Cursos.Flitro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,6 +54,58 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         {
             frmCalificacion calificacion = new frmCalificacion();
             calificacion.ShowDialog();
+        }
+
+        private void pBLP2Practica4Compartir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compartiendo");
+        }
+
+        private void pBLP2Practica4Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica3Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica2Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica1Descargar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Descargando");
+        }
+
+        private void pBLP2Practica3Compartir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compartiendo");
+        }
+
+        private void pBLP2Practica2Compartir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compartiendo");
+        }
+
+        private void pBLP2Practica1Compartir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compartiendo");
+        }
+
+        private void btnLLP2Practica2Filtrar_Click(object sender, EventArgs e)
+        {
+            frmFiltro filtro = new frmFiltro();
+            filtro.Show();
+        }
+
+        private void pBFiltro_Click(object sender, EventArgs e)
+        {
+            frmFiltro filtro = new frmFiltro();
+            filtro.Show();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
 {
     public partial class frmAgregarMaterial : Form
     {
-        int _cancelar;
+        
         public frmAgregarMaterial()
         {
             InitializeComponent();
@@ -20,34 +20,38 @@ namespace LP2Soft.Cursos.AgregarMaterial
 
         private void btnSubir_Click(object sender, EventArgs e)
         {
-            if (txtProfesor.Text.Length == 0)
-            {
-                lblProfesorMsj.Text = "Debe completar el campo profesor";
-                
-            }
-            else {
-                MessageBox.Show("Se Subio satisfactoriamente");
-                this.Close();
-            }
-            
+            MessageBox.Show("Se Subio satisfactoriamente");
+            this.Close();          
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (txtProfesor.Text.Length != 0)
-            {
-                frmEstasSeguroDeCancelar estasSeguroDeCancelar = new frmEstasSeguroDeCancelar();
-                if(estasSeguroDeCancelar.ShowDialog()==DialogResult.OK)
-                    this.Close();
-                
-            }
-            
-            
+            //frmEstasSeguroDeCancelar estasSeguroDeCancelar = new frmEstasSeguroDeCancelar();
+            //if(estasSeguroDeCancelar.ShowDialog()==DialogResult.OK)
+            this.Close();    
         }
 
         private void btbCargarDocs_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Cuadrito para seleccionar y subir");
+        }
+
+        private void checkbSi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbSi.Checked == true)
+            {
+                checkBNo.Checked = false;
+            }
+            
+        }
+
+        private void checkBNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBNo.Checked == true)
+            {
+                checkbSi.Checked = false;
+            }
+            
         }
 
         

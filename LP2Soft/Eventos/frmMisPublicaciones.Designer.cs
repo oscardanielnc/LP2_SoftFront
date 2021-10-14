@@ -1,7 +1,7 @@
 ﻿
 namespace LP2Soft.Eventos
 {
-    partial class frmMisEventos
+    partial class frmMisPublicaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -39,57 +39,43 @@ namespace LP2Soft.Eventos
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.label65 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.label66 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
             this.label68 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
-            this.txtComentarioEvento = new System.Windows.Forms.TextBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.lblHoraEvento = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblLinkZoom = new System.Windows.Forms.Label();
             this.lblZoom = new System.Windows.Forms.Label();
-            this.lblComentarios = new System.Windows.Forms.Label();
-            this.lblLinea2 = new System.Windows.Forms.Label();
-            this.lblComentar = new System.Windows.Forms.Label();
-            this.lblMeGusta = new System.Windows.Forms.Label();
-            this.lblCantidadComentarios = new System.Windows.Forms.Label();
-            this.lblCantidadLikes = new System.Windows.Forms.Label();
-            this.lblLinea1 = new System.Windows.Forms.Label();
+            this.btnAgendarEvento = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDescripcionEvento = new System.Windows.Forms.TextBox();
             this.lblFechaHoraCreacion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblMisEventos = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pbOtroPerfil = new System.Windows.Forms.PictureBox();
-            this.btnAgendarEvento = new System.Windows.Forms.Button();
-            this.btnComentar = new System.Windows.Forms.Button();
-            this.btnMeGusta = new System.Windows.Forms.Button();
-            this.btnComentarEstatico = new System.Windows.Forms.Button();
-            this.btnMeGustaEstatico = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.lblMisEventos = new System.Windows.Forms.Label();
             this.panelPublicacionesEventos.SuspendLayout();
             this.panelEvento.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOtroPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
@@ -109,26 +95,13 @@ namespace LP2Soft.Eventos
             this.panelEvento.BackColor = System.Drawing.Color.White;
             this.panelEvento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelEvento.Controls.Add(this.panel10);
-            this.panelEvento.Controls.Add(this.txtComentarioEvento);
             this.panelEvento.Controls.Add(this.lblHoraEvento);
             this.panelEvento.Controls.Add(this.label11);
             this.panelEvento.Controls.Add(this.label12);
             this.panelEvento.Controls.Add(this.label13);
             this.panelEvento.Controls.Add(this.lblLinkZoom);
             this.panelEvento.Controls.Add(this.lblZoom);
-            this.panelEvento.Controls.Add(this.pbOtroPerfil);
             this.panelEvento.Controls.Add(this.btnAgendarEvento);
-            this.panelEvento.Controls.Add(this.lblComentarios);
-            this.panelEvento.Controls.Add(this.lblLinea2);
-            this.panelEvento.Controls.Add(this.lblComentar);
-            this.panelEvento.Controls.Add(this.btnComentar);
-            this.panelEvento.Controls.Add(this.lblMeGusta);
-            this.panelEvento.Controls.Add(this.btnMeGusta);
-            this.panelEvento.Controls.Add(this.btnComentarEstatico);
-            this.panelEvento.Controls.Add(this.lblCantidadComentarios);
-            this.panelEvento.Controls.Add(this.lblCantidadLikes);
-            this.panelEvento.Controls.Add(this.btnMeGustaEstatico);
-            this.panelEvento.Controls.Add(this.lblLinea1);
             this.panelEvento.Controls.Add(this.pictureBox1);
             this.panelEvento.Controls.Add(this.txtDescripcionEvento);
             this.panelEvento.Controls.Add(this.lblFechaHoraCreacion);
@@ -136,7 +109,7 @@ namespace LP2Soft.Eventos
             this.panelEvento.Controls.Add(this.pbPerfil);
             this.panelEvento.Location = new System.Drawing.Point(30, 46);
             this.panelEvento.Name = "panelEvento";
-            this.panelEvento.Size = new System.Drawing.Size(377, 594);
+            this.panelEvento.Size = new System.Drawing.Size(377, 446);
             this.panelEvento.TabIndex = 11;
             // 
             // panel10
@@ -151,7 +124,7 @@ namespace LP2Soft.Eventos
             this.panel10.Controls.Add(this.label60);
             this.panel10.Controls.Add(this.label61);
             this.panel10.Controls.Add(this.pictureBox11);
-            this.panel10.Controls.Add(this.button10);
+            this.panel10.Controls.Add(this.btnModificar);
             this.panel10.Controls.Add(this.label62);
             this.panel10.Controls.Add(this.label63);
             this.panel10.Controls.Add(this.label64);
@@ -170,7 +143,7 @@ namespace LP2Soft.Eventos
             this.panel10.Controls.Add(this.pictureBox13);
             this.panel10.Location = new System.Drawing.Point(-1, -1);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(377, 594);
+            this.panel10.Size = new System.Drawing.Size(377, 445);
             this.panel10.TabIndex = 40;
             // 
             // textBox9
@@ -240,6 +213,28 @@ namespace LP2Soft.Eventos
             this.label61.TabIndex = 32;
             this.label61.Text = "Link Zoom :";
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Location = new System.Drawing.Point(31, 542);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(41, 37);
+            this.pictureBox11.TabIndex = 30;
+            this.pictureBox11.TabStop = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
+            this.btnModificar.BackgroundImage = global::LP2Soft.Properties.Resources.configuraciones__4_;
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Location = new System.Drawing.Point(326, 15);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(31, 29);
+            this.btnModificar.TabIndex = 29;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // label62
             // 
             this.label62.AutoSize = true;
@@ -268,6 +263,19 @@ namespace LP2Soft.Eventos
             this.label64.TabIndex = 26;
             this.label64.Text = "Comentar";
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(224, 475);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(26, 23);
+            this.button11.TabIndex = 25;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
             // label65
             // 
             this.label65.AutoSize = true;
@@ -277,6 +285,32 @@ namespace LP2Soft.Eventos
             this.label65.Size = new System.Drawing.Size(58, 15);
             this.label65.TabIndex = 24;
             this.label65.Text = "Me gusta";
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.BackgroundImage = global::LP2Soft.Properties.Resources.like;
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(48, 475);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(26, 23);
+            this.button12.TabIndex = 23;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Location = new System.Drawing.Point(291, 446);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(26, 21);
+            this.button13.TabIndex = 22;
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // label66
             // 
@@ -298,6 +332,19 @@ namespace LP2Soft.Eventos
             this.label67.TabIndex = 20;
             this.label67.Text = "15";
             // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Transparent;
+            this.button14.BackgroundImage = global::LP2Soft.Properties.Resources.like;
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Location = new System.Drawing.Point(22, 446);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(23, 19);
+            this.button14.TabIndex = 18;
+            this.button14.UseVisualStyleBackColor = false;
+            // 
             // label68
             // 
             this.label68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -305,6 +352,15 @@ namespace LP2Soft.Eventos
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(371, 1);
             this.label68.TabIndex = 17;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox12.Location = new System.Drawing.Point(54, 235);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(265, 186);
+            this.pictureBox12.TabIndex = 16;
+            this.pictureBox12.TabStop = false;
             // 
             // textBox10
             // 
@@ -336,14 +392,14 @@ namespace LP2Soft.Eventos
             this.label70.TabIndex = 9;
             this.label70.Text = "ACM ICPC PUCP";
             // 
-            // txtComentarioEvento
+            // pictureBox13
             // 
-            this.txtComentarioEvento.Location = new System.Drawing.Point(83, 542);
-            this.txtComentarioEvento.Multiline = true;
-            this.txtComentarioEvento.Name = "txtComentarioEvento";
-            this.txtComentarioEvento.Size = new System.Drawing.Size(265, 37);
-            this.txtComentarioEvento.TabIndex = 39;
-            this.txtComentarioEvento.Text = "Antony Romero\r\nAsistiré sin falta !!!";
+            this.pictureBox13.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(50, 46);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 4;
+            this.pictureBox13.TabStop = false;
             // 
             // lblHoraEvento
             // 
@@ -403,71 +459,27 @@ namespace LP2Soft.Eventos
             this.lblZoom.TabIndex = 32;
             this.lblZoom.Text = "Link Zoom :";
             // 
-            // lblComentarios
+            // btnAgendarEvento
             // 
-            this.lblComentarios.AutoSize = true;
-            this.lblComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComentarios.Location = new System.Drawing.Point(11, 512);
-            this.lblComentarios.Name = "lblComentarios";
-            this.lblComentarios.Size = new System.Drawing.Size(148, 15);
-            this.lblComentarios.TabIndex = 28;
-            this.lblComentarios.Text = "Ver todos los comentarios";
+            this.btnAgendarEvento.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgendarEvento.BackgroundImage = global::LP2Soft.Properties.Resources.anadir_evento;
+            this.btnAgendarEvento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgendarEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAgendarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendarEvento.Location = new System.Drawing.Point(326, 15);
+            this.btnAgendarEvento.Name = "btnAgendarEvento";
+            this.btnAgendarEvento.Size = new System.Drawing.Size(31, 29);
+            this.btnAgendarEvento.TabIndex = 29;
+            this.btnAgendarEvento.UseVisualStyleBackColor = false;
             // 
-            // lblLinea2
+            // pictureBox1
             // 
-            this.lblLinea2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLinea2.Location = new System.Drawing.Point(3, 501);
-            this.lblLinea2.Name = "lblLinea2";
-            this.lblLinea2.Size = new System.Drawing.Size(371, 1);
-            this.lblLinea2.TabIndex = 27;
-            // 
-            // lblComentar
-            // 
-            this.lblComentar.AutoSize = true;
-            this.lblComentar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComentar.Location = new System.Drawing.Point(258, 478);
-            this.lblComentar.Name = "lblComentar";
-            this.lblComentar.Size = new System.Drawing.Size(61, 15);
-            this.lblComentar.TabIndex = 26;
-            this.lblComentar.Text = "Comentar";
-            // 
-            // lblMeGusta
-            // 
-            this.lblMeGusta.AutoSize = true;
-            this.lblMeGusta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMeGusta.Location = new System.Drawing.Point(80, 479);
-            this.lblMeGusta.Name = "lblMeGusta";
-            this.lblMeGusta.Size = new System.Drawing.Size(58, 15);
-            this.lblMeGusta.TabIndex = 24;
-            this.lblMeGusta.Text = "Me gusta";
-            // 
-            // lblCantidadComentarios
-            // 
-            this.lblCantidadComentarios.AutoSize = true;
-            this.lblCantidadComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadComentarios.Location = new System.Drawing.Point(323, 447);
-            this.lblCantidadComentarios.Name = "lblCantidadComentarios";
-            this.lblCantidadComentarios.Size = new System.Drawing.Size(21, 15);
-            this.lblCantidadComentarios.TabIndex = 21;
-            this.lblCantidadComentarios.Text = "15";
-            // 
-            // lblCantidadLikes
-            // 
-            this.lblCantidadLikes.AutoSize = true;
-            this.lblCantidadLikes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadLikes.Location = new System.Drawing.Point(51, 447);
-            this.lblCantidadLikes.Name = "lblCantidadLikes";
-            this.lblCantidadLikes.Size = new System.Drawing.Size(21, 15);
-            this.lblCantidadLikes.TabIndex = 20;
-            this.lblCantidadLikes.Text = "15";
-            // 
-            // lblLinea1
-            // 
-            this.lblLinea1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLinea1.Location = new System.Drawing.Point(3, 468);
-            this.lblLinea1.Name = "lblLinea1";
-            this.lblLinea1.Size = new System.Drawing.Size(371, 1);
-            this.lblLinea1.TabIndex = 17;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(54, 235);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(265, 186);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // txtDescripcionEvento
             // 
@@ -499,6 +511,15 @@ namespace LP2Soft.Eventos
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "ACM ICPC PUCP";
             // 
+            // pbPerfil
+            // 
+            this.pbPerfil.Location = new System.Drawing.Point(14, 15);
+            this.pbPerfil.Name = "pbPerfil";
+            this.pbPerfil.Size = new System.Drawing.Size(50, 46);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPerfil.TabIndex = 4;
+            this.pbPerfil.TabStop = false;
+            // 
             // lblMisEventos
             // 
             this.lblMisEventos.AutoSize = true;
@@ -509,196 +530,14 @@ namespace LP2Soft.Eventos
             this.lblMisEventos.TabIndex = 6;
             this.lblMisEventos.Text = "Mis Eventos";
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Location = new System.Drawing.Point(31, 542);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(41, 37);
-            this.pictureBox11.TabIndex = 30;
-            this.pictureBox11.TabStop = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = global::LP2Soft.Properties.Resources.configuraciones__4_;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(326, 15);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(31, 29);
-            this.button10.TabIndex = 29;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(224, 475);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(26, 23);
-            this.button11.TabIndex = 25;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.BackgroundImage = global::LP2Soft.Properties.Resources.like;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(48, 475);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(26, 23);
-            this.button12.TabIndex = 23;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(291, 446);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(26, 21);
-            this.button13.TabIndex = 22;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.BackgroundImage = global::LP2Soft.Properties.Resources.like;
-            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Location = new System.Drawing.Point(22, 446);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(23, 19);
-            this.button14.TabIndex = 18;
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox12.Location = new System.Drawing.Point(54, 235);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(265, 186);
-            this.pictureBox12.TabIndex = 16;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Location = new System.Drawing.Point(14, 15);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(50, 46);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 4;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pbOtroPerfil
-            // 
-            this.pbOtroPerfil.Location = new System.Drawing.Point(31, 542);
-            this.pbOtroPerfil.Name = "pbOtroPerfil";
-            this.pbOtroPerfil.Size = new System.Drawing.Size(41, 37);
-            this.pbOtroPerfil.TabIndex = 30;
-            this.pbOtroPerfil.TabStop = false;
-            // 
-            // btnAgendarEvento
-            // 
-            this.btnAgendarEvento.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgendarEvento.BackgroundImage = global::LP2Soft.Properties.Resources.anadir_evento;
-            this.btnAgendarEvento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgendarEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAgendarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgendarEvento.Location = new System.Drawing.Point(326, 15);
-            this.btnAgendarEvento.Name = "btnAgendarEvento";
-            this.btnAgendarEvento.Size = new System.Drawing.Size(31, 29);
-            this.btnAgendarEvento.TabIndex = 29;
-            this.btnAgendarEvento.UseVisualStyleBackColor = false;
-            // 
-            // btnComentar
-            // 
-            this.btnComentar.BackColor = System.Drawing.Color.Transparent;
-            this.btnComentar.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
-            this.btnComentar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnComentar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnComentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComentar.Location = new System.Drawing.Point(224, 475);
-            this.btnComentar.Name = "btnComentar";
-            this.btnComentar.Size = new System.Drawing.Size(26, 23);
-            this.btnComentar.TabIndex = 25;
-            this.btnComentar.UseVisualStyleBackColor = false;
-            // 
-            // btnMeGusta
-            // 
-            this.btnMeGusta.BackColor = System.Drawing.Color.Transparent;
-            this.btnMeGusta.BackgroundImage = global::LP2Soft.Properties.Resources.like;
-            this.btnMeGusta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMeGusta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnMeGusta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMeGusta.Location = new System.Drawing.Point(48, 475);
-            this.btnMeGusta.Name = "btnMeGusta";
-            this.btnMeGusta.Size = new System.Drawing.Size(26, 23);
-            this.btnMeGusta.TabIndex = 23;
-            this.btnMeGusta.UseVisualStyleBackColor = false;
-            // 
-            // btnComentarEstatico
-            // 
-            this.btnComentarEstatico.BackColor = System.Drawing.Color.Transparent;
-            this.btnComentarEstatico.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
-            this.btnComentarEstatico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnComentarEstatico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnComentarEstatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComentarEstatico.Location = new System.Drawing.Point(291, 446);
-            this.btnComentarEstatico.Name = "btnComentarEstatico";
-            this.btnComentarEstatico.Size = new System.Drawing.Size(26, 21);
-            this.btnComentarEstatico.TabIndex = 22;
-            this.btnComentarEstatico.UseVisualStyleBackColor = false;
-            // 
-            // btnMeGustaEstatico
-            // 
-            this.btnMeGustaEstatico.BackColor = System.Drawing.Color.Transparent;
-            this.btnMeGustaEstatico.BackgroundImage = global::LP2Soft.Properties.Resources.like;
-            this.btnMeGustaEstatico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMeGustaEstatico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnMeGustaEstatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMeGustaEstatico.Location = new System.Drawing.Point(22, 446);
-            this.btnMeGustaEstatico.Name = "btnMeGustaEstatico";
-            this.btnMeGustaEstatico.Size = new System.Drawing.Size(23, 19);
-            this.btnMeGustaEstatico.TabIndex = 18;
-            this.btnMeGustaEstatico.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 235);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 186);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbPerfil
-            // 
-            this.pbPerfil.Location = new System.Drawing.Point(14, 15);
-            this.pbPerfil.Name = "pbPerfil";
-            this.pbPerfil.Size = new System.Drawing.Size(50, 46);
-            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPerfil.TabIndex = 4;
-            this.pbPerfil.TabStop = false;
-            // 
-            // frmMisEventos
+            // frmMisPublicaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 495);
             this.Controls.Add(this.panelPublicacionesEventos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmMisEventos";
+            this.Name = "frmMisPublicaciones";
             this.Text = "frmMisEventos";
             this.panelPublicacionesEventos.ResumeLayout(false);
             this.panelPublicacionesEventos.PerformLayout();
@@ -709,7 +548,6 @@ namespace LP2Soft.Eventos
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOtroPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
@@ -720,6 +558,19 @@ namespace LP2Soft.Eventos
 
         private System.Windows.Forms.Panel panelPublicacionesEventos;
         private System.Windows.Forms.Panel panelEvento;
+        private System.Windows.Forms.Label lblHoraEvento;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblLinkZoom;
+        private System.Windows.Forms.Label lblZoom;
+        private System.Windows.Forms.Button btnAgendarEvento;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtDescripcionEvento;
+        private System.Windows.Forms.Label lblFechaHoraCreacion;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.PictureBox pbPerfil;
+        private System.Windows.Forms.Label lblMisEventos;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label56;
@@ -729,7 +580,7 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
@@ -746,31 +597,5 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.TextBox txtComentarioEvento;
-        private System.Windows.Forms.Label lblHoraEvento;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblLinkZoom;
-        private System.Windows.Forms.Label lblZoom;
-        private System.Windows.Forms.PictureBox pbOtroPerfil;
-        private System.Windows.Forms.Button btnAgendarEvento;
-        private System.Windows.Forms.Label lblComentarios;
-        private System.Windows.Forms.Label lblLinea2;
-        private System.Windows.Forms.Label lblComentar;
-        private System.Windows.Forms.Button btnComentar;
-        private System.Windows.Forms.Label lblMeGusta;
-        private System.Windows.Forms.Button btnMeGusta;
-        private System.Windows.Forms.Button btnComentarEstatico;
-        private System.Windows.Forms.Label lblCantidadComentarios;
-        private System.Windows.Forms.Label lblCantidadLikes;
-        private System.Windows.Forms.Button btnMeGustaEstatico;
-        private System.Windows.Forms.Label lblLinea1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtDescripcionEvento;
-        private System.Windows.Forms.Label lblFechaHoraCreacion;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.PictureBox pbPerfil;
-        private System.Windows.Forms.Label lblMisEventos;
     }
 }

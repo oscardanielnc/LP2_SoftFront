@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2Soft.Eventos
+namespace LP2Soft.Cursos
 {
-    public partial class frmMisEventos : Form
+    public partial class frmHomeFavoritos : Form
     {
-        public frmMisEventos()
+        public frmHomeFavoritos()
         {
             InitializeComponent();
         }
-
     }
 }

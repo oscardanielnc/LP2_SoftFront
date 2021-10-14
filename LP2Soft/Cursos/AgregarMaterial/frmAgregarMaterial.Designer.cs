@@ -40,15 +40,16 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.checkbSi = new System.Windows.Forms.CheckBox();
             this.checkBNo = new System.Windows.Forms.CheckBox();
             this.txtNota = new System.Windows.Forms.TextBox();
-            this.txtProfesor = new System.Windows.Forms.TextBox();
-            this.txtSemestre = new System.Windows.Forms.TextBox();
             this.lblCiclo = new System.Windows.Forms.Label();
-            this.txtCiclo = new System.Windows.Forms.TextBox();
             this.flpCargarMaterial = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTituloPanel = new System.Windows.Forms.Label();
             this.btbCargarDocs = new System.Windows.Forms.Button();
             this.lblProfesorMsj = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.flpCargarMaterial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             this.lblProfesor.AutoSize = true;
             this.lblProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfesor.Location = new System.Drawing.Point(29, 128);
+            this.lblProfesor.Location = new System.Drawing.Point(29, 123);
             this.lblProfesor.Name = "lblProfesor";
             this.lblProfesor.Size = new System.Drawing.Size(70, 18);
             this.lblProfesor.TabIndex = 1;
@@ -76,7 +77,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             this.lblSemestre.AutoSize = true;
             this.lblSemestre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemestre.Location = new System.Drawing.Point(29, 89);
+            this.lblSemestre.Location = new System.Drawing.Point(29, 84);
             this.lblSemestre.Name = "lblSemestre";
             this.lblSemestre.Size = new System.Drawing.Size(76, 18);
             this.lblSemestre.TabIndex = 2;
@@ -86,7 +87,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             this.lblCalificacion.AutoSize = true;
             this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificacion.Location = new System.Drawing.Point(29, 166);
+            this.lblCalificacion.Location = new System.Drawing.Point(29, 161);
             this.lblCalificacion.Name = "lblCalificacion";
             this.lblCalificacion.Size = new System.Drawing.Size(88, 18);
             this.lblCalificacion.TabIndex = 3;
@@ -96,7 +97,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             this.lblNota.AutoSize = true;
             this.lblNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNota.Location = new System.Drawing.Point(29, 202);
+            this.lblNota.Location = new System.Drawing.Point(29, 193);
             this.lblNota.Name = "lblNota";
             this.lblNota.Size = new System.Drawing.Size(44, 18);
             this.lblNota.TabIndex = 4;
@@ -134,61 +135,42 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             this.checkbSi.AutoSize = true;
             this.checkbSi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkbSi.Location = new System.Drawing.Point(134, 166);
+            this.checkbSi.Location = new System.Drawing.Point(134, 161);
             this.checkbSi.Name = "checkbSi";
             this.checkbSi.Size = new System.Drawing.Size(35, 17);
             this.checkbSi.TabIndex = 8;
             this.checkbSi.Text = "Si";
             this.checkbSi.UseVisualStyleBackColor = true;
+            this.checkbSi.CheckedChanged += new System.EventHandler(this.checkbSi_CheckedChanged);
             // 
             // checkBNo
             // 
             this.checkBNo.AutoSize = true;
             this.checkBNo.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBNo.Location = new System.Drawing.Point(200, 166);
+            this.checkBNo.Location = new System.Drawing.Point(200, 161);
             this.checkBNo.Name = "checkBNo";
             this.checkBNo.Size = new System.Drawing.Size(40, 17);
             this.checkBNo.TabIndex = 9;
             this.checkBNo.Text = "No";
             this.checkBNo.UseVisualStyleBackColor = true;
+            this.checkBNo.CheckedChanged += new System.EventHandler(this.checkBNo_CheckedChanged);
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(134, 202);
+            this.txtNota.Location = new System.Drawing.Point(134, 193);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(122, 20);
             this.txtNota.TabIndex = 10;
-            // 
-            // txtProfesor
-            // 
-            this.txtProfesor.Location = new System.Drawing.Point(134, 126);
-            this.txtProfesor.Name = "txtProfesor";
-            this.txtProfesor.Size = new System.Drawing.Size(233, 20);
-            this.txtProfesor.TabIndex = 11;
-            // 
-            // txtSemestre
-            // 
-            this.txtSemestre.Location = new System.Drawing.Point(134, 87);
-            this.txtSemestre.Name = "txtSemestre";
-            this.txtSemestre.Size = new System.Drawing.Size(79, 20);
-            this.txtSemestre.TabIndex = 12;
             // 
             // lblCiclo
             // 
             this.lblCiclo.AutoSize = true;
             this.lblCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCiclo.Location = new System.Drawing.Point(231, 89);
+            this.lblCiclo.Location = new System.Drawing.Point(231, 84);
             this.lblCiclo.Name = "lblCiclo";
             this.lblCiclo.Size = new System.Drawing.Size(46, 18);
             this.lblCiclo.TabIndex = 13;
             this.lblCiclo.Text = "Ciclo:";
-            // 
-            // txtCiclo
-            // 
-            this.txtCiclo.Location = new System.Drawing.Point(283, 87);
-            this.txtCiclo.Name = "txtCiclo";
-            this.txtCiclo.Size = new System.Drawing.Size(84, 20);
-            this.txtCiclo.TabIndex = 14;
             // 
             // flpCargarMaterial
             // 
@@ -223,7 +205,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             this.lblProfesorMsj.AutoSize = true;
             this.lblProfesorMsj.ForeColor = System.Drawing.Color.Red;
-            this.lblProfesorMsj.Location = new System.Drawing.Point(133, 110);
+            this.lblProfesorMsj.Location = new System.Drawing.Point(133, 105);
             this.lblProfesorMsj.Name = "lblProfesorMsj";
             this.lblProfesorMsj.Size = new System.Drawing.Size(0, 13);
             this.lblProfesorMsj.TabIndex = 16;
@@ -232,23 +214,58 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(307, 181);
+            this.label2.Location = new System.Drawing.Point(307, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 18;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(139, 120);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(228, 21);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(283, 81);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(84, 21);
+            this.comboBox2.TabIndex = 20;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(139, 80);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(79, 21);
+            this.comboBox3.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(61, 223);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 18);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Si desea puede escribir un comentario";
             // 
             // frmAgregarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 375);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblProfesorMsj);
             this.Controls.Add(this.flpCargarMaterial);
-            this.Controls.Add(this.txtCiclo);
             this.Controls.Add(this.lblCiclo);
-            this.Controls.Add(this.txtSemestre);
-            this.Controls.Add(this.txtProfesor);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.checkBNo);
             this.Controls.Add(this.checkbSi);
@@ -282,14 +299,15 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.CheckBox checkbSi;
         private System.Windows.Forms.CheckBox checkBNo;
         private System.Windows.Forms.TextBox txtNota;
-        private System.Windows.Forms.TextBox txtProfesor;
-        private System.Windows.Forms.TextBox txtSemestre;
         private System.Windows.Forms.Label lblCiclo;
-        private System.Windows.Forms.TextBox txtCiclo;
         private System.Windows.Forms.FlowLayoutPanel flpCargarMaterial;
         private System.Windows.Forms.Label lblTituloPanel;
         private System.Windows.Forms.Button btbCargarDocs;
         private System.Windows.Forms.Label lblProfesorMsj;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label1;
     }
 }

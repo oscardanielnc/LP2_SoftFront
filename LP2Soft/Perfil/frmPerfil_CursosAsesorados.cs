@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LP2Soft.Asesor;
+using LP2Soft.Cursos.Ciclo7.LP2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace LP2Soft.Perfil
         public frmPerfil_CursosAsesorados()
         {
             InitializeComponent();
+        }
+
+        private void btnAniadirCurso_Click(object sender, EventArgs e)
+        {
+            frmPostularAsesor fromPostular = new frmPostularAsesor();
+            fromPostular.ShowDialog();
+        }
+
+        private void btnLP3_Click(object sender, EventArgs e)
+        {
+            frmCiclo7LP2 fromLP2 = new frmCiclo7LP2();
+            fromLP2.ShowDialog();
         }
     }
 }
