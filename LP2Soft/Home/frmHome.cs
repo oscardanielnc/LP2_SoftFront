@@ -20,7 +20,8 @@ namespace LP2Soft.Home
 {
     public partial class frmHome : Form
     {
-        private Form _formActivo = null;
+        private static Form _formActivo = null;
+        private static Panel _panelContenido = null;
         private MenuHome _menuSeleccionado;
         private frmPrincipal _formPrincipal;
 
@@ -28,35 +29,30 @@ namespace LP2Soft.Home
         {
             _formPrincipal = formPrincipal;
             InitializeComponent();
-            btnNovedades.BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
-            _menuSeleccionado = MenuHome.Novedades; // se muestra el menu de perfil por defecto
-            abrirFormulario(new frmHomePage());
+            _panelContenido = panelContenido;
+            abrirFormularioHome(new frmHomePage(), MenuHome.Novedades); // sección de novedades por defecto
         }
         private void inicializarColorBotones()
         {
-            btnNovedades.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
-            btnPerfil.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
-            btnTodosMisCursos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
-            btnCursosFavoritos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
-            btnVerEventos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
-            btnEventosAgendados.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
-            btnMisEventos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
-            btnAsesores.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
-            btnProfesores.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+            btnNovedades.BackColor = Color.FromArgb(28, 103, 179);
+            btnPerfil.BackColor = Color.FromArgb(28, 103, 179);
+            btnTodosMisCursos.BackColor = Color.FromArgb(28, 103, 179);
+            btnCursosFavoritos.BackColor = Color.FromArgb(28, 103, 179);
+            btnVerEventos.BackColor = Color.FromArgb(28, 103, 179);
+            btnEventosAgendados.BackColor = Color.FromArgb(28, 103, 179);
+            btnMisEventos.BackColor = Color.FromArgb(28, 103, 179);
+            btnAsesores.BackColor = Color.FromArgb(28, 103, 179);
+            btnProfesores.BackColor = Color.FromArgb(28, 103, 179);
         }
-/*        public static void abrirFormularioCualquiera(Form formulario)
-        {
-            panelContenido.Controls.Clear();
 
-        }*/
-        public void abrirFormulario(Form formulario)
+        public static void abrirFormulario(Form formulario)
         {
             if (_formActivo != null) _formActivo.Close();
             _formActivo = formulario;
             _formActivo.TopLevel = false; // para que el form no se salga, sino que se muestre dentro
             _formActivo.FormBorderStyle = FormBorderStyle.None; // para quitar el borde, en caso lo tuviera
             _formActivo.Dock = DockStyle.Fill; // para que el contenido se ajuste a todo el panel
-            panelContenido.Controls.Add(_formActivo); // para que el contenedor contenga el formulario
+            _panelContenido.Controls.Add(_formActivo); // para que el contenedor contenga el formulario
             _formActivo.Show(); // ambos formularios deben ser independientes, no se cancelen sus controles
         }
         private Button obtenerBoton(MenuHome menuSeleccionar)
@@ -76,13 +72,10 @@ namespace LP2Soft.Home
         }
         public void abrirFormularioHome(Form formulario, MenuHome menuSeleccionar)
         {
-            if (_menuSeleccionado != menuSeleccionar)
-            {
                 inicializarColorBotones();
-                obtenerBoton(menuSeleccionar).BackColor = System.Drawing.Color.FromArgb(0, 45, 86);
+                obtenerBoton(menuSeleccionar).BackColor = Color.FromArgb(0, 45, 86);
                 _menuSeleccionado = menuSeleccionar;
                 abrirFormulario(formulario);
-            }
         }
 
 
@@ -106,7 +99,7 @@ namespace LP2Soft.Home
             abrirFormularioHome(new frmHomeFavoritos(), MenuHome.CursosFavoritos);
 
         public void btnMensajes_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmMensajes(this), MenuHome.Mensajes);
+            abrirFormularioHome(new frmMensajes(/*this*/), MenuHome.Mensajes);
 
         public void btnEventos_Click(object sender, EventArgs e)
         {

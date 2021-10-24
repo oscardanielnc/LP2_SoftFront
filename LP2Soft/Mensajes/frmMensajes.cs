@@ -13,17 +13,14 @@ namespace LP2Soft.Mensajes
 {
     public partial class frmMensajes : Form
     {
-        private frmHome _formHome;
-
-        public frmMensajes(frmHome formHome)
+        public frmMensajes()
         {
             InitializeComponent();
-            _formHome = formHome;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            _formHome.abrirFormulario(new frmMensajeChat());
+            frmHome.abrirFormulario(new frmMensajeChat());
         }
     }
 }
