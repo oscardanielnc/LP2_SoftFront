@@ -23,11 +23,8 @@ namespace LP2Soft.Home
         private static Form _formActivo = null;
         private static Panel _panelContenido = null;
         private MenuHome _menuSeleccionado;
-        private frmPrincipal _formPrincipal;
-
-        public frmHome(frmPrincipal formPrincipal)
+        public frmHome()
         {
-            _formPrincipal = formPrincipal;
             InitializeComponent();
             _panelContenido = panelContenido;
             abrirFormularioHome(new frmHomePage(), MenuHome.Novedades); // sección de novedades por defecto
@@ -48,6 +45,7 @@ namespace LP2Soft.Home
         public static void abrirFormulario(Form formulario)
         {
             if (_formActivo != null) _formActivo.Close();
+            _formActivo = null;
             _formActivo = formulario;
             _formActivo.TopLevel = false; // para que el form no se salga, sino que se muestre dentro
             _formActivo.FormBorderStyle = FormBorderStyle.None; // para quitar el borde, en caso lo tuviera
@@ -123,7 +121,7 @@ namespace LP2Soft.Home
             abrirFormularioHome(new frmProfesores(), MenuHome.Profesores);
 
         public void btnCerrar_Click(object sender, EventArgs e) =>
-            _formPrincipal.abrirFormulario(new frmLoginSingin(_formPrincipal));
+            frmPrincipal.abrirFormulario(new frmLoginSingin());
 
         public void btnNotificaciones_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmNotificaciones(), MenuHome.Notificaciones);

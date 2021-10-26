@@ -13,20 +13,22 @@ namespace LP2Soft.Home
     public partial class frmLoginSingin : Form
     {
         private static Form _formActivo = null;
+        private static Panel _panelContenido = null;
 
-        public frmLoginSingin(frmPrincipal formPrincipal)
+        public frmLoginSingin()
         {
             InitializeComponent();
-            abrirFormulario(new frmLogIn(panelContenido, formPrincipal));
+            _panelContenido = panelContenido;
+            abrirFormulario(new frmLogIn());
         }
-        public void abrirFormulario(Form formulario)
+        public static void abrirFormulario(Form formulario)
         {
             if (_formActivo != null) _formActivo.Close();
             _formActivo = formulario;
             _formActivo.TopLevel = false;
             _formActivo.FormBorderStyle = FormBorderStyle.None;
             _formActivo.Dock = DockStyle.Fill;
-            panelContenido.Controls.Add(_formActivo);
+            _panelContenido.Controls.Add(_formActivo);
             _formActivo.Show();
         }
     }

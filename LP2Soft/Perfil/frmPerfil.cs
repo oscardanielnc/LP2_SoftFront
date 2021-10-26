@@ -25,6 +25,7 @@ namespace LP2Soft.Perfil
         public void abrirFormulario(Form formulario)
         {
             if (_formActivo != null) _formActivo.Close();
+            _formActivo = null;
             _formActivo = formulario;
             _formActivo.TopLevel = false;
             _formActivo.FormBorderStyle = FormBorderStyle.None;

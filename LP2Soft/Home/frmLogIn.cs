@@ -13,32 +13,19 @@ namespace LP2Soft.Home
 {
     public partial class frmLogIn : Form
     {
-        private Panel _panelPadre;
-        private frmPrincipal _formPrincipal;
         public frmLogIn()
         {
             InitializeComponent();
         }
 
-        public frmLogIn(Panel panelPadre, frmPrincipal formPrincipal)
-        {
-            InitializeComponent();
-            _panelPadre = panelPadre;
-            _formPrincipal = formPrincipal;
-        }
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            _formPrincipal.abrirFormulario(new frmHome(_formPrincipal));
+            frmPrincipal.abrirFormulario(new frmHome());
         }
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
         {
-            _panelPadre.Controls.Clear();
-            frmSignIn frmSignin = new frmSignIn(_panelPadre, _formPrincipal);
-            frmSignin.TopLevel = false;
-            _panelPadre.Controls.Add(frmSignin);
-            frmSignin.Show();
+            frmLoginSingin.abrirFormulario(new frmSignIn());
         }
     }
 }
