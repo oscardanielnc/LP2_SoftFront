@@ -29,16 +29,44 @@ namespace LP2Soft.Home
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelSuperior = new System.Windows.Forms.Panel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.panelSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panelSuperior
+            // 
+            this.panelSuperior.BackColor = System.Drawing.Color.White;
+            this.panelSuperior.Controls.Add(this.btnExit);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(803, 30);
+            this.panelSuperior.TabIndex = 1;
+            this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             // 
             // panelPrincipal
             // 
             this.panelPrincipal.AutoSize = true;
-            this.panelPrincipal.Location = new System.Drawing.Point(1, 1);
+            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipal.Location = new System.Drawing.Point(0, 30);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(802, 465);
-            this.panelPrincipal.TabIndex = 0;
+            this.panelPrincipal.Size = new System.Drawing.Size(803, 435);
+            this.panelPrincipal.TabIndex = 2;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Image = global::LP2Soft.Properties.Resources.cross;
+            this.btnExit.Location = new System.Drawing.Point(773, 8);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(18, 18);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExit.TabIndex = 0;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmPrincipal
             // 
@@ -48,8 +76,12 @@ namespace LP2Soft.Home
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(803, 465);
             this.Controls.Add(this.panelPrincipal);
+            this.Controls.Add(this.panelSuperior);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrincipal";
             this.Text = "INFUNABLES";
+            this.panelSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -57,6 +89,8 @@ namespace LP2Soft.Home
 
         #endregion
 
+        private System.Windows.Forms.Panel panelSuperior;
         private System.Windows.Forms.Panel panelPrincipal;
+        private System.Windows.Forms.PictureBox btnExit;
     }
 }

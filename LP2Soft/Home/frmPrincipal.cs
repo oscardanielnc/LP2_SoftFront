@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,10 @@ namespace LP2Soft.Home
 {
     public partial class frmPrincipal : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
         private static Form _formActivo = null;
         private static Panel _panelPrincipal = null;
         public frmPrincipal()
@@ -31,6 +36,17 @@ namespace LP2Soft.Home
             /*_formActivo.Dock = DockStyle.Fill;*/
             _panelPrincipal.Controls.Add(formulario);
             _formActivo.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panelSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
     }
 }
