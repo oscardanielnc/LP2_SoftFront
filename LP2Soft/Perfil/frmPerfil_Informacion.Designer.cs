@@ -178,6 +178,7 @@ namespace LP2Soft.Perfil
             // rtbDescripcion
             // 
             this.rtbDescripcion.BackColor = System.Drawing.SystemColors.Window;
+            this.rtbDescripcion.Enabled = false;
             this.rtbDescripcion.Location = new System.Drawing.Point(225, 173);
             this.rtbDescripcion.Name = "rtbDescripcion";
             this.rtbDescripcion.ReadOnly = true;
@@ -251,6 +252,7 @@ namespace LP2Soft.Perfil
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditar.TabIndex = 33;
             this.btnEditar.TabStop = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // imgVineta2
             // 

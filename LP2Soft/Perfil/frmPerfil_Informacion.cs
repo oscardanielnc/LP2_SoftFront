@@ -14,10 +14,11 @@ namespace LP2Soft.Perfil
     public partial class frmPerfil_Informacion : Form
     {
         private UsuarioWS.usuario _usuario;
-        public frmPerfil_Informacion(UsuarioWS.usuario usuario)
+        public frmPerfil_Informacion(UsuarioWS.usuario usuario, bool propio)
         {
             _usuario = usuario;
             InitializeComponent();
+            if(!propio) btnEditar.Visible = false;
             actualizarpantallas();
         }
         private void actualizarpantallas()
@@ -38,6 +39,11 @@ namespace LP2Soft.Perfil
 
                 // aquí viene la definición de valores del asesor
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            frmHome.abrirFormulario(new frmPerfil_EditarInfo(_usuario));
         }
     }
 }

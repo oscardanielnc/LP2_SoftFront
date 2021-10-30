@@ -30,7 +30,7 @@ namespace LP2Soft.Tarjetas
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnVerPerfil = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,26 +47,27 @@ namespace LP2Soft.Tarjetas
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btnVerPerfil
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(37, 92);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Ver Perfil";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnVerPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnVerPerfil.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVerPerfil.FlatAppearance.BorderSize = 0;
+            this.btnVerPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
+            this.btnVerPerfil.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnVerPerfil.Location = new System.Drawing.Point(37, 92);
+            this.btnVerPerfil.Name = "btnVerPerfil";
+            this.btnVerPerfil.Size = new System.Drawing.Size(76, 23);
+            this.btnVerPerfil.TabIndex = 9;
+            this.btnVerPerfil.Text = "Ver Perfil";
+            this.btnVerPerfil.UseVisualStyleBackColor = false;
+            this.btnVerPerfil.Click += new System.EventHandler(this.btnVerPerfil_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnVerPerfil);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(150, 124);
@@ -76,7 +77,8 @@ namespace LP2Soft.Tarjetas
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(25, 63);
+            this.lblNombre.Location = new System.Drawing.Point(20, 64);
+            this.lblNombre.MaximumSize = new System.Drawing.Size(110, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(93, 13);
             this.lblNombre.TabIndex = 10;
@@ -101,7 +103,7 @@ namespace LP2Soft.Tarjetas
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnVerPerfil;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblNombre;
     }

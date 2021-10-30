@@ -40,10 +40,11 @@ namespace LP2Soft.Home
             _panelContenido = panelContenido;
             abrirFormularioHome(new frmHomePage(), MenuHome.Novedades); // sección de novedades por defecto
 
-            actualizarInfoPantallas();
+            actualizarInfoPantallas(usuario);
         }
-        public static void actualizarInfoPantallas ()
+        public static void actualizarInfoPantallas (UsuarioWS.usuario usuario)
         {
+            _usuario = usuario;
             _lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido + " - " + _usuario.idUsuario;
             // aquí viene la foto
         }
@@ -95,7 +96,7 @@ namespace LP2Soft.Home
 
 
         public void btnPerfil_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmPerfil(_usuario), MenuHome.Perfil);
+            abrirFormularioHome(new frmPerfil(_usuario, true), MenuHome.Perfil);
 
 
         public void btnNovedades_Click(object sender, EventArgs e) =>

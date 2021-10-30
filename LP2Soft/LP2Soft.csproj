@@ -297,6 +297,12 @@
     <Compile Include="Perfil\frmPerfil_Amigos.Designer.cs">
       <DependentUpon>frmPerfil_Amigos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Perfil\frmPerfil_EditarInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_EditarInfo.Designer.cs">
+      <DependentUpon>frmPerfil_EditarInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfil\frmPerfil_Informacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -472,6 +478,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil_CursosAsesorados.resx">
       <DependentUpon>frmPerfil_CursosAsesorados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmPerfil_EditarInfo.resx">
+      <DependentUpon>frmPerfil_EditarInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil_Informacion.resx">
       <DependentUpon>frmPerfil_Informacion.cs</DependentUpon>
@@ -739,6 +748,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

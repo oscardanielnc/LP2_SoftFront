@@ -17,14 +17,16 @@ namespace LP2Soft.Perfil
         private static Form _formActivo = null;
         private static MenuPerfil _menuSeleccionado;
         private UsuarioWS.usuario _usuario;
-        public frmPerfil(UsuarioWS.usuario usuario)
+        private bool _propio;
+        public frmPerfil(UsuarioWS.usuario usuario, bool propio)
         {
             _usuario = usuario;
+            _propio = propio;
             InitializeComponent();
             btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             _menuSeleccionado = MenuPerfil.Informacion; // se muestra el menu de información por defecto
             actualizarPantallas();
-            abrirFormulario(new frmPerfil_Informacion(_usuario));
+            abrirFormulario(new frmPerfil_Informacion(_usuario, propio));
         }
         private void actualizarPantallas()
         {
@@ -57,7 +59,7 @@ namespace LP2Soft.Perfil
                 inicializarColorBotones();
                 btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Informacion;
-                abrirFormulario(new frmPerfil_Informacion(_usuario));
+                abrirFormulario(new frmPerfil_Informacion(_usuario, _propio));
             }
         }
 
