@@ -13,14 +13,18 @@ namespace LP2Soft.Home
 {
     public partial class frmLogIn : Form
     {
+        private UsuarioWS.usuario _usuario;
+        private UsuarioWS.UsuariosWSClient _daoUsuario;
         public frmLogIn()
         {
+            _daoUsuario = new UsuarioWS.UsuariosWSClient();
             InitializeComponent();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            frmPrincipal.abrirFormulario(new frmHome());
+            _usuario = _daoUsuario.mostrarUsuario(20186008, "oscar123");
+            frmPrincipal.abrirFormulario(new frmHome(_usuario));
         }
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)

@@ -23,11 +23,22 @@ namespace LP2Soft.Home
         private static Form _formActivo = null;
         private static Panel _panelContenido = null;
         private MenuHome _menuSeleccionado;
+
+        private UsuarioWS.usuario _usuario;
         public frmHome()
         {
             InitializeComponent();
             _panelContenido = panelContenido;
             abrirFormularioHome(new frmHomePage(), MenuHome.Novedades); // sección de novedades por defecto
+        }
+        public frmHome(UsuarioWS.usuario usuario)
+        {
+            _usuario = usuario;
+            InitializeComponent();
+            _panelContenido = panelContenido;
+            abrirFormularioHome(new frmHomePage(), MenuHome.Novedades); // sección de novedades por defecto
+
+            lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido;
         }
         private void inicializarColorBotones()
         {
