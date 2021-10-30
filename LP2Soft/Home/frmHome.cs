@@ -23,8 +23,10 @@ namespace LP2Soft.Home
         private static Form _formActivo = null;
         private static Panel _panelContenido = null;
         private MenuHome _menuSeleccionado;
+        private static Label _lblNombreUsuario = null;
 
-        private UsuarioWS.usuario _usuario;
+        private static UsuarioWS.usuario _usuario;
+        public static UsuarioWS.usuario Usuario { get => _usuario; set => _usuario = value; }
         public frmHome()
         {
             InitializeComponent();
@@ -33,12 +35,18 @@ namespace LP2Soft.Home
         }
         public frmHome(UsuarioWS.usuario usuario)
         {
-            _usuario = usuario;
             InitializeComponent();
+            _usuario = usuario;
+            _lblNombreUsuario = lblNombreUsuario;
             _panelContenido = panelContenido;
             abrirFormularioHome(new frmHomePage(), MenuHome.Novedades); // sección de novedades por defecto
 
-            lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido;
+            actualizarInfoPantallas();
+        }
+        public static void actualizarInfoPantallas ()
+        {
+            _lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido + " - " + _usuario.idUsuario;
+            // aquí viene la foto
         }
         private void inicializarColorBotones()
         {

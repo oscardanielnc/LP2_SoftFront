@@ -93,6 +93,7 @@ namespace LP2Soft.Home
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(294, 21);
             this.txtContrasenia.TabIndex = 3;
+            this.txtContrasenia.UseSystemPasswordChar = true;
             // 
             // lblCorreoCodigo
             // 

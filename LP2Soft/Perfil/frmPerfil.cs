@@ -1,4 +1,5 @@
 ﻿using LP2Soft.Enumerados;
+using LP2Soft.Home;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +16,19 @@ namespace LP2Soft.Perfil
     {
         private static Form _formActivo = null;
         private static MenuPerfil _menuSeleccionado;
+        private UsuarioWS.usuario _usuario;
         public frmPerfil()
         {
             InitializeComponent();
             btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             _menuSeleccionado = MenuPerfil.Informacion; // se muestra el menu de información por defecto
+            actualizarPantallas();
             abrirFormulario(new frmPerfil_Informacion());
+        }
+        private void actualizarPantallas()
+        {
+            lblTituloNombre.Text = frmHome.Usuario.nombre + " " + frmHome.Usuario.apellido;
+            // aquí viene la foto
         }
         public void abrirFormulario(Form formulario)
         {

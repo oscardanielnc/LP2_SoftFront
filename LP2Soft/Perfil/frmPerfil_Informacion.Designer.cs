@@ -43,12 +43,10 @@ namespace LP2Soft.Perfil
             this.label11 = new System.Windows.Forms.Label();
             this.rtbDescripcion = new System.Windows.Forms.RichTextBox();
             this.lblInfAsesor = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.infoCalificacion = new System.Windows.Forms.Label();
+            this.infoPrecio = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblPrecioHora = new System.Windows.Forms.Label();
-            this.lblUbicacion = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.imgVineta2 = new System.Windows.Forms.PictureBox();
             this.imgVineta1 = new System.Windows.Forms.PictureBox();
@@ -198,36 +196,29 @@ namespace LP2Soft.Perfil
             this.lblInfAsesor.Size = new System.Drawing.Size(163, 16);
             this.lblInfAsesor.TabIndex = 25;
             this.lblInfAsesor.Text = "Información de Asesor";
+            this.lblInfAsesor.Visible = false;
             // 
-            // label12
+            // infoCalificacion
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(121, 297);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 15);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Calificación:";
+            this.infoCalificacion.AutoSize = true;
+            this.infoCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoCalificacion.Location = new System.Drawing.Point(121, 297);
+            this.infoCalificacion.Name = "infoCalificacion";
+            this.infoCalificacion.Size = new System.Drawing.Size(86, 15);
+            this.infoCalificacion.TabIndex = 27;
+            this.infoCalificacion.Text = "Calificación:";
+            this.infoCalificacion.Visible = false;
             // 
-            // label13
+            // infoPrecio
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(90, 320);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(114, 15);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Precio/Hora (S/):";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(129, 345);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 15);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "Ubicación:";
+            this.infoPrecio.AutoSize = true;
+            this.infoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoPrecio.Location = new System.Drawing.Point(90, 320);
+            this.infoPrecio.Name = "infoPrecio";
+            this.infoPrecio.Size = new System.Drawing.Size(114, 15);
+            this.infoPrecio.TabIndex = 28;
+            this.infoPrecio.Text = "Precio/Hora (S/):";
+            this.infoPrecio.Visible = false;
             // 
             // lblCalificacion
             // 
@@ -238,6 +229,7 @@ namespace LP2Soft.Perfil
             this.lblCalificacion.Size = new System.Drawing.Size(31, 15);
             this.lblCalificacion.TabIndex = 30;
             this.lblCalificacion.Text = "4.58";
+            this.lblCalificacion.Visible = false;
             // 
             // lblPrecioHora
             // 
@@ -248,16 +240,7 @@ namespace LP2Soft.Perfil
             this.lblPrecioHora.Size = new System.Drawing.Size(38, 15);
             this.lblPrecioHora.TabIndex = 31;
             this.lblPrecioHora.Text = "30.00";
-            // 
-            // lblUbicacion
-            // 
-            this.lblUbicacion.AutoSize = true;
-            this.lblUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUbicacion.Location = new System.Drawing.Point(222, 345);
-            this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(77, 15);
-            this.lblUbicacion.TabIndex = 32;
-            this.lblUbicacion.Text = "Pueblo Libre";
+            this.lblPrecioHora.Visible = false;
             // 
             // btnEditar
             // 
@@ -278,6 +261,7 @@ namespace LP2Soft.Perfil
             this.imgVineta2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgVineta2.TabIndex = 26;
             this.imgVineta2.TabStop = false;
+            this.imgVineta2.Visible = false;
             // 
             // imgVineta1
             // 
@@ -296,12 +280,10 @@ namespace LP2Soft.Perfil
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(799, 386);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.lblPrecioHora);
             this.Controls.Add(this.lblCalificacion);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.infoPrecio);
+            this.Controls.Add(this.infoCalificacion);
             this.Controls.Add(this.imgVineta2);
             this.Controls.Add(this.lblInfAsesor);
             this.Controls.Add(this.rtbDescripcion);
@@ -347,12 +329,10 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.RichTextBox rtbDescripcion;
         private System.Windows.Forms.PictureBox imgVineta2;
         private System.Windows.Forms.Label lblInfAsesor;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label infoCalificacion;
+        private System.Windows.Forms.Label infoPrecio;
         private System.Windows.Forms.Label lblCalificacion;
         private System.Windows.Forms.Label lblPrecioHora;
-        private System.Windows.Forms.Label lblUbicacion;
         private System.Windows.Forms.PictureBox btnEditar;
     }
 }

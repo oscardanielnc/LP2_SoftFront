@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarUsuario" type="tns:insertarUsuario" />
+  <xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse" />
   <xs:element name="mostrarUsuario" type="tns:mostrarUsuario" />
   <xs:element name="mostrarUsuarioResponse" type="tns:mostrarUsuarioResponse" />
-  <xs:complexType name="mostrarUsuario">
+  <xs:complexType name="insertarUsuario">
     <xs:sequence>
-      <xs:element minOccurs="0" name="codigoPUCP" type="xs:string" />
-      <xs:element minOccurs="0" name="password" type="xs:string" />
-      <xs:element name="isCode" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mostrarUsuarioResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:usuario" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="usuario">
@@ -76,6 +71,22 @@
       <xs:element name="prioridad" type="xs:int" />
       <xs:element name="tipo" type="xs:int" />
       <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correoCodigo" type="xs:string" />
+      <xs:element name="isCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

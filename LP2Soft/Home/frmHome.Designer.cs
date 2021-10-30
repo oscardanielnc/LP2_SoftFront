@@ -99,6 +99,7 @@ namespace LP2Soft.Home
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.Location = new System.Drawing.Point(835, 9);
+            this.lblNombreUsuario.MaximumSize = new System.Drawing.Size(120, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(97, 30);
             this.lblNombreUsuario.TabIndex = 15;
