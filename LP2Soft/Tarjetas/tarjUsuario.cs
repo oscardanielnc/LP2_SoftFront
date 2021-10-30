@@ -12,9 +12,13 @@ namespace LP2Soft.Tarjetas
 {
     public partial class tarjUsuario : Form
     {
-        public tarjUsuario()
+        private string _codigo;
+        public tarjUsuario(UsuarioWS.usuario usuario)
         {
             InitializeComponent();
+            _codigo = usuario.codigoPUCP;
+            lblNombre.Text = usuario.nombre + " " + usuario.apellido;
+            // aqui viene la foto
         }
     }
 }

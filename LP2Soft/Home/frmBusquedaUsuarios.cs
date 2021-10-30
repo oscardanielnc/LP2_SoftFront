@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Soft.Tarjetas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,15 @@ namespace LP2Soft.Home
             {
                 lblInfo.Text = "Se han encontrado " + _usuariosBusqueda.Count + " usuarios.";
                 //renderizamos las tarjetas
+                foreach(UsuarioWS.usuario u in _usuariosBusqueda)
+                {
+                    tarjUsuario tUsuario = new tarjUsuario(u);
+                    tUsuario.TopLevel = false;
+                    tUsuario.Dock = DockStyle.Top;
+                    panelUsuarios.Controls.Add(tUsuario);
+                    panelUsuarios.Controls.SetChildIndex(tUsuario, 0);
+                    tUsuario.Visible = true;
+                }
             } else
                 lblInfo.Text = "No se han encontrado usuarios que coincidan con esta búsqueda.";
         }
