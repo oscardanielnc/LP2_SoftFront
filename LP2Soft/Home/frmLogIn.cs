@@ -23,7 +23,7 @@ namespace LP2Soft.Home
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            _usuario = _daoUsuario.mostrarUsuario(20186008, "oscar123");
+            _usuario = _daoUsuario.mostrarUsuario("20186008", "oscar123", 1);
             frmPrincipal.abrirFormulario(new frmHome(_usuario));
         }
 
