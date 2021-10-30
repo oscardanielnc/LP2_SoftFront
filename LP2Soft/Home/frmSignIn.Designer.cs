@@ -127,6 +127,7 @@ namespace LP2Soft.Home
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(150, 21);
             this.txtContrasenia.TabIndex = 17;
+            this.txtContrasenia.UseSystemPasswordChar = true;
             // 
             // txtNombre
             // 
@@ -191,6 +192,7 @@ namespace LP2Soft.Home
             this.txtRepetirContrasenia.Name = "txtRepetirContrasenia";
             this.txtRepetirContrasenia.Size = new System.Drawing.Size(150, 21);
             this.txtRepetirContrasenia.TabIndex = 23;
+            this.txtRepetirContrasenia.UseSystemPasswordChar = true;
             // 
             // dtpFechaNacimiento
             // 

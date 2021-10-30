@@ -219,6 +219,12 @@
     <Compile Include="Eventos\frmTendenciaMaterial.Designer.cs">
       <DependentUpon>frmTendenciaMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\frmBusquedaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\frmBusquedaUsuarios.Designer.cs">
+      <DependentUpon>frmBusquedaUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,12 @@
     <Compile Include="Perfil\frmPerfil_Amigos.Designer.cs">
       <DependentUpon>frmPerfil_Amigos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Perfil\frmPerfil_EditarInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_EditarInfo.Designer.cs">
+      <DependentUpon>frmPerfil_EditarInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfil\frmPerfil_Informacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +353,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tarjetas\tarjUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjUsuario.Designer.cs">
+      <DependentUpon>tarjUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
       <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
     </EmbeddedResource>
@@ -422,6 +440,9 @@
     <EmbeddedResource Include="Eventos\frmTendenciaMaterial.resx">
       <DependentUpon>frmTendenciaMaterial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home\frmBusquedaUsuarios.resx">
+      <DependentUpon>frmBusquedaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -458,6 +479,9 @@
     <EmbeddedResource Include="Perfil\frmPerfil_CursosAsesorados.resx">
       <DependentUpon>frmPerfil_CursosAsesorados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmPerfil_EditarInfo.resx">
+      <DependentUpon>frmPerfil_EditarInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil_Informacion.resx">
       <DependentUpon>frmPerfil_Informacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -487,6 +511,15 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
+      <DependentUpon>tarjUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarUsuariosNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.mostrarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -715,6 +748,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

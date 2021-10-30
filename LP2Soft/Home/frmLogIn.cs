@@ -23,8 +23,33 @@ namespace LP2Soft.Home
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            _usuario = _daoUsuario.mostrarUsuario("20186008", "oscar123", 1);
-            frmPrincipal.abrirFormulario(new frmHome(_usuario));
+            string correoCodigo = txtCorreoCodigo.Text;
+            if(!correoCodigo.Equals(""))
+            {
+                string password = txtContrasenia.Text;
+                if(!password.Equals(""))
+                {
+                    int n;
+                    int isCode= (Int32.TryParse(correoCodigo, out n)) ? 1 : 0;
+                    _usuario = _daoUsuario.mostrarUsuario(correoCodigo, isCode);
+
+                    if(_usuario != null)
+                    {
+                        if(_usuario.contrasenia.Equals(password))
+                            frmPrincipal.abrirFormulario(new frmHome(_usuario));
+                        else
+                        {
+                            MessageBox.Show("El usuario y la contraseña no coinciden", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            _usuario = null;
+                        }
+                    } else
+                        MessageBox.Show("El usuario ingresado no existe en la Base de datos", "Error", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } else
+                    MessageBox.Show("Ingrese su contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else
+                MessageBox.Show("Ingrese su correo o CódigoPUCP", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)

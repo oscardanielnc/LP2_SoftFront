@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Soft.Home;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,37 @@ namespace LP2Soft.Perfil
 {
     public partial class frmPerfil_Informacion : Form
     {
-        public frmPerfil_Informacion()
+        private UsuarioWS.usuario _usuario;
+        public frmPerfil_Informacion(UsuarioWS.usuario usuario, bool propio)
         {
+            _usuario = usuario;
             InitializeComponent();
+            if(!propio) btnEditar.Visible = false;
+            actualizarpantallas();
+        }
+        private void actualizarpantallas()
+        {
+            lblCodigo.Text = _usuario.codigoPUCP;
+            lblCorreo.Text = _usuario.correo;
+            // aquí viene la fecha de nacimiento
+            rtbDescripcion.Text = _usuario.descripcion;
+            
+            if(_usuario.esAsesor)
+            {
+                imgVineta2.Visible = true;
+                lblInfAsesor.Visible = true;
+                infoCalificacion.Visible = true;
+                infoPrecio.Visible = true;
+                lblPrecioHora.Visible = true;
+                lblCalificacion.Visible = true;
+
+                // aquí viene la definición de valores del asesor
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            frmHome.abrirFormulario(new frmPerfil_EditarInfo(_usuario));
         }
     }
 }

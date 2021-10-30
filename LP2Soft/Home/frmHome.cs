@@ -22,9 +22,10 @@ namespace LP2Soft.Home
     {
         private static Form _formActivo = null;
         private static Panel _panelContenido = null;
-        private MenuHome _menuSeleccionado;
+        private static Label _lblNombreUsuario = null;
 
-        private UsuarioWS.usuario _usuario;
+        private static UsuarioWS.usuario _usuario;
+        public static UsuarioWS.usuario Usuario { get => _usuario; set => _usuario = value; }
         public frmHome()
         {
             InitializeComponent();
@@ -33,12 +34,19 @@ namespace LP2Soft.Home
         }
         public frmHome(UsuarioWS.usuario usuario)
         {
-            _usuario = usuario;
             InitializeComponent();
+            _usuario = usuario;
+            _lblNombreUsuario = lblNombreUsuario;
             _panelContenido = panelContenido;
             abrirFormularioHome(new frmHomePage(), MenuHome.Novedades); // sección de novedades por defecto
 
-            lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido;
+            actualizarInfoPantallas(usuario);
+        }
+        public static void actualizarInfoPantallas (UsuarioWS.usuario usuario)
+        {
+            _usuario = usuario;
+            _lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido + " - " + _usuario.idUsuario;
+            // aquí viene la foto
         }
         private void inicializarColorBotones()
         {
@@ -83,13 +91,12 @@ namespace LP2Soft.Home
         {
                 inicializarColorBotones();
                 obtenerBoton(menuSeleccionar).BackColor = Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = menuSeleccionar;
                 abrirFormulario(formulario);
         }
 
 
         public void btnPerfil_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmPerfil(), MenuHome.Perfil);
+            abrirFormularioHome(new frmPerfil(_usuario, true), MenuHome.Perfil);
 
 
         public void btnNovedades_Click(object sender, EventArgs e) =>
@@ -137,5 +144,14 @@ namespace LP2Soft.Home
         public void btnNotificaciones_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmNotificaciones(), MenuHome.Notificaciones);
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string textoBusqueda = txtBusqueda.Text;
+            if(!textoBusqueda.Equals(""))
+                abrirFormularioHome(new frmBusquedaUsuarios(textoBusqueda), MenuHome.Notificaciones); //
+            else
+                MessageBox.Show("Debe escribir un nombre u código PUCP en el buscador", "Warning",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
