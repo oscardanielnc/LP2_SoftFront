@@ -219,6 +219,12 @@
     <Compile Include="Eventos\frmTendenciaMaterial.Designer.cs">
       <DependentUpon>frmTendenciaMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\frmBusquedaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\frmBusquedaUsuarios.Designer.cs">
+      <DependentUpon>frmBusquedaUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tarjetas\tarjUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjUsuario.Designer.cs">
+      <DependentUpon>tarjUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
       <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
     </EmbeddedResource>
@@ -422,6 +434,9 @@
     <EmbeddedResource Include="Eventos\frmTendenciaMaterial.resx">
       <DependentUpon>frmTendenciaMaterial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home\frmBusquedaUsuarios.resx">
+      <DependentUpon>frmBusquedaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -487,7 +502,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
+      <DependentUpon>tarjUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarUsuariosNombreCodigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.mostrarUsuarioResponse.datasource">

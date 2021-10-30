@@ -17,6 +17,12 @@
   <message name="insertarUsuarioResponse">
     <part name="parameters" element="tns:insertarUsuarioResponse" />
   </message>
+  <message name="listarUsuariosNombreCodigo">
+    <part name="parameters" element="tns:listarUsuariosNombreCodigo" />
+  </message>
+  <message name="listarUsuariosNombreCodigoResponse">
+    <part name="parameters" element="tns:listarUsuariosNombreCodigoResponse" />
+  </message>
   <portType name="UsuariosWS">
     <operation name="mostrarUsuario">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/mostrarUsuarioRequest" message="tns:mostrarUsuario" />
@@ -25,6 +31,10 @@
     <operation name="insertarUsuario">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
+    </operation>
+    <operation name="listarUsuariosNombreCodigo">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarUsuariosNombreCodigoRequest" message="tns:listarUsuariosNombreCodigo" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarUsuariosNombreCodigoResponse" message="tns:listarUsuariosNombreCodigoResponse" />
     </operation>
   </portType>
   <binding name="UsuariosWSPortBinding" type="tns:UsuariosWS">
@@ -39,6 +49,15 @@
       </output>
     </operation>
     <operation name="insertarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarUsuariosNombreCodigo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

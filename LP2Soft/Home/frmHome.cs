@@ -22,7 +22,6 @@ namespace LP2Soft.Home
     {
         private static Form _formActivo = null;
         private static Panel _panelContenido = null;
-        private MenuHome _menuSeleccionado;
         private static Label _lblNombreUsuario = null;
 
         private static UsuarioWS.usuario _usuario;
@@ -91,7 +90,6 @@ namespace LP2Soft.Home
         {
                 inicializarColorBotones();
                 obtenerBoton(menuSeleccionar).BackColor = Color.FromArgb(0, 45, 86);
-                _menuSeleccionado = menuSeleccionar;
                 abrirFormulario(formulario);
         }
 
@@ -145,5 +143,14 @@ namespace LP2Soft.Home
         public void btnNotificaciones_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmNotificaciones(), MenuHome.Notificaciones);
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string textoBusqueda = txtBusqueda.Text;
+            if(!textoBusqueda.Equals(""))
+                abrirFormularioHome(new frmBusquedaUsuarios(textoBusqueda), MenuHome.Notificaciones); //
+            else
+                MessageBox.Show("Debe escribir un nombre u código PUCP en el buscador", "Warning",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
