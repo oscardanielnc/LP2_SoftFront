@@ -13,19 +13,21 @@ namespace LP2Soft.Perfil
 {
     public partial class frmPerfil_Informacion : Form
     {
-        public frmPerfil_Informacion()
+        private UsuarioWS.usuario _usuario;
+        public frmPerfil_Informacion(UsuarioWS.usuario usuario)
         {
+            _usuario = usuario;
             InitializeComponent();
             actualizarpantallas();
         }
         private void actualizarpantallas()
         {
-            lblCodigo.Text = frmHome.Usuario.codigoPUCP;
-            lblCorreo.Text = frmHome.Usuario.correo;
+            lblCodigo.Text = _usuario.codigoPUCP;
+            lblCorreo.Text = _usuario.correo;
             // aquí viene la fecha de nacimiento
-            rtbDescripcion.Text = frmHome.Usuario.descripcion;
+            rtbDescripcion.Text = _usuario.descripcion;
             
-            if(frmHome.Usuario.esAsesor)
+            if(_usuario.esAsesor)
             {
                 imgVineta2.Visible = true;
                 lblInfAsesor.Visible = true;

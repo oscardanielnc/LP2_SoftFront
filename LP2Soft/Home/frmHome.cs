@@ -95,7 +95,7 @@ namespace LP2Soft.Home
 
 
         public void btnPerfil_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmPerfil(), MenuHome.Perfil);
+            abrirFormularioHome(new frmPerfil(_usuario), MenuHome.Perfil);
 
 
         public void btnNovedades_Click(object sender, EventArgs e) =>
