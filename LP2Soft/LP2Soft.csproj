@@ -493,8 +493,8 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UsuarioWS\UsuariosWS.wsdl" />
-    <None Include="Connected Services\UsuarioWS\UsuariosWS.xsd">
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
