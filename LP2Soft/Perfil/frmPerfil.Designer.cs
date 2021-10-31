@@ -29,6 +29,8 @@ namespace LP2Soft.Perfil
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfil));
             this.lblTituloNombre = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -39,9 +41,13 @@ namespace LP2Soft.Perfil
             this.btnPublicaciones = new System.Windows.Forms.Button();
             this.btnInformacion = new System.Windows.Forms.Button();
             this.panelContenido = new System.Windows.Forms.Panel();
+            this.btnMensaje = new System.Windows.Forms.PictureBox();
+            this.btnAmigo = new System.Windows.Forms.Label();
+            this.imgAmigo = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloNombre
@@ -171,12 +177,42 @@ namespace LP2Soft.Perfil
             this.panelContenido.Size = new System.Drawing.Size(799, 234);
             this.panelContenido.TabIndex = 11;
             // 
+            // btnMensaje
+            // 
+            this.btnMensaje.Image = global::LP2Soft.Properties.Resources.bubble;
+            this.btnMensaje.Location = new System.Drawing.Point(666, 185);
+            this.btnMensaje.Name = "btnMensaje";
+            this.btnMensaje.Size = new System.Drawing.Size(30, 30);
+            this.btnMensaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMensaje.TabIndex = 13;
+            this.btnMensaje.TabStop = false;
+            this.btnMensaje.Click += new System.EventHandler(this.btnMensaje_Click);
+            // 
+            // btnAmigo
+            // 
+            this.btnAmigo.ImageIndex = 1;
+            this.btnAmigo.ImageList = this.imgAmigo;
+            this.btnAmigo.Location = new System.Drawing.Point(702, 185);
+            this.btnAmigo.Name = "btnAmigo";
+            this.btnAmigo.Size = new System.Drawing.Size(30, 30);
+            this.btnAmigo.TabIndex = 14;
+            this.btnAmigo.Click += new System.EventHandler(this.btnAmigo_Click);
+            // 
+            // imgAmigo
+            // 
+            this.imgAmigo.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgAmigo.ImageStream")));
+            this.imgAmigo.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgAmigo.Images.SetKeyName(0, "user-minus.png");
+            this.imgAmigo.Images.SetKeyName(1, "user-plus.png");
+            // 
             // frmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 492);
+            this.Controls.Add(this.btnAmigo);
+            this.Controls.Add(this.btnMensaje);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTituloNombre);
@@ -188,6 +224,7 @@ namespace LP2Soft.Perfil
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +242,8 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Button btnCursos;
         private System.Windows.Forms.Button btnAmigos;
         private System.Windows.Forms.Button btnPublicaciones;
+        private System.Windows.Forms.PictureBox btnMensaje;
+        private System.Windows.Forms.Label btnAmigo;
+        private System.Windows.Forms.ImageList imgAmigo;
     }
 }

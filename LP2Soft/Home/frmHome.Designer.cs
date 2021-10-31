@@ -88,11 +88,14 @@ namespace LP2Soft.Home
             // txtBusqueda
             // 
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.ForeColor = System.Drawing.Color.Gray;
             this.txtBusqueda.Location = new System.Drawing.Point(185, 22);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(300, 21);
             this.txtBusqueda.TabIndex = 16;
             this.txtBusqueda.Text = "Buscar a un usuario";
+            this.txtBusqueda.Enter += new System.EventHandler(this.txtBusqueda_Enter);
+            this.txtBusqueda.Leave += new System.EventHandler(this.txtBusqueda_Leave);
             // 
             // lblNombreUsuario
             // 

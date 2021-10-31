@@ -1,5 +1,6 @@
 ﻿using LP2Soft.Enumerados;
 using LP2Soft.Home;
+using LP2Soft.Mensajes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,15 +19,30 @@ namespace LP2Soft.Perfil
         private static MenuPerfil _menuSeleccionado;
         private UsuarioWS.usuario _usuario;
         private bool _propio;
-        public frmPerfil(UsuarioWS.usuario usuario, bool propio)
+        private bool _esAmigo;
+        public frmPerfil(UsuarioWS.usuario usuario)
         {
             _usuario = usuario;
-            _propio = propio;
+            if(usuario.idUsuario == frmHome.Usuario.idUsuario)
+                _propio = true;
+            else _propio = false;
             InitializeComponent();
             btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
             _menuSeleccionado = MenuPerfil.Informacion; // se muestra el menu de información por defecto
+            _esAmigo = false; // _daoUsuario(saber si es mi amigo)
             actualizarPantallas();
-            abrirFormulario(new frmPerfil_Informacion(_usuario, propio));
+            
+            if(_propio)
+            {
+                btnAmigo.Visible = false;
+                btnMensaje.Visible = false;
+            } else
+            {
+                btnAmigo.Visible = true;
+                btnMensaje.Visible = true;
+            }
+
+            abrirFormulario(new frmPerfil_Informacion(_usuario, _propio));
         }
         private void actualizarPantallas()
         {
@@ -104,6 +120,33 @@ namespace LP2Soft.Perfil
                 btnResenias.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Resenias;
                 abrirFormulario(new frmPerfil_Resenias());
+            }
+        }
+
+        private void btnMensaje_Click(object sender, EventArgs e)
+        {
+            frmHome.abrirFormulario(new frmMensajeChat());
+        }
+
+        private void btnAmigo_Click(object sender, EventArgs e)
+        {
+            if (_esAmigo)
+            {
+                // eleminar Amigo
+                _esAmigo = false;
+                btnAmigo.ImageIndex = 1;
+
+                string mensaje = _usuario.nombre + " " + _usuario.apellido + " se ha eliminado de tu lista de amigos.";
+                MessageBox.Show(mensaje, "Exclamation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                // agregarAmigo
+                _esAmigo = true;
+                btnAmigo.ImageIndex = 0;
+
+                string mensaje = " Se ha enviado una solicitud de amistad a " + _usuario.nombre + " " + _usuario.apellido;
+                MessageBox.Show(mensaje, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

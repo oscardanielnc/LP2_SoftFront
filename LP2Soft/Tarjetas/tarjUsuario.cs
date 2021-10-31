@@ -36,7 +36,7 @@ namespace LP2Soft.Tarjetas
         {
             _usuarioVer = _daoUsuario.mostrarUsuario(_codigo, 1);
             if (_usuarioVer != null)
-                frmHome.abrirFormulario(new frmPerfil(_usuarioVer, false));
+                frmHome.abrirFormulario(new frmPerfil(_usuarioVer));
         }
     }
 }

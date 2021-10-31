@@ -96,7 +96,7 @@ namespace LP2Soft.Home
 
 
         public void btnPerfil_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmPerfil(_usuario, true), MenuHome.Perfil);
+            abrirFormularioHome(new frmPerfil(_usuario), MenuHome.Perfil);
 
 
         public void btnNovedades_Click(object sender, EventArgs e) =>
@@ -152,6 +152,25 @@ namespace LP2Soft.Home
             else
                 MessageBox.Show("Debe escribir un nombre u código PUCP en el buscador", "Warning",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        // Efecto Placeholder
+        private void txtBusqueda_Enter(object sender, EventArgs e)
+        {
+            if(txtBusqueda.Text == "Buscar a un usuario")
+            {
+                txtBusqueda.Text = "";
+                txtBusqueda.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtBusqueda_Leave(object sender, EventArgs e)
+        {
+            if (txtBusqueda.Text == "")
+            {
+                txtBusqueda.Text = "Buscar a un usuario";
+                txtBusqueda.ForeColor = Color.Gray;
+            }
         }
     }
 }

@@ -73,6 +73,16 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _lock {
+            get {
+                object obj = ResourceManager.GetObject("lock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add {
             get {
                 object obj = ResourceManager.GetObject("add", resourceCulture);
@@ -616,6 +626,16 @@ namespace LP2Soft.Properties {
         internal static System.Drawing.Bitmap share_alt_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("share-alt-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap show_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("show-solid-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

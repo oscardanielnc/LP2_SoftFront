@@ -4,9 +4,11 @@
   <xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse" />
   <xs:element name="listarUsuariosNombreCodigo" type="tns:listarUsuariosNombreCodigo" />
   <xs:element name="listarUsuariosNombreCodigoResponse" type="tns:listarUsuariosNombreCodigoResponse" />
+  <xs:element name="modificarUsuario" type="tns:modificarUsuario" />
+  <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
   <xs:element name="mostrarUsuario" type="tns:mostrarUsuario" />
   <xs:element name="mostrarUsuarioResponse" type="tns:mostrarUsuarioResponse" />
-  <xs:complexType name="insertarUsuario">
+  <xs:complexType name="modificarUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
     </xs:sequence>
@@ -75,9 +77,29 @@
       <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="modificarUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarUsuarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="mostrarUsuario">
@@ -89,16 +111,6 @@
   <xs:complexType name="mostrarUsuarioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

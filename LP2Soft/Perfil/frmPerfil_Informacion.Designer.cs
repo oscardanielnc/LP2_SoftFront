@@ -50,9 +50,11 @@ namespace LP2Soft.Perfil
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.imgVineta2 = new System.Windows.Forms.PictureBox();
             this.imgVineta1 = new System.Windows.Forms.PictureBox();
+            this.panelAsesor = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).BeginInit();
+            this.panelAsesor.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblInfGeneral
@@ -192,56 +194,51 @@ namespace LP2Soft.Perfil
             // 
             this.lblInfAsesor.AutoSize = true;
             this.lblInfAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfAsesor.Location = new System.Drawing.Point(57, 264);
+            this.lblInfAsesor.Location = new System.Drawing.Point(42, 15);
             this.lblInfAsesor.Name = "lblInfAsesor";
             this.lblInfAsesor.Size = new System.Drawing.Size(163, 16);
             this.lblInfAsesor.TabIndex = 25;
             this.lblInfAsesor.Text = "Información de Asesor";
-            this.lblInfAsesor.Visible = false;
             // 
             // infoCalificacion
             // 
             this.infoCalificacion.AutoSize = true;
             this.infoCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoCalificacion.Location = new System.Drawing.Point(121, 297);
+            this.infoCalificacion.Location = new System.Drawing.Point(106, 48);
             this.infoCalificacion.Name = "infoCalificacion";
             this.infoCalificacion.Size = new System.Drawing.Size(86, 15);
             this.infoCalificacion.TabIndex = 27;
             this.infoCalificacion.Text = "Calificación:";
-            this.infoCalificacion.Visible = false;
             // 
             // infoPrecio
             // 
             this.infoPrecio.AutoSize = true;
             this.infoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoPrecio.Location = new System.Drawing.Point(90, 320);
+            this.infoPrecio.Location = new System.Drawing.Point(75, 71);
             this.infoPrecio.Name = "infoPrecio";
             this.infoPrecio.Size = new System.Drawing.Size(114, 15);
             this.infoPrecio.TabIndex = 28;
             this.infoPrecio.Text = "Precio/Hora (S/):";
-            this.infoPrecio.Visible = false;
             // 
             // lblCalificacion
             // 
             this.lblCalificacion.AutoSize = true;
             this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificacion.Location = new System.Drawing.Point(222, 297);
+            this.lblCalificacion.Location = new System.Drawing.Point(207, 48);
             this.lblCalificacion.Name = "lblCalificacion";
             this.lblCalificacion.Size = new System.Drawing.Size(31, 15);
             this.lblCalificacion.TabIndex = 30;
             this.lblCalificacion.Text = "4.58";
-            this.lblCalificacion.Visible = false;
             // 
             // lblPrecioHora
             // 
             this.lblPrecioHora.AutoSize = true;
             this.lblPrecioHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioHora.Location = new System.Drawing.Point(222, 320);
+            this.lblPrecioHora.Location = new System.Drawing.Point(207, 71);
             this.lblPrecioHora.Name = "lblPrecioHora";
             this.lblPrecioHora.Size = new System.Drawing.Size(38, 15);
             this.lblPrecioHora.TabIndex = 31;
             this.lblPrecioHora.Text = "30.00";
-            this.lblPrecioHora.Visible = false;
             // 
             // btnEditar
             // 
@@ -257,13 +254,12 @@ namespace LP2Soft.Perfil
             // imgVineta2
             // 
             this.imgVineta2.Image = global::LP2Soft.Properties.Resources.book;
-            this.imgVineta2.Location = new System.Drawing.Point(31, 264);
+            this.imgVineta2.Location = new System.Drawing.Point(16, 15);
             this.imgVineta2.Name = "imgVineta2";
             this.imgVineta2.Size = new System.Drawing.Size(20, 20);
             this.imgVineta2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgVineta2.TabIndex = 26;
             this.imgVineta2.TabStop = false;
-            this.imgVineta2.Visible = false;
             // 
             // imgVineta1
             // 
@@ -275,19 +271,30 @@ namespace LP2Soft.Perfil
             this.imgVineta1.TabIndex = 10;
             this.imgVineta1.TabStop = false;
             // 
+            // panelAsesor
+            // 
+            this.panelAsesor.AutoSize = true;
+            this.panelAsesor.BackColor = System.Drawing.SystemColors.Window;
+            this.panelAsesor.Controls.Add(this.lblCalificacion);
+            this.panelAsesor.Controls.Add(this.lblInfAsesor);
+            this.panelAsesor.Controls.Add(this.lblPrecioHora);
+            this.panelAsesor.Controls.Add(this.imgVineta2);
+            this.panelAsesor.Controls.Add(this.infoCalificacion);
+            this.panelAsesor.Controls.Add(this.infoPrecio);
+            this.panelAsesor.Location = new System.Drawing.Point(0, 250);
+            this.panelAsesor.Name = "panelAsesor";
+            this.panelAsesor.Size = new System.Drawing.Size(799, 106);
+            this.panelAsesor.TabIndex = 63;
+            // 
             // frmPerfil_Informacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(799, 386);
+            this.ClientSize = new System.Drawing.Size(799, 356);
+            this.Controls.Add(this.panelAsesor);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.lblPrecioHora);
-            this.Controls.Add(this.lblCalificacion);
-            this.Controls.Add(this.infoPrecio);
-            this.Controls.Add(this.infoCalificacion);
-            this.Controls.Add(this.imgVineta2);
-            this.Controls.Add(this.lblInfAsesor);
             this.Controls.Add(this.rtbDescripcion);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -303,11 +310,14 @@ namespace LP2Soft.Perfil
             this.Controls.Add(this.lblUniversidad);
             this.Controls.Add(this.lblInfGeneral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(0, 250);
             this.Name = "frmPerfil_Informacion";
             this.Text = "frmPerfil_Informacion";
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).EndInit();
+            this.panelAsesor.ResumeLayout(false);
+            this.panelAsesor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,5 +346,6 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Label lblCalificacion;
         private System.Windows.Forms.Label lblPrecioHora;
         private System.Windows.Forms.PictureBox btnEditar;
+        private System.Windows.Forms.Panel panelAsesor;
     }
 }

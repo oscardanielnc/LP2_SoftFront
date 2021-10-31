@@ -73,6 +73,21 @@
     <Compile Include="Asesor\frmPostularAsesor.Designer.cs">
       <DependentUpon>frmPostularAsesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\PublicacionesWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\NotificacionesWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CursosWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\UsuarioWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -514,10 +529,34 @@
     <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
       <DependentUpon>tarjUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.wsdl" />
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.wsdl" />
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CursosWS\CursosWS.wsdl" />
+    <None Include="Connected Services\CursosWS\CursosWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarUsuariosNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.modificarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.mostrarUsuarioResponse.datasource">
@@ -735,6 +774,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\PublicacionesWS\" />
+    <WCFMetadataStorage Include="Connected Services\NotificacionesWS\" />
+    <WCFMetadataStorage Include="Connected Services\CursosWS\" />
     <WCFMetadataStorage Include="Connected Services\UsuarioWS\" />
   </ItemGroup>
   <ItemGroup>
@@ -751,6 +793,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\floppy-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PublicacionesWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PublicacionesWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PublicacionesWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotificacionesWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotificacionesWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotificacionesWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CursosWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CursosWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CursosWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

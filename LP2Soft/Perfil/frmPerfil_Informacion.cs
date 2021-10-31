@@ -30,15 +30,9 @@ namespace LP2Soft.Perfil
             
             if(_usuario.esAsesor)
             {
-                imgVineta2.Visible = true;
-                lblInfAsesor.Visible = true;
-                infoCalificacion.Visible = true;
-                infoPrecio.Visible = true;
-                lblPrecioHora.Visible = true;
-                lblCalificacion.Visible = true;
-
+                panelAsesor.Visible = true;
                 // aquí viene la definición de valores del asesor
-            }
+            } else panelAsesor.Visible = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

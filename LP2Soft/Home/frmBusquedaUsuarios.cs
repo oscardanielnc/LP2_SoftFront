@@ -29,17 +29,27 @@ namespace LP2Soft.Home
             {
                 lblInfo.Text = "Se han encontrado " + _usuariosBusqueda.Count + " usuarios.";
                 //renderizamos las tarjetas
+                int i = 0;
                 foreach(UsuarioWS.usuario u in _usuariosBusqueda)
                 {
                     tarjUsuario tUsuario = new tarjUsuario(u);
                     tUsuario.TopLevel = false;
-                    tUsuario.Dock = DockStyle.Top;
+                    tUsuario.Location = generarCoordenadas(i);
+                    /*tUsuario.Dock = DockStyle.Top;*/
                     panelUsuarios.Controls.Add(tUsuario);
                     panelUsuarios.Controls.SetChildIndex(tUsuario, 0);
                     tUsuario.Visible = true;
+                    i++;
                 }
             } else
                 lblInfo.Text = "No se han encontrado usuarios que coincidan con esta búsqueda.";
         }
+        private Point generarCoordenadas(int i)
+        {
+            int x = (i%5)* 156;
+            int y = ((int)i/5)* 130;
+            return new Point(x, y);
+        }
+
     }
 }
