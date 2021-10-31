@@ -447,7 +447,7 @@ namespace LP2Soft.UsuarioWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
-    public abstract partial class post : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class post : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activoField;
         
@@ -462,6 +462,8 @@ namespace LP2Soft.UsuarioWS {
         private int idPostField;
         
         private int likesField;
+        
+        private int numeroComentField;
         
         private int prioridadField;
         
@@ -555,6 +557,18 @@ namespace LP2Soft.UsuarioWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int numeroComent {
+            get {
+                return this.numeroComentField;
+            }
+            set {
+                this.numeroComentField = value;
+                this.RaisePropertyChanged("numeroComent");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int prioridad {
             get {
                 return this.prioridadField;
@@ -566,7 +580,7 @@ namespace LP2Soft.UsuarioWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public int tipo {
             get {
                 return this.tipoField;
@@ -578,7 +592,7 @@ namespace LP2Soft.UsuarioWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public usuario usuario {
             get {
                 return this.usuarioField;

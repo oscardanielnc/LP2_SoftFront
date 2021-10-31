@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="insertarUsuario" type="tns:insertarUsuario" />
-  <xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse" />
-  <xs:element name="listarUsuariosNombreCodigo" type="tns:listarUsuariosNombreCodigo" />
-  <xs:element name="listarUsuariosNombreCodigoResponse" type="tns:listarUsuariosNombreCodigoResponse" />
-  <xs:element name="modificarUsuario" type="tns:modificarUsuario" />
-  <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
-  <xs:element name="mostrarUsuario" type="tns:mostrarUsuario" />
-  <xs:element name="mostrarUsuarioResponse" type="tns:mostrarUsuarioResponse" />
-  <xs:complexType name="modificarUsuario">
+  <xs:element name="insertarComentario" type="tns:insertarComentario" />
+  <xs:element name="insertarComentarioResponse" type="tns:insertarComentarioResponse" />
+  <xs:complexType name="insertarComentario">
     <xs:sequence>
+      <xs:element minOccurs="0" name="comentario" type="tns:comentario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comentario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comentario" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idComentario" type="xs:int" />
+      <xs:element minOccurs="0" name="post" type="tns:post" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="post">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="bloqueado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="contenido" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idPost" type="xs:int" />
+      <xs:element name="likes" type="xs:int" />
+      <xs:element name="numeroComent" type="xs:int" />
+      <xs:element name="prioridad" type="xs:int" />
+      <xs:element name="tipo" type="xs:int" />
       <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
@@ -64,53 +81,9 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="post" abstract="true">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element name="bloqueado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="contenido" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
-      <xs:element name="idPost" type="xs:int" />
-      <xs:element name="likes" type="xs:int" />
-      <xs:element name="prioridad" type="xs:int" />
-      <xs:element name="tipo" type="xs:int" />
-      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarUsuarioResponse">
+  <xs:complexType name="insertarComentarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarUsuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarUsuarioResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mostrarUsuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="correoCodigo" type="xs:string" />
-      <xs:element name="isCode" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mostrarUsuarioResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

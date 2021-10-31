@@ -52,6 +52,7 @@ namespace LP2Soft.Eventos
             this.btnPublicar.TabIndex = 5;
             this.btnPublicar.Text = "Publicar";
             this.btnPublicar.UseVisualStyleBackColor = true;
+            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click);
             // 
             // lbComentario
             // 

@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/LP2Soft_WebServices/UsuariosWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8081/LP2Soft_WebServices/UsuariosWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UsuariosWS.wsdl" MetadataType="Wsdl" ID="2cceac4c-51a0-4d96-87d8-b0a1234fcfd7" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebServices/UsuariosWS?WSDL" />
-    <MetadataFile FileName="UsuariosWS.xsd" MetadataType="Schema" ID="a41018f8-37ee-4b73-a981-7cca37d3816c" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebServices/UsuariosWS?xsd=1" />
+    <MetadataFile FileName="UsuariosWS1.wsdl" MetadataType="Wsdl" ID="8a03d28f-a2a7-4312-9e48-580efbc97c46" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebServices/UsuariosWS?WSDL" />
+    <MetadataFile FileName="UsuariosWS1.xsd" MetadataType="Schema" ID="66bd438b-d28d-4016-a856-ad6f117a9db9" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebServices/UsuariosWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

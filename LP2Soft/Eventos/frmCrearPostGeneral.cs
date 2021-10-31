@@ -12,10 +12,49 @@ namespace LP2Soft.Eventos
 {
     public partial class frmCrearPostGeneral : Form
     {
+        UsuarioWS.usuario _usuario;
+        PublicacionesWS.postGenerico _postGenerico;
+        PublicacionesWS.PublicacionesWSClient _daoPost;
+        PublicacionesWS.postGenerico _postCreado;
+
+        public PublicacionesWS.postGenerico PostCreado { get => _postCreado; }
+
         public frmCrearPostGeneral()
         {
             InitializeComponent();
         }
 
+        public frmCrearPostGeneral(UsuarioWS.usuario usuario)
+        {
+            InitializeComponent();
+            _usuario = usuario;
+            lblNombre.Text = _usuario.nombre + " " + _usuario.apellido;
+            _postGenerico = new PublicacionesWS.postGenerico();
+            _postGenerico.usuario = new PublicacionesWS.usuario();
+            _daoPost = new PublicacionesWS.PublicacionesWSClient();
+        }
+
+        private void btnPublicar_Click(object sender, EventArgs e)
+        {
+            int resultado;
+            _postGenerico.usuario.idUsuario = _usuario.idUsuario;
+            _postGenerico.contenido = txtContenido.Text;
+            // En un usuario falta un atributo para saber si es un grupo o alumno
+            _postGenerico.prioridad = 1;
+            //_postGenerico.fechaRegistro = DateTime.Now;
+
+            resultado = _daoPost.insertarPost(_postGenerico);
+
+            if (resultado != 0)
+            {
+                _postCreado = _postGenerico;
+                DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace LP2Soft.Home
             _usuario = usuario;
             _lblNombreUsuario = lblNombreUsuario;
             _panelContenido = panelContenido;
-            abrirFormularioHome(new frmHomePage(), MenuHome.Novedades); // sección de novedades por defecto
+            abrirFormularioHome(new frmHomePage(_usuario), MenuHome.Novedades); // sección de novedades por defecto
 
             actualizarInfoPantallas(usuario);
         }
@@ -100,7 +100,7 @@ namespace LP2Soft.Home
 
 
         public void btnNovedades_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmHomePage(), MenuHome.Novedades);
+            abrirFormularioHome(new frmHomePage(_usuario), MenuHome.Novedades);
 
         public void btnCursos_Click(object sender, EventArgs e)
         {

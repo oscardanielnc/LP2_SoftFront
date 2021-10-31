@@ -88,6 +88,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ComentarioWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\UsuarioWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -156,6 +161,12 @@
     <Compile Include="Enumerados\MenuHome.cs" />
     <Compile Include="Enumerados\MenuPerfil.cs" />
     <Compile Include="Enumerados\MenuProfesor.cs" />
+    <Compile Include="Eventos\frmComentario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmComentario.Designer.cs">
+      <DependentUpon>frmComentario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Eventos\frmCrearComentario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -529,25 +540,38 @@
     <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
       <DependentUpon>tarjUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\ComentarioWS\LP2Soft.ComentarioWS.insertarComentarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursosWS\CursosWS1.wsdl" />
+    <None Include="Connected Services\CursosWS\CursosWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.helloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.helloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.helloResponse.datasource">
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.wsdl" />
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertarPostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.wsdl" />
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.xsd">
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.postGenerico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.wsdl" />
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.wsdl" />
-    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CursosWS\CursosWS.wsdl" />
-    <None Include="Connected Services\CursosWS\CursosWS.xsd">
+    <None Include="Connected Services\ComentarioWS\ComentarioWS.wsdl" />
+    <None Include="Connected Services\ComentarioWS\ComentarioWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarUsuarioResponse.datasource">
@@ -565,8 +589,8 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UsuarioWS\UsuariosWS.wsdl" />
-    <None Include="Connected Services\UsuarioWS\UsuariosWS.xsd">
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -777,6 +801,7 @@
     <WCFMetadataStorage Include="Connected Services\PublicacionesWS\" />
     <WCFMetadataStorage Include="Connected Services\NotificacionesWS\" />
     <WCFMetadataStorage Include="Connected Services\CursosWS\" />
+    <WCFMetadataStorage Include="Connected Services\ComentarioWS\" />
     <WCFMetadataStorage Include="Connected Services\UsuarioWS\" />
   </ItemGroup>
   <ItemGroup>
@@ -832,6 +857,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CursosWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ComentarioWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ComentarioWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ComentarioWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

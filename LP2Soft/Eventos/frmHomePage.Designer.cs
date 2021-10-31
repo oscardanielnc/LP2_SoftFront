@@ -29,30 +29,7 @@ namespace LP2Soft.Eventos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHomePage));
             this.panelPublicacionesGenerales = new System.Windows.Forms.Panel();
-            this.panelEvento = new System.Windows.Forms.Panel();
-            this.txtComentarioEvento = new System.Windows.Forms.TextBox();
-            this.pbOtroPerfil = new System.Windows.Forms.PictureBox();
-            this.lblComentarios = new System.Windows.Forms.Label();
-            this.lblLinea2 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.btnComentarEstatico = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.btnMeGustaEstatico = new System.Windows.Forms.Button();
-            this.lblLinea1 = new System.Windows.Forms.Label();
-            this.txtDescripcionEvento = new System.Windows.Forms.TextBox();
-            this.lblFechaHoraCreacion = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.pbPerfil = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblCrearPublicación = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lblPublicacionesGenerales = new System.Windows.Forms.Label();
             this.panelTendenciasMateriales = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -96,31 +73,11 @@ namespace LP2Soft.Eventos
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label27 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panelPublicacionesGenerales.SuspendLayout();
-            this.panelEvento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOtroPerfil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.lblTendenciasMateriales = new System.Windows.Forms.Label();
+            this.panelCrearPublicacion = new System.Windows.Forms.Panel();
+            this.lblCrearPublicación = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblPublicacionesGenerales = new System.Windows.Forms.Label();
             this.panelTendenciasMateriales.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -128,263 +85,17 @@ namespace LP2Soft.Eventos
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panelCrearPublicacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPublicacionesGenerales
             // 
             this.panelPublicacionesGenerales.AutoScroll = true;
-            this.panelPublicacionesGenerales.Controls.Add(this.panel5);
-            this.panelPublicacionesGenerales.Controls.Add(this.panelEvento);
-            this.panelPublicacionesGenerales.Controls.Add(this.panel1);
-            this.panelPublicacionesGenerales.Controls.Add(this.lblPublicacionesGenerales);
-            this.panelPublicacionesGenerales.Location = new System.Drawing.Point(2, 3);
+            this.panelPublicacionesGenerales.Location = new System.Drawing.Point(2, 121);
             this.panelPublicacionesGenerales.Name = "panelPublicacionesGenerales";
-            this.panelPublicacionesGenerales.Size = new System.Drawing.Size(408, 490);
+            this.panelPublicacionesGenerales.Size = new System.Drawing.Size(408, 372);
             this.panelPublicacionesGenerales.TabIndex = 3;
-            // 
-            // panelEvento
-            // 
-            this.panelEvento.BackColor = System.Drawing.Color.White;
-            this.panelEvento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelEvento.Controls.Add(this.txtComentarioEvento);
-            this.panelEvento.Controls.Add(this.pbOtroPerfil);
-            this.panelEvento.Controls.Add(this.lblComentarios);
-            this.panelEvento.Controls.Add(this.lblLinea2);
-            this.panelEvento.Controls.Add(this.label19);
-            this.panelEvento.Controls.Add(this.button7);
-            this.panelEvento.Controls.Add(this.label20);
-            this.panelEvento.Controls.Add(this.button8);
-            this.panelEvento.Controls.Add(this.btnComentarEstatico);
-            this.panelEvento.Controls.Add(this.label21);
-            this.panelEvento.Controls.Add(this.label22);
-            this.panelEvento.Controls.Add(this.btnMeGustaEstatico);
-            this.panelEvento.Controls.Add(this.lblLinea1);
-            this.panelEvento.Controls.Add(this.txtDescripcionEvento);
-            this.panelEvento.Controls.Add(this.lblFechaHoraCreacion);
-            this.panelEvento.Controls.Add(this.label23);
-            this.panelEvento.Controls.Add(this.pbPerfil);
-            this.panelEvento.Location = new System.Drawing.Point(8, 115);
-            this.panelEvento.Name = "panelEvento";
-            this.panelEvento.Size = new System.Drawing.Size(377, 363);
-            this.panelEvento.TabIndex = 12;
-            // 
-            // txtComentarioEvento
-            // 
-            this.txtComentarioEvento.Location = new System.Drawing.Point(83, 304);
-            this.txtComentarioEvento.Multiline = true;
-            this.txtComentarioEvento.Name = "txtComentarioEvento";
-            this.txtComentarioEvento.Size = new System.Drawing.Size(265, 37);
-            this.txtComentarioEvento.TabIndex = 39;
-            this.txtComentarioEvento.Text = "Oscar Navarro\r\nBuena info !!!";
-            // 
-            // pbOtroPerfil
-            // 
-            this.pbOtroPerfil.Location = new System.Drawing.Point(31, 304);
-            this.pbOtroPerfil.Name = "pbOtroPerfil";
-            this.pbOtroPerfil.Size = new System.Drawing.Size(41, 37);
-            this.pbOtroPerfil.TabIndex = 30;
-            this.pbOtroPerfil.TabStop = false;
-            // 
-            // lblComentarios
-            // 
-            this.lblComentarios.AutoSize = true;
-            this.lblComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComentarios.Location = new System.Drawing.Point(11, 274);
-            this.lblComentarios.Name = "lblComentarios";
-            this.lblComentarios.Size = new System.Drawing.Size(148, 15);
-            this.lblComentarios.TabIndex = 28;
-            this.lblComentarios.Text = "Ver todos los comentarios";
-            // 
-            // lblLinea2
-            // 
-            this.lblLinea2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLinea2.Location = new System.Drawing.Point(3, 263);
-            this.lblLinea2.Name = "lblLinea2";
-            this.lblLinea2.Size = new System.Drawing.Size(371, 1);
-            this.lblLinea2.TabIndex = 27;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(258, 240);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(61, 15);
-            this.label19.TabIndex = 26;
-            this.label19.Text = "Comentar";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(224, 237);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(26, 23);
-            this.button7.TabIndex = 25;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(80, 241);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(58, 15);
-            this.label20.TabIndex = 24;
-            this.label20.Text = "Me gusta";
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = global::LP2Soft.Properties.Resources.like;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(48, 237);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(26, 23);
-            this.button8.TabIndex = 23;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // btnComentarEstatico
-            // 
-            this.btnComentarEstatico.BackColor = System.Drawing.Color.Transparent;
-            this.btnComentarEstatico.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
-            this.btnComentarEstatico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnComentarEstatico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnComentarEstatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComentarEstatico.Location = new System.Drawing.Point(291, 208);
-            this.btnComentarEstatico.Name = "btnComentarEstatico";
-            this.btnComentarEstatico.Size = new System.Drawing.Size(26, 21);
-            this.btnComentarEstatico.TabIndex = 22;
-            this.btnComentarEstatico.UseVisualStyleBackColor = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(323, 209);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(21, 15);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "15";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(51, 209);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(21, 15);
-            this.label22.TabIndex = 20;
-            this.label22.Text = "15";
-            // 
-            // btnMeGustaEstatico
-            // 
-            this.btnMeGustaEstatico.BackColor = System.Drawing.Color.Transparent;
-            this.btnMeGustaEstatico.BackgroundImage = global::LP2Soft.Properties.Resources.like;
-            this.btnMeGustaEstatico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMeGustaEstatico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnMeGustaEstatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMeGustaEstatico.Location = new System.Drawing.Point(22, 208);
-            this.btnMeGustaEstatico.Name = "btnMeGustaEstatico";
-            this.btnMeGustaEstatico.Size = new System.Drawing.Size(23, 19);
-            this.btnMeGustaEstatico.TabIndex = 18;
-            this.btnMeGustaEstatico.UseVisualStyleBackColor = false;
-            // 
-            // lblLinea1
-            // 
-            this.lblLinea1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLinea1.Location = new System.Drawing.Point(3, 230);
-            this.lblLinea1.Name = "lblLinea1";
-            this.lblLinea1.Size = new System.Drawing.Size(371, 1);
-            this.lblLinea1.TabIndex = 17;
-            // 
-            // txtDescripcionEvento
-            // 
-            this.txtDescripcionEvento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcionEvento.Location = new System.Drawing.Point(31, 78);
-            this.txtDescripcionEvento.Multiline = true;
-            this.txtDescripcionEvento.Name = "txtDescripcionEvento";
-            this.txtDescripcionEvento.Size = new System.Drawing.Size(305, 105);
-            this.txtDescripcionEvento.TabIndex = 15;
-            this.txtDescripcionEvento.Text = resources.GetString("txtDescripcionEvento.Text");
-            // 
-            // lblFechaHoraCreacion
-            // 
-            this.lblFechaHoraCreacion.AutoSize = true;
-            this.lblFechaHoraCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHoraCreacion.Location = new System.Drawing.Point(80, 46);
-            this.lblFechaHoraCreacion.Name = "lblFechaHoraCreacion";
-            this.lblFechaHoraCreacion.Size = new System.Drawing.Size(110, 15);
-            this.lblFechaHoraCreacion.TabIndex = 11;
-            this.lblFechaHoraCreacion.Text = "01/10/2021 - 15:23";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(80, 15);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(114, 16);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "Antony Romero";
-            // 
-            // pbPerfil
-            // 
-            this.pbPerfil.Location = new System.Drawing.Point(14, 15);
-            this.pbPerfil.Name = "pbPerfil";
-            this.pbPerfil.Size = new System.Drawing.Size(50, 46);
-            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPerfil.TabIndex = 4;
-            this.pbPerfil.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.lblCrearPublicación);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Location = new System.Drawing.Point(33, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 57);
-            this.panel1.TabIndex = 5;
-            // 
-            // lblCrearPublicación
-            // 
-            this.lblCrearPublicación.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCrearPublicación.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCrearPublicación.Location = new System.Drawing.Point(59, 17);
-            this.lblCrearPublicación.Name = "lblCrearPublicación";
-            this.lblCrearPublicación.Size = new System.Drawing.Size(223, 23);
-            this.lblCrearPublicación.TabIndex = 22;
-            this.lblCrearPublicación.Text = "Crear publicación";
-            this.lblCrearPublicación.Click += new System.EventHandler(this.lblCrearPublicación_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 46);
-            this.pictureBox4.TabIndex = 21;
-            this.pictureBox4.TabStop = false;
-            // 
-            // lblPublicacionesGenerales
-            // 
-            this.lblPublicacionesGenerales.AutoSize = true;
-            this.lblPublicacionesGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPublicacionesGenerales.Location = new System.Drawing.Point(3, 6);
-            this.lblPublicacionesGenerales.Name = "lblPublicacionesGenerales";
-            this.lblPublicacionesGenerales.Size = new System.Drawing.Size(207, 20);
-            this.lblPublicacionesGenerales.TabIndex = 4;
-            this.lblPublicacionesGenerales.Text = "Publicaciones Generales";
             // 
             // panelTendenciasMateriales
             // 
@@ -392,7 +103,7 @@ namespace LP2Soft.Eventos
             this.panelTendenciasMateriales.Controls.Add(this.panel4);
             this.panelTendenciasMateriales.Controls.Add(this.panel3);
             this.panelTendenciasMateriales.Controls.Add(this.panel2);
-            this.panelTendenciasMateriales.Controls.Add(this.label1);
+            this.panelTendenciasMateriales.Controls.Add(this.lblTendenciasMateriales);
             this.panelTendenciasMateriales.Location = new System.Drawing.Point(428, 3);
             this.panelTendenciasMateriales.Name = "panelTendenciasMateriales";
             this.panelTendenciasMateriales.Size = new System.Drawing.Size(374, 490);
@@ -766,7 +477,7 @@ namespace LP2Soft.Eventos
             this.lblComentar.Size = new System.Drawing.Size(61, 15);
             this.lblComentar.TabIndex = 18;
             this.lblComentar.Text = "Comentar";
-            this.lblComentar.Click += new System.EventHandler(this.lblComentar_Click);
+            // this.lblComentar.Click += new System.EventHandler(this.lblComentar_Click);
             // 
             // lblMeGusta
             // 
@@ -790,7 +501,7 @@ namespace LP2Soft.Eventos
             this.btnComentar.Size = new System.Drawing.Size(26, 23);
             this.btnComentar.TabIndex = 16;
             this.btnComentar.UseVisualStyleBackColor = false;
-            this.btnComentar.Click += new System.EventHandler(this.btnComentar_Click);
+            //this.btnComentar.Click += new System.EventHandler(this.btnComentar_Click);
             // 
             // btnMeGusta
             // 
@@ -877,234 +588,67 @@ namespace LP2Soft.Eventos
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lblTendenciasMateriales
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tendencias en Materiales";
+            this.lblTendenciasMateriales.AutoSize = true;
+            this.lblTendenciasMateriales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTendenciasMateriales.Location = new System.Drawing.Point(3, 6);
+            this.lblTendenciasMateriales.Name = "lblTendenciasMateriales";
+            this.lblTendenciasMateriales.Size = new System.Drawing.Size(214, 20);
+            this.lblTendenciasMateriales.TabIndex = 3;
+            this.lblTendenciasMateriales.Text = "Tendencias en Materiales";
             // 
-            // panel5
+            // panelCrearPublicacion
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.pictureBox5);
-            this.panel5.Controls.Add(this.label24);
-            this.panel5.Controls.Add(this.label25);
-            this.panel5.Controls.Add(this.label26);
-            this.panel5.Controls.Add(this.button9);
-            this.panel5.Controls.Add(this.label27);
-            this.panel5.Controls.Add(this.button10);
-            this.panel5.Controls.Add(this.button11);
-            this.panel5.Controls.Add(this.label28);
-            this.panel5.Controls.Add(this.label29);
-            this.panel5.Controls.Add(this.button12);
-            this.panel5.Controls.Add(this.label30);
-            this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.label31);
-            this.panel5.Controls.Add(this.label32);
-            this.panel5.Controls.Add(this.pictureBox6);
-            this.panel5.Location = new System.Drawing.Point(8, 503);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(377, 363);
-            this.panel5.TabIndex = 40;
+            this.panelCrearPublicacion.BackColor = System.Drawing.Color.White;
+            this.panelCrearPublicacion.Controls.Add(this.lblCrearPublicación);
+            this.panelCrearPublicacion.Controls.Add(this.pictureBox4);
+            this.panelCrearPublicacion.Location = new System.Drawing.Point(42, 51);
+            this.panelCrearPublicacion.Name = "panelCrearPublicacion";
+            this.panelCrearPublicacion.Size = new System.Drawing.Size(297, 57);
+            this.panelCrearPublicacion.TabIndex = 7;
             // 
-            // textBox3
+            // lblCrearPublicación
             // 
-            this.textBox3.Location = new System.Drawing.Point(83, 304);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(265, 37);
-            this.textBox3.TabIndex = 39;
-            this.textBox3.Text = "Oscar Navarro\r\nBuena info !!!";
+            this.lblCrearPublicación.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCrearPublicación.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCrearPublicación.Location = new System.Drawing.Point(59, 17);
+            this.lblCrearPublicación.Name = "lblCrearPublicación";
+            this.lblCrearPublicación.Size = new System.Drawing.Size(223, 23);
+            this.lblCrearPublicación.TabIndex = 22;
+            this.lblCrearPublicación.Text = "Crear publicación";
+            this.lblCrearPublicación.Click += new System.EventHandler(this.lblCrearPublicación_Click);
             // 
-            // pictureBox5
+            // pictureBox4
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(31, 304);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(41, 37);
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 46);
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
             // 
-            // label24
+            // lblPublicacionesGenerales
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(11, 274);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(148, 15);
-            this.label24.TabIndex = 28;
-            this.label24.Text = "Ver todos los comentarios";
-            // 
-            // label25
-            // 
-            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label25.Location = new System.Drawing.Point(3, 263);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(371, 1);
-            this.label25.TabIndex = 27;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(258, 240);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(61, 15);
-            this.label26.TabIndex = 26;
-            this.label26.Text = "Comentar";
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(224, 237);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(26, 23);
-            this.button9.TabIndex = 25;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(80, 241);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(58, 15);
-            this.label27.TabIndex = 24;
-            this.label27.Text = "Me gusta";
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = global::LP2Soft.Properties.Resources.like;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(48, 237);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(26, 23);
-            this.button10.TabIndex = 23;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = global::LP2Soft.Properties.Resources.chat_de_burbujas;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(291, 208);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(26, 21);
-            this.button11.TabIndex = 22;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(323, 209);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(21, 15);
-            this.label28.TabIndex = 21;
-            this.label28.Text = "15";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(51, 209);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(21, 15);
-            this.label29.TabIndex = 20;
-            this.label29.Text = "15";
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.BackgroundImage = global::LP2Soft.Properties.Resources.like;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(22, 208);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(23, 19);
-            this.button12.TabIndex = 18;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // label30
-            // 
-            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label30.Location = new System.Drawing.Point(3, 230);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(371, 1);
-            this.label30.TabIndex = 17;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(31, 78);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(305, 105);
-            this.textBox4.TabIndex = 15;
-            this.textBox4.Text = resources.GetString("textBox4.Text");
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(80, 46);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(110, 15);
-            this.label31.TabIndex = 11;
-            this.label31.Text = "01/10/2021 - 15:23";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(80, 15);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(114, 16);
-            this.label32.TabIndex = 9;
-            this.label32.Text = "Antony Romero";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(14, 15);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 46);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
+            this.lblPublicacionesGenerales.AutoSize = true;
+            this.lblPublicacionesGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPublicacionesGenerales.Location = new System.Drawing.Point(12, 9);
+            this.lblPublicacionesGenerales.Name = "lblPublicacionesGenerales";
+            this.lblPublicacionesGenerales.Size = new System.Drawing.Size(207, 20);
+            this.lblPublicacionesGenerales.TabIndex = 6;
+            this.lblPublicacionesGenerales.Text = "Publicaciones Generales";
             // 
             // frmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 495);
+            this.Controls.Add(this.panelCrearPublicacion);
+            this.Controls.Add(this.lblPublicacionesGenerales);
             this.Controls.Add(this.panelTendenciasMateriales);
             this.Controls.Add(this.panelPublicacionesGenerales);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHomePage";
             this.Text = "frmHomePage";
-            this.panelPublicacionesGenerales.ResumeLayout(false);
-            this.panelPublicacionesGenerales.PerformLayout();
-            this.panelEvento.ResumeLayout(false);
-            this.panelEvento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOtroPerfil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelTendenciasMateriales.ResumeLayout(false);
             this.panelTendenciasMateriales.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1116,21 +660,18 @@ namespace LP2Soft.Eventos
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panelCrearPublicacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panelPublicacionesGenerales;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblPublicacionesGenerales;
         private System.Windows.Forms.Panel panelTendenciasMateriales;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTendenciasMateriales;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblCantidadComentarios;
         private System.Windows.Forms.Label lblCantidadLikes;
@@ -1173,43 +714,9 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panelCrearPublicacion;
         private System.Windows.Forms.Label lblCrearPublicación;
-        private System.Windows.Forms.Panel panelEvento;
-        private System.Windows.Forms.TextBox txtComentarioEvento;
-        private System.Windows.Forms.PictureBox pbOtroPerfil;
-        private System.Windows.Forms.Label lblComentarios;
-        private System.Windows.Forms.Label lblLinea2;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button btnComentarEstatico;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button btnMeGustaEstatico;
-        private System.Windows.Forms.Label lblLinea1;
-        private System.Windows.Forms.TextBox txtDescripcionEvento;
-        private System.Windows.Forms.Label lblFechaHoraCreacion;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.PictureBox pbPerfil;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblPublicacionesGenerales;
     }
 }

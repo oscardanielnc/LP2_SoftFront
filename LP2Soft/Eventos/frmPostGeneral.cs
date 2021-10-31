@@ -12,9 +12,50 @@ namespace LP2Soft.Eventos
 {
     public partial class frmPostGeneral : Form
     {
+        UsuarioWS.usuario _usuario;
+        PublicacionesWS.postGenerico _post;
+        ComentarioWS.comentario _comentarioCreado;
         public frmPostGeneral()
         {
             InitializeComponent();
         }
+
+        public frmPostGeneral(PublicacionesWS.postGenerico pp, UsuarioWS.usuario usuario)
+        {
+            InitializeComponent();
+            _usuario = usuario;
+            _post = pp;
+            lblNombre.Text = pp.usuario.nombre;
+            lblFechaHoraCreacion.Text = pp.fechaRegistro.ToString("dd-MM-yyyy");
+            txtContenido.Text = pp.contenido;
+            lblCantidadMeGusta.Text = pp.likes.ToString();
+            lblCantidadComentarios.Text = pp.numeroComent.ToString();
+        }
+
+        private void btnComentarDinamico_Click(object sender, EventArgs e)
+        {
+            frmCrearComentario formCrearComentario = new frmCrearComentario(_post, _usuario);
+
+            if (formCrearComentario.ShowDialog() == DialogResult.OK)
+            {
+                panelComentarios.Controls.Clear();
+                _comentarioCreado = formCrearComentario.ComentarioCreado;
+                _comentarioCreado.usuario.nombre = _usuario.nombre;
+                frmComentario plantilla = new frmComentario(_comentarioCreado, _usuario);
+                plantilla.TopLevel = false;
+                plantilla.Dock = DockStyle.Top;
+                panelComentarios.Controls.Add(plantilla);
+                panelComentarios.Controls.SetChildIndex(plantilla, 0);
+                plantilla.Visible = true;
+            }
+
+            formCrearComentario = null;
+        }
+
+        private void btnComentarEstatico_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

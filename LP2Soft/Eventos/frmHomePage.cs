@@ -12,39 +12,68 @@ namespace LP2Soft.Eventos
 {
     public partial class frmHomePage : Form
     {
+        UsuarioWS.usuario _usuario;
+        PublicacionesWS.PublicacionesWSClient _daoPost;
+        BindingList<PublicacionesWS.postGenerico> _publicaciones;
+        PublicacionesWS.postGenerico _postCreado;
         public frmHomePage()
         {
             InitializeComponent();
         }
 
-        private void btnComentar_Click(object sender, EventArgs e)
+        public frmHomePage(UsuarioWS.usuario usuario)
         {
-            frmCrearComentario frmCrearComentario = new frmCrearComentario();
-            frmCrearComentario.ShowDialog();
-        }
-
-        private void lblComentar_Click(object sender, EventArgs e)
-        {
-            frmCrearComentario frmCrearComentario = new frmCrearComentario();
-            frmCrearComentario.ShowDialog();
+            InitializeComponent();
+            _usuario = usuario;
+            panelPublicacionesGenerales.Controls.Clear();
+            _daoPost = new PublicacionesWS.PublicacionesWSClient();
+            PublicacionesWS.postGenerico[] posts = _daoPost.listarPost();
+            if (posts != null)
+                _publicaciones = new BindingList<PublicacionesWS.postGenerico>(posts.ToList());
+            else
+                _publicaciones = null;
+            if (_publicaciones != null)
+            {
+                foreach (PublicacionesWS.postGenerico p in _publicaciones)
+                {
+                    frmPostGeneral plantillaPost = new frmPostGeneral(p, _usuario);
+                    plantillaPost.TopLevel = false;
+                    plantillaPost.Dock = DockStyle.Top;
+                    panelPublicacionesGenerales.Controls.Add(plantillaPost);
+                    panelPublicacionesGenerales.Controls.SetChildIndex(plantillaPost, 0);
+                    plantillaPost.Visible = true;
+                }
+            }
         }
 
         private void lblCrearPublicación_Click(object sender, EventArgs e)
         {
-            frmCrearPostGeneral frmCrearPostGeneral = new frmCrearPostGeneral();
-            frmCrearPostGeneral.ShowDialog();
-        }
+            frmCrearPostGeneral frmCrearPostGeneral = new frmCrearPostGeneral(_usuario);
+            if (frmCrearPostGeneral.ShowDialog() == DialogResult.OK)
+            {
+                panelPublicacionesGenerales.Controls.Clear();
+                _postCreado = frmCrearPostGeneral.PostCreado;
+                _postCreado.usuario.nombre = _usuario.nombre;
+                frmPostGeneral plantilla = new frmPostGeneral(_postCreado, _usuario);
+                plantilla.TopLevel = false;
+                plantilla.Dock = DockStyle.Top;
+                panelPublicacionesGenerales.Controls.Add(plantilla);
+                panelPublicacionesGenerales.Controls.SetChildIndex(plantilla, 0);
+                plantilla.Visible = true;
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            frmCrearComentario frmCrearComentario = new frmCrearComentario();
-            frmCrearComentario.ShowDialog();
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-            frmCrearComentario frmCrearComentario = new frmCrearComentario();
-            frmCrearComentario.ShowDialog();
+                if (_publicaciones != null)
+                {
+                    foreach (PublicacionesWS.postGenerico p in _publicaciones)
+                    {
+                        frmPostGeneral plantillaPost = new frmPostGeneral(p, _usuario);
+                        plantillaPost.TopLevel = false;
+                        plantillaPost.Dock = DockStyle.Top;
+                        panelPublicacionesGenerales.Controls.Add(plantillaPost);
+                        panelPublicacionesGenerales.Controls.SetChildIndex(plantillaPost, 0);
+                        plantillaPost.Visible = true;
+                    }
+                }
+            }
         }
     }
 }

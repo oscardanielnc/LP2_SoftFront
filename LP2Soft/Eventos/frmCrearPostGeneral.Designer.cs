@@ -31,7 +31,7 @@ namespace LP2Soft.Eventos
         {
             this.lbCrearPublicacion = new System.Windows.Forms.Label();
             this.lbQueEstasPensando = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtContenido = new System.Windows.Forms.TextBox();
             this.btnPublicar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
@@ -58,13 +58,13 @@ namespace LP2Soft.Eventos
             this.lbQueEstasPensando.TabIndex = 3;
             this.lbQueEstasPensando.Text = "¿Qué estás pensando?";
             // 
-            // textBox1
+            // txtContenido
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 161);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(370, 78);
-            this.textBox1.TabIndex = 4;
+            this.txtContenido.Location = new System.Drawing.Point(16, 161);
+            this.txtContenido.Multiline = true;
+            this.txtContenido.Name = "txtContenido";
+            this.txtContenido.Size = new System.Drawing.Size(370, 78);
+            this.txtContenido.TabIndex = 4;
             // 
             // btnPublicar
             // 
@@ -74,6 +74,7 @@ namespace LP2Soft.Eventos
             this.btnPublicar.TabIndex = 7;
             this.btnPublicar.Text = "Publicar";
             this.btnPublicar.UseVisualStyleBackColor = true;
+            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click);
             // 
             // lblNombre
             // 
@@ -102,7 +103,7 @@ namespace LP2Soft.Eventos
             this.ClientSize = new System.Drawing.Size(398, 308);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnPublicar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtContenido);
             this.Controls.Add(this.lbQueEstasPensando);
             this.Controls.Add(this.pbPerfil);
             this.Controls.Add(this.lbCrearPublicacion);
@@ -119,7 +120,7 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label lbCrearPublicacion;
         private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.Label lbQueEstasPensando;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtContenido;
         private System.Windows.Forms.Button btnPublicar;
         private System.Windows.Forms.Label lblNombre;
     }
