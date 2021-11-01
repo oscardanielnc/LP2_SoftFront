@@ -96,6 +96,7 @@ namespace LP2Soft.Eventos
             this.panelPublicacionesGenerales.Name = "panelPublicacionesGenerales";
             this.panelPublicacionesGenerales.Size = new System.Drawing.Size(408, 372);
             this.panelPublicacionesGenerales.TabIndex = 3;
+            this.panelPublicacionesGenerales.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelPublicacionesGenerales_Scroll);
             // 
             // panelTendenciasMateriales
             // 
@@ -477,7 +478,6 @@ namespace LP2Soft.Eventos
             this.lblComentar.Size = new System.Drawing.Size(61, 15);
             this.lblComentar.TabIndex = 18;
             this.lblComentar.Text = "Comentar";
-            // this.lblComentar.Click += new System.EventHandler(this.lblComentar_Click);
             // 
             // lblMeGusta
             // 
@@ -501,7 +501,6 @@ namespace LP2Soft.Eventos
             this.btnComentar.Size = new System.Drawing.Size(26, 23);
             this.btnComentar.TabIndex = 16;
             this.btnComentar.UseVisualStyleBackColor = false;
-            //this.btnComentar.Click += new System.EventHandler(this.btnComentar_Click);
             // 
             // btnMeGusta
             // 
@@ -594,9 +593,9 @@ namespace LP2Soft.Eventos
             this.lblTendenciasMateriales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTendenciasMateriales.Location = new System.Drawing.Point(3, 6);
             this.lblTendenciasMateriales.Name = "lblTendenciasMateriales";
-            this.lblTendenciasMateriales.Size = new System.Drawing.Size(214, 20);
+            this.lblTendenciasMateriales.Size = new System.Drawing.Size(205, 20);
             this.lblTendenciasMateriales.TabIndex = 3;
-            this.lblTendenciasMateriales.Text = "Tendencias en Materiales";
+            this.lblTendenciasMateriales.Text = "Materiales en Tendencia";
             // 
             // panelCrearPublicacion
             // 

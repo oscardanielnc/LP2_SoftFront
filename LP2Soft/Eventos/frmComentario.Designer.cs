@@ -39,6 +39,7 @@ namespace LP2Soft.Eventos
             // 
             // panelComentario
             // 
+            this.panelComentario.BackColor = System.Drawing.Color.White;
             this.panelComentario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelComentario.Controls.Add(this.lblComentario);
             this.panelComentario.Controls.Add(this.lblNombre);
@@ -78,7 +79,8 @@ namespace LP2Soft.Eventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 56);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(333, 53);
             this.Controls.Add(this.panelComentario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmComentario";

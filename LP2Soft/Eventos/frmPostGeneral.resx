@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="txtDescripcionEvento.Text" xml:space="preserve">
-    <value>Las inscripciones siguen abiertas!
-No se pierdan la oportunidad de ser uno de los Top 100 desarrolladores de 
-Latinoamérica en la #MaratonBehindTheCode
-
-Mayor información en
-https://maratona.dev/es?linkId=133777239
-</value>
-  </data>
 </root>

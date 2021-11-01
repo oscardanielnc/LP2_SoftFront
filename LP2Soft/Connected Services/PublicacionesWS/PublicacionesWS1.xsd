@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarPost" type="tns:eliminarPost" />
+  <xs:element name="eliminarPostResponse" type="tns:eliminarPostResponse" />
+  <xs:element name="insertarComentario" type="tns:insertarComentario" />
+  <xs:element name="insertarComentarioResponse" type="tns:insertarComentarioResponse" />
   <xs:element name="insertarPost" type="tns:insertarPost" />
   <xs:element name="insertarPostResponse" type="tns:insertarPostResponse" />
   <xs:element name="listarPost" type="tns:listarPost" />
   <xs:element name="listarPostResponse" type="tns:listarPostResponse" />
+  <xs:element name="modificarPost" type="tns:modificarPost" />
+  <xs:element name="modificarPostResponse" type="tns:modificarPostResponse" />
   <xs:complexType name="listarPost">
     <xs:sequence />
   </xs:complexType>
@@ -19,7 +25,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="post">
+  <xs:complexType name="post" abstract="true">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
       <xs:element name="bloqueado" type="xs:boolean" />
@@ -90,6 +96,45 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarPostResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarComentario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comentario" type="tns:comentario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comentario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comentario" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idComentario" type="xs:int" />
+      <xs:element minOccurs="0" name="post" type="tns:post" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarComentarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPostResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPostResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

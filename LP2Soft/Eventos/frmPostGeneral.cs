@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Soft.Home;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,14 +15,15 @@ namespace LP2Soft.Eventos
     {
         UsuarioWS.usuario _usuario;
         PublicacionesWS.postGenerico _post;
-        ComentarioWS.comentario _comentarioCreado;
+        PublicacionesWS.comentario _comentarioCreado;
         public frmPostGeneral()
         {
             InitializeComponent();
         }
 
         public frmPostGeneral(PublicacionesWS.postGenerico pp, UsuarioWS.usuario usuario)
-        {
+        { 
+
             InitializeComponent();
             _usuario = usuario;
             _post = pp;
@@ -30,6 +32,12 @@ namespace LP2Soft.Eventos
             txtContenido.Text = pp.contenido;
             lblCantidadMeGusta.Text = pp.likes.ToString();
             lblCantidadComentarios.Text = pp.numeroComent.ToString();
+
+            if (frmHome.Usuario.idUsuario == pp.usuario.idUsuario)
+                btnModificar.Visible = true;
+            else
+                btnModificar.Visible = false;
+
         }
 
         private void btnComentarDinamico_Click(object sender, EventArgs e)
@@ -49,10 +57,20 @@ namespace LP2Soft.Eventos
                 plantilla.Visible = true;
             }
 
-            formCrearComentario = null;
+            // formCrearComentario = null;
         }
 
-        private void btnComentarEstatico_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmModificarPostGeneral formModificarPost = new frmModificarPostGeneral(_post);
+
+            if (formModificarPost.ShowDialog() == DialogResult.OK) 
+            { 
+                
+            }
+        }
+
+        private void lblComentarios_Click(object sender, EventArgs e)
         {
 
         }

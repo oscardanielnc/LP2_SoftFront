@@ -16,6 +16,7 @@ namespace LP2Soft.Eventos
         PublicacionesWS.PublicacionesWSClient _daoPost;
         BindingList<PublicacionesWS.postGenerico> _publicaciones;
         PublicacionesWS.postGenerico _postCreado;
+        private int _cantidadPost;
         public frmHomePage()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace LP2Soft.Eventos
         public frmHomePage(UsuarioWS.usuario usuario)
         {
             InitializeComponent();
+            _cantidadPost = 0;
             _usuario = usuario;
             panelPublicacionesGenerales.Controls.Clear();
             _daoPost = new PublicacionesWS.PublicacionesWSClient();
@@ -36,12 +38,15 @@ namespace LP2Soft.Eventos
             {
                 foreach (PublicacionesWS.postGenerico p in _publicaciones)
                 {
+                    if (_cantidadPost == 3) break;
                     frmPostGeneral plantillaPost = new frmPostGeneral(p, _usuario);
                     plantillaPost.TopLevel = false;
                     plantillaPost.Dock = DockStyle.Top;
                     panelPublicacionesGenerales.Controls.Add(plantillaPost);
                     panelPublicacionesGenerales.Controls.SetChildIndex(plantillaPost, 0);
                     plantillaPost.Visible = true;
+                    //_publicaciones.RemoveAt(_cantidadPost);
+                    _cantidadPost++;
                 }
             }
         }
@@ -71,6 +76,36 @@ namespace LP2Soft.Eventos
                         panelPublicacionesGenerales.Controls.Add(plantillaPost);
                         panelPublicacionesGenerales.Controls.SetChildIndex(plantillaPost, 0);
                         plantillaPost.Visible = true;
+                    }
+                }
+            }
+        }
+
+        private void panelPublicacionesGenerales_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.NewValue == panelPublicacionesGenerales.VerticalScroll.Maximum - panelPublicacionesGenerales.VerticalScroll.LargeChange + 1)
+            {
+                if (e.NewValue != e.OldValue) // Checking when the scrollbar is at bottom and user clicks/scrolls the scrollbar      
+                {
+                    int cantidadFinal = _cantidadPost + 3;
+                    int contador=0;
+                    foreach (PublicacionesWS.postGenerico p in _publicaciones)
+                    {
+                        if (contador < _cantidadPost)
+                        {
+                            contador++;
+                            continue;
+                        }
+                        if (_cantidadPost == cantidadFinal) break;
+                        frmPostGeneral plantillaPost = new frmPostGeneral(p, _usuario);
+                        plantillaPost.TopLevel = false;
+                        plantillaPost.Dock = DockStyle.Top;
+                        panelPublicacionesGenerales.Controls.Add(plantillaPost);
+                        panelPublicacionesGenerales.Controls.SetChildIndex(plantillaPost, 0);
+                        plantillaPost.Visible = true;
+                        //_publicaciones.RemoveAt(contador);
+                        //contador++;
+                        _cantidadPost++;
                     }
                 }
             }

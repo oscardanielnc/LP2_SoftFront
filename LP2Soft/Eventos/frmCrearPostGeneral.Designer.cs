@@ -44,9 +44,9 @@ namespace LP2Soft.Eventos
             this.lbCrearPublicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCrearPublicacion.Location = new System.Drawing.Point(12, 9);
             this.lbCrearPublicacion.Name = "lbCrearPublicacion";
-            this.lbCrearPublicacion.Size = new System.Drawing.Size(148, 20);
+            this.lbCrearPublicacion.Size = new System.Drawing.Size(149, 20);
             this.lbCrearPublicacion.TabIndex = 0;
-            this.lbCrearPublicacion.Text = "Crear publicación";
+            this.lbCrearPublicacion.Text = "Crear Publicación";
             // 
             // lbQueEstasPensando
             // 

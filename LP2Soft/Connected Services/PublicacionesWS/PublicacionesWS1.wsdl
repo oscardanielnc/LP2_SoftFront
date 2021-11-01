@@ -11,20 +11,50 @@
   <message name="insertarPostResponse">
     <part name="parameters" element="tns:insertarPostResponse" />
   </message>
+  <message name="modificarPost">
+    <part name="parameters" element="tns:modificarPost" />
+  </message>
+  <message name="modificarPostResponse">
+    <part name="parameters" element="tns:modificarPostResponse" />
+  </message>
   <message name="listarPost">
     <part name="parameters" element="tns:listarPost" />
   </message>
   <message name="listarPostResponse">
     <part name="parameters" element="tns:listarPostResponse" />
   </message>
+  <message name="eliminarPost">
+    <part name="parameters" element="tns:eliminarPost" />
+  </message>
+  <message name="eliminarPostResponse">
+    <part name="parameters" element="tns:eliminarPostResponse" />
+  </message>
+  <message name="insertarComentario">
+    <part name="parameters" element="tns:insertarComentario" />
+  </message>
+  <message name="insertarComentarioResponse">
+    <part name="parameters" element="tns:insertarComentarioResponse" />
+  </message>
   <portType name="PublicacionesWS">
     <operation name="insertarPost">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostRequest" message="tns:insertarPost" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostResponse" message="tns:insertarPostResponse" />
     </operation>
+    <operation name="modificarPost">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostRequest" message="tns:modificarPost" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostResponse" message="tns:modificarPostResponse" />
+    </operation>
     <operation name="listarPost">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostRequest" message="tns:listarPost" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostResponse" message="tns:listarPostResponse" />
+    </operation>
+    <operation name="eliminarPost">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostRequest" message="tns:eliminarPost" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostResponse" message="tns:eliminarPostResponse" />
+    </operation>
+    <operation name="insertarComentario">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioRequest" message="tns:insertarComentario" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioResponse" message="tns:insertarComentarioResponse" />
     </operation>
   </portType>
   <binding name="PublicacionesWSPortBinding" type="tns:PublicacionesWS">
@@ -38,7 +68,34 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="modificarPost">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarPost">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPost">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarComentario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

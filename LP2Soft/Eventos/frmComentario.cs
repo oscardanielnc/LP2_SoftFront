@@ -12,7 +12,7 @@ namespace LP2Soft.Eventos
 {
     public partial class frmComentario : Form
     {
-        public frmComentario(ComentarioWS.comentario comentario, UsuarioWS.usuario usuario)
+        public frmComentario(PublicacionesWS.comentario comentario, UsuarioWS.usuario usuario)
         {
             InitializeComponent();
             lblNombre.Text = usuario.nombre;

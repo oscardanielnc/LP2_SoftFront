@@ -29,8 +29,8 @@ namespace LP2Soft.Eventos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPostGeneral));
             this.panelPostGeneral = new System.Windows.Forms.Panel();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.panelComentarios = new System.Windows.Forms.Panel();
             this.lblComentarios = new System.Windows.Forms.Label();
             this.lblLinea2 = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@ namespace LP2Soft.Eventos
             // 
             this.panelPostGeneral.BackColor = System.Drawing.Color.White;
             this.panelPostGeneral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPostGeneral.Controls.Add(this.btnModificar);
             this.panelPostGeneral.Controls.Add(this.panelComentarios);
             this.panelPostGeneral.Controls.Add(this.lblComentarios);
             this.panelPostGeneral.Controls.Add(this.lblLinea2);
@@ -76,6 +77,20 @@ namespace LP2Soft.Eventos
             this.panelPostGeneral.Size = new System.Drawing.Size(377, 367);
             this.panelPostGeneral.TabIndex = 13;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
+            this.btnModificar.BackgroundImage = global::LP2Soft.Properties.Resources.configuraciones__4_;
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Location = new System.Drawing.Point(341, 3);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(31, 29);
+            this.btnModificar.TabIndex = 30;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // panelComentarios
             // 
             this.panelComentarios.AutoScroll = true;
@@ -93,6 +108,7 @@ namespace LP2Soft.Eventos
             this.lblComentarios.Size = new System.Drawing.Size(148, 15);
             this.lblComentarios.TabIndex = 28;
             this.lblComentarios.Text = "Ver todos los comentarios";
+            this.lblComentarios.Click += new System.EventHandler(this.lblComentarios_Click);
             // 
             // lblLinea2
             // 
@@ -161,7 +177,6 @@ namespace LP2Soft.Eventos
             this.btnComentarEstatico.Size = new System.Drawing.Size(26, 21);
             this.btnComentarEstatico.TabIndex = 22;
             this.btnComentarEstatico.UseVisualStyleBackColor = false;
-            //this.btnComentarEstatico.Click += new System.EventHandler(this.btnComentarEstatico_Click);
             // 
             // lblCantidadComentarios
             // 
@@ -212,7 +227,6 @@ namespace LP2Soft.Eventos
             this.txtContenido.Name = "txtContenido";
             this.txtContenido.Size = new System.Drawing.Size(305, 105);
             this.txtContenido.TabIndex = 15;
-            this.txtContenido.Text = resources.GetString("txtContenido.Text");
             // 
             // lblFechaHoraCreacion
             // 
@@ -279,5 +293,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.Panel panelComentarios;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

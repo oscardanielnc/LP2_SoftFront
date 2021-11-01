@@ -88,11 +88,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\ComentarioWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\UsuarioWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -214,6 +209,12 @@
     </Compile>
     <Compile Include="Eventos\frmModificarEvento.Designer.cs">
       <DependentUpon>frmModificarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos\frmModificarPostGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmModificarPostGeneral.Designer.cs">
+      <DependentUpon>frmModificarPostGeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="Eventos\frmPostGeneral.cs">
       <SubType>Form</SubType>
@@ -427,6 +428,9 @@
     <EmbeddedResource Include="Cursos\frmHomeFavoritos.resx">
       <DependentUpon>frmHomeFavoritos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmComentario.resx">
+      <DependentUpon>frmComentario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmCrearComentario.resx">
       <DependentUpon>frmCrearComentario.cs</DependentUpon>
     </EmbeddedResource>
@@ -450,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmModificarEvento.resx">
       <DependentUpon>frmModificarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmModificarPostGeneral.resx">
+      <DependentUpon>frmModificarPostGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmPostGeneral.resx">
       <DependentUpon>frmPostGeneral.cs</DependentUpon>
@@ -540,9 +547,6 @@
     <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
       <DependentUpon>tarjUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\ComentarioWS\LP2Soft.ComentarioWS.insertarComentarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\CursosWS\CursosWS1.wsdl" />
     <None Include="Connected Services\CursosWS\CursosWS1.xsd">
       <SubType>Designer</SubType>
@@ -557,10 +561,19 @@
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.eliminarPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertarComentarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertarPostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.modificarPostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.postGenerico.datasource">
@@ -568,10 +581,6 @@
     </None>
     <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.wsdl" />
     <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ComentarioWS\ComentarioWS.wsdl" />
-    <None Include="Connected Services\ComentarioWS\ComentarioWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarUsuarioResponse.datasource">
@@ -801,7 +810,6 @@
     <WCFMetadataStorage Include="Connected Services\PublicacionesWS\" />
     <WCFMetadataStorage Include="Connected Services\NotificacionesWS\" />
     <WCFMetadataStorage Include="Connected Services\CursosWS\" />
-    <WCFMetadataStorage Include="Connected Services\ComentarioWS\" />
     <WCFMetadataStorage Include="Connected Services\UsuarioWS\" />
   </ItemGroup>
   <ItemGroup>
@@ -857,18 +865,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CursosWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ComentarioWS\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ComentarioWS\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ComentarioWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
