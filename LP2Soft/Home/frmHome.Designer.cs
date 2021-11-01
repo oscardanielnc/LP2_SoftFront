@@ -443,6 +443,7 @@ namespace LP2Soft.Home
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Image = global::LP2Soft.Properties.Resources.search;
             this.btnBuscar.Location = new System.Drawing.Point(491, 16);
             this.btnBuscar.Name = "btnBuscar";

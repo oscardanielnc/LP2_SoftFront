@@ -42,10 +42,10 @@ namespace LP2Soft.Home
 
             actualizarInfoPantallas(usuario);
         }
-        public static void actualizarInfoPantallas (UsuarioWS.usuario usuario)
+        public static void actualizarInfoPantallas(UsuarioWS.usuario usuario)
         {
             _usuario = usuario;
-            _lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido + " - " + _usuario.idUsuario;
+            _lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido;
             // aquí viene la foto
         }
         private void inicializarColorBotones()
@@ -89,9 +89,9 @@ namespace LP2Soft.Home
         }
         public void abrirFormularioHome(Form formulario, MenuHome menuSeleccionar)
         {
-                inicializarColorBotones();
-                obtenerBoton(menuSeleccionar).BackColor = Color.FromArgb(0, 45, 86);
-                abrirFormulario(formulario);
+            inicializarColorBotones();
+            obtenerBoton(menuSeleccionar).BackColor = Color.FromArgb(0, 45, 86);
+            abrirFormulario(formulario);
         }
 
 
@@ -109,7 +109,7 @@ namespace LP2Soft.Home
             else subPanelCursos.Visible = false;
         }
 
-        public void btnTodosMisCursos_Click(object sender, EventArgs e) => 
+        public void btnTodosMisCursos_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmCursosHome(), MenuHome.CursosTodos);
         private void btnCursosFavoritos_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmHomeFavoritos(), MenuHome.CursosFavoritos);
@@ -147,7 +147,7 @@ namespace LP2Soft.Home
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string textoBusqueda = txtBusqueda.Text;
-            if(!textoBusqueda.Equals(""))
+            if (!textoBusqueda.Equals(""))
                 abrirFormularioHome(new frmBusquedaUsuarios(textoBusqueda), MenuHome.Notificaciones); //
             else
                 MessageBox.Show("Debe escribir un nombre u código PUCP en el buscador", "Warning",
@@ -157,13 +157,12 @@ namespace LP2Soft.Home
         // Efecto Placeholder
         private void txtBusqueda_Enter(object sender, EventArgs e)
         {
-            if(txtBusqueda.Text == "Buscar a un usuario")
+            if (txtBusqueda.Text == "Buscar a un usuario")
             {
                 txtBusqueda.Text = "";
                 txtBusqueda.ForeColor = Color.Black;
             }
         }
-
         private void txtBusqueda_Leave(object sender, EventArgs e)
         {
             if (txtBusqueda.Text == "")

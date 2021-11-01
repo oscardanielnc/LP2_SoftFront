@@ -27,9 +27,10 @@ namespace LP2Soft.Tarjetas
         }
         private void posicionarLabel(UsuarioWS.usuario usuario)
         {
-            int tamanio = lblNombre.Size.Width;
             lblNombre.Text = usuario.nombre + " " + usuario.apellido;
-            lblNombre.Location = new Point((int)((150 - tamanio) / 2), 64);
+            int tamanio = lblNombre.Size.Width;
+            lblCodigo.Text = "(" + usuario.codigoPUCP + ")";
+            lblNombre.Location = new Point(((int)(150 - tamanio) / 2), 67);
         }
 
         private void btnVerPerfil_Click(object sender, EventArgs e)

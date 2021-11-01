@@ -95,6 +95,7 @@ namespace LP2Soft.Perfil
             // 
             // btnResenias
             // 
+            this.btnResenias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResenias.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnResenias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnResenias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -110,6 +111,7 @@ namespace LP2Soft.Perfil
             // 
             // btnCursos
             // 
+            this.btnCursos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCursos.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCursos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -125,6 +127,7 @@ namespace LP2Soft.Perfil
             // 
             // btnAmigos
             // 
+            this.btnAmigos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAmigos.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAmigos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnAmigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -140,6 +143,7 @@ namespace LP2Soft.Perfil
             // 
             // btnPublicaciones
             // 
+            this.btnPublicaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPublicaciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPublicaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnPublicaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,6 +159,7 @@ namespace LP2Soft.Perfil
             // 
             // btnInformacion
             // 
+            this.btnInformacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInformacion.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnInformacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -179,6 +184,7 @@ namespace LP2Soft.Perfil
             // 
             // btnMensaje
             // 
+            this.btnMensaje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMensaje.Image = global::LP2Soft.Properties.Resources.bubble;
             this.btnMensaje.Location = new System.Drawing.Point(666, 185);
             this.btnMensaje.Name = "btnMensaje";
@@ -190,6 +196,7 @@ namespace LP2Soft.Perfil
             // 
             // btnAmigo
             // 
+            this.btnAmigo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAmigo.ImageIndex = 1;
             this.btnAmigo.ImageList = this.imgAmigo;
             this.btnAmigo.Location = new System.Drawing.Point(702, 185);

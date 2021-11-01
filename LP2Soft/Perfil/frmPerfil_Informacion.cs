@@ -18,7 +18,7 @@ namespace LP2Soft.Perfil
         {
             _usuario = usuario;
             InitializeComponent();
-            if(!propio) btnEditar.Visible = false;
+            if (!propio) btnEditar.Visible = false;
             actualizarpantallas();
         }
         private void actualizarpantallas()
@@ -27,12 +27,17 @@ namespace LP2Soft.Perfil
             lblCorreo.Text = _usuario.correo;
             // aquí viene la fecha de nacimiento
             rtbDescripcion.Text = _usuario.descripcion;
-            
-            if(_usuario.esAsesor)
+
+            if (_usuario.esAsesor)
             {
                 panelAsesor.Visible = true;
                 // aquí viene la definición de valores del asesor
-            } else panelAsesor.Visible = false;
+            }
+            else
+            {
+                panelAsesor.Visible = false;
+                this.Size = new Size(799, 260);
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

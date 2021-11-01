@@ -24,13 +24,13 @@ namespace LP2Soft.Home
         }
         private void renderizarBusqueda(string codigoNombre)
         {
-            _usuariosBusqueda = new BindingList<UsuarioWS.usuario>(_daoUsuario.listarUsuariosNombreCodigo(codigoNombre));
-            if(_usuariosBusqueda != null)
+            try
             {
+                _usuariosBusqueda = new BindingList<UsuarioWS.usuario>(_daoUsuario.listarUsuariosNombreCodigo(codigoNombre));
                 lblInfo.Text = "Se han encontrado " + _usuariosBusqueda.Count + " usuarios.";
                 //renderizamos las tarjetas
                 int i = 0;
-                foreach(UsuarioWS.usuario u in _usuariosBusqueda)
+                foreach (UsuarioWS.usuario u in _usuariosBusqueda)
                 {
                     tarjUsuario tUsuario = new tarjUsuario(u);
                     tUsuario.TopLevel = false;
@@ -41,15 +41,19 @@ namespace LP2Soft.Home
                     tUsuario.Visible = true;
                     i++;
                 }
-            } else
+            }
+            catch (Exception ex)
+            {
                 lblInfo.Text = "No se han encontrado usuarios que coincidan con esta búsqueda.";
+            }
         }
         private Point generarCoordenadas(int i)
         {
-            int x = (i%5)* 156;
-            int y = ((int)i/5)* 130;
+            int x = (i % 5) * 156;
+            int y = ((int)i / 5) * 146;
             return new Point(x, y);
         }
 
     }
 }
+

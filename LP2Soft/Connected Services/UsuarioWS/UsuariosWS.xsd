@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="insertarUsuario" type="tns:insertarUsuario" />
   <xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse" />
+  <xs:element name="listarAmigosNombreCodigo" type="tns:listarAmigosNombreCodigo" />
+  <xs:element name="listarAmigosNombreCodigoResponse" type="tns:listarAmigosNombreCodigoResponse" />
   <xs:element name="listarUsuariosNombreCodigo" type="tns:listarUsuariosNombreCodigo" />
   <xs:element name="listarUsuariosNombreCodigoResponse" type="tns:listarUsuariosNombreCodigoResponse" />
   <xs:element name="modificarUsuario" type="tns:modificarUsuario" />
@@ -64,7 +66,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="post">
+  <xs:complexType name="post" abstract="true">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
       <xs:element name="bloqueado" type="xs:boolean" />
@@ -93,6 +95,16 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="mostrarUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="correoCodigo" type="xs:string" />
@@ -104,12 +116,13 @@
       <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigo">
+  <xs:complexType name="listarAmigosNombreCodigo">
     <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
       <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigoResponse">
+  <xs:complexType name="listarAmigosNombreCodigoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>

@@ -23,7 +23,7 @@ namespace LP2Soft.Perfil
         public frmPerfil(UsuarioWS.usuario usuario)
         {
             _usuario = usuario;
-            if(usuario.idUsuario == frmHome.Usuario.idUsuario)
+            if (usuario.idUsuario == frmHome.Usuario.idUsuario)
                 _propio = true;
             else _propio = false;
             InitializeComponent();
@@ -31,12 +31,13 @@ namespace LP2Soft.Perfil
             _menuSeleccionado = MenuPerfil.Informacion; // se muestra el menu de información por defecto
             _esAmigo = false; // _daoUsuario(saber si es mi amigo)
             actualizarPantallas();
-            
-            if(_propio)
+
+            if (_propio)
             {
                 btnAmigo.Visible = false;
                 btnMensaje.Visible = false;
-            } else
+            }
+            else
             {
                 btnAmigo.Visible = true;
                 btnMensaje.Visible = true;
@@ -70,7 +71,7 @@ namespace LP2Soft.Perfil
         }
         private void btnInformacion_Click(object sender, EventArgs e)
         {
-            if(_menuSeleccionado != MenuPerfil.Informacion)
+            if (_menuSeleccionado != MenuPerfil.Informacion)
             {
                 inicializarColorBotones();
                 btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
@@ -97,7 +98,7 @@ namespace LP2Soft.Perfil
                 inicializarColorBotones();
                 btnAmigos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Amigos;
-                abrirFormulario(new frmPerfil_Amigos());
+                abrirFormulario(new frmPerfil_Amigos(_usuario));
             }
         }
 

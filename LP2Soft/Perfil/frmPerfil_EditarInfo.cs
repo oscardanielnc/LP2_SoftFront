@@ -28,8 +28,11 @@ namespace LP2Soft.Perfil
                 panelAsesor.Visible = true;
                 // aquí viene la definición de valores del asesor
             }
-            else panelAsesor.Visible = false;
-
+            else
+            {
+                panelAsesor.Visible = false;
+                panelContenido.Size = new Size(805, 280);
+            }
 
             lblCodigo.Text = _usuarioActual.codigoPUCP;
             lblCorreo.Text = _usuarioActual.correo;
@@ -64,11 +67,12 @@ namespace LP2Soft.Perfil
             // foto
             // portada
             int resultado = _daoUsuario.modificarUsuario(_usuarioModificado);
-            if(resultado==0)
+            if (resultado == 0)
             {
                 MessageBox.Show("Ha ocurrido un error en el registro. Intentelo de nuevo más tarde.", "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else
+            }
+            else
             {
                 frmHome.actualizarInfoPantallas(_usuarioModificado);
                 frmHome.abrirFormulario(new frmPerfil(_usuarioModificado));
@@ -77,7 +81,7 @@ namespace LP2Soft.Perfil
 
         private void btnVerContrasenia_Click(object sender, EventArgs e)
         {
-            if(txtContrasenia.UseSystemPasswordChar)
+            if (txtContrasenia.UseSystemPasswordChar)
                 txtContrasenia.UseSystemPasswordChar = false;
             else txtContrasenia.UseSystemPasswordChar = true;
         }
