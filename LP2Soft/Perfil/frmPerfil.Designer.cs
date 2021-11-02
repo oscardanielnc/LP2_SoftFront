@@ -32,7 +32,7 @@ namespace LP2Soft.Perfil
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfil));
             this.lblTituloNombre = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgPerfil = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnResenias = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@ namespace LP2Soft.Perfil
             this.btnMensaje = new System.Windows.Forms.PictureBox();
             this.btnAmigo = new System.Windows.Forms.Label();
             this.imgAmigo = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).BeginInit();
@@ -60,15 +60,15 @@ namespace LP2Soft.Perfil
             this.lblTituloNombre.TabIndex = 7;
             this.lblTituloNombre.Text = "Oscar Daniel Navarro Cieza";
             // 
-            // pictureBox1
+            // imgPerfil
             // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.DSC_0498;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 135);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.imgPerfil.Image = global::LP2Soft.Properties.Resources.images;
+            this.imgPerfil.Location = new System.Drawing.Point(120, 135);
+            this.imgPerfil.Name = "imgPerfil";
+            this.imgPerfil.Size = new System.Drawing.Size(80, 80);
+            this.imgPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgPerfil.TabIndex = 8;
+            this.imgPerfil.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -223,12 +223,12 @@ namespace LP2Soft.Perfil
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTituloNombre);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imgPerfil);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfil";
             this.Text = "frmPerfil";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).EndInit();
@@ -240,7 +240,7 @@ namespace LP2Soft.Perfil
         #endregion
 
         private System.Windows.Forms.Label lblTituloNombre;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgPerfil;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelContenido;

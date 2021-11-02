@@ -76,7 +76,11 @@ namespace LP2Soft.Perfil
 
         private void txtBusquedaAmigos_Enter(object sender, EventArgs e)
         {
-
+            if (txtBusquedaAmigos.Text == "Buscar amigos")
+            {
+                txtBusquedaAmigos.Text = "";
+                txtBusquedaAmigos.ForeColor = Color.Black;
+            }
         }
     }
 }

@@ -62,8 +62,10 @@ namespace LP2Soft.Perfil
             this.lblModoEdicion = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgPerfil = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnSubirPerfil = new System.Windows.Forms.PictureBox();
+            this.ofdPerfil = new System.Windows.Forms.OpenFileDialog();
             this.panelContenido.SuspendLayout();
             this.panelAsesor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).BeginInit();
@@ -72,12 +74,14 @@ namespace LP2Soft.Perfil
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSubirPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContenido
             // 
+            this.panelContenido.AutoSize = true;
             this.panelContenido.BackColor = System.Drawing.SystemColors.Window;
             this.panelContenido.Controls.Add(this.panelAsesor);
             this.panelContenido.Controls.Add(this.panelGeneral);
@@ -86,7 +90,6 @@ namespace LP2Soft.Perfil
             this.panelContenido.Name = "panelContenido";
             this.panelContenido.Size = new System.Drawing.Size(805, 377);
             this.panelContenido.TabIndex = 16;
-            this.panelContenido.AutoSize = true;
             // 
             // panelAsesor
             // 
@@ -432,15 +435,15 @@ namespace LP2Soft.Perfil
             this.txtApellido.TabIndex = 18;
             this.txtApellido.Text = "Apellido";
             // 
-            // pictureBox1
+            // imgPerfil
             // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.DSC_0498;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 134);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.imgPerfil.Image = global::LP2Soft.Properties.Resources.images;
+            this.imgPerfil.Location = new System.Drawing.Point(120, 134);
+            this.imgPerfil.Name = "imgPerfil";
+            this.imgPerfil.Size = new System.Drawing.Size(80, 80);
+            this.imgPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgPerfil.TabIndex = 13;
+            this.imgPerfil.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -452,17 +455,33 @@ namespace LP2Soft.Perfil
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
+            // btnSubirPerfil
+            // 
+            this.btnSubirPerfil.Image = global::LP2Soft.Properties.Resources.upload_regular_24;
+            this.btnSubirPerfil.Location = new System.Drawing.Point(174, 189);
+            this.btnSubirPerfil.Name = "btnSubirPerfil";
+            this.btnSubirPerfil.Size = new System.Drawing.Size(25, 25);
+            this.btnSubirPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSubirPerfil.TabIndex = 62;
+            this.btnSubirPerfil.TabStop = false;
+            this.btnSubirPerfil.Click += new System.EventHandler(this.btnSubirPerfil_Click);
+            // 
+            // ofdPerfil
+            // 
+            this.ofdPerfil.FileName = "ofdPerfil";
+            // 
             // frmPerfil_EditarInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 601);
+            this.Controls.Add(this.btnSubirPerfil);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.lblModoEdicion);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imgPerfil);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfil_EditarInfo";
@@ -478,8 +497,9 @@ namespace LP2Soft.Perfil
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSubirPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,7 +509,7 @@ namespace LP2Soft.Perfil
 
         private System.Windows.Forms.Panel panelContenido;
         private System.Windows.Forms.Label lblModoEdicion;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgPerfil;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
@@ -522,5 +542,7 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Label lblCalificacion;
         private System.Windows.Forms.TextBox txtPrecioHora;
         private System.Windows.Forms.Panel panelGeneral;
+        private System.Windows.Forms.PictureBox btnSubirPerfil;
+        private System.Windows.Forms.OpenFileDialog ofdPerfil;
     }
 }

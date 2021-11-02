@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,9 +22,15 @@ namespace LP2Soft.Tarjetas
         {
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
             InitializeComponent();
+
             _codigo = usuario.codigoPUCP;
             posicionarLabel(usuario);
-            // aqui viene la foto
+
+            if (usuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(usuario.foto);
+                imgUsuario.Image = new Bitmap(ms1);
+            }
         }
         private void posicionarLabel(UsuarioWS.usuario usuario)
         {

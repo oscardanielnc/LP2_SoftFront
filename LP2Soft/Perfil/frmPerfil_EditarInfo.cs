@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace LP2Soft.Perfil
         private UsuarioWS.UsuariosWSClient _daoUsuario;
         private UsuarioWS.usuario _usuarioActual;
         private UsuarioWS.usuario _usuarioModificado;
+
+        private string _rutaFoto = "";
         public frmPerfil_EditarInfo(UsuarioWS.usuario usuario)
         {
             _usuarioActual = usuario;
@@ -41,7 +44,11 @@ namespace LP2Soft.Perfil
             txtNombre.Text = _usuarioActual.nombre;
             txtApellido.Text = _usuarioActual.apellido;
             txtContrasenia.Text = _usuarioActual.contrasenia;
-            // foto
+            if (_usuarioActual.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(_usuarioActual.foto);
+                imgPerfil.Image = new Bitmap(ms1);
+            }
             // portada
         }
 
@@ -64,7 +71,7 @@ namespace LP2Soft.Perfil
             _usuarioModificado.contrasenia = txtContrasenia.Text;
             _usuarioModificado.esAsesor = _usuarioActual.esAsesor;
             _usuarioModificado.esAdmin = _usuarioActual.esAdmin;
-            // foto
+            _usuarioModificado.foto = _usuarioActual.foto;
             // portada
             int resultado = _daoUsuario.modificarUsuario(_usuarioModificado);
             if (resultado == 0)
@@ -84,6 +91,26 @@ namespace LP2Soft.Perfil
             if (txtContrasenia.UseSystemPasswordChar)
                 txtContrasenia.UseSystemPasswordChar = false;
             else txtContrasenia.UseSystemPasswordChar = true;
+        }
+
+        private void btnSubirPerfil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ofdPerfil.ShowDialog() == DialogResult.OK)
+                {
+                    _rutaFoto = ofdPerfil.FileName;
+                    imgPerfil.Image = Image.FromFile(_rutaFoto);
+
+                    FileStream fs = new FileStream(_rutaFoto, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    _usuarioActual.foto = br.ReadBytes((int)fs.Length);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+            }
         }
     }
 }

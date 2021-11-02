@@ -45,6 +45,7 @@ namespace LP2Soft.Perfil
             this.txtBusquedaAmigos.Size = new System.Drawing.Size(240, 21);
             this.txtBusquedaAmigos.TabIndex = 0;
             this.txtBusquedaAmigos.Text = "Buscar amigos";
+            this.txtBusquedaAmigos.Enter += new System.EventHandler(this.txtBusquedaAmigos_Enter);
             this.txtBusquedaAmigos.Leave += new System.EventHandler(this.txtBusquedaAmigos_Leave);
             // 
             // lblInfo
