@@ -29,7 +29,8 @@ namespace LP2Soft.Perfil
             if (_usuarioActual.esAsesor)
             {
                 panelAsesor.Visible = true;
-                // aquí viene la definición de valores del asesor
+                lblCalificacion.Text = _usuarioActual.asesor.calificacion.ToString();
+                txtPrecioHora.Text = _usuarioActual.asesor.precioPorHora.ToString();
             }
             else
             {
@@ -39,10 +40,7 @@ namespace LP2Soft.Perfil
 
             lblCodigo.Text = _usuarioActual.codigoPUCP;
             lblCorreo.Text = _usuarioActual.correo;
-            // aquí viene la fecha de nacimiento
-                // dtpFechaNacimiento.Value = _usuarioActual.fechaNacimiento;
-
-
+            dtpFechaNacimiento.Value = _usuarioActual.fechaNacimiento;
             rtbDescripcion.Text = _usuarioActual.descripcion;
             txtNombre.Text = _usuarioActual.nombre;
             txtApellido.Text = _usuarioActual.apellido;

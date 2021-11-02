@@ -32,7 +32,8 @@ namespace LP2Soft.Perfil
             if (_usuario.esAsesor)
             {
                 panelAsesor.Visible = true;
-                // aquí viene la definición de valores del asesor
+                lblCalificacion.Text = _usuario.asesor.calificacion.ToString();
+                lblPrecioHora.Text = _usuario.asesor.precioPorHora.ToString();
             }
             else
             {
