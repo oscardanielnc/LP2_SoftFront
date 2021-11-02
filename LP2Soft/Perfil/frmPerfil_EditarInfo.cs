@@ -40,6 +40,9 @@ namespace LP2Soft.Perfil
             lblCodigo.Text = _usuarioActual.codigoPUCP;
             lblCorreo.Text = _usuarioActual.correo;
             // aquí viene la fecha de nacimiento
+                // dtpFechaNacimiento.Value = _usuarioActual.fechaNacimiento;
+
+
             rtbDescripcion.Text = _usuarioActual.descripcion;
             txtNombre.Text = _usuarioActual.nombre;
             txtApellido.Text = _usuarioActual.apellido;
@@ -65,6 +68,9 @@ namespace LP2Soft.Perfil
             _usuarioModificado.apellido = txtApellido.Text;
             _usuarioModificado.codigoPUCP = lblCodigo.Text;
             // aquí viene la fecha de nacimiento
+            _usuarioModificado.fechaNacimiento = dtpFechaNacimiento.Value;
+            _usuarioModificado.fechaNacimientoSpecified = true;
+
             _usuarioModificado.correo = lblCorreo.Text;
             _usuarioModificado.especialidad = _usuarioActual.especialidad;
             _usuarioModificado.descripcion = rtbDescripcion.Text;
@@ -101,6 +107,7 @@ namespace LP2Soft.Perfil
                 {
                     _rutaFoto = ofdPerfil.FileName;
                     imgPerfil.Image = Image.FromFile(_rutaFoto);
+                    imgPerfil.Image = (Image)(new Bitmap(imgPerfil.Image, new Size(60, 60))); // resizeImage
 
                     FileStream fs = new FileStream(_rutaFoto, FileMode.Open, FileAccess.Read);
                     BinaryReader br = new BinaryReader(fs);

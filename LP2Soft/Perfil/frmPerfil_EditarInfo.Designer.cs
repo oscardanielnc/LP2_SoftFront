@@ -457,6 +457,7 @@ namespace LP2Soft.Perfil
             // 
             // btnSubirPerfil
             // 
+            this.btnSubirPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubirPerfil.Image = global::LP2Soft.Properties.Resources.upload_regular_24;
             this.btnSubirPerfil.Location = new System.Drawing.Point(174, 189);
             this.btnSubirPerfil.Name = "btnSubirPerfil";
