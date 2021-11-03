@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace LP2Soft.Perfil
                 _propio = true;
             else _propio = false;
             InitializeComponent();
-            btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+            btnInformacion.BackColor = Color.FromArgb(28, 103, 179);
             _menuSeleccionado = MenuPerfil.Informacion; // se muestra el menu de información por defecto
             _esAmigo = false; // _daoUsuario(saber si es mi amigo)
             actualizarPantallas();
@@ -48,7 +49,11 @@ namespace LP2Soft.Perfil
         private void actualizarPantallas()
         {
             lblTituloNombre.Text = _usuario.nombre + " " + _usuario.apellido;
-            // aquí viene la foto
+            if (_usuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(_usuario.foto);
+                imgPerfil.Image = new Bitmap(ms1);
+            }
         }
         public void abrirFormulario(Form formulario)
         {
@@ -63,18 +68,18 @@ namespace LP2Soft.Perfil
         }
         private void inicializarColorBotones()
         {
-            btnInformacion.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            btnPublicaciones.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            btnAmigos.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            btnCursos.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            btnResenias.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            btnInformacion.BackColor = SystemColors.ControlDarkDark;
+            btnPublicaciones.BackColor = SystemColors.ControlDarkDark;
+            btnAmigos.BackColor = SystemColors.ControlDarkDark;
+            btnCursos.BackColor = SystemColors.ControlDarkDark;
+            btnResenias.BackColor = SystemColors.ControlDarkDark;
         }
         private void btnInformacion_Click(object sender, EventArgs e)
         {
             if (_menuSeleccionado != MenuPerfil.Informacion)
             {
                 inicializarColorBotones();
-                btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+                btnInformacion.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Informacion;
                 abrirFormulario(new frmPerfil_Informacion(_usuario, _propio));
             }
@@ -85,7 +90,7 @@ namespace LP2Soft.Perfil
             if (_menuSeleccionado != MenuPerfil.Publicaciones)
             {
                 inicializarColorBotones();
-                btnPublicaciones.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+                btnPublicaciones.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Publicaciones;
                 abrirFormulario(new frmPerfil_Publicaciones());
             }
@@ -96,7 +101,7 @@ namespace LP2Soft.Perfil
             if (_menuSeleccionado != MenuPerfil.Amigos)
             {
                 inicializarColorBotones();
-                btnAmigos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+                btnAmigos.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Amigos;
                 abrirFormulario(new frmPerfil_Amigos(_usuario));
             }
@@ -107,7 +112,7 @@ namespace LP2Soft.Perfil
             if (_menuSeleccionado != MenuPerfil.Cursos)
             {
                 inicializarColorBotones();
-                btnCursos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+                btnCursos.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Cursos;
                 abrirFormulario(new frmPerfil_CursosAsesorados());
             }
@@ -118,7 +123,7 @@ namespace LP2Soft.Perfil
             if (_menuSeleccionado != MenuPerfil.Resenias)
             {
                 inicializarColorBotones();
-                btnResenias.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+                btnResenias.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Resenias;
                 abrirFormulario(new frmPerfil_Resenias());
             }

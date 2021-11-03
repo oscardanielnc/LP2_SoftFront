@@ -21,27 +21,19 @@ namespace LP2Soft.Home
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string codigoPucp = txtCodigo.Text;
-            string correo = txtCorreo.Text;
-            string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
-            string contrasenia1 = txtContrasenia.Text;
-            string contrasenia2 = txtRepetirContrasenia.Text;
-            string formatofecha = dtpFechaNacimiento.Value.ToString("dd-MM-yyyy");
-            DateTime fechaNacimiento = DateTime.Parse(formatofecha);
-
-            if(!codigoPucp.Equals("") && !correo.Equals("") && !nombre.Equals("")
-                 && !apellido.Equals("") && !contrasenia1.Equals("") && !contrasenia2.Equals(""))
+            if(!txtCodigo.Text.Equals("") && !txtCorreo.Text.Equals("") && !txtNombre.Text.Equals("")
+                 && !txtApellido.Text.Equals("") && !txtContrasenia.Text.Equals("") && !txtRepetirContrasenia.Text.Equals(""))
             {
-                if(contrasenia1.Equals(contrasenia2))
+                if(txtContrasenia.Text.Equals(txtRepetirContrasenia.Text))
                 {
                     _usuario = new UsuarioWS.usuario();
-                    _usuario.codigoPUCP = codigoPucp;
-                    _usuario.correo = correo;
-                    _usuario.nombre = nombre;
-                    _usuario.apellido = apellido;
-                    _usuario.contrasenia = contrasenia1;
-                    _usuario.fechaNacimiento = fechaNacimiento;
+                    _usuario.codigoPUCP = txtCodigo.Text;
+                    _usuario.correo = txtCorreo.Text;
+                    _usuario.nombre = txtNombre.Text;
+                    _usuario.apellido = txtApellido.Text;
+                    _usuario.contrasenia = txtContrasenia.Text;
+                    _usuario.fechaNacimiento = dtpFechaNacimiento.Value;
+                    _usuario.fechaNacimientoSpecified = true;
                     _usuario.especialidad = "Ing. Informática";
                     _usuario.esAdmin = false;
                     _usuario.esAsesor = false;

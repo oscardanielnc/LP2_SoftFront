@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,20 +24,16 @@ namespace LP2Soft.Home
         private static Form _formActivo = null;
         private static Panel _panelContenido = null;
         private static Label _lblNombreUsuario = null;
+        private static PictureBox _imgUsuario = null;
 
         private static UsuarioWS.usuario _usuario;
         public static UsuarioWS.usuario Usuario { get => _usuario; set => _usuario = value; }
-        public frmHome()
-        {
-            InitializeComponent();
-            _panelContenido = panelContenido;
-            abrirFormularioHome(new frmHomePage(), MenuHome.Novedades); // sección de novedades por defecto
-        }
         public frmHome(UsuarioWS.usuario usuario)
         {
             InitializeComponent();
             _usuario = usuario;
             _lblNombreUsuario = lblNombreUsuario;
+            _imgUsuario = imgUsuario;
             _panelContenido = panelContenido;
             abrirFormularioHome(new frmHomePage(_usuario), MenuHome.Novedades); // sección de novedades por defecto
 
@@ -46,7 +43,14 @@ namespace LP2Soft.Home
         {
             _usuario = usuario;
             _lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido;
-            // aquí viene la foto
+            int tamanio = _lblNombreUsuario.Size.Height;
+            _lblNombreUsuario.Location = new Point(840, ((int)(62 - tamanio) / 2));
+
+            if (_usuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(_usuario.foto);
+                _imgUsuario.Image = new Bitmap(ms1);
+            }
         }
         private void inicializarColorBotones()
         {
