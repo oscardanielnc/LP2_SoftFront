@@ -49,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asesor\frmAsesorBuscarFiltros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Asesor\frmAsesorBuscarFiltros.Designer.cs">
-      <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
-    </Compile>
     <Compile Include="Asesor\frmBuscarAsesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -386,9 +380,6 @@
     <Compile Include="Tarjetas\tarjUsuario.Designer.cs">
       <DependentUpon>tarjUsuario.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Asesor\frmAsesorBuscarFiltros.resx">
-      <DependentUpon>frmAsesorBuscarFiltros.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
     </EmbeddedResource>

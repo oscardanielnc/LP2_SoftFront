@@ -13,21 +13,14 @@ namespace LP2Soft.Asesor
 {
     public partial class frmBuscarAsesor : Form
     {
+        private UsuarioWS.UsuariosWSClient _daoUsuario;
+        private UsuarioWS.usuario _user;
+
         private frmHome _formHome;
-        public frmBuscarAsesor()
-        {
-            InitializeComponent();
-        }
         public frmBuscarAsesor(frmHome formHome)
         {
             InitializeComponent();
             _formHome = formHome;
-        }
-
-        private void lblFiltros_Click(object sender, EventArgs e)
-        {
-            frmAsesorBuscarFiltros formFiltros = new frmAsesorBuscarFiltros();
-            formFiltros.ShowDialog();
         }
 
         private void btnPostular_Click(object sender, EventArgs e)

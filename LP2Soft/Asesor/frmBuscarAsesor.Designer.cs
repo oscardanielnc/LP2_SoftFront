@@ -29,10 +29,24 @@ namespace LP2Soft.Asesor
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarAsesor));
             this.lblBuscarAsesor = new System.Windows.Forms.Label();
-            this.lblFiltros = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblCursoRec3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblAsesorRecomendado3 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblAsesorRecomendado2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblAsesorRecomendado1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAsesoresRecomendados = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -67,22 +81,15 @@ namespace LP2Soft.Asesor
             this.pictureBoxAlumno1 = new System.Windows.Forms.PictureBox();
             this.btnPostular = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textBoxBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumno5)).BeginInit();
@@ -97,37 +104,19 @@ namespace LP2Soft.Asesor
             this.panelAsesor1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumno1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBuscarAsesor
             // 
             this.lblBuscarAsesor.AutoSize = true;
             this.lblBuscarAsesor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblBuscarAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarAsesor.Location = new System.Drawing.Point(7, 9);
+            this.lblBuscarAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarAsesor.Location = new System.Drawing.Point(8, 15);
             this.lblBuscarAsesor.Name = "lblBuscarAsesor";
-            this.lblBuscarAsesor.Size = new System.Drawing.Size(235, 31);
+            this.lblBuscarAsesor.Size = new System.Drawing.Size(209, 29);
             this.lblBuscarAsesor.TabIndex = 2;
             this.lblBuscarAsesor.Text = "Buscar Asesores";
-            // 
-            // lblFiltros
-            // 
-            this.lblFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltros.Image = ((System.Drawing.Image)(resources.GetObject("lblFiltros.Image")));
-            this.lblFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblFiltros.Location = new System.Drawing.Point(413, 15);
-            this.lblFiltros.Name = "lblFiltros";
-            this.lblFiltros.Size = new System.Drawing.Size(84, 28);
-            this.lblFiltros.TabIndex = 3;
-            this.lblFiltros.Text = "   Filtros";
-            this.lblFiltros.UseVisualStyleBackColor = true;
-            this.lblFiltros.Click += new System.EventHandler(this.lblFiltros_Click);
             // 
             // panel1
             // 
@@ -142,6 +131,170 @@ namespace LP2Soft.Asesor
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(295, 465);
             this.panel1.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel5.Controls.Add(this.lblCursoRec3);
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.lblAsesorRecomendado3);
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Location = new System.Drawing.Point(57, 436);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(180, 180);
+            this.panel5.TabIndex = 15;
+            // 
+            // lblCursoRec3
+            // 
+            this.lblCursoRec3.AutoSize = true;
+            this.lblCursoRec3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoRec3.Location = new System.Drawing.Point(21, 103);
+            this.lblCursoRec3.Name = "lblCursoRec3";
+            this.lblCursoRec3.Size = new System.Drawing.Size(46, 16);
+            this.lblCursoRec3.TabIndex = 21;
+            this.lblCursoRec3.Text = "Curso:";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(50, 144);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Ver Perfil";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(21, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Calificación:";
+            // 
+            // lblAsesorRecomendado3
+            // 
+            this.lblAsesorRecomendado3.AutoSize = true;
+            this.lblAsesorRecomendado3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsesorRecomendado3.Location = new System.Drawing.Point(28, 79);
+            this.lblAsesorRecomendado3.Name = "lblAsesorRecomendado3";
+            this.lblAsesorRecomendado3.Size = new System.Drawing.Size(123, 20);
+            this.lblAsesorRecomendado3.TabIndex = 12;
+            this.lblAsesorRecomendado3.Text = "Oscar Navarro";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::LP2Soft.Properties.Resources.images;
+            this.pictureBox3.Location = new System.Drawing.Point(58, 16);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lblAsesorRecomendado2);
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Location = new System.Drawing.Point(57, 238);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(180, 180);
+            this.panel4.TabIndex = 15;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(50, 144);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Ver Perfil";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 16);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Calificación:";
+            // 
+            // lblAsesorRecomendado2
+            // 
+            this.lblAsesorRecomendado2.AutoSize = true;
+            this.lblAsesorRecomendado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsesorRecomendado2.Location = new System.Drawing.Point(22, 79);
+            this.lblAsesorRecomendado2.Name = "lblAsesorRecomendado2";
+            this.lblAsesorRecomendado2.Size = new System.Drawing.Size(133, 20);
+            this.lblAsesorRecomendado2.TabIndex = 12;
+            this.lblAsesorRecomendado2.Text = "Antony Romero";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::LP2Soft.Properties.Resources.images;
+            this.pictureBox2.Location = new System.Drawing.Point(58, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lblAsesorRecomendado1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(57, 44);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(180, 180);
+            this.panel3.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(50, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Ver Perfil";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 122);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 16);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Calificación:";
+            // 
+            // lblAsesorRecomendado1
+            // 
+            this.lblAsesorRecomendado1.AutoSize = true;
+            this.lblAsesorRecomendado1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsesorRecomendado1.Location = new System.Drawing.Point(33, 79);
+            this.lblAsesorRecomendado1.Name = "lblAsesorRecomendado1";
+            this.lblAsesorRecomendado1.Size = new System.Drawing.Size(116, 20);
+            this.lblAsesorRecomendado1.TabIndex = 12;
+            this.lblAsesorRecomendado1.Text = "Renzo Richle";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.images;
+            this.pictureBox1.Location = new System.Drawing.Point(58, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // lblAsesoresRecomendados
             // 
@@ -297,7 +450,7 @@ namespace LP2Soft.Asesor
             // 
             this.lblCalificacion4.AutoSize = true;
             this.lblCalificacion4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificacion4.Location = new System.Drawing.Point(17, 109);
+            this.lblCalificacion4.Location = new System.Drawing.Point(17, 120);
             this.lblCalificacion4.Name = "lblCalificacion4";
             this.lblCalificacion4.Size = new System.Drawing.Size(80, 16);
             this.lblCalificacion4.TabIndex = 15;
@@ -348,7 +501,7 @@ namespace LP2Soft.Asesor
             // 
             this.lblCalificacion3.AutoSize = true;
             this.lblCalificacion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificacion3.Location = new System.Drawing.Point(23, 109);
+            this.lblCalificacion3.Location = new System.Drawing.Point(23, 120);
             this.lblCalificacion3.Name = "lblCalificacion3";
             this.lblCalificacion3.Size = new System.Drawing.Size(80, 16);
             this.lblCalificacion3.TabIndex = 17;
@@ -399,7 +552,7 @@ namespace LP2Soft.Asesor
             // 
             this.lblCalificacion2.AutoSize = true;
             this.lblCalificacion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificacion2.Location = new System.Drawing.Point(17, 110);
+            this.lblCalificacion2.Location = new System.Drawing.Point(17, 123);
             this.lblCalificacion2.Name = "lblCalificacion2";
             this.lblCalificacion2.Size = new System.Drawing.Size(80, 16);
             this.lblCalificacion2.TabIndex = 14;
@@ -450,7 +603,7 @@ namespace LP2Soft.Asesor
             // 
             this.lblCalificación1.AutoSize = true;
             this.lblCalificación1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificación1.Location = new System.Drawing.Point(21, 110);
+            this.lblCalificación1.Location = new System.Drawing.Point(21, 123);
             this.lblCalificación1.Name = "lblCalificación1";
             this.lblCalificación1.Size = new System.Drawing.Size(80, 16);
             this.lblCalificación1.TabIndex = 13;
@@ -494,158 +647,22 @@ namespace LP2Soft.Asesor
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // panel3
+            // textBoxBuscar
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(57, 44);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(180, 180);
-            this.panel3.TabIndex = 15;
+            this.textBoxBuscar.Location = new System.Drawing.Point(220, 21);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(231, 20);
+            this.textBoxBuscar.TabIndex = 9;
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Location = new System.Drawing.Point(50, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Ver Perfil";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 16);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Calificación:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Renzo Richle";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(58, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(57, 238);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(180, 180);
-            this.panel4.TabIndex = 15;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(50, 144);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Ver Perfil";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 16);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Calificación:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Renzo Richle";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::LP2Soft.Properties.Resources.images;
-            this.pictureBox2.Location = new System.Drawing.Point(58, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(57, 436);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(180, 180);
-            this.panel5.TabIndex = 15;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(50, 144);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Ver Perfil";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Calificación:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(33, 79);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Renzo Richle";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::LP2Soft.Properties.Resources.images;
-            this.pictureBox3.Location = new System.Drawing.Point(58, 16);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
+            this.btnBuscar.Image = global::LP2Soft.Properties.Resources.search;
+            this.btnBuscar.Location = new System.Drawing.Point(457, 19);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(22, 22);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.TabStop = false;
             // 
             // frmBuscarAsesor
             // 
@@ -653,16 +670,26 @@ namespace LP2Soft.Asesor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(823, 492);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.btnPostular);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblFiltros);
             this.Controls.Add(this.lblBuscarAsesor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBuscarAsesor";
             this.Text = "frmBuscarAsesor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -683,15 +710,7 @@ namespace LP2Soft.Asesor
             this.panelAsesor1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumno1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -700,7 +719,6 @@ namespace LP2Soft.Asesor
         #endregion
 
         private System.Windows.Forms.Label lblBuscarAsesor;
-        private System.Windows.Forms.Button lblFiltros;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblAsesoresRecomendados;
         private System.Windows.Forms.Panel panel2;
@@ -739,17 +757,20 @@ namespace LP2Soft.Asesor
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblAsesorRecomendado3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblAsesorRecomendado2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAsesorRecomendado1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblCursoRec3;
+        private System.Windows.Forms.TextBox textBoxBuscar;
+        private System.Windows.Forms.PictureBox btnBuscar;
     }
 }
