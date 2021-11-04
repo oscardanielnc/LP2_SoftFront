@@ -6,6 +6,8 @@
   <xs:element name="insertarComentarioResponse" type="tns:insertarComentarioResponse" />
   <xs:element name="insertarPost" type="tns:insertarPost" />
   <xs:element name="insertarPostResponse" type="tns:insertarPostResponse" />
+  <xs:element name="listarComentarios" type="tns:listarComentarios" />
+  <xs:element name="listarComentariosResponse" type="tns:listarComentariosResponse" />
   <xs:element name="listarPost" type="tns:listarPost" />
   <xs:element name="listarPostResponse" type="tns:listarPostResponse" />
   <xs:element name="modificarPost" type="tns:modificarPost" />
@@ -107,6 +109,25 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="listarComentarios">
+    <xs:sequence>
+      <xs:element name="idPost" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarComentariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comentario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comentario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comentario" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idComentario" type="xs:int" />
+      <xs:element minOccurs="0" name="post" type="tns:post" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarPost">
     <xs:sequence>
       <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
@@ -120,15 +141,6 @@
   <xs:complexType name="insertarComentario">
     <xs:sequence>
       <xs:element minOccurs="0" name="comentario" type="tns:comentario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="comentario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="comentario" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
-      <xs:element name="idComentario" type="xs:int" />
-      <xs:element minOccurs="0" name="post" type="tns:post" />
-      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarComentarioResponse">

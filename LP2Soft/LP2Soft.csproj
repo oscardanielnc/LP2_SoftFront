@@ -567,6 +567,9 @@
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.comentario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.eliminarPostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -574,6 +577,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertarPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarComentariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarPostResponse.datasource">
