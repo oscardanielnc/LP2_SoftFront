@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace LP2Soft.Eventos
             InitializeComponent();
             _post = post;
             _usuario = usuario;
+            if (_usuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(_usuario.foto);
+                pbPerfil.Image = new Bitmap(ms1);
+            }
             _daoComentario = new PublicacionesWS.PublicacionesWSClient();
             _comentario = new PublicacionesWS.comentario();
         }

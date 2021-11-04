@@ -547,18 +547,24 @@
     <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
       <DependentUpon>tarjUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\CursosWS\CursosWS.wsdl" />
-    <None Include="Connected Services\CursosWS\CursosWS.xsd">
+    <None Include="Connected Services\CursosWS\CursosWS1.wsdl" />
+    <None Include="Connected Services\CursosWS\CursosWS1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.helloResponse.datasource">
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.MostrarCursoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.helloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.wsdl" />
-    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.xsd">
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.wsdl" />
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.eliminarPostResponse.datasource">
@@ -579,9 +585,12 @@
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.postGenerico.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.wsdl" />
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.xsd">
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.wsdl" />
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarAsesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -590,6 +599,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarUsuariosNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarXnombreYcursoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.modificarUsuarioResponse.datasource">
@@ -601,8 +613,8 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UsuarioWS\UsuariosWS.wsdl" />
-    <None Include="Connected Services\UsuarioWS\UsuariosWS.xsd">
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

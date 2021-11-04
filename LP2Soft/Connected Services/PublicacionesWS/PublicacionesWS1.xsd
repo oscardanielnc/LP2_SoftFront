@@ -75,7 +75,24 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element name="creditos" type="xs:float" />
+      <xs:element name="creditosRequeridos" type="xs:float" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cursosRequeridos" nillable="true" type="tns:curso" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="especialidad" type="xs:string" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element name="favorito" type="xs:boolean" />
+      <xs:element name="idCurso" type="xs:int" />
+      <xs:element name="nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="posts" nillable="true" type="tns:post" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="profesores" nillable="true" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="profesor">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="calificacion" type="xs:float" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="evento">

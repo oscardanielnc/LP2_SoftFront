@@ -29,6 +29,8 @@ namespace LP2Soft.Eventos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPostGeneral));
             this.panelPostGeneral = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.panelComentarios = new System.Windows.Forms.Panel();
@@ -47,6 +49,7 @@ namespace LP2Soft.Eventos
             this.lblFechaHoraCreacion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelPostGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +75,7 @@ namespace LP2Soft.Eventos
             this.panelPostGeneral.Controls.Add(this.lblFechaHoraCreacion);
             this.panelPostGeneral.Controls.Add(this.lblNombre);
             this.panelPostGeneral.Controls.Add(this.pbPerfil);
-            this.panelPostGeneral.Location = new System.Drawing.Point(6, 16);
+            this.panelPostGeneral.Location = new System.Drawing.Point(12, 5);
             this.panelPostGeneral.Name = "panelPostGeneral";
             this.panelPostGeneral.Size = new System.Drawing.Size(377, 367);
             this.panelPostGeneral.TabIndex = 13;
@@ -96,7 +99,7 @@ namespace LP2Soft.Eventos
             this.panelComentarios.AutoScroll = true;
             this.panelComentarios.Location = new System.Drawing.Point(14, 292);
             this.panelComentarios.Name = "panelComentarios";
-            this.panelComentarios.Size = new System.Drawing.Size(344, 66);
+            this.panelComentarios.Size = new System.Drawing.Size(344, 70);
             this.panelComentarios.TabIndex = 29;
             // 
             // lblComentarios
@@ -155,15 +158,16 @@ namespace LP2Soft.Eventos
             // btnMeGustaDinamico
             // 
             this.btnMeGustaDinamico.BackColor = System.Drawing.Color.Transparent;
-            this.btnMeGustaDinamico.BackgroundImage = global::LP2Soft.Properties.Resources.like;
             this.btnMeGustaDinamico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMeGustaDinamico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnMeGustaDinamico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMeGustaDinamico.ImageList = this.imageList1;
             this.btnMeGustaDinamico.Location = new System.Drawing.Point(48, 237);
             this.btnMeGustaDinamico.Name = "btnMeGustaDinamico";
             this.btnMeGustaDinamico.Size = new System.Drawing.Size(26, 23);
             this.btnMeGustaDinamico.TabIndex = 23;
             this.btnMeGustaDinamico.UseVisualStyleBackColor = false;
+            this.btnMeGustaDinamico.Click += new System.EventHandler(this.btnMeGustaDinamico_Click);
             // 
             // btnComentarEstatico
             // 
@@ -257,11 +261,18 @@ namespace LP2Soft.Eventos
             this.pbPerfil.TabIndex = 4;
             this.pbPerfil.TabStop = false;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "like (1).png");
+            this.imageList1.Images.SetKeyName(1, "like.png");
+            // 
             // frmPostGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 395);
+            this.ClientSize = new System.Drawing.Size(390, 381);
             this.Controls.Add(this.panelPostGeneral);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -294,5 +305,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.Panel panelComentarios;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
