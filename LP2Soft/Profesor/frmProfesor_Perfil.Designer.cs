@@ -116,7 +116,7 @@ namespace LP2Soft.Profesor
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.FreedyPaz;
+            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.images;
             this.pictureBox1.Location = new System.Drawing.Point(124, 133);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 80);
@@ -126,7 +126,7 @@ namespace LP2Soft.Profesor
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::LP2Soft.Properties.Resources._67092642_375243393186725_3715283641414021357_n;
+            this.pictureBox2.Image = global::LP2Soft.Properties.Resources.campus_pucp_cia_letras_2020_03_1920x1080_1___copia;
             this.pictureBox2.Location = new System.Drawing.Point(96, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(640, 160);

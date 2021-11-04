@@ -22,8 +22,7 @@ namespace LP2Soft.Tarjetas
         {
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
             InitializeComponent();
-
-            _codigo = usuario.codigoPUCP;
+           _codigo = usuario.codigoPUCP;
             posicionarLabel(usuario);
 
             if (usuario.foto != null)
@@ -37,12 +36,13 @@ namespace LP2Soft.Tarjetas
             lblNombre.Text = usuario.nombre + " " + usuario.apellido;
             int tamanio = lblNombre.Size.Width;
             lblCodigo.Text = "(" + usuario.codigoPUCP + ")";
-            lblNombre.Location = new Point(((int)(150 - tamanio) / 2), 67);
+            lblNombre.Location = new Point(((int)(180 - tamanio) / 2), 67);
         }
 
         private void btnVerPerfil_Click(object sender, EventArgs e)
         {
             _usuarioVer = _daoUsuario.mostrarUsuario(_codigo, 1);
+           
             if (_usuarioVer != null)
                 frmHome.abrirFormulario(new frmPerfil(_usuarioVer));
         }

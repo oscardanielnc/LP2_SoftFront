@@ -15,12 +15,20 @@ namespace LP2Soft.Profesor
     {
         private static Form _formActivo = null;
         private static MenuProfesor _menuSeleccionado;
+        private CursosWS.profesor _profesor;
+        private bool _propio;
         public frmProfesor_Perfil()
         {
             InitializeComponent();
+        }
+        public frmProfesor_Perfil(CursosWS.profesor profesor)
+        {
+            _profesor = profesor;
+            InitializeComponent();
             btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
+            lblTituloNombre.Text = profesor.nombre;
             _menuSeleccionado = MenuProfesor.Informacion;
-            abrirFormulario(new frmProfesor_Perfil_Informacion());
+            abrirFormulario(new frmProfesor_Perfil_Informacion(_profesor));
         }
         public void abrirFormulario(Form formulario)
         {

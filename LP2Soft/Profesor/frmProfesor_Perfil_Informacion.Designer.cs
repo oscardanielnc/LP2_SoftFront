@@ -36,7 +36,7 @@ namespace LP2Soft.Profesor
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -117,15 +117,15 @@ namespace LP2Soft.Profesor
             this.label2.TabIndex = 55;
             this.label2.Text = "Universidad:";
             // 
-            // lblFechaNacimiento
+            // lblCalificacion
             // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(232, 160);
-            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(69, 15);
-            this.lblFechaNacimiento.TabIndex = 54;
-            this.lblFechaNacimiento.Text = "Puntuación";
+            this.lblCalificacion.AutoSize = true;
+            this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalificacion.Location = new System.Drawing.Point(232, 160);
+            this.lblCalificacion.Name = "lblCalificacion";
+            this.lblCalificacion.Size = new System.Drawing.Size(69, 15);
+            this.lblCalificacion.TabIndex = 54;
+            this.lblCalificacion.Text = "Puntuación";
             // 
             // lblEspecialidad
             // 
@@ -201,7 +201,7 @@ namespace LP2Soft.Profesor
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblFechaNacimiento);
+            this.Controls.Add(this.lblCalificacion);
             this.Controls.Add(this.lblEspecialidad);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblCodigo);
@@ -225,7 +225,7 @@ namespace LP2Soft.Profesor
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblFechaNacimiento;
+        private System.Windows.Forms.Label lblCalificacion;
         private System.Windows.Forms.Label lblEspecialidad;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblCodigo;
