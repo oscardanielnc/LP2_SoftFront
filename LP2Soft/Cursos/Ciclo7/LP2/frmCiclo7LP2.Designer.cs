@@ -59,8 +59,8 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pictureFotoAsesor1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargasExtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLibros)).BeginInit();
@@ -73,12 +73,14 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFotoAsesor1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLP2Descripcion
             // 
             this.lblLP2Descripcion.AutoSize = true;
-            this.lblLP2Descripcion.Location = new System.Drawing.Point(13, 80);
+            this.lblLP2Descripcion.Location = new System.Drawing.Point(4, 75);
+            this.lblLP2Descripcion.MaximumSize = new System.Drawing.Size(800, 0);
             this.lblLP2Descripcion.Name = "lblLP2Descripcion";
             this.lblLP2Descripcion.Size = new System.Drawing.Size(617, 130);
             this.lblLP2Descripcion.TabIndex = 13;
@@ -87,7 +89,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // lblLP2NombreCurso
             // 
             this.lblLP2NombreCurso.AutoSize = true;
-            this.lblLP2NombreCurso.Location = new System.Drawing.Point(13, 61);
+            this.lblLP2NombreCurso.Location = new System.Drawing.Point(4, 56);
             this.lblLP2NombreCurso.Name = "lblLP2NombreCurso";
             this.lblLP2NombreCurso.Size = new System.Drawing.Size(143, 13);
             this.lblLP2NombreCurso.TabIndex = 14;
@@ -107,7 +109,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.panel1.Controls.Add(this.btnLP2Parciales);
             this.panel1.Controls.Add(this.btnLP2Practicas);
             this.panel1.Controls.Add(this.btnLP2Laboratorios);
-            this.panel1.Location = new System.Drawing.Point(592, 223);
+            this.panel1.Location = new System.Drawing.Point(583, 218);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(203, 218);
             this.panel1.TabIndex = 15;
@@ -241,7 +243,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             // btnLP2Material
             // 
-            this.btnLP2Material.Location = new System.Drawing.Point(13, 13);
+            this.btnLP2Material.Location = new System.Drawing.Point(4, 8);
             this.btnLP2Material.Name = "btnLP2Material";
             this.btnLP2Material.Size = new System.Drawing.Size(143, 35);
             this.btnLP2Material.TabIndex = 8;
@@ -251,7 +253,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             // btnLP2Ciclo7
             // 
-            this.btnLP2Ciclo7.Location = new System.Drawing.Point(204, 14);
+            this.btnLP2Ciclo7.Location = new System.Drawing.Point(195, 9);
             this.btnLP2Ciclo7.Name = "btnLP2Ciclo7";
             this.btnLP2Ciclo7.Size = new System.Drawing.Size(143, 35);
             this.btnLP2Ciclo7.TabIndex = 10;
@@ -261,7 +263,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             // btnLP2LP2
             // 
-            this.btnLP2LP2.Location = new System.Drawing.Point(394, 14);
+            this.btnLP2LP2.Location = new System.Drawing.Point(385, 9);
             this.btnLP2LP2.Name = "btnLP2LP2";
             this.btnLP2LP2.Size = new System.Drawing.Size(143, 35);
             this.btnLP2LP2.TabIndex = 12;
@@ -271,7 +273,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // pictureLP2Referencia2
             // 
             this.pictureLP2Referencia2.Image = global::LP2Soft.Properties.Resources.chevrons_right_regular_24;
-            this.pictureLP2Referencia2.Location = new System.Drawing.Point(353, 14);
+            this.pictureLP2Referencia2.Location = new System.Drawing.Point(344, 9);
             this.pictureLP2Referencia2.Name = "pictureLP2Referencia2";
             this.pictureLP2Referencia2.Size = new System.Drawing.Size(35, 35);
             this.pictureLP2Referencia2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -281,7 +283,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // pictureLP2Referencia1
             // 
             this.pictureLP2Referencia1.Image = global::LP2Soft.Properties.Resources.chevrons_right_regular_24;
-            this.pictureLP2Referencia1.Location = new System.Drawing.Point(163, 14);
+            this.pictureLP2Referencia1.Location = new System.Drawing.Point(154, 9);
             this.pictureLP2Referencia1.Name = "pictureLP2Referencia1";
             this.pictureLP2Referencia1.Size = new System.Drawing.Size(35, 35);
             this.pictureLP2Referencia1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -299,7 +301,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.panel3.Controls.Add(this.pictureFotoAsesor1);
             this.panel3.Location = new System.Drawing.Point(32, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(511, 185);
+            this.panel3.Size = new System.Drawing.Size(511, 213);
             this.panel3.TabIndex = 17;
             // 
             // btnComentar1
@@ -368,54 +370,56 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(13, 291);
+            this.panel2.Location = new System.Drawing.Point(4, 286);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(564, 150);
+            this.panel2.Size = new System.Drawing.Size(564, 216);
             this.panel2.TabIndex = 18;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(43, 245);
+            this.textBox1.Location = new System.Drawing.Point(34, 240);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(512, 40);
             this.textBox1.TabIndex = 19;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "label1";
-            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 220);
+            this.label2.Location = new System.Drawing.Point(34, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(277, 25);
             this.label2.TabIndex = 21;
             this.label2.Text = "Escribir algún comentario:";
             // 
+            // panel4
+            // 
+            this.panel4.AutoScroll = true;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.lblLP2NombreCurso);
+            this.panel4.Controls.Add(this.lblLP2Descripcion);
+            this.panel4.Controls.Add(this.btnLP2LP2);
+            this.panel4.Controls.Add(this.pictureLP2Referencia2);
+            this.panel4.Controls.Add(this.btnLP2Ciclo7);
+            this.panel4.Controls.Add(this.pictureLP2Referencia1);
+            this.panel4.Controls.Add(this.btnLP2Material);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(823, 505);
+            this.panel4.TabIndex = 22;
+            // 
             // frmCiclo7LP2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 453);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblLP2NombreCurso);
-            this.Controls.Add(this.lblLP2Descripcion);
-            this.Controls.Add(this.btnLP2LP2);
-            this.Controls.Add(this.pictureLP2Referencia2);
-            this.Controls.Add(this.btnLP2Ciclo7);
-            this.Controls.Add(this.pictureLP2Referencia1);
-            this.Controls.Add(this.btnLP2Material);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(823, 505);
+            this.Controls.Add(this.panel4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCiclo7LP2";
             this.Text = "                                ";
             this.panel1.ResumeLayout(false);
@@ -432,8 +436,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFotoAsesor1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -467,7 +472,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private System.Windows.Forms.PictureBox pictureFotoAsesor1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

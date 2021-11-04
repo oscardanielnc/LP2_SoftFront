@@ -110,7 +110,7 @@ namespace LP2Soft.Home
         }
 
         public void btnTodosMisCursos_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmCursosHome(), MenuHome.CursosTodos);
+            abrirFormularioHome(new frmCursosHome(_usuario.idUsuario), MenuHome.CursosTodos);
         private void btnCursosFavoritos_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmHomeFavoritos(), MenuHome.CursosFavoritos);
 

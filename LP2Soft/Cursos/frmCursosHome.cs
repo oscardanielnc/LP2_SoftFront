@@ -1,4 +1,5 @@
-﻿using LP2Soft.Cursos.Ciclo7;
+﻿using LP2Soft.Tarjetas;
+using LP2Soft.Cursos.Ciclo7;
 using LP2Soft.Cursos.Ciclo7.LP2;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,48 @@ namespace LP2Soft.Cursos
         int iLP1;
         int iLP2;
         int iLP3;
+        private BindingList<CursosWS.curso> _cursoMostrar;
+        private CursosWS.CursosWSClient _daoCurso;
         public frmCursosHome()
         {
             InitializeComponent();
             iLP1 = 0; iLP2 = 0; iLP3 = 0;
         }
+        public frmCursosHome(int idUsuario)
+        {
+            InitializeComponent();
+            _daoCurso = new CursosWS.CursosWSClient();
+            todosCursos(idUsuario);
+        }
 
+        private void todosCursos(int idUsuario) 
+        {
+            _cursoMostrar = new BindingList<CursosWS.curso>(_daoCurso.listarCursos(idUsuario));
+            List<int> i = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            foreach (CursosWS.curso u in _cursoMostrar) 
+            {
+                tarjCurso tCurso = new tarjCurso(u);
+                tCurso.TopLevel = false;
+                tCurso.Location = generarCoordenadas(i[u.nivel-1],u.nivel);
+                panel1.Controls.Add(tCurso);
+                panel1.Controls.SetChildIndex(tCurso,0);
+                tCurso.Visible = true;
+                i[u.nivel-1]++;
+            }
+        }
+
+        private Point generarCoordenadas(int i,int nivel) 
+        {
+            int x = (nivel-1) * 150;
+            int y = i * 101 + 35;
+            return new Point(x, y);
+        }
+
+        public void abrirCurso(CursosWS.curso _cursoVer) {
+            frmCiclo7LP2 Ciclo7LP2 = new frmCiclo7LP2(_cursoVer);
+            // Ciclo7LP2.ShowDialog();
+            addPanel(Ciclo7LP2);
+        }
         private void btnLP2AgregarFavorito_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Se agrego a favorito");
@@ -31,15 +68,16 @@ namespace LP2Soft.Cursos
         private void btnLP2_Click(object sender, EventArgs e)
         {
             frmCiclo7LP2 Ciclo7LP2 = new frmCiclo7LP2();
-            Ciclo7LP2.ShowDialog();
-            this.Close();
+            //Ciclo7LP2.ShowDialog();
+            //this.Close();
+            addPanel(Ciclo7LP2);
+            
         }
-
+        
         private void btnCiclo7_Click(object sender, EventArgs e)
         {
             frmCiclo7 Ciclo7 = new frmCiclo7();
-            Ciclo7.ShowDialog();
-            this.Close();
+            addPanel(Ciclo7);
         }
 
         private void pictureInformativo_Click(object sender, EventArgs e)
@@ -315,6 +353,18 @@ namespace LP2Soft.Cursos
                 iLP3 = 0;
             }
         }
+        public void addPanel(Form f)
+        {
+            while (this.panel2.Controls.Count > 0)
+            {
+                this.panel2.Controls.RemoveAt(0);
+            }
+            f.TopLevel = false;
+            this.panel2.Controls.Add(f);
+            f.Show();
+        }
+
+        
     }
 
         
