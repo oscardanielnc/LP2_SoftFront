@@ -53,6 +53,7 @@ namespace LP2Soft.Eventos
 
             if (resultado != 0)
             {
+                _postGenerico.idPost = resultado;
                 _postCreado = _postGenerico;
                 DialogResult = DialogResult.OK;
             }

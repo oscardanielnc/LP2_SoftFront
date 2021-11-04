@@ -64,6 +64,7 @@ namespace LP2Soft.Eventos
             {
                 panelPublicacionesGenerales.Controls.Clear();
                 _postCreado = frmCrearPostGeneral.PostCreado;
+                _postCreado.fechaRegistro = DateTime.Today;
                 _postCreado.usuario.nombre = _usuario.nombre;
                 frmPostGeneral plantilla = new frmPostGeneral(_postCreado, _usuario);
                 plantilla.TopLevel = false;
