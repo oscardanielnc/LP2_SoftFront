@@ -10,37 +10,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace LP2Soft.Tarjetas
 {
-    public partial class tarjUsuario : Form
+    public partial class tarjAsesor : Form
     {
         private string _codigo;
         private UsuarioWS.UsuariosWSClient _daoUsuario;
         private UsuarioWS.usuario _usuarioVer;
-        public tarjUsuario(UsuarioWS.usuario usuario)
+        public tarjAsesor(UsuarioWS.usuario user)
         {
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
             InitializeComponent();
+            _codigo = user.codigoPUCP;
+            posicionarLabel(user);
 
-            _codigo = usuario.codigoPUCP;
-            posicionarLabel(usuario);
-
-            if (usuario.foto != null)
+            if (user.foto != null)
             {
-                MemoryStream ms1 = new MemoryStream(usuario.foto);
-                imgUsuario.Image = new Bitmap(ms1);
+                MemoryStream ms1 = new MemoryStream(user.foto);
+                pctAsesor.Image = new Bitmap(ms1);
             }
         }
         private void posicionarLabel(UsuarioWS.usuario usuario)
         {
             lblNombre.Text = usuario.nombre + " " + usuario.apellido;
             int tamanio = lblNombre.Size.Width;
-            lblCodigo.Text = "(" + usuario.codigoPUCP + ")";
-            lblNombre.Location = new Point(((int)(150 - tamanio) / 2), 67);
+            lblCal.Text = " " + usuario.asesor.calificacion + " ";
+            lblNombre.Location = new Point(((int)(170 - tamanio) / 2), 80);
+        }
+        private void btnVerPerfil_Click(object sender, EventArgs e)
+        {
+            _usuarioVer = _daoUsuario.mostrarUsuario(_codigo, 1);
+            if (_usuarioVer != null)
+                frmHome.abrirFormulario(new frmPerfil(_usuarioVer));
         }
 
-        private void btnVerPerfil_Click(object sender, EventArgs e)
+        private void btnVerPerfil_Click_1(object sender, EventArgs e)
         {
             _usuarioVer = _daoUsuario.mostrarUsuario(_codigo, 1);
             if (_usuarioVer != null)

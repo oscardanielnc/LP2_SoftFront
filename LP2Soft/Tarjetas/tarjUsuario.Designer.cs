@@ -29,22 +29,22 @@ namespace LP2Soft.Tarjetas
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgUsuario = new System.Windows.Forms.PictureBox();
             this.btnVerPerfil = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // imgUsuario
             // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.imgUsuario.Image = global::LP2Soft.Properties.Resources.images;
+            this.imgUsuario.Location = new System.Drawing.Point(50, 12);
+            this.imgUsuario.Name = "imgUsuario";
+            this.imgUsuario.Size = new System.Drawing.Size(50, 50);
+            this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUsuario.TabIndex = 7;
+            this.imgUsuario.TabStop = false;
             // 
             // btnVerPerfil
             // 
@@ -93,12 +93,12 @@ namespace LP2Soft.Tarjetas
             this.ClientSize = new System.Drawing.Size(150, 140);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imgUsuario);
             this.Controls.Add(this.btnVerPerfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tarjUsuario";
             this.Text = "tarjUsuario";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +106,7 @@ namespace LP2Soft.Tarjetas
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgUsuario;
         private System.Windows.Forms.Button btnVerPerfil;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;

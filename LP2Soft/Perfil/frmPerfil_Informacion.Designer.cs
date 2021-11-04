@@ -115,7 +115,7 @@ namespace LP2Soft.Perfil
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(113, 15);
             this.lblFechaNacimiento.TabIndex = 17;
-            this.lblFechaNacimiento.Text = "06 de Abril de 2001";
+            this.lblFechaNacimiento.Text = "07 de Abril de 2001";
             // 
             // label2
             // 
