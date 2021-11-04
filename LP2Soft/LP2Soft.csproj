@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -99,12 +99,6 @@
     <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.Designer.cs">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Calificación\frmCalificacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cursos\Calificación\frmCalificacion.Designer.cs">
-      <DependentUpon>frmCalificacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cursos\Ciclo7\frmCiclo7.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +129,10 @@
     <Compile Include="Cursos\Flitro\frmFiltro.Designer.cs">
       <DependentUpon>frmFiltro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cursos\frmCalificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmCalificacion.Designer.cs" />
     <Compile Include="Cursos\frmCursosHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,11 +370,11 @@
     <Compile Include="Profesor\frmProfesor_Perfil_Informacion.Designer.cs">
       <DependentUpon>frmProfesor_Perfil_Informacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Profesor\frmProfesor_Perfil_Reseña.cs">
+    <Compile Include="Profesor\frmProfesor_Perfil_ReseÃ±a.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Profesor\frmProfesor_Perfil_Reseña.Designer.cs">
-      <DependentUpon>frmProfesor_Perfil_Reseña.cs</DependentUpon>
+    <Compile Include="Profesor\frmProfesor_Perfil_ReseÃ±a.Designer.cs">
+      <DependentUpon>frmProfesor_Perfil_ReseÃ±a.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -385,6 +383,12 @@
     </Compile>
     <Compile Include="Tarjetas\tarjAsesor.Designer.cs">
       <DependentUpon>tarjAsesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarjetas\tarjCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjCurso.Designer.cs">
+      <DependentUpon>tarjCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="Tarjetas\tarjProfesor.cs">
       <SubType>Form</SubType>
@@ -413,9 +417,6 @@
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.resx">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Calificación\frmCalificacion.resx">
-      <DependentUpon>frmCalificacion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cursos\Ciclo7\frmCiclo7.resx">
       <DependentUpon>frmCiclo7.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,6 +432,7 @@
     <EmbeddedResource Include="Cursos\Flitro\frmFiltro.resx">
       <DependentUpon>frmFiltro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmCalificacion.resx" />
     <EmbeddedResource Include="Cursos\frmCursosHome.resx">
       <DependentUpon>frmCursosHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -548,8 +550,8 @@
     <EmbeddedResource Include="Profesor\frmProfesor_Perfil_Informacion.resx">
       <DependentUpon>frmProfesor_Perfil_Informacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Profesor\frmProfesor_Perfil_Reseña.resx">
-      <DependentUpon>frmProfesor_Perfil_Reseña.cs</DependentUpon>
+    <EmbeddedResource Include="Profesor\frmProfesor_Perfil_ReseÃ±a.resx">
+      <DependentUpon>frmProfesor_Perfil_ReseÃ±a.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -558,6 +560,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjAsesor.resx">
       <DependentUpon>tarjAsesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjCurso.resx">
+      <DependentUpon>tarjCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjProfesor.resx">
       <DependentUpon>tarjProfesor.cs</DependentUpon>
@@ -917,5 +922,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
