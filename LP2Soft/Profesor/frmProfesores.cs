@@ -31,7 +31,7 @@ namespace LP2Soft.Profesor
             InitializeComponent();
             _daoProfesor = new CursosWS.CursosWSClient();
 
-            renderizarBusqueda(" ");
+            renderizarBusqueda("");
         }
 
         private void btnVerPerfil_Click(object sender, EventArgs e)

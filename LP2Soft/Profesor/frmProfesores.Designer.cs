@@ -47,10 +47,12 @@ namespace LP2Soft.Profesor
             // 
             // panelProfesores
             // 
+            this.panelProfesores.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.panelProfesores.AutoSize = true;
             this.panelProfesores.Location = new System.Drawing.Point(36, 73);
+            this.panelProfesores.Margin = new System.Windows.Forms.Padding(10);
             this.panelProfesores.Name = "panelProfesores";
-            this.panelProfesores.Size = new System.Drawing.Size(768, 255);
+            this.panelProfesores.Size = new System.Drawing.Size(768, 314);
             this.panelProfesores.TabIndex = 29;
             // 
             // lblResultadosB
@@ -89,7 +91,6 @@ namespace LP2Soft.Profesor
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(852, 399);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblResultadosB);

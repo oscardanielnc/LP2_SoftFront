@@ -1,5 +1,4 @@
-﻿
-namespace LP2Soft.Asesor
+﻿namespace LP2Soft.Asesor
 {
     partial class frmBuscarAsesor
     {

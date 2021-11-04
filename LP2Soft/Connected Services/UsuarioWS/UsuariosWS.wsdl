@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/LP2Soft_WebServices/UsuariosWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="listarXnombreYcurso">
+    <part name="parameters" element="tns:listarXnombreYcurso" />
+  </message>
+  <message name="listarXnombreYcursoResponse">
+    <part name="parameters" element="tns:listarXnombreYcursoResponse" />
+  </message>
   <message name="listarUsuariosNombreCodigo">
     <part name="parameters" element="tns:listarUsuariosNombreCodigo" />
   </message>
@@ -16,12 +22,6 @@
   </message>
   <message name="listarAmigosNombreCodigoResponse">
     <part name="parameters" element="tns:listarAmigosNombreCodigoResponse" />
-  </message>
-  <message name="listarXnombreYcurso">
-    <part name="parameters" element="tns:listarXnombreYcurso" />
-  </message>
-  <message name="listarXnombreYcursoResponse">
-    <part name="parameters" element="tns:listarXnombreYcursoResponse" />
   </message>
   <message name="insertarAsesor">
     <part name="parameters" element="tns:insertarAsesor" />
@@ -48,6 +48,10 @@
     <part name="parameters" element="tns:modificarUsuarioResponse" />
   </message>
   <portType name="UsuariosWS">
+    <operation name="listarXnombreYcurso">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarXnombreYcursoRequest" message="tns:listarXnombreYcurso" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarXnombreYcursoResponse" message="tns:listarXnombreYcursoResponse" />
+    </operation>
     <operation name="listarUsuariosNombreCodigo">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarUsuariosNombreCodigoRequest" message="tns:listarUsuariosNombreCodigo" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarUsuariosNombreCodigoResponse" message="tns:listarUsuariosNombreCodigoResponse" />
@@ -55,10 +59,6 @@
     <operation name="listarAmigosNombreCodigo">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarAmigosNombreCodigoRequest" message="tns:listarAmigosNombreCodigo" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarAmigosNombreCodigoResponse" message="tns:listarAmigosNombreCodigoResponse" />
-    </operation>
-    <operation name="listarXnombreYcurso">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarXnombreYcursoRequest" message="tns:listarXnombreYcurso" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarXnombreYcursoResponse" message="tns:listarXnombreYcursoResponse" />
     </operation>
     <operation name="insertarAsesor">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarAsesorRequest" message="tns:insertarAsesor" />
@@ -79,6 +79,15 @@
   </portType>
   <binding name="UsuariosWSPortBinding" type="tns:UsuariosWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarXnombreYcurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarUsuariosNombreCodigo">
       <soap:operation soapAction="" />
       <input>
@@ -89,15 +98,6 @@
       </output>
     </operation>
     <operation name="listarAmigosNombreCodigo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarXnombreYcurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

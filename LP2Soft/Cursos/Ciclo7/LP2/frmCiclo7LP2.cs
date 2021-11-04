@@ -20,15 +20,26 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         }
         public frmCiclo7LP2(CursosWS.curso _cursoVer)
         {
-            InitializeComponent();            
+            InitializeComponent();
             lblLP2NombreCurso.Text = _cursoVer.nombre;
             btnLP2LP2.Text = _cursoVer.nombre;
             btnLP2Ciclo7.Text = "Ciclo : " + _cursoVer.nivel.ToString();
-            lblLP2Descripcion.Text = "\nCódigo     : " + _cursoVer.codigo +
-                                     "\nCréditos   : " + _cursoVer.creditos+
-                                     "\nCarrera    : " + _cursoVer.especialidad+
+            lblLP2Descripcion.Text = "Código     : " + _cursoVer.codigo +
+                                     "\nCréditos   : " + _cursoVer.creditos +
+                                     "\nCarrera    : " + _cursoVer.especialidad +
                                      "\nDescripción: " + _cursoVer.descripcion +
-                                     "\nCréditos Requeridos: " + _cursoVer.creditosRequeridos;
+                                     "\nCréditos Requeridos: " + _cursoVer.creditosRequeridos +
+                                     "\nCursos Requisitos : ";
+            if (_cursoVer.cursosRequeridos != null)
+            {
+                foreach (CursosWS.curso u in _cursoVer.cursosRequeridos)
+                {
+
+                    lblLP2Descripcion.Text += u.nombre + " ,";
+
+                }
+                lblLP2Descripcion.Text = lblLP2Descripcion.Text.TrimEnd(',');
+            }
 
         }
         private void btnLP2Ciclo7_Click(object sender, EventArgs e)
