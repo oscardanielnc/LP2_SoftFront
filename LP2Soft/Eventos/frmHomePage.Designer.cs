@@ -76,7 +76,7 @@ namespace LP2Soft.Eventos
             this.lblTendenciasMateriales = new System.Windows.Forms.Label();
             this.panelCrearPublicacion = new System.Windows.Forms.Panel();
             this.lblCrearPublicación = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.lblPublicacionesGenerales = new System.Windows.Forms.Label();
             this.panelTendenciasMateriales.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -86,7 +86,7 @@ namespace LP2Soft.Eventos
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelCrearPublicacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPublicacionesGenerales
@@ -601,7 +601,7 @@ namespace LP2Soft.Eventos
             // 
             this.panelCrearPublicacion.BackColor = System.Drawing.Color.White;
             this.panelCrearPublicacion.Controls.Add(this.lblCrearPublicación);
-            this.panelCrearPublicacion.Controls.Add(this.pictureBox4);
+            this.panelCrearPublicacion.Controls.Add(this.pbPerfil);
             this.panelCrearPublicacion.Location = new System.Drawing.Point(42, 51);
             this.panelCrearPublicacion.Name = "panelCrearPublicacion";
             this.panelCrearPublicacion.Size = new System.Drawing.Size(297, 57);
@@ -618,13 +618,14 @@ namespace LP2Soft.Eventos
             this.lblCrearPublicación.Text = "Crear publicación";
             this.lblCrearPublicación.Click += new System.EventHandler(this.lblCrearPublicación_Click);
             // 
-            // pictureBox4
+            // pbPerfil
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 46);
-            this.pictureBox4.TabIndex = 21;
-            this.pictureBox4.TabStop = false;
+            this.pbPerfil.Location = new System.Drawing.Point(3, 6);
+            this.pbPerfil.Name = "pbPerfil";
+            this.pbPerfil.Size = new System.Drawing.Size(50, 46);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPerfil.TabIndex = 21;
+            this.pbPerfil.TabStop = false;
             // 
             // lblPublicacionesGenerales
             // 
@@ -660,7 +661,7 @@ namespace LP2Soft.Eventos
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelCrearPublicacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -715,7 +716,7 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelCrearPublicacion;
         private System.Windows.Forms.Label lblCrearPublicación;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.Label lblPublicacionesGenerales;
     }
 }

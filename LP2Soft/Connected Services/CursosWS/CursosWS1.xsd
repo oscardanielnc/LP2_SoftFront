@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="eliminarPost" type="tns:eliminarPost" />
-  <xs:element name="eliminarPostResponse" type="tns:eliminarPostResponse" />
-  <xs:element name="insertarComentario" type="tns:insertarComentario" />
-  <xs:element name="insertarComentarioResponse" type="tns:insertarComentarioResponse" />
-  <xs:element name="insertarPost" type="tns:insertarPost" />
-  <xs:element name="insertarPostResponse" type="tns:insertarPostResponse" />
-  <xs:element name="listarPost" type="tns:listarPost" />
-  <xs:element name="listarPostResponse" type="tns:listarPostResponse" />
-  <xs:element name="modificarPost" type="tns:modificarPost" />
-  <xs:element name="modificarPostResponse" type="tns:modificarPostResponse" />
-  <xs:complexType name="listarPost">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarPostResponse">
+  <xs:element name="MostrarCurso" type="tns:MostrarCurso" />
+  <xs:element name="MostrarCursoResponse" type="tns:MostrarCursoResponse" />
+  <xs:element name="listarCursos" type="tns:listarCursos" />
+  <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
+  <xs:complexType name="MostrarCurso">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:postGenerico" />
+      <xs:element name="idCurso" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="postGenerico">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:post">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
+  <xs:complexType name="MostrarCursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element name="creditos" type="xs:float" />
+      <xs:element name="creditosRequeridos" type="xs:float" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cursosRequeridos" nillable="true" type="tns:curso" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="especialidad" type="xs:string" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element name="favorito" type="xs:boolean" />
+      <xs:element name="idCurso" type="xs:int" />
+      <xs:element name="nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="posts" nillable="true" type="tns:post" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="profesores" nillable="true" type="tns:profesor" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="post" abstract="true">
     <xs:sequence>
@@ -71,13 +78,6 @@
       <xs:element name="precioPorHora" type="xs:float" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="curso">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="evento">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:post">
@@ -90,53 +90,20 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="insertarPost">
+  <xs:complexType name="profesor">
     <xs:sequence>
-      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="calificacion" type="xs:float" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarPostResponse">
+  <xs:complexType name="listarCursos">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarComentario">
+  <xs:complexType name="listarCursosResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="comentario" type="tns:comentario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="comentario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="comentario" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
-      <xs:element name="idComentario" type="xs:int" />
-      <xs:element minOccurs="0" name="post" type="tns:post" />
-      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarComentarioResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarPost">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarPostResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarPost">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarPostResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

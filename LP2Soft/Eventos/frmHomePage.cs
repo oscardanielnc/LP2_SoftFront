@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace LP2Soft.Eventos
         PublicacionesWS.PublicacionesWSClient _daoPost;
         BindingList<PublicacionesWS.postGenerico> _publicaciones;
         PublicacionesWS.postGenerico _postCreado;
-        private int _cantidadPost;
+        private static int _cantidadPost=0;
         public frmHomePage()
         {
             InitializeComponent();
@@ -27,6 +28,11 @@ namespace LP2Soft.Eventos
             InitializeComponent();
             _cantidadPost = 0;
             _usuario = usuario;
+            if (_usuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(_usuario.foto);
+                pbPerfil.Image = new Bitmap(ms1);
+            }
             panelPublicacionesGenerales.Controls.Clear();
             _daoPost = new PublicacionesWS.PublicacionesWSClient();
             PublicacionesWS.postGenerico[] posts = _daoPost.listarPost();
@@ -65,17 +71,21 @@ namespace LP2Soft.Eventos
                 panelPublicacionesGenerales.Controls.Add(plantilla);
                 panelPublicacionesGenerales.Controls.SetChildIndex(plantilla, 0);
                 plantilla.Visible = true;
-
+                _cantidadPost = 0;
+                int contador=0;
                 if (_publicaciones != null)
                 {
                     foreach (PublicacionesWS.postGenerico p in _publicaciones)
                     {
+                        if (contador==2) break;
                         frmPostGeneral plantillaPost = new frmPostGeneral(p, _usuario);
                         plantillaPost.TopLevel = false;
                         plantillaPost.Dock = DockStyle.Top;
                         panelPublicacionesGenerales.Controls.Add(plantillaPost);
                         panelPublicacionesGenerales.Controls.SetChildIndex(plantillaPost, 0);
                         plantillaPost.Visible = true;
+                        contador++;
+                        _cantidadPost++;
                     }
                 }
             }
@@ -88,7 +98,8 @@ namespace LP2Soft.Eventos
                 if (e.NewValue != e.OldValue) // Checking when the scrollbar is at bottom and user clicks/scrolls the scrollbar      
                 {
                     int cantidadFinal = _cantidadPost + 3;
-                    int contador=0;
+                    int contador=0; 
+                    
                     foreach (PublicacionesWS.postGenerico p in _publicaciones)
                     {
                         if (contador < _cantidadPost)
@@ -96,6 +107,8 @@ namespace LP2Soft.Eventos
                             contador++;
                             continue;
                         }
+                        else contador = 1000;
+
                         if (_cantidadPost == cantidadFinal) break;
                         frmPostGeneral plantillaPost = new frmPostGeneral(p, _usuario);
                         plantillaPost.TopLevel = false;
