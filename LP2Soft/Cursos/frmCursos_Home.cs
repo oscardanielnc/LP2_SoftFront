@@ -10,33 +10,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2Soft.Home;
 
 namespace LP2Soft.Cursos
 {
-    public partial class frmCursosHome : Form
+    public partial class frmCursos_Home : Form
     {
         int iLP1;
         int iLP2;
         int iLP3;
-        private BindingList<CursosWS.curso> _cursoMostrar;
-        private CursosWS.CursosWSClient _daoCurso;
-        public frmCursosHome()
+        // private BindingList<CursosWS.curso> _cursoMostrar;
+        //private CursosWS.CursosWSClient _daoCurso;
+        private UsuarioWS.UsuariosWSClient _daoUsuario;
+        public frmCursos_Home()
         {
             InitializeComponent();
             iLP1 = 0; iLP2 = 0; iLP3 = 0;
         }
-        public frmCursosHome(int idUsuario)
+        public frmCursos_Home(int idUsuario)
         {
             InitializeComponent();
-            _daoCurso = new CursosWS.CursosWSClient();
+            //_daoCurso = new CursosWS.CursosWSClient();
+            _daoUsuario = new UsuarioWS.UsuariosWSClient();
             todosCursos(idUsuario);
         }
 
         private void todosCursos(int idUsuario) 
         {
-            _cursoMostrar = new BindingList<CursosWS.curso>(_daoCurso.listarCursos(idUsuario));
+            // si mi usuario no tiene sus cursos, los solicito a la BD
+            if(frmHome.Usuario.cursos == null)
+                frmHome.Usuario.cursos = _daoUsuario.listarCursos(idUsuario);
+
             List<int> i = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            foreach (CursosWS.curso u in _cursoMostrar) 
+            foreach (UsuarioWS.curso u in frmHome.Usuario.cursos) 
             {
                 tarjCurso tCurso = new tarjCurso(u);
                 tCurso.TopLevel = false;
@@ -56,7 +62,7 @@ namespace LP2Soft.Cursos
         }
 
         public void abrirCurso(CursosWS.curso _cursoVer) {
-            frmCiclo7LP2 Ciclo7LP2 = new frmCiclo7LP2(_cursoVer);
+            frmCursos_VerCurso Ciclo7LP2 = new frmCursos_VerCurso(_cursoVer);
             // Ciclo7LP2.ShowDialog();
             addPanel(Ciclo7LP2);
         }
@@ -67,7 +73,7 @@ namespace LP2Soft.Cursos
 
         private void btnLP2_Click(object sender, EventArgs e)
         {
-            frmCiclo7LP2 Ciclo7LP2 = new frmCiclo7LP2();
+            frmCursos_VerCurso Ciclo7LP2 = new frmCursos_VerCurso();
             //Ciclo7LP2.ShowDialog();
             //this.Close();
             addPanel(Ciclo7LP2);
@@ -76,7 +82,7 @@ namespace LP2Soft.Cursos
         
         private void btnCiclo7_Click(object sender, EventArgs e)
         {
-            frmCiclo7 Ciclo7 = new frmCiclo7();
+            frmCursos_Ciclo Ciclo7 = new frmCursos_Ciclo();
             addPanel(Ciclo7);
         }
 

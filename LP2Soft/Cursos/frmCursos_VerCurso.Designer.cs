@@ -1,7 +1,7 @@
 ﻿
 namespace LP2Soft.Cursos.Ciclo7.LP2
 {
-    partial class frmCiclo7LP2
+    partial class frmCursos_VerCurso
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCiclo7LP2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCursos_VerCurso));
             this.lblLP2Descripcion = new System.Windows.Forms.Label();
             this.lblLP2NombreCurso = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,6 +61,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panelCursosrequeridos = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargasExtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLibros)).BeginInit();
@@ -388,13 +389,14 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(34, 215);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(277, 25);
+            this.label2.Size = new System.Drawing.Size(201, 25);
             this.label2.TabIndex = 21;
             this.label2.Text = "Escribir algún comentario:";
             // 
             // panel4
             // 
             this.panel4.AutoScroll = true;
+            this.panel4.Controls.Add(this.panelCursosrequeridos);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.panel2);
@@ -412,7 +414,17 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.panel4.Size = new System.Drawing.Size(823, 505);
             this.panel4.TabIndex = 22;
             // 
-            // frmCiclo7LP2
+            // panelCursosrequeridos
+            // 
+            this.panelCursosrequeridos.AutoSize = true;
+            this.panelCursosrequeridos.Location = new System.Drawing.Point(242, 205);
+            this.panelCursosrequeridos.MaximumSize = new System.Drawing.Size(315, 60);
+            this.panelCursosrequeridos.MinimumSize = new System.Drawing.Size(315, 0);
+            this.panelCursosrequeridos.Name = "panelCursosrequeridos";
+            this.panelCursosrequeridos.Size = new System.Drawing.Size(315, 0);
+            this.panelCursosrequeridos.TabIndex = 19;
+            // 
+            // frmCursos_VerCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -420,7 +432,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.ClientSize = new System.Drawing.Size(823, 505);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCiclo7LP2";
+            this.Name = "frmCursos_VerCurso";
             this.Text = "                                ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -474,5 +486,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelCursosrequeridos;
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace LP2Soft.Cursos
 {
-    partial class frmCursosHome
+    partial class frmCursos_Home
     {
         /// <summary>
         /// Required designer variable.

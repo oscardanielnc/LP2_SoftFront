@@ -36,7 +36,7 @@ namespace LP2Soft.Tarjetas
             lblNombre.Text = usuario.nombre + " " + usuario.apellido;
             int tamanio = lblNombre.Size.Width;
             lblCodigo.Text = "(" + usuario.codigoPUCP + ")";
-            lblNombre.Location = new Point(((int)(180 - tamanio) / 2), 67);
+            lblNombre.Location = new Point(((int)(150 - tamanio) / 2), 67);
         }
 
         private void btnVerPerfil_Click(object sender, EventArgs e)

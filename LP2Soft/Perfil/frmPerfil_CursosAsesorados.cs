@@ -27,7 +27,7 @@ namespace LP2Soft.Perfil
 
         private void btnLP3_Click(object sender, EventArgs e)
         {
-            frmCiclo7LP2 fromLP2 = new frmCiclo7LP2();
+            frmCursos_VerCurso fromLP2 = new frmCursos_VerCurso();
             fromLP2.ShowDialog();
         }
     }

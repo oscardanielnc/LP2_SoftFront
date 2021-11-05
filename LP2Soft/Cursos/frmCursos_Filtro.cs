@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Cursos.Flitro
 {
-    public partial class frmFiltro : Form
+    public partial class frmCursos_Filtro : Form
     {
-        public frmFiltro()
+        public frmCursos_Filtro()
         {
             InitializeComponent();
         }

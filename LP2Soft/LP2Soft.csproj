@@ -55,12 +55,6 @@
     <Compile Include="Asesor\frmBuscarAsesor.Designer.cs">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Asesor\frmMisAsesores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Asesor\frmMisAsesores.Designer.cs">
-      <DependentUpon>frmMisAsesores.cs</DependentUpon>
-    </Compile>
     <Compile Include="Asesor\frmPostularAsesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,51 +93,51 @@
     <Compile Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.Designer.cs">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\frmCiclo7.cs">
+    <Compile Include="Cursos\frmCursos_Ciclo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\frmCiclo7.Designer.cs">
-      <DependentUpon>frmCiclo7.cs</DependentUpon>
+    <Compile Include="Cursos\frmCursos_Ciclo.Designer.cs">
+      <DependentUpon>frmCursos_Ciclo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.cs">
+    <Compile Include="Cursos\frmCursos_VerCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.Designer.cs">
-      <DependentUpon>frmCiclo7LP2.cs</DependentUpon>
+    <Compile Include="Cursos\frmCursos_VerCurso.Designer.cs">
+      <DependentUpon>frmCursos_VerCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\frmPractica2.cs">
+    <Compile Include="Cursos\frmCursos_VerPractica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\Practicas\Practica2\frmPractica2.Designer.cs">
-      <DependentUpon>frmPractica2.cs</DependentUpon>
+    <Compile Include="Cursos\frmCursos_VerPractica.Designer.cs">
+      <DependentUpon>frmCursos_VerPractica.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.cs">
+    <Compile Include="Cursos\frmCursos_Practicas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.Designer.cs">
-      <DependentUpon>frmPracticas.cs</DependentUpon>
+    <Compile Include="Cursos\frmCursos_Practicas.Designer.cs">
+      <DependentUpon>frmCursos_Practicas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\Flitro\frmFiltro.cs">
+    <Compile Include="Cursos\frmCursos_Filtro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\Flitro\frmFiltro.Designer.cs">
-      <DependentUpon>frmFiltro.cs</DependentUpon>
+    <Compile Include="Cursos\frmCursos_Filtro.Designer.cs">
+      <DependentUpon>frmCursos_Filtro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\frmCalificacion.cs">
+    <Compile Include="Cursos\Calificacion\frmCalificacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\frmCalificacion.Designer.cs" />
-    <Compile Include="Cursos\frmCursosHome.cs">
+    <Compile Include="Cursos\Calificacion\frmCalificacion.Designer.cs" />
+    <Compile Include="Cursos\frmCursos_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\frmCursosHome.Designer.cs">
-      <DependentUpon>frmCursosHome.cs</DependentUpon>
+    <Compile Include="Cursos\frmCursos_Home.Designer.cs">
+      <DependentUpon>frmCursos_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos\frmHomeFavoritos.cs">
+    <Compile Include="Cursos\frmCursos_Favoritos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos\frmHomeFavoritos.Designer.cs">
-      <DependentUpon>frmHomeFavoritos.cs</DependentUpon>
+    <Compile Include="Cursos\frmCursos_Favoritos.Designer.cs">
+      <DependentUpon>frmCursos_Favoritos.cs</DependentUpon>
     </Compile>
     <Compile Include="Enumerados\MenuHome.cs" />
     <Compile Include="Enumerados\MenuPerfil.cs" />
@@ -405,9 +399,6 @@
     <EmbeddedResource Include="Asesor\frmBuscarAsesor.resx">
       <DependentUpon>frmBuscarAsesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Asesor\frmMisAsesores.resx">
-      <DependentUpon>frmMisAsesores.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmPostularAsesor.resx">
       <DependentUpon>frmPostularAsesor.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,27 +408,27 @@
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmEstasSeguroDeCancelar.resx">
       <DependentUpon>frmEstasSeguroDeCancelar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Ciclo7\frmCiclo7.resx">
-      <DependentUpon>frmCiclo7.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\frmCursos_Ciclo.resx">
+      <DependentUpon>frmCursos_Ciclo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Ciclo7\LP2\frmCiclo7LP2.resx">
-      <DependentUpon>frmCiclo7LP2.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\frmCursos_VerCurso.resx">
+      <DependentUpon>frmCursos_VerCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\Practica2\frmPractica2.resx">
-      <DependentUpon>frmPractica2.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\frmCursos_VerPractica.resx">
+      <DependentUpon>frmCursos_VerPractica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Ciclo7\LP2\Practicas\frmPracticas.resx">
-      <DependentUpon>frmPracticas.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\frmCursos_Practicas.resx">
+      <DependentUpon>frmCursos_Practicas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\Flitro\frmFiltro.resx">
-      <DependentUpon>frmFiltro.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\frmCursos_Filtro.resx">
+      <DependentUpon>frmCursos_Filtro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\frmCalificacion.resx" />
-    <EmbeddedResource Include="Cursos\frmCursosHome.resx">
-      <DependentUpon>frmCursosHome.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\Calificacion\frmCalificacion.resx" />
+    <EmbeddedResource Include="Cursos\frmCursos_Home.resx">
+      <DependentUpon>frmCursos_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos\frmHomeFavoritos.resx">
-      <DependentUpon>frmHomeFavoritos.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos\frmCursos_Favoritos.resx">
+      <DependentUpon>frmCursos_Favoritos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmComentario.resx">
       <DependentUpon>frmComentario.cs</DependentUpon>
@@ -577,9 +568,6 @@
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarCursosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarProfesoresNombreResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -627,6 +615,9 @@
     <None Include="Connected Services\PublicacionesWS\PublicacionesWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarAsesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -634,6 +625,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarAmigosNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarUsuariosNombreCodigoResponse.datasource">

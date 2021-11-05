@@ -1,7 +1,7 @@
 ﻿
 namespace LP2Soft.Cursos.Flitro
 {
-    partial class frmFiltro
+    partial class frmCursos_Filtro
     {
         /// <summary>
         /// Required designer variable.

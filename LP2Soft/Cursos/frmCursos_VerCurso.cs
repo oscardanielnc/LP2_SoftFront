@@ -1,4 +1,5 @@
 ﻿using LP2Soft.Cursos.Ciclo7.LP2.Practicas;
+using LP2Soft.Home;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,15 +12,18 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Cursos.Ciclo7.LP2
 {
-    public partial class frmCiclo7LP2 : Form
+    public partial class frmCursos_VerCurso : Form
     {
+        private CursosWS.CursosWSClient _daoCurso;
+        private CursosWS.curso _cursoVer;
         int _idUsuario;
-        public frmCiclo7LP2()
+        public frmCursos_VerCurso()
         {
             InitializeComponent();
         }
-        public frmCiclo7LP2(CursosWS.curso _cursoVer)
+        public frmCursos_VerCurso(CursosWS.curso _cursoVer)
         {
+            _daoCurso = new CursosWS.CursosWSClient();
             InitializeComponent();
             lblLP2NombreCurso.Text = _cursoVer.nombre;
             btnLP2LP2.Text = _cursoVer.nombre;
@@ -32,19 +36,30 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
                                      "\nCursos Requisitos : ";
             if (_cursoVer.cursosRequeridos != null)
             {
-                foreach (CursosWS.curso u in _cursoVer.cursosRequeridos)
+                foreach (CursosWS.curso c in _cursoVer.cursosRequeridos)
                 {
-
-                    lblLP2Descripcion.Text += u.nombre + " ,";
-
+                    LinkLabel lblNombreCursoReq = new LinkLabel();
+                    lblNombreCursoReq.Text = c.nombre;
+                    lblNombreCursoReq.Dock = DockStyle.Top;
+                    panelCursosrequeridos.Controls.Add(lblNombreCursoReq);
+                    lblNombreCursoReq.Click += new System.EventHandler((object sender, EventArgs e) => this.verCurso( sender, e, c.idCurso));
                 }
                 lblLP2Descripcion.Text = lblLP2Descripcion.Text.TrimEnd(',');
             }
 
         }
+        private void verCurso(object sender, EventArgs e, int idCurso)
+        {
+            
+            _cursoVer = _daoCurso.MostrarCurso(idCurso);
+            if (_cursoVer != null)
+            {
+                frmHome.abrirFormulario(new frmCursos_VerCurso(_cursoVer));
+            }
+        }
         private void btnLP2Ciclo7_Click(object sender, EventArgs e)
         {
-            frmCiclo7 ciclo7 = new frmCiclo7();
+            frmCursos_Ciclo ciclo7 = new frmCursos_Ciclo();
             //ciclo7.ShowDialog();
             //this.Close();
             addPanel(ciclo7);
@@ -52,7 +67,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         
         private void btnLP2Material_Click(object sender, EventArgs e)
         {
-            frmCursosHome cursosHome = new frmCursosHome(20186013);
+            frmCursos_Home cursosHome = new frmCursos_Home(20186013);
             addPanel(cursosHome);
         }
 
@@ -68,7 +83,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
 
         private void btnLP2Practicas_Click(object sender, EventArgs e)
         {
-            frmPracticas practicas = new frmPracticas();
+            frmCursos_Practicas practicas = new frmCursos_Practicas();
             addPanel(practicas);
         }
 

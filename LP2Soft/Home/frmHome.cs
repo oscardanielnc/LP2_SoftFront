@@ -41,7 +41,15 @@ namespace LP2Soft.Home
         }
         public static void actualizarInfoPantallas(UsuarioWS.usuario usuario)
         {
-            _usuario = usuario;
+            // actualizamos en nuestro usuario de Home con la nueva información
+            _usuario.nombre = usuario.nombre; //
+            _usuario.apellido = usuario.apellido; //
+            _usuario.fechaNacimiento = usuario.fechaNacimiento; ; //
+            _usuario.descripcion = usuario.descripcion; //
+            _usuario.contrasenia = usuario.contrasenia; ; //
+            _usuario.foto = usuario.foto; ; //
+
+
             _lblNombreUsuario.Text = _usuario.nombre + " " + _usuario.apellido;
             int tamanio = _lblNombreUsuario.Size.Height;
             _lblNombreUsuario.Location = new Point(840, ((int)(62 - tamanio) / 2));
@@ -114,9 +122,9 @@ namespace LP2Soft.Home
         }
 
         public void btnTodosMisCursos_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmCursosHome(_usuario.idUsuario), MenuHome.CursosTodos);
+            abrirFormularioHome(new frmCursos_Home(_usuario.idUsuario), MenuHome.CursosTodos);
         private void btnCursosFavoritos_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmHomeFavoritos(), MenuHome.CursosFavoritos);
+            abrirFormularioHome(new frmCursos_Favoritos(), MenuHome.CursosFavoritos);
 
         public void btnMensajes_Click(object sender, EventArgs e) =>
             abrirFormularioHome(new frmMensajes(/*this*/), MenuHome.Mensajes);
