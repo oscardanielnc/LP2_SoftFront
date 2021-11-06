@@ -123,6 +123,16 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap badge_check_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("badge-check-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bell {
             get {
                 object obj = ResourceManager.GetObject("bell", resourceCulture);
@@ -206,6 +216,16 @@ namespace LP2Soft.Properties {
         internal static System.Drawing.Bitmap chevrons_right_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("chevrons-right-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chevrons_up_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("chevrons-up-solid-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

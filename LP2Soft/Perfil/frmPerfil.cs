@@ -19,10 +19,12 @@ namespace LP2Soft.Perfil
         private static Form _formActivo = null;
         private static MenuPerfil _menuSeleccionado;
         private UsuarioWS.usuario _usuario;
+        private UsuarioWS.UsuariosWSClient _daoUsuario;
         private bool _propio;
         private bool _esAmigo;
         public frmPerfil(UsuarioWS.usuario usuario)
         {
+            _daoUsuario = new UsuarioWS.UsuariosWSClient();
             _usuario = usuario;
             if (usuario.idUsuario == frmHome.Usuario.idUsuario)
                 _propio = true;
@@ -30,8 +32,13 @@ namespace LP2Soft.Perfil
             InitializeComponent();
             btnInformacion.BackColor = Color.FromArgb(28, 103, 179);
             _menuSeleccionado = MenuPerfil.Informacion; // se muestra el menu de información por defecto
-            _esAmigo = false; // _daoUsuario(saber si es mi amigo)
+
+            int esAmigoRes = _daoUsuario.esAmigo(frmHome.Usuario.idUsuario, _usuario.idUsuario);
+            if(esAmigoRes == 1)
+                _esAmigo = true;
+            else _esAmigo = false;
             actualizarPantallas();
+            actualizarIconosAdministrador();
 
             if (_propio)
             {
@@ -42,6 +49,8 @@ namespace LP2Soft.Perfil
             {
                 btnAmigo.Visible = true;
                 btnMensaje.Visible = true;
+                if(_esAmigo) btnAmigo.ImageIndex = 0;
+                else btnAmigo.ImageIndex = 1;
             }
 
             abrirFormulario(new frmPerfil_Informacion(_usuario, _propio));
@@ -53,6 +62,19 @@ namespace LP2Soft.Perfil
             {
                 MemoryStream ms1 = new MemoryStream(_usuario.foto);
                 imgPerfil.Image = new Bitmap(ms1);
+            }
+        }
+        private void actualizarIconosAdministrador()
+        {
+            if(_usuario.esAdmin)
+            {
+                imgAdmin.Visible = true;
+                btnHacerAdmin.Visible = false;
+            } else {
+                imgAdmin.Visible = false;
+                if(frmHome.Usuario.esAdmin)
+                    btnHacerAdmin.Visible = true;
+                else btnHacerAdmin.Visible = false;
             }
         }
         public void abrirFormulario(Form formulario)

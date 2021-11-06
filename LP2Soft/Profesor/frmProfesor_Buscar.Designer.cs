@@ -48,7 +48,7 @@ namespace LP2Soft.Profesor
             // 
             this.panelProfesores.Location = new System.Drawing.Point(18, 74);
             this.panelProfesores.Name = "panelProfesores";
-            this.panelProfesores.Size = new System.Drawing.Size(768, 376);
+            this.panelProfesores.Size = new System.Drawing.Size(768, 364);
             this.panelProfesores.TabIndex = 33;
             // 
             // lblInfo
