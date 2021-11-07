@@ -390,6 +390,12 @@
     <Compile Include="Tarjetas\tarjMensaje.Designer.cs">
       <DependentUpon>tarjMensaje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarjetas\tarjNotificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjNotificacion.Designer.cs">
+      <DependentUpon>tarjNotificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tarjetas\tarjProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -564,6 +570,9 @@
     <EmbeddedResource Include="Tarjetas\tarjMensaje.resx">
       <DependentUpon>tarjMensaje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjNotificacion.resx">
+      <DependentUpon>tarjNotificacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjProfesor.resx">
       <DependentUpon>tarjProfesor.cs</DependentUpon>
     </EmbeddedResource>
@@ -590,6 +599,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.enviarMensajeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.insertarNotificacionAdminResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse.datasource">

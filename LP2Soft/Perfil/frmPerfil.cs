@@ -20,10 +20,12 @@ namespace LP2Soft.Perfil
         private static MenuPerfil _menuSeleccionado;
         private UsuarioWS.usuario _usuario;
         private UsuarioWS.UsuariosWSClient _daoUsuario;
+        private NotificacionesWS.NotificacionesWSClient _daoNotificacion;
         private bool _propio;
         private bool _esAmigo;
         public frmPerfil(UsuarioWS.usuario usuario)
         {
+            _daoNotificacion = new NotificacionesWS.NotificacionesWSClient();
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
             _usuario = usuario;
             if (usuario.idUsuario == frmHome.Usuario.idUsuario)
@@ -186,10 +188,13 @@ namespace LP2Soft.Perfil
             {
                 if(_daoUsuario.hacerAdmin(_usuario.idUsuario)==1)
                 {
-                    MessageBox.Show(_usuario.nombre + " se ha convertido en asesor exitosamente!",
-                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _usuario.esAdmin = true;
                     actualizarIconosAdministrador();
+                    if(_daoNotificacion.insertarNotificacionAdmin(_usuario.idUsuario)==1)
+                        MessageBox.Show(_usuario.nombre + " se ha convertido en asesor exitosamente!",
+                            "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else MessageBox.Show(_usuario.nombre + " se ha convertido en asesor, pero no fue posible notificarle",
+                            "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                     MessageBox.Show("Ha ocurrido un error al tratar de actualizar los datos de " + _usuario.nombre,
