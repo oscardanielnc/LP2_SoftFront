@@ -49,7 +49,7 @@ namespace LP2Soft.Notificaciones
             // panelNotificaciones
             // 
             this.panelNotificaciones.AutoScroll = true;
-            this.panelNotificaciones.BackColor = System.Drawing.SystemColors.Window;
+            this.panelNotificaciones.BackColor = System.Drawing.SystemColors.Control;
             this.panelNotificaciones.Controls.Add(this.lblInfo);
             this.panelNotificaciones.Location = new System.Drawing.Point(12, 67);
             this.panelNotificaciones.Name = "panelNotificaciones";

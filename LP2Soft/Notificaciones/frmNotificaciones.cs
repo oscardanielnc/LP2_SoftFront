@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LP2Soft.Home;
+using LP2Soft.Tarjetas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,7 @@ namespace LP2Soft.Notificaciones
     public partial class frmNotificaciones : Form
     {
         private NotificacionesWS.NotificacionesWSClient _daoNotificaiones;
+        private BindingList<NotificacionesWS.notificacion> _notificaciones;
         public frmNotificaciones()
         {
             _daoNotificaiones = new NotificacionesWS.NotificacionesWSClient();
@@ -20,13 +23,13 @@ namespace LP2Soft.Notificaciones
 
             try
             {
-/*                _mensajes = new BindingList<NotificacionesWS.mensaje>(
-                    _daoMensajes.listarMensajesXAmigo(frmHome.Usuario.idUsuario, _amigo.idUsuario));
+                _notificaciones = new BindingList<NotificacionesWS.notificacion>(
+                    _daoNotificaiones.listarNotificaciones(frmHome.Usuario.idUsuario));
 
                 lblInfo.Visible = false;
 
-                foreach (NotificacionesWS.mensaje m in _mensajes)
-                    agregarMensaje(m);*/
+                foreach (NotificacionesWS.notificacion n in _notificaciones)
+                    agregarNotificacion(n);
 
             }
             catch (Exception ex)
@@ -35,14 +38,14 @@ namespace LP2Soft.Notificaciones
                 lblInfo.Text = "Usted aún no tiene ninguna notificación";
             }
         }
-/*        private void agregarMensaje(NotificacionesWS.mensaje m)
+        private void agregarNotificacion(NotificacionesWS.notificacion n)
         {
-            tarjMensaje tMensaje = new tarjMensaje(m);
-            tMensaje.TopLevel = false;
-            tMensaje.Dock = DockStyle.Top;
-            panelMensajes.Controls.Add(tMensaje);
-            panelMensajes.Controls.SetChildIndex(tMensaje, 0);
-            tMensaje.Visible = true;
-        }*/
+            tarjNotificacion tNotificacion = new tarjNotificacion(n);
+            tNotificacion.TopLevel = false;
+            tNotificacion.Dock = DockStyle.Top;
+            panelNotificaciones.Controls.Add(tNotificacion);
+            panelNotificaciones.Controls.SetChildIndex(tNotificacion, 0);
+            tNotificacion.Visible = true;
+        }
     }
 }

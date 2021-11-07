@@ -607,7 +607,13 @@
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.listarNotificacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.mensaje.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.notificacion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS.wsdl" />

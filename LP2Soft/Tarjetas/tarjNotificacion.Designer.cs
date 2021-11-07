@@ -34,12 +34,12 @@ namespace LP2Soft.Tarjetas
             this.panelMensaje = new System.Windows.Forms.Panel();
             this.imgNotif = new System.Windows.Forms.Label();
             this.imgNotificacion = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgNotific = new System.Windows.Forms.PictureBox();
             this.lblFechaHora = new System.Windows.Forms.Label();
             this.lblContenido = new System.Windows.Forms.Label();
             this.btnPostularAsesor = new LP2Soft.Asesor.BotonChevere();
             this.panelMensaje.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgNotific)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMensaje
@@ -48,7 +48,7 @@ namespace LP2Soft.Tarjetas
             this.panelMensaje.BackColor = System.Drawing.Color.White;
             this.panelMensaje.Controls.Add(this.btnPostularAsesor);
             this.panelMensaje.Controls.Add(this.imgNotif);
-            this.panelMensaje.Controls.Add(this.pictureBox1);
+            this.panelMensaje.Controls.Add(this.imgNotific);
             this.panelMensaje.Controls.Add(this.lblFechaHora);
             this.panelMensaje.Controls.Add(this.lblContenido);
             this.panelMensaje.Cursor = System.Windows.Forms.Cursors.Default;
@@ -77,24 +77,24 @@ namespace LP2Soft.Tarjetas
             this.imgNotificacion.Images.SetKeyName(3, "calendar.png");
             this.imgNotificacion.Images.SetKeyName(4, "newspaper.png");
             // 
-            // pictureBox1
+            // imgNotific
             // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.imgNotific.Image = global::LP2Soft.Properties.Resources.images;
+            this.imgNotific.Location = new System.Drawing.Point(16, 7);
+            this.imgNotific.Name = "imgNotific";
+            this.imgNotific.Size = new System.Drawing.Size(50, 50);
+            this.imgNotific.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgNotific.TabIndex = 18;
+            this.imgNotific.TabStop = false;
             // 
             // lblFechaHora
             // 
             this.lblFechaHora.AutoSize = true;
-            this.lblFechaHora.Location = new System.Drawing.Point(590, 40);
+            this.lblFechaHora.Location = new System.Drawing.Point(590, 49);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(137, 26);
+            this.lblFechaHora.Size = new System.Drawing.Size(137, 13);
             this.lblFechaHora.TabIndex = 17;
-            this.lblFechaHora.Text = "\r\n19/10/2020 a las 23:20 hrs";
+            this.lblFechaHora.Text = "19/10/2020 a las 23:20 hrs";
             // 
             // lblContenido
             // 
@@ -125,6 +125,7 @@ namespace LP2Soft.Tarjetas
             this.btnPostularAsesor.Text = "Ver";
             this.btnPostularAsesor.TextColor = System.Drawing.Color.White;
             this.btnPostularAsesor.UseVisualStyleBackColor = false;
+            this.btnPostularAsesor.Click += new System.EventHandler(this.btnPostularAsesor_Click);
             // 
             // tarjNotificacion
             // 
@@ -137,7 +138,7 @@ namespace LP2Soft.Tarjetas
             this.Text = "tarjNotificacion";
             this.panelMensaje.ResumeLayout(false);
             this.panelMensaje.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgNotific)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,7 +149,7 @@ namespace LP2Soft.Tarjetas
         private System.Windows.Forms.Panel panelMensaje;
         private System.Windows.Forms.Label lblFechaHora;
         private System.Windows.Forms.Label lblContenido;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgNotific;
         private System.Windows.Forms.ImageList imgNotificacion;
         private System.Windows.Forms.Label imgNotif;
         private Asesor.BotonChevere btnPostularAsesor;
