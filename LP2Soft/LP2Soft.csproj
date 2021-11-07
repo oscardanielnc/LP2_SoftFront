@@ -601,7 +601,7 @@
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.enviarMensajeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.insertarNotificacionAdminResponse.datasource">
+    <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.insertarNotificacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse.datasource">

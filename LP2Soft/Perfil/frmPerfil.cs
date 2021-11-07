@@ -190,7 +190,7 @@ namespace LP2Soft.Perfil
                 {
                     _usuario.esAdmin = true;
                     actualizarIconosAdministrador();
-                    if(_daoNotificacion.insertarNotificacionAdmin(_usuario.idUsuario)==1)
+                    if(_daoNotificacion.insertarNotificacion(_usuario.idUsuario,0,-1,-1,-1,-1,-1)==1)
                         MessageBox.Show(_usuario.nombre + " se ha convertido en asesor exitosamente!",
                             "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else MessageBox.Show(_usuario.nombre + " se ha convertido en asesor, pero no fue posible notificarle",

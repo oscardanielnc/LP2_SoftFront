@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/LP2Soft_WebServices/NotificacionesWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarNotificacionAdmin">
-    <part name="parameters" element="tns:insertarNotificacionAdmin" />
-  </message>
-  <message name="insertarNotificacionAdminResponse">
-    <part name="parameters" element="tns:insertarNotificacionAdminResponse" />
-  </message>
   <message name="listarMensajesXAmigo">
     <part name="parameters" element="tns:listarMensajesXAmigo" />
   </message>
   <message name="listarMensajesXAmigoResponse">
     <part name="parameters" element="tns:listarMensajesXAmigoResponse" />
+  </message>
+  <message name="insertarNotificacion">
+    <part name="parameters" element="tns:insertarNotificacion" />
+  </message>
+  <message name="insertarNotificacionResponse">
+    <part name="parameters" element="tns:insertarNotificacionResponse" />
   </message>
   <message name="enviarMensaje">
     <part name="parameters" element="tns:enviarMensaje" />
@@ -24,13 +24,13 @@
     <part name="parameters" element="tns:enviarMensajeResponse" />
   </message>
   <portType name="NotificacionesWS">
-    <operation name="insertarNotificacionAdmin">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionAdminRequest" message="tns:insertarNotificacionAdmin" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionAdminResponse" message="tns:insertarNotificacionAdminResponse" />
-    </operation>
     <operation name="listarMensajesXAmigo">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoRequest" message="tns:listarMensajesXAmigo" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoResponse" message="tns:listarMensajesXAmigoResponse" />
+    </operation>
+    <operation name="insertarNotificacion">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest" message="tns:insertarNotificacion" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" message="tns:insertarNotificacionResponse" />
     </operation>
     <operation name="enviarMensaje">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeRequest" message="tns:enviarMensaje" />
@@ -39,7 +39,7 @@
   </portType>
   <binding name="NotificacionesWSPortBinding" type="tns:NotificacionesWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarNotificacionAdmin">
+    <operation name="listarMensajesXAmigo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -48,7 +48,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarMensajesXAmigo">
+    <operation name="insertarNotificacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
