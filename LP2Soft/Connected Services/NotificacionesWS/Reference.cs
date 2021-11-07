@@ -15,78 +15,226 @@ namespace LP2Soft.NotificacionesWS {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", ConfigurationName="NotificacionesWS.NotificacionesWS")]
     public interface NotificacionesWS {
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento name del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/helloRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/helloResponse")]
-        LP2Soft.NotificacionesWS.helloResponse hello(LP2Soft.NotificacionesWS.helloRequest request);
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.NotificacionesWS.enviarMensajeResponse enviarMensaje(LP2Soft.NotificacionesWS.enviarMensajeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/helloRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/helloResponse")]
-        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.helloResponse> helloAsync(LP2Soft.NotificacionesWS.helloRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeResponse")]
+        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.enviarMensajeResponse> enviarMensajeAsync(LP2Soft.NotificacionesWS.enviarMensajeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse listarMensajesXAmigo(LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoResponse" +
+            "")]
+        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse> listarMensajesXAmigoAsync(LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class helloRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarMensaje", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class enviarMensajeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="hello", Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        public LP2Soft.NotificacionesWS.helloRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario1;
         
-        public helloRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario2;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string contenido;
+        
+        public enviarMensajeRequest() {
         }
         
-        public helloRequest(LP2Soft.NotificacionesWS.helloRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class helloRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string name;
-        
-        public helloRequestBody() {
-        }
-        
-        public helloRequestBody(string name) {
-            this.name = name;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class helloResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="helloResponse", Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        public LP2Soft.NotificacionesWS.helloResponseBody Body;
-        
-        public helloResponse() {
-        }
-        
-        public helloResponse(LP2Soft.NotificacionesWS.helloResponseBody Body) {
-            this.Body = Body;
+        public enviarMensajeRequest(int idUsuario1, int idUsuario2, string contenido) {
+            this.idUsuario1 = idUsuario1;
+            this.idUsuario2 = idUsuario2;
+            this.contenido = contenido;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class helloResponseBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarMensajeResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class enviarMensajeResponse {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public helloResponseBody() {
+        public enviarMensajeResponse() {
         }
         
-        public helloResponseBody(string @return) {
+        public enviarMensajeResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
+    public partial class mensaje : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string contenidoField;
+        
+        private System.DateTime fechayHoraField;
+        
+        private bool fechayHoraFieldSpecified;
+        
+        private int idDestinatarioField;
+        
+        private int idMensajeField;
+        
+        private int idRemitenteField;
+        
+        private bool leidoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string contenido {
+            get {
+                return this.contenidoField;
+            }
+            set {
+                this.contenidoField = value;
+                this.RaisePropertyChanged("contenido");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime fechayHora {
+            get {
+                return this.fechayHoraField;
+            }
+            set {
+                this.fechayHoraField = value;
+                this.RaisePropertyChanged("fechayHora");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechayHoraSpecified {
+            get {
+                return this.fechayHoraFieldSpecified;
+            }
+            set {
+                this.fechayHoraFieldSpecified = value;
+                this.RaisePropertyChanged("fechayHoraSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idDestinatario {
+            get {
+                return this.idDestinatarioField;
+            }
+            set {
+                this.idDestinatarioField = value;
+                this.RaisePropertyChanged("idDestinatario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idMensaje {
+            get {
+                return this.idMensajeField;
+            }
+            set {
+                this.idMensajeField = value;
+                this.RaisePropertyChanged("idMensaje");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int idRemitente {
+            get {
+                return this.idRemitenteField;
+            }
+            set {
+                this.idRemitenteField = value;
+                this.RaisePropertyChanged("idRemitente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public bool leido {
+            get {
+                return this.leidoField;
+            }
+            set {
+                this.leidoField = value;
+                this.RaisePropertyChanged("leido");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMensajesXAmigo", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarMensajesXAmigoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario1;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario2;
+        
+        public listarMensajesXAmigoRequest() {
+        }
+        
+        public listarMensajesXAmigoRequest(int idUsuario1, int idUsuario2) {
+            this.idUsuario1 = idUsuario1;
+            this.idUsuario2 = idUsuario2;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMensajesXAmigoResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarMensajesXAmigoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.NotificacionesWS.mensaje[] @return;
+        
+        public listarMensajesXAmigoResponse() {
+        }
+        
+        public listarMensajesXAmigoResponse(LP2Soft.NotificacionesWS.mensaje[] @return) {
             this.@return = @return;
         }
     }
@@ -119,28 +267,55 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Soft.NotificacionesWS.helloResponse LP2Soft.NotificacionesWS.NotificacionesWS.hello(LP2Soft.NotificacionesWS.helloRequest request) {
-            return base.Channel.hello(request);
+        LP2Soft.NotificacionesWS.enviarMensajeResponse LP2Soft.NotificacionesWS.NotificacionesWS.enviarMensaje(LP2Soft.NotificacionesWS.enviarMensajeRequest request) {
+            return base.Channel.enviarMensaje(request);
         }
         
-        public string hello(string name) {
-            LP2Soft.NotificacionesWS.helloRequest inValue = new LP2Soft.NotificacionesWS.helloRequest();
-            inValue.Body = new LP2Soft.NotificacionesWS.helloRequestBody();
-            inValue.Body.name = name;
-            LP2Soft.NotificacionesWS.helloResponse retVal = ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).hello(inValue);
-            return retVal.Body.@return;
+        public int enviarMensaje(int idUsuario1, int idUsuario2, string contenido) {
+            LP2Soft.NotificacionesWS.enviarMensajeRequest inValue = new LP2Soft.NotificacionesWS.enviarMensajeRequest();
+            inValue.idUsuario1 = idUsuario1;
+            inValue.idUsuario2 = idUsuario2;
+            inValue.contenido = contenido;
+            LP2Soft.NotificacionesWS.enviarMensajeResponse retVal = ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).enviarMensaje(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.helloResponse> LP2Soft.NotificacionesWS.NotificacionesWS.helloAsync(LP2Soft.NotificacionesWS.helloRequest request) {
-            return base.Channel.helloAsync(request);
+        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.enviarMensajeResponse> LP2Soft.NotificacionesWS.NotificacionesWS.enviarMensajeAsync(LP2Soft.NotificacionesWS.enviarMensajeRequest request) {
+            return base.Channel.enviarMensajeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.helloResponse> helloAsync(string name) {
-            LP2Soft.NotificacionesWS.helloRequest inValue = new LP2Soft.NotificacionesWS.helloRequest();
-            inValue.Body = new LP2Soft.NotificacionesWS.helloRequestBody();
-            inValue.Body.name = name;
-            return ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).helloAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.enviarMensajeResponse> enviarMensajeAsync(int idUsuario1, int idUsuario2, string contenido) {
+            LP2Soft.NotificacionesWS.enviarMensajeRequest inValue = new LP2Soft.NotificacionesWS.enviarMensajeRequest();
+            inValue.idUsuario1 = idUsuario1;
+            inValue.idUsuario2 = idUsuario2;
+            inValue.contenido = contenido;
+            return ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).enviarMensajeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse LP2Soft.NotificacionesWS.NotificacionesWS.listarMensajesXAmigo(LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest request) {
+            return base.Channel.listarMensajesXAmigo(request);
+        }
+        
+        public LP2Soft.NotificacionesWS.mensaje[] listarMensajesXAmigo(int idUsuario1, int idUsuario2) {
+            LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest inValue = new LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest();
+            inValue.idUsuario1 = idUsuario1;
+            inValue.idUsuario2 = idUsuario2;
+            LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse retVal = ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).listarMensajesXAmigo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse> LP2Soft.NotificacionesWS.NotificacionesWS.listarMensajesXAmigoAsync(LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest request) {
+            return base.Channel.listarMensajesXAmigoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse> listarMensajesXAmigoAsync(int idUsuario1, int idUsuario2) {
+            LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest inValue = new LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest();
+            inValue.idUsuario1 = idUsuario1;
+            inValue.idUsuario2 = idUsuario2;
+            return ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).listarMensajesXAmigoAsync(inValue);
         }
     }
 }

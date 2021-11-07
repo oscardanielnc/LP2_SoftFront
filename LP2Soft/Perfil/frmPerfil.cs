@@ -48,7 +48,9 @@ namespace LP2Soft.Perfil
             else
             {
                 btnAmigo.Visible = true;
-                btnMensaje.Visible = true;
+                if(_usuario.esAsesor || _esAmigo) btnMensaje.Visible = true;
+                else btnMensaje.Visible = false;
+
                 if(_esAmigo) btnAmigo.ImageIndex = 0;
                 else btnAmigo.ImageIndex = 1;
             }
@@ -153,7 +155,7 @@ namespace LP2Soft.Perfil
 
         private void btnMensaje_Click(object sender, EventArgs e)
         {
-            frmHome.abrirFormulario(new frmMensajeChat());
+            frmHome.abrirFormulario(new frmMensajeChat(_usuario));
         }
 
         private void btnAmigo_Click(object sender, EventArgs e)
@@ -175,6 +177,27 @@ namespace LP2Soft.Perfil
 
                 string mensaje = " Se ha enviado una solicitud de amistad a " + _usuario.nombre + " " + _usuario.apellido;
                 MessageBox.Show(mensaje, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnHacerAdmin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(_daoUsuario.hacerAdmin(_usuario.idUsuario)==1)
+                {
+                    MessageBox.Show(_usuario.nombre + " se ha convertido en asesor exitosamente!",
+                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _usuario.esAdmin = true;
+                    actualizarIconosAdministrador();
+                }
+                else
+                    MessageBox.Show("Ha ocurrido un error al tratar de actualizar los datos de " + _usuario.nombre,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error inesperado en el servidor!",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

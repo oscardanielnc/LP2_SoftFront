@@ -40,9 +40,9 @@ namespace LP2Soft.Perfil
             this.panelContenido = new System.Windows.Forms.Panel();
             this.imgAmigo = new System.Windows.Forms.ImageList(this.components);
             this.panelNombre = new System.Windows.Forms.Panel();
-            this.lblTituloNombre = new System.Windows.Forms.Label();
             this.btnHacerAdmin = new System.Windows.Forms.PictureBox();
             this.imgAdmin = new System.Windows.Forms.PictureBox();
+            this.lblTituloNombre = new System.Windows.Forms.Label();
             this.btnAmigo = new System.Windows.Forms.Label();
             this.btnMensaje = new System.Windows.Forms.PictureBox();
             this.imgPerfil = new System.Windows.Forms.PictureBox();
@@ -174,19 +174,8 @@ namespace LP2Soft.Perfil
             this.panelNombre.Controls.Add(this.lblTituloNombre);
             this.panelNombre.Location = new System.Drawing.Point(206, 185);
             this.panelNombre.Name = "panelNombre";
-            this.panelNombre.Size = new System.Drawing.Size(416, 25);
+            this.panelNombre.Size = new System.Drawing.Size(279, 25);
             this.panelNombre.TabIndex = 12;
-            // 
-            // lblTituloNombre
-            // 
-            this.lblTituloNombre.AutoSize = true;
-            this.lblTituloNombre.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloNombre.Location = new System.Drawing.Point(0, 0);
-            this.lblTituloNombre.Name = "lblTituloNombre";
-            this.lblTituloNombre.Size = new System.Drawing.Size(229, 20);
-            this.lblTituloNombre.TabIndex = 7;
-            this.lblTituloNombre.Text = "Oscar Daniel Navarro Cieza";
             // 
             // btnHacerAdmin
             // 
@@ -199,6 +188,7 @@ namespace LP2Soft.Perfil
             this.btnHacerAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHacerAdmin.TabIndex = 17;
             this.btnHacerAdmin.TabStop = false;
+            this.btnHacerAdmin.Click += new System.EventHandler(this.btnHacerAdmin_Click);
             // 
             // imgAdmin
             // 
@@ -212,12 +202,23 @@ namespace LP2Soft.Perfil
             this.imgAdmin.TabIndex = 16;
             this.imgAdmin.TabStop = false;
             // 
+            // lblTituloNombre
+            // 
+            this.lblTituloNombre.AutoSize = true;
+            this.lblTituloNombre.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloNombre.Location = new System.Drawing.Point(0, 0);
+            this.lblTituloNombre.Name = "lblTituloNombre";
+            this.lblTituloNombre.Size = new System.Drawing.Size(229, 20);
+            this.lblTituloNombre.TabIndex = 7;
+            this.lblTituloNombre.Text = "Oscar Daniel Navarro Cieza";
+            // 
             // btnAmigo
             // 
             this.btnAmigo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAmigo.ImageIndex = 1;
             this.btnAmigo.ImageList = this.imgAmigo;
-            this.btnAmigo.Location = new System.Drawing.Point(702, 185);
+            this.btnAmigo.Location = new System.Drawing.Point(666, 185);
             this.btnAmigo.Name = "btnAmigo";
             this.btnAmigo.Size = new System.Drawing.Size(30, 30);
             this.btnAmigo.TabIndex = 14;
@@ -227,7 +228,7 @@ namespace LP2Soft.Perfil
             // 
             this.btnMensaje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMensaje.Image = global::LP2Soft.Properties.Resources.bubble;
-            this.btnMensaje.Location = new System.Drawing.Point(666, 185);
+            this.btnMensaje.Location = new System.Drawing.Point(702, 185);
             this.btnMensaje.Name = "btnMensaje";
             this.btnMensaje.Size = new System.Drawing.Size(30, 30);
             this.btnMensaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
