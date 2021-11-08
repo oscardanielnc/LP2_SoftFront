@@ -11,22 +11,22 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Cursos.Ciclo7
 {
-    public partial class frmCiclo7 : Form
+    public partial class frmCursos_Ciclo : Form
     {
-        public frmCiclo7()
+        public frmCursos_Ciclo()
         {
             InitializeComponent();
         }
 
         private void btnCiclo7LP2_Click(object sender, EventArgs e)
         {
-            frmCiclo7LP2 ciclo7LP2 = new frmCiclo7LP2();
+            frmCursos_VerCurso ciclo7LP2 = new frmCursos_VerCurso();
             addPanel(ciclo7LP2);
         }
 
         private void btnCiclo7Material_Click(object sender, EventArgs e)
         {
-            frmCursosHome cursosHome = new frmCursosHome();
+            frmCursos_Home cursosHome = new frmCursos_Home();
             addPanel(cursosHome);
         }
 

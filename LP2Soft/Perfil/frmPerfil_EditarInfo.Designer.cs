@@ -30,13 +30,6 @@ namespace LP2Soft.Perfil
         private void InitializeComponent()
         {
             this.panelContenido = new System.Windows.Forms.Panel();
-            this.panelAsesor = new System.Windows.Forms.Panel();
-            this.lblInfAsesor = new System.Windows.Forms.Label();
-            this.imgVineta2 = new System.Windows.Forms.PictureBox();
-            this.infoCalificacion = new System.Windows.Forms.Label();
-            this.infoPrecio = new System.Windows.Forms.Label();
-            this.lblCalificacion = new System.Windows.Forms.Label();
-            this.txtPrecioHora = new System.Windows.Forms.TextBox();
             this.panelGeneral = new System.Windows.Forms.Panel();
             this.lblUniversidad = new System.Windows.Forms.Label();
             this.btnVerContrasenia = new System.Windows.Forms.PictureBox();
@@ -67,8 +60,6 @@ namespace LP2Soft.Perfil
             this.btnSubirPerfil = new System.Windows.Forms.PictureBox();
             this.ofdPerfil = new System.Windows.Forms.OpenFileDialog();
             this.panelContenido.SuspendLayout();
-            this.panelAsesor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).BeginInit();
             this.panelGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVerContrasenia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).BeginInit();
@@ -83,87 +74,12 @@ namespace LP2Soft.Perfil
             // 
             this.panelContenido.AutoSize = true;
             this.panelContenido.BackColor = System.Drawing.SystemColors.Window;
-            this.panelContenido.Controls.Add(this.panelAsesor);
             this.panelContenido.Controls.Add(this.panelGeneral);
             this.panelContenido.Location = new System.Drawing.Point(6, 220);
             this.panelContenido.MinimumSize = new System.Drawing.Size(0, 282);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(805, 377);
+            this.panelContenido.Size = new System.Drawing.Size(805, 296);
             this.panelContenido.TabIndex = 16;
-            // 
-            // panelAsesor
-            // 
-            this.panelAsesor.BackColor = System.Drawing.SystemColors.Window;
-            this.panelAsesor.Controls.Add(this.lblInfAsesor);
-            this.panelAsesor.Controls.Add(this.imgVineta2);
-            this.panelAsesor.Controls.Add(this.infoCalificacion);
-            this.panelAsesor.Controls.Add(this.infoPrecio);
-            this.panelAsesor.Controls.Add(this.lblCalificacion);
-            this.panelAsesor.Controls.Add(this.txtPrecioHora);
-            this.panelAsesor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAsesor.Location = new System.Drawing.Point(0, 277);
-            this.panelAsesor.Name = "panelAsesor";
-            this.panelAsesor.Size = new System.Drawing.Size(805, 100);
-            this.panelAsesor.TabIndex = 64;
-            // 
-            // lblInfAsesor
-            // 
-            this.lblInfAsesor.AutoSize = true;
-            this.lblInfAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfAsesor.Location = new System.Drawing.Point(43, 10);
-            this.lblInfAsesor.Name = "lblInfAsesor";
-            this.lblInfAsesor.Size = new System.Drawing.Size(163, 16);
-            this.lblInfAsesor.TabIndex = 48;
-            this.lblInfAsesor.Text = "Información de Asesor";
-            // 
-            // imgVineta2
-            // 
-            this.imgVineta2.Image = global::LP2Soft.Properties.Resources.book;
-            this.imgVineta2.Location = new System.Drawing.Point(17, 10);
-            this.imgVineta2.Name = "imgVineta2";
-            this.imgVineta2.Size = new System.Drawing.Size(20, 20);
-            this.imgVineta2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgVineta2.TabIndex = 49;
-            this.imgVineta2.TabStop = false;
-            // 
-            // infoCalificacion
-            // 
-            this.infoCalificacion.AutoSize = true;
-            this.infoCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoCalificacion.Location = new System.Drawing.Point(107, 43);
-            this.infoCalificacion.Name = "infoCalificacion";
-            this.infoCalificacion.Size = new System.Drawing.Size(86, 15);
-            this.infoCalificacion.TabIndex = 50;
-            this.infoCalificacion.Text = "Calificación:";
-            // 
-            // infoPrecio
-            // 
-            this.infoPrecio.AutoSize = true;
-            this.infoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoPrecio.Location = new System.Drawing.Point(79, 66);
-            this.infoPrecio.Name = "infoPrecio";
-            this.infoPrecio.Size = new System.Drawing.Size(114, 15);
-            this.infoPrecio.TabIndex = 51;
-            this.infoPrecio.Text = "Precio/Hora (S/):";
-            // 
-            // lblCalificacion
-            // 
-            this.lblCalificacion.AutoSize = true;
-            this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificacion.Location = new System.Drawing.Point(211, 43);
-            this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(31, 15);
-            this.lblCalificacion.TabIndex = 52;
-            this.lblCalificacion.Text = "4.58";
-            // 
-            // txtPrecioHora
-            // 
-            this.txtPrecioHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioHora.Location = new System.Drawing.Point(214, 66);
-            this.txtPrecioHora.Name = "txtPrecioHora";
-            this.txtPrecioHora.Size = new System.Drawing.Size(79, 21);
-            this.txtPrecioHora.TabIndex = 19;
-            this.txtPrecioHora.Text = "30.00";
             // 
             // panelGeneral
             // 
@@ -476,7 +392,7 @@ namespace LP2Soft.Perfil
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(823, 601);
+            this.ClientSize = new System.Drawing.Size(823, 527);
             this.Controls.Add(this.btnSubirPerfil);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
@@ -489,9 +405,6 @@ namespace LP2Soft.Perfil
             this.Text = "frmPerfil_EditarInfo";
             this.panelContenido.ResumeLayout(false);
             this.panelContenido.PerformLayout();
-            this.panelAsesor.ResumeLayout(false);
-            this.panelAsesor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).EndInit();
             this.panelGeneral.ResumeLayout(false);
             this.panelGeneral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVerContrasenia)).EndInit();
@@ -535,13 +448,6 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.TextBox txtContrasenia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox btnVerContrasenia;
-        private System.Windows.Forms.Panel panelAsesor;
-        private System.Windows.Forms.Label lblInfAsesor;
-        private System.Windows.Forms.PictureBox imgVineta2;
-        private System.Windows.Forms.Label infoCalificacion;
-        private System.Windows.Forms.Label infoPrecio;
-        private System.Windows.Forms.Label lblCalificacion;
-        private System.Windows.Forms.TextBox txtPrecioHora;
         private System.Windows.Forms.Panel panelGeneral;
         private System.Windows.Forms.PictureBox btnSubirPerfil;
         private System.Windows.Forms.OpenFileDialog ofdPerfil;

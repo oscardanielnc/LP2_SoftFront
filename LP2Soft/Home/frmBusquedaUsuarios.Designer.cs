@@ -55,6 +55,7 @@ namespace LP2Soft.Home
             // 
             // panelUsuarios
             // 
+            this.panelUsuarios.AutoSize = true;
             this.panelUsuarios.Location = new System.Drawing.Point(21, 83);
             this.panelUsuarios.Name = "panelUsuarios";
             this.panelUsuarios.Size = new System.Drawing.Size(780, 390);
@@ -64,6 +65,7 @@ namespace LP2Soft.Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 505);
             this.Controls.Add(this.panelUsuarios);
             this.Controls.Add(this.lblInfo);

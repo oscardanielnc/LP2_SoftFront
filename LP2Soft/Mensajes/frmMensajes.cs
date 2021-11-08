@@ -20,7 +20,7 @@ namespace LP2Soft.Mensajes
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmHome.abrirFormulario(new frmMensajeChat());
+            /*frmHome.abrirFormulario(new frmMensajeChat());*/
         }
     }
 }

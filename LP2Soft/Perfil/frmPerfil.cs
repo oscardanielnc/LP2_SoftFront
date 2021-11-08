@@ -19,10 +19,14 @@ namespace LP2Soft.Perfil
         private static Form _formActivo = null;
         private static MenuPerfil _menuSeleccionado;
         private UsuarioWS.usuario _usuario;
+        private UsuarioWS.UsuariosWSClient _daoUsuario;
+        private NotificacionesWS.NotificacionesWSClient _daoNotificacion;
         private bool _propio;
         private bool _esAmigo;
         public frmPerfil(UsuarioWS.usuario usuario)
         {
+            _daoNotificacion = new NotificacionesWS.NotificacionesWSClient();
+            _daoUsuario = new UsuarioWS.UsuariosWSClient();
             _usuario = usuario;
             if (usuario.idUsuario == frmHome.Usuario.idUsuario)
                 _propio = true;
@@ -30,8 +34,13 @@ namespace LP2Soft.Perfil
             InitializeComponent();
             btnInformacion.BackColor = Color.FromArgb(28, 103, 179);
             _menuSeleccionado = MenuPerfil.Informacion; // se muestra el menu de información por defecto
-            _esAmigo = false; // _daoUsuario(saber si es mi amigo)
+
+            int esAmigoRes = _daoUsuario.esAmigo(frmHome.Usuario.idUsuario, _usuario.idUsuario);
+            if(esAmigoRes == 1)
+                _esAmigo = true;
+            else _esAmigo = false;
             actualizarPantallas();
+            actualizarIconosAdministrador();
 
             if (_propio)
             {
@@ -41,7 +50,11 @@ namespace LP2Soft.Perfil
             else
             {
                 btnAmigo.Visible = true;
-                btnMensaje.Visible = true;
+                if(_usuario.esAsesor || _esAmigo) btnMensaje.Visible = true;
+                else btnMensaje.Visible = false;
+
+                if(_esAmigo) btnAmigo.ImageIndex = 0;
+                else btnAmigo.ImageIndex = 1;
             }
 
             abrirFormulario(new frmPerfil_Informacion(_usuario, _propio));
@@ -53,6 +66,19 @@ namespace LP2Soft.Perfil
             {
                 MemoryStream ms1 = new MemoryStream(_usuario.foto);
                 imgPerfil.Image = new Bitmap(ms1);
+            }
+        }
+        private void actualizarIconosAdministrador()
+        {
+            if(_usuario.esAdmin)
+            {
+                imgAdmin.Visible = true;
+                btnHacerAdmin.Visible = false;
+            } else {
+                imgAdmin.Visible = false;
+                if(frmHome.Usuario.esAdmin)
+                    btnHacerAdmin.Visible = true;
+                else btnHacerAdmin.Visible = false;
             }
         }
         public void abrirFormulario(Form formulario)
@@ -131,7 +157,7 @@ namespace LP2Soft.Perfil
 
         private void btnMensaje_Click(object sender, EventArgs e)
         {
-            frmHome.abrirFormulario(new frmMensajeChat());
+            frmHome.abrirFormulario(new frmMensajeChat(_usuario));
         }
 
         private void btnAmigo_Click(object sender, EventArgs e)
@@ -153,6 +179,30 @@ namespace LP2Soft.Perfil
 
                 string mensaje = " Se ha enviado una solicitud de amistad a " + _usuario.nombre + " " + _usuario.apellido;
                 MessageBox.Show(mensaje, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnHacerAdmin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(_daoUsuario.hacerAdmin(_usuario.idUsuario)==1)
+                {
+                    _usuario.esAdmin = true;
+                    actualizarIconosAdministrador();
+                    if(_daoNotificacion.insertarNotificacion(_usuario.idUsuario,0,-1,-1,-1,-1,-1)==1)
+                        MessageBox.Show(_usuario.nombre + " se ha convertido en asesor exitosamente!",
+                            "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else MessageBox.Show(_usuario.nombre + " se ha convertido en asesor, pero no fue posible notificarle",
+                            "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    MessageBox.Show("Ha ocurrido un error al tratar de actualizar los datos de " + _usuario.nombre,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error inesperado en el servidor!",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

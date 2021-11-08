@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LP2Soft.Cursos
 {
-    public partial class frmHomeFavoritos : Form
+    public partial class frmCursos_Favoritos : Form
     {
-        public frmHomeFavoritos()
+        public frmCursos_Favoritos()
         {
             InitializeComponent();
         }

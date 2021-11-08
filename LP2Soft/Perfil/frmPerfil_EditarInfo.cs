@@ -25,19 +25,6 @@ namespace LP2Soft.Perfil
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
             InitializeComponent();
 
-
-            if (_usuarioActual.esAsesor)
-            {
-                panelAsesor.Visible = true;
-                lblCalificacion.Text = _usuarioActual.asesor.calificacion.ToString();
-                txtPrecioHora.Text = _usuarioActual.asesor.precioPorHora.ToString();
-            }
-            else
-            {
-                panelAsesor.Visible = false;
-                panelContenido.Size = new Size(805, 280);
-            }
-
             lblCodigo.Text = _usuarioActual.codigoPUCP;
             lblCorreo.Text = _usuarioActual.correo;
             dtpFechaNacimiento.Value = _usuarioActual.fechaNacimiento;
@@ -62,20 +49,21 @@ namespace LP2Soft.Perfil
         {
             _usuarioModificado = new UsuarioWS.usuario();
             _usuarioModificado.idUsuario = _usuarioActual.idUsuario;
-            _usuarioModificado.nombre = txtNombre.Text;
-            _usuarioModificado.apellido = txtApellido.Text;
+            _usuarioModificado.nombre = txtNombre.Text; //
+            _usuarioModificado.apellido = txtApellido.Text; //
             _usuarioModificado.codigoPUCP = lblCodigo.Text;
             // aquí viene la fecha de nacimiento
-            _usuarioModificado.fechaNacimiento = dtpFechaNacimiento.Value;
+            _usuarioModificado.fechaNacimiento = dtpFechaNacimiento.Value; //
             _usuarioModificado.fechaNacimientoSpecified = true;
 
-            _usuarioModificado.correo = lblCorreo.Text;
+            _usuarioModificado.correo = lblCorreo.Text; 
             _usuarioModificado.especialidad = _usuarioActual.especialidad;
-            _usuarioModificado.descripcion = rtbDescripcion.Text;
-            _usuarioModificado.contrasenia = txtContrasenia.Text;
+            _usuarioModificado.descripcion = rtbDescripcion.Text; //
+            _usuarioModificado.contrasenia = txtContrasenia.Text; //
             _usuarioModificado.esAsesor = _usuarioActual.esAsesor;
             _usuarioModificado.esAdmin = _usuarioActual.esAdmin;
-            _usuarioModificado.foto = _usuarioActual.foto;
+            _usuarioModificado.foto = _usuarioActual.foto; //
+            _usuarioModificado.asesor = _usuarioActual.asesor;
             // portada
             int resultado = _daoUsuario.modificarUsuario(_usuarioModificado);
             if (resultado == 0)

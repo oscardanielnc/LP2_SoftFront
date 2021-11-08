@@ -1,7 +1,7 @@
 ﻿
 namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
 {
-    partial class frmPractica2
+    partial class frmCursos_VerPractica
     {
         /// <summary>
         /// Required designer variable.

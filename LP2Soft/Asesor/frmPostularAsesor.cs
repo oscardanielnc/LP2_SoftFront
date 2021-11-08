@@ -15,14 +15,14 @@ namespace LP2Soft.Asesor
     {
         private UsuarioWS.UsuariosWSClient _daoUsuario;
         private UsuarioWS.asesor _asesor;
-        private CursosWS.CursosWSClient _daoCurso;
-        private BindingList<CursosWS.curso> _cursos;
+        // private CursosWS.CursosWSClient _daoCurso;
         public frmPostularAsesor()
         {
+            _daoUsuario = new UsuarioWS.UsuariosWSClient();
             InitializeComponent();
-            _daoCurso = new CursosWS.CursosWSClient();
-            _cursos = new BindingList<CursosWS.curso>(_daoCurso.listarCursos(frmHome.Usuario.idUsuario));
-            cboCursos.DataSource = _cursos;
+            if (frmHome.Usuario.cursos == null)
+                frmHome.Usuario.cursos = _daoUsuario.listarCursos(frmHome.Usuario.idUsuario);
+            cboCursos.DataSource = frmHome.Usuario.cursos;
             cboCursos.DisplayMember = "nombre";
             cboCursos.ValueMember = "idCurso";
             cboCursos.Texts = "Elegir curso";

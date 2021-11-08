@@ -1,7 +1,7 @@
 ﻿
 namespace LP2Soft.Cursos.Ciclo7
 {
-    partial class frmCiclo7
+    partial class frmCursos_Ciclo
     {
         /// <summary>
         /// Required designer variable.
