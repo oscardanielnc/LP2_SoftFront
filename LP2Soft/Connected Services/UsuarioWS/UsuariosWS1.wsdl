@@ -5,6 +5,24 @@
       <xsd:import schemaLocation="http://localhost:8081/LP2Soft_WebServices/UsuariosWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="listarUsuariosNombreCodigo">
+    <part name="parameters" element="tns:listarUsuariosNombreCodigo" />
+  </message>
+  <message name="listarUsuariosNombreCodigoResponse">
+    <part name="parameters" element="tns:listarUsuariosNombreCodigoResponse" />
+  </message>
+  <message name="listarAmigosNombreCodigo">
+    <part name="parameters" element="tns:listarAmigosNombreCodigo" />
+  </message>
+  <message name="listarAmigosNombreCodigoResponse">
+    <part name="parameters" element="tns:listarAmigosNombreCodigoResponse" />
+  </message>
+  <message name="listarXnombreYcurso">
+    <part name="parameters" element="tns:listarXnombreYcurso" />
+  </message>
+  <message name="listarXnombreYcursoResponse">
+    <part name="parameters" element="tns:listarXnombreYcursoResponse" />
+  </message>
   <message name="mostrarUsuario">
     <part name="parameters" element="tns:mostrarUsuario" />
   </message>
@@ -17,11 +35,11 @@
   <message name="modificarUsuarioResponse">
     <part name="parameters" element="tns:modificarUsuarioResponse" />
   </message>
-  <message name="insertarUsuario">
-    <part name="parameters" element="tns:insertarUsuario" />
+  <message name="esAmigo">
+    <part name="parameters" element="tns:esAmigo" />
   </message>
-  <message name="insertarUsuarioResponse">
-    <part name="parameters" element="tns:insertarUsuarioResponse" />
+  <message name="esAmigoResponse">
+    <part name="parameters" element="tns:esAmigoResponse" />
   </message>
   <message name="listarCursos">
     <part name="parameters" element="tns:listarCursos" />
@@ -47,31 +65,25 @@
   <message name="agregarAmigoResponse">
     <part name="parameters" element="tns:agregarAmigoResponse" />
   </message>
-  <message name="esAmigo">
-    <part name="parameters" element="tns:esAmigo" />
+  <message name="insertarUsuario">
+    <part name="parameters" element="tns:insertarUsuario" />
   </message>
-  <message name="esAmigoResponse">
-    <part name="parameters" element="tns:esAmigoResponse" />
-  </message>
-  <message name="listarAmigosNombreCodigo">
-    <part name="parameters" element="tns:listarAmigosNombreCodigo" />
-  </message>
-  <message name="listarAmigosNombreCodigoResponse">
-    <part name="parameters" element="tns:listarAmigosNombreCodigoResponse" />
-  </message>
-  <message name="listarXnombreYcurso">
-    <part name="parameters" element="tns:listarXnombreYcurso" />
-  </message>
-  <message name="listarXnombreYcursoResponse">
-    <part name="parameters" element="tns:listarXnombreYcursoResponse" />
-  </message>
-  <message name="listarUsuariosNombreCodigo">
-    <part name="parameters" element="tns:listarUsuariosNombreCodigo" />
-  </message>
-  <message name="listarUsuariosNombreCodigoResponse">
-    <part name="parameters" element="tns:listarUsuariosNombreCodigoResponse" />
+  <message name="insertarUsuarioResponse">
+    <part name="parameters" element="tns:insertarUsuarioResponse" />
   </message>
   <portType name="UsuariosWS">
+    <operation name="listarUsuariosNombreCodigo">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarUsuariosNombreCodigoRequest" message="tns:listarUsuariosNombreCodigo" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarUsuariosNombreCodigoResponse" message="tns:listarUsuariosNombreCodigoResponse" />
+    </operation>
+    <operation name="listarAmigosNombreCodigo">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarAmigosNombreCodigoRequest" message="tns:listarAmigosNombreCodigo" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarAmigosNombreCodigoResponse" message="tns:listarAmigosNombreCodigoResponse" />
+    </operation>
+    <operation name="listarXnombreYcurso">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarXnombreYcursoRequest" message="tns:listarXnombreYcurso" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarXnombreYcursoResponse" message="tns:listarXnombreYcursoResponse" />
+    </operation>
     <operation name="mostrarUsuario">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/mostrarUsuarioRequest" message="tns:mostrarUsuario" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/mostrarUsuarioResponse" message="tns:mostrarUsuarioResponse" />
@@ -80,9 +92,9 @@
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/modificarUsuarioRequest" message="tns:modificarUsuario" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/modificarUsuarioResponse" message="tns:modificarUsuarioResponse" />
     </operation>
-    <operation name="insertarUsuario">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
+    <operation name="esAmigo">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/esAmigoRequest" message="tns:esAmigo" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/esAmigoResponse" message="tns:esAmigoResponse" />
     </operation>
     <operation name="listarCursos">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarCursosRequest" message="tns:listarCursos" />
@@ -100,29 +112,40 @@
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/agregarAmigoRequest" message="tns:agregarAmigo" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/agregarAmigoResponse" message="tns:agregarAmigoResponse" />
     </operation>
-    <operation name="esAmigo">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/esAmigoRequest" message="tns:esAmigo" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/esAmigoResponse" message="tns:esAmigoResponse" />
-    </operation>
-    <operation name="listarAmigosNombreCodigo">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarAmigosNombreCodigoRequest" message="tns:listarAmigosNombreCodigo" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarAmigosNombreCodigoResponse" message="tns:listarAmigosNombreCodigoResponse" />
-    </operation>
-    <operation name="listarXnombreYcurso">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarXnombreYcursoRequest" message="tns:listarXnombreYcurso" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarXnombreYcursoResponse" message="tns:listarXnombreYcursoResponse" />
-    </operation>
-    <operation name="listarUsuariosNombreCodigo">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarUsuariosNombreCodigoRequest" message="tns:listarUsuariosNombreCodigo" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarUsuariosNombreCodigoResponse" message="tns:listarUsuariosNombreCodigoResponse" />
-    </operation>
-    <operation name="insertarAsesor">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarAsesorRequest" message="tns:insertarAsesor" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarAsesorResponse" message="tns:insertarAsesorResponse" />
+    <operation name="insertarUsuario">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
     </operation>
   </portType>
   <binding name="UsuariosWSPortBinding" type="tns:UsuariosWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarUsuariosNombreCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAmigosNombreCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarXnombreYcurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="mostrarUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -141,7 +164,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarUsuario">
+    <operation name="esAmigo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -159,7 +182,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="mostrarUsuario">
+    <operation name="insertarAsesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -186,34 +209,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="esAmigo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarAmigosNombreCodigo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarXnombreYcurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarUsuariosNombreCodigo">
+    <operation name="insertarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

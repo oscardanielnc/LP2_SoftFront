@@ -69,8 +69,38 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
       <xs:element name="calificacion" type="xs:float" />
+      <xs:element name="cantidadResenias" type="xs:int" />
       <xs:element name="idAsesor" type="xs:int" />
       <xs:element name="precioPorHora" type="xs:float" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="resenias" nillable="true" type="tns:resenia" />
+      <xs:element name="sumatoriaResenias" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resenia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:post">
+        <xs:sequence>
+          <xs:element name="calificacion" type="xs:int" />
+          <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
+          <xs:element minOccurs="0" name="usuarioReseniado" type="tns:usuario" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="profesor">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="calificacion" type="xs:float" />
+      <xs:element name="cantidadResenias" type="xs:int" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cursos" nillable="true" type="tns:curso" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idProfesor" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="portada" type="xs:base64Binary" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="resenias" nillable="true" type="tns:resenia" />
+      <xs:element name="sumatoriaResenias" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="curso">
@@ -89,12 +119,6 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="posts" nillable="true" type="tns:post" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="profesores" nillable="true" type="tns:profesor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="profesor">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element name="calificacion" type="xs:float" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="evento">

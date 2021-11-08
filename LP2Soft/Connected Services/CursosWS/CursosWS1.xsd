@@ -134,12 +134,12 @@
   </xs:complexType>
   <xs:complexType name="listarProfesoresNombre">
     <xs:sequence>
-      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursosResponse">
+  <xs:complexType name="listarProfesoresNombreResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
