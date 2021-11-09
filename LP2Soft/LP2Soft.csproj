@@ -402,6 +402,12 @@
     <Compile Include="Tarjetas\tarjProfesor.Designer.cs">
       <DependentUpon>tarjProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarjetas\tarjUltimoMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjUltimoMensaje.Designer.cs">
+      <DependentUpon>tarjUltimoMensaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tarjetas\tarjUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -575,6 +581,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjProfesor.resx">
       <DependentUpon>tarjProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjUltimoMensaje.resx">
+      <DependentUpon>tarjUltimoMensaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
       <DependentUpon>tarjUsuario.cs</DependentUpon>

@@ -32,12 +32,12 @@ namespace LP2Soft.Tarjetas
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tarjNotificacion));
             this.panelMensaje = new System.Windows.Forms.Panel();
+            this.btnVer = new LP2Soft.Asesor.BotonChevere();
             this.imgNotif = new System.Windows.Forms.Label();
             this.imgNotificacion = new System.Windows.Forms.ImageList(this.components);
             this.imgNotific = new System.Windows.Forms.PictureBox();
             this.lblFechaHora = new System.Windows.Forms.Label();
             this.lblContenido = new System.Windows.Forms.Label();
-            this.btnPostularAsesor = new LP2Soft.Asesor.BotonChevere();
             this.panelMensaje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgNotific)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +46,7 @@ namespace LP2Soft.Tarjetas
             // 
             this.panelMensaje.AutoSize = true;
             this.panelMensaje.BackColor = System.Drawing.Color.White;
-            this.panelMensaje.Controls.Add(this.btnPostularAsesor);
+            this.panelMensaje.Controls.Add(this.btnVer);
             this.panelMensaje.Controls.Add(this.imgNotif);
             this.panelMensaje.Controls.Add(this.imgNotific);
             this.panelMensaje.Controls.Add(this.lblFechaHora);
@@ -56,6 +56,26 @@ namespace LP2Soft.Tarjetas
             this.panelMensaje.Name = "panelMensaje";
             this.panelMensaje.Size = new System.Drawing.Size(730, 70);
             this.panelMensaje.TabIndex = 22;
+            // 
+            // btnVer
+            // 
+            this.btnVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnVer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnVer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnVer.BorderRadius = 6;
+            this.btnVer.BorderSize = 0;
+            this.btnVer.FlatAppearance.BorderSize = 0;
+            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer.ForeColor = System.Drawing.Color.White;
+            this.btnVer.Location = new System.Drawing.Point(631, 14);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(69, 23);
+            this.btnVer.TabIndex = 25;
+            this.btnVer.Text = "Ver";
+            this.btnVer.TextColor = System.Drawing.Color.White;
+            this.btnVer.UseVisualStyleBackColor = false;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
             // imgNotif
             // 
@@ -100,32 +120,13 @@ namespace LP2Soft.Tarjetas
             // 
             this.lblContenido.AutoSize = true;
             this.lblContenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
             this.lblContenido.Location = new System.Drawing.Point(88, 16);
             this.lblContenido.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblContenido.Name = "lblContenido";
             this.lblContenido.Size = new System.Drawing.Size(431, 16);
             this.lblContenido.TabIndex = 15;
             this.lblContenido.Text = "Felicidades ¡Te has convertido en administrador del sistema!";
-            // 
-            // btnPostularAsesor
-            // 
-            this.btnPostularAsesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnPostularAsesor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnPostularAsesor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnPostularAsesor.BorderRadius = 6;
-            this.btnPostularAsesor.BorderSize = 0;
-            this.btnPostularAsesor.FlatAppearance.BorderSize = 0;
-            this.btnPostularAsesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPostularAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPostularAsesor.ForeColor = System.Drawing.Color.White;
-            this.btnPostularAsesor.Location = new System.Drawing.Point(631, 14);
-            this.btnPostularAsesor.Name = "btnPostularAsesor";
-            this.btnPostularAsesor.Size = new System.Drawing.Size(69, 23);
-            this.btnPostularAsesor.TabIndex = 25;
-            this.btnPostularAsesor.Text = "Ver";
-            this.btnPostularAsesor.TextColor = System.Drawing.Color.White;
-            this.btnPostularAsesor.UseVisualStyleBackColor = false;
-            this.btnPostularAsesor.Click += new System.EventHandler(this.btnPostularAsesor_Click);
             // 
             // tarjNotificacion
             // 
@@ -152,6 +153,6 @@ namespace LP2Soft.Tarjetas
         private System.Windows.Forms.PictureBox imgNotific;
         private System.Windows.Forms.ImageList imgNotificacion;
         private System.Windows.Forms.Label imgNotif;
-        private Asesor.BotonChevere btnPostularAsesor;
+        private Asesor.BotonChevere btnVer;
     }
 }

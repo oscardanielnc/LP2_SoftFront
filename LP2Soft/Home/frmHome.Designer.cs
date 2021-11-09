@@ -30,8 +30,6 @@ namespace LP2Soft.Home
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
-            this.lblNumMensajes = new System.Windows.Forms.Label();
-            this.lblNumNotificaciones = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.panelContenido = new System.Windows.Forms.Panel();
@@ -66,24 +64,6 @@ namespace LP2Soft.Home
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNotificaciones)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblNumMensajes
-            // 
-            this.lblNumMensajes.AutoSize = true;
-            this.lblNumMensajes.Location = new System.Drawing.Point(738, 9);
-            this.lblNumMensajes.Name = "lblNumMensajes";
-            this.lblNumMensajes.Size = new System.Drawing.Size(13, 13);
-            this.lblNumMensajes.TabIndex = 21;
-            this.lblNumMensajes.Text = "2";
-            // 
-            // lblNumNotificaciones
-            // 
-            this.lblNumNotificaciones.AutoSize = true;
-            this.lblNumNotificaciones.Location = new System.Drawing.Point(670, 9);
-            this.lblNumNotificaciones.Name = "lblNumNotificaciones";
-            this.lblNumNotificaciones.Size = new System.Drawing.Size(19, 13);
-            this.lblNumNotificaciones.TabIndex = 20;
-            this.lblNumNotificaciones.Text = "10";
             // 
             // txtBusqueda
             // 
@@ -395,9 +375,7 @@ namespace LP2Soft.Home
             this.panelHeader.BackColor = System.Drawing.SystemColors.Window;
             this.panelHeader.Controls.Add(this.lblNombreUsuario);
             this.panelHeader.Controls.Add(this.imgLogo);
-            this.panelHeader.Controls.Add(this.lblNumMensajes);
             this.panelHeader.Controls.Add(this.imgUsuario);
-            this.panelHeader.Controls.Add(this.lblNumNotificaciones);
             this.panelHeader.Controls.Add(this.btnMensajes);
             this.panelHeader.Controls.Add(this.txtBusqueda);
             this.panelHeader.Controls.Add(this.btnBuscar);
@@ -433,7 +411,7 @@ namespace LP2Soft.Home
             // 
             this.btnMensajes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMensajes.Image = global::LP2Soft.Properties.Resources.bubble;
-            this.btnMensajes.Location = new System.Drawing.Point(711, 16);
+            this.btnMensajes.Location = new System.Drawing.Point(706, 16);
             this.btnMensajes.Name = "btnMensajes";
             this.btnMensajes.Size = new System.Drawing.Size(30, 30);
             this.btnMensajes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -457,7 +435,7 @@ namespace LP2Soft.Home
             // 
             this.btnNotificaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNotificaciones.Image = global::LP2Soft.Properties.Resources.bell;
-            this.btnNotificaciones.Location = new System.Drawing.Point(643, 16);
+            this.btnNotificaciones.Location = new System.Drawing.Point(660, 16);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(30, 30);
             this.btnNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -491,9 +469,6 @@ namespace LP2Soft.Home
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblNumMensajes;
-        private System.Windows.Forms.Label lblNumNotificaciones;
         private System.Windows.Forms.PictureBox btnMensajes;
         private System.Windows.Forms.PictureBox btnNotificaciones;
         private System.Windows.Forms.PictureBox btnBuscar;
