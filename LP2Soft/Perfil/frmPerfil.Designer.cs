@@ -39,21 +39,24 @@ namespace LP2Soft.Perfil
             this.btnInformacion = new System.Windows.Forms.Button();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.imgAmigo = new System.Windows.Forms.ImageList(this.components);
-            this.panelNombre = new System.Windows.Forms.Panel();
-            this.btnHacerAdmin = new System.Windows.Forms.PictureBox();
-            this.imgAdmin = new System.Windows.Forms.PictureBox();
-            this.lblTituloNombre = new System.Windows.Forms.Label();
             this.btnAmigo = new System.Windows.Forms.Label();
             this.btnMensaje = new System.Windows.Forms.PictureBox();
             this.imgPerfil = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblSoliEnviada = new System.Windows.Forms.Label();
+            this.panelNombre = new System.Windows.Forms.Panel();
+            this.btnHacerAdmin = new System.Windows.Forms.PictureBox();
+            this.imgAdmin = new System.Windows.Forms.PictureBox();
+            this.lblTituloNombre = new System.Windows.Forms.Label();
+            this.btnAceptar = new LP2Soft.Asesor.BotonChevere();
+            this.btnRechazar = new LP2Soft.Asesor.BotonChevere();
             this.panel1.SuspendLayout();
-            this.panelNombre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHacerAdmin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelNombre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHacerAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -155,7 +158,7 @@ namespace LP2Soft.Perfil
             this.panelContenido.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelContenido.Location = new System.Drawing.Point(12, 249);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(799, 234);
+            this.panelContenido.Size = new System.Drawing.Size(810, 363);
             this.panelContenido.TabIndex = 11;
             // 
             // imgAmigo
@@ -165,60 +168,13 @@ namespace LP2Soft.Perfil
             this.imgAmigo.Images.SetKeyName(0, "user-minus.png");
             this.imgAmigo.Images.SetKeyName(1, "user-plus.png");
             // 
-            // panelNombre
-            // 
-            this.panelNombre.AutoSize = true;
-            this.panelNombre.BackColor = System.Drawing.SystemColors.Control;
-            this.panelNombre.Controls.Add(this.btnHacerAdmin);
-            this.panelNombre.Controls.Add(this.imgAdmin);
-            this.panelNombre.Controls.Add(this.lblTituloNombre);
-            this.panelNombre.Location = new System.Drawing.Point(206, 185);
-            this.panelNombre.Name = "panelNombre";
-            this.panelNombre.Size = new System.Drawing.Size(279, 25);
-            this.panelNombre.TabIndex = 12;
-            // 
-            // btnHacerAdmin
-            // 
-            this.btnHacerAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHacerAdmin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnHacerAdmin.Image = global::LP2Soft.Properties.Resources.chevrons_up_solid_24;
-            this.btnHacerAdmin.Location = new System.Drawing.Point(254, 0);
-            this.btnHacerAdmin.Name = "btnHacerAdmin";
-            this.btnHacerAdmin.Size = new System.Drawing.Size(25, 25);
-            this.btnHacerAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnHacerAdmin.TabIndex = 17;
-            this.btnHacerAdmin.TabStop = false;
-            this.btnHacerAdmin.Click += new System.EventHandler(this.btnHacerAdmin_Click);
-            // 
-            // imgAdmin
-            // 
-            this.imgAdmin.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.imgAdmin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.imgAdmin.Image = global::LP2Soft.Properties.Resources.badge_check_solid_24;
-            this.imgAdmin.Location = new System.Drawing.Point(229, 0);
-            this.imgAdmin.Name = "imgAdmin";
-            this.imgAdmin.Size = new System.Drawing.Size(25, 25);
-            this.imgAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAdmin.TabIndex = 16;
-            this.imgAdmin.TabStop = false;
-            // 
-            // lblTituloNombre
-            // 
-            this.lblTituloNombre.AutoSize = true;
-            this.lblTituloNombre.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloNombre.Location = new System.Drawing.Point(0, 0);
-            this.lblTituloNombre.Name = "lblTituloNombre";
-            this.lblTituloNombre.Size = new System.Drawing.Size(229, 20);
-            this.lblTituloNombre.TabIndex = 7;
-            this.lblTituloNombre.Text = "Oscar Daniel Navarro Cieza";
-            // 
             // btnAmigo
             // 
             this.btnAmigo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAmigo.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAmigo.ImageIndex = 1;
             this.btnAmigo.ImageList = this.imgAmigo;
-            this.btnAmigo.Location = new System.Drawing.Point(666, 185);
+            this.btnAmigo.Location = new System.Drawing.Point(460, 0);
             this.btnAmigo.Name = "btnAmigo";
             this.btnAmigo.Size = new System.Drawing.Size(30, 30);
             this.btnAmigo.TabIndex = 14;
@@ -256,6 +212,112 @@ namespace LP2Soft.Perfil
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
+            // lblSoliEnviada
+            // 
+            this.lblSoliEnviada.AutoSize = true;
+            this.lblSoliEnviada.BackColor = System.Drawing.SystemColors.Control;
+            this.lblSoliEnviada.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblSoliEnviada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoliEnviada.Location = new System.Drawing.Point(339, 0);
+            this.lblSoliEnviada.Name = "lblSoliEnviada";
+            this.lblSoliEnviada.Size = new System.Drawing.Size(121, 15);
+            this.lblSoliEnviada.TabIndex = 18;
+            this.lblSoliEnviada.Text = "Solicitud enviada!";
+            this.lblSoliEnviada.Visible = false;
+            // 
+            // panelNombre
+            // 
+            this.panelNombre.AutoSize = true;
+            this.panelNombre.BackColor = System.Drawing.SystemColors.Control;
+            this.panelNombre.Controls.Add(this.btnAceptar);
+            this.panelNombre.Controls.Add(this.btnRechazar);
+            this.panelNombre.Controls.Add(this.btnHacerAdmin);
+            this.panelNombre.Controls.Add(this.lblSoliEnviada);
+            this.panelNombre.Controls.Add(this.imgAdmin);
+            this.panelNombre.Controls.Add(this.btnAmigo);
+            this.panelNombre.Controls.Add(this.lblTituloNombre);
+            this.panelNombre.Location = new System.Drawing.Point(206, 185);
+            this.panelNombre.Name = "panelNombre";
+            this.panelNombre.Size = new System.Drawing.Size(490, 30);
+            this.panelNombre.TabIndex = 14;
+            // 
+            // btnHacerAdmin
+            // 
+            this.btnHacerAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHacerAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnHacerAdmin.Image = global::LP2Soft.Properties.Resources.chevrons_up_solid_24;
+            this.btnHacerAdmin.Location = new System.Drawing.Point(148, 0);
+            this.btnHacerAdmin.Name = "btnHacerAdmin";
+            this.btnHacerAdmin.Size = new System.Drawing.Size(25, 30);
+            this.btnHacerAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnHacerAdmin.TabIndex = 17;
+            this.btnHacerAdmin.TabStop = false;
+            // 
+            // imgAdmin
+            // 
+            this.imgAdmin.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.imgAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imgAdmin.Image = global::LP2Soft.Properties.Resources.badge_check_solid_24;
+            this.imgAdmin.Location = new System.Drawing.Point(123, 0);
+            this.imgAdmin.Name = "imgAdmin";
+            this.imgAdmin.Size = new System.Drawing.Size(25, 30);
+            this.imgAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAdmin.TabIndex = 16;
+            this.imgAdmin.TabStop = false;
+            // 
+            // lblTituloNombre
+            // 
+            this.lblTituloNombre.AutoSize = true;
+            this.lblTituloNombre.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloNombre.Location = new System.Drawing.Point(0, 0);
+            this.lblTituloNombre.Name = "lblTituloNombre";
+            this.lblTituloNombre.Size = new System.Drawing.Size(123, 20);
+            this.lblTituloNombre.TabIndex = 7;
+            this.lblTituloNombre.Text = "Oscar Navarro";
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnAceptar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnAceptar.BorderRadius = 6;
+            this.btnAceptar.BorderSize = 0;
+            this.btnAceptar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Location = new System.Drawing.Point(201, 0);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(69, 30);
+            this.btnAceptar.TabIndex = 27;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextColor = System.Drawing.Color.White;
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Visible = false;
+            // 
+            // btnRechazar
+            // 
+            this.btnRechazar.BackColor = System.Drawing.Color.White;
+            this.btnRechazar.BackgroundColor = System.Drawing.Color.White;
+            this.btnRechazar.BorderColor = System.Drawing.Color.White;
+            this.btnRechazar.BorderRadius = 6;
+            this.btnRechazar.BorderSize = 0;
+            this.btnRechazar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRechazar.FlatAppearance.BorderSize = 0;
+            this.btnRechazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRechazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRechazar.ForeColor = System.Drawing.Color.Black;
+            this.btnRechazar.Location = new System.Drawing.Point(270, 0);
+            this.btnRechazar.Name = "btnRechazar";
+            this.btnRechazar.Size = new System.Drawing.Size(69, 30);
+            this.btnRechazar.TabIndex = 26;
+            this.btnRechazar.Text = "Rechazar";
+            this.btnRechazar.TextColor = System.Drawing.Color.Black;
+            this.btnRechazar.UseVisualStyleBackColor = false;
+            this.btnRechazar.Visible = false;
+            // 
             // frmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,7 +325,6 @@ namespace LP2Soft.Perfil
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 492);
             this.Controls.Add(this.panelNombre);
-            this.Controls.Add(this.btnAmigo);
             this.Controls.Add(this.btnMensaje);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panel1);
@@ -273,13 +334,13 @@ namespace LP2Soft.Perfil
             this.Name = "frmPerfil";
             this.Text = "frmPerfil";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelNombre.ResumeLayout(false);
             this.panelNombre.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHacerAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgAdmin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,6 +359,9 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.PictureBox btnMensaje;
         private System.Windows.Forms.Label btnAmigo;
         private System.Windows.Forms.ImageList imgAmigo;
+        private System.Windows.Forms.Label lblSoliEnviada;
+        private Asesor.BotonChevere btnAceptar;
+        private Asesor.BotonChevere btnRechazar;
         private System.Windows.Forms.Panel panelNombre;
         private System.Windows.Forms.PictureBox btnHacerAdmin;
         private System.Windows.Forms.PictureBox imgAdmin;
