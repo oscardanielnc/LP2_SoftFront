@@ -30,13 +30,14 @@ namespace LP2Soft.Eventos
         private void InitializeComponent()
         {
             this.panelEvento = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelComentarios = new System.Windows.Forms.Panel();
             this.lblHoraEvento = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblFechaEvento = new System.Windows.Forms.Label();
             this.lblLinkZoom = new System.Windows.Forms.Label();
             this.lblZoom = new System.Windows.Forms.Label();
-            this.pbOtroPerfil = new System.Windows.Forms.PictureBox();
             this.btnAgendarEvento = new System.Windows.Forms.Button();
             this.lblComentarios = new System.Windows.Forms.Label();
             this.lblLinea2 = new System.Windows.Forms.Label();
@@ -54,9 +55,7 @@ namespace LP2Soft.Eventos
             this.lblFechaHoraCreacion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
-            this.txtComentarioEvento = new System.Windows.Forms.TextBox();
             this.panelEvento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOtroPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
@@ -65,14 +64,14 @@ namespace LP2Soft.Eventos
             // 
             this.panelEvento.BackColor = System.Drawing.Color.White;
             this.panelEvento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelEvento.Controls.Add(this.txtComentarioEvento);
+            this.panelEvento.Controls.Add(this.lblTitulo);
+            this.panelEvento.Controls.Add(this.panelComentarios);
             this.panelEvento.Controls.Add(this.lblHoraEvento);
             this.panelEvento.Controls.Add(this.lblHora);
             this.panelEvento.Controls.Add(this.label3);
             this.panelEvento.Controls.Add(this.lblFechaEvento);
             this.panelEvento.Controls.Add(this.lblLinkZoom);
             this.panelEvento.Controls.Add(this.lblZoom);
-            this.panelEvento.Controls.Add(this.pbOtroPerfil);
             this.panelEvento.Controls.Add(this.btnAgendarEvento);
             this.panelEvento.Controls.Add(this.lblComentarios);
             this.panelEvento.Controls.Add(this.lblLinea2);
@@ -92,14 +91,32 @@ namespace LP2Soft.Eventos
             this.panelEvento.Controls.Add(this.pbPerfil);
             this.panelEvento.Location = new System.Drawing.Point(12, 9);
             this.panelEvento.Name = "panelEvento";
-            this.panelEvento.Size = new System.Drawing.Size(377, 594);
+            this.panelEvento.Size = new System.Drawing.Size(377, 651);
             this.panelEvento.TabIndex = 10;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(59, 72);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(258, 16);
+            this.lblTitulo.TabIndex = 40;
+            this.lblTitulo.Text = "Taller de Programación Competitiva";
+            // 
+            // panelComentarios
+            // 
+            this.panelComentarios.AutoScroll = true;
+            this.panelComentarios.Location = new System.Drawing.Point(14, 530);
+            this.panelComentarios.Name = "panelComentarios";
+            this.panelComentarios.Size = new System.Drawing.Size(358, 113);
+            this.panelComentarios.TabIndex = 39;
             // 
             // lblHoraEvento
             // 
             this.lblHoraEvento.AutoSize = true;
             this.lblHoraEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraEvento.Location = new System.Drawing.Point(99, 202);
+            this.lblHoraEvento.Location = new System.Drawing.Point(99, 221);
             this.lblHoraEvento.Name = "lblHoraEvento";
             this.lblHoraEvento.Size = new System.Drawing.Size(73, 13);
             this.lblHoraEvento.TabIndex = 38;
@@ -109,7 +126,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(51, 202);
+            this.lblHora.Location = new System.Drawing.Point(51, 221);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(42, 13);
             this.lblHora.TabIndex = 37;
@@ -119,7 +136,7 @@ namespace LP2Soft.Eventos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 180);
+            this.label3.Location = new System.Drawing.Point(43, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 36;
@@ -129,7 +146,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblFechaEvento.AutoSize = true;
             this.lblFechaEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaEvento.Location = new System.Drawing.Point(99, 180);
+            this.lblFechaEvento.Location = new System.Drawing.Point(99, 199);
             this.lblFechaEvento.Name = "lblFechaEvento";
             this.lblFechaEvento.Size = new System.Drawing.Size(119, 13);
             this.lblFechaEvento.TabIndex = 35;
@@ -137,7 +154,7 @@ namespace LP2Soft.Eventos
             // 
             // lblLinkZoom
             // 
-            this.lblLinkZoom.Location = new System.Drawing.Point(99, 144);
+            this.lblLinkZoom.Location = new System.Drawing.Point(99, 163);
             this.lblLinkZoom.Name = "lblLinkZoom";
             this.lblLinkZoom.Size = new System.Drawing.Size(233, 32);
             this.lblLinkZoom.TabIndex = 33;
@@ -147,19 +164,11 @@ namespace LP2Soft.Eventos
             // 
             this.lblZoom.AutoSize = true;
             this.lblZoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZoom.Location = new System.Drawing.Point(19, 150);
+            this.lblZoom.Location = new System.Drawing.Point(19, 169);
             this.lblZoom.Name = "lblZoom";
             this.lblZoom.Size = new System.Drawing.Size(74, 13);
             this.lblZoom.TabIndex = 32;
             this.lblZoom.Text = "Link Zoom :";
-            // 
-            // pbOtroPerfil
-            // 
-            this.pbOtroPerfil.Location = new System.Drawing.Point(31, 542);
-            this.pbOtroPerfil.Name = "pbOtroPerfil";
-            this.pbOtroPerfil.Size = new System.Drawing.Size(41, 37);
-            this.pbOtroPerfil.TabIndex = 30;
-            this.pbOtroPerfil.TabStop = false;
             // 
             // btnAgendarEvento
             // 
@@ -173,6 +182,7 @@ namespace LP2Soft.Eventos
             this.btnAgendarEvento.Size = new System.Drawing.Size(31, 29);
             this.btnAgendarEvento.TabIndex = 29;
             this.btnAgendarEvento.UseVisualStyleBackColor = false;
+            this.btnAgendarEvento.Click += new System.EventHandler(this.btnAgendarEvento_Click);
             // 
             // lblComentarios
             // 
@@ -295,16 +305,17 @@ namespace LP2Soft.Eventos
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 235);
+            this.pictureBox1.Location = new System.Drawing.Point(54, 245);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(265, 186);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
             // txtDescripcionEvento
             // 
             this.txtDescripcionEvento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcionEvento.Location = new System.Drawing.Point(31, 78);
+            this.txtDescripcionEvento.Location = new System.Drawing.Point(31, 97);
             this.txtDescripcionEvento.Multiline = true;
             this.txtDescripcionEvento.Name = "txtDescripcionEvento";
             this.txtDescripcionEvento.Size = new System.Drawing.Size(305, 53);
@@ -333,6 +344,7 @@ namespace LP2Soft.Eventos
             // 
             // pbPerfil
             // 
+            this.pbPerfil.Image = global::LP2Soft.Properties.Resources.images;
             this.pbPerfil.Location = new System.Drawing.Point(14, 15);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(50, 46);
@@ -340,27 +352,17 @@ namespace LP2Soft.Eventos
             this.pbPerfil.TabIndex = 4;
             this.pbPerfil.TabStop = false;
             // 
-            // txtComentarioEvento
-            // 
-            this.txtComentarioEvento.Location = new System.Drawing.Point(83, 542);
-            this.txtComentarioEvento.Multiline = true;
-            this.txtComentarioEvento.Name = "txtComentarioEvento";
-            this.txtComentarioEvento.Size = new System.Drawing.Size(265, 37);
-            this.txtComentarioEvento.TabIndex = 39;
-            this.txtComentarioEvento.Text = "Antony Romero\r\nAsistiré sin falta !!!";
-            // 
             // frmPostEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 615);
+            this.ClientSize = new System.Drawing.Size(401, 664);
             this.Controls.Add(this.panelEvento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPostEvento";
             this.Text = "frmPostEvento";
             this.panelEvento.ResumeLayout(false);
             this.panelEvento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOtroPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
@@ -372,7 +374,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Panel panelEvento;
         private System.Windows.Forms.Label lblLinkZoom;
         private System.Windows.Forms.Label lblZoom;
-        private System.Windows.Forms.PictureBox pbOtroPerfil;
         private System.Windows.Forms.Button btnAgendarEvento;
         private System.Windows.Forms.Label lblComentarios;
         private System.Windows.Forms.Label lblLinea2;
@@ -394,6 +395,7 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblFechaEvento;
-        private System.Windows.Forms.TextBox txtComentarioEvento;
+        private System.Windows.Forms.Panel panelComentarios;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

@@ -184,6 +184,12 @@
     <Compile Include="Eventos\frmCrearEvento.Designer.cs">
       <DependentUpon>frmCrearEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Eventos\frmMiEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventos\frmMiEvento.Designer.cs">
+      <DependentUpon>frmMiEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Eventos\frmMisPublicaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -463,6 +469,9 @@
     <EmbeddedResource Include="Eventos\frmCrearEvento.resx">
       <DependentUpon>frmCrearEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Eventos\frmMiEvento.resx">
+      <DependentUpon>frmMiEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Eventos\frmMisPublicaciones.resx">
       <DependentUpon>frmMisPublicaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -620,19 +629,37 @@
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.aumentarLikesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.comentario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.disminuirLikesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.eliminarComentarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.eliminarPostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.evento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertarComentarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertarPostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarComentariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarMisEventosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarPostResponse.datasource">

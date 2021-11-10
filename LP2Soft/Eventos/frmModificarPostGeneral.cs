@@ -44,7 +44,7 @@ namespace LP2Soft.Eventos
                 DialogResult = DialogResult.OK;
             }
             else
-                MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al modificar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace LP2Soft.Eventos
                 DialogResult = DialogResult.OK;
             }
             else
-                MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error el eliminar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
