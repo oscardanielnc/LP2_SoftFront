@@ -51,9 +51,9 @@ namespace LP2Soft.Perfil
             // 
             this.panelCursos.AutoScroll = true;
             this.panelCursos.AutoScrollMargin = new System.Drawing.Size(0, 10);
-            this.panelCursos.Location = new System.Drawing.Point(67, 12);
+            this.panelCursos.Location = new System.Drawing.Point(87, 12);
             this.panelCursos.Name = "panelCursos";
-            this.panelCursos.Size = new System.Drawing.Size(663, 179);
+            this.panelCursos.Size = new System.Drawing.Size(616, 179);
             this.panelCursos.TabIndex = 7;
             // 
             // frmPerfil_CursosAsesorados

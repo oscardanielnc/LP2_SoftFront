@@ -157,6 +157,7 @@
           <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
           <xs:element name="cantidadCalificaiones" type="xs:int" />
           <xs:element minOccurs="0" name="curso" type="tns:curso" />
+          <xs:element name="indice_tipoMaterial" type="xs:int" />
           <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
           <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
           <xs:element name="sumatoriaCalificaiones" type="xs:int" />
@@ -254,16 +255,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarPost">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarPostResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarMisEventos">
     <xs:sequence>
       <xs:element name="idUsuario" type="xs:int" />
@@ -272,6 +263,16 @@
   <xs:complexType name="listarMisEventosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPostResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

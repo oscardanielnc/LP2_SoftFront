@@ -6,8 +6,6 @@
   <xs:element name="listaXcicloResponse" type="tns:listaXcicloResponse" />
   <xs:element name="listarCursoProfesor" type="tns:listarCursoProfesor" />
   <xs:element name="listarCursoProfesorResponse" type="tns:listarCursoProfesorResponse" />
-  <xs:element name="listarCursosAsesorados" type="tns:listarCursosAsesorados" />
-  <xs:element name="listarCursosAsesoradosResponse" type="tns:listarCursosAsesoradosResponse" />
   <xs:element name="listarProfesorXCurso" type="tns:listarProfesorXCurso" />
   <xs:element name="listarProfesorXCursoResponse" type="tns:listarProfesorXCursoResponse" />
   <xs:element name="listarProfesoresNombre" type="tns:listarProfesoresNombre" />
@@ -144,6 +142,7 @@
           <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
           <xs:element name="cantidadCalificaiones" type="xs:int" />
           <xs:element minOccurs="0" name="curso" type="tns:curso" />
+          <xs:element name="indice_tipoMaterial" type="xs:int" />
           <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
           <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
           <xs:element name="sumatoriaCalificaiones" type="xs:int" />
@@ -190,16 +189,6 @@
   <xs:complexType name="MostrarCursoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:curso" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCursosAsesorados">
-    <xs:sequence>
-      <xs:element name="idAsesor" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCursosAsesoradosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarProfesoresNombre">

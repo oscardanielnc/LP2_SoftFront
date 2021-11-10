@@ -420,12 +420,6 @@
     <Compile Include="Tarjetas\tarjCurso.Designer.cs">
       <DependentUpon>tarjCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tarjetas\tarjCursoAsesorado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tarjetas\tarjCursoAsesorado.Designer.cs">
-      <DependentUpon>tarjCursoAsesorado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tarjetas\tarjMensaje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -655,9 +649,6 @@
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarCursoProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarCursosAsesoradosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarProfesoresNombreResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -775,6 +766,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarAmigosNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosAsesoradosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosResponse.datasource">
