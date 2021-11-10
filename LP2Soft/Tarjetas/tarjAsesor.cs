@@ -36,7 +36,7 @@ namespace LP2Soft.Tarjetas
         {
             lblNombre.Text = usuario.nombre + " " + usuario.apellido;
             int tamanio = lblNombre.Size.Width;
-            lblCal.Text = " " + usuario.asesor.calificacion + " ";
+            lblCal.Text = " " + usuario.asesor.calificacion.ToString("0.0") + " ";
             lblNombre.Location = new Point(((int)(170 - tamanio) / 2), 80);
         }
         private void btnVerPerfil_Click(object sender, EventArgs e)
@@ -54,3 +54,4 @@ namespace LP2Soft.Tarjetas
         }
     }
 }
+

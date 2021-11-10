@@ -170,7 +170,7 @@ namespace LP2Soft.Perfil
                 inicializarColorBotones();
                 btnCursos.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Cursos;
-                abrirFormulario(new frmPerfil_CursosAsesorados());
+                abrirFormulario(new frmPerfil_CursosAsesorados(_usuario));
             }
         }
 
