@@ -43,13 +43,13 @@ namespace LP2Soft.Perfil
             this.btnMensaje = new System.Windows.Forms.PictureBox();
             this.imgPerfil = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblSoliEnviada = new System.Windows.Forms.Label();
             this.panelNombre = new System.Windows.Forms.Panel();
             this.btnHacerAdmin = new System.Windows.Forms.PictureBox();
             this.imgAdmin = new System.Windows.Forms.PictureBox();
             this.lblTituloNombre = new System.Windows.Forms.Label();
             this.btnAceptar = new LP2Soft.Asesor.BotonChevere();
             this.btnRechazar = new LP2Soft.Asesor.BotonChevere();
+            this.btnCancelarSoli = new LP2Soft.Asesor.BotonChevere();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
@@ -158,7 +158,7 @@ namespace LP2Soft.Perfil
             this.panelContenido.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelContenido.Location = new System.Drawing.Point(12, 249);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(810, 363);
+            this.panelContenido.Size = new System.Drawing.Size(804, 231);
             this.panelContenido.TabIndex = 11;
             // 
             // imgAmigo
@@ -212,27 +212,14 @@ namespace LP2Soft.Perfil
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // lblSoliEnviada
-            // 
-            this.lblSoliEnviada.AutoSize = true;
-            this.lblSoliEnviada.BackColor = System.Drawing.SystemColors.Control;
-            this.lblSoliEnviada.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblSoliEnviada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoliEnviada.Location = new System.Drawing.Point(339, 0);
-            this.lblSoliEnviada.Name = "lblSoliEnviada";
-            this.lblSoliEnviada.Size = new System.Drawing.Size(121, 15);
-            this.lblSoliEnviada.TabIndex = 18;
-            this.lblSoliEnviada.Text = "Solicitud enviada!";
-            this.lblSoliEnviada.Visible = false;
-            // 
             // panelNombre
             // 
             this.panelNombre.AutoSize = true;
             this.panelNombre.BackColor = System.Drawing.SystemColors.Control;
             this.panelNombre.Controls.Add(this.btnAceptar);
             this.panelNombre.Controls.Add(this.btnRechazar);
+            this.panelNombre.Controls.Add(this.btnCancelarSoli);
             this.panelNombre.Controls.Add(this.btnHacerAdmin);
-            this.panelNombre.Controls.Add(this.lblSoliEnviada);
             this.panelNombre.Controls.Add(this.imgAdmin);
             this.panelNombre.Controls.Add(this.btnAmigo);
             this.panelNombre.Controls.Add(this.lblTituloNombre);
@@ -288,14 +275,15 @@ namespace LP2Soft.Perfil
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(201, 0);
+            this.btnAceptar.Location = new System.Drawing.Point(202, 0);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(69, 30);
-            this.btnAceptar.TabIndex = 27;
+            this.btnAceptar.TabIndex = 30;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Visible = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnRechazar
             // 
@@ -309,21 +297,44 @@ namespace LP2Soft.Perfil
             this.btnRechazar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRechazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRechazar.ForeColor = System.Drawing.Color.Black;
-            this.btnRechazar.Location = new System.Drawing.Point(270, 0);
+            this.btnRechazar.Location = new System.Drawing.Point(271, 0);
             this.btnRechazar.Name = "btnRechazar";
             this.btnRechazar.Size = new System.Drawing.Size(69, 30);
-            this.btnRechazar.TabIndex = 26;
+            this.btnRechazar.TabIndex = 29;
             this.btnRechazar.Text = "Rechazar";
             this.btnRechazar.TextColor = System.Drawing.Color.Black;
             this.btnRechazar.UseVisualStyleBackColor = false;
             this.btnRechazar.Visible = false;
+            this.btnRechazar.Click += new System.EventHandler(this.btnRechazar_Click);
+            // 
+            // btnCancelarSoli
+            // 
+            this.btnCancelarSoli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCancelarSoli.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCancelarSoli.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCancelarSoli.BorderRadius = 6;
+            this.btnCancelarSoli.BorderSize = 0;
+            this.btnCancelarSoli.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCancelarSoli.FlatAppearance.BorderSize = 0;
+            this.btnCancelarSoli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarSoli.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarSoli.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarSoli.Location = new System.Drawing.Point(340, 0);
+            this.btnCancelarSoli.Name = "btnCancelarSoli";
+            this.btnCancelarSoli.Size = new System.Drawing.Size(120, 30);
+            this.btnCancelarSoli.TabIndex = 28;
+            this.btnCancelarSoli.Text = "Cancelar Solicitud";
+            this.btnCancelarSoli.TextColor = System.Drawing.Color.White;
+            this.btnCancelarSoli.UseVisualStyleBackColor = false;
+            this.btnCancelarSoli.Visible = false;
+            this.btnCancelarSoli.Click += new System.EventHandler(this.btnCancelarSoli_Click);
             // 
             // frmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(823, 492);
+            this.ClientSize = new System.Drawing.Size(828, 492);
             this.Controls.Add(this.panelNombre);
             this.Controls.Add(this.btnMensaje);
             this.Controls.Add(this.panelContenido);
@@ -359,12 +370,12 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.PictureBox btnMensaje;
         private System.Windows.Forms.Label btnAmigo;
         private System.Windows.Forms.ImageList imgAmigo;
-        private System.Windows.Forms.Label lblSoliEnviada;
-        private Asesor.BotonChevere btnAceptar;
-        private Asesor.BotonChevere btnRechazar;
         private System.Windows.Forms.Panel panelNombre;
         private System.Windows.Forms.PictureBox btnHacerAdmin;
         private System.Windows.Forms.PictureBox imgAdmin;
         private System.Windows.Forms.Label lblTituloNombre;
+        private Asesor.BotonChevere btnAceptar;
+        private Asesor.BotonChevere btnRechazar;
+        private Asesor.BotonChevere btnCancelarSoli;
     }
 }

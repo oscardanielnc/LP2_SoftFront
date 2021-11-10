@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="agregarAmigo" type="tns:agregarAmigo" />
   <xs:element name="agregarAmigoResponse" type="tns:agregarAmigoResponse" />
+  <xs:element name="eliminarAmigo" type="tns:eliminarAmigo" />
+  <xs:element name="eliminarAmigoResponse" type="tns:eliminarAmigoResponse" />
   <xs:element name="esAmigo" type="tns:esAmigo" />
   <xs:element name="esAmigoResponse" type="tns:esAmigoResponse" />
   <xs:element name="hacerAdmin" type="tns:hacerAdmin" />
@@ -22,6 +24,17 @@
   <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
   <xs:element name="mostrarUsuario" type="tns:mostrarUsuario" />
   <xs:element name="mostrarUsuarioResponse" type="tns:mostrarUsuarioResponse" />
+  <xs:complexType name="eliminarAmigo">
+    <xs:sequence>
+      <xs:element name="idUsuario1" type="xs:int" />
+      <xs:element name="idUsuario2" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAmigoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="hacerAdmin">
     <xs:sequence>
       <xs:element name="idUsuario" type="xs:int" />

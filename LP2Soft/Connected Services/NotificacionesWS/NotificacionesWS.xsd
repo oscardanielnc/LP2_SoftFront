@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarSolicitudAmistad" type="tns:eliminarSolicitudAmistad" />
+  <xs:element name="eliminarSolicitudAmistadResponse" type="tns:eliminarSolicitudAmistadResponse" />
   <xs:element name="enviarMensaje" type="tns:enviarMensaje" />
   <xs:element name="enviarMensajeResponse" type="tns:enviarMensajeResponse" />
   <xs:element name="insertarNotificacion" type="tns:insertarNotificacion" />
@@ -203,6 +205,17 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="amigo" type="tns:usuario" />
       <xs:element minOccurs="0" name="mensaje" type="tns:mensaje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSolicitudAmistad">
+    <xs:sequence>
+      <xs:element name="idUsuarioNotificado" type="xs:int" />
+      <xs:element name="idUsuarioNotificador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSolicitudAmistadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

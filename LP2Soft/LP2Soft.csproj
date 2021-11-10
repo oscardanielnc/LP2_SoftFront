@@ -607,6 +607,9 @@
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.profesor1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.enviarMensajeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -667,6 +670,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.eliminarAmigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.esAmigoResponse.datasource">

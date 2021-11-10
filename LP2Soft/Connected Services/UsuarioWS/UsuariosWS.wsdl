@@ -53,6 +53,12 @@
   <message name="insertarUsuarioResponse">
     <part name="parameters" element="tns:insertarUsuarioResponse" />
   </message>
+  <message name="eliminarAmigo">
+    <part name="parameters" element="tns:eliminarAmigo" />
+  </message>
+  <message name="eliminarAmigoResponse">
+    <part name="parameters" element="tns:eliminarAmigoResponse" />
+  </message>
   <message name="listarAmigosNombreCodigo">
     <part name="parameters" element="tns:listarAmigosNombreCodigo" />
   </message>
@@ -103,6 +109,10 @@
     <operation name="insertarUsuario">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
+    </operation>
+    <operation name="eliminarAmigo">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/eliminarAmigoRequest" message="tns:eliminarAmigo" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/eliminarAmigoResponse" message="tns:eliminarAmigoResponse" />
     </operation>
     <operation name="listarAmigosNombreCodigo">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarAmigosNombreCodigoRequest" message="tns:listarAmigosNombreCodigo" />
@@ -183,6 +193,15 @@
       </output>
     </operation>
     <operation name="insertarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAmigo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
