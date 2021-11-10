@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarSolicitudAmistad" type="tns:eliminarSolicitudAmistad" />
+  <xs:element name="eliminarSolicitudAmistadResponse" type="tns:eliminarSolicitudAmistadResponse" />
   <xs:element name="enviarMensaje" type="tns:enviarMensaje" />
   <xs:element name="enviarMensajeResponse" type="tns:enviarMensajeResponse" />
   <xs:element name="insertarNotificacion" type="tns:insertarNotificacion" />
   <xs:element name="insertarNotificacionResponse" type="tns:insertarNotificacionResponse" />
+  <xs:element name="listarMensajesUltimos" type="tns:listarMensajesUltimos" />
+  <xs:element name="listarMensajesUltimosResponse" type="tns:listarMensajesUltimosResponse" />
   <xs:element name="listarMensajesXAmigo" type="tns:listarMensajesXAmigo" />
   <xs:element name="listarMensajesXAmigoResponse" type="tns:listarMensajesXAmigoResponse" />
   <xs:element name="listarNotificaciones" type="tns:listarNotificaciones" />
@@ -164,16 +168,17 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="material">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:post">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
-          <xs:element minOccurs="0" name="curso" type="tns:curso" />
-          <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
+  <xs:complexType name="enviarMensaje">
+    <xs:sequence>
+      <xs:element name="idUsuario1" type="xs:int" />
+      <xs:element name="idUsuario2" type="xs:int" />
+      <xs:element minOccurs="0" name="contenido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarMensajeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarNotificacion">
     <xs:sequence>
@@ -191,14 +196,29 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="enviarMensaje">
+  <xs:complexType name="listarMensajesUltimos">
     <xs:sequence>
-      <xs:element name="idUsuario1" type="xs:int" />
-      <xs:element name="idUsuario2" type="xs:int" />
-      <xs:element minOccurs="0" name="contenido" type="xs:string" />
+      <xs:element name="idUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="enviarMensajeResponse">
+  <xs:complexType name="listarMensajesUltimosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ultimoMensaje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ultimoMensaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amigo" type="tns:usuario" />
+      <xs:element minOccurs="0" name="mensaje" type="tns:mensaje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSolicitudAmistad">
+    <xs:sequence>
+      <xs:element name="idUsuarioNotificado" type="xs:int" />
+      <xs:element name="idUsuarioNotificador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSolicitudAmistadResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

@@ -1,4 +1,5 @@
 ﻿using LP2Soft.Home;
+using LP2Soft.Perfil;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +16,10 @@ namespace LP2Soft.Tarjetas
     public partial class tarjNotificacion : Form
     {
         private NotificacionesWS.notificacion _notificacion;
+        private UsuarioWS.UsuariosWSClient _daoUsuario;
         public tarjNotificacion(NotificacionesWS.notificacion notificacion)
         {
+            _daoUsuario = new UsuarioWS.UsuariosWSClient();
             _notificacion = notificacion;
             InitializeComponent();
             mostarSugunTipoNotificacion();
@@ -26,6 +29,7 @@ namespace LP2Soft.Tarjetas
             imgNotif.ImageIndex = _notificacion.tipo;
             _notificacion.fechaSpecified = true;
             lblFechaHora.Text = _notificacion.fecha.ToString("dd MMMM yyyy hh:mm:ss");
+            lblContenido.ForeColor = Color.Black;
 
             if(_notificacion.tipo==1)
             {
@@ -48,9 +52,19 @@ namespace LP2Soft.Tarjetas
             }
         }
 
-        private void btnPostularAsesor_Click(object sender, EventArgs e)
+        private void btnVer_Click(object sender, EventArgs e)
         {
+            if (_notificacion.tipo == 1)
+            {
+                UsuarioWS.usuario usuarioVer = _daoUsuario.mostrarUsuario(_notificacion.usuarioNotificador.codigoPUCP, 1);
 
+                if (usuarioVer != null)
+                    frmHome.abrirFormulario(new frmPerfil(usuarioVer));
+            }
+            else
+            {
+                frmHome.abrirFormulario(new frmPerfil(frmHome.Usuario));
+            }
         }
     }
 }

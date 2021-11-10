@@ -127,7 +127,7 @@ namespace LP2Soft.Home
             abrirFormularioHome(new frmCursos_Favoritos(), MenuHome.CursosFavoritos);
 
         public void btnMensajes_Click(object sender, EventArgs e) =>
-            abrirFormularioHome(new frmMensajes(/*this*/), MenuHome.Mensajes);
+            abrirFormularioHome(new frmMensajes(), MenuHome.Mensajes);
 
         public void btnEventos_Click(object sender, EventArgs e)
         {
