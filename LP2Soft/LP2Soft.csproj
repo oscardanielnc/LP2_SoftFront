@@ -61,6 +61,18 @@
     <Compile Include="Asesor\frmPostularAsesor.Designer.cs">
       <DependentUpon>frmPostularAsesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculadorNotas\frmCalculadorNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculadorNotas\frmCalculadorNotas.Designer.cs">
+      <DependentUpon>frmCalculadorNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculadorNotas\regNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculadorNotas\regNotas.Designer.cs">
+      <DependentUpon>regNotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\PublicacionesWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -419,6 +431,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Asesor\frmPostularAsesor.resx">
       <DependentUpon>frmPostularAsesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculadorNotas\frmCalculadorNotas.resx">
+      <DependentUpon>frmCalculadorNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculadorNotas\regNotas.resx">
+      <DependentUpon>regNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos\AgregarMaterial\frmAgregarMaterial.resx">
       <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
