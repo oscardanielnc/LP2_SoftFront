@@ -18,6 +18,10 @@ namespace LP2Soft.Eventos
         PublicacionesWS.postGenerico _post;
         PublicacionesWS.comentario _comentarioCreado;
         PublicacionesWS.postGenerico _postModificado;
+        PublicacionesWS.PublicacionesWSClient _daoPost;
+        BindingList<PublicacionesWS.comentario> _coments;
+        
+        private int _cantidadComent=0;
 
         public frmPostGeneral()
         {
@@ -30,6 +34,7 @@ namespace LP2Soft.Eventos
             InitializeComponent();
             _usuario = usuario;
             _post = pp;
+            _daoPost = new PublicacionesWS.PublicacionesWSClient();
             //if (pp.usuario.foto != null)
             //{
             //    MemoryStream ms1 = new MemoryStream(pp.usuario.foto);
@@ -47,6 +52,30 @@ namespace LP2Soft.Eventos
             else
                 btnModificar.Visible = false;
 
+            panelComentarios.Controls.Clear();
+            _daoPost = new PublicacionesWS.PublicacionesWSClient();
+            PublicacionesWS.comentario[] _comentarios = _daoPost.listarComentarios(_post.idPost);
+            if (_comentarios != null)
+                _coments = new BindingList<PublicacionesWS.comentario>(_comentarios.ToList());
+            else
+                _coments = null;
+            _cantidadComent = 0;
+            if (_coments != null)
+            {
+                foreach (PublicacionesWS.comentario p in _coments)
+                {
+                    if (_cantidadComent == 2) break;
+                    frmComentario plantilla = new frmComentario(p, _usuario,this);
+                    plantilla.TopLevel = false;
+                    plantilla.Dock = DockStyle.Top;
+                    panelComentarios.Controls.Add(plantilla);
+                    panelComentarios.Controls.SetChildIndex(plantilla, 0);
+                    plantilla.Visible = true;
+                    //_publicaciones.RemoveAt(_cantidadPost);
+                    _cantidadComent++;
+                }
+            }
+
         }
 
         private void btnComentarDinamico_Click(object sender, EventArgs e)
@@ -60,12 +89,35 @@ namespace LP2Soft.Eventos
                 panelComentarios.Controls.Clear();
                 _comentarioCreado = formCrearComentario.ComentarioCreado;
                 _comentarioCreado.usuario.nombre = _usuario.nombre;
-                frmComentario plantilla = new frmComentario(_comentarioCreado, _usuario);
+                frmComentario plantilla = new frmComentario(_comentarioCreado, _usuario,this);
                 plantilla.TopLevel = false;
                 plantilla.Dock = DockStyle.Top;
                 panelComentarios.Controls.Add(plantilla);
                 panelComentarios.Controls.SetChildIndex(plantilla, 0);
+                //Visible
                 plantilla.Visible = true;
+                _cantidadComent = 0;
+                if (_coments != null) 
+                {
+                    foreach (PublicacionesWS.comentario p in _coments)
+                    {
+                        plantilla = new frmComentario(p, _usuario,this);
+                        plantilla.TopLevel = false;
+                        plantilla.Dock = DockStyle.Top;
+                        panelComentarios.Controls.Add(plantilla);
+                        panelComentarios.Controls.SetChildIndex(plantilla, 0);
+                        plantilla.Visible = true;
+                        _cantidadComent++;
+                        break;
+                    }
+                }
+                _cantidadComent++;
+                _daoPost = new PublicacionesWS.PublicacionesWSClient();
+                PublicacionesWS.comentario[] _comentarios = _daoPost.listarComentarios(_post.idPost);
+                if (_comentarios != null)
+                    _coments = new BindingList<PublicacionesWS.comentario>(_comentarios.ToList());
+                else
+                    _coments = null;
             }
 
             // formCrearComentario = null;
@@ -83,12 +135,31 @@ namespace LP2Soft.Eventos
                     txtContenido.Text = _postModificado.contenido;
                     lblFechaHoraCreacion.Text = _postModificado.fechaRegistro.ToString("dd-MM-yyyy");
                 }
+                else 
+                {
+                    this.Visible = false;
+                }
             }
         }
 
         private void lblComentarios_Click(object sender, EventArgs e)
         {
-
+            if (_coments != null)
+            {
+                int contador = 0;
+                foreach (PublicacionesWS.comentario p in _coments)
+                {
+                    if (contador < _cantidadComent) { contador++; continue; } 
+                    else contador = 1000;
+                    frmComentario plantilla = new frmComentario(p, _usuario,this);
+                    plantilla.TopLevel = false;
+                    plantilla.Dock = DockStyle.Top;
+                    panelComentarios.Controls.Add(plantilla);
+                    panelComentarios.Controls.SetChildIndex(plantilla, 0);
+                    plantilla.Visible = true;
+                    _cantidadComent++;
+                }
+            }
         }
 
         private void btnMeGustaDinamico_Click(object sender, EventArgs e)
@@ -97,14 +168,51 @@ namespace LP2Soft.Eventos
             {
                 btnMeGustaDinamico.ImageIndex = 1;
                 int cantidadLikes = int.Parse(lblCantidadMeGusta.Text) - 1;
+                int resultado = _daoPost.disminuirLikes(_post.idPost);
                 lblCantidadMeGusta.Text = cantidadLikes.ToString();
-
+                
             }
             else
             {
                 btnMeGustaDinamico.ImageIndex = 0;
                 int cantidadLikes = int.Parse(lblCantidadMeGusta.Text) + 1;
+                int resultado = _daoPost.aumentarLikes(_post.idPost);
                 lblCantidadMeGusta.Text = cantidadLikes.ToString();
+                
+            }
+        }
+
+        public void disminuirCantidadComentarios() {
+            int cantidadComentarios = int.Parse(lblCantidadComentarios.Text) - 1;
+            lblCantidadComentarios.Text = cantidadComentarios.ToString();
+        }
+
+        public void actualizarComentarios() {
+            _cantidadComent--;
+
+            _daoPost = new PublicacionesWS.PublicacionesWSClient();
+            PublicacionesWS.comentario[] _comentarios = _daoPost.listarComentarios(_post.idPost);
+            if (_comentarios != null)
+                _coments = new BindingList<PublicacionesWS.comentario>(_comentarios.ToList());
+            else
+                _coments = null;
+
+            if (_coments != null)
+            {
+                int contador = 0;
+                foreach (PublicacionesWS.comentario p in _coments)
+                {
+                    if (_cantidadComent == 2) break;
+                    if (contador < _cantidadComent) { contador++; continue; }
+                    else contador = 1000;
+                    frmComentario plantilla = new frmComentario(p, _usuario, this);
+                    plantilla.TopLevel = false;
+                    plantilla.Dock = DockStyle.Top;
+                    panelComentarios.Controls.Add(plantilla);
+                    panelComentarios.Controls.SetChildIndex(plantilla, 0);
+                    plantilla.Visible = true;
+                    _cantidadComent++;
+                }
             }
         }
     }

@@ -44,9 +44,11 @@ namespace LP2Soft.Eventos
         {
             int resultado;
             _postGenerico.usuario.idUsuario = _usuario.idUsuario;
+            if (_usuario.esAdmin == true) _postGenerico.prioridad = 1;
+            else _postGenerico.prioridad = 0;
             _postGenerico.contenido = txtContenido.Text;
             // En un usuario falta un atributo para saber si es un grupo o alumno
-            _postGenerico.prioridad = 1;
+            //_postGenerico.prioridad = 1;
             //_postGenerico.fechaRegistro = DateTime.Now;
 
             resultado = _daoPost.insertarPost(_postGenerico);
