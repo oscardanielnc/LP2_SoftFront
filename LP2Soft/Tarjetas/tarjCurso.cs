@@ -25,10 +25,21 @@ namespace LP2Soft.Tarjetas
             _idCurso = curso.idCurso;
             posicionarLabel(curso);
         }
-
+        public tarjCurso(CursosWS.curso curso)
+        {
+            _daoCurso = new CursosWS.CursosWSClient();
+            InitializeComponent();
+            _idCurso = curso.idCurso;
+            posicionarLabel(curso);
+        }
         private void posicionarLabel(UsuarioWS.curso curso)
         {
-            btnLP3.Text = curso.codigo + "\n\n\n" + curso.nombre + "\nCredito: " + curso.creditos; 
+            btnLP3.Text = curso.codigo + "\n\n\n" + curso.nombre + "\nCredito: " + curso.creditos;
+        }
+
+        private void posicionarLabel(CursosWS.curso curso)
+        {
+            btnLP3.Text = curso.codigo + "\n\n\n" + curso.nombre + "\nCredito: " + curso.creditos;
         }
 
         private void btnLP3_Click(object sender, EventArgs e)
@@ -38,8 +49,8 @@ namespace LP2Soft.Tarjetas
             {
                 frmHome.abrirFormulario(new frmCursos_VerCurso(_cursoVer));
             }
-                
+
         }
-        
+
     }
 }
