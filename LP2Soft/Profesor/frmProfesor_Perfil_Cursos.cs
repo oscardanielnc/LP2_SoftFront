@@ -40,7 +40,15 @@ namespace LP2Soft.Profesor
                 int i = 0;
                 foreach (CursosWS.curso c in _cursosProfesor)
                 {
-                    tarjCurso tCursos = new tarjCurso(c);
+                    // casteo a UsuarioWS.curso
+                    UsuarioWS.curso c2 = new UsuarioWS.curso();
+                    c2.idCurso = c.idCurso;
+                    c2.codigo = c.codigo;
+                    c2.nombre = c.nombre;
+                    c2.creditos = c.creditos;
+
+                    // contnuamos...
+                    tarjCurso tCursos = new tarjCurso(c2, true);
                     tCursos.TopLevel = false;
                     tCursos.Location = generarCoordenadas(i);
                     /*tUsuario.Dock = DockStyle.Top;*/

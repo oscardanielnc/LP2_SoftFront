@@ -25,19 +25,22 @@ namespace LP2Soft.Tarjetas
             _idCurso = curso.idCurso;
             posicionarLabel(curso);
         }
-        public tarjCurso(CursosWS.curso curso)
+        public tarjCurso(UsuarioWS.curso curso, bool onlyRead)
         {
             _daoCurso = new CursosWS.CursosWSClient();
             InitializeComponent();
             _idCurso = curso.idCurso;
             posicionarLabel(curso);
-        }
-        private void posicionarLabel(UsuarioWS.curso curso)
-        {
-            btnLP3.Text = curso.codigo + "\n\n\n" + curso.nombre + "\nCredito: " + curso.creditos;
+
+            if(onlyRead)
+            {
+                pBLP3CorazonVacio.Visible = false; //
+                pictureAgregarLP3.Visible = false;
+                btnLP3.BackColor = Color.DarkGray;
+            }
         }
 
-        private void posicionarLabel(CursosWS.curso curso)
+        private void posicionarLabel(UsuarioWS.curso curso)
         {
             btnLP3.Text = curso.codigo + "\n\n\n" + curso.nombre + "\nCredito: " + curso.creditos;
         }
