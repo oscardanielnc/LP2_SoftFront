@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Sslzvw0moMygXcbdWfbDnCegM+Kr0qZJg0cVV7kg47c=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="QPnB1i2SEmCd7ZSYm9bfhO1Zb2CvwK9OX9doAhlyCXU=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="UsuariosWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="UsuariosWSPort" contract="UsuarioWS.UsuariosWS" bindingType="basicHttpBinding" address="http://localhost:8081/LP2Soft_WebServices/UsuariosWS" bindingConfiguration="UsuariosWSPortBinding">
+    <endpoint name="UsuariosWSPort" contract="UsuarioWS.UsuariosWS" bindingType="basicHttpBinding" address="http://localhost:8080/LP2Soft_WebServices/UsuariosWS" bindingConfiguration="UsuariosWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8081/LP2Soft_WebServices/UsuariosWS</serializedValue>
+          <serializedValue>http://localhost:8080/LP2Soft_WebServices/UsuariosWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
