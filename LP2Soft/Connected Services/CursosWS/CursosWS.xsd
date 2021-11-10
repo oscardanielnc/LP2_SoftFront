@@ -128,8 +128,10 @@
       <xs:extension base="tns:post">
         <xs:sequence>
           <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="enlaceZoom" type="xs:string" />
           <xs:element minOccurs="0" name="fechaDelEvento" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
+          <xs:element name="horaFin" type="xs:int" />
+          <xs:element name="horaInicio" type="xs:int" />
           <xs:element minOccurs="0" name="nombreDelEvento" type="xs:string" />
         </xs:sequence>
       </xs:extension>

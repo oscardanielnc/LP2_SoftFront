@@ -50,7 +50,9 @@ namespace LP2Soft.Eventos
             if (resultado != 0)
             {
                 DialogResult = DialogResult.OK;
+                _comentario.idComentario = resultado;
                 _comentarioCreado = _comentario;
+                
             }
             else
             {

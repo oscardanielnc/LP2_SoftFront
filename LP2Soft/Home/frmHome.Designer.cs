@@ -238,7 +238,7 @@ namespace LP2Soft.Home
             this.btnVerEventos.Name = "btnVerEventos";
             this.btnVerEventos.Size = new System.Drawing.Size(179, 31);
             this.btnVerEventos.TabIndex = 1;
-            this.btnVerEventos.Text = "VerEventos";
+            this.btnVerEventos.Text = "Ver Eventos";
             this.btnVerEventos.UseVisualStyleBackColor = true;
             this.btnVerEventos.Click += new System.EventHandler(this.btnVerEventos_Click);
             // 

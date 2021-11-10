@@ -33,6 +33,7 @@ namespace LP2Soft.Eventos
             this.lblComentario = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbOtroPerfil = new System.Windows.Forms.PictureBox();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.panelComentario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOtroPerfil)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +42,7 @@ namespace LP2Soft.Eventos
             // 
             this.panelComentario.BackColor = System.Drawing.Color.White;
             this.panelComentario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelComentario.Controls.Add(this.btnModificar);
             this.panelComentario.Controls.Add(this.lblComentario);
             this.panelComentario.Controls.Add(this.lblNombre);
             this.panelComentario.Controls.Add(this.pbOtroPerfil);
@@ -53,7 +55,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblComentario.Location = new System.Drawing.Point(52, 18);
             this.lblComentario.Name = "lblComentario";
-            this.lblComentario.Size = new System.Drawing.Size(273, 23);
+            this.lblComentario.Size = new System.Drawing.Size(234, 23);
             this.lblComentario.TabIndex = 42;
             this.lblComentario.Text = "Muy Buena info";
             // 
@@ -69,11 +71,27 @@ namespace LP2Soft.Eventos
             // 
             // pbOtroPerfil
             // 
+            this.pbOtroPerfil.Image = global::LP2Soft.Properties.Resources.images;
             this.pbOtroPerfil.Location = new System.Drawing.Point(5, 5);
             this.pbOtroPerfil.Name = "pbOtroPerfil";
             this.pbOtroPerfil.Size = new System.Drawing.Size(41, 37);
+            this.pbOtroPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbOtroPerfil.TabIndex = 40;
             this.pbOtroPerfil.TabStop = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
+            this.btnModificar.BackgroundImage = global::LP2Soft.Properties.Resources.cross;
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Location = new System.Drawing.Point(298, 14);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(20, 18);
+            this.btnModificar.TabIndex = 43;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // frmComentario
             // 
@@ -97,5 +115,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Panel panelComentario;
         private System.Windows.Forms.Label lblComentario;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

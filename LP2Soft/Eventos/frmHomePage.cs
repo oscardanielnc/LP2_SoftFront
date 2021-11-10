@@ -33,6 +33,12 @@ namespace LP2Soft.Eventos
                 MemoryStream ms1 = new MemoryStream(_usuario.foto);
                 pbPerfil.Image = new Bitmap(ms1);
             }
+
+            listarPublicaciones();
+
+        }
+
+        public void listarPublicaciones() {
             panelPublicacionesGenerales.Controls.Clear();
             _daoPost = new PublicacionesWS.PublicacionesWSClient();
             PublicacionesWS.postGenerico[] posts = _daoPost.listarPost();
@@ -89,6 +95,12 @@ namespace LP2Soft.Eventos
                         _cantidadPost++;
                     }
                 }
+                //_cantidadPost++;
+                /*PublicacionesWS.postGenerico[] posts = _daoPost.listarPost();
+                if (posts != null)
+                    _publicaciones = new BindingList<PublicacionesWS.postGenerico>(posts.ToList());
+                else
+                    _publicaciones = null;*/
             }
         }
 

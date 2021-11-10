@@ -159,8 +159,10 @@
       <xs:extension base="tns:post">
         <xs:sequence>
           <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="enlaceZoom" type="xs:string" />
           <xs:element minOccurs="0" name="fechaDelEvento" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
+          <xs:element name="horaFin" type="xs:int" />
+          <xs:element name="horaInicio" type="xs:int" />
           <xs:element minOccurs="0" name="nombreDelEvento" type="xs:string" />
         </xs:sequence>
       </xs:extension>
@@ -224,16 +226,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="mostrarUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="correoCodigo" type="xs:string" />
@@ -243,6 +235,16 @@
   <xs:complexType name="mostrarUsuarioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="esAmigo">

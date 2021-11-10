@@ -17,18 +17,6 @@ namespace LP2Soft.Eventos
             InitializeComponent();
         }
 
-        private void btnFiltros_Click(object sender, EventArgs e)
-        {
-            frmFiltro frmFiltro = new frmFiltro();
-            frmFiltro.ShowDialog();
-        }
-
-        private void btnCrearEvento_Click(object sender, EventArgs e)
-        {
-            frmCrearEvento frmCrearEvento = new frmCrearEvento();
-            frmCrearEvento.ShowDialog();
-        }
-
         private void panelPublicacionesEventos_Scroll(object sender, ScrollEventArgs e)
         {
             if (e.NewValue == panel1.VerticalScroll.Maximum - panel1.VerticalScroll.LargeChange + 1)
@@ -39,12 +27,6 @@ namespace LP2Soft.Eventos
                 }
             }
 
-        }
-
-        private void btnAgendar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Se agendó el evento", "Mensaje Confirmación",
-                       MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -38,6 +38,7 @@ namespace LP2Soft.Eventos
             this.lblActivo = new System.Windows.Forms.Label();
             this.chkbSi = new System.Windows.Forms.CheckBox();
             this.chkbNo = new System.Windows.Forms.CheckBox();
+            this.btnFiltros = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFiltros
@@ -125,11 +126,23 @@ namespace LP2Soft.Eventos
             this.chkbNo.Text = "No";
             this.chkbNo.UseVisualStyleBackColor = true;
             // 
+            // btnFiltros
+            // 
+            this.btnFiltros.Image = global::LP2Soft.Properties.Resources.filtrar__1_;
+            this.btnFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltros.Location = new System.Drawing.Point(283, 191);
+            this.btnFiltros.Name = "btnFiltros";
+            this.btnFiltros.Size = new System.Drawing.Size(86, 23);
+            this.btnFiltros.TabIndex = 29;
+            this.btnFiltros.Text = "Filtros";
+            this.btnFiltros.UseVisualStyleBackColor = true;
+            // 
             // frmFiltro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(381, 245);
+            this.Controls.Add(this.btnFiltros);
             this.Controls.Add(this.chkbNo);
             this.Controls.Add(this.chkbSi);
             this.Controls.Add(this.lblActivo);
@@ -157,5 +170,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label lblActivo;
         private System.Windows.Forms.CheckBox chkbSi;
         private System.Windows.Forms.CheckBox chkbNo;
+        private System.Windows.Forms.Button btnFiltros;
     }
 }

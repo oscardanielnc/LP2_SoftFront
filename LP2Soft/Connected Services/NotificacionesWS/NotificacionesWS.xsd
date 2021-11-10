@@ -161,8 +161,10 @@
       <xs:extension base="tns:post">
         <xs:sequence>
           <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="enlaceZoom" type="xs:string" />
           <xs:element minOccurs="0" name="fechaDelEvento" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
+          <xs:element name="horaFin" type="xs:int" />
+          <xs:element name="horaInicio" type="xs:int" />
           <xs:element minOccurs="0" name="nombreDelEvento" type="xs:string" />
         </xs:sequence>
       </xs:extension>
@@ -183,6 +185,18 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="enviarMensaje">
+    <xs:sequence>
+      <xs:element name="idUsuario1" type="xs:int" />
+      <xs:element name="idUsuario2" type="xs:int" />
+      <xs:element minOccurs="0" name="contenido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarMensajeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarNotificacion">
     <xs:sequence>
       <xs:element name="idUsuarioNotificado" type="xs:int" />
@@ -195,18 +209,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarNotificacionResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="enviarMensaje">
-    <xs:sequence>
-      <xs:element name="idUsuario1" type="xs:int" />
-      <xs:element name="idUsuario2" type="xs:int" />
-      <xs:element minOccurs="0" name="contenido" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="enviarMensajeResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
