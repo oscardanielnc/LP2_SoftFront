@@ -1311,6 +1311,8 @@ namespace LP2Soft.PublicacionesWS {
         
         private curso cursoField;
         
+        private int indice_tipoMaterialField;
+        
         private string nombreArchivoField;
         
         private profesor profesorField;
@@ -1357,6 +1359,18 @@ namespace LP2Soft.PublicacionesWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int indice_tipoMaterial {
+            get {
+                return this.indice_tipoMaterialField;
+            }
+            set {
+                this.indice_tipoMaterialField = value;
+                this.RaisePropertyChanged("indice_tipoMaterial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombreArchivo {
             get {
                 return this.nombreArchivoField;
@@ -1368,7 +1382,7 @@ namespace LP2Soft.PublicacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public profesor profesor {
             get {
                 return this.profesorField;
@@ -1380,7 +1394,7 @@ namespace LP2Soft.PublicacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int sumatoriaCalificaiones {
             get {
                 return this.sumatoriaCalificaionesField;
@@ -1392,7 +1406,7 @@ namespace LP2Soft.PublicacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int tipoMaterial {
             get {
                 return this.tipoMaterialField;

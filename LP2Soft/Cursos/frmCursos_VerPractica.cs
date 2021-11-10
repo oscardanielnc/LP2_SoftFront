@@ -16,7 +16,8 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
     public partial class frmCursos_VerPractica : Form
     {
         private CursosWS.curso _cursoVer;
-        private int tipo;
+        private int _tipo;
+        private int _indice;
         private String[] tipoMaterial = new String[] { "Practica", "Laboratorio", "Tarea Academica", "Examenes" };
         public frmCursos_VerPractica()
         {
@@ -27,7 +28,8 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         {
             InitializeComponent();
             _cursoVer = curso;
-            tipo = auxTipo;
+            _tipo = auxTipo;
+            _indice = indice;
             btnLP2Practica2Ciclo7.Text = "Ciclo " + curso.nivel;
             btnLP2Practica2LP2.Text = curso.nombre;
             btnLLP2Practica2Practicas.Text = tipoMaterial[auxTipo];
@@ -54,13 +56,13 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
 
         private void btnLLP2Practica2Practicas_Click(object sender, EventArgs e)
         {
-            frmCursos_Practicas practicas = new frmCursos_Practicas(_cursoVer, tipo);
+            frmCursos_Practicas practicas = new frmCursos_Practicas(_cursoVer, _tipo);
             addPanel(practicas);
         }
 
         private void btnLLP2Practica2AgregarMaterial_Click(object sender, EventArgs e)
         {
-            frmAgregarMaterial agregarMaterial = new frmAgregarMaterial(_cursoVer);
+            frmAgregarMaterial agregarMaterial = new frmAgregarMaterial(_cursoVer, _tipo, _indice);
             agregarMaterial.ShowDialog();
         }
 

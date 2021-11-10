@@ -1,8 +1,10 @@
-﻿using System;
+﻿using LP2Soft.Home;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,18 +18,22 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private CursosWS.profesor[] _listaProfesor_Curso;
         private CursosWS.curso _cursoAux;
         private PublicacionesWS.material _material;
-
+        private int _tipo;
+        private int _indice;
+        private string _rutaArchivoPDF = "";
         public frmAgregarMaterial()
         {
             InitializeComponent();            
         }
-        public frmAgregarMaterial(CursosWS.curso _cursoVer)
+        public frmAgregarMaterial(CursosWS.curso _cursoVer, int auxTipo, int auxIndice)
         {
             _cursoAux = _cursoVer;
+            _tipo = auxTipo;
+            _indice = auxIndice;
             _daoCurso = new CursosWS.CursosWSClient();
             
             if (_listaProfesor_Curso == null)
-                _listaProfesor_Curso = _daoCurso.listarProfesorXCurso(1);
+                _listaProfesor_Curso = _daoCurso.listarProfesorXCurso(_cursoVer.idCurso);
             InitializeComponent();
             
             cboProfesores.DataSource = _listaProfesor_Curso;
@@ -45,6 +51,12 @@ namespace LP2Soft.Cursos.AgregarMaterial
             _material.contenido = txtComentario.Text;
             _material.sumatoriaCalificaiones = 0;
             _material.cantidadCalificaiones = 0;
+            _material.tipoMaterial = _tipo;
+            _material.indice_tipoMaterial = _indice;
+            //post
+            _material.contenido = txtComentario.Text;
+            _material.prioridad = 1;
+            _material.usuario.idUsuario = frmHome.Usuario.idUsuario;
             
             this.Close();          
         }
@@ -57,8 +69,8 @@ namespace LP2Soft.Cursos.AgregarMaterial
         }
 
         private void btbCargarDocs_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Cuadrito para seleccionar y subir");
+        {            
+                              
         }
 
         private void checkbSi_CheckedChanged(object sender, EventArgs e)

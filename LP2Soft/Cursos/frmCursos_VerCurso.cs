@@ -15,6 +15,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
 {
     public partial class frmCursos_VerCurso : Form
     {
+        private string _rutaFoto = "";
         private CursosWS.CursosWSClient _daoCurso;
         private CursosWS.curso _cursoVer;
         int AuxNivel;
