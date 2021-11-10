@@ -372,6 +372,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tarjetas\tarjTipoMaterialIndice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjTipoMaterialIndice.Designer.cs">
+      <DependentUpon>tarjTipoMaterialIndice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tarjetas\tarjAsesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +389,12 @@
     </Compile>
     <Compile Include="Tarjetas\tarjCurso.Designer.cs">
       <DependentUpon>tarjCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarjetas\tarjCursoxNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjCursoxNivel.Designer.cs">
+      <DependentUpon>tarjCursoxNivel.cs</DependentUpon>
     </Compile>
     <Compile Include="Tarjetas\tarjMensaje.cs">
       <SubType>Form</SubType>
@@ -401,6 +413,12 @@
     </Compile>
     <Compile Include="Tarjetas\tarjProfesor.Designer.cs">
       <DependentUpon>tarjProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarjetas\tarjTipoMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjTipoMaterial.Designer.cs">
+      <DependentUpon>tarjTipoMaterial.cs</DependentUpon>
     </Compile>
     <Compile Include="Tarjetas\tarjUsuario.cs">
       <SubType>Form</SubType>
@@ -567,6 +585,9 @@
     <EmbeddedResource Include="Tarjetas\tarjCurso.resx">
       <DependentUpon>tarjCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjCursoxNivel.resx">
+      <DependentUpon>tarjCursoxNivel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjMensaje.resx">
       <DependentUpon>tarjMensaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -576,17 +597,29 @@
     <EmbeddedResource Include="Tarjetas\tarjProfesor.resx">
       <DependentUpon>tarjProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjTipoMaterial.resx">
+      <DependentUpon>tarjTipoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjTipoMaterialIndice.resx">
+      <DependentUpon>tarjTipoMaterialIndice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
       <DependentUpon>tarjUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\CursosWS\CursosWS1.wsdl" />
-    <None Include="Connected Services\CursosWS\CursosWS1.xsd">
+    <None Include="Connected Services\CursosWS\CursosWS.wsdl" />
+    <None Include="Connected Services\CursosWS\CursosWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarProfesoresNombreResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarProfesorXCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listaXcicloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.MostrarCursoResponse.datasource">
@@ -616,8 +649,8 @@
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.notificacion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.wsdl" />
-    <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.wsdl" />
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.comentario.datasource">
@@ -644,8 +677,8 @@
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.postGenerico.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.wsdl" />
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.xsd">
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.wsdl" />
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.agregarAmigoResponse.datasource">
@@ -687,8 +720,8 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UsuarioWS\UsuariosWS1.wsdl" />
-    <None Include="Connected Services\UsuarioWS\UsuariosWS1.xsd">
+    <None Include="Connected Services\UsuarioWS\UsuariosWS.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuariosWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

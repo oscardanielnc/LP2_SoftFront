@@ -45,6 +45,10 @@
   <xs:complexType name="curso">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="cantEx" type="xs:int" />
+      <xs:element name="cantLab" type="xs:int" />
+      <xs:element name="cantPc" type="xs:int" />
+      <xs:element name="cantTA" type="xs:int" />
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
       <xs:element name="creditos" type="xs:float" />
       <xs:element name="creditosRequeridos" type="xs:float" />
@@ -58,6 +62,7 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="posts" nillable="true" type="tns:post" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="profesores" nillable="true" type="tns:profesor" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="totalMateriales" nillable="true" type="tns:material" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="post" abstract="true">
@@ -144,6 +149,17 @@
           <xs:element minOccurs="0" name="fechaDelEvento" type="xs:dateTime" />
           <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
           <xs:element minOccurs="0" name="nombreDelEvento" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="material">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:post">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="curso" type="tns:curso" />
+          <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

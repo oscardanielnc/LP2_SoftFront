@@ -82,8 +82,8 @@ namespace LP2Soft.Cursos
         
         private void btnCiclo7_Click(object sender, EventArgs e)
         {
-            frmCursos_Ciclo Ciclo7 = new frmCursos_Ciclo();
-            addPanel(Ciclo7);
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(2);
+            addPanel(frmCursos_Ciclo);
         }
 
         private void pictureInformativo_Click(object sender, EventArgs e)
@@ -370,7 +370,59 @@ namespace LP2Soft.Cursos
             f.Show();
         }
 
-        
+        private void btnCiclo1_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(1);
+            addPanel(frmCursos_Ciclo);
+        }
+
+        private void btnCiclo3_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(3);
+            addPanel(frmCursos_Ciclo);
+        }
+
+        private void btnCiclo4_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(4);
+            addPanel(frmCursos_Ciclo);
+        }
+
+        private void btnCiclo5_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(5);
+            addPanel(frmCursos_Ciclo);
+        }
+
+        private void btnCiclo6_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(6);
+            addPanel(frmCursos_Ciclo);
+        }
+
+        private void btnCiclo7_Click_1(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(7);
+            addPanel(frmCursos_Ciclo);
+        }
+
+        private void btnCiclo8_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(8);
+            addPanel(frmCursos_Ciclo);
+        }
+
+        private void btnCiclo9_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(9);
+            addPanel(frmCursos_Ciclo);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(10);
+            addPanel(frmCursos_Ciclo);
+        }
     }
 
         

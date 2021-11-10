@@ -16,17 +16,6 @@ namespace LP2Soft.NotificacionesWS {
     public interface NotificacionesWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Soft.NotificacionesWS.listarNotificacionesResponse listarNotificaciones(LP2Soft.NotificacionesWS.listarNotificacionesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" +
-            "")]
-        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarNotificacionesResponse> listarNotificacionesAsync(LP2Soft.NotificacionesWS.listarNotificacionesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoResponse" +
             "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -49,6 +38,17 @@ namespace LP2Soft.NotificacionesWS {
         System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.insertarNotificacionResponse> insertarNotificacionAsync(LP2Soft.NotificacionesWS.insertarNotificacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.NotificacionesWS.listarNotificacionesResponse listarNotificaciones(LP2Soft.NotificacionesWS.listarNotificacionesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" +
+            "")]
+        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarNotificacionesResponse> listarNotificacionesAsync(LP2Soft.NotificacionesWS.listarNotificacionesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -64,99 +64,91 @@ namespace LP2Soft.NotificacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
-    public partial class notificacion : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class mensaje : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private curso cursoFavoritoField;
+        private string contenidoField;
         
-        private evento eventoAgendadoField;
+        private System.DateTime fechayHoraField;
         
-        private System.DateTime fechaField;
+        private bool fechayHoraFieldSpecified;
         
-        private bool fechaFieldSpecified;
+        private int idDestinatarioField;
         
-        private int idNotificacionField;
+        private int idMensajeField;
         
-        private int idUsiarioNotificadoField;
+        private int idRemitenteField;
         
         private bool leidoField;
         
-        private post postField;
-        
-        private int subTipoField;
-        
-        private int tipoField;
-        
-        private usuario usuarioNotificadorField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public curso cursoFavorito {
+        public string contenido {
             get {
-                return this.cursoFavoritoField;
+                return this.contenidoField;
             }
             set {
-                this.cursoFavoritoField = value;
-                this.RaisePropertyChanged("cursoFavorito");
+                this.contenidoField = value;
+                this.RaisePropertyChanged("contenido");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public evento eventoAgendado {
+        public System.DateTime fechayHora {
             get {
-                return this.eventoAgendadoField;
+                return this.fechayHoraField;
             }
             set {
-                this.eventoAgendadoField = value;
-                this.RaisePropertyChanged("eventoAgendado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
+                this.fechayHoraField = value;
+                this.RaisePropertyChanged("fechayHora");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
+        public bool fechayHoraSpecified {
             get {
-                return this.fechaFieldSpecified;
+                return this.fechayHoraFieldSpecified;
             }
             set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
+                this.fechayHoraFieldSpecified = value;
+                this.RaisePropertyChanged("fechayHoraSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idDestinatario {
+            get {
+                return this.idDestinatarioField;
+            }
+            set {
+                this.idDestinatarioField = value;
+                this.RaisePropertyChanged("idDestinatario");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int idNotificacion {
+        public int idMensaje {
             get {
-                return this.idNotificacionField;
+                return this.idMensajeField;
             }
             set {
-                this.idNotificacionField = value;
-                this.RaisePropertyChanged("idNotificacion");
+                this.idMensajeField = value;
+                this.RaisePropertyChanged("idMensaje");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int idUsiarioNotificado {
+        public int idRemitente {
             get {
-                return this.idUsiarioNotificadoField;
+                return this.idRemitenteField;
             }
             set {
-                this.idUsiarioNotificadoField = value;
-                this.RaisePropertyChanged("idUsiarioNotificado");
+                this.idRemitenteField = value;
+                this.RaisePropertyChanged("idRemitente");
             }
         }
         
@@ -172,51 +164,189 @@ namespace LP2Soft.NotificacionesWS {
             }
         }
         
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
+    public partial class profesor : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
+        
+        private float calificacionField;
+        
+        private int cantidadReseniasField;
+        
+        private string correoField;
+        
+        private curso[] cursosField;
+        
+        private string descripcionField;
+        
+        private byte[] fotoField;
+        
+        private int idProfesorField;
+        
+        private string nombreField;
+        
+        private byte[] portadaField;
+        
+        private resenia[] reseniasField;
+        
+        private int sumatoriaReseniasField;
+        
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public post post {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
             get {
-                return this.postField;
+                return this.activoField;
             }
             set {
-                this.postField = value;
-                this.RaisePropertyChanged("post");
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public float calificacion {
+            get {
+                return this.calificacionField;
+            }
+            set {
+                this.calificacionField = value;
+                this.RaisePropertyChanged("calificacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int cantidadResenias {
+            get {
+                return this.cantidadReseniasField;
+            }
+            set {
+                this.cantidadReseniasField = value;
+                this.RaisePropertyChanged("cantidadResenias");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("cursos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        public curso[] cursos {
+            get {
+                return this.cursosField;
+            }
+            set {
+                this.cursosField = value;
+                this.RaisePropertyChanged("cursos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=6)]
+        public byte[] foto {
+            get {
+                return this.fotoField;
+            }
+            set {
+                this.fotoField = value;
+                this.RaisePropertyChanged("foto");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int subTipo {
+        public int idProfesor {
             get {
-                return this.subTipoField;
+                return this.idProfesorField;
             }
             set {
-                this.subTipoField = value;
-                this.RaisePropertyChanged("subTipo");
+                this.idProfesorField = value;
+                this.RaisePropertyChanged("idProfesor");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int tipo {
+        public string nombre {
             get {
-                return this.tipoField;
+                return this.nombreField;
             }
             set {
-                this.tipoField = value;
-                this.RaisePropertyChanged("tipo");
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public usuario usuarioNotificador {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=9)]
+        public byte[] portada {
             get {
-                return this.usuarioNotificadorField;
+                return this.portadaField;
             }
             set {
-                this.usuarioNotificadorField = value;
-                this.RaisePropertyChanged("usuarioNotificador");
+                this.portadaField = value;
+                this.RaisePropertyChanged("portada");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("resenias", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
+        public resenia[] resenias {
+            get {
+                return this.reseniasField;
+            }
+            set {
+                this.reseniasField = value;
+                this.RaisePropertyChanged("resenias");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public int sumatoriaResenias {
+            get {
+                return this.sumatoriaReseniasField;
+            }
+            set {
+                this.sumatoriaReseniasField = value;
+                this.RaisePropertyChanged("sumatoriaResenias");
             }
         }
         
@@ -239,6 +369,14 @@ namespace LP2Soft.NotificacionesWS {
     public partial class curso : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activoField;
+        
+        private int cantExField;
+        
+        private int cantLabField;
+        
+        private int cantPcField;
+        
+        private int cantTAField;
         
         private string codigoField;
         
@@ -266,6 +404,8 @@ namespace LP2Soft.NotificacionesWS {
         
         private profesor[] profesoresField;
         
+        private material[] totalMaterialesField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public bool activo {
@@ -280,6 +420,54 @@ namespace LP2Soft.NotificacionesWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int cantEx {
+            get {
+                return this.cantExField;
+            }
+            set {
+                this.cantExField = value;
+                this.RaisePropertyChanged("cantEx");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int cantLab {
+            get {
+                return this.cantLabField;
+            }
+            set {
+                this.cantLabField = value;
+                this.RaisePropertyChanged("cantLab");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int cantPc {
+            get {
+                return this.cantPcField;
+            }
+            set {
+                this.cantPcField = value;
+                this.RaisePropertyChanged("cantPc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int cantTA {
+            get {
+                return this.cantTAField;
+            }
+            set {
+                this.cantTAField = value;
+                this.RaisePropertyChanged("cantTA");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string codigo {
             get {
                 return this.codigoField;
@@ -291,7 +479,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public float creditos {
             get {
                 return this.creditosField;
@@ -303,7 +491,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public float creditosRequeridos {
             get {
                 return this.creditosRequeridosField;
@@ -315,7 +503,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cursosRequeridos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("cursosRequeridos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
         public curso[] cursosRequeridos {
             get {
                 return this.cursosRequeridosField;
@@ -327,7 +515,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string descripcion {
             get {
                 return this.descripcionField;
@@ -339,7 +527,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public string especialidad {
             get {
                 return this.especialidadField;
@@ -351,7 +539,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public int estado {
             get {
                 return this.estadoField;
@@ -363,7 +551,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public bool favorito {
             get {
                 return this.favoritoField;
@@ -375,7 +563,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public int idCurso {
             get {
                 return this.idCursoField;
@@ -387,7 +575,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public int nivel {
             get {
                 return this.nivelField;
@@ -399,7 +587,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -411,7 +599,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("posts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute("posts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=16)]
         public post[] posts {
             get {
                 return this.postsField;
@@ -423,7 +611,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("profesores", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute("profesores", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=17)]
         public profesor[] profesores {
             get {
                 return this.profesoresField;
@@ -431,6 +619,18 @@ namespace LP2Soft.NotificacionesWS {
             set {
                 this.profesoresField = value;
                 this.RaisePropertyChanged("profesores");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("totalMateriales", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=18)]
+        public material[] totalMateriales {
+            get {
+                return this.totalMaterialesField;
+            }
+            set {
+                this.totalMaterialesField = value;
+                this.RaisePropertyChanged("totalMateriales");
             }
         }
         
@@ -445,6 +645,7 @@ namespace LP2Soft.NotificacionesWS {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(material))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(evento))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(resenia))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
@@ -1103,308 +1304,6 @@ namespace LP2Soft.NotificacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
-    public partial class profesor : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activoField;
-        
-        private float calificacionField;
-        
-        private int cantidadReseniasField;
-        
-        private string correoField;
-        
-        private curso[] cursosField;
-        
-        private string descripcionField;
-        
-        private byte[] fotoField;
-        
-        private int idProfesorField;
-        
-        private string nombreField;
-        
-        private byte[] portadaField;
-        
-        private resenia[] reseniasField;
-        
-        private int sumatoriaReseniasField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public float calificacion {
-            get {
-                return this.calificacionField;
-            }
-            set {
-                this.calificacionField = value;
-                this.RaisePropertyChanged("calificacion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int cantidadResenias {
-            get {
-                return this.cantidadReseniasField;
-            }
-            set {
-                this.cantidadReseniasField = value;
-                this.RaisePropertyChanged("cantidadResenias");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cursos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public curso[] cursos {
-            get {
-                return this.cursosField;
-            }
-            set {
-                this.cursosField = value;
-                this.RaisePropertyChanged("cursos");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=6)]
-        public byte[] foto {
-            get {
-                return this.fotoField;
-            }
-            set {
-                this.fotoField = value;
-                this.RaisePropertyChanged("foto");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int idProfesor {
-            get {
-                return this.idProfesorField;
-            }
-            set {
-                this.idProfesorField = value;
-                this.RaisePropertyChanged("idProfesor");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=9)]
-        public byte[] portada {
-            get {
-                return this.portadaField;
-            }
-            set {
-                this.portadaField = value;
-                this.RaisePropertyChanged("portada");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("resenias", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
-        public resenia[] resenias {
-            get {
-                return this.reseniasField;
-            }
-            set {
-                this.reseniasField = value;
-                this.RaisePropertyChanged("resenias");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public int sumatoriaResenias {
-            get {
-                return this.sumatoriaReseniasField;
-            }
-            set {
-                this.sumatoriaReseniasField = value;
-                this.RaisePropertyChanged("sumatoriaResenias");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
-    public partial class mensaje : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string contenidoField;
-        
-        private System.DateTime fechayHoraField;
-        
-        private bool fechayHoraFieldSpecified;
-        
-        private int idDestinatarioField;
-        
-        private int idMensajeField;
-        
-        private int idRemitenteField;
-        
-        private bool leidoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string contenido {
-            get {
-                return this.contenidoField;
-            }
-            set {
-                this.contenidoField = value;
-                this.RaisePropertyChanged("contenido");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fechayHora {
-            get {
-                return this.fechayHoraField;
-            }
-            set {
-                this.fechayHoraField = value;
-                this.RaisePropertyChanged("fechayHora");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechayHoraSpecified {
-            get {
-                return this.fechayHoraFieldSpecified;
-            }
-            set {
-                this.fechayHoraFieldSpecified = value;
-                this.RaisePropertyChanged("fechayHoraSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idDestinatario {
-            get {
-                return this.idDestinatarioField;
-            }
-            set {
-                this.idDestinatarioField = value;
-                this.RaisePropertyChanged("idDestinatario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int idMensaje {
-            get {
-                return this.idMensajeField;
-            }
-            set {
-                this.idMensajeField = value;
-                this.RaisePropertyChanged("idMensaje");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int idRemitente {
-            get {
-                return this.idRemitenteField;
-            }
-            set {
-                this.idRemitenteField = value;
-                this.RaisePropertyChanged("idRemitente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public bool leido {
-            get {
-                return this.leidoField;
-            }
-            set {
-                this.leidoField = value;
-                this.RaisePropertyChanged("leido");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
     public partial class evento : post {
         
         private byte[] archivoField;
@@ -1478,39 +1377,226 @@ namespace LP2Soft.NotificacionesWS {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNotificaciones", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarNotificacionesRequest {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
+    public partial class material : post {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
+        private byte[] archivoField;
         
-        public listarNotificacionesRequest() {
+        private curso cursoField;
+        
+        private string nombreArchivoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
+        public byte[] archivo {
+            get {
+                return this.archivoField;
+            }
+            set {
+                this.archivoField = value;
+                this.RaisePropertyChanged("archivo");
+            }
         }
         
-        public listarNotificacionesRequest(int idUsuario) {
-            this.idUsuario = idUsuario;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public curso curso {
+            get {
+                return this.cursoField;
+            }
+            set {
+                this.cursoField = value;
+                this.RaisePropertyChanged("curso");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombreArchivo {
+            get {
+                return this.nombreArchivoField;
+            }
+            set {
+                this.nombreArchivoField = value;
+                this.RaisePropertyChanged("nombreArchivo");
+            }
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNotificacionesResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarNotificacionesResponse {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
+    public partial class notificacion : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Soft.NotificacionesWS.notificacion[] @return;
+        private curso cursoFavoritoField;
         
-        public listarNotificacionesResponse() {
+        private evento eventoAgendadoField;
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private int idNotificacionField;
+        
+        private int idUsiarioNotificadoField;
+        
+        private bool leidoField;
+        
+        private post postField;
+        
+        private int subTipoField;
+        
+        private int tipoField;
+        
+        private usuario usuarioNotificadorField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public curso cursoFavorito {
+            get {
+                return this.cursoFavoritoField;
+            }
+            set {
+                this.cursoFavoritoField = value;
+                this.RaisePropertyChanged("cursoFavorito");
+            }
         }
         
-        public listarNotificacionesResponse(LP2Soft.NotificacionesWS.notificacion[] @return) {
-            this.@return = @return;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public evento eventoAgendado {
+            get {
+                return this.eventoAgendadoField;
+            }
+            set {
+                this.eventoAgendadoField = value;
+                this.RaisePropertyChanged("eventoAgendado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idNotificacion {
+            get {
+                return this.idNotificacionField;
+            }
+            set {
+                this.idNotificacionField = value;
+                this.RaisePropertyChanged("idNotificacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int idUsiarioNotificado {
+            get {
+                return this.idUsiarioNotificadoField;
+            }
+            set {
+                this.idUsiarioNotificadoField = value;
+                this.RaisePropertyChanged("idUsiarioNotificado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public bool leido {
+            get {
+                return this.leidoField;
+            }
+            set {
+                this.leidoField = value;
+                this.RaisePropertyChanged("leido");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public post post {
+            get {
+                return this.postField;
+            }
+            set {
+                this.postField = value;
+                this.RaisePropertyChanged("post");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int subTipo {
+            get {
+                return this.subTipoField;
+            }
+            set {
+                this.subTipoField = value;
+                this.RaisePropertyChanged("subTipo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public usuario usuarioNotificador {
+            get {
+                return this.usuarioNotificadorField;
+            }
+            set {
+                this.usuarioNotificadorField = value;
+                this.RaisePropertyChanged("usuarioNotificador");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
@@ -1624,6 +1710,42 @@ namespace LP2Soft.NotificacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNotificaciones", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarNotificacionesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public listarNotificacionesRequest() {
+        }
+        
+        public listarNotificacionesRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNotificacionesResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarNotificacionesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.NotificacionesWS.notificacion[] @return;
+        
+        public listarNotificacionesResponse() {
+        }
+        
+        public listarNotificacionesResponse(LP2Soft.NotificacionesWS.notificacion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="enviarMensaje", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
     public partial class enviarMensajeRequest {
         
@@ -1695,29 +1817,6 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Soft.NotificacionesWS.listarNotificacionesResponse LP2Soft.NotificacionesWS.NotificacionesWS.listarNotificaciones(LP2Soft.NotificacionesWS.listarNotificacionesRequest request) {
-            return base.Channel.listarNotificaciones(request);
-        }
-        
-        public LP2Soft.NotificacionesWS.notificacion[] listarNotificaciones(int idUsuario) {
-            LP2Soft.NotificacionesWS.listarNotificacionesRequest inValue = new LP2Soft.NotificacionesWS.listarNotificacionesRequest();
-            inValue.idUsuario = idUsuario;
-            LP2Soft.NotificacionesWS.listarNotificacionesResponse retVal = ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).listarNotificaciones(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarNotificacionesResponse> LP2Soft.NotificacionesWS.NotificacionesWS.listarNotificacionesAsync(LP2Soft.NotificacionesWS.listarNotificacionesRequest request) {
-            return base.Channel.listarNotificacionesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarNotificacionesResponse> listarNotificacionesAsync(int idUsuario) {
-            LP2Soft.NotificacionesWS.listarNotificacionesRequest inValue = new LP2Soft.NotificacionesWS.listarNotificacionesRequest();
-            inValue.idUsuario = idUsuario;
-            return ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).listarNotificacionesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse LP2Soft.NotificacionesWS.NotificacionesWS.listarMensajesXAmigo(LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest request) {
             return base.Channel.listarMensajesXAmigo(request);
         }
@@ -1775,6 +1874,29 @@ namespace LP2Soft.NotificacionesWS {
             inValue.idEventoAgendado = idEventoAgendado;
             inValue.idPost = idPost;
             return ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).insertarNotificacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.NotificacionesWS.listarNotificacionesResponse LP2Soft.NotificacionesWS.NotificacionesWS.listarNotificaciones(LP2Soft.NotificacionesWS.listarNotificacionesRequest request) {
+            return base.Channel.listarNotificaciones(request);
+        }
+        
+        public LP2Soft.NotificacionesWS.notificacion[] listarNotificaciones(int idUsuario) {
+            LP2Soft.NotificacionesWS.listarNotificacionesRequest inValue = new LP2Soft.NotificacionesWS.listarNotificacionesRequest();
+            inValue.idUsuario = idUsuario;
+            LP2Soft.NotificacionesWS.listarNotificacionesResponse retVal = ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).listarNotificaciones(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarNotificacionesResponse> LP2Soft.NotificacionesWS.NotificacionesWS.listarNotificacionesAsync(LP2Soft.NotificacionesWS.listarNotificacionesRequest request) {
+            return base.Channel.listarNotificacionesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarNotificacionesResponse> listarNotificacionesAsync(int idUsuario) {
+            LP2Soft.NotificacionesWS.listarNotificacionesRequest inValue = new LP2Soft.NotificacionesWS.listarNotificacionesRequest();
+            inValue.idUsuario = idUsuario;
+            return ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).listarNotificacionesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
