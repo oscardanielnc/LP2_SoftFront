@@ -2,6 +2,14 @@
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="MostrarCurso" type="tns:MostrarCurso" />
   <xs:element name="MostrarCursoResponse" type="tns:MostrarCursoResponse" />
+  <xs:element name="listaXciclo" type="tns:listaXciclo" />
+  <xs:element name="listaXcicloResponse" type="tns:listaXcicloResponse" />
+  <xs:element name="listarCursoProfesor" type="tns:listarCursoProfesor" />
+  <xs:element name="listarCursoProfesorResponse" type="tns:listarCursoProfesorResponse" />
+  <xs:element name="listarCursosAsesorados" type="tns:listarCursosAsesorados" />
+  <xs:element name="listarCursosAsesoradosResponse" type="tns:listarCursosAsesoradosResponse" />
+  <xs:element name="listarProfesorXCurso" type="tns:listarProfesorXCurso" />
+  <xs:element name="listarProfesorXCursoResponse" type="tns:listarProfesorXCursoResponse" />
   <xs:element name="listarProfesoresNombre" type="tns:listarProfesoresNombre" />
   <xs:element name="listarProfesoresNombreResponse" type="tns:listarProfesoresNombreResponse" />
   <xs:element name="mostrarProfesor" type="tns:mostrarProfesor" />
@@ -141,6 +149,16 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="listarCursoProfesor">
+    <xs:sequence>
+      <xs:element name="idProfesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursoProfesorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarProfesorXCurso">
     <xs:sequence>
