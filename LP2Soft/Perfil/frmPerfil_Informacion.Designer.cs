@@ -292,7 +292,7 @@ namespace LP2Soft.Perfil
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(799, 356);
+            this.ClientSize = new System.Drawing.Size(804, 356);
             this.Controls.Add(this.panelAsesor);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.rtbDescripcion);

@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="agregarAmigo" type="tns:agregarAmigo" />
   <xs:element name="agregarAmigoResponse" type="tns:agregarAmigoResponse" />
+  <xs:element name="eliminarAmigo" type="tns:eliminarAmigo" />
+  <xs:element name="eliminarAmigoResponse" type="tns:eliminarAmigoResponse" />
   <xs:element name="esAmigo" type="tns:esAmigo" />
   <xs:element name="esAmigoResponse" type="tns:esAmigoResponse" />
   <xs:element name="hacerAdmin" type="tns:hacerAdmin" />
@@ -22,6 +24,17 @@
   <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
   <xs:element name="mostrarUsuario" type="tns:mostrarUsuario" />
   <xs:element name="mostrarUsuarioResponse" type="tns:mostrarUsuarioResponse" />
+  <xs:complexType name="eliminarAmigo">
+    <xs:sequence>
+      <xs:element name="idUsuario1" type="xs:int" />
+      <xs:element name="idUsuario2" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAmigoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="hacerAdmin">
     <xs:sequence>
       <xs:element name="idUsuario" type="xs:int" />
@@ -45,6 +58,10 @@
   <xs:complexType name="curso">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="cantEx" type="xs:int" />
+      <xs:element name="cantLab" type="xs:int" />
+      <xs:element name="cantPc" type="xs:int" />
+      <xs:element name="cantTA" type="xs:int" />
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
       <xs:element name="creditos" type="xs:float" />
       <xs:element name="creditosRequeridos" type="xs:float" />
@@ -58,6 +75,7 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="posts" nillable="true" type="tns:post" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="profesores" nillable="true" type="tns:profesor" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="totalMateriales" nillable="true" type="tns:material" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="post" abstract="true">
@@ -144,6 +162,21 @@
           <xs:element minOccurs="0" name="fechaDelEvento" type="xs:dateTime" />
           <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
           <xs:element minOccurs="0" name="nombreDelEvento" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="material">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:post">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
+          <xs:element name="cantidadCalificaiones" type="xs:int" />
+          <xs:element minOccurs="0" name="curso" type="tns:curso" />
+          <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
+          <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
+          <xs:element name="sumatoriaCalificaiones" type="xs:int" />
+          <xs:element name="tipoMaterial" type="xs:int" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

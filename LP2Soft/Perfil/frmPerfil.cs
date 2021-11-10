@@ -35,10 +35,7 @@ namespace LP2Soft.Perfil
             btnInformacion.BackColor = Color.FromArgb(28, 103, 179);
             _menuSeleccionado = MenuPerfil.Informacion; // se muestra el menu de información por defecto
 
-            int esAmigoRes = _daoUsuario.esAmigo(frmHome.Usuario.idUsuario, _usuario.idUsuario);
-            if(esAmigoRes == 1)
-                _esAmigo = true;
-            else _esAmigo = false;
+
             actualizarPantallas();
             actualizarIconosAdministrador();
 
@@ -49,15 +46,48 @@ namespace LP2Soft.Perfil
             }
             else
             {
-                btnAmigo.Visible = true;
-                if(_usuario.esAsesor || _esAmigo) btnMensaje.Visible = true;
-                else btnMensaje.Visible = false;
-
-                if(_esAmigo) btnAmigo.ImageIndex = 0;
-                else btnAmigo.ImageIndex = 1;
+                int resultado = _daoUsuario.esAmigo(frmHome.Usuario.idUsuario, _usuario.idUsuario);
+                // 0Noamigo, ni quiere ser; 1 es amigo; 2 No amigo, envió solicitud; 3 No amigo, yo envié solicitud
+                actualizarBotonesDelPerfil(resultado);
             }
 
             abrirFormulario(new frmPerfil_Informacion(_usuario, _propio));
+        }
+        private void actualizarBotonesDelPerfil(int resultado)
+        {
+            _esAmigo = false;
+            switch (resultado)
+            {
+                case 1:
+                    _esAmigo = true;
+                    btnAmigo.Visible = true;
+                    btnCancelarSoli.Visible = false;
+                    btnRechazar.Visible = false;
+                    btnAceptar.Visible = false;
+                    btnAmigo.ImageIndex = 0;
+                    break;
+                case 2:
+                    btnAmigo.Visible = false;
+                    btnCancelarSoli.Visible = false;
+                    btnRechazar.Visible = true;
+                    btnAceptar.Visible = true;
+                    break;
+                case 3:
+                    btnAmigo.Visible = false;
+                    btnCancelarSoli.Visible = true;
+                    btnRechazar.Visible = false;
+                    btnAceptar.Visible = false;
+                    break;
+                default:
+                    btnAmigo.Visible = true;
+                    btnCancelarSoli.Visible = false;
+                    btnRechazar.Visible = false;
+                    btnAceptar.Visible = false;
+                    btnAmigo.ImageIndex = 1;
+                    break;
+            }
+            if (_esAmigo || _usuario.esAsesor) btnMensaje.Visible = true;
+            else btnMensaje.Visible = false;
         }
         private void actualizarPantallas()
         {
@@ -140,7 +170,7 @@ namespace LP2Soft.Perfil
                 inicializarColorBotones();
                 btnCursos.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Cursos;
-                abrirFormulario(new frmPerfil_CursosAsesorados());
+                abrirFormulario(new frmPerfil_CursosAsesorados(_usuario));
             }
         }
 
@@ -165,20 +195,36 @@ namespace LP2Soft.Perfil
             if (_esAmigo)
             {
                 // eleminar Amigo
-                _esAmigo = false;
-                btnAmigo.ImageIndex = 1;
-
-                string mensaje = _usuario.nombre + " " + _usuario.apellido + " se ha eliminado de tu lista de amigos.";
-                MessageBox.Show(mensaje, "Exclamation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                try
+                {
+                    if (_daoUsuario.eliminarAmigo(frmHome.Usuario.idUsuario, _usuario.idUsuario) == 1)
+                    {
+                        string mensaje = _usuario.nombre + " " + _usuario.apellido + " se ha eliminado de tu lista de amigos.";
+                        MessageBox.Show(mensaje, "Exclamation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        actualizarBotonesDelPerfil(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ha ocurrido un error al tratar de poner fin a tu amistad", 
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
                 // agregarAmigo
-                _esAmigo = true;
-                btnAmigo.ImageIndex = 0;
-
-                string mensaje = " Se ha enviado una solicitud de amistad a " + _usuario.nombre + " " + _usuario.apellido;
-                MessageBox.Show(mensaje, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    if(_daoNotificacion.insertarNotificacion(_usuario.idUsuario, 1, 0, frmHome.Usuario.idUsuario, -1,-1,-1)==1)
+                    {
+                        string mensaje = " Se ha enviado una solicitud de amistad a " + _usuario.nombre + " " + _usuario.apellido;
+                        MessageBox.Show(mensaje, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        actualizarBotonesDelPerfil(3);
+                    }
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("Ha ocurrido un error al tratar de enviar la solicitud", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -202,6 +248,66 @@ namespace LP2Soft.Perfil
             } catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido un error inesperado en el servidor!",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCancelarSoli_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_daoNotificacion.eliminarSolicitudAmistad(_usuario.idUsuario, frmHome.Usuario.idUsuario) == 1)
+                {
+                    MessageBox.Show("Haz cancelado tu solicitud de amistad", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    actualizarBotonesDelPerfil(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al tratar de cacelar la solicitud",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRechazar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_daoNotificacion.eliminarSolicitudAmistad(frmHome.Usuario.idUsuario, _usuario.idUsuario) == 1)
+                {
+                    MessageBox.Show("Haz rechazdo la solicitud de amistad de " + _usuario.nombre, 
+                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    actualizarBotonesDelPerfil(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al tratar de rechazar la solicitud",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(_daoUsuario.agregarAmigo(frmHome.Usuario.idUsuario, _usuario.idUsuario) == 1)
+                {
+                    if(_daoNotificacion.insertarNotificacion(_usuario.idUsuario,1,1,frmHome.Usuario.idUsuario, -1,-1,-1)==1)
+                        MessageBox.Show("¡Haz agregado a " + _usuario.nombre + " a tu lista de amigos!",
+                                "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    else MessageBox.Show("¡Haz agregado a " + _usuario.nombre + " a tu lista de amigos. Pero no se le pudo notificar.",
+                                "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    actualizarBotonesDelPerfil(1);
+                    _daoNotificacion.eliminarSolicitudAmistad(frmHome.Usuario.idUsuario, _usuario.idUsuario);
+                } else MessageBox.Show("Ocurrió un problema inesperado al tratar de agregar a " + _usuario.nombre + " a tu lista de amigos.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error inesperado en el servidor :(",
                             "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

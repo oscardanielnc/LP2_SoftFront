@@ -61,9 +61,10 @@ namespace LP2Soft.Mensajes
                     m.idRemitente = frmHome.Usuario.idUsuario;
                     m.idDestinatario = _amigo.idUsuario;
                     m.contenido = txtMensaje.Text;
-                    m.fechayHora = new DateTime();
+                    m.fechayHora = DateTime.Now;
                     agregarMensaje(m);
                     _daoMensajes.enviarMensaje(m.idRemitente, m.idDestinatario, txtMensaje.Text);
+                    txtMensaje.Text = "";
                 } catch(Exception ex)
                 {
                     MessageBox.Show("Ha ocurrido un error en el servidor al tratar de enviar el mensaje. Intentelo de nuevo más tarde",

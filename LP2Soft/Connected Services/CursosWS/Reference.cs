@@ -16,6 +16,15 @@ namespace LP2Soft.CursosWS {
     public interface CursosWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.CursosWS.listarProfesorXCursoResponse listarProfesorXCurso(LP2Soft.CursosWS.listarProfesorXCursoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoResponse")]
+        System.Threading.Tasks.Task<LP2Soft.CursosWS.listarProfesorXCursoResponse> listarProfesorXCursoAsync(LP2Soft.CursosWS.listarProfesorXCursoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesoresNombreRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesoresNombreResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,6 +50,33 @@ namespace LP2Soft.CursosWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorResponse")]
         System.Threading.Tasks.Task<LP2Soft.CursosWS.mostrarProfesorResponse> mostrarProfesorAsync(LP2Soft.CursosWS.mostrarProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.CursosWS.listaXcicloResponse listaXciclo(LP2Soft.CursosWS.listaXcicloRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloResponse")]
+        System.Threading.Tasks.Task<LP2Soft.CursosWS.listaXcicloResponse> listaXcicloAsync(LP2Soft.CursosWS.listaXcicloRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.CursosWS.listarCursoProfesorResponse listarCursoProfesor(LP2Soft.CursosWS.listarCursoProfesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorResponse")]
+        System.Threading.Tasks.Task<LP2Soft.CursosWS.listarCursoProfesorResponse> listarCursoProfesorAsync(LP2Soft.CursosWS.listarCursoProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursosAsesoradosRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursosAsesoradosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.CursosWS.listarCursosAsesoradosResponse listarCursosAsesorados(LP2Soft.CursosWS.listarCursosAsesoradosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursosAsesoradosRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursosAsesoradosResponse")]
+        System.Threading.Tasks.Task<LP2Soft.CursosWS.listarCursosAsesoradosResponse> listarCursosAsesoradosAsync(LP2Soft.CursosWS.listarCursosAsesoradosRequest request);
     }
     
     /// <remarks/>
@@ -239,6 +275,14 @@ namespace LP2Soft.CursosWS {
         
         private bool activoField;
         
+        private int cantExField;
+        
+        private int cantLabField;
+        
+        private int cantPcField;
+        
+        private int cantTAField;
+        
         private string codigoField;
         
         private float creditosField;
@@ -265,6 +309,8 @@ namespace LP2Soft.CursosWS {
         
         private profesor[] profesoresField;
         
+        private material[] totalMaterialesField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public bool activo {
@@ -279,6 +325,54 @@ namespace LP2Soft.CursosWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int cantEx {
+            get {
+                return this.cantExField;
+            }
+            set {
+                this.cantExField = value;
+                this.RaisePropertyChanged("cantEx");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int cantLab {
+            get {
+                return this.cantLabField;
+            }
+            set {
+                this.cantLabField = value;
+                this.RaisePropertyChanged("cantLab");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int cantPc {
+            get {
+                return this.cantPcField;
+            }
+            set {
+                this.cantPcField = value;
+                this.RaisePropertyChanged("cantPc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int cantTA {
+            get {
+                return this.cantTAField;
+            }
+            set {
+                this.cantTAField = value;
+                this.RaisePropertyChanged("cantTA");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string codigo {
             get {
                 return this.codigoField;
@@ -290,7 +384,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public float creditos {
             get {
                 return this.creditosField;
@@ -302,7 +396,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public float creditosRequeridos {
             get {
                 return this.creditosRequeridosField;
@@ -314,7 +408,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cursosRequeridos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("cursosRequeridos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
         public curso[] cursosRequeridos {
             get {
                 return this.cursosRequeridosField;
@@ -326,7 +420,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string descripcion {
             get {
                 return this.descripcionField;
@@ -338,7 +432,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public string especialidad {
             get {
                 return this.especialidadField;
@@ -350,7 +444,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public int estado {
             get {
                 return this.estadoField;
@@ -362,7 +456,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public bool favorito {
             get {
                 return this.favoritoField;
@@ -374,7 +468,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public int idCurso {
             get {
                 return this.idCursoField;
@@ -386,7 +480,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public int nivel {
             get {
                 return this.nivelField;
@@ -398,7 +492,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -410,7 +504,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("posts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute("posts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=16)]
         public post[] posts {
             get {
                 return this.postsField;
@@ -422,7 +516,7 @@ namespace LP2Soft.CursosWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("profesores", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute("profesores", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=17)]
         public profesor[] profesores {
             get {
                 return this.profesoresField;
@@ -430,6 +524,18 @@ namespace LP2Soft.CursosWS {
             set {
                 this.profesoresField = value;
                 this.RaisePropertyChanged("profesores");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("totalMateriales", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=18)]
+        public material[] totalMateriales {
+            get {
+                return this.totalMaterialesField;
+            }
+            set {
+                this.totalMaterialesField = value;
+                this.RaisePropertyChanged("totalMateriales");
             }
         }
         
@@ -444,6 +550,7 @@ namespace LP2Soft.CursosWS {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(material))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(evento))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(resenia))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
@@ -1175,6 +1282,149 @@ namespace LP2Soft.CursosWS {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
+    public partial class material : post {
+        
+        private byte[] archivoField;
+        
+        private int cantidadCalificaionesField;
+        
+        private curso cursoField;
+        
+        private string nombreArchivoField;
+        
+        private profesor profesorField;
+        
+        private int sumatoriaCalificaionesField;
+        
+        private int tipoMaterialField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
+        public byte[] archivo {
+            get {
+                return this.archivoField;
+            }
+            set {
+                this.archivoField = value;
+                this.RaisePropertyChanged("archivo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int cantidadCalificaiones {
+            get {
+                return this.cantidadCalificaionesField;
+            }
+            set {
+                this.cantidadCalificaionesField = value;
+                this.RaisePropertyChanged("cantidadCalificaiones");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public curso curso {
+            get {
+                return this.cursoField;
+            }
+            set {
+                this.cursoField = value;
+                this.RaisePropertyChanged("curso");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nombreArchivo {
+            get {
+                return this.nombreArchivoField;
+            }
+            set {
+                this.nombreArchivoField = value;
+                this.RaisePropertyChanged("nombreArchivo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public profesor profesor {
+            get {
+                return this.profesorField;
+            }
+            set {
+                this.profesorField = value;
+                this.RaisePropertyChanged("profesor");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int sumatoriaCalificaiones {
+            get {
+                return this.sumatoriaCalificaionesField;
+            }
+            set {
+                this.sumatoriaCalificaionesField = value;
+                this.RaisePropertyChanged("sumatoriaCalificaiones");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int tipoMaterial {
+            get {
+                return this.tipoMaterialField;
+            }
+            set {
+                this.tipoMaterialField = value;
+                this.RaisePropertyChanged("tipoMaterial");
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesorXCurso", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarProfesorXCursoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCurso;
+        
+        public listarProfesorXCursoRequest() {
+        }
+        
+        public listarProfesorXCursoRequest(int idCurso) {
+            this.idCurso = idCurso;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesorXCursoResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarProfesorXCursoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.CursosWS.profesor[] @return;
+        
+        public listarProfesorXCursoResponse() {
+        }
+        
+        public listarProfesorXCursoResponse(LP2Soft.CursosWS.profesor[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1283,6 +1533,114 @@ namespace LP2Soft.CursosWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaXciclo", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listaXcicloRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nivel;
+        
+        public listaXcicloRequest() {
+        }
+        
+        public listaXcicloRequest(int nivel) {
+            this.nivel = nivel;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaXcicloResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listaXcicloResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.CursosWS.curso[] @return;
+        
+        public listaXcicloResponse() {
+        }
+        
+        public listaXcicloResponse(LP2Soft.CursosWS.curso[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursoProfesor", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursoProfesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProfesor;
+        
+        public listarCursoProfesorRequest() {
+        }
+        
+        public listarCursoProfesorRequest(int idProfesor) {
+            this.idProfesor = idProfesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursoProfesorResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursoProfesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.CursosWS.curso[] @return;
+        
+        public listarCursoProfesorResponse() {
+        }
+        
+        public listarCursoProfesorResponse(LP2Soft.CursosWS.curso[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursosAsesorados", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursosAsesoradosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idAsesor;
+        
+        public listarCursosAsesoradosRequest() {
+        }
+        
+        public listarCursosAsesoradosRequest(int idAsesor) {
+            this.idAsesor = idAsesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursosAsesoradosResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursosAsesoradosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.CursosWS.curso[] @return;
+        
+        public listarCursosAsesoradosResponse() {
+        }
+        
+        public listarCursosAsesoradosResponse(LP2Soft.CursosWS.curso[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CursosWSChannel : LP2Soft.CursosWS.CursosWS, System.ServiceModel.IClientChannel {
     }
@@ -1308,6 +1666,29 @@ namespace LP2Soft.CursosWS {
         
         public CursosWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.CursosWS.listarProfesorXCursoResponse LP2Soft.CursosWS.CursosWS.listarProfesorXCurso(LP2Soft.CursosWS.listarProfesorXCursoRequest request) {
+            return base.Channel.listarProfesorXCurso(request);
+        }
+        
+        public LP2Soft.CursosWS.profesor[] listarProfesorXCurso(int idCurso) {
+            LP2Soft.CursosWS.listarProfesorXCursoRequest inValue = new LP2Soft.CursosWS.listarProfesorXCursoRequest();
+            inValue.idCurso = idCurso;
+            LP2Soft.CursosWS.listarProfesorXCursoResponse retVal = ((LP2Soft.CursosWS.CursosWS)(this)).listarProfesorXCurso(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.CursosWS.listarProfesorXCursoResponse> LP2Soft.CursosWS.CursosWS.listarProfesorXCursoAsync(LP2Soft.CursosWS.listarProfesorXCursoRequest request) {
+            return base.Channel.listarProfesorXCursoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.CursosWS.listarProfesorXCursoResponse> listarProfesorXCursoAsync(int idCurso) {
+            LP2Soft.CursosWS.listarProfesorXCursoRequest inValue = new LP2Soft.CursosWS.listarProfesorXCursoRequest();
+            inValue.idCurso = idCurso;
+            return ((LP2Soft.CursosWS.CursosWS)(this)).listarProfesorXCursoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1377,6 +1758,75 @@ namespace LP2Soft.CursosWS {
             LP2Soft.CursosWS.mostrarProfesorRequest inValue = new LP2Soft.CursosWS.mostrarProfesorRequest();
             inValue.idProfesor = idProfesor;
             return ((LP2Soft.CursosWS.CursosWS)(this)).mostrarProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.CursosWS.listaXcicloResponse LP2Soft.CursosWS.CursosWS.listaXciclo(LP2Soft.CursosWS.listaXcicloRequest request) {
+            return base.Channel.listaXciclo(request);
+        }
+        
+        public LP2Soft.CursosWS.curso[] listaXciclo(int nivel) {
+            LP2Soft.CursosWS.listaXcicloRequest inValue = new LP2Soft.CursosWS.listaXcicloRequest();
+            inValue.nivel = nivel;
+            LP2Soft.CursosWS.listaXcicloResponse retVal = ((LP2Soft.CursosWS.CursosWS)(this)).listaXciclo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.CursosWS.listaXcicloResponse> LP2Soft.CursosWS.CursosWS.listaXcicloAsync(LP2Soft.CursosWS.listaXcicloRequest request) {
+            return base.Channel.listaXcicloAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.CursosWS.listaXcicloResponse> listaXcicloAsync(int nivel) {
+            LP2Soft.CursosWS.listaXcicloRequest inValue = new LP2Soft.CursosWS.listaXcicloRequest();
+            inValue.nivel = nivel;
+            return ((LP2Soft.CursosWS.CursosWS)(this)).listaXcicloAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.CursosWS.listarCursoProfesorResponse LP2Soft.CursosWS.CursosWS.listarCursoProfesor(LP2Soft.CursosWS.listarCursoProfesorRequest request) {
+            return base.Channel.listarCursoProfesor(request);
+        }
+        
+        public LP2Soft.CursosWS.curso[] listarCursoProfesor(int idProfesor) {
+            LP2Soft.CursosWS.listarCursoProfesorRequest inValue = new LP2Soft.CursosWS.listarCursoProfesorRequest();
+            inValue.idProfesor = idProfesor;
+            LP2Soft.CursosWS.listarCursoProfesorResponse retVal = ((LP2Soft.CursosWS.CursosWS)(this)).listarCursoProfesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.CursosWS.listarCursoProfesorResponse> LP2Soft.CursosWS.CursosWS.listarCursoProfesorAsync(LP2Soft.CursosWS.listarCursoProfesorRequest request) {
+            return base.Channel.listarCursoProfesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.CursosWS.listarCursoProfesorResponse> listarCursoProfesorAsync(int idProfesor) {
+            LP2Soft.CursosWS.listarCursoProfesorRequest inValue = new LP2Soft.CursosWS.listarCursoProfesorRequest();
+            inValue.idProfesor = idProfesor;
+            return ((LP2Soft.CursosWS.CursosWS)(this)).listarCursoProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.CursosWS.listarCursosAsesoradosResponse LP2Soft.CursosWS.CursosWS.listarCursosAsesorados(LP2Soft.CursosWS.listarCursosAsesoradosRequest request) {
+            return base.Channel.listarCursosAsesorados(request);
+        }
+        
+        public LP2Soft.CursosWS.curso[] listarCursosAsesorados(int idAsesor) {
+            LP2Soft.CursosWS.listarCursosAsesoradosRequest inValue = new LP2Soft.CursosWS.listarCursosAsesoradosRequest();
+            inValue.idAsesor = idAsesor;
+            LP2Soft.CursosWS.listarCursosAsesoradosResponse retVal = ((LP2Soft.CursosWS.CursosWS)(this)).listarCursosAsesorados(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.CursosWS.listarCursosAsesoradosResponse> LP2Soft.CursosWS.CursosWS.listarCursosAsesoradosAsync(LP2Soft.CursosWS.listarCursosAsesoradosRequest request) {
+            return base.Channel.listarCursosAsesoradosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.CursosWS.listarCursosAsesoradosResponse> listarCursosAsesoradosAsync(int idAsesor) {
+            LP2Soft.CursosWS.listarCursosAsesoradosRequest inValue = new LP2Soft.CursosWS.listarCursosAsesoradosRequest();
+            inValue.idAsesor = idAsesor;
+            return ((LP2Soft.CursosWS.CursosWS)(this)).listarCursosAsesoradosAsync(inValue);
         }
     }
 }

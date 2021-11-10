@@ -121,6 +121,7 @@ namespace LP2Soft.Cursos
             this.button7.TabIndex = 27;
             this.button7.Text = "Ciclo 10";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // btnCiclo9
             // 
@@ -130,6 +131,7 @@ namespace LP2Soft.Cursos
             this.btnCiclo9.TabIndex = 26;
             this.btnCiclo9.Text = "Ciclo 9";
             this.btnCiclo9.UseVisualStyleBackColor = true;
+            this.btnCiclo9.Click += new System.EventHandler(this.btnCiclo9_Click);
             // 
             // btnCiclo8
             // 
@@ -139,6 +141,7 @@ namespace LP2Soft.Cursos
             this.btnCiclo8.TabIndex = 25;
             this.btnCiclo8.Text = "Ciclo 8";
             this.btnCiclo8.UseVisualStyleBackColor = true;
+            this.btnCiclo8.Click += new System.EventHandler(this.btnCiclo8_Click);
             // 
             // btnCiclo7
             // 
@@ -148,6 +151,7 @@ namespace LP2Soft.Cursos
             this.btnCiclo7.TabIndex = 24;
             this.btnCiclo7.Text = "Ciclo 7";
             this.btnCiclo7.UseVisualStyleBackColor = true;
+            this.btnCiclo7.Click += new System.EventHandler(this.btnCiclo7_Click_1);
             // 
             // btnCiclo6
             // 
@@ -157,6 +161,7 @@ namespace LP2Soft.Cursos
             this.btnCiclo6.TabIndex = 23;
             this.btnCiclo6.Text = "Ciclo 6";
             this.btnCiclo6.UseVisualStyleBackColor = true;
+            this.btnCiclo6.Click += new System.EventHandler(this.btnCiclo6_Click);
             // 
             // btnCiclo4
             // 
@@ -166,6 +171,7 @@ namespace LP2Soft.Cursos
             this.btnCiclo4.TabIndex = 22;
             this.btnCiclo4.Text = "Ciclo 4";
             this.btnCiclo4.UseVisualStyleBackColor = true;
+            this.btnCiclo4.Click += new System.EventHandler(this.btnCiclo4_Click);
             // 
             // btnCiclo3
             // 
@@ -175,6 +181,7 @@ namespace LP2Soft.Cursos
             this.btnCiclo3.TabIndex = 21;
             this.btnCiclo3.Text = "Ciclo 3";
             this.btnCiclo3.UseVisualStyleBackColor = true;
+            this.btnCiclo3.Click += new System.EventHandler(this.btnCiclo3_Click);
             // 
             // pBLP1CorazonVacio
             // 
@@ -327,6 +334,7 @@ namespace LP2Soft.Cursos
             this.btnCiclo5.TabIndex = 7;
             this.btnCiclo5.Text = "Ciclo 5";
             this.btnCiclo5.UseVisualStyleBackColor = true;
+            this.btnCiclo5.Click += new System.EventHandler(this.btnCiclo5_Click);
             // 
             // btnCiclo1
             // 
@@ -336,6 +344,7 @@ namespace LP2Soft.Cursos
             this.btnCiclo1.TabIndex = 6;
             this.btnCiclo1.Text = "Ciclo 1";
             this.btnCiclo1.UseVisualStyleBackColor = true;
+            this.btnCiclo1.Click += new System.EventHandler(this.btnCiclo1_Click);
             // 
             // btnLP2
             // 
@@ -440,14 +449,14 @@ namespace LP2Soft.Cursos
             this.panel2.Size = new System.Drawing.Size(807, 466);
             this.panel2.TabIndex = 24;
             // 
-            // frmCursosHome
+            // frmCursos_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 466);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCursosHome";
+            this.Name = "frmCursos_Home";
             this.Text = "frmCursosHome";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

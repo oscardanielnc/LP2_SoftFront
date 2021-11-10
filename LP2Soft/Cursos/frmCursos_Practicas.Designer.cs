@@ -100,6 +100,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.pBLP2Practica2Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2Practica2Descargar.TabIndex = 27;
             this.pBLP2Practica2Descargar.TabStop = false;
+            this.pBLP2Practica2Descargar.Visible = false;
             this.pBLP2Practica2Descargar.Click += new System.EventHandler(this.pBLP2Practica2Descargar_Click);
             // 
             // pBLP2Practica3Descargar
@@ -111,6 +112,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.pBLP2Practica3Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2Practica3Descargar.TabIndex = 26;
             this.pBLP2Practica3Descargar.TabStop = false;
+            this.pBLP2Practica3Descargar.Visible = false;
             this.pBLP2Practica3Descargar.Click += new System.EventHandler(this.pBLP2Practica3Descargar_Click);
             // 
             // pBLP2Practica4Descargar
@@ -122,6 +124,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.pBLP2Practica4Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2Practica4Descargar.TabIndex = 25;
             this.pBLP2Practica4Descargar.TabStop = false;
+            this.pBLP2Practica4Descargar.Visible = false;
             this.pBLP2Practica4Descargar.Click += new System.EventHandler(this.pBLP2Practica4Descargar_Click);
             // 
             // pBLP2Practica1Descargar
@@ -133,6 +136,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.pBLP2Practica1Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2Practica1Descargar.TabIndex = 24;
             this.pBLP2Practica1Descargar.TabStop = false;
+            this.pBLP2Practica1Descargar.Visible = false;
             this.pBLP2Practica1Descargar.Click += new System.EventHandler(this.pBLP2Practica1Descargar_Click);
             // 
             // btnLP2Practicas4
@@ -144,6 +148,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.btnLP2Practicas4.Text = "      Práctica 4";
             this.btnLP2Practicas4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Practicas4.UseVisualStyleBackColor = true;
+            this.btnLP2Practicas4.Visible = false;
             // 
             // btnLP2Practicas3
             // 
@@ -154,6 +159,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.btnLP2Practicas3.Text = "      Práctica 3";
             this.btnLP2Practicas3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Practicas3.UseVisualStyleBackColor = true;
+            this.btnLP2Practicas3.Visible = false;
             // 
             // btnLP2Practicas2
             // 
@@ -164,6 +170,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.btnLP2Practicas2.Text = "      Práctica 2";
             this.btnLP2Practicas2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Practicas2.UseVisualStyleBackColor = true;
+            this.btnLP2Practicas2.Visible = false;
             this.btnLP2Practicas2.Click += new System.EventHandler(this.btnLP2Practicas2_Click);
             // 
             // btnLP2Practicas1
@@ -175,6 +182,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.btnLP2Practicas1.Text = "       Práctica 1";
             this.btnLP2Practicas1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Practicas1.UseVisualStyleBackColor = true;
+            this.btnLP2Practicas1.Visible = false;
             // 
             // btnPracticasCiclo7
             // 
@@ -242,7 +250,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.panel4.Size = new System.Drawing.Size(823, 505);
             this.panel4.TabIndex = 25;
             // 
-            // frmPracticas
+            // frmCursos_Practicas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -250,7 +258,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.ClientSize = new System.Drawing.Size(823, 505);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPracticas";
+            this.Name = "frmCursos_Practicas";
             this.Text = "Practicas";
             this.panelLP2Practicas.ResumeLayout(false);
             this.panelLP2Practicas.PerformLayout();

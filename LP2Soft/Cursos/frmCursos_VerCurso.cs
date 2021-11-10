@@ -1,5 +1,6 @@
 ﻿using LP2Soft.Cursos.Ciclo7.LP2.Practicas;
 using LP2Soft.Home;
+using LP2Soft.Tarjetas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
     {
         private CursosWS.CursosWSClient _daoCurso;
         private CursosWS.curso _cursoVer;
-        int _idUsuario;
+        int AuxNivel;
         public frmCursos_VerCurso()
         {
             InitializeComponent();
@@ -27,7 +28,8 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             InitializeComponent();
             lblLP2NombreCurso.Text = _cursoVer.nombre;
             btnLP2LP2.Text = _cursoVer.nombre;
-            btnLP2Ciclo7.Text = "Ciclo : " + _cursoVer.nivel.ToString();
+            AuxNivel = _cursoVer.nivel;
+            btnLP2Ciclo7.Text = "Ciclo " + _cursoVer.nivel.ToString();
             lblLP2Descripcion.Text = "Código     : " + _cursoVer.codigo +
                                      "\nCréditos   : " + _cursoVer.creditos +
                                      "\nCarrera    : " + _cursoVer.especialidad +
@@ -46,7 +48,61 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
                 }
                 lblLP2Descripcion.Text = lblLP2Descripcion.Text.TrimEnd(',');
             }
+                        
+            tipoMaterial(_cursoVer);
+        }
 
+        private void tipoMaterial(CursosWS.curso _cursoVer) {
+            int i = 0;
+            if (_cursoVer.cantPc > 0) 
+            {
+                tarjTipoMaterial tTipoMaterial = new tarjTipoMaterial(0, _cursoVer);
+                tTipoMaterial.TopLevel = false;
+                tTipoMaterial.Location = generarCoordenadas(i);
+                panel1.Controls.Add(tTipoMaterial);
+                panel1.Controls.SetChildIndex(tTipoMaterial, 0);
+                tTipoMaterial.Visible = true;
+                i++;
+            }
+
+            if (_cursoVer.cantLab > 0)
+            {
+                tarjTipoMaterial tTipoMaterial = new tarjTipoMaterial(1, _cursoVer);
+                tTipoMaterial.TopLevel = false;
+                tTipoMaterial.Location = generarCoordenadas(i);
+                panel1.Controls.Add(tTipoMaterial);
+                panel1.Controls.SetChildIndex(tTipoMaterial, 0);
+                tTipoMaterial.Visible = true;
+                i++;
+            }
+
+            if (_cursoVer.cantTA > 0)
+            {
+                tarjTipoMaterial tTipoMaterial = new tarjTipoMaterial(2, _cursoVer);
+                tTipoMaterial.TopLevel = false;
+                tTipoMaterial.Location = generarCoordenadas(i);
+                panel1.Controls.Add(tTipoMaterial);
+                panel1.Controls.SetChildIndex(tTipoMaterial, 0);
+                tTipoMaterial.Visible = true;
+                i++;
+            }
+
+            if (_cursoVer.cantEx > 0)
+            {
+                tarjTipoMaterial tTipoMaterial = new tarjTipoMaterial(3, _cursoVer);
+                tTipoMaterial.TopLevel = false;
+                tTipoMaterial.Location = generarCoordenadas(i);
+                panel1.Controls.Add(tTipoMaterial);
+                panel1.Controls.SetChildIndex(tTipoMaterial, 0);
+                tTipoMaterial.Visible = true;
+                i++;
+            }
+        }
+        private Point generarCoordenadas(int i)
+        {
+            int x = 0;
+            int y = (i) * 40;
+            return new Point(x, y);
         }
         private void verCurso(object sender, EventArgs e, int idCurso)
         {
@@ -59,10 +115,8 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         }
         private void btnLP2Ciclo7_Click(object sender, EventArgs e)
         {
-            frmCursos_Ciclo ciclo7 = new frmCursos_Ciclo();
-            //ciclo7.ShowDialog();
-            //this.Close();
-            addPanel(ciclo7);
+            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(AuxNivel);
+            addPanel(frmCursos_Ciclo);
         }
         
         private void btnLP2Material_Click(object sender, EventArgs e)

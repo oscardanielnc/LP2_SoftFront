@@ -46,9 +46,9 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.btbCargarDocs = new System.Windows.Forms.Button();
             this.lblProfesorMsj = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboProfesores = new System.Windows.Forms.ComboBox();
+            this.cboCiclo = new System.Windows.Forms.ComboBox();
+            this.cboSemestre = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flpCargarMaterial.SuspendLayout();
             this.SuspendLayout();
@@ -219,29 +219,48 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 18;
             // 
-            // comboBox1
+            // cboProfesores
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(139, 120);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 21);
-            this.comboBox1.TabIndex = 19;
+            this.cboProfesores.FormattingEnabled = true;
+            this.cboProfesores.Items.AddRange(new object[] {
+            "       "});
+            this.cboProfesores.Location = new System.Drawing.Point(139, 120);
+            this.cboProfesores.Name = "cboProfesores";
+            this.cboProfesores.Size = new System.Drawing.Size(228, 21);
+            this.cboProfesores.TabIndex = 19;
             // 
-            // comboBox2
+            // cboCiclo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(283, 81);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(84, 21);
-            this.comboBox2.TabIndex = 20;
+            this.cboCiclo.FormattingEnabled = true;
+            this.cboCiclo.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2"});
+            this.cboCiclo.Location = new System.Drawing.Point(283, 81);
+            this.cboCiclo.Name = "cboCiclo";
+            this.cboCiclo.Size = new System.Drawing.Size(84, 21);
+            this.cboCiclo.TabIndex = 20;
             // 
-            // comboBox3
+            // cboSemestre
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(139, 80);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(79, 21);
-            this.comboBox3.TabIndex = 21;
+            this.cboSemestre.FormattingEnabled = true;
+            this.cboSemestre.Items.AddRange(new object[] {
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010"});
+            this.cboSemestre.Location = new System.Drawing.Point(139, 80);
+            this.cboSemestre.Name = "cboSemestre";
+            this.cboSemestre.Size = new System.Drawing.Size(79, 21);
+            this.cboSemestre.TabIndex = 21;
             // 
             // label1
             // 
@@ -259,9 +278,9 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 375);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboSemestre);
+            this.Controls.Add(this.cboCiclo);
+            this.Controls.Add(this.cboProfesores);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblProfesorMsj);
             this.Controls.Add(this.flpCargarMaterial);
@@ -305,9 +324,9 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.Button btbCargarDocs;
         private System.Windows.Forms.Label lblProfesorMsj;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cboProfesores;
+        private System.Windows.Forms.ComboBox cboCiclo;
+        private System.Windows.Forms.ComboBox cboSemestre;
         private System.Windows.Forms.Label label1;
     }
 }

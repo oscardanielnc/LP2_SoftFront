@@ -51,7 +51,7 @@ namespace LP2Soft.Perfil
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
-            this.lblInfo.Location = new System.Drawing.Point(57, 44);
+            this.lblInfo.Location = new System.Drawing.Point(58, 44);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(137, 13);
             this.lblInfo.TabIndex = 1;
@@ -60,9 +60,9 @@ namespace LP2Soft.Perfil
             // panelAmigos
             // 
             this.panelAmigos.AutoSize = true;
-            this.panelAmigos.Location = new System.Drawing.Point(60, 69);
+            this.panelAmigos.Location = new System.Drawing.Point(61, 69);
             this.panelAmigos.Name = "panelAmigos";
-            this.panelAmigos.Size = new System.Drawing.Size(680, 163);
+            this.panelAmigos.Size = new System.Drawing.Size(680, 234);
             this.panelAmigos.TabIndex = 5;
             // 
             // btnBuscar
@@ -81,8 +81,9 @@ namespace LP2Soft.Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(799, 315);
+            this.ClientSize = new System.Drawing.Size(804, 315);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panelAmigos);
             this.Controls.Add(this.lblInfo);

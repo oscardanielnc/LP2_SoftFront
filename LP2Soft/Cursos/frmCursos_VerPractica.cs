@@ -15,38 +15,52 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
 {
     public partial class frmCursos_VerPractica : Form
     {
+        private CursosWS.curso _cursoVer;
+        private int tipo;
+        private String[] tipoMaterial = new String[] { "Practica", "Laboratorio", "Tarea Academica", "Examenes" };
         public frmCursos_VerPractica()
         {
             InitializeComponent();
         }
 
+        public frmCursos_VerPractica(CursosWS.curso curso, int auxTipo, int indice)
+        {
+            InitializeComponent();
+            _cursoVer = curso;
+            tipo = auxTipo;
+            btnLP2Practica2Ciclo7.Text = "Ciclo " + curso.nivel;
+            btnLP2Practica2LP2.Text = curso.nombre;
+            btnLLP2Practica2Practicas.Text = tipoMaterial[auxTipo];
+            btnLLP2Practica2Practica2.Text = tipoMaterial[auxTipo] +" "+ indice;
+        }
+
         private void btnLP2Practica2Material_Click(object sender, EventArgs e)
         {
-            frmCursos_Home cursosHome = new frmCursos_Home();
+            frmCursos_Home cursosHome = new frmCursos_Home(20186013);
             addPanel(cursosHome);
         }
 
         private void btnLP2Practica2Ciclo7_Click(object sender, EventArgs e)
         {
-            frmCursos_Ciclo ciclo7 = new frmCursos_Ciclo();
+            frmCursos_Ciclo ciclo7 = new frmCursos_Ciclo(_cursoVer.nivel);
             addPanel(ciclo7);
         }
 
         private void btnLP2Practica2LP2_Click(object sender, EventArgs e)
         {
-            frmCursos_VerCurso ciclo7LP2 = new frmCursos_VerCurso();
+            frmCursos_VerCurso ciclo7LP2 = new frmCursos_VerCurso(_cursoVer);
             addPanel(ciclo7LP2);
         }
 
         private void btnLLP2Practica2Practicas_Click(object sender, EventArgs e)
         {
-            frmCursos_Practicas practicas = new frmCursos_Practicas();
+            frmCursos_Practicas practicas = new frmCursos_Practicas(_cursoVer, tipo);
             addPanel(practicas);
         }
 
         private void btnLLP2Practica2AgregarMaterial_Click(object sender, EventArgs e)
         {
-            frmAgregarMaterial agregarMaterial = new frmAgregarMaterial();
+            frmAgregarMaterial agregarMaterial = new frmAgregarMaterial(_cursoVer);
             agregarMaterial.ShowDialog();
         }
 

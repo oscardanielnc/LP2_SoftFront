@@ -124,6 +124,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargasExtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargasExtras.TabIndex = 39;
             this.pBLP2DescargasExtras.TabStop = false;
+            this.pBLP2DescargasExtras.Visible = false;
             this.pBLP2DescargasExtras.Click += new System.EventHandler(this.pBLP2DescargasExtras_Click);
             // 
             // pBLP2DescargarLibros
@@ -135,6 +136,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarLibros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarLibros.TabIndex = 38;
             this.pBLP2DescargarLibros.TabStop = false;
+            this.pBLP2DescargarLibros.Visible = false;
             this.pBLP2DescargarLibros.Click += new System.EventHandler(this.pBLP2DescargarLibros_Click);
             // 
             // pBLP2DescargarFinales
@@ -146,6 +148,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarFinales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarFinales.TabIndex = 37;
             this.pBLP2DescargarFinales.TabStop = false;
+            this.pBLP2DescargarFinales.Visible = false;
             this.pBLP2DescargarFinales.Click += new System.EventHandler(this.pBLP2DescargarFinales_Click);
             // 
             // pBLP2DescargarParciales
@@ -157,6 +160,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarParciales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarParciales.TabIndex = 36;
             this.pBLP2DescargarParciales.TabStop = false;
+            this.pBLP2DescargarParciales.Visible = false;
             this.pBLP2DescargarParciales.Click += new System.EventHandler(this.pBLP2DescargarParciales_Click);
             // 
             // pBLP2DescargarPcs
@@ -168,6 +172,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarPcs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarPcs.TabIndex = 35;
             this.pBLP2DescargarPcs.TabStop = false;
+            this.pBLP2DescargarPcs.Visible = false;
             this.pBLP2DescargarPcs.Click += new System.EventHandler(this.pBLP2DescargarPcs_Click);
             // 
             // pBLP2DescargarLabs
@@ -179,6 +184,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarLabs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarLabs.TabIndex = 34;
             this.pBLP2DescargarLabs.TabStop = false;
+            this.pBLP2DescargarLabs.Visible = false;
             this.pBLP2DescargarLabs.Click += new System.EventHandler(this.pBLP2DescargarLabs_Click);
             // 
             // btnLP2Extras
@@ -190,6 +196,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Extras.Text = "Extras";
             this.btnLP2Extras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Extras.UseVisualStyleBackColor = true;
+            this.btnLP2Extras.Visible = false;
             // 
             // btnLP2Libros
             // 
@@ -200,6 +207,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Libros.Text = "Libros";
             this.btnLP2Libros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Libros.UseVisualStyleBackColor = true;
+            this.btnLP2Libros.Visible = false;
             // 
             // btnLP2Finales
             // 
@@ -210,6 +218,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Finales.Text = "Finales";
             this.btnLP2Finales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Finales.UseVisualStyleBackColor = true;
+            this.btnLP2Finales.Visible = false;
             // 
             // btnLP2Parciales
             // 
@@ -220,6 +229,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Parciales.Text = "Parciales";
             this.btnLP2Parciales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Parciales.UseVisualStyleBackColor = true;
+            this.btnLP2Parciales.Visible = false;
             // 
             // btnLP2Practicas
             // 
@@ -230,6 +240,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Practicas.Text = "Prácticas";
             this.btnLP2Practicas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Practicas.UseVisualStyleBackColor = true;
+            this.btnLP2Practicas.Visible = false;
             this.btnLP2Practicas.Click += new System.EventHandler(this.btnLP2Practicas_Click);
             // 
             // btnLP2Laboratorios
@@ -241,6 +252,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2Laboratorios.Text = "Laboratorios";
             this.btnLP2Laboratorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLP2Laboratorios.UseVisualStyleBackColor = true;
+            this.btnLP2Laboratorios.Visible = false;
             // 
             // btnLP2Material
             // 

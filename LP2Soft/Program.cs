@@ -1,4 +1,5 @@
-﻿using LP2Soft.Cursos;
+﻿using LP2Soft.CalculadorNotas;
+using LP2Soft.Cursos;
 using LP2Soft.Cursos.Ciclo7;
 using LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2;
 using LP2Soft.Eventos;
@@ -22,6 +23,7 @@ namespace LP2Soft
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmPrincipal());
+            /*Application.Run(new frmCalculadorNotas());*/
         }
     }
 }

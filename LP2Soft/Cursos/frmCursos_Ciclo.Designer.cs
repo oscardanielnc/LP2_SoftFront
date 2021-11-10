@@ -32,11 +32,11 @@ namespace LP2Soft.Cursos.Ciclo7
             this.btnCiclo7Material = new System.Windows.Forms.Button();
             this.lblCiclo7NotaInformativa = new System.Windows.Forms.Label();
             this.btnCiclo7 = new System.Windows.Forms.Button();
-            this.btnCiclo7LP2 = new System.Windows.Forms.Button();
             this.btnCiclo7Sis2 = new System.Windows.Forms.Button();
             this.panelCiclo7 = new System.Windows.Forms.Panel();
             this.pBCiclo7Sis2Descargar = new System.Windows.Forms.PictureBox();
             this.pBCiclo7LP2Descargar = new System.Windows.Forms.PictureBox();
+            this.btnCiclo7LP2 = new System.Windows.Forms.Button();
             this.pictureCiclo7Referencia1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelCiclo7.SuspendLayout();
@@ -75,17 +75,6 @@ namespace LP2Soft.Cursos.Ciclo7
             this.btnCiclo7.Text = "Ciclo 7";
             this.btnCiclo7.UseVisualStyleBackColor = true;
             // 
-            // btnCiclo7LP2
-            // 
-            this.btnCiclo7LP2.Location = new System.Drawing.Point(0, 0);
-            this.btnCiclo7LP2.Name = "btnCiclo7LP2";
-            this.btnCiclo7LP2.Size = new System.Drawing.Size(783, 34);
-            this.btnCiclo7LP2.TabIndex = 8;
-            this.btnCiclo7LP2.Text = "       Lenguaje de Programación 2";
-            this.btnCiclo7LP2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCiclo7LP2.UseVisualStyleBackColor = true;
-            this.btnCiclo7LP2.Click += new System.EventHandler(this.btnCiclo7LP2_Click);
-            // 
             // btnCiclo7Sis2
             // 
             this.btnCiclo7Sis2.Location = new System.Drawing.Point(0, 40);
@@ -95,9 +84,11 @@ namespace LP2Soft.Cursos.Ciclo7
             this.btnCiclo7Sis2.Text = "       Sistemas de Información 2";
             this.btnCiclo7Sis2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCiclo7Sis2.UseVisualStyleBackColor = true;
+            this.btnCiclo7Sis2.Visible = false;
             // 
             // panelCiclo7
             // 
+            this.panelCiclo7.AutoScroll = true;
             this.panelCiclo7.Controls.Add(this.pBCiclo7Sis2Descargar);
             this.panelCiclo7.Controls.Add(this.pBCiclo7LP2Descargar);
             this.panelCiclo7.Controls.Add(this.btnCiclo7Sis2);
@@ -129,6 +120,18 @@ namespace LP2Soft.Cursos.Ciclo7
             this.pBCiclo7LP2Descargar.TabStop = false;
             this.pBCiclo7LP2Descargar.Click += new System.EventHandler(this.pBCiclo7LP2Descargar_Click);
             // 
+            // btnCiclo7LP2
+            // 
+            this.btnCiclo7LP2.Location = new System.Drawing.Point(0, 0);
+            this.btnCiclo7LP2.Name = "btnCiclo7LP2";
+            this.btnCiclo7LP2.Size = new System.Drawing.Size(783, 34);
+            this.btnCiclo7LP2.TabIndex = 8;
+            this.btnCiclo7LP2.Text = "       Lenguaje de Programación 2";
+            this.btnCiclo7LP2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCiclo7LP2.UseVisualStyleBackColor = true;
+            this.btnCiclo7LP2.Visible = false;
+            this.btnCiclo7LP2.Click += new System.EventHandler(this.btnCiclo7LP2_Click);
+            // 
             // pictureCiclo7Referencia1
             // 
             this.pictureCiclo7Referencia1.Image = global::LP2Soft.Properties.Resources.chevrons_right_regular_24;
@@ -153,14 +156,14 @@ namespace LP2Soft.Cursos.Ciclo7
             this.panel4.Size = new System.Drawing.Size(823, 505);
             this.panel4.TabIndex = 17;
             // 
-            // frmCiclo7
+            // frmCursos_Ciclo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 505);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCiclo7";
+            this.Name = "frmCursos_Ciclo";
             this.Text = " frmCiclo7";
             this.panelCiclo7.ResumeLayout(false);
             this.panelCiclo7.PerformLayout();
@@ -179,11 +182,11 @@ namespace LP2Soft.Cursos.Ciclo7
         private System.Windows.Forms.Label lblCiclo7NotaInformativa;
         private System.Windows.Forms.PictureBox pictureCiclo7Referencia1;
         private System.Windows.Forms.Button btnCiclo7;
-        private System.Windows.Forms.Button btnCiclo7LP2;
         private System.Windows.Forms.Button btnCiclo7Sis2;
         private System.Windows.Forms.Panel panelCiclo7;
         private System.Windows.Forms.PictureBox pBCiclo7Sis2Descargar;
         private System.Windows.Forms.PictureBox pBCiclo7LP2Descargar;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnCiclo7LP2;
     }
 }
