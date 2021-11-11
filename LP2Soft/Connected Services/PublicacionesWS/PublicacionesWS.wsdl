@@ -5,11 +5,23 @@
       <xsd:import schemaLocation="http://localhost:8080/LP2Soft_WebServices/PublicacionesWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarMisEventos">
-    <part name="parameters" element="tns:listarMisEventos" />
+  <message name="eliminarComentario">
+    <part name="parameters" element="tns:eliminarComentario" />
   </message>
-  <message name="listarMisEventosResponse">
-    <part name="parameters" element="tns:listarMisEventosResponse" />
+  <message name="eliminarComentarioResponse">
+    <part name="parameters" element="tns:eliminarComentarioResponse" />
+  </message>
+  <message name="listarComentarios">
+    <part name="parameters" element="tns:listarComentarios" />
+  </message>
+  <message name="listarComentariosResponse">
+    <part name="parameters" element="tns:listarComentariosResponse" />
+  </message>
+  <message name="insertarComentario">
+    <part name="parameters" element="tns:insertarComentario" />
+  </message>
+  <message name="insertarComentarioResponse">
+    <part name="parameters" element="tns:insertarComentarioResponse" />
   </message>
   <message name="insertarPost">
     <part name="parameters" element="tns:insertarPost" />
@@ -17,11 +29,11 @@
   <message name="insertarPostResponse">
     <part name="parameters" element="tns:insertarPostResponse" />
   </message>
-  <message name="modificarPost">
-    <part name="parameters" element="tns:modificarPost" />
+  <message name="listarPost">
+    <part name="parameters" element="tns:listarPost" />
   </message>
-  <message name="modificarPostResponse">
-    <part name="parameters" element="tns:modificarPostResponse" />
+  <message name="listarPostResponse">
+    <part name="parameters" element="tns:listarPostResponse" />
   </message>
   <message name="eliminarPost">
     <part name="parameters" element="tns:eliminarPost" />
@@ -29,11 +41,11 @@
   <message name="eliminarPostResponse">
     <part name="parameters" element="tns:eliminarPostResponse" />
   </message>
-  <message name="listarPost">
-    <part name="parameters" element="tns:listarPost" />
+  <message name="insertarEvento">
+    <part name="parameters" element="tns:insertarEvento" />
   </message>
-  <message name="listarPostResponse">
-    <part name="parameters" element="tns:listarPostResponse" />
+  <message name="insertarEventoResponse">
+    <part name="parameters" element="tns:insertarEventoResponse" />
   </message>
   <message name="aumentarLikes">
     <part name="parameters" element="tns:aumentarLikes" />
@@ -47,50 +59,46 @@
   <message name="disminuirLikesResponse">
     <part name="parameters" element="tns:disminuirLikesResponse" />
   </message>
-  <message name="insertarEvento">
-    <part name="parameters" element="tns:insertarEvento" />
+  <message name="listarMisEventos">
+    <part name="parameters" element="tns:listarMisEventos" />
   </message>
-  <message name="insertarEventoResponse">
-    <part name="parameters" element="tns:insertarEventoResponse" />
+  <message name="listarMisEventosResponse">
+    <part name="parameters" element="tns:listarMisEventosResponse" />
   </message>
-  <message name="eliminarComentario">
-    <part name="parameters" element="tns:eliminarComentario" />
+  <message name="modificarPost">
+    <part name="parameters" element="tns:modificarPost" />
   </message>
-  <message name="eliminarComentarioResponse">
-    <part name="parameters" element="tns:eliminarComentarioResponse" />
-  </message>
-  <message name="insertarComentario">
-    <part name="parameters" element="tns:insertarComentario" />
-  </message>
-  <message name="insertarComentarioResponse">
-    <part name="parameters" element="tns:insertarComentarioResponse" />
-  </message>
-  <message name="listarComentarios">
-    <part name="parameters" element="tns:listarComentarios" />
-  </message>
-  <message name="listarComentariosResponse">
-    <part name="parameters" element="tns:listarComentariosResponse" />
+  <message name="modificarPostResponse">
+    <part name="parameters" element="tns:modificarPostResponse" />
   </message>
   <portType name="PublicacionesWS">
-    <operation name="listarMisEventos">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosRequest" message="tns:listarMisEventos" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosResponse" message="tns:listarMisEventosResponse" />
+    <operation name="eliminarComentario">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioRequest" message="tns:eliminarComentario" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioResponse" message="tns:eliminarComentarioResponse" />
+    </operation>
+    <operation name="listarComentarios">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosRequest" message="tns:listarComentarios" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosResponse" message="tns:listarComentariosResponse" />
+    </operation>
+    <operation name="insertarComentario">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioRequest" message="tns:insertarComentario" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioResponse" message="tns:insertarComentarioResponse" />
     </operation>
     <operation name="insertarPost">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostRequest" message="tns:insertarPost" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostResponse" message="tns:insertarPostResponse" />
     </operation>
-    <operation name="modificarPost">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostRequest" message="tns:modificarPost" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostResponse" message="tns:modificarPostResponse" />
+    <operation name="listarPost">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostRequest" message="tns:listarPost" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostResponse" message="tns:listarPostResponse" />
     </operation>
     <operation name="eliminarPost">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostRequest" message="tns:eliminarPost" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostResponse" message="tns:eliminarPostResponse" />
     </operation>
-    <operation name="listarPost">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostRequest" message="tns:listarPost" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostResponse" message="tns:listarPostResponse" />
+    <operation name="insertarEvento">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarEventoRequest" message="tns:insertarEvento" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
     </operation>
     <operation name="aumentarLikes">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/aumentarLikesRequest" message="tns:aumentarLikes" />
@@ -100,26 +108,36 @@
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesRequest" message="tns:disminuirLikes" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesResponse" message="tns:disminuirLikesResponse" />
     </operation>
-    <operation name="insertarEvento">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarEventoRequest" message="tns:insertarEvento" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
+    <operation name="listarMisEventos">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosRequest" message="tns:listarMisEventos" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosResponse" message="tns:listarMisEventosResponse" />
     </operation>
-    <operation name="eliminarComentario">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioRequest" message="tns:eliminarComentario" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioResponse" message="tns:eliminarComentarioResponse" />
-    </operation>
-    <operation name="insertarComentario">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioRequest" message="tns:insertarComentario" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioResponse" message="tns:insertarComentarioResponse" />
-    </operation>
-    <operation name="listarComentarios">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosRequest" message="tns:listarComentarios" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosResponse" message="tns:listarComentariosResponse" />
+    <operation name="modificarPost">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostRequest" message="tns:modificarPost" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostResponse" message="tns:modificarPostResponse" />
     </operation>
   </portType>
   <binding name="PublicacionesWSPortBinding" type="tns:PublicacionesWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarMisEventos">
+    <operation name="eliminarComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarComentarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarComentario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -137,7 +155,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarPost">
+    <operation name="listarPost">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -155,7 +173,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPost">
+    <operation name="insertarEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -182,7 +200,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarEvento">
+    <operation name="listarMisEventos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -191,25 +209,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarComentario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarComentario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarComentarios">
+    <operation name="modificarPost">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

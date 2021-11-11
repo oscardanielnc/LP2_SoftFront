@@ -181,7 +181,7 @@ namespace LP2Soft.Perfil
                 inicializarColorBotones();
                 btnResenias.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Resenias;
-                abrirFormulario(new frmPerfil_Resenias());
+                abrirFormulario(new frmPerfil_Resenias(_usuario));
             }
         }
 
