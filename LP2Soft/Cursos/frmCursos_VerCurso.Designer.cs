@@ -50,18 +50,11 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.btnLP2LP2 = new System.Windows.Forms.Button();
             this.pictureLP2Referencia2 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Referencia1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnComentar1 = new System.Windows.Forms.Button();
-            this.btnLike1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.lblFechaPubli1 = new System.Windows.Forms.Label();
-            this.lblNombreRecomendado1 = new System.Windows.Forms.Label();
-            this.pictureFotoAsesor1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelCursosrequeridos = new System.Windows.Forms.Panel();
+            this.panelCrearPublicacion = new System.Windows.Forms.Panel();
+            this.lblCrearPublicación = new System.Windows.Forms.Label();
+            this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.panelPublicacionesGenerales = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargasExtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLibros)).BeginInit();
@@ -71,10 +64,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLabs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia1)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFotoAsesor1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panelCrearPublicacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLP2Descripcion
@@ -303,115 +295,11 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pictureLP2Referencia1.TabIndex = 9;
             this.pictureLP2Referencia1.TabStop = false;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel3.Controls.Add(this.btnComentar1);
-            this.panel3.Controls.Add(this.btnLike1);
-            this.panel3.Controls.Add(this.richTextBox1);
-            this.panel3.Controls.Add(this.lblFechaPubli1);
-            this.panel3.Controls.Add(this.lblNombreRecomendado1);
-            this.panel3.Controls.Add(this.pictureFotoAsesor1);
-            this.panel3.Location = new System.Drawing.Point(32, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(511, 213);
-            this.panel3.TabIndex = 17;
-            // 
-            // btnComentar1
-            // 
-            this.btnComentar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComentar1.Location = new System.Drawing.Point(300, 142);
-            this.btnComentar1.Name = "btnComentar1";
-            this.btnComentar1.Size = new System.Drawing.Size(112, 23);
-            this.btnComentar1.TabIndex = 24;
-            this.btnComentar1.Text = "Comentar";
-            this.btnComentar1.UseVisualStyleBackColor = true;
-            // 
-            // btnLike1
-            // 
-            this.btnLike1.ForeColor = System.Drawing.Color.Black;
-            this.btnLike1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLike1.Location = new System.Drawing.Point(124, 142);
-            this.btnLike1.Name = "btnLike1";
-            this.btnLike1.Size = new System.Drawing.Size(112, 23);
-            this.btnLike1.TabIndex = 23;
-            this.btnLike1.Text = "Me Gusta";
-            this.btnLike1.UseVisualStyleBackColor = true;
-            this.btnLike1.Click += new System.EventHandler(this.btnLike1_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(6, 59);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(478, 65);
-            this.richTextBox1.TabIndex = 22;
-            this.richTextBox1.Text = "Ahora que los laboratorios individuales son cada 2 semanas, he subido todos mis l" +
-    "abs del ciclo pasado con nota 20 de 2021-2 , cualquier cosa que no entiendan com" +
-    "entan para apoyarlos, suerte!!\n";
-            // 
-            // lblFechaPubli1
-            // 
-            this.lblFechaPubli1.AutoSize = true;
-            this.lblFechaPubli1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaPubli1.Location = new System.Drawing.Point(52, 30);
-            this.lblFechaPubli1.Name = "lblFechaPubli1";
-            this.lblFechaPubli1.Size = new System.Drawing.Size(101, 13);
-            this.lblFechaPubli1.TabIndex = 20;
-            this.lblFechaPubli1.Text = "01/10/2021 - 10:53";
-            // 
-            // lblNombreRecomendado1
-            // 
-            this.lblNombreRecomendado1.AutoSize = true;
-            this.lblNombreRecomendado1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreRecomendado1.Location = new System.Drawing.Point(50, 9);
-            this.lblNombreRecomendado1.Name = "lblNombreRecomendado1";
-            this.lblNombreRecomendado1.Size = new System.Drawing.Size(117, 18);
-            this.lblNombreRecomendado1.TabIndex = 15;
-            this.lblNombreRecomendado1.Text = "Joel Gonzales";
-            // 
-            // pictureFotoAsesor1
-            // 
-            this.pictureFotoAsesor1.Image = global::LP2Soft.Properties.Resources.images;
-            this.pictureFotoAsesor1.Location = new System.Drawing.Point(6, 6);
-            this.pictureFotoAsesor1.Name = "pictureFotoAsesor1";
-            this.pictureFotoAsesor1.Size = new System.Drawing.Size(40, 40);
-            this.pictureFotoAsesor1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureFotoAsesor1.TabIndex = 20;
-            this.pictureFotoAsesor1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(4, 286);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(564, 216);
-            this.panel2.TabIndex = 18;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(34, 240);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(512, 40);
-            this.textBox1.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 215);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 25);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Escribir algún comentario:";
-            // 
             // panel4
             // 
             this.panel4.AutoScroll = true;
-            this.panel4.Controls.Add(this.panelCursosrequeridos);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panelPublicacionesGenerales);
+            this.panel4.Controls.Add(this.panelCrearPublicacion);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.lblLP2NombreCurso);
             this.panel4.Controls.Add(this.lblLP2Descripcion);
@@ -426,15 +314,44 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.panel4.Size = new System.Drawing.Size(823, 505);
             this.panel4.TabIndex = 22;
             // 
-            // panelCursosrequeridos
+            // panelCrearPublicacion
             // 
-            this.panelCursosrequeridos.AutoSize = true;
-            this.panelCursosrequeridos.Location = new System.Drawing.Point(242, 205);
-            this.panelCursosrequeridos.MaximumSize = new System.Drawing.Size(315, 60);
-            this.panelCursosrequeridos.MinimumSize = new System.Drawing.Size(315, 0);
-            this.panelCursosrequeridos.Name = "panelCursosrequeridos";
-            this.panelCursosrequeridos.Size = new System.Drawing.Size(315, 0);
-            this.panelCursosrequeridos.TabIndex = 19;
+            this.panelCrearPublicacion.BackColor = System.Drawing.Color.White;
+            this.panelCrearPublicacion.Controls.Add(this.lblCrearPublicación);
+            this.panelCrearPublicacion.Controls.Add(this.pbPerfil);
+            this.panelCrearPublicacion.Location = new System.Drawing.Point(142, 223);
+            this.panelCrearPublicacion.Name = "panelCrearPublicacion";
+            this.panelCrearPublicacion.Size = new System.Drawing.Size(297, 57);
+            this.panelCrearPublicacion.TabIndex = 19;
+            // 
+            // lblCrearPublicación
+            // 
+            this.lblCrearPublicación.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCrearPublicación.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCrearPublicación.Location = new System.Drawing.Point(59, 17);
+            this.lblCrearPublicación.Name = "lblCrearPublicación";
+            this.lblCrearPublicación.Size = new System.Drawing.Size(223, 23);
+            this.lblCrearPublicación.TabIndex = 22;
+            this.lblCrearPublicación.Text = "Crear publicación";
+            this.lblCrearPublicación.Click += new System.EventHandler(this.lblCrearPublicación_Click);
+            // 
+            // pbPerfil
+            // 
+            this.pbPerfil.Image = global::LP2Soft.Properties.Resources.images;
+            this.pbPerfil.Location = new System.Drawing.Point(3, 6);
+            this.pbPerfil.Name = "pbPerfil";
+            this.pbPerfil.Size = new System.Drawing.Size(50, 46);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPerfil.TabIndex = 21;
+            this.pbPerfil.TabStop = false;
+            // 
+            // panelPublicacionesGenerales
+            // 
+            this.panelPublicacionesGenerales.AutoScroll = true;
+            this.panelPublicacionesGenerales.Location = new System.Drawing.Point(99, 310);
+            this.panelPublicacionesGenerales.Name = "panelPublicacionesGenerales";
+            this.panelPublicacionesGenerales.Size = new System.Drawing.Size(408, 372);
+            this.panelPublicacionesGenerales.TabIndex = 20;
             // 
             // frmCursos_VerCurso
             // 
@@ -456,12 +373,10 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLabs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Referencia1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFotoAsesor1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panelCrearPublicacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,17 +402,10 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private System.Windows.Forms.PictureBox pBLP2DescargarParciales;
         private System.Windows.Forms.PictureBox pBLP2DescargarPcs;
         private System.Windows.Forms.PictureBox pBLP2DescargarLabs;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnComentar1;
-        private System.Windows.Forms.Button btnLike1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label lblFechaPubli1;
-        private System.Windows.Forms.Label lblNombreRecomendado1;
-        private System.Windows.Forms.PictureBox pictureFotoAsesor1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panelCursosrequeridos;
+        private System.Windows.Forms.Panel panelCrearPublicacion;
+        private System.Windows.Forms.Label lblCrearPublicación;
+        private System.Windows.Forms.PictureBox pbPerfil;
+        private System.Windows.Forms.Panel panelPublicacionesGenerales;
     }
 }
