@@ -649,9 +649,6 @@
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarCursoProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarCursosAsesoradosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarProfesoresNombreResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

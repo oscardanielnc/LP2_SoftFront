@@ -16,6 +16,33 @@ namespace LP2Soft.PublicacionesWS {
     public interface PublicacionesWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.PublicacionesWS.listarMisEventosResponse listarMisEventos(LP2Soft.PublicacionesWS.listarMisEventosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosResponse")]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarMisEventosResponse> listarMisEventosAsync(LP2Soft.PublicacionesWS.listarMisEventosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.PublicacionesWS.listarXcursoResponse listarXcurso(LP2Soft.PublicacionesWS.listarXcursoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoResponse")]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarXcursoResponse> listarXcursoAsync(LP2Soft.PublicacionesWS.listarXcursoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.PublicacionesWS.insertarPostResponse insertarPost(LP2Soft.PublicacionesWS.insertarPostRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostResponse")]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertarPostResponse> insertarPostAsync(LP2Soft.PublicacionesWS.insertarPostRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -34,33 +61,6 @@ namespace LP2Soft.PublicacionesWS {
         System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarComentariosResponse> listarComentariosAsync(LP2Soft.PublicacionesWS.listarComentariosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Soft.PublicacionesWS.listarComentariosResponse listarComentarios(LP2Soft.PublicacionesWS.listarComentariosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosResponse")]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarComentariosResponse> listarComentariosAsync(LP2Soft.PublicacionesWS.listarComentariosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Soft.PublicacionesWS.eliminarComentarioResponse eliminarComentario(LP2Soft.PublicacionesWS.eliminarComentarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioResponse")]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.eliminarComentarioResponse> eliminarComentarioAsync(LP2Soft.PublicacionesWS.eliminarComentarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Soft.PublicacionesWS.eliminarPostResponse eliminarPost(LP2Soft.PublicacionesWS.eliminarPostRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostResponse")]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.eliminarPostResponse> eliminarPostAsync(LP2Soft.PublicacionesWS.eliminarPostRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -70,13 +70,22 @@ namespace LP2Soft.PublicacionesWS {
         System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarPostResponse> listarPostAsync(LP2Soft.PublicacionesWS.listarPostRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Soft.PublicacionesWS.insertar_MaterialResponse insertar_Material(LP2Soft.PublicacionesWS.insertar_MaterialRequest request);
+        LP2Soft.PublicacionesWS.modificarPostResponse modificarPost(LP2Soft.PublicacionesWS.modificarPostRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialResponse")]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertar_MaterialResponse> insertar_MaterialAsync(LP2Soft.PublicacionesWS.insertar_MaterialRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostResponse")]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.modificarPostResponse> modificarPostAsync(LP2Soft.PublicacionesWS.modificarPostRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.PublicacionesWS.eliminarPostResponse eliminarPost(LP2Soft.PublicacionesWS.eliminarPostRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostResponse")]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.eliminarPostResponse> eliminarPostAsync(LP2Soft.PublicacionesWS.eliminarPostRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesResponse")]
@@ -106,22 +115,22 @@ namespace LP2Soft.PublicacionesWS {
         System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.aumentarLikesResponse> aumentarLikesAsync(LP2Soft.PublicacionesWS.aumentarLikesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Soft.PublicacionesWS.listarMisEventosResponse listarMisEventos(LP2Soft.PublicacionesWS.listarMisEventosRequest request);
+        LP2Soft.PublicacionesWS.listarEventosResponse listarEventos(LP2Soft.PublicacionesWS.listarEventosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosResponse")]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarMisEventosResponse> listarMisEventosAsync(LP2Soft.PublicacionesWS.listarMisEventosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosResponse")]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarEventosResponse> listarEventosAsync(LP2Soft.PublicacionesWS.listarEventosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Soft.PublicacionesWS.insertarPostResponse insertarPost(LP2Soft.PublicacionesWS.insertarPostRequest request);
+        LP2Soft.PublicacionesWS.eliminarComentarioResponse eliminarComentario(LP2Soft.PublicacionesWS.eliminarComentarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostResponse")]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertarPostResponse> insertarPostAsync(LP2Soft.PublicacionesWS.insertarPostRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioResponse")]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.eliminarComentarioResponse> eliminarComentarioAsync(LP2Soft.PublicacionesWS.eliminarComentarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_postXCursoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_postXCursoResponse")]
@@ -133,13 +142,13 @@ namespace LP2Soft.PublicacionesWS {
         System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertar_postXCursoResponse> insertar_postXCursoAsync(LP2Soft.PublicacionesWS.insertar_postXCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Soft.PublicacionesWS.listarXcursoResponse listarXcurso(LP2Soft.PublicacionesWS.listarXcursoRequest request);
+        LP2Soft.PublicacionesWS.insertar_MaterialResponse insertar_Material(LP2Soft.PublicacionesWS.insertar_MaterialRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoResponse")]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarXcursoResponse> listarXcursoAsync(LP2Soft.PublicacionesWS.listarXcursoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialResponse")]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertar_MaterialResponse> insertar_MaterialAsync(LP2Soft.PublicacionesWS.insertar_MaterialRequest request);
     }
     
     /// <remarks/>
@@ -148,98 +157,103 @@ namespace LP2Soft.PublicacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
-    public partial class comentario : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class evento : post {
         
-        private string comentario1Field;
+        private byte[] archivoField;
         
-        private System.DateTime fechaRegistroField;
+        private string enlaceZoomField;
         
-        private bool fechaRegistroFieldSpecified;
+        private System.DateTime fechaDelEventoField;
         
-        private int idComentarioField;
+        private bool fechaDelEventoFieldSpecified;
         
-        private post postField;
+        private int horaFinField;
         
-        private usuario usuarioField;
+        private int horaInicioField;
+        
+        private string nombreDelEventoField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("comentario", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string comentario1 {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
+        public byte[] archivo {
             get {
-                return this.comentario1Field;
+                return this.archivoField;
             }
             set {
-                this.comentario1Field = value;
-                this.RaisePropertyChanged("comentario1");
+                this.archivoField = value;
+                this.RaisePropertyChanged("archivo");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fechaRegistro {
+        public string enlaceZoom {
             get {
-                return this.fechaRegistroField;
+                return this.enlaceZoomField;
             }
             set {
-                this.fechaRegistroField = value;
-                this.RaisePropertyChanged("fechaRegistro");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaRegistroSpecified {
-            get {
-                return this.fechaRegistroFieldSpecified;
-            }
-            set {
-                this.fechaRegistroFieldSpecified = value;
-                this.RaisePropertyChanged("fechaRegistroSpecified");
+                this.enlaceZoomField = value;
+                this.RaisePropertyChanged("enlaceZoom");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idComentario {
+        public System.DateTime fechaDelEvento {
             get {
-                return this.idComentarioField;
+                return this.fechaDelEventoField;
             }
             set {
-                this.idComentarioField = value;
-                this.RaisePropertyChanged("idComentario");
+                this.fechaDelEventoField = value;
+                this.RaisePropertyChanged("fechaDelEvento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaDelEventoSpecified {
+            get {
+                return this.fechaDelEventoFieldSpecified;
+            }
+            set {
+                this.fechaDelEventoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaDelEventoSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public post post {
+        public int horaFin {
             get {
-                return this.postField;
+                return this.horaFinField;
             }
             set {
-                this.postField = value;
-                this.RaisePropertyChanged("post");
+                this.horaFinField = value;
+                this.RaisePropertyChanged("horaFin");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public usuario usuario {
+        public int horaInicio {
             get {
-                return this.usuarioField;
+                return this.horaInicioField;
             }
             set {
-                this.usuarioField = value;
-                this.RaisePropertyChanged("usuario");
+                this.horaInicioField = value;
+                this.RaisePropertyChanged("horaInicio");
             }
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nombreDelEvento {
+            get {
+                return this.nombreDelEventoField;
+            }
+            set {
+                this.nombreDelEventoField = value;
+                this.RaisePropertyChanged("nombreDelEvento");
             }
         }
     }
@@ -1510,103 +1524,98 @@ namespace LP2Soft.PublicacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
-    public partial class evento : post {
+    public partial class comentario : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private byte[] archivoField;
+        private string comentario1Field;
         
-        private string enlaceZoomField;
+        private System.DateTime fechaRegistroField;
         
-        private System.DateTime fechaDelEventoField;
+        private bool fechaRegistroFieldSpecified;
         
-        private bool fechaDelEventoFieldSpecified;
+        private int idComentarioField;
         
-        private int horaFinField;
+        private post postField;
         
-        private int horaInicioField;
-        
-        private string nombreDelEventoField;
+        private usuario usuarioField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
-        public byte[] archivo {
+        [System.Xml.Serialization.XmlElementAttribute("comentario", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string comentario1 {
             get {
-                return this.archivoField;
+                return this.comentario1Field;
             }
             set {
-                this.archivoField = value;
-                this.RaisePropertyChanged("archivo");
+                this.comentario1Field = value;
+                this.RaisePropertyChanged("comentario1");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string enlaceZoom {
+        public System.DateTime fechaRegistro {
             get {
-                return this.enlaceZoomField;
+                return this.fechaRegistroField;
             }
             set {
-                this.enlaceZoomField = value;
-                this.RaisePropertyChanged("enlaceZoom");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fechaDelEvento {
-            get {
-                return this.fechaDelEventoField;
-            }
-            set {
-                this.fechaDelEventoField = value;
-                this.RaisePropertyChanged("fechaDelEvento");
+                this.fechaRegistroField = value;
+                this.RaisePropertyChanged("fechaRegistro");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaDelEventoSpecified {
+        public bool fechaRegistroSpecified {
             get {
-                return this.fechaDelEventoFieldSpecified;
+                return this.fechaRegistroFieldSpecified;
             }
             set {
-                this.fechaDelEventoFieldSpecified = value;
-                this.RaisePropertyChanged("fechaDelEventoSpecified");
+                this.fechaRegistroFieldSpecified = value;
+                this.RaisePropertyChanged("fechaRegistroSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idComentario {
+            get {
+                return this.idComentarioField;
+            }
+            set {
+                this.idComentarioField = value;
+                this.RaisePropertyChanged("idComentario");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int horaFin {
+        public post post {
             get {
-                return this.horaFinField;
+                return this.postField;
             }
             set {
-                this.horaFinField = value;
-                this.RaisePropertyChanged("horaFin");
+                this.postField = value;
+                this.RaisePropertyChanged("post");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int horaInicio {
+        public usuario usuario {
             get {
-                return this.horaInicioField;
+                return this.usuarioField;
             }
             set {
-                this.horaInicioField = value;
-                this.RaisePropertyChanged("horaInicio");
+                this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombreDelEvento {
-            get {
-                return this.nombreDelEventoField;
-            }
-            set {
-                this.nombreDelEventoField = value;
-                this.RaisePropertyChanged("nombreDelEvento");
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -1618,6 +1627,114 @@ namespace LP2Soft.PublicacionesWS {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/")]
     public partial class postGenerico : post {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMisEventos", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarMisEventosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public listarMisEventosRequest() {
+        }
+        
+        public listarMisEventosRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMisEventosResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarMisEventosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.PublicacionesWS.evento[] @return;
+        
+        public listarMisEventosResponse() {
+        }
+        
+        public listarMisEventosResponse(LP2Soft.PublicacionesWS.evento[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarXcurso", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarXcursoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCurso;
+        
+        public listarXcursoRequest() {
+        }
+        
+        public listarXcursoRequest(int idCurso) {
+            this.idCurso = idCurso;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarXcursoResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarXcursoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.PublicacionesWS.postGenerico[] @return;
+        
+        public listarXcursoResponse() {
+        }
+        
+        public listarXcursoResponse(LP2Soft.PublicacionesWS.postGenerico[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPost", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPostRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.PublicacionesWS.postGenerico post;
+        
+        public insertarPostRequest() {
+        }
+        
+        public insertarPostRequest(LP2Soft.PublicacionesWS.postGenerico post) {
+            this.post = post;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPostResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPostResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarPostResponse() {
+        }
+        
+        public insertarPostResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1695,35 +1812,27 @@ namespace LP2Soft.PublicacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarComentario", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarComentarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPost", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPostRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Soft.PublicacionesWS.comentario comentario;
-        
-        public eliminarComentarioRequest() {
-        }
-        
-        public eliminarComentarioRequest(LP2Soft.PublicacionesWS.comentario comentario) {
-            this.comentario = comentario;
+        public listarPostRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarComentarioResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarComentarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPostResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPostResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.PublicacionesWS.postGenerico[] @return;
         
-        public eliminarComentarioResponse() {
+        public listarPostResponse() {
         }
         
-        public eliminarComentarioResponse(int @return) {
+        public listarPostResponse(LP2Soft.PublicacionesWS.postGenerico[] @return) {
             this.@return = @return;
         }
     }
@@ -1731,35 +1840,35 @@ namespace LP2Soft.PublicacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMisEventos", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarMisEventosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPost", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarPostRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
+        public LP2Soft.PublicacionesWS.postGenerico post;
         
-        public listarMisEventosRequest() {
+        public modificarPostRequest() {
         }
         
-        public listarMisEventosRequest(int idUsuario) {
-            this.idUsuario = idUsuario;
+        public modificarPostRequest(LP2Soft.PublicacionesWS.postGenerico post) {
+            this.post = post;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMisEventosResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarMisEventosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPostResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarPostResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Soft.PublicacionesWS.evento[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarMisEventosResponse() {
+        public modificarPostResponse() {
         }
         
-        public listarMisEventosResponse(LP2Soft.PublicacionesWS.evento[] @return) {
+        public modificarPostResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1796,70 +1905,6 @@ namespace LP2Soft.PublicacionesWS {
         }
         
         public eliminarPostResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPost", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPostRequest {
-        
-        public listarPostRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPostResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPostResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Soft.PublicacionesWS.postGenerico[] @return;
-        
-        public listarPostResponse() {
-        }
-        
-        public listarPostResponse(LP2Soft.PublicacionesWS.postGenerico[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertar_Material", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertar_MaterialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Soft.PublicacionesWS.material material;
-        
-        public insertar_MaterialRequest() {
-        }
-        
-        public insertar_MaterialRequest(LP2Soft.PublicacionesWS.material material) {
-            this.material = material;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertar_MaterialResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertar_MaterialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertar_MaterialResponse() {
-        }
-        
-        public insertar_MaterialResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1975,35 +2020,27 @@ namespace LP2Soft.PublicacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMisEventos", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarMisEventosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEventos", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEventosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
-        
-        public listarMisEventosRequest() {
-        }
-        
-        public listarMisEventosRequest(int idUsuario) {
-            this.idUsuario = idUsuario;
+        public listarEventosRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMisEventosResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarMisEventosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEventosResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEventosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2Soft.PublicacionesWS.evento[] @return;
         
-        public listarMisEventosResponse() {
+        public listarEventosResponse() {
         }
         
-        public listarMisEventosResponse(LP2Soft.PublicacionesWS.evento[] @return) {
+        public listarEventosResponse(LP2Soft.PublicacionesWS.evento[] @return) {
             this.@return = @return;
         }
     }
@@ -2016,30 +2053,30 @@ namespace LP2Soft.PublicacionesWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Soft.PublicacionesWS.postGenerico post;
+        public LP2Soft.PublicacionesWS.comentario comentario;
         
-        public insertarPostRequest() {
+        public eliminarComentarioRequest() {
         }
         
-        public insertarPostRequest(LP2Soft.PublicacionesWS.postGenerico post) {
-            this.post = post;
+        public eliminarComentarioRequest(LP2Soft.PublicacionesWS.comentario comentario) {
+            this.comentario = comentario;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPostResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPostResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarComentarioResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarComentarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarPostResponse() {
+        public eliminarComentarioResponse() {
         }
         
-        public insertarPostResponse(int @return) {
+        public eliminarComentarioResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -2083,35 +2120,35 @@ namespace LP2Soft.PublicacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarXcurso", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarXcursoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertar_Material", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertar_MaterialRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCurso;
+        public LP2Soft.PublicacionesWS.material material;
         
-        public listarXcursoRequest() {
+        public insertar_MaterialRequest() {
         }
         
-        public listarXcursoRequest(int idCurso) {
-            this.idCurso = idCurso;
+        public insertar_MaterialRequest(LP2Soft.PublicacionesWS.material material) {
+            this.material = material;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarXcursoResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarXcursoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertar_MaterialResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertar_MaterialResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Soft.PublicacionesWS.postGenerico[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarXcursoResponse() {
+        public insertar_MaterialResponse() {
         }
         
-        public listarXcursoResponse(LP2Soft.PublicacionesWS.postGenerico[] @return) {
+        public insertar_MaterialResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -2141,6 +2178,75 @@ namespace LP2Soft.PublicacionesWS {
         
         public PublicacionesWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.PublicacionesWS.listarMisEventosResponse LP2Soft.PublicacionesWS.PublicacionesWS.listarMisEventos(LP2Soft.PublicacionesWS.listarMisEventosRequest request) {
+            return base.Channel.listarMisEventos(request);
+        }
+        
+        public LP2Soft.PublicacionesWS.evento[] listarMisEventos(int idUsuario) {
+            LP2Soft.PublicacionesWS.listarMisEventosRequest inValue = new LP2Soft.PublicacionesWS.listarMisEventosRequest();
+            inValue.idUsuario = idUsuario;
+            LP2Soft.PublicacionesWS.listarMisEventosResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarMisEventos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarMisEventosResponse> LP2Soft.PublicacionesWS.PublicacionesWS.listarMisEventosAsync(LP2Soft.PublicacionesWS.listarMisEventosRequest request) {
+            return base.Channel.listarMisEventosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarMisEventosResponse> listarMisEventosAsync(int idUsuario) {
+            LP2Soft.PublicacionesWS.listarMisEventosRequest inValue = new LP2Soft.PublicacionesWS.listarMisEventosRequest();
+            inValue.idUsuario = idUsuario;
+            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarMisEventosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.PublicacionesWS.listarXcursoResponse LP2Soft.PublicacionesWS.PublicacionesWS.listarXcurso(LP2Soft.PublicacionesWS.listarXcursoRequest request) {
+            return base.Channel.listarXcurso(request);
+        }
+        
+        public LP2Soft.PublicacionesWS.postGenerico[] listarXcurso(int idCurso) {
+            LP2Soft.PublicacionesWS.listarXcursoRequest inValue = new LP2Soft.PublicacionesWS.listarXcursoRequest();
+            inValue.idCurso = idCurso;
+            LP2Soft.PublicacionesWS.listarXcursoResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarXcurso(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarXcursoResponse> LP2Soft.PublicacionesWS.PublicacionesWS.listarXcursoAsync(LP2Soft.PublicacionesWS.listarXcursoRequest request) {
+            return base.Channel.listarXcursoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarXcursoResponse> listarXcursoAsync(int idCurso) {
+            LP2Soft.PublicacionesWS.listarXcursoRequest inValue = new LP2Soft.PublicacionesWS.listarXcursoRequest();
+            inValue.idCurso = idCurso;
+            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarXcursoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.PublicacionesWS.insertarPostResponse LP2Soft.PublicacionesWS.PublicacionesWS.insertarPost(LP2Soft.PublicacionesWS.insertarPostRequest request) {
+            return base.Channel.insertarPost(request);
+        }
+        
+        public int insertarPost(LP2Soft.PublicacionesWS.postGenerico post) {
+            LP2Soft.PublicacionesWS.insertarPostRequest inValue = new LP2Soft.PublicacionesWS.insertarPostRequest();
+            inValue.post = post;
+            LP2Soft.PublicacionesWS.insertarPostResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).insertarPost(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertarPostResponse> LP2Soft.PublicacionesWS.PublicacionesWS.insertarPostAsync(LP2Soft.PublicacionesWS.insertarPostRequest request) {
+            return base.Channel.insertarPostAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertarPostResponse> insertarPostAsync(LP2Soft.PublicacionesWS.postGenerico post) {
+            LP2Soft.PublicacionesWS.insertarPostRequest inValue = new LP2Soft.PublicacionesWS.insertarPostRequest();
+            inValue.post = post;
+            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).insertarPostAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2190,49 +2296,47 @@ namespace LP2Soft.PublicacionesWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Soft.PublicacionesWS.eliminarComentarioResponse LP2Soft.PublicacionesWS.PublicacionesWS.eliminarComentario(LP2Soft.PublicacionesWS.eliminarComentarioRequest request) {
-            return base.Channel.eliminarComentario(request);
+        LP2Soft.PublicacionesWS.listarPostResponse LP2Soft.PublicacionesWS.PublicacionesWS.listarPost(LP2Soft.PublicacionesWS.listarPostRequest request) {
+            return base.Channel.listarPost(request);
         }
         
-        public int eliminarComentario(LP2Soft.PublicacionesWS.comentario comentario) {
-            LP2Soft.PublicacionesWS.eliminarComentarioRequest inValue = new LP2Soft.PublicacionesWS.eliminarComentarioRequest();
-            inValue.comentario = comentario;
-            LP2Soft.PublicacionesWS.eliminarComentarioResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).eliminarComentario(inValue);
+        public LP2Soft.PublicacionesWS.postGenerico[] listarPost() {
+            LP2Soft.PublicacionesWS.listarPostRequest inValue = new LP2Soft.PublicacionesWS.listarPostRequest();
+            LP2Soft.PublicacionesWS.listarPostResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarPost(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.eliminarComentarioResponse> LP2Soft.PublicacionesWS.PublicacionesWS.eliminarComentarioAsync(LP2Soft.PublicacionesWS.eliminarComentarioRequest request) {
-            return base.Channel.eliminarComentarioAsync(request);
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarPostResponse> LP2Soft.PublicacionesWS.PublicacionesWS.listarPostAsync(LP2Soft.PublicacionesWS.listarPostRequest request) {
+            return base.Channel.listarPostAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.eliminarComentarioResponse> eliminarComentarioAsync(LP2Soft.PublicacionesWS.comentario comentario) {
-            LP2Soft.PublicacionesWS.eliminarComentarioRequest inValue = new LP2Soft.PublicacionesWS.eliminarComentarioRequest();
-            inValue.comentario = comentario;
-            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).eliminarComentarioAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarPostResponse> listarPostAsync() {
+            LP2Soft.PublicacionesWS.listarPostRequest inValue = new LP2Soft.PublicacionesWS.listarPostRequest();
+            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarPostAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Soft.PublicacionesWS.listarMisEventosResponse LP2Soft.PublicacionesWS.PublicacionesWS.listarMisEventos(LP2Soft.PublicacionesWS.listarMisEventosRequest request) {
-            return base.Channel.listarMisEventos(request);
+        LP2Soft.PublicacionesWS.modificarPostResponse LP2Soft.PublicacionesWS.PublicacionesWS.modificarPost(LP2Soft.PublicacionesWS.modificarPostRequest request) {
+            return base.Channel.modificarPost(request);
         }
         
-        public LP2Soft.PublicacionesWS.evento[] listarMisEventos(int idUsuario) {
-            LP2Soft.PublicacionesWS.listarMisEventosRequest inValue = new LP2Soft.PublicacionesWS.listarMisEventosRequest();
-            inValue.idUsuario = idUsuario;
-            LP2Soft.PublicacionesWS.listarMisEventosResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarMisEventos(inValue);
+        public int modificarPost(LP2Soft.PublicacionesWS.postGenerico post) {
+            LP2Soft.PublicacionesWS.modificarPostRequest inValue = new LP2Soft.PublicacionesWS.modificarPostRequest();
+            inValue.post = post;
+            LP2Soft.PublicacionesWS.modificarPostResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).modificarPost(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarMisEventosResponse> LP2Soft.PublicacionesWS.PublicacionesWS.listarMisEventosAsync(LP2Soft.PublicacionesWS.listarMisEventosRequest request) {
-            return base.Channel.listarMisEventosAsync(request);
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.modificarPostResponse> LP2Soft.PublicacionesWS.PublicacionesWS.modificarPostAsync(LP2Soft.PublicacionesWS.modificarPostRequest request) {
+            return base.Channel.modificarPostAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarMisEventosResponse> listarMisEventosAsync(int idUsuario) {
-            LP2Soft.PublicacionesWS.listarMisEventosRequest inValue = new LP2Soft.PublicacionesWS.listarMisEventosRequest();
-            inValue.idUsuario = idUsuario;
-            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarMisEventosAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.modificarPostResponse> modificarPostAsync(LP2Soft.PublicacionesWS.postGenerico post) {
+            LP2Soft.PublicacionesWS.modificarPostRequest inValue = new LP2Soft.PublicacionesWS.modificarPostRequest();
+            inValue.post = post;
+            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).modificarPostAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2256,50 +2360,6 @@ namespace LP2Soft.PublicacionesWS {
             LP2Soft.PublicacionesWS.eliminarPostRequest inValue = new LP2Soft.PublicacionesWS.eliminarPostRequest();
             inValue.post = post;
             return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).eliminarPostAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Soft.PublicacionesWS.listarPostResponse LP2Soft.PublicacionesWS.PublicacionesWS.listarPost(LP2Soft.PublicacionesWS.listarPostRequest request) {
-            return base.Channel.listarPost(request);
-        }
-        
-        public LP2Soft.PublicacionesWS.postGenerico[] listarPost() {
-            LP2Soft.PublicacionesWS.listarPostRequest inValue = new LP2Soft.PublicacionesWS.listarPostRequest();
-            LP2Soft.PublicacionesWS.listarPostResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarPost(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarPostResponse> LP2Soft.PublicacionesWS.PublicacionesWS.listarPostAsync(LP2Soft.PublicacionesWS.listarPostRequest request) {
-            return base.Channel.listarPostAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarPostResponse> listarPostAsync() {
-            LP2Soft.PublicacionesWS.listarPostRequest inValue = new LP2Soft.PublicacionesWS.listarPostRequest();
-            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarPostAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Soft.PublicacionesWS.insertar_MaterialResponse LP2Soft.PublicacionesWS.PublicacionesWS.insertar_Material(LP2Soft.PublicacionesWS.insertar_MaterialRequest request) {
-            return base.Channel.insertar_Material(request);
-        }
-        
-        public int insertar_Material(LP2Soft.PublicacionesWS.material material) {
-            LP2Soft.PublicacionesWS.insertar_MaterialRequest inValue = new LP2Soft.PublicacionesWS.insertar_MaterialRequest();
-            inValue.material = material;
-            LP2Soft.PublicacionesWS.insertar_MaterialResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).insertar_Material(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertar_MaterialResponse> LP2Soft.PublicacionesWS.PublicacionesWS.insertar_MaterialAsync(LP2Soft.PublicacionesWS.insertar_MaterialRequest request) {
-            return base.Channel.insertar_MaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertar_MaterialResponse> insertar_MaterialAsync(LP2Soft.PublicacionesWS.material material) {
-            LP2Soft.PublicacionesWS.insertar_MaterialRequest inValue = new LP2Soft.PublicacionesWS.insertar_MaterialRequest();
-            inValue.material = material;
-            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).insertar_MaterialAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2372,26 +2432,24 @@ namespace LP2Soft.PublicacionesWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Soft.PublicacionesWS.listarMisEventosResponse LP2Soft.PublicacionesWS.PublicacionesWS.listarMisEventos(LP2Soft.PublicacionesWS.listarMisEventosRequest request) {
-            return base.Channel.listarMisEventos(request);
+        LP2Soft.PublicacionesWS.listarEventosResponse LP2Soft.PublicacionesWS.PublicacionesWS.listarEventos(LP2Soft.PublicacionesWS.listarEventosRequest request) {
+            return base.Channel.listarEventos(request);
         }
         
-        public LP2Soft.PublicacionesWS.evento[] listarMisEventos(int idUsuario) {
-            LP2Soft.PublicacionesWS.listarMisEventosRequest inValue = new LP2Soft.PublicacionesWS.listarMisEventosRequest();
-            inValue.idUsuario = idUsuario;
-            LP2Soft.PublicacionesWS.listarMisEventosResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarMisEventos(inValue);
+        public LP2Soft.PublicacionesWS.evento[] listarEventos() {
+            LP2Soft.PublicacionesWS.listarEventosRequest inValue = new LP2Soft.PublicacionesWS.listarEventosRequest();
+            LP2Soft.PublicacionesWS.listarEventosResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarEventos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarMisEventosResponse> LP2Soft.PublicacionesWS.PublicacionesWS.listarMisEventosAsync(LP2Soft.PublicacionesWS.listarMisEventosRequest request) {
-            return base.Channel.listarMisEventosAsync(request);
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarEventosResponse> LP2Soft.PublicacionesWS.PublicacionesWS.listarEventosAsync(LP2Soft.PublicacionesWS.listarEventosRequest request) {
+            return base.Channel.listarEventosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarMisEventosResponse> listarMisEventosAsync(int idUsuario) {
-            LP2Soft.PublicacionesWS.listarMisEventosRequest inValue = new LP2Soft.PublicacionesWS.listarMisEventosRequest();
-            inValue.idUsuario = idUsuario;
-            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarMisEventosAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarEventosResponse> listarEventosAsync() {
+            LP2Soft.PublicacionesWS.listarEventosRequest inValue = new LP2Soft.PublicacionesWS.listarEventosRequest();
+            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarEventosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2399,22 +2457,22 @@ namespace LP2Soft.PublicacionesWS {
             return base.Channel.eliminarComentario(request);
         }
         
-        public int insertarPost(LP2Soft.PublicacionesWS.postGenerico post) {
-            LP2Soft.PublicacionesWS.insertarPostRequest inValue = new LP2Soft.PublicacionesWS.insertarPostRequest();
-            inValue.post = post;
-            LP2Soft.PublicacionesWS.insertarPostResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).insertarPost(inValue);
+        public int eliminarComentario(LP2Soft.PublicacionesWS.comentario comentario) {
+            LP2Soft.PublicacionesWS.eliminarComentarioRequest inValue = new LP2Soft.PublicacionesWS.eliminarComentarioRequest();
+            inValue.comentario = comentario;
+            LP2Soft.PublicacionesWS.eliminarComentarioResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).eliminarComentario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertarPostResponse> LP2Soft.PublicacionesWS.PublicacionesWS.insertarPostAsync(LP2Soft.PublicacionesWS.insertarPostRequest request) {
-            return base.Channel.insertarPostAsync(request);
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.eliminarComentarioResponse> LP2Soft.PublicacionesWS.PublicacionesWS.eliminarComentarioAsync(LP2Soft.PublicacionesWS.eliminarComentarioRequest request) {
+            return base.Channel.eliminarComentarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertarPostResponse> insertarPostAsync(LP2Soft.PublicacionesWS.postGenerico post) {
-            LP2Soft.PublicacionesWS.insertarPostRequest inValue = new LP2Soft.PublicacionesWS.insertarPostRequest();
-            inValue.post = post;
-            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).insertarPostAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.eliminarComentarioResponse> eliminarComentarioAsync(LP2Soft.PublicacionesWS.comentario comentario) {
+            LP2Soft.PublicacionesWS.eliminarComentarioRequest inValue = new LP2Soft.PublicacionesWS.eliminarComentarioRequest();
+            inValue.comentario = comentario;
+            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).eliminarComentarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2441,26 +2499,26 @@ namespace LP2Soft.PublicacionesWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Soft.PublicacionesWS.listarXcursoResponse LP2Soft.PublicacionesWS.PublicacionesWS.listarXcurso(LP2Soft.PublicacionesWS.listarXcursoRequest request) {
-            return base.Channel.listarXcurso(request);
+        LP2Soft.PublicacionesWS.insertar_MaterialResponse LP2Soft.PublicacionesWS.PublicacionesWS.insertar_Material(LP2Soft.PublicacionesWS.insertar_MaterialRequest request) {
+            return base.Channel.insertar_Material(request);
         }
         
-        public LP2Soft.PublicacionesWS.postGenerico[] listarXcurso(int idCurso) {
-            LP2Soft.PublicacionesWS.listarXcursoRequest inValue = new LP2Soft.PublicacionesWS.listarXcursoRequest();
-            inValue.idCurso = idCurso;
-            LP2Soft.PublicacionesWS.listarXcursoResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarXcurso(inValue);
+        public int insertar_Material(LP2Soft.PublicacionesWS.material material) {
+            LP2Soft.PublicacionesWS.insertar_MaterialRequest inValue = new LP2Soft.PublicacionesWS.insertar_MaterialRequest();
+            inValue.material = material;
+            LP2Soft.PublicacionesWS.insertar_MaterialResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).insertar_Material(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarXcursoResponse> LP2Soft.PublicacionesWS.PublicacionesWS.listarXcursoAsync(LP2Soft.PublicacionesWS.listarXcursoRequest request) {
-            return base.Channel.listarXcursoAsync(request);
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertar_MaterialResponse> LP2Soft.PublicacionesWS.PublicacionesWS.insertar_MaterialAsync(LP2Soft.PublicacionesWS.insertar_MaterialRequest request) {
+            return base.Channel.insertar_MaterialAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.listarXcursoResponse> listarXcursoAsync(int idCurso) {
-            LP2Soft.PublicacionesWS.listarXcursoRequest inValue = new LP2Soft.PublicacionesWS.listarXcursoRequest();
-            inValue.idCurso = idCurso;
-            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).listarXcursoAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertar_MaterialResponse> insertar_MaterialAsync(LP2Soft.PublicacionesWS.material material) {
+            LP2Soft.PublicacionesWS.insertar_MaterialRequest inValue = new LP2Soft.PublicacionesWS.insertar_MaterialRequest();
+            inValue.material = material;
+            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).insertar_MaterialAsync(inValue);
         }
     }
 }

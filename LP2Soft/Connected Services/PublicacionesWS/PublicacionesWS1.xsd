@@ -180,14 +180,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarEventos">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarEventosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarPost">
     <xs:sequence />
   </xs:complexType>
@@ -202,6 +194,16 @@
         <xs:sequence />
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="listarXcurso">
+    <xs:sequence>
+      <xs:element name="idCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarXcursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:postGenerico" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarComentario">
     <xs:sequence>
@@ -222,16 +224,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarXcurso">
-    <xs:sequence>
-      <xs:element name="idCurso" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarXcursoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:postGenerico" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="aumentarLikes">
     <xs:sequence>
       <xs:element name="idPost" type="xs:int" />
@@ -248,6 +240,14 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarMisEventosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEventosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
