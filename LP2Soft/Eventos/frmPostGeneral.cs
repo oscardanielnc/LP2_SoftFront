@@ -80,7 +80,7 @@ namespace LP2Soft.Eventos
 
         private void btnComentarDinamico_Click(object sender, EventArgs e)
         {
-            frmCrearComentario formCrearComentario = new frmCrearComentario(_post, _usuario);
+            frmCrearComentario formCrearComentario = new frmCrearComentario(_post);
 
             if (formCrearComentario.ShowDialog() == DialogResult.OK)
             {

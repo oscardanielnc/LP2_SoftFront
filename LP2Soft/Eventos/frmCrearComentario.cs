@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Soft.Home;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,20 +16,18 @@ namespace LP2Soft.Eventos
     {
         PublicacionesWS.comentario _comentario;
         PublicacionesWS.PublicacionesWSClient _daoComentario;
-        PublicacionesWS.postGenerico _post;
-        UsuarioWS.usuario _usuario;
+        PublicacionesWS.post _post;
         PublicacionesWS.comentario _comentarioCreado;
 
         public PublicacionesWS.comentario ComentarioCreado { get => _comentarioCreado; }
 
-        public frmCrearComentario(PublicacionesWS.postGenerico post, UsuarioWS.usuario usuario)
+        public frmCrearComentario(PublicacionesWS.post post)
         {
             InitializeComponent();
             _post = post;
-            _usuario = usuario;
-            if (_usuario.foto != null)
+            if (frmHome.Usuario.foto != null)
             {
-                MemoryStream ms1 = new MemoryStream(_usuario.foto);
+                MemoryStream ms1 = new MemoryStream(frmHome.Usuario.foto);
                 pbPerfil.Image = new Bitmap(ms1);
             }
             _daoComentario = new PublicacionesWS.PublicacionesWSClient();
@@ -38,7 +37,7 @@ namespace LP2Soft.Eventos
         private void btnPublicar_Click(object sender, EventArgs e)
         {
             _comentario.usuario = new PublicacionesWS.usuario();
-            _comentario.usuario.idUsuario = _usuario.idUsuario;
+            _comentario.usuario.idUsuario = frmHome.Usuario.idUsuario;
             _comentario.post = new PublicacionesWS.postGenerico();
             _comentario.post.idPost = _post.idPost;
             _comentario.comentario1 = txtComentario.Text;

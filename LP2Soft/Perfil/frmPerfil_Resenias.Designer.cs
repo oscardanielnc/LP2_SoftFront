@@ -30,38 +30,26 @@ namespace LP2Soft.Perfil
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfil_Resenias));
-            this.btnNuevaResenia = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNuevaResenia)).BeginInit();
+            this.btnReseniar = new LP2Soft.Asesor.BotonChevere();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnNuevaResenia
-            // 
-            this.btnNuevaResenia.Image = global::LP2Soft.Properties.Resources.address_book;
-            this.btnNuevaResenia.Location = new System.Drawing.Point(757, 12);
-            this.btnNuevaResenia.Name = "btnNuevaResenia";
-            this.btnNuevaResenia.Size = new System.Drawing.Size(30, 30);
-            this.btnNuevaResenia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnNuevaResenia.TabIndex = 2;
-            this.btnNuevaResenia.TabStop = false;
-            this.btnNuevaResenia.Click += new System.EventHandler(this.btnNuevaResenia_Click);
             // 
             // panel2
             // 
@@ -76,10 +64,40 @@ namespace LP2Soft.Perfil
             this.panel2.Controls.Add(this.pictureBox12);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(71, 58);
+            this.panel2.Location = new System.Drawing.Point(71, 74);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(660, 150);
             this.panel2.TabIndex = 41;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(300, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 43;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::LP2Soft.Properties.Resources.star_full;
+            this.pictureBox2.Location = new System.Drawing.Point(196, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.star_full;
+            this.pictureBox1.Location = new System.Drawing.Point(222, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -92,6 +110,16 @@ namespace LP2Soft.Perfil
             this.label3.Text = "Gran asesor del curso de Sistemas Operativos. Se toma el tiempo de explicarte en " +
     "caso no hayas entendido correctamente y comparte gran cantidad de ejercicios par" +
     "a practicar.";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(274, 20);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 39;
+            this.pictureBox7.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -143,71 +171,49 @@ namespace LP2Soft.Perfil
             this.label8.TabIndex = 31;
             this.label8.Text = "Asesor: Oscar Navarro";
             // 
-            // pictureBox7
+            // btnReseniar
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(274, 20);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 39;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.pictureBox1.Location = new System.Drawing.Point(222, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.pictureBox2.Location = new System.Drawing.Point(196, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 42;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(300, 20);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 43;
-            this.pictureBox3.TabStop = false;
+            this.btnReseniar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnReseniar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnReseniar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnReseniar.BorderRadius = 6;
+            this.btnReseniar.BorderSize = 0;
+            this.btnReseniar.FlatAppearance.BorderSize = 0;
+            this.btnReseniar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReseniar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReseniar.ForeColor = System.Drawing.Color.White;
+            this.btnReseniar.Location = new System.Drawing.Point(69, 21);
+            this.btnReseniar.Name = "btnReseniar";
+            this.btnReseniar.Size = new System.Drawing.Size(122, 30);
+            this.btnReseniar.TabIndex = 42;
+            this.btnReseniar.Text = "Crear Reseña";
+            this.btnReseniar.TextColor = System.Drawing.Color.White;
+            this.btnReseniar.UseVisualStyleBackColor = false;
+            this.btnReseniar.Click += new System.EventHandler(this.btnReseniar_Click);
             // 
             // frmPerfil_Resenias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 278);
+            this.Controls.Add(this.btnReseniar);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnNuevaResenia);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfil_Resenias";
             this.Text = "frmPerfil_Resenias";
-            ((System.ComponentModel.ISupportInitialize)(this.btnNuevaResenia)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox btnNuevaResenia;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -219,5 +225,6 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private Asesor.BotonChevere btnReseniar;
     }
 }

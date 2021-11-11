@@ -29,6 +29,8 @@ namespace LP2Soft.Eventos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPostEvento));
             this.panelEvento = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelComentarios = new System.Windows.Forms.Panel();
@@ -50,13 +52,14 @@ namespace LP2Soft.Eventos
             this.lblCantidadLikes = new System.Windows.Forms.Label();
             this.btnMeGustaEstatico = new System.Windows.Forms.Button();
             this.lblLinea1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbImagen = new System.Windows.Forms.PictureBox();
             this.txtDescripcionEvento = new System.Windows.Forms.TextBox();
             this.lblFechaHoraCreacion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelEvento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +87,7 @@ namespace LP2Soft.Eventos
             this.panelEvento.Controls.Add(this.lblCantidadLikes);
             this.panelEvento.Controls.Add(this.btnMeGustaEstatico);
             this.panelEvento.Controls.Add(this.lblLinea1);
-            this.panelEvento.Controls.Add(this.pictureBox1);
+            this.panelEvento.Controls.Add(this.pbImagen);
             this.panelEvento.Controls.Add(this.txtDescripcionEvento);
             this.panelEvento.Controls.Add(this.lblFechaHoraCreacion);
             this.panelEvento.Controls.Add(this.lblNombre);
@@ -193,6 +196,7 @@ namespace LP2Soft.Eventos
             this.lblComentarios.Size = new System.Drawing.Size(148, 15);
             this.lblComentarios.TabIndex = 28;
             this.lblComentarios.Text = "Ver todos los comentarios";
+            this.lblComentarios.Click += new System.EventHandler(this.lblComentarios_Click);
             // 
             // lblLinea2
             // 
@@ -224,6 +228,7 @@ namespace LP2Soft.Eventos
             this.btnComentar.Size = new System.Drawing.Size(26, 23);
             this.btnComentar.TabIndex = 25;
             this.btnComentar.UseVisualStyleBackColor = false;
+            this.btnComentar.Click += new System.EventHandler(this.btnComentar_Click);
             // 
             // lblMeGusta
             // 
@@ -238,15 +243,16 @@ namespace LP2Soft.Eventos
             // btnMeGusta
             // 
             this.btnMeGusta.BackColor = System.Drawing.Color.Transparent;
-            this.btnMeGusta.BackgroundImage = global::LP2Soft.Properties.Resources.like;
             this.btnMeGusta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMeGusta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnMeGusta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMeGusta.ImageList = this.imageList1;
             this.btnMeGusta.Location = new System.Drawing.Point(48, 475);
             this.btnMeGusta.Name = "btnMeGusta";
             this.btnMeGusta.Size = new System.Drawing.Size(26, 23);
             this.btnMeGusta.TabIndex = 23;
             this.btnMeGusta.UseVisualStyleBackColor = false;
+            this.btnMeGusta.Click += new System.EventHandler(this.btnMeGusta_Click);
             // 
             // btnComentarEstatico
             // 
@@ -302,15 +308,15 @@ namespace LP2Soft.Eventos
             this.lblLinea1.Size = new System.Drawing.Size(371, 1);
             this.lblLinea1.TabIndex = 17;
             // 
-            // pictureBox1
+            // pbImagen
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 245);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 186);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.pbImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbImagen.Location = new System.Drawing.Point(54, 249);
+            this.pbImagen.Name = "pbImagen";
+            this.pbImagen.Size = new System.Drawing.Size(265, 186);
+            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagen.TabIndex = 16;
+            this.pbImagen.TabStop = false;
             // 
             // txtDescripcionEvento
             // 
@@ -352,6 +358,13 @@ namespace LP2Soft.Eventos
             this.pbPerfil.TabIndex = 4;
             this.pbPerfil.TabStop = false;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "like (1).png");
+            this.imageList1.Images.SetKeyName(1, "like.png");
+            // 
             // frmPostEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,7 +376,7 @@ namespace LP2Soft.Eventos
             this.Text = "frmPostEvento";
             this.panelEvento.ResumeLayout(false);
             this.panelEvento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
 
@@ -386,7 +399,7 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label lblCantidadLikes;
         private System.Windows.Forms.Button btnMeGustaEstatico;
         private System.Windows.Forms.Label lblLinea1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.TextBox txtDescripcionEvento;
         private System.Windows.Forms.Label lblFechaHoraCreacion;
         private System.Windows.Forms.Label lblNombre;
@@ -397,5 +410,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label lblFechaEvento;
         private System.Windows.Forms.Panel panelComentarios;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
