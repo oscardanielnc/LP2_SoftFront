@@ -17,15 +17,15 @@ namespace LP2Soft.Eventos
         PublicacionesWS.PublicacionesWSClient _daoComentario;
         frmPostGeneral _post;
 
-        public frmComentario(PublicacionesWS.comentario comentario, UsuarioWS.usuario usuario, frmPostGeneral post)
+        public frmComentario(PublicacionesWS.comentario comentario, frmPostGeneral post)
         {
             InitializeComponent();
             _post = post;
             _daoComentario = new PublicacionesWS.PublicacionesWSClient();
             _comentario = comentario;
-            lblNombre.Text = usuario.nombre;
+            lblNombre.Text = comentario.usuario.nombre;
             lblComentario.Text = comentario.comentario1;
-            if (usuario.idUsuario != frmHome.Usuario.idUsuario) btnModificar.Visible = false;
+            if (comentario.usuario.idUsuario != frmHome.Usuario.idUsuario) btnModificar.Visible = false;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
