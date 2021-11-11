@@ -86,6 +86,7 @@
       <xs:element name="bloqueado" type="xs:boolean" />
       <xs:element minOccurs="0" name="contenido" type="xs:string" />
       <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idCurso" type="xs:int" />
       <xs:element name="idPost" type="xs:int" />
       <xs:element name="likes" type="xs:int" />
       <xs:element name="numeroComent" type="xs:int" />

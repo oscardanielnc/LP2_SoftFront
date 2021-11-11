@@ -38,6 +38,7 @@ namespace LP2Soft.Perfil
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.txtCali = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,7 +59,7 @@ namespace LP2Soft.Perfil
             // 
             // pbPerfil
             // 
-            this.pbPerfil.Image = global::LP2Soft.Properties.Resources.DSC_0498;
+            this.pbPerfil.Image = global::LP2Soft.Properties.Resources.images;
             this.pbPerfil.Location = new System.Drawing.Point(16, 60);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(50, 46);
@@ -135,11 +136,19 @@ namespace LP2Soft.Perfil
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
             // 
+            // txtCali
+            // 
+            this.txtCali.Location = new System.Drawing.Point(104, 161);
+            this.txtCali.Name = "txtCali";
+            this.txtCali.Size = new System.Drawing.Size(38, 20);
+            this.txtCali.TabIndex = 16;
+            // 
             // frmCrearResenia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 206);
+            this.Controls.Add(this.txtCali);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
@@ -173,5 +182,6 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TextBox txtCali;
     }
 }

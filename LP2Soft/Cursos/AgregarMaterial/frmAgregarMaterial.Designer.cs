@@ -50,6 +50,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.cboCiclo = new System.Windows.Forms.ComboBox();
             this.cboSemestre = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.ofdArchivo = new System.Windows.Forms.OpenFileDialog();
             this.flpCargarMaterial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -272,6 +273,10 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.label1.TabIndex = 22;
             this.label1.Text = "Si desea puede escribir un comentario";
             // 
+            // ofdArchivo
+            // 
+            this.ofdArchivo.FileName = "openFileDialog1";
+            // 
             // frmAgregarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,5 +333,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.ComboBox cboCiclo;
         private System.Windows.Forms.ComboBox cboSemestre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.OpenFileDialog ofdArchivo;
     }
 }

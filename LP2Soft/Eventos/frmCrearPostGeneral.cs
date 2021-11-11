@@ -17,6 +17,7 @@ namespace LP2Soft.Eventos
         PublicacionesWS.postGenerico _postGenerico;
         PublicacionesWS.PublicacionesWSClient _daoPost;
         PublicacionesWS.postGenerico _postCreado;
+        private int _idCursoAux = 0;
 
         public PublicacionesWS.postGenerico PostCreado { get => _postCreado; }
 
@@ -40,6 +41,23 @@ namespace LP2Soft.Eventos
             _daoPost = new PublicacionesWS.PublicacionesWSClient();
         }
 
+        public frmCrearPostGeneral(UsuarioWS.usuario usuario, int _idCurso)
+        {
+            InitializeComponent();
+            _usuario = usuario;
+            if (_usuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(_usuario.foto);
+                pbPerfil.Image = new Bitmap(ms1);
+            }
+            lblNombre.Text = _usuario.nombre + " " + _usuario.apellido;
+            _postGenerico = new PublicacionesWS.postGenerico();
+            _postGenerico.usuario = new PublicacionesWS.usuario();
+            _postGenerico.idCurso = _idCurso;
+            _idCursoAux = _idCurso;
+            _daoPost = new PublicacionesWS.PublicacionesWSClient();
+        }
+
         private void btnPublicar_Click(object sender, EventArgs e)
         {
             int resultado;
@@ -51,8 +69,13 @@ namespace LP2Soft.Eventos
             // En un usuario falta un atributo para saber si es un grupo o alumno
             //_postGenerico.prioridad = 1;
             //_postGenerico.fechaRegistro = DateTime.Now;
-
-            resultado = _daoPost.insertarPost(_postGenerico);
+            if (_idCursoAux == 0)
+            {
+                resultado = _daoPost.insertarPost(_postGenerico);
+            }
+            else {
+                resultado = _daoPost.insertar_postXCurso(_postGenerico);
+            }
 
             if (resultado != 0)
             {

@@ -728,6 +728,12 @@
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertarPostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertar_MaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertar_postXCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarComentariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -738,6 +744,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarXcursoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.modificarPostResponse.datasource">
@@ -766,6 +775,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarAsesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarReseniaAsesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.insertarUsuarioResponse.datasource">

@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8081/LP2Soft_WebServices/NotificacionesWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="eliminarSolicitudAmistad">
-    <part name="parameters" element="tns:eliminarSolicitudAmistad" />
-  </message>
-  <message name="eliminarSolicitudAmistadResponse">
-    <part name="parameters" element="tns:eliminarSolicitudAmistadResponse" />
-  </message>
   <message name="listarMensajesXAmigo">
     <part name="parameters" element="tns:listarMensajesXAmigo" />
   </message>
   <message name="listarMensajesXAmigoResponse">
     <part name="parameters" element="tns:listarMensajesXAmigoResponse" />
+  </message>
+  <message name="listarNotificaciones">
+    <part name="parameters" element="tns:listarNotificaciones" />
+  </message>
+  <message name="listarNotificacionesResponse">
+    <part name="parameters" element="tns:listarNotificacionesResponse" />
   </message>
   <message name="insertarNotificacion">
     <part name="parameters" element="tns:insertarNotificacion" />
@@ -23,11 +23,17 @@
   <message name="insertarNotificacionResponse">
     <part name="parameters" element="tns:insertarNotificacionResponse" />
   </message>
-  <message name="listarNotificaciones">
-    <part name="parameters" element="tns:listarNotificaciones" />
+  <message name="enviarMensaje">
+    <part name="parameters" element="tns:enviarMensaje" />
   </message>
-  <message name="listarNotificacionesResponse">
-    <part name="parameters" element="tns:listarNotificacionesResponse" />
+  <message name="enviarMensajeResponse">
+    <part name="parameters" element="tns:enviarMensajeResponse" />
+  </message>
+  <message name="insertarNotificacion">
+    <part name="parameters" element="tns:insertarNotificacion" />
+  </message>
+  <message name="insertarNotificacionResponse">
+    <part name="parameters" element="tns:insertarNotificacionResponse" />
   </message>
   <message name="listarMensajesUltimos">
     <part name="parameters" element="tns:listarMensajesUltimos" />
@@ -42,21 +48,25 @@
     <part name="parameters" element="tns:enviarMensajeResponse" />
   </message>
   <portType name="NotificacionesWS">
-    <operation name="eliminarSolicitudAmistad">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadRequest" message="tns:eliminarSolicitudAmistad" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadResponse" message="tns:eliminarSolicitudAmistadResponse" />
-    </operation>
     <operation name="listarMensajesXAmigo">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoRequest" message="tns:listarMensajesXAmigo" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoResponse" message="tns:listarMensajesXAmigoResponse" />
+    </operation>
+    <operation name="listarNotificaciones">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
     </operation>
     <operation name="insertarNotificacion">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest" message="tns:insertarNotificacion" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" message="tns:insertarNotificacionResponse" />
     </operation>
-    <operation name="listarNotificaciones">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
+    <operation name="enviarMensaje">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeRequest" message="tns:enviarMensaje" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeResponse" message="tns:enviarMensajeResponse" />
+    </operation>
+    <operation name="insertarNotificacion">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest" message="tns:insertarNotificacion" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" message="tns:insertarNotificacionResponse" />
     </operation>
     <operation name="listarMensajesUltimos">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesUltimosRequest" message="tns:listarMensajesUltimos" />
@@ -69,25 +79,7 @@
   </portType>
   <binding name="NotificacionesWSPortBinding" type="tns:NotificacionesWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarSolicitudAmistad">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarMensajesXAmigo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarNotificacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,7 +97,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarMensajesUltimos">
+    <operation name="insertarNotificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="enviarMensaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSolicitudAmistad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
