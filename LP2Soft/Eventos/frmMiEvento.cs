@@ -27,7 +27,7 @@ namespace LP2Soft.Eventos
             lblTitulo.Text = e.nombreDelEvento;
             txtContenido.Text = e.contenido;
             lblZoom.Text = e.enlaceZoom;
-            lblFechaRealizacion.Text = e.fechaDelEvento.ToString("dd de MMMM del yyyy");
+            lblFechaRealizacion.Text = e.fechaDelEvento.ToString("dd/MMMM/yyyy");
             int hhi,mmi,hhf,mmf;
             hhi = e.horaInicio / 100;
             mmi = e.horaInicio % 100;
