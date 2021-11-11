@@ -26,10 +26,48 @@ namespace LP2Soft.CalculadorNotas
             lblNombre.Text = nombre + " (" + peso.ToString() + ")";
             if (eliminarMasBaja) lblNombre.Text = lblNombre.Text + " *";
             generarCamposDeNotas(cantidad);
+            
         }
 
-        public int NotaDelRegistro { get => _notaDelRegistro; set => _notaDelRegistro = value; }
         public int PesoRegistro { get => _pesoRegistro; set => _pesoRegistro = value; }
+
+        public float calcularNotaFinal()
+        {
+            
+            int notaMinima = 999999,sumaNotas=0,aux,cant;
+            foreach(TextBox txt in _notas)
+            {
+                aux = Int32.Parse(txt.Text);
+                sumaNotas = aux + sumaNotas;
+                if (aux < notaMinima) notaMinima = aux;
+
+            }
+            //TextBox txt2 = _notas.Min();
+            if (_eliminaMasbaja)
+            {
+                if (_notas.Count() - 1 == 0)
+                {
+                    cant = _notas.Count();
+                    return sumaNotas / cant;
+                }
+                else
+                {
+                    cant = _notas.Count() - 1;
+                    sumaNotas = sumaNotas - notaMinima;
+                    return sumaNotas / cant;
+                }
+
+            }
+            else
+            {
+                cant = _notas.Count();
+                return sumaNotas / cant;
+
+            }
+            
+
+        }
+        
 
         private void generarCamposDeNotas(int cantidad)
         {
