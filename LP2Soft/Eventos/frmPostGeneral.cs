@@ -20,7 +20,6 @@ namespace LP2Soft.Eventos
         PublicacionesWS.postGenerico _postModificado;
         PublicacionesWS.PublicacionesWSClient _daoPost;
         BindingList<PublicacionesWS.comentario> _coments;
-        
         private int _cantidadComent=0;
 
         public frmPostGeneral()
@@ -59,19 +58,20 @@ namespace LP2Soft.Eventos
                 _coments = new BindingList<PublicacionesWS.comentario>(_comentarios.ToList());
             else
                 _coments = null;
+
             _cantidadComent = 0;
+
             if (_coments != null)
             {
                 foreach (PublicacionesWS.comentario p in _coments)
                 {
                     if (_cantidadComent == 2) break;
-                    frmComentario plantilla = new frmComentario(p, _usuario,this);
+                    frmComentario plantilla = new frmComentario(p,this);
                     plantilla.TopLevel = false;
                     plantilla.Dock = DockStyle.Top;
                     panelComentarios.Controls.Add(plantilla);
                     panelComentarios.Controls.SetChildIndex(plantilla, 0);
                     plantilla.Visible = true;
-                    //_publicaciones.RemoveAt(_cantidadPost);
                     _cantidadComent++;
                 }
             }
@@ -89,19 +89,19 @@ namespace LP2Soft.Eventos
                 panelComentarios.Controls.Clear();
                 _comentarioCreado = formCrearComentario.ComentarioCreado;
                 _comentarioCreado.usuario.nombre = _usuario.nombre;
-                frmComentario plantilla = new frmComentario(_comentarioCreado, _usuario,this);
+                frmComentario plantilla = new frmComentario(_comentarioCreado,this);
                 plantilla.TopLevel = false;
                 plantilla.Dock = DockStyle.Top;
                 panelComentarios.Controls.Add(plantilla);
                 panelComentarios.Controls.SetChildIndex(plantilla, 0);
-                //Visible
                 plantilla.Visible = true;
+
                 _cantidadComent = 0;
-                if (_coments != null) 
+                if (_coments != null)
                 {
                     foreach (PublicacionesWS.comentario p in _coments)
                     {
-                        plantilla = new frmComentario(p, _usuario,this);
+                        plantilla = new frmComentario(p,this);
                         plantilla.TopLevel = false;
                         plantilla.Dock = DockStyle.Top;
                         panelComentarios.Controls.Add(plantilla);
@@ -111,6 +111,7 @@ namespace LP2Soft.Eventos
                         break;
                     }
                 }
+
                 _cantidadComent++;
                 _daoPost = new PublicacionesWS.PublicacionesWSClient();
                 PublicacionesWS.comentario[] _comentarios = _daoPost.listarComentarios(_post.idPost);
@@ -147,11 +148,15 @@ namespace LP2Soft.Eventos
             if (_coments != null)
             {
                 int contador = 0;
+                bool flag = true;
                 foreach (PublicacionesWS.comentario p in _coments)
                 {
-                    if (contador < _cantidadComent) { contador++; continue; } 
-                    else contador = 1000;
-                    frmComentario plantilla = new frmComentario(p, _usuario,this);
+                    if (flag)
+                    {
+                        if (contador < _cantidadComent) { contador++; continue; }
+                        flag = false;
+                    }
+                    frmComentario plantilla = new frmComentario(p,this);
                     plantilla.TopLevel = false;
                     plantilla.Dock = DockStyle.Top;
                     panelComentarios.Controls.Add(plantilla);
@@ -200,12 +205,16 @@ namespace LP2Soft.Eventos
             if (_coments != null)
             {
                 int contador = 0;
+                bool flag=true;
                 foreach (PublicacionesWS.comentario p in _coments)
                 {
                     if (_cantidadComent == 2) break;
-                    if (contador < _cantidadComent) { contador++; continue; }
-                    else contador = 1000;
-                    frmComentario plantilla = new frmComentario(p, _usuario, this);
+                    if (flag)
+                    {
+                        if (contador < _cantidadComent) { contador++; continue; }
+                        flag = false;
+                    }
+                    frmComentario plantilla = new frmComentario(p, this);
                     plantilla.TopLevel = false;
                     plantilla.Dock = DockStyle.Top;
                     panelComentarios.Controls.Add(plantilla);

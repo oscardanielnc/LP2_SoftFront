@@ -12,14 +12,15 @@ namespace LP2Soft.Perfil
 {
     public partial class frmPerfil_Resenias : Form
     {
-        public frmPerfil_Resenias()
+        private UsuarioWS.usuario _asesor;
+        public frmPerfil_Resenias(UsuarioWS.usuario asesor)
         {
             InitializeComponent();
+            _asesor = asesor;
         }
-
-        private void btnNuevaResenia_Click(object sender, EventArgs e)
+        private void btnReseniar_Click(object sender, EventArgs e)
         {
-            frmCrearResenia formCrearResenia = new frmCrearResenia();
+            frmCrearResenia formCrearResenia = new frmCrearResenia(_asesor);
             formCrearResenia.ShowDialog();
         }
     }
