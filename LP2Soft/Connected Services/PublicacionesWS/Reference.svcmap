@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8081/LP2Soft_WebServices/PublicacionesWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/LP2Soft_WebServices/PublicacionesWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PublicacionesWS1.wsdl" MetadataType="Wsdl" ID="e4944009-d068-4784-8696-16bd94d237c2" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebServices/PublicacionesWS?WSDL" />
-    <MetadataFile FileName="PublicacionesWS1.xsd" MetadataType="Schema" ID="6f94ab8d-c819-44ce-aa8f-a0903dc23c18" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebServices/PublicacionesWS?xsd=1" />
+    <MetadataFile FileName="PublicacionesWS.xsd" MetadataType="Schema" ID="dc691e81-9a21-4412-81c2-4f006ba6e3e6" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebServices/PublicacionesWS?xsd=1" />
+    <MetadataFile FileName="PublicacionesWS.wsdl" MetadataType="Wsdl" ID="16331a38-e810-4536-8a5b-048aaae9f799" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebServices/PublicacionesWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

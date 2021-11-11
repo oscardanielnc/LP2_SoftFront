@@ -55,6 +55,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.lblCrearPublicación = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.panelPublicacionesGenerales = new System.Windows.Forms.Panel();
+            this.panelCursosrequeridos = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargasExtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLibros)).BeginInit();
@@ -299,6 +300,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             this.panel4.AutoScroll = true;
             this.panel4.Controls.Add(this.panelPublicacionesGenerales);
+            this.panel4.Controls.Add(this.panelCursosrequeridos);
             this.panel4.Controls.Add(this.panelCrearPublicacion);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.lblLP2NombreCurso);
@@ -352,6 +354,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.panelPublicacionesGenerales.Name = "panelPublicacionesGenerales";
             this.panelPublicacionesGenerales.Size = new System.Drawing.Size(408, 372);
             this.panelPublicacionesGenerales.TabIndex = 20;
+            // 
+            // panelPublicacionesGenerales
+            // 
             this.panelCursosrequeridos.AutoSize = true;
             this.panelCursosrequeridos.Location = new System.Drawing.Point(253, 190);
             this.panelCursosrequeridos.MaximumSize = new System.Drawing.Size(315, 60);
@@ -414,5 +419,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private System.Windows.Forms.Label lblCrearPublicación;
         private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.Panel panelPublicacionesGenerales;
+        private System.Windows.Forms.Panel panelCursosrequeridos;
     }
 }

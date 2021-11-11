@@ -28,13 +28,23 @@ namespace LP2Soft.Eventos
             txtContenido.Text = e.contenido;
             lblZoom.Text = e.enlaceZoom;
             lblFechaRealizacion.Text = e.fechaDelEvento.ToString("dd/MMMM/yyyy");
-            int hhi,mmi,hhf,mmf;
+            int hhi, mmi, hhf, mmf;
             hhi = e.horaInicio / 100;
             mmi = e.horaInicio % 100;
             hhf = e.horaFin / 100;
             mmf = e.horaFin % 100;
-            lblHora.Text =hhi.ToString() + ":"+mmi.ToString() + " - "+ hhf.ToString() + ":" + mmf.ToString();
-            
+
+            string cadena = "";
+            if (hhi < 10) cadena += "0";
+            cadena += hhi.ToString() + ":";
+            if (mmi < 10) cadena += "0";
+            cadena += mmi.ToString() + " - ";
+
+            if (hhf < 10) cadena += "0";
+            cadena += hhf.ToString() + ":";
+            if (mmf < 10) cadena += "0";
+            cadena += mmf.ToString();
+
             if (e.archivo != null)
             {
                 MemoryStream ms1 = new MemoryStream(e.archivo);

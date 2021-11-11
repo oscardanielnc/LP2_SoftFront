@@ -41,7 +41,20 @@ namespace LP2Soft.Eventos
             mmi = e.horaInicio % 100;
             hhf = e.horaFin / 100;
             mmf = e.horaFin % 100;
-            lblHoraEvento.Text = hhi.ToString() + ":" + mmi.ToString() + " - " + hhf.ToString() + ":" + mmf.ToString();
+
+            string cadena = "";
+            if (hhi < 10) cadena += "0";
+            cadena += hhi.ToString() + ":";
+            if (mmi < 10) cadena += "0";
+            cadena += mmi.ToString() + " - ";
+
+            if (hhf < 10) cadena += "0";
+            cadena += hhf.ToString() + ":";
+            if (mmf < 10) cadena += "0";
+            cadena += mmf.ToString();
+
+            lblHoraEvento.Text = cadena;
+
             lblCantidadLikes.Text = e.likes.ToString();
             lblCantidadComentarios.Text = e.numeroComent.ToString();
 
