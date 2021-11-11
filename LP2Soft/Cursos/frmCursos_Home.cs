@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2Soft.Home;
+using LP2Soft.CalculadorNotas;
 
 namespace LP2Soft.Cursos
 {
@@ -422,6 +423,11 @@ namespace LP2Soft.Cursos
         {
             frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(10);
             addPanel(frmCursos_Ciclo);
+        }
+
+        private void btnCaclculadorNotas_Click(object sender, EventArgs e)
+        {
+            frmHome.abrirFormulario(new frmCalculadorNotas());
         }
     }
 

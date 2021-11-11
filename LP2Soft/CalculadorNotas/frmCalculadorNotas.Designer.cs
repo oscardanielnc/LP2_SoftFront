@@ -31,7 +31,7 @@ namespace LP2Soft.CalculadorNotas
         {
             this.panelDetalles = new System.Windows.Forms.Panel();
             this.checkBoxEliminarNotaBaja = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNotaMinima = new System.Windows.Forms.Label();
             this.lblNotaMin = new System.Windows.Forms.Label();
             this.lblPromedio = new System.Windows.Forms.Label();
             this.lblProm = new System.Windows.Forms.Label();
@@ -46,7 +46,6 @@ namespace LP2Soft.CalculadorNotas
             this.panelNotas = new System.Windows.Forms.Panel();
             this.btnCalcular = new LP2Soft.Asesor.BotonChevere();
             this.btnAgregar = new LP2Soft.Asesor.BotonChevere();
-            this.lblMsg = new System.Windows.Forms.Label();
             this.panelDetalles.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,11 +53,10 @@ namespace LP2Soft.CalculadorNotas
             // 
             this.panelDetalles.AutoScroll = true;
             this.panelDetalles.BackColor = System.Drawing.SystemColors.Control;
-            this.panelDetalles.Controls.Add(this.lblMsg);
             this.panelDetalles.Controls.Add(this.checkBoxEliminarNotaBaja);
             this.panelDetalles.Controls.Add(this.btnCalcular);
             this.panelDetalles.Controls.Add(this.btnAgregar);
-            this.panelDetalles.Controls.Add(this.label1);
+            this.panelDetalles.Controls.Add(this.lblNotaMinima);
             this.panelDetalles.Controls.Add(this.lblNotaMin);
             this.panelDetalles.Controls.Add(this.lblPromedio);
             this.panelDetalles.Controls.Add(this.lblProm);
@@ -84,17 +82,17 @@ namespace LP2Soft.CalculadorNotas
             this.checkBoxEliminarNotaBaja.TabIndex = 33;
             this.checkBoxEliminarNotaBaja.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblNotaMinima
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(663, 106);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "9.00";
+            this.lblNotaMinima.AutoSize = true;
+            this.lblNotaMinima.BackColor = System.Drawing.SystemColors.Control;
+            this.lblNotaMinima.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotaMinima.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblNotaMinima.Location = new System.Drawing.Point(663, 106);
+            this.lblNotaMinima.Name = "lblNotaMinima";
+            this.lblNotaMinima.Size = new System.Drawing.Size(44, 20);
+            this.lblNotaMinima.TabIndex = 27;
+            this.lblNotaMinima.Text = "0.00";
             // 
             // lblNotaMin
             // 
@@ -114,9 +112,9 @@ namespace LP2Soft.CalculadorNotas
             this.lblPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPromedio.Location = new System.Drawing.Point(321, 103);
             this.lblPromedio.Name = "lblPromedio";
-            this.lblPromedio.Size = new System.Drawing.Size(54, 20);
+            this.lblPromedio.Size = new System.Drawing.Size(44, 20);
             this.lblPromedio.TabIndex = 25;
-            this.lblPromedio.Text = "14.25";
+            this.lblPromedio.Text = "0.00";
             // 
             // lblProm
             // 
@@ -257,15 +255,6 @@ namespace LP2Soft.CalculadorNotas
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // lblMsg
-            // 
-            this.lblMsg.AutoSize = true;
-            this.lblMsg.Location = new System.Drawing.Point(20, 79);
-            this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(138, 13);
-            this.lblMsg.TabIndex = 34;
-            this.lblMsg.Text = "Debe llenar todos los capos";
-            // 
             // frmCalculadorNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,13 +284,12 @@ namespace LP2Soft.CalculadorNotas
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNotaMinima;
         private System.Windows.Forms.Label lblNotaMin;
         private System.Windows.Forms.Label lblPromedio;
         private System.Windows.Forms.Label lblProm;
         private Asesor.BotonChevere btnAgregar;
         private Asesor.BotonChevere btnCalcular;
         private System.Windows.Forms.CheckBox checkBoxEliminarNotaBaja;
-        private System.Windows.Forms.Label lblMsg;
     }
 }

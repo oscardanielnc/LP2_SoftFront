@@ -19,7 +19,6 @@ namespace LP2Soft.CalculadorNotas
             _notasFinales = new BindingList<regNotas>();
             _cantidadRegistros = 0;
             InitializeComponent();
-            lblMsg.Visible = false;
             agregarNuevoRegistro("Examen Final", 2, 1, false);
         }
         private void agregarNuevoRegistro(string nombre, int peso, int cantidad, bool eliminarMasBaja)
@@ -37,46 +36,73 @@ namespace LP2Soft.CalculadorNotas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (txtNombre.Text != "" && txtCantidad.Text!="" && txtPeso.Text!="")
             {
-                agregarNuevoRegistro(txtNombre.Text, Int32.Parse(txtPeso.Text),
-                Int32.Parse(txtCantidad.Text), checkBoxEliminarNotaBaja.Checked);
+                int n;
+                if (Int32.TryParse(txtCantidad.Text, out n) && Int32.TryParse(txtPeso.Text, out n)
+                    && Int32.Parse(txtCantidad.Text)>0 && Int32.Parse(txtPeso.Text) > 0)
+                {
+                    if(Int32.Parse(txtCantidad.Text)==1 && checkBoxEliminarNotaBaja.Checked)
+                    {
+                        MessageBox.Show("No puede eliminar la nota más baja si solo tiene una nota.", "Warning",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    } else
+                    {
+                        agregarNuevoRegistro(txtNombre.Text, Int32.Parse(txtPeso.Text),
+                            Int32.Parse(txtCantidad.Text), checkBoxEliminarNotaBaja.Checked);
+                        txtNombre.Text = "";
+                        txtCantidad.Text = "";
+                        txtPeso.Text = "";
+
+                    }
+                } else
+                {
+                    MessageBox.Show("Los campos de cantidad y peso del registro necesitan ser valores enteros positivos.", "Warning",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            catch
+            else
             {
-                lblMsg.Visible = true;
+                MessageBox.Show("Debe de completar todos los campos para poder agragar un nuevo registro de notas.", "Warning",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            int sumaPesos = 0,pesoFinal=0,flag=0;
-            float notaFinal;
-            float total = 0.0f,promedioFinal,totalFinal=0.0f,mevoyFinal;
+            if(todasLasNotasValidas())
+            {
+                int sumaPesos = 0,pesoFinal=0,flag=0;
+                float total = 0.0f,promedioFinal,totalFinal=0.0f,mevoyFinal;
+                foreach (regNotas reg in _notasFinales)
+                {
+                    total = total + reg.PesoRegistro * reg.calcularNotaFinal();
+
+                    sumaPesos = reg.PesoRegistro + sumaPesos;
+                    if (flag == 0)
+                    {
+                        pesoFinal = reg.PesoRegistro;
+                        flag++;
+                    }
+                    else
+                       totalFinal = totalFinal + reg.PesoRegistro * reg.calcularNotaFinal();
+                
+                }
+            
+                promedioFinal = total / sumaPesos;
+                mevoyFinal = (10.5f * sumaPesos - totalFinal)/pesoFinal;
+                lblPromedio.Text = promedioFinal.ToString("0.00");
+                lblNotaMinima.Text = mevoyFinal.ToString("0.00");
+            }
+        }
+        private bool todasLasNotasValidas()
+        {
             foreach (regNotas reg in _notasFinales)
             {
-                total = total + reg.PesoRegistro * reg.calcularNotaFinal();
-
-                sumaPesos = reg.PesoRegistro + sumaPesos;
-                if (flag == 0)
-                {
-                    pesoFinal = reg.PesoRegistro;
-                    flag++;
-                }
-                else
-                {
-                   totalFinal = totalFinal + reg.PesoRegistro * reg.calcularNotaFinal();
-                    
-                }
-                
+                if (!reg.consultarValoresValidos()) return false;
             }
-            
-            promedioFinal = total / sumaPesos;
-            mevoyFinal = (10.5f * sumaPesos - totalFinal)/pesoFinal;
-            lblPromedio.Text = promedioFinal.ToString();
-            label1.Text = mevoyFinal.ToString();
-            
+            return true;
         }
     }
 }

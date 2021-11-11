@@ -12,7 +12,6 @@ namespace LP2Soft.CalculadorNotas
 {
     public partial class regNotas : Form
     {
-        private int _notaDelRegistro;
         private int _pesoRegistro;
 
         private bool _eliminaMasbaja;
@@ -23,13 +22,12 @@ namespace LP2Soft.CalculadorNotas
             _pesoRegistro = peso;
             _eliminaMasbaja = eliminarMasBaja;
             InitializeComponent();
-            lblNombre.Text = nombre + " (" + peso.ToString() + ")";
-            if (eliminarMasBaja) lblNombre.Text = lblNombre.Text + " *";
+            lblNombre.Text = (eliminarMasBaja) ? nombre + " *": nombre;
+            txtPeso.Text = peso.ToString();
             generarCamposDeNotas(cantidad);
-            
         }
 
-        public int PesoRegistro { get => _pesoRegistro; set => _pesoRegistro = value; }
+        public int PesoRegistro { get => Int32.Parse(txtPeso.Text); set => _pesoRegistro = value; }
 
         public float calcularNotaFinal()
         {
@@ -64,8 +62,28 @@ namespace LP2Soft.CalculadorNotas
                 return sumaNotas / cant;
 
             }
-            
+        }
+        public bool consultarValoresValidos()
+        {
+            int n;
+            if(Int32.TryParse(txtPeso.Text, out n) && Int32.Parse(txtPeso.Text) > 0)
+            {
+                foreach (TextBox txt in _notas)
+                {
+                    if (!(Int32.TryParse(txt.Text, out n) && Int32.Parse(txt.Text) >= 0 && Int32.Parse(txt.Text) <= 20))
+                    {
+                        MessageBox.Show("No todas las notas ingresadas contienen valores enteros entre 0 y 20", "Warning",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
 
+            } else {
+                MessageBox.Show("El peso del registro debería ser un número entero positivo.", "Warning",
+                               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
         
 

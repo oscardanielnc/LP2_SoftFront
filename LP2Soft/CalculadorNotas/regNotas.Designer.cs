@@ -31,6 +31,7 @@ namespace LP2Soft.CalculadorNotas
         {
             this.lblNombre = new System.Windows.Forms.Label();
             this.panelNotas = new System.Windows.Forms.Panel();
+            this.txtPeso = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -40,9 +41,9 @@ namespace LP2Soft.CalculadorNotas
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(12, 18);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(120, 16);
+            this.lblNombre.Size = new System.Drawing.Size(88, 16);
             this.lblNombre.TabIndex = 19;
-            this.lblNombre.Text = "Laboratorio (3) *";
+            this.lblNombre.Text = "Laboratorio";
             // 
             // panelNotas
             // 
@@ -53,12 +54,22 @@ namespace LP2Soft.CalculadorNotas
             this.panelNotas.Size = new System.Drawing.Size(168, 45);
             this.panelNotas.TabIndex = 20;
             // 
+            // txtPeso
+            // 
+            this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeso.Location = new System.Drawing.Point(123, 14);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(30, 24);
+            this.txtPeso.TabIndex = 23;
+            this.txtPeso.Text = "1";
+            // 
             // regNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(180, 104);
+            this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.panelNotas);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -73,5 +84,6 @@ namespace LP2Soft.CalculadorNotas
 
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelNotas;
+        private System.Windows.Forms.TextBox txtPeso;
     }
 }

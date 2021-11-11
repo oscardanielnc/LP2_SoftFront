@@ -61,6 +61,7 @@ namespace LP2Soft.Cursos
             this.label3 = new System.Windows.Forms.Label();
             this.lblVerde = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCaclculadorNotas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP1CorazonVacio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2CorazonVacio)).BeginInit();
@@ -372,7 +373,7 @@ namespace LP2Soft.Cursos
             // lvlNoPuedeLlevar
             // 
             this.lvlNoPuedeLlevar.AutoSize = true;
-            this.lvlNoPuedeLlevar.Location = new System.Drawing.Point(588, 24);
+            this.lvlNoPuedeLlevar.Location = new System.Drawing.Point(509, 24);
             this.lvlNoPuedeLlevar.Name = "lvlNoPuedeLlevar";
             this.lvlNoPuedeLlevar.Size = new System.Drawing.Size(82, 13);
             this.lvlNoPuedeLlevar.TabIndex = 23;
@@ -382,7 +383,7 @@ namespace LP2Soft.Cursos
             // 
             this.lblAzul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
             this.lblAzul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAzul.Location = new System.Drawing.Point(411, 25);
+            this.lblAzul.Location = new System.Drawing.Point(332, 25);
             this.lblAzul.Name = "lblAzul";
             this.lblAzul.Size = new System.Drawing.Size(13, 12);
             this.lblAzul.TabIndex = 23;
@@ -390,7 +391,7 @@ namespace LP2Soft.Cursos
             // lblPuedeLlevar
             // 
             this.lblPuedeLlevar.AutoSize = true;
-            this.lblPuedeLlevar.Location = new System.Drawing.Point(443, 24);
+            this.lblPuedeLlevar.Location = new System.Drawing.Point(364, 24);
             this.lblPuedeLlevar.Name = "lblPuedeLlevar";
             this.lblPuedeLlevar.Size = new System.Drawing.Size(66, 13);
             this.lblPuedeLlevar.TabIndex = 22;
@@ -400,7 +401,7 @@ namespace LP2Soft.Cursos
             // 
             this.lblRojo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblRojo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRojo.Location = new System.Drawing.Point(550, 25);
+            this.lblRojo.Location = new System.Drawing.Point(471, 25);
             this.lblRojo.Name = "lblRojo";
             this.lblRojo.Size = new System.Drawing.Size(13, 12);
             this.lblRojo.TabIndex = 21;
@@ -408,7 +409,7 @@ namespace LP2Soft.Cursos
             // lblAprobado
             // 
             this.lblAprobado.AutoSize = true;
-            this.lblAprobado.Location = new System.Drawing.Point(297, 25);
+            this.lblAprobado.Location = new System.Drawing.Point(218, 25);
             this.lblAprobado.Name = "lblAprobado";
             this.lblAprobado.Size = new System.Drawing.Size(53, 13);
             this.lblAprobado.TabIndex = 21;
@@ -418,14 +419,14 @@ namespace LP2Soft.Cursos
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(221)))), ((int)(((byte)(125)))));
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(262, 25);
+            this.label3.Location = new System.Drawing.Point(183, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 12);
             this.label3.TabIndex = 22;
             // 
             // lblVerde
             // 
-            this.lblVerde.Location = new System.Drawing.Point(280, 0);
+            this.lblVerde.Location = new System.Drawing.Point(192, 0);
             this.lblVerde.Name = "lblVerde";
             this.lblVerde.Size = new System.Drawing.Size(390, 38);
             this.lblVerde.TabIndex = 5;
@@ -434,6 +435,7 @@ namespace LP2Soft.Cursos
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnCaclculadorNotas);
             this.panel2.Controls.Add(this.lvlNoPuedeLlevar);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.btnMaterial);
@@ -448,6 +450,16 @@ namespace LP2Soft.Cursos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(807, 466);
             this.panel2.TabIndex = 24;
+            // 
+            // btnCaclculadorNotas
+            // 
+            this.btnCaclculadorNotas.Location = new System.Drawing.Point(661, 2);
+            this.btnCaclculadorNotas.Name = "btnCaclculadorNotas";
+            this.btnCaclculadorNotas.Size = new System.Drawing.Size(143, 35);
+            this.btnCaclculadorNotas.TabIndex = 24;
+            this.btnCaclculadorNotas.Text = "Calculador de notas";
+            this.btnCaclculadorNotas.UseVisualStyleBackColor = true;
+            this.btnCaclculadorNotas.Click += new System.EventHandler(this.btnCaclculadorNotas_Click);
             // 
             // frmCursos_Home
             // 
@@ -508,5 +520,6 @@ namespace LP2Soft.Cursos
         private System.Windows.Forms.PictureBox pictureAgregarLP3;
         private System.Windows.Forms.Button btnLP3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnCaclculadorNotas;
     }
 }
