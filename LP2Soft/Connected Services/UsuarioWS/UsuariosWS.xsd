@@ -77,6 +77,7 @@
       <xs:element name="bloqueado" type="xs:boolean" />
       <xs:element minOccurs="0" name="contenido" type="xs:string" />
       <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idCurso" type="xs:int" />
       <xs:element name="idPost" type="xs:int" />
       <xs:element name="likes" type="xs:int" />
       <xs:element name="numeroComent" type="xs:int" />
@@ -210,17 +211,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarReseniaAsesor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarReseniaAsesorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigo">
+  <xs:complexType name="mostrarUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="correoCodigo" type="xs:string" />
       <xs:element name="isCode" type="xs:int" />
@@ -229,6 +220,16 @@
   <xs:complexType name="mostrarUsuarioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarReseniaAsesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarReseniaAsesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="esAmigo">

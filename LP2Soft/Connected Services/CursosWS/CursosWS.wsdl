@@ -8,14 +8,8 @@
   <message name="listarProfesorXCurso">
     <part name="parameters" element="tns:listarProfesorXCurso" />
   </message>
-  <message name="listaXcicloResponse">
-    <part name="parameters" element="tns:listaXcicloResponse" />
-  </message>
-  <message name="listarCursoProfesor">
-    <part name="parameters" element="tns:listarCursoProfesor" />
-  </message>
-  <message name="listarCursoProfesorResponse">
-    <part name="parameters" element="tns:listarCursoProfesorResponse" />
+  <message name="listarProfesorXCursoResponse">
+    <part name="parameters" element="tns:listarProfesorXCursoResponse" />
   </message>
   <message name="listarProfesoresNombre">
     <part name="parameters" element="tns:listarProfesoresNombre" />
@@ -41,14 +35,16 @@
   <message name="listaXcicloResponse">
     <part name="parameters" element="tns:listaXcicloResponse" />
   </message>
+  <message name="listarCursoProfesor">
+    <part name="parameters" element="tns:listarCursoProfesor" />
+  </message>
+  <message name="listarCursoProfesorResponse">
+    <part name="parameters" element="tns:listarCursoProfesorResponse" />
+  </message>
   <portType name="CursosWS">
     <operation name="listarProfesorXCurso">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoRequest" message="tns:listarProfesorXCurso" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoResponse" message="tns:listarProfesorXCursoResponse" />
-    </operation>
-    <operation name="listarCursoProfesor">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorRequest" message="tns:listarCursoProfesor" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorResponse" message="tns:listarCursoProfesorResponse" />
     </operation>
     <operation name="listarProfesoresNombre">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesoresNombreRequest" message="tns:listarProfesoresNombre" />
@@ -66,19 +62,14 @@
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloRequest" message="tns:listaXciclo" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloResponse" message="tns:listaXcicloResponse" />
     </operation>
+    <operation name="listarCursoProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorRequest" message="tns:listarCursoProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorResponse" message="tns:listarCursoProfesorResponse" />
+    </operation>
   </portType>
   <binding name="CursosWSPortBinding" type="tns:CursosWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="listarProfesorXCurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCursoProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,6 +106,15 @@
       </output>
     </operation>
     <operation name="listaXciclo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursoProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
