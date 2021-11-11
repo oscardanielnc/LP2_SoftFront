@@ -29,6 +29,7 @@ namespace LP2Soft.Home
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@ namespace LP2Soft.Home
             this.btnMensajes = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnNotificaciones = new System.Windows.Forms.PictureBox();
+            this.toolTipHome = new System.Windows.Forms.ToolTip(this.components);
             this.panelMenu.SuspendLayout();
             this.subPanelEventos.SuspendLayout();
             this.subPanelCursos.SuspendLayout();
@@ -417,6 +419,7 @@ namespace LP2Soft.Home
             this.btnMensajes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMensajes.TabIndex = 19;
             this.btnMensajes.TabStop = false;
+            this.toolTipHome.SetToolTip(this.btnMensajes, "Mensajes");
             this.btnMensajes.Click += new System.EventHandler(this.btnMensajes_Click);
             // 
             // btnBuscar
@@ -429,6 +432,7 @@ namespace LP2Soft.Home
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.TabStop = false;
+            this.toolTipHome.SetToolTip(this.btnBuscar, "Buscar usuarios");
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNotificaciones
@@ -441,6 +445,7 @@ namespace LP2Soft.Home
             this.btnNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnNotificaciones.TabIndex = 18;
             this.btnNotificaciones.TabStop = false;
+            this.toolTipHome.SetToolTip(this.btnNotificaciones, "Notificaciones");
             this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
             // frmHome
@@ -493,5 +498,6 @@ namespace LP2Soft.Home
         private System.Windows.Forms.Button btnEventosAgendados;
         private System.Windows.Forms.Button btnVerEventos;
         private System.Windows.Forms.Button btnEventos;
+        private System.Windows.Forms.ToolTip toolTipHome;
     }
 }

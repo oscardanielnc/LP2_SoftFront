@@ -29,6 +29,7 @@ namespace LP2Soft.Perfil
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panelGeneral = new System.Windows.Forms.Panel();
             this.lblUniversidad = new System.Windows.Forms.Label();
@@ -59,6 +60,7 @@ namespace LP2Soft.Perfil
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSubirPerfil = new System.Windows.Forms.PictureBox();
             this.ofdPerfil = new System.Windows.Forms.OpenFileDialog();
+            this.toolTipEditarPerfil = new System.Windows.Forms.ToolTip(this.components);
             this.panelContenido.SuspendLayout();
             this.panelGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVerContrasenia)).BeginInit();
@@ -131,6 +133,7 @@ namespace LP2Soft.Perfil
             this.btnVerContrasenia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnVerContrasenia.TabIndex = 61;
             this.btnVerContrasenia.TabStop = false;
+            this.toolTipEditarPerfil.SetToolTip(this.btnVerContrasenia, "Ver contraseña");
             this.btnVerContrasenia.Click += new System.EventHandler(this.btnVerContrasenia_Click);
             // 
             // lblInfGeneral
@@ -381,6 +384,7 @@ namespace LP2Soft.Perfil
             this.btnSubirPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSubirPerfil.TabIndex = 62;
             this.btnSubirPerfil.TabStop = false;
+            this.toolTipEditarPerfil.SetToolTip(this.btnSubirPerfil, "Subir imagen");
             this.btnSubirPerfil.Click += new System.EventHandler(this.btnSubirPerfil_Click);
             // 
             // ofdPerfil
@@ -451,5 +455,6 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Panel panelGeneral;
         private System.Windows.Forms.PictureBox btnSubirPerfil;
         private System.Windows.Forms.OpenFileDialog ofdPerfil;
+        private System.Windows.Forms.ToolTip toolTipEditarPerfil;
     }
 }

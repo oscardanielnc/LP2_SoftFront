@@ -29,10 +29,12 @@ namespace LP2Soft.Perfil
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtBusquedaAmigos = new System.Windows.Forms.TextBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.panelAmigos = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.toolTipAmigos = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +77,7 @@ namespace LP2Soft.Perfil
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.TabStop = false;
+            this.toolTipAmigos.SetToolTip(this.btnBuscar, "Buscar amigos");
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmPerfil_Amigos
@@ -103,5 +106,6 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Panel panelAmigos;
         private System.Windows.Forms.PictureBox btnBuscar;
+        private System.Windows.Forms.ToolTip toolTipAmigos;
     }
 }

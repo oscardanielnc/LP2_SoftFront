@@ -29,6 +29,7 @@ namespace LP2Soft.Mensajes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMensajeChat));
             this.imgAmigo = new System.Windows.Forms.PictureBox();
             this.panelMensajes = new System.Windows.Forms.Panel();
@@ -36,6 +37,7 @@ namespace LP2Soft.Mensajes
             this.btnEnviarMensaje = new System.Windows.Forms.PictureBox();
             this.txtMensaje = new System.Windows.Forms.TextBox();
             this.lblNombreAmigo = new System.Windows.Forms.Label();
+            this.toolTipMensajes = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.imgAmigo)).BeginInit();
             this.panelMensajes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEnviarMensaje)).BeginInit();
@@ -81,6 +83,7 @@ namespace LP2Soft.Mensajes
             this.btnEnviarMensaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEnviarMensaje.TabIndex = 18;
             this.btnEnviarMensaje.TabStop = false;
+            this.toolTipMensajes.SetToolTip(this.btnEnviarMensaje, "Enviar mensaje");
             this.btnEnviarMensaje.Click += new System.EventHandler(this.btnEnviarMensaje_Click);
             // 
             // txtMensaje
@@ -134,5 +137,6 @@ namespace LP2Soft.Mensajes
         private System.Windows.Forms.PictureBox btnEnviarMensaje;
         private System.Windows.Forms.Label lblNombreAmigo;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.ToolTip toolTipMensajes;
     }
 }

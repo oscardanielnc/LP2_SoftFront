@@ -50,6 +50,7 @@ namespace LP2Soft.Perfil
             this.btnHacerAdmin = new System.Windows.Forms.PictureBox();
             this.imgAdmin = new System.Windows.Forms.PictureBox();
             this.lblTituloNombre = new System.Windows.Forms.Label();
+            this.tooltipPerfil = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
@@ -178,6 +179,7 @@ namespace LP2Soft.Perfil
             this.btnAmigo.Name = "btnAmigo";
             this.btnAmigo.Size = new System.Drawing.Size(30, 30);
             this.btnAmigo.TabIndex = 14;
+            this.tooltipPerfil.SetToolTip(this.btnAmigo, "Agregar/eliminar amigo");
             this.btnAmigo.Click += new System.EventHandler(this.btnAmigo_Click);
             // 
             // btnMensaje
@@ -190,6 +192,7 @@ namespace LP2Soft.Perfil
             this.btnMensaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMensaje.TabIndex = 13;
             this.btnMensaje.TabStop = false;
+            this.tooltipPerfil.SetToolTip(this.btnMensaje, "Abrir chat");
             this.btnMensaje.Click += new System.EventHandler(this.btnMensaje_Click);
             // 
             // imgPerfil
@@ -233,7 +236,7 @@ namespace LP2Soft.Perfil
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
             this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
             this.btnAceptar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnAceptar.BorderRadius = 6;
+            this.btnAceptar.BorderRadius = 5;
             this.btnAceptar.BorderSize = 0;
             this.btnAceptar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
@@ -255,7 +258,7 @@ namespace LP2Soft.Perfil
             this.btnRechazar.BackColor = System.Drawing.Color.White;
             this.btnRechazar.BackgroundColor = System.Drawing.Color.White;
             this.btnRechazar.BorderColor = System.Drawing.Color.White;
-            this.btnRechazar.BorderRadius = 6;
+            this.btnRechazar.BorderRadius = 5;
             this.btnRechazar.BorderSize = 0;
             this.btnRechazar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRechazar.FlatAppearance.BorderSize = 0;
@@ -277,7 +280,7 @@ namespace LP2Soft.Perfil
             this.btnCancelarSoli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
             this.btnCancelarSoli.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
             this.btnCancelarSoli.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnCancelarSoli.BorderRadius = 6;
+            this.btnCancelarSoli.BorderRadius = 5;
             this.btnCancelarSoli.BorderSize = 0;
             this.btnCancelarSoli.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancelarSoli.FlatAppearance.BorderSize = 0;
@@ -305,6 +308,8 @@ namespace LP2Soft.Perfil
             this.btnHacerAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHacerAdmin.TabIndex = 17;
             this.btnHacerAdmin.TabStop = false;
+            this.tooltipPerfil.SetToolTip(this.btnHacerAdmin, "Hacer administrador");
+            this.btnHacerAdmin.Click += new System.EventHandler(this.btnHacerAdmin_Click);
             // 
             // imgAdmin
             // 
@@ -317,6 +322,7 @@ namespace LP2Soft.Perfil
             this.imgAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgAdmin.TabIndex = 16;
             this.imgAdmin.TabStop = false;
+            this.tooltipPerfil.SetToolTip(this.imgAdmin, "Insignia de administrador");
             // 
             // lblTituloNombre
             // 
@@ -328,6 +334,10 @@ namespace LP2Soft.Perfil
             this.lblTituloNombre.Size = new System.Drawing.Size(123, 20);
             this.lblTituloNombre.TabIndex = 7;
             this.lblTituloNombre.Text = "Oscar Navarro";
+            // 
+            // tooltipPerfil
+            // 
+            this.tooltipPerfil.Tag = "";
             // 
             // frmPerfil
             // 
@@ -377,5 +387,6 @@ namespace LP2Soft.Perfil
         private Asesor.BotonChevere btnAceptar;
         private Asesor.BotonChevere btnRechazar;
         private Asesor.BotonChevere btnCancelarSoli;
+        private System.Windows.Forms.ToolTip tooltipPerfil;
     }
 }

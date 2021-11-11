@@ -1081,5 +1081,8 @@
   <ItemGroup>
     <None Include="Resources\chevrons-up-solid-24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-4112898_960_720.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

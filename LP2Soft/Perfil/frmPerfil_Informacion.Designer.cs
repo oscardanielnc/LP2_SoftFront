@@ -29,6 +29,7 @@ namespace LP2Soft.Perfil
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblInfGeneral = new System.Windows.Forms.Label();
             this.lblUniversidad = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -47,14 +48,15 @@ namespace LP2Soft.Perfil
             this.infoPrecio = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblPrecioHora = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.PictureBox();
-            this.imgVineta2 = new System.Windows.Forms.PictureBox();
-            this.imgVineta1 = new System.Windows.Forms.PictureBox();
             this.panelAsesor = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).BeginInit();
+            this.imgVineta2 = new System.Windows.Forms.PictureBox();
+            this.btnEditar = new System.Windows.Forms.PictureBox();
+            this.imgVineta1 = new System.Windows.Forms.PictureBox();
+            this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
             this.panelAsesor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInfGeneral
@@ -240,37 +242,6 @@ namespace LP2Soft.Perfil
             this.lblPrecioHora.TabIndex = 31;
             this.lblPrecioHora.Text = "30.00";
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = global::LP2Soft.Properties.Resources.cog;
-            this.btnEditar.Location = new System.Drawing.Point(762, 12);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(25, 25);
-            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditar.TabIndex = 33;
-            this.btnEditar.TabStop = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // imgVineta2
-            // 
-            this.imgVineta2.Image = global::LP2Soft.Properties.Resources.book;
-            this.imgVineta2.Location = new System.Drawing.Point(16, 15);
-            this.imgVineta2.Name = "imgVineta2";
-            this.imgVineta2.Size = new System.Drawing.Size(20, 20);
-            this.imgVineta2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgVineta2.TabIndex = 26;
-            this.imgVineta2.TabStop = false;
-            // 
-            // imgVineta1
-            // 
-            this.imgVineta1.Image = global::LP2Soft.Properties.Resources.book;
-            this.imgVineta1.Location = new System.Drawing.Point(31, 14);
-            this.imgVineta1.Name = "imgVineta1";
-            this.imgVineta1.Size = new System.Drawing.Size(20, 20);
-            this.imgVineta1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgVineta1.TabIndex = 10;
-            this.imgVineta1.TabStop = false;
-            // 
             // panelAsesor
             // 
             this.panelAsesor.AutoSize = true;
@@ -285,6 +256,38 @@ namespace LP2Soft.Perfil
             this.panelAsesor.Name = "panelAsesor";
             this.panelAsesor.Size = new System.Drawing.Size(799, 106);
             this.panelAsesor.TabIndex = 63;
+            // 
+            // imgVineta2
+            // 
+            this.imgVineta2.Image = global::LP2Soft.Properties.Resources.book;
+            this.imgVineta2.Location = new System.Drawing.Point(16, 15);
+            this.imgVineta2.Name = "imgVineta2";
+            this.imgVineta2.Size = new System.Drawing.Size(20, 20);
+            this.imgVineta2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgVineta2.TabIndex = 26;
+            this.imgVineta2.TabStop = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = global::LP2Soft.Properties.Resources.pencil_4112898_960_720;
+            this.btnEditar.Location = new System.Drawing.Point(766, 8);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(26, 26);
+            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEditar.TabIndex = 33;
+            this.btnEditar.TabStop = false;
+            this.toolTipInfo.SetToolTip(this.btnEditar, "Editar información");
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // imgVineta1
+            // 
+            this.imgVineta1.Image = global::LP2Soft.Properties.Resources.book;
+            this.imgVineta1.Location = new System.Drawing.Point(31, 14);
+            this.imgVineta1.Name = "imgVineta1";
+            this.imgVineta1.Size = new System.Drawing.Size(20, 20);
+            this.imgVineta1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgVineta1.TabIndex = 10;
+            this.imgVineta1.TabStop = false;
             // 
             // frmPerfil_Informacion
             // 
@@ -313,11 +316,11 @@ namespace LP2Soft.Perfil
             this.MinimumSize = new System.Drawing.Size(0, 250);
             this.Name = "frmPerfil_Informacion";
             this.Text = "frmPerfil_Informacion";
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).EndInit();
             this.panelAsesor.ResumeLayout(false);
             this.panelAsesor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +350,6 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Label lblPrecioHora;
         private System.Windows.Forms.PictureBox btnEditar;
         private System.Windows.Forms.Panel panelAsesor;
+        private System.Windows.Forms.ToolTip toolTipInfo;
     }
 }

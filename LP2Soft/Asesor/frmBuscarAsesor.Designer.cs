@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblBuscarAsesor = new System.Windows.Forms.Label();
             this.panelDestacados = new System.Windows.Forms.Panel();
             this.lblAsesoresRecomendados = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnPostularAsesor = new LP2Soft.Asesor.BotonChevere();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelDestacados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -109,6 +111,7 @@
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnBuscar, "Buscar asesores");
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnPostularAsesor
@@ -165,5 +168,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox btnBuscar;
         private BotonChevere btnPostularAsesor;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
