@@ -53,7 +53,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
                     LinkLabel lblNombreCursoReq = new LinkLabel();
                     lblNombreCursoReq.Text = c.nombre;
                     lblNombreCursoReq.Dock = DockStyle.Top;
-                    //panelCursosrequeridos.Controls.Add(lblNombreCursoReq);
+                    panelCursosrequeridos.Controls.Add(lblNombreCursoReq);
                     lblNombreCursoReq.Click += new System.EventHandler((object sender, EventArgs e) => this.verCurso(sender, e, c.idCurso));
                 }
                 lblLP2Descripcion.Text = lblLP2Descripcion.Text.TrimEnd(',');
