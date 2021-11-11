@@ -29,63 +29,45 @@ namespace LP2Soft.Profesor
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLP3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panelCursos = new System.Windows.Forms.Panel();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnLP3
+            // panelCursos
             // 
-            this.btnLP3.BackColor = System.Drawing.Color.DarkGray;
-            this.btnLP3.Location = new System.Drawing.Point(68, 64);
-            this.btnLP3.Name = "btnLP3";
-            this.btnLP3.Size = new System.Drawing.Size(143, 101);
-            this.btnLP3.TabIndex = 11;
-            this.btnLP3.Text = "INF283\r\n\r\n\r\nLenguaje de Programación 3\r\n5.00 Créditos";
-            this.btnLP3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnLP3.UseVisualStyleBackColor = false;
-            this.btnLP3.Click += new System.EventHandler(this.btnLP3_Click);
+            this.panelCursos.AutoSize = true;
+            this.panelCursos.Location = new System.Drawing.Point(62, 95);
+            this.panelCursos.Name = "panelCursos";
+            this.panelCursos.Size = new System.Drawing.Size(680, 163);
+            this.panelCursos.TabIndex = 7;
             // 
-            // button1
+            // lblInfo
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.Location = new System.Drawing.Point(304, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 101);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "INF283\r\n\r\n\r\nLenguaje de Programación 3\r\n5.00 Créditos";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkGray;
-            this.button2.Location = new System.Drawing.Point(541, 64);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 101);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "INF283\r\n\r\n\r\nLenguaje de Programación 3\r\n5.00 Créditos";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Location = new System.Drawing.Point(59, 70);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(137, 13);
+            this.lblInfo.TabIndex = 6;
+            this.lblInfo.Text = "Se encontraron 123 amigos";
             // 
             // frmProfesor_Perfil_Cursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnLP3);
+            this.Controls.Add(this.panelCursos);
+            this.Controls.Add(this.lblInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProfesor_Perfil_Cursos";
             this.Text = "frmProfesor_Perfil_Cursos";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnLP3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panelCursos;
+        private System.Windows.Forms.Label lblInfo;
     }
 }

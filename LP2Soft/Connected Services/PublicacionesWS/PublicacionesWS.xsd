@@ -22,6 +22,16 @@
   <xs:element name="listarPostResponse" type="tns:listarPostResponse" />
   <xs:element name="modificarPost" type="tns:modificarPost" />
   <xs:element name="modificarPostResponse" type="tns:modificarPostResponse" />
+  <xs:complexType name="disminuirLikes">
+    <xs:sequence>
+      <xs:element name="idPost" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="disminuirLikesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarEvento">
     <xs:sequence>
       <xs:element minOccurs="0" name="evento" type="tns:evento" />
@@ -147,6 +157,7 @@
           <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
           <xs:element name="cantidadCalificaiones" type="xs:int" />
           <xs:element minOccurs="0" name="curso" type="tns:curso" />
+          <xs:element name="indice_tipoMaterial" type="xs:int" />
           <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
           <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
           <xs:element name="sumatoriaCalificaiones" type="xs:int" />
@@ -156,16 +167,6 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="insertarEventoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="disminuirLikes">
-    <xs:sequence>
-      <xs:element name="idPost" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="disminuirLikesResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

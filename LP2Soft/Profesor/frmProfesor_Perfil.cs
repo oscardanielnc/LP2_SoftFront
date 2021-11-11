@@ -55,7 +55,7 @@ namespace LP2Soft.Profesor
                 inicializarColorBotones();
                 btnCursos.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuProfesor.Cursos;
-                abrirFormulario(new frmProfesor_Perfil_Cursos());
+                abrirFormulario(new frmProfesor_Perfil_Cursos(_profesor));
             }
 
         }
@@ -67,7 +67,7 @@ namespace LP2Soft.Profesor
                 inicializarColorBotones();
                 btnInformacion.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuProfesor.Informacion;
-                abrirFormulario(new frmProfesor_Perfil_Informacion());
+                abrirFormulario(new frmProfesor_Perfil_Informacion(_profesor));
             }
         }
 

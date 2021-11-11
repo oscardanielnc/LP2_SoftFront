@@ -16,12 +16,12 @@ namespace LP2Soft.Perfil
 {
     public partial class frmPerfil_CursosAsesorados : Form
     {
-        private CursosWS.CursosWSClient _daoCurso;
-        private BindingList<CursosWS.curso> _cursosAsesorados;
+        private UsuarioWS.UsuariosWSClient _daoAsesor;
+        private BindingList<UsuarioWS.curso> _cursosAsesorados;
         public frmPerfil_CursosAsesorados(UsuarioWS.usuario user)
         {
             InitializeComponent();
-            _daoCurso = new CursosWS.CursosWSClient();
+            _daoAsesor = new UsuarioWS.UsuariosWSClient();
             if (user.esAsesor == true)
             {
                 renderizarPanel(user.asesor.idAsesor);
@@ -37,12 +37,12 @@ namespace LP2Soft.Perfil
             _cursosAsesorados = null;
             try
             {
-                _cursosAsesorados = new BindingList<CursosWS.curso>(_daoCurso.listarCursosAsesorados(idAsesor));
+                _cursosAsesorados = new BindingList<UsuarioWS.curso>(_daoAsesor.listarCursosAsesorados(idAsesor));
                 //renderizamos las tarjetas
                 int i = 0;
-                foreach (CursosWS.curso c in _cursosAsesorados)
+                foreach (UsuarioWS.curso c in _cursosAsesorados)
                 {
-                    tarjCursoAsesorado tCurso = new tarjCursoAsesorado(c);
+                    tarjCurso tCurso = new tarjCurso(c,true);
                     tCurso.TopLevel = false;
                     tCurso.Location = generarCoordenadas(i);
                     panelCursos.Controls.Add(tCurso);
@@ -59,8 +59,8 @@ namespace LP2Soft.Perfil
         }
         private Point generarCoordenadas(int i)
         {
-            int x = (i % 2) * 280 + 20;
-            int y = ((int)i / 2) * 160 + 20;
+            int x = (i % 3) * 170 + 20;
+            int y = ((int)i / 3) * 120 + 20;
             return new Point(x, y);
         }
         private void btnAniadirCurso_Click(object sender, EventArgs e)
