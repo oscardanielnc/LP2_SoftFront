@@ -26,6 +26,7 @@ namespace LP2Soft.Home
             {
                 if(txtContrasenia.Text.Equals(txtRepetirContrasenia.Text))
                 {
+                    frmPrincipal.startLoading();
                     _usuario = new UsuarioWS.usuario();
                     _usuario.codigoPUCP = txtCodigo.Text;
                     _usuario.correo = txtCorreo.Text;
@@ -43,6 +44,7 @@ namespace LP2Soft.Home
                     int resultado = _daoUsuario.insertarUsuario(_usuario);
                     if(resultado < 0)
                     {
+                        frmPrincipal.endLoading();
                         // Falla
                         if (resultado == -10)
                             MessageBox.Show("Este código ya se encuentra registrado", "Warning",
@@ -59,6 +61,7 @@ namespace LP2Soft.Home
                         // No hay falla. Registro Exitoso
                         _usuario.idUsuario = resultado;
                         frmPrincipal.abrirFormulario(new frmHome(_usuario));
+                        frmPrincipal.endLoading();
                     }
                 } else
                     MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

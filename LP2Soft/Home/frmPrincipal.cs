@@ -19,6 +19,23 @@ namespace LP2Soft.Home
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
         private static Form _formActivo = null;
         private static Panel _panelPrincipal = null;
+        private static Loading _loading;
+
+        public static void startLoading()
+        {
+            if(_loading==null)
+            {
+                _loading = new Loading();
+                _loading.Show();
+            }
+        }
+        public static void endLoading()
+        {
+            if(_loading!=null)
+                _loading.Close();
+            _loading = null;
+        }
+        
         public frmPrincipal()
         {
             InitializeComponent();

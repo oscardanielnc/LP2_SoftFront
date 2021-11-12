@@ -45,14 +45,13 @@ namespace LP2Soft.Tarjetas
 
         private void btnVerPerfil_Click_1(object sender, EventArgs e)
         {
-            
+            frmPrincipal.startLoading();
             _profesorVer = _daoProfesor.mostrarProfesor(_idProfesor);
             if (_profesorVer != null)
             {
-
+                frmHome.abrirFormulario(new frmProfesor_Perfil(_profesorVer));
             }
-            frmHome.abrirFormulario(new frmProfesor_Perfil(_profesorVer));
-
+            frmPrincipal.endLoading();
         }
 
         private void imgProfesor_Click(object sender, EventArgs e)

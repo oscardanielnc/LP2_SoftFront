@@ -41,10 +41,13 @@ namespace LP2Soft.Tarjetas
 
         private void btnVerPerfil_Click(object sender, EventArgs e)
         {
+            frmPrincipal.startLoading();
             _usuarioVer = _daoUsuario.mostrarUsuario(_codigo, 1);
            
             if (_usuarioVer != null)
                 frmHome.abrirFormulario(new frmPerfil(_usuarioVer));
+
+            frmPrincipal.endLoading();
         }
     }
 }

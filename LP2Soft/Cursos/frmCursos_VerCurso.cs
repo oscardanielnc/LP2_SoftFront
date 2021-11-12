@@ -121,12 +121,13 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         }
         private void verCurso(object sender, EventArgs e, int idCurso)
         {
-
+            frmPrincipal.startLoading();
             _cursoAux = _daoCurso.MostrarCurso(idCurso);
             if (_cursoAux != null)
             {
                 frmHome.abrirFormulario(new frmCursos_VerCurso(_cursoAux));
             }
+            frmPrincipal.endLoading();
         }
         private void btnLP2Ciclo7_Click(object sender, EventArgs e)
         {

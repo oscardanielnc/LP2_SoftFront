@@ -1,4 +1,5 @@
-﻿using LP2Soft.Tarjetas;
+﻿using LP2Soft.Home;
+using LP2Soft.Tarjetas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,8 +61,10 @@ namespace LP2Soft.Perfil
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            frmPrincipal.startLoading();
             panelAmigos.Controls.Clear();
             renderizarBusqueda(txtBusquedaAmigos.Text);
+            frmPrincipal.endLoading();
         }
 
         // Efecto Placeholder

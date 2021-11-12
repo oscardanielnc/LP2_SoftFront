@@ -32,6 +32,7 @@ namespace LP2Soft.Tarjetas
 
         private void btnVerChat_Click(object sender, EventArgs e)
         {
+            frmPrincipal.startLoading();
             UsuarioWS.usuario amigoCast = new UsuarioWS.usuario();
             amigoCast.idUsuario = _ultMensaje.amigo.idUsuario;
             amigoCast.nombre = _ultMensaje.amigo.nombre;
@@ -39,6 +40,7 @@ namespace LP2Soft.Tarjetas
             amigoCast.foto = _ultMensaje.amigo.foto;
 
             frmHome.abrirFormulario(new frmMensajeChat(amigoCast));
+            frmPrincipal.endLoading();
         }
     }
 }

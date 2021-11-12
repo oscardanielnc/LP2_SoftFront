@@ -107,12 +107,20 @@ namespace LP2Soft.Home
         }
 
 
-        public void btnPerfil_Click(object sender, EventArgs e) =>
+        public void btnPerfil_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmPerfil(_usuario), MenuHome.Perfil);
+            frmPrincipal.endLoading();
+        }
 
 
-        public void btnNovedades_Click(object sender, EventArgs e) =>
+        public void btnNovedades_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmHomePage(_usuario), MenuHome.Novedades);
+            frmPrincipal.endLoading();
+        }
 
         public void btnCursos_Click(object sender, EventArgs e)
         {
@@ -121,13 +129,25 @@ namespace LP2Soft.Home
             else subPanelCursos.Visible = false;
         }
 
-        public void btnTodosMisCursos_Click(object sender, EventArgs e) =>
+        public void btnTodosMisCursos_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmCursos_Home(_usuario.idUsuario), MenuHome.CursosTodos);
-        private void btnCursosFavoritos_Click(object sender, EventArgs e) =>
+            frmPrincipal.endLoading();
+        }
+        private void btnCursosFavoritos_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmCursos_Favoritos(), MenuHome.CursosFavoritos);
+            frmPrincipal.endLoading();
+        }
 
-        public void btnMensajes_Click(object sender, EventArgs e) =>
+        public void btnMensajes_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmMensajes(), MenuHome.Mensajes);
+            frmPrincipal.endLoading();
+        }
 
         public void btnEventos_Click(object sender, EventArgs e)
         {
@@ -136,31 +156,61 @@ namespace LP2Soft.Home
             else subPanelEventos.Visible = false;
         }
 
-        public void btnVerEventos_Click(object sender, EventArgs e) =>
+        public void btnVerEventos_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmVerEventos(), MenuHome.VerEventos);
+            frmPrincipal.endLoading();
+        }
 
-        public void btnEventosAgendados_Click(object sender, EventArgs e) =>
+        public void btnEventosAgendados_Click(object sender, EventArgs e) {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmEventosAgendados(), MenuHome.EventosAgendados);
+            frmPrincipal.endLoading();
+        }
 
-        private void btnMisEventos_Click(object sender, EventArgs e) =>
+        private void btnMisEventos_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmMisPublicaciones(), MenuHome.MisEventos);
-        public void btnAsesores_Click(object sender, EventArgs e) =>
+            frmPrincipal.endLoading();
+        }
+        public void btnAsesores_Click(object sender, EventArgs e) {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmBuscarAsesor(this), MenuHome.Asesores);
+            frmPrincipal.endLoading();
+        }
 
-        public void btnProfesores_Click(object sender, EventArgs e) =>
+        public void btnProfesores_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmProfesores(), MenuHome.Profesores);
+            frmPrincipal.endLoading();
+        }
 
-        public void btnCerrar_Click(object sender, EventArgs e) =>
+        public void btnCerrar_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             frmPrincipal.abrirFormulario(new frmLoginSingin());
+            frmPrincipal.endLoading();
+        }
 
-        public void btnNotificaciones_Click(object sender, EventArgs e) =>
+        public void btnNotificaciones_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
             abrirFormularioHome(new frmNotificaciones(), MenuHome.Notificaciones);
+            frmPrincipal.endLoading();
+        }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string textoBusqueda = txtBusqueda.Text;
             if (!textoBusqueda.Equals(""))
-                abrirFormularioHome(new frmBusquedaUsuarios(textoBusqueda), MenuHome.Notificaciones); //
+            {
+                frmPrincipal.startLoading();
+                abrirFormularioHome(new frmBusquedaUsuarios(textoBusqueda), MenuHome.BuscarUsuarios); //
+                frmPrincipal.endLoading();
+            }
             else
                 MessageBox.Show("Debe escribir un nombre u código PUCP en el buscador", "Warning",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);

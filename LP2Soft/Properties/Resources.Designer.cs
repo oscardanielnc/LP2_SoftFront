@@ -673,6 +673,16 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Spinner_1s_200px {
+            get {
+                object obj = ResourceManager.GetObject("Spinner-1s-200px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap star_full {
             get {
                 object obj = ResourceManager.GetObject("star-full", resourceCulture);

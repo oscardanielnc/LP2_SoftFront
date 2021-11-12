@@ -10,6 +10,6 @@ namespace LP2Soft.Enumerados
     {
         Novedades, Perfil, CursosTodos, Notificaciones,
         CursosFavoritos, MisEventos, EventosAgendados,
-        VerEventos, Asesores, Profesores, Mensajes
+        VerEventos, Asesores, Profesores, Mensajes, BuscarUsuarios
     }
 }

@@ -286,6 +286,12 @@
     <Compile Include="Home\frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mensajes\frmMensajeChat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -555,6 +561,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mensajes\frmMensajeChat.resx">
       <DependentUpon>frmMensajeChat.cs</DependentUpon>
@@ -1083,6 +1092,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pencil-4112898_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spinner-1s-200px.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

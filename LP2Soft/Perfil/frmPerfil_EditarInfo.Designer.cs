@@ -42,13 +42,11 @@ namespace LP2Soft.Perfil
             this.rtbDescripcion = new System.Windows.Forms.RichTextBox();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -97,13 +95,11 @@ namespace LP2Soft.Perfil
             this.panelGeneral.Controls.Add(this.rtbDescripcion);
             this.panelGeneral.Controls.Add(this.lblEspecialidad);
             this.panelGeneral.Controls.Add(this.label2);
-            this.panelGeneral.Controls.Add(this.label3);
             this.panelGeneral.Controls.Add(this.label7);
             this.panelGeneral.Controls.Add(this.dtpFechaNacimiento);
             this.panelGeneral.Controls.Add(this.btnGuardar);
             this.panelGeneral.Controls.Add(this.btnCancelar);
             this.panelGeneral.Controls.Add(this.label11);
-            this.panelGeneral.Controls.Add(this.label1);
             this.panelGeneral.Controls.Add(this.lblCorreo);
             this.panelGeneral.Controls.Add(this.label10);
             this.panelGeneral.Controls.Add(this.label8);
@@ -217,16 +213,6 @@ namespace LP2Soft.Perfil
             this.label2.TabIndex = 41;
             this.label2.Text = "Universidad:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(742, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "Guardar";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -247,23 +233,25 @@ namespace LP2Soft.Perfil
             // btnGuardar
             // 
             this.btnGuardar.Image = global::LP2Soft.Properties.Resources.floppy_disk;
-            this.btnGuardar.Location = new System.Drawing.Point(755, 65);
+            this.btnGuardar.Location = new System.Drawing.Point(755, 11);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(25, 25);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnGuardar.TabIndex = 57;
             this.btnGuardar.TabStop = false;
+            this.toolTipEditarPerfil.SetToolTip(this.btnGuardar, "Guardar");
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Image = global::LP2Soft.Properties.Resources.cross;
-            this.btnCancelar.Location = new System.Drawing.Point(755, 11);
+            this.btnCancelar.Location = new System.Drawing.Point(755, 42);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(25, 25);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCancelar.TabIndex = 54;
             this.btnCancelar.TabStop = false;
+            this.toolTipEditarPerfil.SetToolTip(this.btnCancelar, "Cancelar");
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label11
@@ -275,16 +263,6 @@ namespace LP2Soft.Perfil
             this.label11.Size = new System.Drawing.Size(94, 15);
             this.label11.TabIndex = 46;
             this.label11.Text = "Especialidad:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(739, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 15);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Cancelar";
             // 
             // lblCorreo
             // 
@@ -446,9 +424,7 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Label lblUniversidad;
         private System.Windows.Forms.Label lblInfGeneral;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnGuardar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtContrasenia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox btnVerContrasenia;

@@ -47,6 +47,7 @@ namespace LP2Soft.Perfil
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            frmPrincipal.startLoading();
             _usuarioModificado = new UsuarioWS.usuario();
             _usuarioModificado.idUsuario = _usuarioActual.idUsuario;
             _usuarioModificado.nombre = txtNombre.Text; //
@@ -68,6 +69,7 @@ namespace LP2Soft.Perfil
             int resultado = _daoUsuario.modificarUsuario(_usuarioModificado);
             if (resultado == 0)
             {
+                frmPrincipal.endLoading();
                 MessageBox.Show("Ha ocurrido un error en el registro. Intentelo de nuevo más tarde.", "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -75,6 +77,7 @@ namespace LP2Soft.Perfil
             {
                 frmHome.actualizarInfoPantallas(_usuarioModificado);
                 frmHome.abrirFormulario(new frmPerfil(_usuarioModificado));
+                frmPrincipal.endLoading();
             }
         }
 

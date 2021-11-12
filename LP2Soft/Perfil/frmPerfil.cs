@@ -145,10 +145,12 @@ namespace LP2Soft.Perfil
         {
             if (_menuSeleccionado != MenuPerfil.Publicaciones)
             {
+                frmPrincipal.startLoading();
                 inicializarColorBotones();
                 btnPublicaciones.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Publicaciones;
                 abrirFormulario(new frmPerfil_Publicaciones());
+                frmPrincipal.endLoading();
             }
         }
 
@@ -156,10 +158,12 @@ namespace LP2Soft.Perfil
         {
             if (_menuSeleccionado != MenuPerfil.Amigos)
             {
+                frmPrincipal.startLoading();
                 inicializarColorBotones();
                 btnAmigos.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Amigos;
                 abrirFormulario(new frmPerfil_Amigos(_usuario));
+                frmPrincipal.endLoading();
             }
         }
 
@@ -167,10 +171,12 @@ namespace LP2Soft.Perfil
         {
             if (_menuSeleccionado != MenuPerfil.Cursos)
             {
+                frmPrincipal.startLoading();
                 inicializarColorBotones();
                 btnCursos.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Cursos;
                 abrirFormulario(new frmPerfil_CursosAsesorados(_usuario));
+                frmPrincipal.endLoading();
             }
         }
 
@@ -178,16 +184,20 @@ namespace LP2Soft.Perfil
         {
             if (_menuSeleccionado != MenuPerfil.Resenias)
             {
+                frmPrincipal.startLoading();
                 inicializarColorBotones();
                 btnResenias.BackColor = Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuPerfil.Resenias;
                 abrirFormulario(new frmPerfil_Resenias(_usuario));
+                frmPrincipal.endLoading();
             }
         }
 
         private void btnMensaje_Click(object sender, EventArgs e)
         {
+            frmPrincipal.startLoading();
             frmHome.abrirFormulario(new frmMensajeChat(_usuario));
+            frmPrincipal.endLoading();
         }
 
         private void btnAmigo_Click(object sender, EventArgs e)
@@ -201,8 +211,10 @@ namespace LP2Soft.Perfil
                 {
                     try
                     {
+                        frmPrincipal.startLoading();
                         if (_daoUsuario.eliminarAmigo(frmHome.Usuario.idUsuario, _usuario.idUsuario) == 1)
                         {
+                            frmPrincipal.endLoading();
                             string mensaje = _usuario.nombre + " " + _usuario.apellido + " se ha eliminado de tu lista de amigos.";
                             MessageBox.Show(mensaje, "Exclamation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             actualizarBotonesDelPerfil(0);
@@ -210,6 +222,7 @@ namespace LP2Soft.Perfil
                     }
                     catch (Exception ex)
                     {
+                        frmPrincipal.endLoading();
                         MessageBox.Show("Ha ocurrido un error al tratar de poner fin a tu amistad", 
                             "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -224,14 +237,17 @@ namespace LP2Soft.Perfil
                 {
                     try
                     {
-                        if(_daoNotificacion.insertarNotificacion(_usuario.idUsuario, 1, 0, frmHome.Usuario.idUsuario, -1,-1,-1)==1)
+                        frmPrincipal.startLoading();
+                        if (_daoNotificacion.insertarNotificacion(_usuario.idUsuario, 1, 0, frmHome.Usuario.idUsuario, -1,-1,-1)==1)
                         {
+                            frmPrincipal.endLoading();
                             string mensaje = " Se ha enviado una solicitud de amistad a " + _usuario.nombre + " " + _usuario.apellido;
                             MessageBox.Show(mensaje, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             actualizarBotonesDelPerfil(3);
                         }
                     } catch(Exception ex)
                     {
+                        frmPrincipal.endLoading();
                         MessageBox.Show("Ha ocurrido un error al tratar de enviar la solicitud", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -246,14 +262,17 @@ namespace LP2Soft.Perfil
             {
                 try
                 {
+                    frmPrincipal.startLoading();
                     if (_daoNotificacion.eliminarSolicitudAmistad(_usuario.idUsuario, frmHome.Usuario.idUsuario) == 1)
                     {
+                        frmPrincipal.endLoading();
                         MessageBox.Show("Has cancelado tu solicitud de amistad", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         actualizarBotonesDelPerfil(0);
                     }
                 }
                 catch (Exception ex)
                 {
+                    frmPrincipal.endLoading();
                     MessageBox.Show("Ha ocurrido un error al tratar de cacelar la solicitud",
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -262,10 +281,12 @@ namespace LP2Soft.Perfil
 
         private void btnRechazar_Click(object sender, EventArgs e)
         {
+            frmPrincipal.startLoading();
             try
             {
                 if (_daoNotificacion.eliminarSolicitudAmistad(frmHome.Usuario.idUsuario, _usuario.idUsuario) == 1)
                 {
+                    frmPrincipal.endLoading();
                     MessageBox.Show("Has rechazado la solicitud de amistad de " + _usuario.nombre, 
                         "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     actualizarBotonesDelPerfil(0);
@@ -273,6 +294,7 @@ namespace LP2Soft.Perfil
             }
             catch (Exception ex)
             {
+                frmPrincipal.endLoading();
                 MessageBox.Show("Ha ocurrido un error al tratar de rechazar la solicitud",
                             "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -280,24 +302,33 @@ namespace LP2Soft.Perfil
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            frmPrincipal.startLoading();
             try
             {
                 if(_daoUsuario.agregarAmigo(frmHome.Usuario.idUsuario, _usuario.idUsuario) == 1)
                 {
-                    if(_daoNotificacion.insertarNotificacion(_usuario.idUsuario,1,1,frmHome.Usuario.idUsuario, -1,-1,-1)==1)
+                    _daoNotificacion.eliminarSolicitudAmistad(frmHome.Usuario.idUsuario, _usuario.idUsuario);
+                    if (_daoNotificacion.insertarNotificacion(_usuario.idUsuario, 1, 1, frmHome.Usuario.idUsuario, -1, -1, -1) == 1)
+                    {
+                        frmPrincipal.endLoading();
                         MessageBox.Show("¡Has agregado a " + _usuario.nombre + " a tu lista de amigos!",
                                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    else MessageBox.Show("¡Has agregado a " + _usuario.nombre + " a tu lista de amigos. Pero no se le pudo notificar.",
+                    }
+                    else
+                    {
+                        frmPrincipal.endLoading();
+                        MessageBox.Show("¡Has agregado a " + _usuario.nombre + " a tu lista de amigos. Pero no se le pudo notificar.",
                                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
                     actualizarBotonesDelPerfil(1);
-                    _daoNotificacion.eliminarSolicitudAmistad(frmHome.Usuario.idUsuario, _usuario.idUsuario);
                 } else MessageBox.Show("Ocurrió un problema inesperado al tratar de agregar a " + _usuario.nombre + " a tu lista de amigos.",
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             catch (Exception ex)
             {
+                frmPrincipal.endLoading();
                 MessageBox.Show("Ha ocurrido un error inesperado en el servidor :(",
                             "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -309,24 +340,32 @@ namespace LP2Soft.Perfil
                 "Confirmación", MessageBoxButtons.YesNo);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
+                frmPrincipal.startLoading();
                 try
                 {
                     if (_daoUsuario.hacerAdmin(_usuario.idUsuario) == 1)
                     {
                         _usuario.esAdmin = true;
                         actualizarIconosAdministrador();
-                        if (_daoNotificacion.insertarNotificacion(_usuario.idUsuario, 0, -1, -1, -1, -1, -1) == 1)
+                        int resultado = _daoNotificacion.insertarNotificacion(_usuario.idUsuario, 0, -1, -1, -1, -1, -1);
+                        frmPrincipal.endLoading();
+
+                        if (resultado == 1)
                             MessageBox.Show(_usuario.nombre + " se ha convertido en administrador exitosamente!",
                                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else MessageBox.Show(_usuario.nombre + " se ha convertido en administrador, pero no fue posible notificarle",
                                 "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
+                    {
+                        frmPrincipal.endLoading();
                         MessageBox.Show("Ha ocurrido un error al tratar de actualizar los datos de " + _usuario.nombre,
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 catch (Exception ex)
                 {
+                    frmPrincipal.endLoading();
                     MessageBox.Show("Ha ocurrido un error inesperado en el servidor!",
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

@@ -28,11 +28,13 @@ namespace LP2Soft.Tarjetas
 
         private void btnCursoxNivel_Click(object sender, EventArgs e)
         {
+            frmPrincipal.startLoading();
             _cursoVer = _daoCurso.MostrarCurso(_idCurso);
             if (_cursoVer != null)
             {
                 frmHome.abrirFormulario(new frmCursos_VerCurso(_cursoVer));
             }
+            frmPrincipal.endLoading();
         }
     }
 }

@@ -54,6 +54,7 @@ namespace LP2Soft.Tarjetas
 
         private void btnVer_Click(object sender, EventArgs e)
         {
+            frmPrincipal.startLoading();
             if (_notificacion.tipo == 1)
             {
                 UsuarioWS.usuario usuarioVer = _daoUsuario.mostrarUsuario(_notificacion.usuarioNotificador.codigoPUCP, 1);
@@ -65,6 +66,7 @@ namespace LP2Soft.Tarjetas
             {
                 frmHome.abrirFormulario(new frmPerfil(frmHome.Usuario));
             }
+            frmPrincipal.endLoading();
         }
     }
 }
