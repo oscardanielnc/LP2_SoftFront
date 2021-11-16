@@ -269,6 +269,7 @@ namespace LP2Soft.Perfil
             // 
             // btnEditar
             // 
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Image = global::LP2Soft.Properties.Resources.pencil_4112898_960_720;
             this.btnEditar.Location = new System.Drawing.Point(766, 8);
             this.btnEditar.Name = "btnEditar";

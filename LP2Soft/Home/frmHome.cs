@@ -35,7 +35,8 @@ namespace LP2Soft.Home
             _lblNombreUsuario = lblNombreUsuario;
             _imgUsuario = imgUsuario;
             _panelContenido = panelContenido;
-            abrirFormularioHome(new frmHomePage(_usuario), MenuHome.Novedades); // sección de novedades por defecto
+            /*abrirFormularioHome(new frmHomePage(_usuario), MenuHome.Novedades);*/ // sección de novedades por defecto
+            abrirFormularioHome(new frmPerfil(_usuario), MenuHome.Perfil);
 
             actualizarInfoPantallas(usuario);
         }
