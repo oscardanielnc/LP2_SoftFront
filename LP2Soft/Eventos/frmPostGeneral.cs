@@ -46,7 +46,7 @@ namespace LP2Soft.Eventos
             lblCantidadMeGusta.Text = pp.likes.ToString();
             lblCantidadComentarios.Text = pp.numeroComent.ToString();
 
-            if (frmHome.Usuario.idUsuario == pp.usuario.idUsuario)
+            if (frmHome.Usuario.idUsuario == pp.usuario.idUsuario || frmHome.Usuario.esAdmin == true)
                 btnModificar.Visible = true;
             else
                 btnModificar.Visible = false;
