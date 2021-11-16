@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="SMYS3wpHzyU9ykfi7/5ylSUfW6+M8aEL6ZXrcMcSF2U=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="d8KHHttmiPnGwIr9G3YbMJ5j7d1bhAxHkkpyrCxF3Tg=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="NotificacionesWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NotificacionesWSPort" contract="NotificacionesWS.NotificacionesWS" bindingType="basicHttpBinding" address="http://localhost:8080/LP2Soft_WebServices/NotificacionesWS" bindingConfiguration="NotificacionesWSPortBinding">
+    <endpoint name="NotificacionesWSPort" contract="NotificacionesWS.NotificacionesWS" bindingType="basicHttpBinding" address="http://localhost:8080/LP2Soft_WebService/NotificacionesWS" bindingConfiguration="NotificacionesWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/LP2Soft_WebServices/NotificacionesWS</serializedValue>
+          <serializedValue>http://localhost:8080/LP2Soft_WebService/NotificacionesWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
