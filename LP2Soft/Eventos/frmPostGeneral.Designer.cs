@@ -83,7 +83,7 @@ namespace LP2Soft.Eventos
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.BackgroundImage = global::LP2Soft.Properties.Resources.configuraciones__4_;
+            this.btnModificar.BackgroundImage = global::LP2Soft.Properties.Resources.pencil_4112898_960_720;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

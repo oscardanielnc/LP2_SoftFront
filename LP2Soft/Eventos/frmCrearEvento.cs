@@ -60,8 +60,8 @@ namespace LP2Soft.Eventos
             _evento.enlaceZoom = txtZoom.Text;
             _evento.fechaDelEvento = dtpFecha.Value;
             _evento.fechaDelEventoSpecified = true;
-            _evento.horaInicio = int.Parse(txtHI.Text) * 100 + int.Parse(txtMI.Text);
-            _evento.horaFin = int.Parse(txtHF.Text) * 100 + int.Parse(txtMF.Text);
+            _evento.horaInicio = int.Parse(tphhi.Value.ToString("HH"))*100 + int.Parse(tpmmi.Value.ToString("mm"));
+            _evento.horaFin = int.Parse(tphhf.Value.ToString("HH"))*100 + int.Parse(tpmmf.Value.ToString("mm"));
 
             int resultado = _daoPost.insertarEvento(_evento);
 

@@ -12,8 +12,8 @@ namespace LP2Soft.Eventos
 {
     public partial class frmVerEventos : Form
     {
-        PublicacionesWS.PublicacionesWSClient _daoPost;
-        BindingList<PublicacionesWS.evento> _eventos;
+        private PublicacionesWS.PublicacionesWSClient _daoPost;
+        private BindingList<PublicacionesWS.evento> _eventos;
         private static int _cantidadPost = 0;
         public frmVerEventos()
         {
@@ -30,6 +30,8 @@ namespace LP2Soft.Eventos
                 _eventos = new BindingList<PublicacionesWS.evento>(evento.ToList());
             else
                 _eventos = null;
+            _cantidadPost = 0;
+
             if (_eventos != null)
             {
                 foreach (PublicacionesWS.evento p in _eventos)
@@ -57,12 +59,11 @@ namespace LP2Soft.Eventos
                     bool flag = true;
                     foreach (PublicacionesWS.evento p in _eventos)
                     {
-                        if (contador < _cantidadPost)
+                        if (flag)
                         {
-                            contador++;
-                            continue;
+                            if (contador < _cantidadPost) { contador++; continue; }
+                            flag = false;
                         }
-                        else contador = 1000;
 
                         if (_cantidadPost == cantidadFinal) break;
                         frmPostEvento plantillaPost = new frmPostEvento(p);

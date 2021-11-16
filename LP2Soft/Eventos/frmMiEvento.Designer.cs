@@ -30,6 +30,7 @@ namespace LP2Soft.Eventos
         private void InitializeComponent()
         {
             this.panel10 = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace LP2Soft.Eventos
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -69,6 +69,16 @@ namespace LP2Soft.Eventos
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(377, 453);
             this.panel10.TabIndex = 41;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(59, 72);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(258, 16);
+            this.lblTitulo.TabIndex = 42;
+            this.lblTitulo.Text = "Taller de Programación Competitiva";
             // 
             // lblHora
             // 
@@ -131,7 +141,7 @@ namespace LP2Soft.Eventos
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.BackgroundImage = global::LP2Soft.Properties.Resources.configuraciones__4_;
+            this.btnModificar.BackgroundImage = global::LP2Soft.Properties.Resources.pencil_4112898_960_720;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -140,6 +150,7 @@ namespace LP2Soft.Eventos
             this.btnModificar.Size = new System.Drawing.Size(31, 29);
             this.btnModificar.TabIndex = 29;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // pbImagen
             // 
@@ -190,16 +201,6 @@ namespace LP2Soft.Eventos
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 4;
             this.pictureBox13.TabStop = false;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(59, 72);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(258, 16);
-            this.lblTitulo.TabIndex = 42;
-            this.lblTitulo.Text = "Taller de Programación Competitiva";
             // 
             // frmMiEvento
             // 

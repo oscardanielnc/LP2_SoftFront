@@ -13,10 +13,10 @@ namespace LP2Soft.Eventos
 {
     public partial class frmCrearPostGeneral : Form
     {
-        UsuarioWS.usuario _usuario;
-        PublicacionesWS.postGenerico _postGenerico;
-        PublicacionesWS.PublicacionesWSClient _daoPost;
-        PublicacionesWS.postGenerico _postCreado;
+        private UsuarioWS.usuario _usuario;
+        private PublicacionesWS.postGenerico _postGenerico;
+        private PublicacionesWS.PublicacionesWSClient _daoPost;
+        private PublicacionesWS.postGenerico _postCreado;
         private int _idCursoAux = 0;
 
         public PublicacionesWS.postGenerico PostCreado { get => _postCreado; }
@@ -73,7 +73,8 @@ namespace LP2Soft.Eventos
             {
                 resultado = _daoPost.insertarPost(_postGenerico);
             }
-            else {
+            else 
+            {
                 resultado = _daoPost.insertar_postXCurso(_postGenerico);
             }
 

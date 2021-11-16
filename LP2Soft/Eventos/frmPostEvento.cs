@@ -14,11 +14,11 @@ namespace LP2Soft.Eventos
 {
     public partial class frmPostEvento : Form
     {
-        PublicacionesWS.PublicacionesWSClient _daoPost;
-        BindingList<PublicacionesWS.comentario> _coments;
+        private PublicacionesWS.PublicacionesWSClient _daoPost;
+        private BindingList<PublicacionesWS.comentario> _coments;
         private int _cantidadComent = 0;
         private PublicacionesWS.evento _evento;
-        PublicacionesWS.comentario _comentarioCreado;
+        private PublicacionesWS.comentario _comentarioCreado;
         public frmPostEvento()
         {
             InitializeComponent();
@@ -27,8 +27,16 @@ namespace LP2Soft.Eventos
         public frmPostEvento(PublicacionesWS.evento e)
         {
             InitializeComponent();
+            _daoPost = new PublicacionesWS.PublicacionesWSClient();
             _evento = e;
-            
+            int resultado;
+            resultado = _daoPost.eventoAgendado(e.idPost,frmHome.Usuario.idUsuario);
+
+            if(resultado>0)
+                btnAgendarEvento.ImageIndex = 0;
+            else
+                btnAgendarEvento.ImageIndex = 1;
+
             btnMeGusta.ImageIndex = 1;
             lblNombre.Text = e.usuario.nombre;
             lblFechaHoraCreacion.Text = e.fechaRegistro.ToString("dd-MM-yyyy");
@@ -65,7 +73,7 @@ namespace LP2Soft.Eventos
             }
 
             panelComentarios.Controls.Clear();
-            _daoPost = new PublicacionesWS.PublicacionesWSClient();
+            
             PublicacionesWS.comentario[] _comentarios = _daoPost.listarComentarios(e.idPost);
             if (_comentarios != null)
                 _coments = new BindingList<PublicacionesWS.comentario>(_comentarios.ToList());
@@ -92,8 +100,25 @@ namespace LP2Soft.Eventos
 
         private void btnAgendarEvento_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se agendó el evento", "Mensaje Confirmación",
-                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+            int resultado;
+            if (btnAgendarEvento.ImageIndex == 0)
+            {
+                btnAgendarEvento.ImageIndex = 1;
+                resultado=_daoPost.agendarEvento(_evento.idPost,frmHome.Usuario.idUsuario);
+                if (resultado == 0)
+                {
+                    MessageBox.Show("Error al agendar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else 
+            {
+                btnAgendarEvento.ImageIndex = 0;
+                resultado=_daoPost.desagendarEvento(_evento.idPost, frmHome.Usuario.idUsuario);
+                if (resultado == 0)
+                {
+                    MessageBox.Show("Error al desagendar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnComentar_Click(object sender, EventArgs e)
@@ -170,17 +195,15 @@ namespace LP2Soft.Eventos
             {
                 btnMeGusta.ImageIndex = 1;
                 int cantidadLikes = int.Parse(lblCantidadLikes.Text) - 1;
-                int resultado = _daoPost.disminuirLikes(_evento.idPost);
                 lblCantidadLikes.Text = cantidadLikes.ToString();
-
+                int resultado = _daoPost.disminuirLikes(_evento.idPost);
             }
             else
             {
                 btnMeGusta.ImageIndex = 0;
                 int cantidadLikes = int.Parse(lblCantidadLikes.Text) + 1;
-                int resultado = _daoPost.aumentarLikes(_evento.idPost);
                 lblCantidadLikes.Text = cantidadLikes.ToString();
-
+                int resultado = _daoPost.aumentarLikes(_evento.idPost);
             }
         }
 

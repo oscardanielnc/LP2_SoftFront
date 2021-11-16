@@ -14,8 +14,8 @@ namespace LP2Soft.Eventos
     public partial class frmMisPublicaciones : Form
     {
         private static int _cantidadPost = 0;
-        PublicacionesWS.PublicacionesWSClient _daoPost;
-        BindingList<PublicacionesWS.evento> _eventos;
+        private PublicacionesWS.PublicacionesWSClient _daoPost;
+        private BindingList<PublicacionesWS.evento> _eventos;
         public frmMisPublicaciones()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace LP2Soft.Eventos
             {
                 foreach (PublicacionesWS.evento p in _eventos)
                 {
-                    if (_cantidadPost == 3) break;
+                    //if (_cantidadPost == 3) break;
                     frmMiEvento plantillaPost = new frmMiEvento(p);
                     plantillaPost.TopLevel = false;
                     plantillaPost.Dock = DockStyle.Top;
