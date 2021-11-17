@@ -40,6 +40,17 @@ namespace LP2Soft.NotificacionesWS {
         System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.listarMensajesXAmigoResponse> listarMensajesXAmigoAsync(LP2Soft.NotificacionesWS.listarMensajesXAmigoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.NotificacionesWS.insertarNotificacionResponse insertarNotificacion(LP2Soft.NotificacionesWS.insertarNotificacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" +
+            "")]
+        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.insertarNotificacionResponse> insertarNotificacionAsync(LP2Soft.NotificacionesWS.insertarNotificacionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadRequ" +
             "est", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadResp" +
             "onse")]
@@ -51,17 +62,6 @@ namespace LP2Soft.NotificacionesWS {
             "est", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadResp" +
             "onse")]
         System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse> eliminarSolicitudAmistadAsync(LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Soft.NotificacionesWS.insertarNotificacionResponse insertarNotificacion(LP2Soft.NotificacionesWS.insertarNotificacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" +
-            "")]
-        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.insertarNotificacionResponse> insertarNotificacionAsync(LP2Soft.NotificacionesWS.insertarNotificacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" +
@@ -1878,47 +1878,6 @@ namespace LP2Soft.NotificacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSolicitudAmistad", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarSolicitudAmistadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuarioNotificado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuarioNotificador;
-        
-        public eliminarSolicitudAmistadRequest() {
-        }
-        
-        public eliminarSolicitudAmistadRequest(int idUsuarioNotificado, int idUsuarioNotificador) {
-            this.idUsuarioNotificado = idUsuarioNotificado;
-            this.idUsuarioNotificador = idUsuarioNotificador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSolicitudAmistadResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarSolicitudAmistadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarSolicitudAmistadResponse() {
-        }
-        
-        public eliminarSolicitudAmistadResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarNotificacion", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarNotificacionRequest {
         
@@ -1978,6 +1937,47 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         public insertarNotificacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSolicitudAmistad", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarSolicitudAmistadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuarioNotificado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuarioNotificador;
+        
+        public eliminarSolicitudAmistadRequest() {
+        }
+        
+        public eliminarSolicitudAmistadRequest(int idUsuarioNotificado, int idUsuarioNotificador) {
+            this.idUsuarioNotificado = idUsuarioNotificado;
+            this.idUsuarioNotificador = idUsuarioNotificador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSolicitudAmistadResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarSolicitudAmistadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarSolicitudAmistadResponse() {
+        }
+        
+        public eliminarSolicitudAmistadResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -2140,31 +2140,6 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse LP2Soft.NotificacionesWS.NotificacionesWS.eliminarSolicitudAmistad(LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest request) {
-            return base.Channel.eliminarSolicitudAmistad(request);
-        }
-        
-        public int eliminarSolicitudAmistad(int idUsuarioNotificado, int idUsuarioNotificador) {
-            LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest inValue = new LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest();
-            inValue.idUsuarioNotificado = idUsuarioNotificado;
-            inValue.idUsuarioNotificador = idUsuarioNotificador;
-            LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse retVal = ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).eliminarSolicitudAmistad(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse> LP2Soft.NotificacionesWS.NotificacionesWS.eliminarSolicitudAmistadAsync(LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest request) {
-            return base.Channel.eliminarSolicitudAmistadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse> eliminarSolicitudAmistadAsync(int idUsuarioNotificado, int idUsuarioNotificador) {
-            LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest inValue = new LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest();
-            inValue.idUsuarioNotificado = idUsuarioNotificado;
-            inValue.idUsuarioNotificador = idUsuarioNotificador;
-            return ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).eliminarSolicitudAmistadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2Soft.NotificacionesWS.insertarNotificacionResponse LP2Soft.NotificacionesWS.NotificacionesWS.insertarNotificacion(LP2Soft.NotificacionesWS.insertarNotificacionRequest request) {
             return base.Channel.insertarNotificacion(request);
         }
@@ -2197,6 +2172,31 @@ namespace LP2Soft.NotificacionesWS {
             inValue.idEventoAgendado = idEventoAgendado;
             inValue.idPost = idPost;
             return ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).insertarNotificacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse LP2Soft.NotificacionesWS.NotificacionesWS.eliminarSolicitudAmistad(LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest request) {
+            return base.Channel.eliminarSolicitudAmistad(request);
+        }
+        
+        public int eliminarSolicitudAmistad(int idUsuarioNotificado, int idUsuarioNotificador) {
+            LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest inValue = new LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest();
+            inValue.idUsuarioNotificado = idUsuarioNotificado;
+            inValue.idUsuarioNotificador = idUsuarioNotificador;
+            LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse retVal = ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).eliminarSolicitudAmistad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse> LP2Soft.NotificacionesWS.NotificacionesWS.eliminarSolicitudAmistadAsync(LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest request) {
+            return base.Channel.eliminarSolicitudAmistadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse> eliminarSolicitudAmistadAsync(int idUsuarioNotificado, int idUsuarioNotificador) {
+            LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest inValue = new LP2Soft.NotificacionesWS.eliminarSolicitudAmistadRequest();
+            inValue.idUsuarioNotificado = idUsuarioNotificado;
+            inValue.idUsuarioNotificador = idUsuarioNotificador;
+            return ((LP2Soft.NotificacionesWS.NotificacionesWS)(this)).eliminarSolicitudAmistadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

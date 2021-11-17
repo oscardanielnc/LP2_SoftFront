@@ -16,45 +16,121 @@ namespace LP2Soft.Tarjetas
     public partial class tarjCurso : Form
     {
         private int _idCurso;
+        private float _creditos;
         private CursosWS.CursosWSClient _daoCurso;
         private CursosWS.curso _cursoVer;
-        public tarjCurso(UsuarioWS.curso curso)
-        {
-            _daoCurso = new CursosWS.CursosWSClient();
-            InitializeComponent();
-            _idCurso = curso.idCurso;
-            posicionarLabel(curso);
-        }
+
         public tarjCurso(UsuarioWS.curso curso, bool onlyRead)
         {
             _daoCurso = new CursosWS.CursosWSClient();
             InitializeComponent();
             _idCurso = curso.idCurso;
-            posicionarLabel(curso);
+            _creditos = curso.creditos;
+
+            lblCodigo.Text = curso.codigo;
+            lblNombre.Text = curso.nombre;
+            lblCreditos.Text = curso.creditos.ToString("0.00");
+            lblNombre.Location = posicionarLabel();
+
+            this.Click += new EventHandler((object sender, EventArgs e) =>  this.mostrarCurso());
 
             if(onlyRead)
             {
-                pBLP3CorazonVacio.Visible = false; //
-                pictureAgregarLP3.Visible = false;
-                btnLP3.BackColor = Color.DarkGray;
+                btnCorazon.Visible = false; //
+                btnNewState.Visible = false;
+                this.BackColor = Color.DarkGray;
             }
+
+            cambiarColor(curso.estado);
         }
 
-        private void posicionarLabel(UsuarioWS.curso curso)
+        private Point posicionarLabel()
         {
-            btnLP3.Text = curso.codigo + "\n\n\n" + curso.nombre + "\nCredito: " + curso.creditos;
+            int x = (143 - lblNombre.Size.Width) /2 ;
+            return new Point(x,30);
         }
-
-        private void btnLP3_Click(object sender, EventArgs e)
+        private void mostrarCurso()
         {
             frmPrincipal.startLoading();
+
             _cursoVer = _daoCurso.MostrarCurso(_idCurso);
             if (_cursoVer != null)
-            {
                 frmHome.abrirFormulario(new frmCursos_VerCurso(_cursoVer));
-            }
+
             frmPrincipal.endLoading();
         }
+        public void cambiarColor(int estado)
+        {
+            if (estado == 2)
+            {
+                this.BackColor = Color.FromArgb(0, 221, 125);
+                btnCorazon.BackColor = Color.FromArgb(0, 221, 125);
+                btnNewState.BackColor = Color.FromArgb(0, 221, 125);
+            }
+            else if (estado == 1)
+            {
+                this.BackColor = Color.FromArgb(28, 103, 179);
+                btnCorazon.BackColor = Color.FromArgb(28, 103, 179);
+                btnNewState.BackColor = Color.FromArgb(28, 103, 179);
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(237, 64, 64);
+                btnCorazon.BackColor = Color.FromArgb(237, 64, 64);
+                btnNewState.BackColor = Color.FromArgb(237, 64, 64);
+            }
+        }
 
+        private void btnNewState_Click(object sender, EventArgs e)
+        {
+            if(frmHome.Usuario.cursos[_idCurso-1].estado == 1)
+            {
+                frmHome.Usuario.cursos[_idCurso - 1].estado = 2;
+                cambiarColor(2);
+                frmCursos_Home.CreditosTotales += _creditos;
+                frmCursos_Home.actualizarLlbCreditos();
+                actualizarEstados();
+            }
+            else if (frmHome.Usuario.cursos[_idCurso - 1].estado == 2)
+            {
+                frmHome.Usuario.cursos[_idCurso - 1].estado = 1;
+                cambiarColor(1);
+                frmCursos_Home.CreditosTotales -= _creditos;
+                frmCursos_Home.actualizarLlbCreditos();
+                actualizarEstados();
+            }
+        }
+        public void actualizarEstados()
+        {
+            foreach(UsuarioWS.curso cursoBase in frmHome.Usuario.cursos)
+            {
+                if(cursoBase.estado==0)
+                {
+                    if(cursoBase.creditosRequeridos<=frmCursos_Home.CreditosTotales)
+                    {
+                        bool permitido = true;
+                        if(cursoBase.cursosRequeridos != null)
+                        {
+                            foreach(UsuarioWS.curso cursoReq in cursoBase.cursosRequeridos)
+                            {
+                                if (frmHome.Usuario.cursos[cursoReq.idCurso-1].estado != 2)
+                                    permitido = false;
+                            }
+                        }
+                        if (permitido)
+                        {
+                            frmHome.Usuario.cursos[cursoBase.idCurso - 1].estado = 1;
+                            frmCursos_Home.ListarTarjCursos[cursoBase.idCurso - 1].cambiarColor(1);
+                        } else
+                        {
+                            cursoBase.estado = 0;
+                            frmHome.Usuario.cursos[cursoBase.idCurso - 1].estado = 0;
+                            frmCursos_Home.ListarTarjCursos[cursoBase.idCurso - 1].cambiarColor(0);
+                        }
+
+                    }
+                }
+            }
+        }
     }
 }
