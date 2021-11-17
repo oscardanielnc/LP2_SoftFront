@@ -39,18 +39,18 @@ namespace LP2Soft.Eventos
             this.label12 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtHI = new System.Windows.Forms.TextBox();
-            this.txtMI = new System.Windows.Forms.TextBox();
-            this.lblDosPuntos = new System.Windows.Forms.Label();
-            this.lblGuion = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMF = new System.Windows.Forms.TextBox();
-            this.txtHF = new System.Windows.Forms.TextBox();
             this.btnPublicar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.ofdPerfil = new System.Windows.Forms.OpenFileDialog();
             this.pbImagenPublicacion = new System.Windows.Forms.PictureBox();
+            this.tphhi = new System.Windows.Forms.DateTimePicker();
+            this.tpmmi = new System.Windows.Forms.DateTimePicker();
+            this.lblGuion = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tphhf = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tpmmf = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPublicacion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,64 +151,6 @@ namespace LP2Soft.Eventos
             this.label11.TabIndex = 39;
             this.label11.Text = "Hora :";
             // 
-            // txtHI
-            // 
-            this.txtHI.Location = new System.Drawing.Point(131, 610);
-            this.txtHI.Name = "txtHI";
-            this.txtHI.Size = new System.Drawing.Size(20, 20);
-            this.txtHI.TabIndex = 40;
-            // 
-            // txtMI
-            // 
-            this.txtMI.Location = new System.Drawing.Point(178, 610);
-            this.txtMI.Name = "txtMI";
-            this.txtMI.Size = new System.Drawing.Size(20, 20);
-            this.txtMI.TabIndex = 41;
-            // 
-            // lblDosPuntos
-            // 
-            this.lblDosPuntos.AutoSize = true;
-            this.lblDosPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDosPuntos.Location = new System.Drawing.Point(161, 614);
-            this.lblDosPuntos.Name = "lblDosPuntos";
-            this.lblDosPuntos.Size = new System.Drawing.Size(11, 13);
-            this.lblDosPuntos.TabIndex = 42;
-            this.lblDosPuntos.Text = ":";
-            // 
-            // lblGuion
-            // 
-            this.lblGuion.AutoSize = true;
-            this.lblGuion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGuion.Location = new System.Drawing.Point(218, 613);
-            this.lblGuion.Name = "lblGuion";
-            this.lblGuion.Size = new System.Drawing.Size(11, 13);
-            this.lblGuion.TabIndex = 43;
-            this.lblGuion.Text = "-";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(276, 614);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 13);
-            this.label1.TabIndex = 46;
-            this.label1.Text = ":";
-            // 
-            // txtMF
-            // 
-            this.txtMF.Location = new System.Drawing.Point(293, 610);
-            this.txtMF.Name = "txtMF";
-            this.txtMF.Size = new System.Drawing.Size(20, 20);
-            this.txtMF.TabIndex = 45;
-            // 
-            // txtHF
-            // 
-            this.txtHF.Location = new System.Drawing.Point(246, 610);
-            this.txtHF.Name = "txtHF";
-            this.txtHF.Size = new System.Drawing.Size(20, 20);
-            this.txtHF.TabIndex = 44;
-            // 
             // btnPublicar
             // 
             this.btnPublicar.Location = new System.Drawing.Point(336, 662);
@@ -251,21 +193,91 @@ namespace LP2Soft.Eventos
             this.pbImagenPublicacion.TabIndex = 50;
             this.pbImagenPublicacion.TabStop = false;
             // 
+            // tphhi
+            // 
+            this.tphhi.CustomFormat = "HH";
+            this.tphhi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.tphhi.Location = new System.Drawing.Point(131, 611);
+            this.tphhi.Name = "tphhi";
+            this.tphhi.ShowUpDown = true;
+            this.tphhi.Size = new System.Drawing.Size(40, 20);
+            this.tphhi.TabIndex = 51;
+            // 
+            // tpmmi
+            // 
+            this.tpmmi.CustomFormat = "mm";
+            this.tpmmi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.tpmmi.Location = new System.Drawing.Point(186, 611);
+            this.tpmmi.Name = "tpmmi";
+            this.tpmmi.ShowUpDown = true;
+            this.tpmmi.Size = new System.Drawing.Size(40, 20);
+            this.tpmmi.TabIndex = 52;
+            // 
+            // lblGuion
+            // 
+            this.lblGuion.AutoSize = true;
+            this.lblGuion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGuion.Location = new System.Drawing.Point(233, 614);
+            this.lblGuion.Name = "lblGuion";
+            this.lblGuion.Size = new System.Drawing.Size(11, 13);
+            this.lblGuion.TabIndex = 43;
+            this.lblGuion.Text = "-";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(173, 614);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 46;
+            this.label1.Text = ":";
+            // 
+            // tphhf
+            // 
+            this.tphhf.CustomFormat = "HH";
+            this.tphhf.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.tphhf.Location = new System.Drawing.Point(250, 611);
+            this.tphhf.Name = "tphhf";
+            this.tphhf.ShowUpDown = true;
+            this.tphhf.Size = new System.Drawing.Size(40, 20);
+            this.tphhf.TabIndex = 53;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(293, 614);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 13);
+            this.label2.TabIndex = 55;
+            this.label2.Text = ":";
+            // 
+            // tpmmf
+            // 
+            this.tpmmf.CustomFormat = "mm";
+            this.tpmmf.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.tpmmf.Location = new System.Drawing.Point(307, 611);
+            this.tpmmf.Name = "tpmmf";
+            this.tpmmf.ShowUpDown = true;
+            this.tpmmf.Size = new System.Drawing.Size(40, 20);
+            this.tpmmf.TabIndex = 56;
+            // 
             // frmCrearEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 692);
+            this.Controls.Add(this.tpmmf);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tphhf);
+            this.Controls.Add(this.tpmmi);
+            this.Controls.Add(this.tphhi);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnPublicar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtMF);
-            this.Controls.Add(this.txtHF);
             this.Controls.Add(this.lblGuion);
-            this.Controls.Add(this.lblDosPuntos);
-            this.Controls.Add(this.txtMI);
-            this.Controls.Add(this.txtHI);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.label12);
@@ -297,17 +309,17 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtHI;
-        private System.Windows.Forms.TextBox txtMI;
-        private System.Windows.Forms.Label lblDosPuntos;
-        private System.Windows.Forms.Label lblGuion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMF;
-        private System.Windows.Forms.TextBox txtHF;
         private System.Windows.Forms.Button btnPublicar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.OpenFileDialog ofdPerfil;
         private System.Windows.Forms.PictureBox pbImagenPublicacion;
+        private System.Windows.Forms.DateTimePicker tphhi;
+        private System.Windows.Forms.DateTimePicker tpmmi;
+        private System.Windows.Forms.Label lblGuion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker tphhf;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker tpmmf;
     }
 }

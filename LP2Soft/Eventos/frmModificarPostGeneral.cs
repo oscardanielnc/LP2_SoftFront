@@ -14,9 +14,9 @@ namespace LP2Soft.Eventos
 {
     public partial class frmModificarPostGeneral : Form
     {
-        PublicacionesWS.PublicacionesWSClient _daoPost;
-        PublicacionesWS.postGenerico _post;
-        PublicacionesWS.postGenerico _postModificado;
+        private PublicacionesWS.PublicacionesWSClient _daoPost;
+        private PublicacionesWS.postGenerico _post;
+        private PublicacionesWS.postGenerico _postModificado;
 
         public PublicacionesWS.postGenerico PostModificado { get => _postModificado; }
 

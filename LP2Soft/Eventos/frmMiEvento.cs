@@ -14,6 +14,8 @@ namespace LP2Soft.Eventos
 {
     public partial class frmMiEvento : Form
     {
+        private PublicacionesWS.evento _evento;
+        private PublicacionesWS.evento _eventoModificado;
         public frmMiEvento()
         {
             InitializeComponent();
@@ -22,12 +24,18 @@ namespace LP2Soft.Eventos
         public frmMiEvento(PublicacionesWS.evento e)
         {
             InitializeComponent();
+            _evento = e;
             lblNombre.Text = frmHome.Usuario.nombre;
+            mostrarDatos(e);
+        }
+
+        private void mostrarDatos(PublicacionesWS.evento e) {
             lblFecha.Text = e.fechaRegistro.ToString("dd-MM-yyyy");
             lblTitulo.Text = e.nombreDelEvento;
             txtContenido.Text = e.contenido;
             lblZoom.Text = e.enlaceZoom;
             lblFechaRealizacion.Text = e.fechaDelEvento.ToString("dd/MMMM/yyyy");
+
             int hhi, mmi, hhf, mmf;
             hhi = e.horaInicio / 100;
             mmi = e.horaInicio % 100;
@@ -45,10 +53,26 @@ namespace LP2Soft.Eventos
             if (mmf < 10) cadena += "0";
             cadena += mmf.ToString();
 
+            lblHora.Text = cadena;
+
             if (e.archivo != null)
             {
                 MemoryStream ms1 = new MemoryStream(e.archivo);
                 pbImagen.Image = new Bitmap(ms1);
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmModificarEvento formModificarEvento = new frmModificarEvento(_evento);
+            if (formModificarEvento.ShowDialog() == DialogResult.OK) 
+            {
+                _eventoModificado = formModificarEvento.EventoModificado;
+                if (_eventoModificado.idPost != -1)
+                {
+                    mostrarDatos(_eventoModificado);
+                }
+                else this.Visible = false;
             }
         }
     }

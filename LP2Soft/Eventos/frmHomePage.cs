@@ -13,10 +13,10 @@ namespace LP2Soft.Eventos
 {
     public partial class frmHomePage : Form
     {
-        UsuarioWS.usuario _usuario;
-        PublicacionesWS.PublicacionesWSClient _daoPost;
-        BindingList<PublicacionesWS.postGenerico> _publicaciones;
-        PublicacionesWS.postGenerico _postCreado;
+        private UsuarioWS.usuario _usuario;
+        private PublicacionesWS.PublicacionesWSClient _daoPost;
+        private BindingList<PublicacionesWS.postGenerico> _publicaciones;
+        private PublicacionesWS.postGenerico _postCreado;
         private static int _cantidadPost=0;
         public frmHomePage()
         {
@@ -111,16 +111,17 @@ namespace LP2Soft.Eventos
                 if (e.NewValue != e.OldValue) // Checking when the scrollbar is at bottom and user clicks/scrolls the scrollbar      
                 {
                     int cantidadFinal = _cantidadPost + 3;
-                    int contador=0; 
+                    int contador=0;
+                    bool flag = true;
                     
                     foreach (PublicacionesWS.postGenerico p in _publicaciones)
                     {
-                        if (contador < _cantidadPost)
+
+                        if (flag)
                         {
-                            contador++;
-                            continue;
+                            if (contador < _cantidadPost) { contador++; continue; }
+                            flag = false;
                         }
-                        else contador = 1000;
 
                         if (_cantidadPost == cantidadFinal) break;
                         frmPostGeneral plantillaPost = new frmPostGeneral(p, _usuario);

@@ -14,12 +14,12 @@ namespace LP2Soft.Eventos
 {
     public partial class frmPostGeneral : Form
     {
-        UsuarioWS.usuario _usuario;
-        PublicacionesWS.postGenerico _post;
-        PublicacionesWS.comentario _comentarioCreado;
-        PublicacionesWS.postGenerico _postModificado;
-        PublicacionesWS.PublicacionesWSClient _daoPost;
-        BindingList<PublicacionesWS.comentario> _coments;
+        private UsuarioWS.usuario _usuario;
+        private PublicacionesWS.postGenerico _post;
+        private PublicacionesWS.comentario _comentarioCreado;
+        private PublicacionesWS.postGenerico _postModificado;
+        private PublicacionesWS.PublicacionesWSClient _daoPost;
+        private BindingList<PublicacionesWS.comentario> _coments;
         private int _cantidadComent=0;
 
         public frmPostGeneral()
@@ -46,7 +46,7 @@ namespace LP2Soft.Eventos
             lblCantidadMeGusta.Text = pp.likes.ToString();
             lblCantidadComentarios.Text = pp.numeroComent.ToString();
 
-            if (frmHome.Usuario.idUsuario == pp.usuario.idUsuario)
+            if (frmHome.Usuario.idUsuario == pp.usuario.idUsuario || frmHome.Usuario.esAdmin == true)
                 btnModificar.Visible = true;
             else
                 btnModificar.Visible = false;
@@ -173,17 +173,15 @@ namespace LP2Soft.Eventos
             {
                 btnMeGustaDinamico.ImageIndex = 1;
                 int cantidadLikes = int.Parse(lblCantidadMeGusta.Text) - 1;
-                int resultado = _daoPost.disminuirLikes(_post.idPost);
                 lblCantidadMeGusta.Text = cantidadLikes.ToString();
-                
+                int resultado = _daoPost.disminuirLikes(_post.idPost);
             }
             else
             {
                 btnMeGustaDinamico.ImageIndex = 0;
                 int cantidadLikes = int.Parse(lblCantidadMeGusta.Text) + 1;
-                int resultado = _daoPost.aumentarLikes(_post.idPost);
                 lblCantidadMeGusta.Text = cantidadLikes.ToString();
-                
+                int resultado = _daoPost.aumentarLikes(_post.idPost);
             }
         }
 

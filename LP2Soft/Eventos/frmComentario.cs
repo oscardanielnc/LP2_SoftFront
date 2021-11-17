@@ -26,7 +26,7 @@ namespace LP2Soft.Eventos
             _comentario = comentario;
             lblNombre.Text = comentario.usuario.nombre;
             lblComentario.Text = comentario.comentario1;
-            if (comentario.usuario.idUsuario != frmHome.Usuario.idUsuario) btnModificar.Visible = false;
+            if (comentario.usuario.idUsuario != frmHome.Usuario.idUsuario && frmHome.Usuario.esAdmin==false) btnModificar.Visible = false;
         }
 
         public frmComentario(PublicacionesWS.comentario comentario, frmPostEvento post)

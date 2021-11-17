@@ -25,10 +25,11 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private string _rutaArchivoPDF = "";
         public frmAgregarMaterial()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
         public frmAgregarMaterial(CursosWS.curso _cursoVer, int auxTipo, int auxIndice)
         {
+            _rutaArchivoPDF = null;
             _cursoAux = _cursoVer;
             _tipo = auxTipo;
             _indice = auxIndice;
@@ -50,34 +51,37 @@ namespace LP2Soft.Cursos.AgregarMaterial
 
         private void btnSubir_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se Subio satisfactoriamente");
+
             _material.nombreArchivo = cboSemestre + "-" + cboCiclo;
             _material.profesor = new PublicacionesWS.profesor();
             _material.curso = new PublicacionesWS.curso();
             CursosWS.profesor profesorAux = new CursosWS.profesor();
-
+            PublicacionesWS.curso cursoAux = new PublicacionesWS.curso();
             profesorAux = (CursosWS.profesor)cboProfesores.SelectedItem;
             _material.profesor.idProfesor = profesorAux.idProfesor;
-            _material.curso.idCurso = _idCurso;
-            _material.contenido = txtComentario.Text;
-            _material.sumatoriaCalificaiones = 0;
-            _material.cantidadCalificaiones = 0;
+            cursoAux.idCurso = _idCurso;
+
+            _material.idCurso = _idCurso;
+            _material.curso = cursoAux;
             _material.tipoMaterial = _tipo;
             _material.indice_tipoMaterial = _indice;
+            _material.nombreArchivo = cboSemestre.Text + "-" + cboCiclo.Text;
             //post
+
             _material.contenido = txtComentario.Text;
-            _material.prioridad = 1;
             _material.usuario = new PublicacionesWS.usuario();
             _material.usuario.idUsuario = frmHome.Usuario.idUsuario;
-            ///int resultado = _daoMaterial.insertar_Material(_material);
-            this.Close();          
+            _material.nota = txtNota.Text;
+            int resultado = _daoMaterial.insertar_Material(_material);
+            MessageBox.Show("Se Subio satisfactoriamente");
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             //frmEstasSeguroDeCancelar estasSeguroDeCancelar = new frmEstasSeguroDeCancelar();
             //if(estasSeguroDeCancelar.ShowDialog()==DialogResult.OK)
-            this.Close();    
+            this.Close();
         }
 
         private void btbCargarDocs_Click(object sender, EventArgs e)
@@ -109,7 +113,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
                 checkBNo.Checked = false;
                 txtNota.Enabled = true;
             }
-            
+
         }
 
         private void checkBNo_CheckedChanged(object sender, EventArgs e)
@@ -119,9 +123,9 @@ namespace LP2Soft.Cursos.AgregarMaterial
                 checkbSi.Checked = false;
                 txtNota.Enabled = false;
             }
-            
+
         }
 
-        
+
     }
 }

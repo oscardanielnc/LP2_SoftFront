@@ -402,6 +402,12 @@
     <Compile Include="Tarjetas\tarjCursoxNivel.Designer.cs">
       <DependentUpon>tarjCursoxNivel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarjetas\tarjMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjMaterial.Designer.cs">
+      <DependentUpon>tarjMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tarjetas\tarjTipoMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -630,6 +636,9 @@
     <EmbeddedResource Include="Tarjetas\tarjCursoxNivel.resx">
       <DependentUpon>tarjCursoxNivel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjMaterial.resx">
+      <DependentUpon>tarjMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjMensaje.resx">
       <DependentUpon>tarjMensaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -707,10 +716,16 @@
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.agendarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.aumentarLikesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.comentario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.desagendarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.disminuirLikesResponse.datasource">
@@ -719,10 +734,16 @@
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.eliminarComentarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.eliminarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.eliminarPostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.evento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.eventoAgendadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.insertarComentarioResponse.datasource">
@@ -753,6 +774,15 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarXcursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listar_material_tipo_indiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.material.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.modificarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.modificarPostResponse.datasource">

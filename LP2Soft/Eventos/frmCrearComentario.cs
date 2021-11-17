@@ -14,10 +14,10 @@ namespace LP2Soft.Eventos
 {
     public partial class frmCrearComentario : Form
     {
-        PublicacionesWS.comentario _comentario;
-        PublicacionesWS.PublicacionesWSClient _daoComentario;
-        PublicacionesWS.post _post;
-        PublicacionesWS.comentario _comentarioCreado;
+        private PublicacionesWS.comentario _comentario;
+        private PublicacionesWS.PublicacionesWSClient _daoComentario;
+        private PublicacionesWS.post _post;
+        private PublicacionesWS.comentario _comentarioCreado;
 
         public PublicacionesWS.comentario ComentarioCreado { get => _comentarioCreado; }
 
