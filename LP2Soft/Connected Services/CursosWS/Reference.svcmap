@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8081/LP2Soft_WebService/CursosWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/LP2Soft_WebService/CursosWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursosWS.wsdl" MetadataType="Wsdl" ID="a0c000e2-ffd6-43e2-9030-242e2b3ed83c" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebService/CursosWS?WSDL" />
-    <MetadataFile FileName="CursosWS.xsd" MetadataType="Schema" ID="084b61fd-f2a3-4ca7-83a4-7fa2ea16591e" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebService/CursosWS?xsd=1" />
+    <MetadataFile FileName="CursosWS1.wsdl" MetadataType="Wsdl" ID="ba33099c-14d7-4742-a2f5-fbc089464e96" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebService/CursosWS?WSDL" />
+    <MetadataFile FileName="CursosWS1.xsd" MetadataType="Schema" ID="140c4acc-dbf0-4e23-b3f5-e45cf4eeef76" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebService/CursosWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

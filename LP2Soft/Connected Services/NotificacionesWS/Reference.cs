@@ -1681,6 +1681,8 @@ namespace LP2Soft.NotificacionesWS {
         
         private string nombreArchivoField;
         
+        private string notaField;
+        
         private profesor profesorField;
         
         private int sumatoriaCalificaionesField;
@@ -1749,6 +1751,18 @@ namespace LP2Soft.NotificacionesWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nota {
+            get {
+                return this.notaField;
+            }
+            set {
+                this.notaField = value;
+                this.RaisePropertyChanged("nota");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public profesor profesor {
             get {
                 return this.profesorField;
@@ -1760,7 +1774,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int sumatoriaCalificaiones {
             get {
                 return this.sumatoriaCalificaionesField;
@@ -1772,7 +1786,7 @@ namespace LP2Soft.NotificacionesWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public int tipoMaterial {
             get {
                 return this.tipoMaterialField;
