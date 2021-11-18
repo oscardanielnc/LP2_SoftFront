@@ -42,7 +42,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.txtNota = new System.Windows.Forms.TextBox();
             this.lblCiclo = new System.Windows.Forms.Label();
             this.flpCargarMaterial = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblTituloPanel = new System.Windows.Forms.Label();
+            this.lblPDF = new System.Windows.Forms.Label();
             this.btbCargarDocs = new System.Windows.Forms.Button();
             this.lblProfesorMsj = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -176,26 +176,26 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // flpCargarMaterial
             // 
             this.flpCargarMaterial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpCargarMaterial.Controls.Add(this.lblTituloPanel);
+            this.flpCargarMaterial.Controls.Add(this.lblPDF);
             this.flpCargarMaterial.Controls.Add(this.btbCargarDocs);
             this.flpCargarMaterial.Location = new System.Drawing.Point(388, 81);
             this.flpCargarMaterial.Name = "flpCargarMaterial";
             this.flpCargarMaterial.Size = new System.Drawing.Size(221, 219);
             this.flpCargarMaterial.TabIndex = 15;
             // 
-            // lblTituloPanel
+            // lblPDF
             // 
-            this.lblTituloPanel.AutoSize = true;
-            this.lblTituloPanel.Location = new System.Drawing.Point(3, 0);
-            this.lblTituloPanel.Name = "lblTituloPanel";
-            this.lblTituloPanel.Size = new System.Drawing.Size(169, 13);
-            this.lblTituloPanel.TabIndex = 16;
-            this.lblTituloPanel.Text = "Arrastar aquí los documentos        ";
+            this.lblPDF.AutoSize = true;
+            this.lblPDF.Location = new System.Drawing.Point(3, 0);
+            this.lblPDF.Name = "lblPDF";
+            this.lblPDF.Size = new System.Drawing.Size(166, 13);
+            this.lblPDF.TabIndex = 16;
+            this.lblPDF.Text = "Adjunte su PDF aquí -->               ";
             // 
             // btbCargarDocs
             // 
             this.btbCargarDocs.Image = global::LP2Soft.Properties.Resources.upload_regular_24;
-            this.btbCargarDocs.Location = new System.Drawing.Point(178, 3);
+            this.btbCargarDocs.Location = new System.Drawing.Point(175, 3);
             this.btbCargarDocs.Name = "btbCargarDocs";
             this.btbCargarDocs.Size = new System.Drawing.Size(35, 33);
             this.btbCargarDocs.TabIndex = 16;
@@ -325,7 +325,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.Label lblCiclo;
         private System.Windows.Forms.FlowLayoutPanel flpCargarMaterial;
-        private System.Windows.Forms.Label lblTituloPanel;
+        private System.Windows.Forms.Label lblPDF;
         private System.Windows.Forms.Button btbCargarDocs;
         private System.Windows.Forms.Label lblProfesorMsj;
         private System.Windows.Forms.Label label2;

@@ -173,6 +173,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             // 
             // panelLP2Practicas
             // 
+            this.panelLP2Practicas.AutoScroll = true;
             this.panelLP2Practicas.Controls.Add(this.pictureBox3);
             this.panelLP2Practicas.Controls.Add(this.pictureBox2);
             this.panelLP2Practicas.Controls.Add(this.pictureBox1);
@@ -190,7 +191,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.panelLP2Practicas.Controls.Add(this.btnLP2Practicas1);
             this.panelLP2Practicas.Location = new System.Drawing.Point(9, 165);
             this.panelLP2Practicas.Name = "panelLP2Practicas";
-            this.panelLP2Practicas.Size = new System.Drawing.Size(783, 313);
+            this.panelLP2Practicas.Size = new System.Drawing.Size(783, 328);
             this.panelLP2Practicas.TabIndex = 39;
             // 
             // pictureBox3

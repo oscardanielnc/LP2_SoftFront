@@ -52,29 +52,52 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private void btnSubir_Click(object sender, EventArgs e)
         {
 
-            _material.nombreArchivo = cboSemestre + "-" + cboCiclo;
+
             _material.profesor = new PublicacionesWS.profesor();
             _material.curso = new PublicacionesWS.curso();
             CursosWS.profesor profesorAux = new CursosWS.profesor();
             PublicacionesWS.curso cursoAux = new PublicacionesWS.curso();
             profesorAux = (CursosWS.profesor)cboProfesores.SelectedItem;
             _material.profesor.idProfesor = profesorAux.idProfesor;
+            _material.profesor.nombre = profesorAux.nombre;
             cursoAux.idCurso = _idCurso;
 
             _material.idCurso = _idCurso;
             _material.curso = cursoAux;
-            _material.tipoMaterial = _tipo;
+            _material.tipoMaterial = _tipo + 1;
             _material.indice_tipoMaterial = _indice;
-            _material.nombreArchivo = cboSemestre.Text + "-" + cboCiclo.Text;
+            if (cboSemestre.Text == "") {
+                MessageBox.Show("Agregar un semestre");
+            }else if (cboSemestre.Text == "")
+            {
+                MessageBox.Show("Agregar un ciclo");
+            }
+
+            if (lblPDF.Text == "Adjunte su PDF aquí -->               ") {
+                MessageBox.Show("Agregar un archivo PDF");
+            }
+            
             //post
 
             _material.contenido = txtComentario.Text;
             _material.usuario = new PublicacionesWS.usuario();
             _material.usuario.idUsuario = frmHome.Usuario.idUsuario;
-            _material.nota = txtNota.Text;
-            int resultado = _daoMaterial.insertar_Material(_material);
-            MessageBox.Show("Se Subio satisfactoriamente");
-            this.Close();
+            if (checkBNo.Checked == true)
+                _material.nota = "-";
+            else if (txtNota.Text == "")
+            {
+                MessageBox.Show("Agregar una Nota");
+            }
+            else if (20 < Int32.Parse(txtNota.Text) || 0 > Int32.Parse(txtNota.Text))
+                MessageBox.Show("Agregar una Nota entre 0 y 20");
+            else
+            {
+                _material.nombreArchivo = cboSemestre.Text + "-" + cboCiclo.Text;
+                _material.nota = txtNota.Text;
+                int resultado = _daoMaterial.insertar_Material(_material);
+                MessageBox.Show("Se Subio satisfactoriamente");
+                this.Close();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -91,7 +114,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
                 if (ofdArchivo.ShowDialog() == DialogResult.OK)
                 {
                     _rutaArchivoPDF = ofdArchivo.FileName;
-                    lblTituloPanel.Text = _rutaArchivoPDF;
+                    lblPDF.Text = _rutaArchivoPDF;
                     FileStream fs = new FileStream(_rutaArchivoPDF, FileMode.Open, FileAccess.Read);
                     BinaryReader br = new BinaryReader(fs);
                     //Asignamos el archivo al objeto
