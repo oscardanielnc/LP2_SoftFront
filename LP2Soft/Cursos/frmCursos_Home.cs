@@ -53,6 +53,8 @@ namespace LP2Soft.Cursos
                 tCurso.Visible = true;
                 i[u.nivel-1]++;
                 _listaTarjCursos.Add(tCurso);
+                if(u.estado==2)
+                    _creditosTotales += u.creditos;
             }
         }
         public static void actualizarLlbCreditos()

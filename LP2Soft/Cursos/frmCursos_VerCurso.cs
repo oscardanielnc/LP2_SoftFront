@@ -31,24 +31,23 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         {
             InitializeComponent();
         }
-        public frmCursos_VerCurso(CursosWS.curso _cursoVer)
+        public frmCursos_VerCurso(CursosWS.curso cursoVer)
         {
-            _cursoAux = _cursoVer;
+            _cursoAux = cursoVer;
             _daoCurso = new CursosWS.CursosWSClient();
             InitializeComponent();
-            lblLP2NombreCurso.Text = _cursoVer.nombre;
-            btnLP2LP2.Text = _cursoVer.nombre;
-            AuxNivel = _cursoVer.nivel;
-            btnLP2Ciclo7.Text = "Ciclo " + _cursoVer.nivel.ToString();
-            lblLP2Descripcion.Text = "Código     : " + _cursoVer.codigo +
-                                     "\nCréditos   : " + _cursoVer.creditos +
-                                     "\nCarrera    : " + _cursoVer.especialidad +
-                                     "\nDescripción: " + _cursoVer.descripcion +
-                                     "\nCréditos Requeridos: " + _cursoVer.creditosRequeridos +
-                                     "\nCursos Requisitos : ";
-            if (_cursoVer.cursosRequeridos != null)
+            AuxNivel = cursoVer.nivel;
+            btnLP2LP2.Text = cursoVer.nombre;
+
+            lblNombreCodigo.Text = cursoVer.nombre + " (" + cursoVer.codigo + ")";
+            lblCreditos.Text = cursoVer.creditos.ToString("0.00");
+            lblCreditosReq.Text = cursoVer.creditosRequeridos.ToString("0.00");
+            lblDescripción.Text = cursoVer.descripcion;
+
+            btnLP2Ciclo7.Text = "Ciclo " + cursoVer.nivel.ToString();
+            if (cursoVer.cursosRequeridos != null)
             {
-                foreach (CursosWS.curso c in _cursoVer.cursosRequeridos)
+                foreach (CursosWS.curso c in cursoVer.cursosRequeridos)
                 {
                     LinkLabel lblNombreCursoReq = new LinkLabel();
                     lblNombreCursoReq.Text = c.nombre;
@@ -56,7 +55,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
                     panelCursosrequeridos.Controls.Add(lblNombreCursoReq);
                     lblNombreCursoReq.Click += new System.EventHandler((object sender, EventArgs e) => this.verCurso(sender, e, c.idCurso));
                 }
-                lblLP2Descripcion.Text = lblLP2Descripcion.Text.TrimEnd(',');
+                lblDescripción.Text = lblDescripción.Text.TrimEnd(',');
             }
             //post
             _cantidadPost = 0;
@@ -64,7 +63,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
 
             listarPublicaciones();
             //post
-            tipoMaterial(_cursoVer);
+            tipoMaterial(cursoVer);
         }
 
         private void tipoMaterial(CursosWS.curso _cursoVer) {
@@ -131,14 +130,16 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         }
         private void btnLP2Ciclo7_Click(object sender, EventArgs e)
         {
-            frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(AuxNivel);
-            addPanel(frmCursos_Ciclo);
+            /*frmCursos_Ciclo frmCursos_Ciclo = new frmCursos_Ciclo(AuxNivel);
+            addPanel(frmCursos_Ciclo);*/
+            frmHome.abrirFormulario(new frmCursos_Ciclo(AuxNivel));
         }
 
         private void btnLP2Material_Click(object sender, EventArgs e)
         {
-            frmCursos_Home cursosHome = new frmCursos_Home(20186013);
-            addPanel(cursosHome);
+            /*frmCursos_Home cursosHome = new frmCursos_Home(frmHome.Usuario.idUsuario);
+            addPanel(cursosHome);*/
+            frmHome.abrirFormulario(new frmCursos_Home(frmHome.Usuario.idUsuario));
         }
 
         private void btnLP2DescargarPcs_Click(object sender, EventArgs e)
@@ -153,8 +154,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
 
         private void btnLP2Practicas_Click(object sender, EventArgs e)
         {
-            frmCursos_Practicas practicas = new frmCursos_Practicas();
-            addPanel(practicas);
+            /*frmCursos_Practicas practicas = new frmCursos_Practicas();
+            addPanel(practicas);*/
+            frmHome.abrirFormulario(new frmCursos_Practicas());
         }
 
         private void pBLP2DescargarLabs_Click(object sender, EventArgs e)
@@ -185,18 +187,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private void pBLP2DescargasExtras_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Descargando");
-        }
-
-        
-        public void addPanel(Form f)
-        {
-            while (this.panel4.Controls.Count > 0)
-            {
-                this.panel4.Controls.RemoveAt(0);
-            }
-            f.TopLevel = false;
-            this.panel4.Controls.Add(f);
-            f.Show();
         }
         //post 
         public void listarPublicaciones()

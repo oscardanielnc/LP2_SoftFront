@@ -33,8 +33,11 @@ namespace LP2Soft.Tarjetas
             lblNombre.Location = posicionarLabel();
 
             this.Click += new EventHandler((object sender, EventArgs e) =>  this.mostrarCurso());
+            lblCodigo.Click += new EventHandler((object sender, EventArgs e) => this.mostrarCurso());
+            lblNombre.Click += new EventHandler((object sender, EventArgs e) => this.mostrarCurso());
+            lblCreditos.Click += new EventHandler((object sender, EventArgs e) => this.mostrarCurso());
 
-            if(onlyRead)
+            if (onlyRead)
             {
                 btnCorazon.Visible = false; //
                 btnNewState.Visible = false;
@@ -104,7 +107,7 @@ namespace LP2Soft.Tarjetas
         {
             foreach(UsuarioWS.curso cursoBase in frmHome.Usuario.cursos)
             {
-                if(cursoBase.estado==0)
+                if(cursoBase.estado==0 || cursoBase.estado == 1)
                 {
                     if(cursoBase.creditosRequeridos<=frmCursos_Home.CreditosTotales)
                     {
@@ -127,7 +130,9 @@ namespace LP2Soft.Tarjetas
                             frmHome.Usuario.cursos[cursoBase.idCurso - 1].estado = 0;
                             frmCursos_Home.ListarTarjCursos[cursoBase.idCurso - 1].cambiarColor(0);
                         }
-
+                    } else
+                    {
+                        frmCursos_Home.ListarTarjCursos[cursoBase.idCurso - 1].cambiarColor(frmHome.Usuario.cursos[cursoBase.idCurso - 1].estado);
                     }
                 }
             }

@@ -36,7 +36,7 @@ namespace LP2Soft.Mensajes
             catch (Exception ex)
             {
                 lblInfo.Visible = true;
-                lblInfo.Text = "Usted aún no tiene ninguna notificación";
+                lblInfo.Text = "Usted aún no tiene ningún mensaje";
             }
         }
         private void agregarMensajeUltimo(NotificacionesWS.ultimoMensaje u)
