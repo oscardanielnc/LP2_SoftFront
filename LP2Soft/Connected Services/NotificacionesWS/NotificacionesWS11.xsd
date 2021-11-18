@@ -188,18 +188,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="enviarMensaje">
-    <xs:sequence>
-      <xs:element name="idUsuario1" type="xs:int" />
-      <xs:element name="idUsuario2" type="xs:int" />
-      <xs:element minOccurs="0" name="contenido" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="enviarMensajeResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarNotificacion">
     <xs:sequence>
       <xs:element name="idUsuarioNotificado" type="xs:int" />
@@ -212,6 +200,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarNotificacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarMensaje">
+    <xs:sequence>
+      <xs:element name="idUsuario1" type="xs:int" />
+      <xs:element name="idUsuario2" type="xs:int" />
+      <xs:element minOccurs="0" name="contenido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarMensajeResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
