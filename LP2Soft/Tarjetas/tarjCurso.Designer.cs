@@ -30,15 +30,14 @@ namespace LP2Soft.Tarjetas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tarjCurso));
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCreditos = new System.Windows.Forms.Label();
             this.toolTipCurso = new System.Windows.Forms.ToolTip(this.components);
-            this.btnCorazon = new System.Windows.Forms.PictureBox();
-            this.pBLP3CorazonLleno = new System.Windows.Forms.PictureBox();
             this.btnNewState = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCorazon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLP3CorazonLleno)).BeginInit();
+            this.imgCorazones = new System.Windows.Forms.ImageList(this.components);
+            this.btnCorazon = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnNewState)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,30 +72,6 @@ namespace LP2Soft.Tarjetas
             this.lblCreditos.TabIndex = 25;
             this.lblCreditos.Text = "5.00";
             // 
-            // btnCorazon
-            // 
-            this.btnCorazon.BackColor = System.Drawing.Color.DarkGray;
-            this.btnCorazon.Image = global::LP2Soft.Properties.Resources.like1;
-            this.btnCorazon.Location = new System.Drawing.Point(114, 4);
-            this.btnCorazon.Name = "btnCorazon";
-            this.btnCorazon.Size = new System.Drawing.Size(24, 24);
-            this.btnCorazon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnCorazon.TabIndex = 22;
-            this.btnCorazon.TabStop = false;
-            this.toolTipCurso.SetToolTip(this.btnCorazon, "Añadir/Eliminar de favoritos");
-            // 
-            // pBLP3CorazonLleno
-            // 
-            this.pBLP3CorazonLleno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pBLP3CorazonLleno.Image = global::LP2Soft.Properties.Resources.heart_solid_24;
-            this.pBLP3CorazonLleno.Location = new System.Drawing.Point(114, 4);
-            this.pBLP3CorazonLleno.Name = "pBLP3CorazonLleno";
-            this.pBLP3CorazonLleno.Size = new System.Drawing.Size(24, 24);
-            this.pBLP3CorazonLleno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pBLP3CorazonLleno.TabIndex = 21;
-            this.pBLP3CorazonLleno.TabStop = false;
-            this.pBLP3CorazonLleno.Visible = false;
-            // 
             // btnNewState
             // 
             this.btnNewState.BackColor = System.Drawing.Color.DarkGray;
@@ -110,23 +85,38 @@ namespace LP2Soft.Tarjetas
             this.toolTipCurso.SetToolTip(this.btnNewState, "Marcar como Aprobado/No aprobado");
             this.btnNewState.Click += new System.EventHandler(this.btnNewState_Click);
             // 
+            // imgCorazones
+            // 
+            this.imgCorazones.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgCorazones.ImageStream")));
+            this.imgCorazones.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgCorazones.Images.SetKeyName(0, "star-empty.png");
+            this.imgCorazones.Images.SetKeyName(1, "star-full.png");
+            // 
+            // btnCorazon
+            // 
+            this.btnCorazon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCorazon.ImageIndex = 0;
+            this.btnCorazon.ImageList = this.imgCorazones;
+            this.btnCorazon.Location = new System.Drawing.Point(114, 4);
+            this.btnCorazon.Name = "btnCorazon";
+            this.btnCorazon.Size = new System.Drawing.Size(24, 24);
+            this.btnCorazon.TabIndex = 26;
+            this.btnCorazon.Click += new System.EventHandler(this.btnCorazon_Click);
+            // 
             // tarjCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(143, 101);
+            this.Controls.Add(this.btnCorazon);
             this.Controls.Add(this.lblCreditos);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.btnCorazon);
-            this.Controls.Add(this.pBLP3CorazonLleno);
             this.Controls.Add(this.btnNewState);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tarjCurso";
             this.Text = "tarjeta";
-            ((System.ComponentModel.ISupportInitialize)(this.btnCorazon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLP3CorazonLleno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNewState)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,13 +124,12 @@ namespace LP2Soft.Tarjetas
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox btnCorazon;
-        private System.Windows.Forms.PictureBox pBLP3CorazonLleno;
         private System.Windows.Forms.PictureBox btnNewState;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCreditos;
         private System.Windows.Forms.ToolTip toolTipCurso;
+        private System.Windows.Forms.ImageList imgCorazones;
+        private System.Windows.Forms.Label btnCorazon;
     }
 }

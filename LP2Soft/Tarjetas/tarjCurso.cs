@@ -32,6 +32,9 @@ namespace LP2Soft.Tarjetas
             lblCreditos.Text = curso.creditos.ToString("0.00");
             lblNombre.Location = posicionarLabel();
 
+            if (curso.favorito) btnCorazon.ImageIndex = 1;
+            else btnCorazon.ImageIndex = 0;
+
             this.Click += new EventHandler((object sender, EventArgs e) =>  this.mostrarCurso());
             lblCodigo.Click += new EventHandler((object sender, EventArgs e) => this.mostrarCurso());
             lblNombre.Click += new EventHandler((object sender, EventArgs e) => this.mostrarCurso());
@@ -134,6 +137,21 @@ namespace LP2Soft.Tarjetas
                         frmCursos_Home.ListarTarjCursos[cursoBase.idCurso - 1].cambiarColor(frmHome.Usuario.cursos[cursoBase.idCurso - 1].estado);
                     }
                 }
+            }
+        }
+
+        private void btnCorazon_Click(object sender, EventArgs e)
+        {
+            if(btnCorazon.ImageIndex==1)
+            {
+                btnCorazon.ImageIndex = 0;
+                // quitar de favoritos
+                frmHome.Usuario.cursos[_idCurso - 1].favorito = false; ;
+            } else
+            {
+                btnCorazon.ImageIndex = 1;
+                // agregar a favoritos
+                frmHome.Usuario.cursos[_idCurso - 1].favorito = true;
             }
         }
     }
