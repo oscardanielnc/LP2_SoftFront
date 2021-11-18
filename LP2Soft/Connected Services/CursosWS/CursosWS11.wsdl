@@ -23,23 +23,41 @@
   <message name="mostrarProfesorResponse">
     <part name="parameters" element="tns:mostrarProfesorResponse" />
   </message>
-  <message name="listarProfesorXCurso">
-    <part name="parameters" element="tns:listarProfesorXCurso" />
+  <message name="eliminarReseniasProfesor">
+    <part name="parameters" element="tns:eliminarReseniasProfesor" />
   </message>
-  <message name="listarProfesorXCursoResponse">
-    <part name="parameters" element="tns:listarProfesorXCursoResponse" />
+  <message name="eliminarReseniasProfesorResponse">
+    <part name="parameters" element="tns:eliminarReseniasProfesorResponse" />
+  </message>
+  <message name="insertarReseniaProfesor">
+    <part name="parameters" element="tns:insertarReseniaProfesor" />
+  </message>
+  <message name="insertarReseniaProfesorResponse">
+    <part name="parameters" element="tns:insertarReseniaProfesorResponse" />
   </message>
   <message name="listarProfesoresNombre">
     <part name="parameters" element="tns:listarProfesoresNombre" />
   </message>
-  <message name="listarProfesoresNombreResponse">
-    <part name="parameters" element="tns:listarProfesoresNombreResponse" />
+  <message name="MostrarCursoResponse">
+    <part name="parameters" element="tns:MostrarCursoResponse" />
   </message>
   <message name="listarCursoProfesor">
     <part name="parameters" element="tns:listarCursoProfesor" />
   </message>
   <message name="listarCursoProfesorResponse">
     <part name="parameters" element="tns:listarCursoProfesorResponse" />
+  </message>
+  <message name="listarProfesorXCurso">
+    <part name="parameters" element="tns:listarProfesorXCurso" />
+  </message>
+  <message name="listarProfesorXCursoResponse">
+    <part name="parameters" element="tns:listarProfesorXCursoResponse" />
+  </message>
+  <message name="listarReseniasProfesor">
+    <part name="parameters" element="tns:listarReseniasProfesor" />
+  </message>
+  <message name="listarReseniasProfesorResponse">
+    <part name="parameters" element="tns:listarReseniasProfesorResponse" />
   </message>
   <portType name="CursosWS">
     <operation name="listaXciclo">
@@ -54,17 +72,29 @@
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorRequest" message="tns:mostrarProfesor" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorResponse" message="tns:mostrarProfesorResponse" />
     </operation>
-    <operation name="listarProfesorXCurso">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoRequest" message="tns:listarProfesorXCurso" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoResponse" message="tns:listarProfesorXCursoResponse" />
+    <operation name="eliminarReseniasProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/eliminarReseniasProfesorRequest" message="tns:eliminarReseniasProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/eliminarReseniasProfesorResponse" message="tns:eliminarReseniasProfesorResponse" />
     </operation>
-    <operation name="listarProfesoresNombre">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesoresNombreRequest" message="tns:listarProfesoresNombre" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesoresNombreResponse" message="tns:listarProfesoresNombreResponse" />
+    <operation name="insertarReseniaProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/insertarReseniaProfesorRequest" message="tns:insertarReseniaProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/insertarReseniaProfesorResponse" message="tns:insertarReseniaProfesorResponse" />
+    </operation>
+    <operation name="mostrarProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorRequest" message="tns:mostrarProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorResponse" message="tns:mostrarProfesorResponse" />
     </operation>
     <operation name="listarCursoProfesor">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorRequest" message="tns:listarCursoProfesor" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorResponse" message="tns:listarCursoProfesorResponse" />
+    </operation>
+    <operation name="listarProfesorXCurso">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoRequest" message="tns:listarProfesorXCurso" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoResponse" message="tns:listarProfesorXCursoResponse" />
+    </operation>
+    <operation name="listarReseniasProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarReseniasProfesorRequest" message="tns:listarReseniasProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarReseniasProfesorResponse" message="tns:listarReseniasProfesorResponse" />
     </operation>
   </portType>
   <binding name="CursosWSPortBinding" type="tns:CursosWS">
@@ -96,7 +126,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarProfesorXCurso">
+    <operation name="eliminarReseniasProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarReseniaProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,6 +154,24 @@
       </output>
     </operation>
     <operation name="listarCursoProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProfesorXCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReseniasProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

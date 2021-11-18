@@ -316,6 +316,12 @@
     <Compile Include="Perfil\frmCrearResenia.Designer.cs">
       <DependentUpon>frmCrearResenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Perfil\frmCrearReseniaProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmCrearReseniaProfesor.Designer.cs">
+      <DependentUpon>frmCrearReseniaProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfil\frmPerfil_CursosAsesorados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -589,6 +595,9 @@
     <EmbeddedResource Include="Perfil\frmCrearResenia.resx">
       <DependentUpon>frmCrearResenia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmCrearReseniaProfesor.resx">
+      <DependentUpon>frmCrearReseniaProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
@@ -677,6 +686,12 @@
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.eliminarReseniasProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.insertarReseniaProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarCursoProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -684,6 +699,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarProfesorXCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listarReseniasProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.listaXcicloResponse.datasource">
@@ -696,6 +714,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.profesor1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.resenia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.eliminarSolicitudAmistadResponse.datasource">
