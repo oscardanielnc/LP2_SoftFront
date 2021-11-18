@@ -37,14 +37,13 @@ namespace LP2Soft.Tarjetas
             lblNombre.Click += new EventHandler((object sender, EventArgs e) => this.mostrarCurso());
             lblCreditos.Click += new EventHandler((object sender, EventArgs e) => this.mostrarCurso());
 
+            cambiarColor(curso.estado);
             if (onlyRead)
             {
                 btnCorazon.Visible = false; //
                 btnNewState.Visible = false;
                 this.BackColor = Color.DarkGray;
             }
-
-            cambiarColor(curso.estado);
         }
 
         private Point posicionarLabel()

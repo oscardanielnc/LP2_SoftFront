@@ -68,5 +68,17 @@ namespace LP2Soft.Home
         {
             frmLoginSingin.abrirFormulario(new frmSignIn());
         }
+
+        private void txtCorreoCodigo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                btnIngresar_Click(sender, e);
+        }
+
+        private void txtContrasenia_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                btnIngresar_Click(sender, e);
+        }
     }
 }

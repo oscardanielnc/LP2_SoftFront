@@ -153,6 +153,26 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_bookmark_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("book-bookmark-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_heart_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("book-heart-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bubble {
             get {
                 object obj = ResourceManager.GetObject("bubble", resourceCulture);
@@ -166,6 +186,36 @@ namespace LP2Soft.Properties {
         internal static System.Drawing.Bitmap calendar {
             get {
                 object obj = ResourceManager.GetObject("calendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_event_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("calendar-event-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_heart_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("calendar-heart-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("calendar-solid-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -696,6 +746,16 @@ namespace LP2Soft.Properties {
         internal static System.Drawing.Bitmap star_full_1 {
             get {
                 object obj = ResourceManager.GetObject("star-full-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap star_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("star-solid-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

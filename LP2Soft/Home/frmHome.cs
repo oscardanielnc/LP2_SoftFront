@@ -234,5 +234,11 @@ namespace LP2Soft.Home
                 txtBusqueda.ForeColor = Color.Gray;
             }
         }
+
+        private void txtBusqueda_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                btnBuscar_Click(sender, e);
+        }
     }
 }

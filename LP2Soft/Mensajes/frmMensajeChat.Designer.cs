@@ -95,6 +95,7 @@ namespace LP2Soft.Mensajes
             this.txtMensaje.TabIndex = 0;
             this.txtMensaje.Text = "Escribe aquí tu mensaje";
             this.txtMensaje.Enter += new System.EventHandler(this.txtMensaje_Enter);
+            this.txtMensaje.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMensaje_KeyDown);
             this.txtMensaje.Leave += new System.EventHandler(this.txtMensaje_Leave);
             // 
             // lblNombreAmigo

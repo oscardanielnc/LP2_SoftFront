@@ -99,5 +99,11 @@ namespace LP2Soft.Mensajes
                 txtMensaje.ForeColor = Color.Gray;
             }
         }
+
+        private void txtMensaje_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                btnEnviarMensaje_Click(sender, e);
+        }
     }
 }

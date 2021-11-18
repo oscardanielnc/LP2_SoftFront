@@ -1163,5 +1163,23 @@
   <ItemGroup>
     <None Include="Resources\Spinner-1s-200px.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-heart-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-event-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-bookmark-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-heart-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-solid-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

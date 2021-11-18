@@ -94,6 +94,7 @@ namespace LP2Soft.Home
             this.txtContrasenia.Size = new System.Drawing.Size(294, 21);
             this.txtContrasenia.TabIndex = 3;
             this.txtContrasenia.UseSystemPasswordChar = true;
+            this.txtContrasenia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContrasenia_KeyDown);
             // 
             // lblCorreoCodigo
             // 
@@ -112,6 +113,7 @@ namespace LP2Soft.Home
             this.txtCorreoCodigo.Name = "txtCorreoCodigo";
             this.txtCorreoCodigo.Size = new System.Drawing.Size(294, 21);
             this.txtCorreoCodigo.TabIndex = 1;
+            this.txtCorreoCodigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCorreoCodigo_KeyDown);
             // 
             // lblInicioSesion
             // 

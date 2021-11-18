@@ -29,6 +29,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCursos_VerCurso));
             this.lblDescripción = new System.Windows.Forms.Label();
             this.lblNombreCodigo = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.label7 = new System.Windows.Forms.Label();
             this.lblCreditosReq = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTipVerCurso = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargasExtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLibros)).BeginInit();
@@ -125,6 +127,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargasExtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargasExtras.TabIndex = 39;
             this.pBLP2DescargasExtras.TabStop = false;
+            this.toolTipVerCurso.SetToolTip(this.pBLP2DescargasExtras, "Descargar todo");
             this.pBLP2DescargasExtras.Visible = false;
             this.pBLP2DescargasExtras.Click += new System.EventHandler(this.pBLP2DescargasExtras_Click);
             // 
@@ -137,6 +140,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarLibros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarLibros.TabIndex = 38;
             this.pBLP2DescargarLibros.TabStop = false;
+            this.toolTipVerCurso.SetToolTip(this.pBLP2DescargarLibros, "Descargar todo");
             this.pBLP2DescargarLibros.Visible = false;
             this.pBLP2DescargarLibros.Click += new System.EventHandler(this.pBLP2DescargarLibros_Click);
             // 
@@ -149,6 +153,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarFinales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarFinales.TabIndex = 37;
             this.pBLP2DescargarFinales.TabStop = false;
+            this.toolTipVerCurso.SetToolTip(this.pBLP2DescargarFinales, "Descargar todo");
             this.pBLP2DescargarFinales.Visible = false;
             this.pBLP2DescargarFinales.Click += new System.EventHandler(this.pBLP2DescargarFinales_Click);
             // 
@@ -161,6 +166,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarParciales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarParciales.TabIndex = 36;
             this.pBLP2DescargarParciales.TabStop = false;
+            this.toolTipVerCurso.SetToolTip(this.pBLP2DescargarParciales, "Descargar todo");
             this.pBLP2DescargarParciales.Visible = false;
             this.pBLP2DescargarParciales.Click += new System.EventHandler(this.pBLP2DescargarParciales_Click);
             // 
@@ -173,6 +179,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarPcs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarPcs.TabIndex = 35;
             this.pBLP2DescargarPcs.TabStop = false;
+            this.toolTipVerCurso.SetToolTip(this.pBLP2DescargarPcs, "Descargar todo");
             this.pBLP2DescargarPcs.Visible = false;
             this.pBLP2DescargarPcs.Click += new System.EventHandler(this.pBLP2DescargarPcs_Click);
             // 
@@ -185,6 +192,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.pBLP2DescargarLabs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pBLP2DescargarLabs.TabIndex = 34;
             this.pBLP2DescargarLabs.TabStop = false;
+            this.toolTipVerCurso.SetToolTip(this.pBLP2DescargarLabs, "Descargar todo");
             this.pBLP2DescargarLabs.Visible = false;
             this.pBLP2DescargarLabs.Click += new System.EventHandler(this.pBLP2DescargarLabs_Click);
             // 
@@ -524,5 +532,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblCreditosReq;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTipVerCurso;
     }
 }

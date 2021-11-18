@@ -85,5 +85,11 @@ namespace LP2Soft.Perfil
                 txtBusquedaAmigos.ForeColor = Color.Black;
             }
         }
+
+        private void txtBusquedaAmigos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                btnBuscar_Click(sender, e);
+        }
     }
 }

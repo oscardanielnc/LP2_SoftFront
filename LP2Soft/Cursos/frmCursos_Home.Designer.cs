@@ -49,10 +49,10 @@ namespace LP2Soft.Cursos
             this.label3 = new System.Windows.Forms.Label();
             this.lblVerde = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCaclculadorNotas = new System.Windows.Forms.Button();
-            this.lblCreditosInfo = new System.Windows.Forms.Label();
-            this.lblCreditos = new System.Windows.Forms.Label();
             this.btnGrabar = new System.Windows.Forms.Button();
+            this.lblCreditos = new System.Windows.Forms.Label();
+            this.lblCreditosInfo = new System.Windows.Forms.Label();
+            this.btnCaclculadorNotas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -195,7 +195,7 @@ namespace LP2Soft.Cursos
             // 
             // lblAzul
             // 
-            this.lblAzul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(161)))), ((int)(((byte)(237)))));
+            this.lblAzul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
             this.lblAzul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAzul.Location = new System.Drawing.Point(230, 26);
             this.lblAzul.Name = "lblAzul";
@@ -268,25 +268,14 @@ namespace LP2Soft.Cursos
             this.panel2.Size = new System.Drawing.Size(807, 466);
             this.panel2.TabIndex = 24;
             // 
-            // btnCaclculadorNotas
+            // btnGrabar
             // 
-            this.btnCaclculadorNotas.Location = new System.Drawing.Point(661, 2);
-            this.btnCaclculadorNotas.Name = "btnCaclculadorNotas";
-            this.btnCaclculadorNotas.Size = new System.Drawing.Size(143, 35);
-            this.btnCaclculadorNotas.TabIndex = 24;
-            this.btnCaclculadorNotas.Text = "Calculador de notas";
-            this.btnCaclculadorNotas.UseVisualStyleBackColor = true;
-            this.btnCaclculadorNotas.Click += new System.EventHandler(this.btnCaclculadorNotas_Click);
-            // 
-            // lblCreditosInfo
-            // 
-            this.lblCreditosInfo.AutoSize = true;
-            this.lblCreditosInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreditosInfo.Location = new System.Drawing.Point(561, 3);
-            this.lblCreditosInfo.Name = "lblCreditosInfo";
-            this.lblCreditosInfo.Size = new System.Drawing.Size(85, 13);
-            this.lblCreditosInfo.TabIndex = 25;
-            this.lblCreditosInfo.Text = "Total créditos";
+            this.btnGrabar.Location = new System.Drawing.Point(472, 24);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(65, 23);
+            this.btnGrabar.TabIndex = 27;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
             // 
             // lblCreditos
             // 
@@ -298,14 +287,25 @@ namespace LP2Soft.Cursos
             this.lblCreditos.TabIndex = 26;
             this.lblCreditos.Text = "0.00";
             // 
-            // btnGrabar
+            // lblCreditosInfo
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(472, 24);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(65, 23);
-            this.btnGrabar.TabIndex = 27;
-            this.btnGrabar.Text = "Grabar";
-            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.lblCreditosInfo.AutoSize = true;
+            this.lblCreditosInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreditosInfo.Location = new System.Drawing.Point(561, 3);
+            this.lblCreditosInfo.Name = "lblCreditosInfo";
+            this.lblCreditosInfo.Size = new System.Drawing.Size(85, 13);
+            this.lblCreditosInfo.TabIndex = 25;
+            this.lblCreditosInfo.Text = "Total créditos";
+            // 
+            // btnCaclculadorNotas
+            // 
+            this.btnCaclculadorNotas.Location = new System.Drawing.Point(661, 2);
+            this.btnCaclculadorNotas.Name = "btnCaclculadorNotas";
+            this.btnCaclculadorNotas.Size = new System.Drawing.Size(143, 35);
+            this.btnCaclculadorNotas.TabIndex = 24;
+            this.btnCaclculadorNotas.Text = "Calculador de notas";
+            this.btnCaclculadorNotas.UseVisualStyleBackColor = true;
+            this.btnCaclculadorNotas.Click += new System.EventHandler(this.btnCaclculadorNotas_Click);
             // 
             // frmCursos_Home
             // 
