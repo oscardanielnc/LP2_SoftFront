@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/LP2Soft_WebService/NotificacionesWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="enviarMensaje">
+    <part name="parameters" element="tns:enviarMensaje" />
+  </message>
+  <message name="enviarMensajeResponse">
+    <part name="parameters" element="tns:enviarMensajeResponse" />
+  </message>
   <message name="eliminarSolicitudAmistad">
     <part name="parameters" element="tns:eliminarSolicitudAmistad" />
   </message>
@@ -16,6 +22,12 @@
   </message>
   <message name="listarMensajesUltimosResponse">
     <part name="parameters" element="tns:listarMensajesUltimosResponse" />
+  </message>
+  <message name="listarMensajesXAmigo">
+    <part name="parameters" element="tns:listarMensajesXAmigo" />
+  </message>
+  <message name="listarMensajesXAmigoResponse">
+    <part name="parameters" element="tns:listarMensajesXAmigoResponse" />
   </message>
   <message name="insertarNotificacion">
     <part name="parameters" element="tns:insertarNotificacion" />
@@ -29,28 +41,22 @@
   <message name="listarNotificacionesResponse">
     <part name="parameters" element="tns:listarNotificacionesResponse" />
   </message>
-  <message name="listarMensajesUltimos">
-    <part name="parameters" element="tns:listarMensajesUltimos" />
-  </message>
-  <message name="listarMensajesUltimosResponse">
-    <part name="parameters" element="tns:listarMensajesUltimosResponse" />
-  </message>
   <portType name="NotificacionesWS">
-    <operation name="listarMensajesUltimos">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesUltimosRequest" message="tns:listarMensajesUltimos" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesUltimosResponse" message="tns:listarMensajesUltimosResponse" />
-    </operation>
-    <operation name="insertarNotificacion">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest" message="tns:insertarNotificacion" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" message="tns:insertarNotificacionResponse" />
-    </operation>
-    <operation name="listarMensajesXAmigo">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoRequest" message="tns:listarMensajesXAmigo" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoResponse" message="tns:listarMensajesXAmigoResponse" />
+    <operation name="enviarMensaje">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeRequest" message="tns:enviarMensaje" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeResponse" message="tns:enviarMensajeResponse" />
     </operation>
     <operation name="eliminarSolicitudAmistad">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadRequest" message="tns:eliminarSolicitudAmistad" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadResponse" message="tns:eliminarSolicitudAmistadResponse" />
+    </operation>
+    <operation name="listarMensajesUltimos">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesUltimosRequest" message="tns:listarMensajesUltimos" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesUltimosResponse" message="tns:listarMensajesUltimosResponse" />
+    </operation>
+    <operation name="listarMensajesXAmigo">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoRequest" message="tns:listarMensajesXAmigo" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoResponse" message="tns:listarMensajesXAmigoResponse" />
     </operation>
     <operation name="insertarNotificacion">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest" message="tns:insertarNotificacion" />
@@ -60,14 +66,19 @@
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
     </operation>
-    <operation name="listarMensajesUltimos">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesUltimosRequest" message="tns:listarMensajesUltimos" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesUltimosResponse" message="tns:listarMensajesUltimosResponse" />
-    </operation>
   </portType>
   <binding name="NotificacionesWSPortBinding" type="tns:NotificacionesWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarMensajesUltimos">
+    <operation name="enviarMensaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSolicitudAmistad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -85,7 +96,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarNotificacion">
+    <operation name="listarMensajesXAmigo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -104,15 +115,6 @@
       </output>
     </operation>
     <operation name="listarNotificaciones">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarMensajesUltimos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

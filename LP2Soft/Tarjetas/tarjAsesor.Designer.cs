@@ -41,7 +41,7 @@ namespace LP2Soft.Tarjetas
             // 
             this.lblCalificacion.AutoSize = true;
             this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificacion.Location = new System.Drawing.Point(29, 111);
+            this.lblCalificacion.Location = new System.Drawing.Point(29, 125);
             this.lblCalificacion.Name = "lblCalificacion";
             this.lblCalificacion.Size = new System.Drawing.Size(80, 16);
             this.lblCalificacion.TabIndex = 17;
@@ -52,10 +52,12 @@ namespace LP2Soft.Tarjetas
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(38, 78);
+            this.lblNombre.MaximumSize = new System.Drawing.Size(140, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(116, 20);
             this.lblNombre.TabIndex = 16;
             this.lblNombre.Text = "Renzo Richle";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pctAsesor
             // 
@@ -71,7 +73,7 @@ namespace LP2Soft.Tarjetas
             // 
             this.lblCal.AutoSize = true;
             this.lblCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCal.Location = new System.Drawing.Point(110, 111);
+            this.lblCal.Location = new System.Drawing.Point(110, 125);
             this.lblCal.Name = "lblCal";
             this.lblCal.Size = new System.Drawing.Size(15, 16);
             this.lblCal.TabIndex = 19;
@@ -87,7 +89,7 @@ namespace LP2Soft.Tarjetas
             this.btnVerPerfil.FlatAppearance.BorderSize = 0;
             this.btnVerPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnVerPerfil.Location = new System.Drawing.Point(55, 142);
+            this.btnVerPerfil.Location = new System.Drawing.Point(55, 151);
             this.btnVerPerfil.Name = "btnVerPerfil";
             this.btnVerPerfil.Size = new System.Drawing.Size(75, 26);
             this.btnVerPerfil.TabIndex = 20;
@@ -100,8 +102,8 @@ namespace LP2Soft.Tarjetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(180, 180);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(180, 191);
             this.Controls.Add(this.btnVerPerfil);
             this.Controls.Add(this.lblCal);
             this.Controls.Add(this.lblCalificacion);

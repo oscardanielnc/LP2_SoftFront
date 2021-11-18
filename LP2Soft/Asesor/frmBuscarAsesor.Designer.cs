@@ -36,8 +36,8 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
-            this.btnPostularAsesor = new LP2Soft.Asesor.BotonChevere();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnPostularAsesor = new LP2Soft.Asesor.BotonChevere();
             this.panelDestacados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -46,7 +46,7 @@
             // lblBuscarAsesor
             // 
             this.lblBuscarAsesor.AutoSize = true;
-            this.lblBuscarAsesor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblBuscarAsesor.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblBuscarAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscarAsesor.Location = new System.Drawing.Point(8, 15);
             this.lblBuscarAsesor.Name = "lblBuscarAsesor";
@@ -58,7 +58,7 @@
             // 
             this.panelDestacados.AutoScroll = true;
             this.panelDestacados.AutoScrollMargin = new System.Drawing.Size(0, 15);
-            this.panelDestacados.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelDestacados.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelDestacados.Controls.Add(this.lblAsesoresRecomendados);
             this.panelDestacados.Location = new System.Drawing.Point(516, 15);
             this.panelDestacados.Name = "panelDestacados";
@@ -68,11 +68,11 @@
             // lblAsesoresRecomendados
             // 
             this.lblAsesoresRecomendados.AutoSize = true;
-            this.lblAsesoresRecomendados.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblAsesoresRecomendados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsesoresRecomendados.Location = new System.Drawing.Point(3, 6);
+            this.lblAsesoresRecomendados.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAsesoresRecomendados.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsesoresRecomendados.Location = new System.Drawing.Point(3, 4);
             this.lblAsesoresRecomendados.Name = "lblAsesoresRecomendados";
-            this.lblAsesoresRecomendados.Size = new System.Drawing.Size(250, 24);
+            this.lblAsesoresRecomendados.Size = new System.Drawing.Size(279, 25);
             this.lblAsesoresRecomendados.TabIndex = 6;
             this.lblAsesoresRecomendados.Text = "Asesores Recomendados";
             // 
@@ -80,7 +80,7 @@
             // 
             this.panelBuscar.AutoScroll = true;
             this.panelBuscar.AutoScrollMargin = new System.Drawing.Size(0, 15);
-            this.panelBuscar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelBuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelBuscar.Location = new System.Drawing.Point(13, 49);
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(484, 394);
@@ -100,6 +100,7 @@
             this.txtBuscar.TabIndex = 9;
             this.txtBuscar.Text = "Buscar a un asesor por su nombre";
             this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // btnBuscar
@@ -138,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(823, 492);
             this.Controls.Add(this.btnPostularAsesor);
             this.Controls.Add(this.btnBuscar);

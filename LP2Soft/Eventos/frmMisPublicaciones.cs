@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace LP2Soft.Eventos
         public frmMisPublicaciones()
         {
             InitializeComponent();
+            if (frmHome.Usuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(frmHome.Usuario.foto);
+                pbPerfil.Image = new Bitmap(ms1);
+            }
             listarMisEventos();
         }
 
@@ -47,10 +53,10 @@ namespace LP2Soft.Eventos
             }
         }
 
-        private void btnCrearEvento_Click(object sender, EventArgs e)
+        private void lblCrearEvento_Click(object sender, EventArgs e)
         {
             frmCrearEvento frmCrearEvento = new frmCrearEvento();
-            if (frmCrearEvento.ShowDialog() == DialogResult.OK) 
+            if (frmCrearEvento.ShowDialog() == DialogResult.OK)
             {
                 listarMisEventos();
             }
