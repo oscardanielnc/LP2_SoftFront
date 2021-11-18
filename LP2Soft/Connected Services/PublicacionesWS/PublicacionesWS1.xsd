@@ -36,6 +36,8 @@
   <xs:element name="listarPostResponse" type="tns:listarPostResponse" />
   <xs:element name="listarXcurso" type="tns:listarXcurso" />
   <xs:element name="listarXcursoResponse" type="tns:listarXcursoResponse" />
+  <xs:element name="listar_material_tipo_indice" type="tns:listar_material_tipo_indice" />
+  <xs:element name="listar_material_tipo_indiceResponse" type="tns:listar_material_tipo_indiceResponse" />
   <xs:element name="modificarEvento" type="tns:modificarEvento" />
   <xs:element name="modificarEventoResponse" type="tns:modificarEventoResponse" />
   <xs:element name="modificarPost" type="tns:modificarPost" />
@@ -178,6 +180,7 @@
           <xs:element minOccurs="0" name="curso" type="tns:curso" />
           <xs:element name="indice_tipoMaterial" type="xs:int" />
           <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
+          <xs:element minOccurs="0" name="nota" type="xs:string" />
           <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
           <xs:element name="sumatoriaCalificaiones" type="xs:int" />
           <xs:element name="tipoMaterial" type="xs:int" />
@@ -323,6 +326,18 @@
   <xs:complexType name="modificarEventoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_material_tipo_indice">
+    <xs:sequence>
+      <xs:element name="idCurso" type="xs:int" />
+      <xs:element name="tipoMaterial" type="xs:int" />
+      <xs:element name="indice" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_material_tipo_indiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:material" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarComentario">

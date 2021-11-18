@@ -175,6 +175,7 @@
           <xs:element minOccurs="0" name="curso" type="tns:curso" />
           <xs:element name="indice_tipoMaterial" type="xs:int" />
           <xs:element minOccurs="0" name="nombreArchivo" type="xs:string" />
+          <xs:element minOccurs="0" name="nota" type="xs:string" />
           <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
           <xs:element name="sumatoriaCalificaiones" type="xs:int" />
           <xs:element name="tipoMaterial" type="xs:int" />
@@ -205,16 +206,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarReseniaAsesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
@@ -223,6 +214,16 @@
   <xs:complexType name="insertarReseniaAsesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="mostrarUsuario">

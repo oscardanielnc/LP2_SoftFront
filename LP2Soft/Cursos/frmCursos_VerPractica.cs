@@ -1,6 +1,7 @@
 ﻿using LP2Soft.Cursos.AgregarMaterial;
 using LP2Soft.Cursos.Calificación;
 using LP2Soft.Cursos.Flitro;
+using LP2Soft.Tarjetas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,21 +20,53 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         private int _tipo;
         private int _indice;
         private String[] tipoMaterial = new String[] { "Practica", "Laboratorio", "Tarea Academica", "Examenes" };
+        private PublicacionesWS.PublicacionesWSClient _daoMaterial;
+        private PublicacionesWS.material[] _lMaterial;
         public frmCursos_VerPractica()
         {
             InitializeComponent();
         }
 
+
         public frmCursos_VerPractica(CursosWS.curso curso, int auxTipo, int indice)
         {
             InitializeComponent();
+            _daoMaterial = new PublicacionesWS.PublicacionesWSClient();
             _cursoVer = curso;
             _tipo = auxTipo;
             _indice = indice;
             btnLP2Practica2Ciclo7.Text = "Ciclo " + curso.nivel;
             btnLP2Practica2LP2.Text = curso.nombre;
             btnLLP2Practica2Practicas.Text = tipoMaterial[auxTipo];
-            btnLLP2Practica2Practica2.Text = tipoMaterial[auxTipo] +" "+ indice;
+            btnLLP2Practica2Practica2.Text = tipoMaterial[auxTipo] + " " + indice;
+            todoMaterial();
+        }
+
+        public void todoMaterial()
+        {
+
+             
+            _lMaterial = _daoMaterial.listar_material_tipo_indice(_cursoVer.idCurso, _tipo+1, _indice);
+            int i = 0;
+
+            foreach (PublicacionesWS.material u in _lMaterial)
+            {
+                tarjMaterial tMaterial = new tarjMaterial(u);
+                tMaterial.TopLevel = false;
+                tMaterial.Location = generarCoordenadas(i);
+                panelLP2Practicas.Controls.Add(tMaterial);
+                panelLP2Practicas.Controls.SetChildIndex(tMaterial, 0);
+                tMaterial.Visible = true;
+                i++;
+            }
+        }
+
+
+        private Point generarCoordenadas(int i)
+        {
+            int x = 0;
+            int y = i * 40;
+            return new Point(x, y);
         }
 
         private void btnLP2Practica2Material_Click(object sender, EventArgs e)

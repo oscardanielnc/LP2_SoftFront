@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/LP2Soft_WebService/PublicacionesWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PublicacionesWS1.xsd" MetadataType="Schema" ID="d2b27fce-b41a-4157-85bd-e5cddd578dc7" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebService/PublicacionesWS?xsd=1" />
-    <MetadataFile FileName="PublicacionesWS1.wsdl" MetadataType="Wsdl" ID="a113addf-a219-4c07-924a-df98cfca35d1" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebService/PublicacionesWS?WSDL" />
+    <MetadataFile FileName="PublicacionesWS.wsdl" MetadataType="Wsdl" ID="f84a1152-f93f-43d6-b4ae-3f927323111d" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebService/PublicacionesWS?WSDL" />
+    <MetadataFile FileName="PublicacionesWS.xsd" MetadataType="Schema" ID="758f104e-0603-44df-a197-a35a48f70e27" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebService/PublicacionesWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -402,12 +402,6 @@
     <Compile Include="Tarjetas\tarjCursoxNivel.Designer.cs">
       <DependentUpon>tarjCursoxNivel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tarjetas\tarjResenia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tarjetas\tarjResenia.Designer.cs">
-      <DependentUpon>tarjResenia.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tarjetas\tarjTipoMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -636,6 +630,9 @@
     <EmbeddedResource Include="Tarjetas\tarjCursoxNivel.resx">
       <DependentUpon>tarjCursoxNivel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjMaterial.resx">
+      <DependentUpon>tarjMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjMensaje.resx">
       <DependentUpon>tarjMensaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -774,6 +771,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarXcursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listar_material_tipo_indiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.material.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.modificarEventoResponse.datasource">
