@@ -728,6 +728,9 @@
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.desagendarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.descargar_materialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.disminuirLikesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
