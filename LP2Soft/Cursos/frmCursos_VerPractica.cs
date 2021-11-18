@@ -48,16 +48,18 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
              
             _lMaterial = _daoMaterial.listar_material_tipo_indice(_cursoVer.idCurso, _tipo+1, _indice);
             int i = 0;
-
-            foreach (PublicacionesWS.material u in _lMaterial)
+            if (_lMaterial != null)
             {
-                tarjMaterial tMaterial = new tarjMaterial(u);
-                tMaterial.TopLevel = false;
-                tMaterial.Location = generarCoordenadas(i);
-                panelLP2Practicas.Controls.Add(tMaterial);
-                panelLP2Practicas.Controls.SetChildIndex(tMaterial, 0);
-                tMaterial.Visible = true;
-                i++;
+                foreach (PublicacionesWS.material u in _lMaterial)
+                {
+                    tarjMaterial tMaterial = new tarjMaterial(u);
+                    tMaterial.TopLevel = false;
+                    tMaterial.Location = generarCoordenadas(i);
+                    panelLP2Practicas.Controls.Add(tMaterial);
+                    panelLP2Practicas.Controls.SetChildIndex(tMaterial, 0);
+                    tMaterial.Visible = true;
+                    i++;
+                }
             }
         }
 

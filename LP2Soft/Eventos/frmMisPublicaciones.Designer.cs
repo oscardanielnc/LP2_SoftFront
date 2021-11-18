@@ -31,15 +31,19 @@ namespace LP2Soft.Eventos
         {
             this.panelPublicacionesEventos = new System.Windows.Forms.Panel();
             this.lblMisEventos = new System.Windows.Forms.Label();
-            this.btnCrearEvento = new System.Windows.Forms.Button();
+            this.panelCrearPublicacion = new System.Windows.Forms.Panel();
+            this.lblCrearEvento = new System.Windows.Forms.Label();
+            this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.panelCrearPublicacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPublicacionesEventos
             // 
             this.panelPublicacionesEventos.AutoScroll = true;
-            this.panelPublicacionesEventos.Location = new System.Drawing.Point(170, 43);
+            this.panelPublicacionesEventos.Location = new System.Drawing.Point(170, 133);
             this.panelPublicacionesEventos.Name = "panelPublicacionesEventos";
-            this.panelPublicacionesEventos.Size = new System.Drawing.Size(453, 449);
+            this.panelPublicacionesEventos.Size = new System.Drawing.Size(453, 359);
             this.panelPublicacionesEventos.TabIndex = 7;
             // 
             // lblMisEventos
@@ -52,27 +56,50 @@ namespace LP2Soft.Eventos
             this.lblMisEventos.TabIndex = 6;
             this.lblMisEventos.Text = "Mis Eventos";
             // 
-            // btnCrearEvento
+            // panelCrearPublicacion
             // 
-            this.btnCrearEvento.Location = new System.Drawing.Point(510, 9);
-            this.btnCrearEvento.Name = "btnCrearEvento";
-            this.btnCrearEvento.Size = new System.Drawing.Size(86, 23);
-            this.btnCrearEvento.TabIndex = 10;
-            this.btnCrearEvento.Text = "Crear Evento";
-            this.btnCrearEvento.UseVisualStyleBackColor = true;
-            this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
+            this.panelCrearPublicacion.BackColor = System.Drawing.Color.White;
+            this.panelCrearPublicacion.Controls.Add(this.lblCrearEvento);
+            this.panelCrearPublicacion.Controls.Add(this.pbPerfil);
+            this.panelCrearPublicacion.Location = new System.Drawing.Point(256, 56);
+            this.panelCrearPublicacion.Name = "panelCrearPublicacion";
+            this.panelCrearPublicacion.Size = new System.Drawing.Size(297, 57);
+            this.panelCrearPublicacion.TabIndex = 11;
+            // 
+            // lblCrearEvento
+            // 
+            this.lblCrearEvento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCrearEvento.Location = new System.Drawing.Point(59, 17);
+            this.lblCrearEvento.Name = "lblCrearEvento";
+            this.lblCrearEvento.Size = new System.Drawing.Size(223, 23);
+            this.lblCrearEvento.TabIndex = 22;
+            this.lblCrearEvento.Text = "Crear evento";
+            this.lblCrearEvento.Click += new System.EventHandler(this.lblCrearEvento_Click);
+            // 
+            // pbPerfil
+            // 
+            this.pbPerfil.Image = global::LP2Soft.Properties.Resources.images;
+            this.pbPerfil.Location = new System.Drawing.Point(3, 6);
+            this.pbPerfil.Name = "pbPerfil";
+            this.pbPerfil.Size = new System.Drawing.Size(50, 46);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPerfil.TabIndex = 21;
+            this.pbPerfil.TabStop = false;
             // 
             // frmMisPublicaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 495);
-            this.Controls.Add(this.btnCrearEvento);
+            this.Controls.Add(this.panelCrearPublicacion);
             this.Controls.Add(this.lblMisEventos);
             this.Controls.Add(this.panelPublicacionesEventos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMisPublicaciones";
             this.Text = "frmMisEventos";
+            this.panelCrearPublicacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,6 +109,8 @@ namespace LP2Soft.Eventos
 
         private System.Windows.Forms.Panel panelPublicacionesEventos;
         private System.Windows.Forms.Label lblMisEventos;
-        private System.Windows.Forms.Button btnCrearEvento;
+        private System.Windows.Forms.Panel panelCrearPublicacion;
+        private System.Windows.Forms.Label lblCrearEvento;
+        private System.Windows.Forms.PictureBox pbPerfil;
     }
 }

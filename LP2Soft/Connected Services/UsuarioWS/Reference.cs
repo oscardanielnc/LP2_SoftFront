@@ -142,6 +142,24 @@ namespace LP2Soft.UsuarioWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/modificarUsuarioRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/modificarUsuarioResponse")]
         System.Threading.Tasks.Task<LP2Soft.UsuarioWS.modificarUsuarioResponse> modificarUsuarioAsync(LP2Soft.UsuarioWS.modificarUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarReseniasAsesorRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarReseniasAsesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.UsuarioWS.listarReseniasAsesorResponse listarReseniasAsesor(LP2Soft.UsuarioWS.listarReseniasAsesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarReseniasAsesorRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/listarReseniasAsesorResponse")]
+        System.Threading.Tasks.Task<LP2Soft.UsuarioWS.listarReseniasAsesorResponse> listarReseniasAsesorAsync(LP2Soft.UsuarioWS.listarReseniasAsesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/eliminarReseniaAsesorRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/eliminarReseniaAsesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.UsuarioWS.eliminarReseniaAsesorResponse eliminarReseniaAsesor(LP2Soft.UsuarioWS.eliminarReseniaAsesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/eliminarReseniaAsesorRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/UsuariosWS/eliminarReseniaAsesorResponse")]
+        System.Threading.Tasks.Task<LP2Soft.UsuarioWS.eliminarReseniaAsesorResponse> eliminarReseniaAsesorAsync(LP2Soft.UsuarioWS.eliminarReseniaAsesorRequest request);
     }
     
     /// <remarks/>
@@ -2063,6 +2081,78 @@ namespace LP2Soft.UsuarioWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReseniasAsesor", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarReseniasAsesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idAsesor;
+        
+        public listarReseniasAsesorRequest() {
+        }
+        
+        public listarReseniasAsesorRequest(int idAsesor) {
+            this.idAsesor = idAsesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReseniasAsesorResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarReseniasAsesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.UsuarioWS.resenia[] @return;
+        
+        public listarReseniasAsesorResponse() {
+        }
+        
+        public listarReseniasAsesorResponse(LP2Soft.UsuarioWS.resenia[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReseniaAsesor", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarReseniaAsesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idResenia;
+        
+        public eliminarReseniaAsesorRequest() {
+        }
+        
+        public eliminarReseniaAsesorRequest(int idResenia) {
+            this.idResenia = idResenia;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReseniaAsesorResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarReseniaAsesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarReseniaAsesorResponse() {
+        }
+        
+        public eliminarReseniaAsesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuariosWSChannel : LP2Soft.UsuarioWS.UsuariosWS, System.ServiceModel.IClientChannel {
     }
@@ -2424,6 +2514,52 @@ namespace LP2Soft.UsuarioWS {
             LP2Soft.UsuarioWS.modificarUsuarioRequest inValue = new LP2Soft.UsuarioWS.modificarUsuarioRequest();
             inValue.usuario = usuario;
             return ((LP2Soft.UsuarioWS.UsuariosWS)(this)).modificarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.UsuarioWS.listarReseniasAsesorResponse LP2Soft.UsuarioWS.UsuariosWS.listarReseniasAsesor(LP2Soft.UsuarioWS.listarReseniasAsesorRequest request) {
+            return base.Channel.listarReseniasAsesor(request);
+        }
+        
+        public LP2Soft.UsuarioWS.resenia[] listarReseniasAsesor(int idAsesor) {
+            LP2Soft.UsuarioWS.listarReseniasAsesorRequest inValue = new LP2Soft.UsuarioWS.listarReseniasAsesorRequest();
+            inValue.idAsesor = idAsesor;
+            LP2Soft.UsuarioWS.listarReseniasAsesorResponse retVal = ((LP2Soft.UsuarioWS.UsuariosWS)(this)).listarReseniasAsesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.UsuarioWS.listarReseniasAsesorResponse> LP2Soft.UsuarioWS.UsuariosWS.listarReseniasAsesorAsync(LP2Soft.UsuarioWS.listarReseniasAsesorRequest request) {
+            return base.Channel.listarReseniasAsesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.UsuarioWS.listarReseniasAsesorResponse> listarReseniasAsesorAsync(int idAsesor) {
+            LP2Soft.UsuarioWS.listarReseniasAsesorRequest inValue = new LP2Soft.UsuarioWS.listarReseniasAsesorRequest();
+            inValue.idAsesor = idAsesor;
+            return ((LP2Soft.UsuarioWS.UsuariosWS)(this)).listarReseniasAsesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.UsuarioWS.eliminarReseniaAsesorResponse LP2Soft.UsuarioWS.UsuariosWS.eliminarReseniaAsesor(LP2Soft.UsuarioWS.eliminarReseniaAsesorRequest request) {
+            return base.Channel.eliminarReseniaAsesor(request);
+        }
+        
+        public int eliminarReseniaAsesor(int idResenia) {
+            LP2Soft.UsuarioWS.eliminarReseniaAsesorRequest inValue = new LP2Soft.UsuarioWS.eliminarReseniaAsesorRequest();
+            inValue.idResenia = idResenia;
+            LP2Soft.UsuarioWS.eliminarReseniaAsesorResponse retVal = ((LP2Soft.UsuarioWS.UsuariosWS)(this)).eliminarReseniaAsesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.UsuarioWS.eliminarReseniaAsesorResponse> LP2Soft.UsuarioWS.UsuariosWS.eliminarReseniaAsesorAsync(LP2Soft.UsuarioWS.eliminarReseniaAsesorRequest request) {
+            return base.Channel.eliminarReseniaAsesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.UsuarioWS.eliminarReseniaAsesorResponse> eliminarReseniaAsesorAsync(int idResenia) {
+            LP2Soft.UsuarioWS.eliminarReseniaAsesorRequest inValue = new LP2Soft.UsuarioWS.eliminarReseniaAsesorRequest();
+            inValue.idResenia = idResenia;
+            return ((LP2Soft.UsuarioWS.UsuariosWS)(this)).eliminarReseniaAsesorAsync(inValue);
         }
     }
 }

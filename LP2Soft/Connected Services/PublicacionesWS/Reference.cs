@@ -83,7 +83,16 @@ namespace LP2Soft.PublicacionesWS {
         System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.insertarPostResponse> insertarPostAsync(LP2Soft.PublicacionesWS.insertarPostRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/descargar_materialRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/descargar_materialResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Soft.PublicacionesWS.descargar_materialResponse descargar_material(LP2Soft.PublicacionesWS.descargar_materialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/descargar_materialRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/descargar_materialResponse")]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.descargar_materialResponse> descargar_materialAsync(LP2Soft.PublicacionesWS.descargar_materialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesRequest", ReplyAction="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2Soft.PublicacionesWS.modificarPostResponse modificarPost(LP2Soft.PublicacionesWS.modificarPostRequest request);
@@ -1966,8 +1975,49 @@ namespace LP2Soft.PublicacionesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPost", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarPostRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="descargar_material", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class descargar_materialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCurso;
+        
+        public descargar_materialRequest() {
+        }
+        
+        public descargar_materialRequest(int idMaterial, int idCurso) {
+            this.idMaterial = idMaterial;
+            this.idCurso = idCurso;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="descargar_materialResponse", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class descargar_materialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Soft.PublicacionesWS.material @return;
+        
+        public descargar_materialResponse() {
+        }
+        
+        public descargar_materialResponse(LP2Soft.PublicacionesWS.material @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="disminuirLikes", WrapperNamespace="http://services.LP2Soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class disminuirLikesRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.LP2Soft.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -2679,6 +2729,31 @@ namespace LP2Soft.PublicacionesWS {
             LP2Soft.PublicacionesWS.modificarPostRequest inValue = new LP2Soft.PublicacionesWS.modificarPostRequest();
             inValue.post = post;
             return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).modificarPostAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Soft.PublicacionesWS.descargar_materialResponse LP2Soft.PublicacionesWS.PublicacionesWS.descargar_material(LP2Soft.PublicacionesWS.descargar_materialRequest request) {
+            return base.Channel.descargar_material(request);
+        }
+        
+        public LP2Soft.PublicacionesWS.material descargar_material(int idMaterial, int idCurso) {
+            LP2Soft.PublicacionesWS.descargar_materialRequest inValue = new LP2Soft.PublicacionesWS.descargar_materialRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.idCurso = idCurso;
+            LP2Soft.PublicacionesWS.descargar_materialResponse retVal = ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).descargar_material(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.descargar_materialResponse> LP2Soft.PublicacionesWS.PublicacionesWS.descargar_materialAsync(LP2Soft.PublicacionesWS.descargar_materialRequest request) {
+            return base.Channel.descargar_materialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Soft.PublicacionesWS.descargar_materialResponse> descargar_materialAsync(int idMaterial, int idCurso) {
+            LP2Soft.PublicacionesWS.descargar_materialRequest inValue = new LP2Soft.PublicacionesWS.descargar_materialRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.idCurso = idCurso;
+            return ((LP2Soft.PublicacionesWS.PublicacionesWS)(this)).descargar_materialAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

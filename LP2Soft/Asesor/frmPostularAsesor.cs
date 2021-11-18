@@ -31,31 +31,16 @@ namespace LP2Soft.Asesor
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
-            frmHome.Usuario.esAsesor = true;
             _asesor = new UsuarioWS.asesor();
             _asesor.precioPorHora = float.Parse(textBoxPrecio.Text);
-            frmHome.Usuario.asesor = _asesor;
-            CursosWS.curso _curso = cboCursos.SelectedItem as CursosWS.curso;
-            _daoUsuario.insertarAsesor(_asesor, frmHome.Usuario.idUsuario, _curso.idCurso);
+            if (frmHome.Usuario.esAsesor == false)
+            {
+                frmHome.Usuario.esAsesor = true;
+                frmHome.Usuario.asesor = _asesor;
+            }
+            UsuarioWS.curso _curso = cboCursos.SelectedItem as UsuarioWS.curso;
+            frmHome.Usuario.asesor.idAsesor = _daoUsuario.insertarAsesor(_asesor, frmHome.Usuario.idUsuario, _curso.idCurso);
             this.Close();
-        }
-
-        private void cboCursos_Enter(object sender, EventArgs e)
-        {
-            if (cboCursos.Text == "Elegir curso")
-            {
-                cboCursos.Text = "";
-                cboCursos.ForeColor = Color.Black;
-            }
-        }
-
-        private void cboCursos_Leave(object sender, EventArgs e)
-        {
-            if (cboCursos.Text == "")
-            {
-                cboCursos.Text = "Elegir curso";
-                cboCursos.ForeColor = Color.Gray;
-            }
         }
     }
 }

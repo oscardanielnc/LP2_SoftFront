@@ -115,8 +115,6 @@
             this.cboCursos.Size = new System.Drawing.Size(329, 41);
             this.cboCursos.TabIndex = 23;
             this.cboCursos.Texts = "Elegir curso";
-            this.cboCursos.Enter += new System.EventHandler(this.cboCursos_Enter);
-            this.cboCursos.Leave += new System.EventHandler(this.cboCursos_Leave);
             // 
             // frmPostularAsesor
             // 
