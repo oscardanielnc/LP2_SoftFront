@@ -402,6 +402,18 @@
     <Compile Include="Tarjetas\tarjCursoxNivel.Designer.cs">
       <DependentUpon>tarjCursoxNivel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarjetas\tarjMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjMaterial.Designer.cs">
+      <DependentUpon>tarjMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarjetas\tarjResenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjResenia.Designer.cs">
+      <DependentUpon>tarjResenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tarjetas\tarjTipoMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -658,6 +670,10 @@
     <None Include="Connected Services\CursosWS\CursosWS1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\CursosWS\CursosWS11.wsdl" />
+    <None Include="Connected Services\CursosWS\CursosWS11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -711,6 +727,10 @@
     </None>
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.wsdl" />
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS11.wsdl" />
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.agendarEventoResponse.datasource">
@@ -792,6 +812,10 @@
     <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS11.wsdl" />
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.agregarAmigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -851,6 +875,10 @@
     </None>
     <None Include="Connected Services\UsuarioWS\UsuariosWS1.wsdl" />
     <None Include="Connected Services\UsuarioWS\UsuariosWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioWS\UsuariosWS11.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuariosWS11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
