@@ -78,7 +78,7 @@ namespace LP2Soft.Profesor
                 inicializarColorBotones();
                 btnResenias.BackColor = System.Drawing.Color.FromArgb(28, 103, 179);
                 _menuSeleccionado = MenuProfesor.Resenias;
-                abrirFormulario(new frmProfesor_Perfil_Reseña());
+                abrirFormulario(new frmProfesor_Perfil_Reseña(_profesor));
             }
         }
     }

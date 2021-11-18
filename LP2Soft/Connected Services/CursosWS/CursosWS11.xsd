@@ -2,6 +2,10 @@
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="MostrarCurso" type="tns:MostrarCurso" />
   <xs:element name="MostrarCursoResponse" type="tns:MostrarCursoResponse" />
+  <xs:element name="eliminarReseniasProfesor" type="tns:eliminarReseniasProfesor" />
+  <xs:element name="eliminarReseniasProfesorResponse" type="tns:eliminarReseniasProfesorResponse" />
+  <xs:element name="insertarReseniaProfesor" type="tns:insertarReseniaProfesor" />
+  <xs:element name="insertarReseniaProfesorResponse" type="tns:insertarReseniaProfesorResponse" />
   <xs:element name="listaXciclo" type="tns:listaXciclo" />
   <xs:element name="listaXcicloResponse" type="tns:listaXcicloResponse" />
   <xs:element name="listarCursoProfesor" type="tns:listarCursoProfesor" />
@@ -10,6 +14,8 @@
   <xs:element name="listarProfesorXCursoResponse" type="tns:listarProfesorXCursoResponse" />
   <xs:element name="listarProfesoresNombre" type="tns:listarProfesoresNombre" />
   <xs:element name="listarProfesoresNombreResponse" type="tns:listarProfesoresNombreResponse" />
+  <xs:element name="listarReseniasProfesor" type="tns:listarReseniasProfesor" />
+  <xs:element name="listarReseniasProfesorResponse" type="tns:listarReseniasProfesorResponse" />
   <xs:element name="mostrarProfesor" type="tns:mostrarProfesor" />
   <xs:element name="mostrarProfesorResponse" type="tns:mostrarProfesorResponse" />
   <xs:complexType name="mostrarProfesor">
@@ -163,6 +169,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarReseniasProfesor">
+    <xs:sequence>
+      <xs:element name="idResenia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReseniasProfesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarProfesorXCurso">
     <xs:sequence>
       <xs:element name="idCurso" type="xs:int" />
@@ -171,6 +187,26 @@
   <xs:complexType name="listarProfesorXCursoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarReseniaProfesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarReseniaProfesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarReseniasProfesor">
+    <xs:sequence>
+      <xs:element name="idProfesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarReseniasProfesorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:resenia" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listaXciclo">
