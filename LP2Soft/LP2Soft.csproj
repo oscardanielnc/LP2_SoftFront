@@ -402,6 +402,12 @@
     <Compile Include="Tarjetas\tarjCursoxNivel.Designer.cs">
       <DependentUpon>tarjCursoxNivel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarjetas\tarjResenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjResenia.Designer.cs">
+      <DependentUpon>tarjResenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tarjetas\tarjTipoMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -639,6 +645,9 @@
     <EmbeddedResource Include="Tarjetas\tarjProfesor.resx">
       <DependentUpon>tarjProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjResenia.resx">
+      <DependentUpon>tarjResenia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjTipoMaterial.resx">
       <DependentUpon>tarjTipoMaterial.cs</DependentUpon>
     </EmbeddedResource>
@@ -648,8 +657,8 @@
     <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
       <DependentUpon>tarjUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\CursosWS\CursosWS.wsdl" />
-    <None Include="Connected Services\CursosWS\CursosWS.xsd">
+    <None Include="Connected Services\CursosWS\CursosWS1.wsdl" />
+    <None Include="Connected Services\CursosWS\CursosWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.curso.datasource">
@@ -703,8 +712,8 @@
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.ultimoMensaje1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.wsdl" />
-    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.xsd">
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.wsdl" />
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.agendarEventoResponse.datasource">
@@ -776,8 +785,8 @@
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.postGenerico.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.wsdl" />
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.xsd">
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.wsdl" />
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.agregarAmigoResponse.datasource">
@@ -787,6 +796,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.eliminarAmigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.eliminarReseniaAsesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.esAmigoResponse.datasource">
@@ -813,6 +825,9 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarReseniasAsesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarUsuariosNombreCodigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -825,11 +840,14 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.mostrarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.resenia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UsuarioWS\UsuariosWS.wsdl" />
-    <None Include="Connected Services\UsuarioWS\UsuariosWS.xsd">
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

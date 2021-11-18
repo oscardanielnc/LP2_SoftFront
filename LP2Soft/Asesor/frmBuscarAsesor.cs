@@ -88,7 +88,7 @@ namespace LP2Soft.Asesor
         private Point generarCoordenadasDestacados(int i)
         {
             int x = 50;
-            int y = ((int)i) * 200 + 40;
+            int y = ((int)i) * 200 + 65;
             return new Point(x, y);
         }
 
@@ -136,6 +136,15 @@ namespace LP2Soft.Asesor
         {
             frmPostularAsesor formPostular = new frmPostularAsesor();
             formPostular.ShowDialog();
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                panelBuscar.Controls.Clear();
+                renderizarPantalla(txtBuscar.Text);
+            }
         }
     }
     public class BotonChevere : Button

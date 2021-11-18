@@ -19,6 +19,7 @@ namespace LP2Soft.Tarjetas
         private string _codigo;
         private UsuarioWS.UsuariosWSClient _daoUsuario;
         private UsuarioWS.usuario _usuarioVer;
+        private float _calificacion;
         public tarjAsesor(UsuarioWS.usuario user)
         {
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
@@ -36,8 +37,16 @@ namespace LP2Soft.Tarjetas
         {
             lblNombre.Text = usuario.nombre + " " + usuario.apellido;
             int tamanio = lblNombre.Size.Width;
-            lblCal.Text = " " + usuario.asesor.calificacion.ToString("0.0") + " ";
-            lblNombre.Location = new Point(((int)(170 - tamanio) / 2), 80);
+            if (usuario.asesor.cantidadResenias == 0)
+            {
+                lblCal.Text = " 0.0 "; 
+            }
+            else
+            {
+                _calificacion = (float)usuario.asesor.sumatoriaResenias / (float)usuario.asesor.cantidadResenias;
+                lblCal.Text = " " + _calificacion.ToString("0.0") + " ";
+            }
+            lblNombre.Location = new Point(((int)(180 - tamanio) / 2), 80);
         }
         private void btnVerPerfil_Click(object sender, EventArgs e)
         {

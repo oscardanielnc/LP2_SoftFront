@@ -22,22 +22,14 @@ namespace LP2Soft.Perfil
         {
             InitializeComponent();
             _daoAsesor = new UsuarioWS.UsuariosWSClient();
-            if (user.esAsesor == true)
-            {
-                renderizarPanel(user.asesor.idAsesor);
-            }
-            else
-            {
-                MessageBox.Show("El usuario no es asesor", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            renderizarPanel(user.idUsuario);
         }
-        private void renderizarPanel(int idAsesor)
+        private void renderizarPanel(int idUsuario)
         {
             _cursosAsesorados = null;
             try
             {
-                _cursosAsesorados = new BindingList<UsuarioWS.curso>(_daoAsesor.listarCursosAsesorados(idAsesor));
+                _cursosAsesorados = new BindingList<UsuarioWS.curso>(_daoAsesor.listarCursosAsesorados(idUsuario));
                 //renderizamos las tarjetas
                 int i = 0;
                 foreach (UsuarioWS.curso c in _cursosAsesorados)

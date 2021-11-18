@@ -4,6 +4,8 @@
   <xs:element name="agregarAmigoResponse" type="tns:agregarAmigoResponse" />
   <xs:element name="eliminarAmigo" type="tns:eliminarAmigo" />
   <xs:element name="eliminarAmigoResponse" type="tns:eliminarAmigoResponse" />
+  <xs:element name="eliminarReseniaAsesor" type="tns:eliminarReseniaAsesor" />
+  <xs:element name="eliminarReseniaAsesorResponse" type="tns:eliminarReseniaAsesorResponse" />
   <xs:element name="esAmigo" type="tns:esAmigo" />
   <xs:element name="esAmigoResponse" type="tns:esAmigoResponse" />
   <xs:element name="hacerAdmin" type="tns:hacerAdmin" />
@@ -20,6 +22,8 @@
   <xs:element name="listarCursosAsesorados" type="tns:listarCursosAsesorados" />
   <xs:element name="listarCursosAsesoradosResponse" type="tns:listarCursosAsesoradosResponse" />
   <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
+  <xs:element name="listarReseniasAsesor" type="tns:listarReseniasAsesor" />
+  <xs:element name="listarReseniasAsesorResponse" type="tns:listarReseniasAsesorResponse" />
   <xs:element name="listarUsuariosNombreCodigo" type="tns:listarUsuariosNombreCodigo" />
   <xs:element name="listarUsuariosNombreCodigoResponse" type="tns:listarUsuariosNombreCodigoResponse" />
   <xs:element name="listarXnombreYcurso" type="tns:listarXnombreYcurso" />
@@ -263,6 +267,26 @@
   <xs:complexType name="eliminarAmigoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReseniaAsesor">
+    <xs:sequence>
+      <xs:element name="idResenia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReseniaAsesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarReseniasAsesor">
+    <xs:sequence>
+      <xs:element name="idAsesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarReseniasAsesorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:resenia" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCursos">

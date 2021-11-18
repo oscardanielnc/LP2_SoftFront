@@ -20,6 +20,7 @@ namespace LP2Soft.Perfil
         public frmCrearResenia(UsuarioWS.usuario asesor)
         {
             InitializeComponent();
+            txtContenido.Text = "Escribe una reseña a " + asesor.nombre + " " + asesor.apellido + "Chupetin";
             _asesor = asesor;
             if (frmHome.Usuario.foto != null)
             {
@@ -33,10 +34,9 @@ namespace LP2Soft.Perfil
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
             _resenia = new UsuarioWS.resenia();
             _resenia.usuario = new UsuarioWS.usuario();
+            _resenia.usuario = frmHome.Usuario;
             _resenia.usuarioReseniado = new UsuarioWS.usuario();
-            _resenia.usuarioReseniado.asesor = new UsuarioWS.asesor();
-            _resenia.usuario.idUsuario = frmHome.Usuario.idUsuario;
-            _resenia.usuarioReseniado.asesor.idAsesor = _asesor.asesor.idAsesor;
+            _resenia.usuarioReseniado = _asesor;            
             _resenia.calificacion = int.Parse(txtCali.Text);
             _resenia.contenido = txtContenido.Text;
             if (frmHome.Usuario.esAdmin == true)
