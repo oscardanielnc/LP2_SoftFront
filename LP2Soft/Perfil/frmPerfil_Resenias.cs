@@ -1,4 +1,5 @@
-﻿using LP2Soft.Tarjetas;
+﻿using LP2Soft.Home;
+using LP2Soft.Tarjetas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,44 +24,50 @@ namespace LP2Soft.Perfil
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
             _resenias = new BindingList<UsuarioWS.resenia>();
             renderizarResenias(_asesor);
+            if (asesor.idUsuario == frmHome.Usuario.idUsuario || !asesor.esAsesor)
+                btnReseniar.Visible = false;
         }
         private void btnReseniar_Click(object sender, EventArgs e)
         {
             frmCrearResenia formCrearResenia = new frmCrearResenia(_asesor);
             formCrearResenia.ShowDialog();
+            if(formCrearResenia.DialogResult==DialogResult.OK)
+            {
+                formCrearResenia.Resenia.fechaRegistro = DateTime.Now;
+                agregarResenia(formCrearResenia.Resenia);
+            }
         }
 
         private void renderizarResenias(UsuarioWS.usuario _asesor)
         {
             _resenias = null;
-            try
+            if(_asesor.esAsesor)
             {
-                _resenias = new BindingList<UsuarioWS.resenia>(_daoUsuario.listarReseniasAsesor(_asesor.asesor.idAsesor));
-                //renderizamos las tarjetas
-                int i = 0;
-                foreach (UsuarioWS.resenia re in _resenias)
+                try
                 {
-                    tarjResenia tUsuario = new tarjResenia(re);
-                    tUsuario.TopLevel = false;
-                    tUsuario.Location = generarCoordenadas(i);
-                    panelResenias.Controls.Add(tUsuario);
-                    panelResenias.Controls.SetChildIndex(tUsuario, 0);
-                    tUsuario.Visible = true;
-                    i++;
+                    _resenias = new BindingList<UsuarioWS.resenia>(_daoUsuario.listarReseniasAsesor(_asesor.asesor.idAsesor));
+                    //renderizamos las tarjetas
+                    foreach (UsuarioWS.resenia re in _resenias)
+                    {
+                        agregarResenia(re);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El usuario asesor no cuenta con reseñas por el momento", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El usuario asesor no cuenta con reseñas por el momento", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
-
-        private Point generarCoordenadas(int i)
+        private void agregarResenia(UsuarioWS.resenia re)
         {
-            int x = 15;
-            int y = ((int)i) * 160 + 10;
-            return new Point(x, y);
+            tarjResenia tUsuario = new tarjResenia(re);
+            tUsuario.TopLevel = false;
+            tUsuario.Dock = DockStyle.Top;
+            panelResenias.Controls.Add(tUsuario);
+            panelResenias.Controls.SetChildIndex(tUsuario, 0);
+            tUsuario.Visible = true;
         }
 
     }

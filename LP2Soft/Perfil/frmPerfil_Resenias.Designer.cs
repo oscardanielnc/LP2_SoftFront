@@ -35,13 +35,13 @@ namespace LP2Soft.Perfil
             // 
             // panelResenias
             // 
-            this.panelResenias.AutoScroll = true;
             this.panelResenias.AutoScrollMargin = new System.Drawing.Size(0, 18);
+            this.panelResenias.AutoSize = true;
             this.panelResenias.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelResenias.Location = new System.Drawing.Point(43, 68);
             this.panelResenias.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.panelResenias.Name = "panelResenias";
-            this.panelResenias.Size = new System.Drawing.Size(709, 178);
+            this.panelResenias.Size = new System.Drawing.Size(709, 191);
             this.panelResenias.TabIndex = 43;
             // 
             // btnReseniar
@@ -75,6 +75,7 @@ namespace LP2Soft.Perfil
             this.Name = "frmPerfil_Resenias";
             this.Text = "frmPerfil_Resenias";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -1,4 +1,5 @@
 ﻿using LP2Soft.Home;
+using LP2Soft.UsuarioWS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,8 @@ namespace LP2Soft.Perfil
             }
         }
 
+        public resenia Resenia { get => _resenia; set => _resenia = value; }
+
         private void btnPublicar_Click(object sender, EventArgs e)
         {
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
@@ -49,7 +52,7 @@ namespace LP2Soft.Perfil
             }
             int resultado = _daoUsuario.insertarReseniaAsesor(_resenia);
             Console.WriteLine(resultado);
-            this.Close();
+            this.DialogResult=DialogResult.OK;
         }
     }
 }

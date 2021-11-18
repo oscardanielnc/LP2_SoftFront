@@ -160,7 +160,6 @@ namespace LP2Soft.Perfil
             this.Controls.Add(this.pbPerfil);
             this.Name = "frmCrearReseniaProfesor";
             this.Text = "frmCrearReseniaProfesor";
-            this.Load += new System.EventHandler(this.frmCrearReseniaProfesor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

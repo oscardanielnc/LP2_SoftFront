@@ -38,9 +38,8 @@ namespace LP2Soft.Profesor
             this.panelResenias.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelResenias.Location = new System.Drawing.Point(68, 69);
             this.panelResenias.Name = "panelResenias";
-            this.panelResenias.Size = new System.Drawing.Size(660, 150);
+            this.panelResenias.Size = new System.Drawing.Size(660, 221);
             this.panelResenias.TabIndex = 42;
-            this.panelResenias.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnReseniar
             // 

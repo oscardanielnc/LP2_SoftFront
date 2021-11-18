@@ -1,4 +1,5 @@
-﻿using LP2Soft.Perfil;
+﻿using LP2Soft.Home;
+using LP2Soft.Perfil;
 using LP2Soft.Tarjetas;
 using System;
 using System.Collections.Generic;
@@ -25,15 +26,21 @@ namespace LP2Soft.Profesor
             _resenias = new BindingList<CursosWS.resenia>();
             renderizarResenias(_profesor);
         }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnReseniar_Click(object sender, EventArgs e)
         {
             frmCrearReseniaProfesor formCrearResenia = new frmCrearReseniaProfesor(_profesor);
             formCrearResenia.ShowDialog();
+            if (formCrearResenia.DialogResult == DialogResult.OK)
+            {
+                formCrearResenia.Resenia.fechaRegistro = DateTime.Now;
+                formCrearResenia.Resenia.usuario = new CursosWS.usuario();
+                formCrearResenia.Resenia.usuario.idUsuario = frmHome.Usuario.idUsuario;
+                formCrearResenia.Resenia.usuario.nombre = frmHome.Usuario.nombre;
+                formCrearResenia.Resenia.usuario.apellido = frmHome.Usuario.apellido;
+                formCrearResenia.Resenia.usuario.foto = frmHome.Usuario.foto;
+
+                agregarResenia(formCrearResenia.Resenia);
+            }
         }
 
         private void renderizarResenias(CursosWS.profesor _profesor)
@@ -43,16 +50,9 @@ namespace LP2Soft.Profesor
             {
                 _resenias = new BindingList<CursosWS.resenia>(_daoProfesor.listarReseniasProfesor(_profesor.idProfesor));
                 //renderizamos las tarjetas
-                int i = 0;
                 foreach (CursosWS.resenia re in _resenias)
                 {
-                    tarjResenia tProfesor = new tarjResenia(re);
-                    tProfesor.TopLevel = false;
-                    tProfesor.Location = generarCoordenadas(i);
-                    panelResenias.Controls.Add(tProfesor);
-                    panelResenias.Controls.SetChildIndex(tProfesor, 0);
-                    tProfesor.Visible = true;
-                    i++;
+                    agregarResenia(re);
                 }
             }
             catch (Exception ex)
@@ -62,11 +62,14 @@ namespace LP2Soft.Profesor
             }
         }
 
-        private Point generarCoordenadas(int i)
+        private void agregarResenia(CursosWS.resenia re)
         {
-            int x = 15;
-            int y = ((int)i) * 160 + 10;
-            return new Point(x, y);
+            tarjResenia tProfesor = new tarjResenia(re);
+            tProfesor.TopLevel = false;
+            tProfesor.Dock = DockStyle.Top;
+            panelResenias.Controls.Add(tProfesor);
+            panelResenias.Controls.SetChildIndex(tProfesor, 0);
+            tProfesor.Visible = true;
         }
     }
 }

@@ -150,7 +150,7 @@ namespace LP2Soft.Tarjetas
             // 
             this.lblAsesor.AutoSize = true;
             this.lblAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsesor.Location = new System.Drawing.Point(117, 72);
+            this.lblAsesor.Location = new System.Drawing.Point(112, 72);
             this.lblAsesor.Name = "lblAsesor";
             this.lblAsesor.Size = new System.Drawing.Size(119, 18);
             this.lblAsesor.TabIndex = 47;

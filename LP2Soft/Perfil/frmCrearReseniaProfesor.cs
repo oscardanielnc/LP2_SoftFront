@@ -1,4 +1,5 @@
-﻿using LP2Soft.Home;
+﻿using LP2Soft.CursosWS;
+using LP2Soft.Home;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,10 +30,7 @@ namespace LP2Soft.Perfil
             }
         }
 
-        private void frmCrearReseniaProfesor_Load(object sender, EventArgs e)
-        {
-
-        }
+        public resenia Resenia { get => _resenia; set => _resenia = value; }
 
         private void btnPublicar_Click(object sender, EventArgs e)
         {
@@ -53,7 +51,7 @@ namespace LP2Soft.Perfil
             }
             int resultado = _daoProfesor.insertarReseniaProfesor(_resenia);
             Console.WriteLine(resultado);
-            this.Close();
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
