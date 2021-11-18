@@ -315,11 +315,11 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // panelCursosrequeridos
             // 
             this.panelCursosrequeridos.AutoSize = true;
-            this.panelCursosrequeridos.Location = new System.Drawing.Point(172, 270);
-            this.panelCursosrequeridos.MaximumSize = new System.Drawing.Size(315, 60);
-            this.panelCursosrequeridos.MinimumSize = new System.Drawing.Size(315, 0);
+            this.panelCursosrequeridos.Location = new System.Drawing.Point(169, 270);
+            this.panelCursosrequeridos.MaximumSize = new System.Drawing.Size(500, 60);
+            this.panelCursosrequeridos.MinimumSize = new System.Drawing.Size(500, 0);
             this.panelCursosrequeridos.Name = "panelCursosrequeridos";
-            this.panelCursosrequeridos.Size = new System.Drawing.Size(315, 0);
+            this.panelCursosrequeridos.Size = new System.Drawing.Size(500, 0);
             this.panelCursosrequeridos.TabIndex = 19;
             // 
             // panelCrearPublicacion

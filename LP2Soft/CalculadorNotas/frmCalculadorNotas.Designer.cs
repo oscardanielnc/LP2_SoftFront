@@ -41,9 +41,10 @@ namespace LP2Soft.CalculadorNotas
             this.lblPeso = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblCalculadorNotas = new System.Windows.Forms.Label();
             this.panelNotas = new System.Windows.Forms.Panel();
+            this.cboNombre = new System.Windows.Forms.ComboBox();
+            this.btnLimpiar = new LP2Soft.Asesor.BotonChevere();
             this.btnCalcular = new LP2Soft.Asesor.BotonChevere();
             this.btnAgregar = new LP2Soft.Asesor.BotonChevere();
             this.panelDetalles.SuspendLayout();
@@ -53,6 +54,8 @@ namespace LP2Soft.CalculadorNotas
             // 
             this.panelDetalles.AutoScroll = true;
             this.panelDetalles.BackColor = System.Drawing.SystemColors.Control;
+            this.panelDetalles.Controls.Add(this.cboNombre);
+            this.panelDetalles.Controls.Add(this.btnLimpiar);
             this.panelDetalles.Controls.Add(this.checkBoxEliminarNotaBaja);
             this.panelDetalles.Controls.Add(this.btnCalcular);
             this.panelDetalles.Controls.Add(this.btnAgregar);
@@ -66,10 +69,9 @@ namespace LP2Soft.CalculadorNotas
             this.panelDetalles.Controls.Add(this.lblPeso);
             this.panelDetalles.Controls.Add(this.txtPeso);
             this.panelDetalles.Controls.Add(this.lblNombre);
-            this.panelDetalles.Controls.Add(this.txtNombre);
             this.panelDetalles.Location = new System.Drawing.Point(44, 43);
             this.panelDetalles.Name = "panelDetalles";
-            this.panelDetalles.Size = new System.Drawing.Size(720, 142);
+            this.panelDetalles.Size = new System.Drawing.Size(720, 164);
             this.panelDetalles.TabIndex = 16;
             // 
             // checkBoxEliminarNotaBaja
@@ -88,7 +90,7 @@ namespace LP2Soft.CalculadorNotas
             this.lblNotaMinima.BackColor = System.Drawing.SystemColors.Control;
             this.lblNotaMinima.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotaMinima.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblNotaMinima.Location = new System.Drawing.Point(663, 106);
+            this.lblNotaMinima.Location = new System.Drawing.Point(549, 84);
             this.lblNotaMinima.Name = "lblNotaMinima";
             this.lblNotaMinima.Size = new System.Drawing.Size(44, 20);
             this.lblNotaMinima.TabIndex = 27;
@@ -99,7 +101,7 @@ namespace LP2Soft.CalculadorNotas
             this.lblNotaMin.AutoSize = true;
             this.lblNotaMin.BackColor = System.Drawing.SystemColors.Control;
             this.lblNotaMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotaMin.Location = new System.Drawing.Point(410, 106);
+            this.lblNotaMin.Location = new System.Drawing.Point(272, 84);
             this.lblNotaMin.Name = "lblNotaMin";
             this.lblNotaMin.Size = new System.Drawing.Size(233, 16);
             this.lblNotaMin.TabIndex = 26;
@@ -110,7 +112,7 @@ namespace LP2Soft.CalculadorNotas
             this.lblPromedio.AutoSize = true;
             this.lblPromedio.BackColor = System.Drawing.SystemColors.Control;
             this.lblPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPromedio.Location = new System.Drawing.Point(321, 103);
+            this.lblPromedio.Location = new System.Drawing.Point(153, 84);
             this.lblPromedio.Name = "lblPromedio";
             this.lblPromedio.Size = new System.Drawing.Size(44, 20);
             this.lblPromedio.TabIndex = 25;
@@ -121,7 +123,7 @@ namespace LP2Soft.CalculadorNotas
             this.lblProm.AutoSize = true;
             this.lblProm.BackColor = System.Drawing.SystemColors.Control;
             this.lblProm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProm.Location = new System.Drawing.Point(188, 106);
+            this.lblProm.Location = new System.Drawing.Point(12, 87);
             this.lblProm.Name = "lblProm";
             this.lblProm.Size = new System.Drawing.Size(117, 16);
             this.lblProm.TabIndex = 24;
@@ -187,14 +189,6 @@ namespace LP2Soft.CalculadorNotas
             this.lblNombre.TabIndex = 18;
             this.lblNombre.Text = "Nombre del registro";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(15, 41);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(240, 24);
-            this.txtNombre.TabIndex = 18;
-            // 
             // lblCalculadorNotas
             // 
             this.lblCalculadorNotas.AutoSize = true;
@@ -210,10 +204,44 @@ namespace LP2Soft.CalculadorNotas
             // 
             this.panelNotas.AutoScroll = true;
             this.panelNotas.BackColor = System.Drawing.SystemColors.Control;
-            this.panelNotas.Location = new System.Drawing.Point(44, 191);
+            this.panelNotas.Location = new System.Drawing.Point(44, 213);
             this.panelNotas.Name = "panelNotas";
-            this.panelNotas.Size = new System.Drawing.Size(720, 238);
+            this.panelNotas.Size = new System.Drawing.Size(720, 225);
             this.panelNotas.TabIndex = 17;
+            // 
+            // cboNombre
+            // 
+            this.cboNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNombre.FormattingEnabled = true;
+            this.cboNombre.Items.AddRange(new object[] {
+            "Examen Parcial",
+            "Laboratorios",
+            "Prácticas",
+            "Otros"});
+            this.cboNombre.Location = new System.Drawing.Point(15, 43);
+            this.cboNombre.Name = "cboNombre";
+            this.cboNombre.Size = new System.Drawing.Size(250, 23);
+            this.cboNombre.TabIndex = 22;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnLimpiar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnLimpiar.BorderRadius = 6;
+            this.btnLimpiar.BorderSize = 0;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(465, 124);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(69, 30);
+            this.btnLimpiar.TabIndex = 34;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextColor = System.Drawing.Color.White;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnCalcular
             // 
@@ -226,7 +254,7 @@ namespace LP2Soft.CalculadorNotas
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcular.ForeColor = System.Drawing.Color.Black;
-            this.btnCalcular.Location = new System.Drawing.Point(90, 100);
+            this.btnCalcular.Location = new System.Drawing.Point(330, 124);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(69, 30);
             this.btnCalcular.TabIndex = 32;
@@ -246,7 +274,7 @@ namespace LP2Soft.CalculadorNotas
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(15, 99);
+            this.btnAgregar.Location = new System.Drawing.Point(196, 124);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(69, 30);
             this.btnAgregar.TabIndex = 31;
@@ -283,7 +311,6 @@ namespace LP2Soft.CalculadorNotas
         private System.Windows.Forms.Label lblPeso;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNotaMinima;
         private System.Windows.Forms.Label lblNotaMin;
         private System.Windows.Forms.Label lblPromedio;
@@ -291,5 +318,7 @@ namespace LP2Soft.CalculadorNotas
         private Asesor.BotonChevere btnAgregar;
         private Asesor.BotonChevere btnCalcular;
         private System.Windows.Forms.CheckBox checkBoxEliminarNotaBaja;
+        private Asesor.BotonChevere btnLimpiar;
+        private System.Windows.Forms.ComboBox cboNombre;
     }
 }

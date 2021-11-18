@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Soft.Home;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +37,7 @@ namespace LP2Soft.CalculadorNotas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text != "" && txtCantidad.Text!="" && txtPeso.Text!="")
+            if (cboNombre.Text != "" && txtCantidad.Text!="" && txtPeso.Text!="")
             {
                 int n;
                 if (Int32.TryParse(txtCantidad.Text, out n) && Int32.TryParse(txtPeso.Text, out n)
@@ -48,9 +49,9 @@ namespace LP2Soft.CalculadorNotas
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     } else
                     {
-                        agregarNuevoRegistro(txtNombre.Text, Int32.Parse(txtPeso.Text),
+                        agregarNuevoRegistro(cboNombre.Text, Int32.Parse(txtPeso.Text),
                             Int32.Parse(txtCantidad.Text), checkBoxEliminarNotaBaja.Checked);
-                        txtNombre.Text = "";
+                        cboNombre.Text = "";
                         txtCantidad.Text = "";
                         txtPeso.Text = "";
 
@@ -103,6 +104,11 @@ namespace LP2Soft.CalculadorNotas
                 if (!reg.consultarValoresValidos()) return false;
             }
             return true;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            frmHome.abrirFormulario(new frmCalculadorNotas());
         }
     }
 }
