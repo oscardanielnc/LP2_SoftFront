@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/LP2Soft_WebService/NotificacionesWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8081/LP2Soft_WebService/NotificacionesWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="NotificacionesWS1.wsdl" MetadataType="Wsdl" ID="4cd3d2e6-3cc3-43ab-8952-815788226ca4" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebService/NotificacionesWS?WSDL" />
-    <MetadataFile FileName="NotificacionesWS1.xsd" MetadataType="Schema" ID="75a8893a-67dc-4b39-93c2-8c71543bcd61" SourceId="1" SourceUrl="http://localhost:8080/LP2Soft_WebService/NotificacionesWS?xsd=1" />
+    <MetadataFile FileName="NotificacionesWS.wsdl" MetadataType="Wsdl" ID="11d5af21-dd1b-459e-868c-fec580bcbf9a" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebService/NotificacionesWS?WSDL" />
+    <MetadataFile FileName="NotificacionesWS.xsd" MetadataType="Schema" ID="8ff92f6a-29bb-4d23-b363-fee4bcd101d3" SourceId="1" SourceUrl="http://localhost:8081/LP2Soft_WebService/NotificacionesWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
