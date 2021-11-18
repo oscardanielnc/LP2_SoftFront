@@ -85,6 +85,8 @@ namespace LP2Soft.Perfil
             this.txtContenido.Size = new System.Drawing.Size(328, 79);
             this.txtContenido.TabIndex = 9;
             this.txtContenido.Text = "Escribe una reseña a Oscar Navarro";
+            this.txtContenido.Enter += new System.EventHandler(this.txtContenido_Enter);
+            this.txtContenido.Leave += new System.EventHandler(this.txtContenido_Leave);
             // 
             // pictureBox1
             // 

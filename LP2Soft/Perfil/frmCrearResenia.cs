@@ -21,7 +21,7 @@ namespace LP2Soft.Perfil
         public frmCrearResenia(UsuarioWS.usuario asesor)
         {
             InitializeComponent();
-            txtContenido.Text = "Escribe una reseña a " + asesor.nombre + " " + asesor.apellido + "Chupetin";
+            txtContenido.Text = "Escribe una reseña a " + asesor.nombre + " " + asesor.apellido;
             _asesor = asesor;
             if (frmHome.Usuario.foto != null)
             {
@@ -53,6 +53,24 @@ namespace LP2Soft.Perfil
             int resultado = _daoUsuario.insertarReseniaAsesor(_resenia);
             Console.WriteLine(resultado);
             this.DialogResult=DialogResult.OK;
+        }
+
+        private void txtContenido_Enter(object sender, EventArgs e)
+        {
+            if (txtContenido.Text == "Escribe una reseña a " + _asesor.nombre + " " + _asesor.apellido)
+            {
+                txtContenido.Text = "";
+                txtContenido.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtContenido_Leave(object sender, EventArgs e)
+        {
+            if (txtContenido.Text == "")
+            {
+                txtContenido.Text = "Escribe una reseña a " + _asesor.nombre + " " + _asesor.apellido;
+                txtContenido.ForeColor = Color.Gray;
+            }
         }
     }
 }

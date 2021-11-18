@@ -37,7 +37,7 @@ namespace LP2Soft.Perfil
             // 
             this.panelResenias.AutoScrollMargin = new System.Drawing.Size(0, 18);
             this.panelResenias.AutoSize = true;
-            this.panelResenias.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelResenias.BackColor = System.Drawing.SystemColors.Control;
             this.panelResenias.Location = new System.Drawing.Point(43, 68);
             this.panelResenias.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.panelResenias.Name = "panelResenias";
@@ -68,6 +68,7 @@ namespace LP2Soft.Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(799, 278);
             this.Controls.Add(this.panelResenias);
             this.Controls.Add(this.btnReseniar);
