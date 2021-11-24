@@ -75,6 +75,7 @@ namespace LP2Soft.Tarjetas
             // btnNewState
             // 
             this.btnNewState.BackColor = System.Drawing.Color.DarkGray;
+            this.btnNewState.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewState.Image = global::LP2Soft.Properties.Resources.plus_circle_regular_24;
             this.btnNewState.Location = new System.Drawing.Point(114, 71);
             this.btnNewState.Name = "btnNewState";
@@ -89,8 +90,8 @@ namespace LP2Soft.Tarjetas
             // 
             this.imgCorazones.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgCorazones.ImageStream")));
             this.imgCorazones.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgCorazones.Images.SetKeyName(0, "star-empty.png");
-            this.imgCorazones.Images.SetKeyName(1, "star-full.png");
+            this.imgCorazones.Images.SetKeyName(0, "star-regular-24.png");
+            this.imgCorazones.Images.SetKeyName(1, "star-solid-24.png");
             // 
             // btnCorazon
             // 
@@ -99,7 +100,7 @@ namespace LP2Soft.Tarjetas
             this.btnCorazon.ImageList = this.imgCorazones;
             this.btnCorazon.Location = new System.Drawing.Point(114, 4);
             this.btnCorazon.Name = "btnCorazon";
-            this.btnCorazon.Size = new System.Drawing.Size(24, 24);
+            this.btnCorazon.Size = new System.Drawing.Size(26, 26);
             this.btnCorazon.TabIndex = 26;
             this.btnCorazon.Click += new System.EventHandler(this.btnCorazon_Click);
             // 

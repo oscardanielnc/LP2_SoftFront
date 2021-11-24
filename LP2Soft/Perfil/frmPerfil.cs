@@ -86,7 +86,7 @@ namespace LP2Soft.Perfil
                     btnAmigo.ImageIndex = 1;
                     break;
             }
-            if (_esAmigo || _usuario.esAsesor) btnMensaje.Visible = true;
+            if (_esAmigo) btnMensaje.Visible = true;
             else btnMensaje.Visible = false;
         }
         private void actualizarPantallas()

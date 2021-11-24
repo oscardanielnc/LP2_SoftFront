@@ -30,6 +30,7 @@ namespace LP2Soft.Perfil
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfil_Informacion));
             this.lblInfGeneral = new System.Windows.Forms.Label();
             this.lblUniversidad = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -53,6 +54,12 @@ namespace LP2Soft.Perfil
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.imgVineta1 = new System.Windows.Forms.PictureBox();
             this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
+            this.imgEstrellas = new System.Windows.Forms.ImageList(this.components);
+            this.estrella1 = new System.Windows.Forms.Label();
+            this.estrella2 = new System.Windows.Forms.Label();
+            this.estrella3 = new System.Windows.Forms.Label();
+            this.estrella4 = new System.Windows.Forms.Label();
+            this.estrella5 = new System.Windows.Forms.Label();
             this.panelAsesor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
@@ -225,10 +232,10 @@ namespace LP2Soft.Perfil
             // lblCalificacion
             // 
             this.lblCalificacion.AutoSize = true;
-            this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalificacion.Location = new System.Drawing.Point(207, 48);
             this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(31, 15);
+            this.lblCalificacion.Size = new System.Drawing.Size(32, 16);
             this.lblCalificacion.TabIndex = 30;
             this.lblCalificacion.Text = "4.58";
             // 
@@ -246,6 +253,11 @@ namespace LP2Soft.Perfil
             // 
             this.panelAsesor.AutoSize = true;
             this.panelAsesor.BackColor = System.Drawing.SystemColors.Window;
+            this.panelAsesor.Controls.Add(this.estrella5);
+            this.panelAsesor.Controls.Add(this.estrella4);
+            this.panelAsesor.Controls.Add(this.estrella3);
+            this.panelAsesor.Controls.Add(this.estrella2);
+            this.panelAsesor.Controls.Add(this.estrella1);
             this.panelAsesor.Controls.Add(this.lblCalificacion);
             this.panelAsesor.Controls.Add(this.lblInfAsesor);
             this.panelAsesor.Controls.Add(this.lblPrecioHora);
@@ -289,6 +301,63 @@ namespace LP2Soft.Perfil
             this.imgVineta1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgVineta1.TabIndex = 10;
             this.imgVineta1.TabStop = false;
+            // 
+            // imgEstrellas
+            // 
+            this.imgEstrellas.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgEstrellas.ImageStream")));
+            this.imgEstrellas.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgEstrellas.Images.SetKeyName(0, "star-regular-24.png");
+            this.imgEstrellas.Images.SetKeyName(1, "star-solid-24.png");
+            // 
+            // estrella1
+            // 
+            this.estrella1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella1.ImageIndex = 0;
+            this.estrella1.ImageList = this.imgEstrellas;
+            this.estrella1.Location = new System.Drawing.Point(255, 43);
+            this.estrella1.Name = "estrella1";
+            this.estrella1.Size = new System.Drawing.Size(20, 20);
+            this.estrella1.TabIndex = 64;
+            // 
+            // estrella2
+            // 
+            this.estrella2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella2.ImageIndex = 0;
+            this.estrella2.ImageList = this.imgEstrellas;
+            this.estrella2.Location = new System.Drawing.Point(281, 43);
+            this.estrella2.Name = "estrella2";
+            this.estrella2.Size = new System.Drawing.Size(20, 20);
+            this.estrella2.TabIndex = 65;
+            // 
+            // estrella3
+            // 
+            this.estrella3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella3.ImageIndex = 0;
+            this.estrella3.ImageList = this.imgEstrellas;
+            this.estrella3.Location = new System.Drawing.Point(307, 43);
+            this.estrella3.Name = "estrella3";
+            this.estrella3.Size = new System.Drawing.Size(20, 20);
+            this.estrella3.TabIndex = 66;
+            // 
+            // estrella4
+            // 
+            this.estrella4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella4.ImageIndex = 0;
+            this.estrella4.ImageList = this.imgEstrellas;
+            this.estrella4.Location = new System.Drawing.Point(333, 43);
+            this.estrella4.Name = "estrella4";
+            this.estrella4.Size = new System.Drawing.Size(20, 20);
+            this.estrella4.TabIndex = 67;
+            // 
+            // estrella5
+            // 
+            this.estrella5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella5.ImageIndex = 0;
+            this.estrella5.ImageList = this.imgEstrellas;
+            this.estrella5.Location = new System.Drawing.Point(359, 44);
+            this.estrella5.Name = "estrella5";
+            this.estrella5.Size = new System.Drawing.Size(20, 20);
+            this.estrella5.TabIndex = 68;
             // 
             // frmPerfil_Informacion
             // 
@@ -352,5 +421,11 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.PictureBox btnEditar;
         private System.Windows.Forms.Panel panelAsesor;
         private System.Windows.Forms.ToolTip toolTipInfo;
+        private System.Windows.Forms.ImageList imgEstrellas;
+        private System.Windows.Forms.Label estrella5;
+        private System.Windows.Forms.Label estrella4;
+        private System.Windows.Forms.Label estrella3;
+        private System.Windows.Forms.Label estrella2;
+        private System.Windows.Forms.Label estrella1;
     }
 }
