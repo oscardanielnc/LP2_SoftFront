@@ -53,7 +53,7 @@ namespace LP2Soft.Perfil
             this.btnReseniar.BorderSize = 0;
             this.btnReseniar.FlatAppearance.BorderSize = 0;
             this.btnReseniar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReseniar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReseniar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReseniar.ForeColor = System.Drawing.Color.White;
             this.btnReseniar.Location = new System.Drawing.Point(69, 21);
             this.btnReseniar.Name = "btnReseniar";

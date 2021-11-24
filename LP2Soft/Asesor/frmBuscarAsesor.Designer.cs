@@ -124,7 +124,7 @@
             this.btnPostularAsesor.BorderSize = 0;
             this.btnPostularAsesor.FlatAppearance.BorderSize = 0;
             this.btnPostularAsesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPostularAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPostularAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPostularAsesor.ForeColor = System.Drawing.Color.White;
             this.btnPostularAsesor.Location = new System.Drawing.Point(83, 458);
             this.btnPostularAsesor.Name = "btnPostularAsesor";
