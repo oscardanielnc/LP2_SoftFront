@@ -111,9 +111,9 @@ namespace LP2Soft.Eventos
             // panelPublicacionesEventos
             // 
             this.panelPublicacionesEventos.AutoScroll = true;
-            this.panelPublicacionesEventos.Location = new System.Drawing.Point(2, 52);
+            this.panelPublicacionesEventos.Location = new System.Drawing.Point(9, 52);
             this.panelPublicacionesEventos.Name = "panelPublicacionesEventos";
-            this.panelPublicacionesEventos.Size = new System.Drawing.Size(453, 441);
+            this.panelPublicacionesEventos.Size = new System.Drawing.Size(408, 441);
             this.panelPublicacionesEventos.TabIndex = 6;
             this.panelPublicacionesEventos.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelPublicacionesEventos_Scroll);
             // 

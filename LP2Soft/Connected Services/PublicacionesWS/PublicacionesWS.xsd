@@ -31,6 +31,10 @@
   <xs:element name="listarComentarios" type="tns:listarComentarios" />
   <xs:element name="listarComentariosResponse" type="tns:listarComentariosResponse" />
   <xs:element name="listarEventos" type="tns:listarEventos" />
+  <xs:element name="listarEventosAgendados" type="tns:listarEventosAgendados" />
+  <xs:element name="listarEventosAgendadosFecha" type="tns:listarEventosAgendadosFecha" />
+  <xs:element name="listarEventosAgendadosFechaResponse" type="tns:listarEventosAgendadosFechaResponse" />
+  <xs:element name="listarEventosAgendadosResponse" type="tns:listarEventosAgendadosResponse" />
   <xs:element name="listarEventosResponse" type="tns:listarEventosResponse" />
   <xs:element name="listarMisEventos" type="tns:listarMisEventos" />
   <xs:element name="listarMisEventosResponse" type="tns:listarMisEventosResponse" />
@@ -44,6 +48,16 @@
   <xs:element name="modificarEventoResponse" type="tns:modificarEventoResponse" />
   <xs:element name="modificarPost" type="tns:modificarPost" />
   <xs:element name="modificarPostResponse" type="tns:modificarPostResponse" />
+  <xs:complexType name="disminuirLikes">
+    <xs:sequence>
+      <xs:element name="idPost" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="disminuirLikesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarEvento">
     <xs:sequence>
       <xs:element minOccurs="0" name="evento" type="tns:evento" />
@@ -185,16 +199,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="disminuirLikes">
-    <xs:sequence>
-      <xs:element name="idPost" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="disminuirLikesResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarPost">
     <xs:sequence />
   </xs:complexType>
@@ -232,16 +236,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarXcurso">
-    <xs:sequence>
-      <xs:element name="idCurso" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarXcursoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:postGenerico" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarComentario">
     <xs:sequence>
       <xs:element minOccurs="0" name="comentario" type="tns:comentario" />
@@ -261,15 +255,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="desagendarEvento">
+  <xs:complexType name="listarXcurso">
     <xs:sequence>
-      <xs:element name="idevento" type="xs:int" />
-      <xs:element name="idusuario" type="xs:int" />
+      <xs:element name="idCurso" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="desagendarEventoResponse">
+  <xs:complexType name="listarXcursoResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:postGenerico" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="aumentarLikes">
@@ -282,12 +275,44 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="desagendarEvento">
+    <xs:sequence>
+      <xs:element name="idevento" type="xs:int" />
+      <xs:element name="idusuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="desagendarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosAgendadosFecha">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosAgendadosFechaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarMisEventos">
     <xs:sequence>
       <xs:element name="idUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarMisEventosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosAgendados">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosAgendadosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
@@ -320,16 +345,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comentario" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarEvento">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="evento" type="tns:evento" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarEventoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listar_material_tipo_indice">
     <xs:sequence>
       <xs:element name="idCurso" type="xs:int" />
@@ -340,6 +355,16 @@
   <xs:complexType name="listar_material_tipo_indiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:material" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="descargar_material">
@@ -363,22 +388,22 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarPost">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarPostResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertar_postXCurso">
     <xs:sequence>
       <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertar_postXCursoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPostResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

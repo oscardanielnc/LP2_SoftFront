@@ -19,6 +19,7 @@ namespace LP2Soft.Eventos
         private int _cantidadComent = 0;
         private PublicacionesWS.evento _evento;
         private PublicacionesWS.comentario _comentarioCreado;
+        private frmEventosAgendados _formEventosA=null;
         public frmPostEvento()
         {
             InitializeComponent();
@@ -37,6 +38,22 @@ namespace LP2Soft.Eventos
             else
                 btnAgendarEvento.ImageIndex = 1;
 
+            generarEvento(e);
+        }
+
+        public frmPostEvento(PublicacionesWS.evento e,frmEventosAgendados formEventosA)
+        {
+            InitializeComponent();
+            _daoPost = new PublicacionesWS.PublicacionesWSClient();
+            _evento = e;
+            _formEventosA = formEventosA;
+            btnAgendarEvento.ImageIndex = 1;
+
+            generarEvento(e);
+        }
+
+        private void generarEvento(PublicacionesWS.evento e)
+        {
             btnMeGusta.ImageIndex = 1;
             lblNombre.Text = e.usuario.nombre;
             lblFechaHoraCreacion.Text = e.fechaRegistro.ToString("dd-MM-yyyy");
@@ -73,7 +90,7 @@ namespace LP2Soft.Eventos
             }
 
             panelComentarios.Controls.Clear();
-            
+
             PublicacionesWS.comentario[] _comentarios = _daoPost.listarComentarios(e.idPost);
             if (_comentarios != null)
                 _coments = new BindingList<PublicacionesWS.comentario>(_comentarios.ToList());
@@ -114,6 +131,13 @@ namespace LP2Soft.Eventos
             {
                 btnAgendarEvento.ImageIndex = 0;
                 resultado=_daoPost.desagendarEvento(_evento.idPost, frmHome.Usuario.idUsuario);
+                
+                if (_formEventosA != null)
+                {
+                    _formEventosA.actualizarCalendario(_evento.fechaDelEvento);
+                    this.Visible = false;
+                }
+
                 if (resultado == 0)
                 {
                     MessageBox.Show("Error al desagendar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

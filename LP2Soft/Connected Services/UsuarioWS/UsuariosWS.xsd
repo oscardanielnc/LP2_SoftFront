@@ -1,60 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="eliminarSolicitudAmistad" type="tns:eliminarSolicitudAmistad" />
-  <xs:element name="eliminarSolicitudAmistadResponse" type="tns:eliminarSolicitudAmistadResponse" />
-  <xs:element name="enviarMensaje" type="tns:enviarMensaje" />
-  <xs:element name="enviarMensajeResponse" type="tns:enviarMensajeResponse" />
-  <xs:element name="insertarNotificacion" type="tns:insertarNotificacion" />
-  <xs:element name="insertarNotificacionResponse" type="tns:insertarNotificacionResponse" />
-  <xs:element name="listarMensajesUltimos" type="tns:listarMensajesUltimos" />
-  <xs:element name="listarMensajesUltimosResponse" type="tns:listarMensajesUltimosResponse" />
-  <xs:element name="listarMensajesXAmigo" type="tns:listarMensajesXAmigo" />
-  <xs:element name="listarMensajesXAmigoResponse" type="tns:listarMensajesXAmigoResponse" />
-  <xs:element name="listarNotificaciones" type="tns:listarNotificaciones" />
-  <xs:element name="listarNotificacionesResponse" type="tns:listarNotificacionesResponse" />
-  <xs:complexType name="listarMensajesXAmigo">
-    <xs:sequence>
-      <xs:element name="idUsuario1" type="xs:int" />
-      <xs:element name="idUsuario2" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarMensajesXAmigoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mensaje" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mensaje">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="contenido" type="xs:string" />
-      <xs:element minOccurs="0" name="fechayHora" type="xs:dateTime" />
-      <xs:element name="idDestinatario" type="xs:int" />
-      <xs:element name="idMensaje" type="xs:int" />
-      <xs:element name="idRemitente" type="xs:int" />
-      <xs:element name="leido" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarNotificaciones">
+  <xs:element name="agregarAmigo" type="tns:agregarAmigo" />
+  <xs:element name="agregarAmigoResponse" type="tns:agregarAmigoResponse" />
+  <xs:element name="eliminarAmigo" type="tns:eliminarAmigo" />
+  <xs:element name="eliminarAmigoResponse" type="tns:eliminarAmigoResponse" />
+  <xs:element name="eliminarReseniaAsesor" type="tns:eliminarReseniaAsesor" />
+  <xs:element name="eliminarReseniaAsesorResponse" type="tns:eliminarReseniaAsesorResponse" />
+  <xs:element name="esAmigo" type="tns:esAmigo" />
+  <xs:element name="esAmigoResponse" type="tns:esAmigoResponse" />
+  <xs:element name="hacerAdmin" type="tns:hacerAdmin" />
+  <xs:element name="hacerAdminResponse" type="tns:hacerAdminResponse" />
+  <xs:element name="insertarAsesor" type="tns:insertarAsesor" />
+  <xs:element name="insertarAsesorResponse" type="tns:insertarAsesorResponse" />
+  <xs:element name="insertarReseniaAsesor" nillable="true" type="tns:insertarReseniaProfesor" />
+  <xs:element name="insertarReseniaAsesorResponse" nillable="true" type="tns:insertarReseniaProfesorResponse" />
+  <xs:element name="insertarReseniaProfesor" type="tns:insertarReseniaProfesor" />
+  <xs:element name="insertarReseniaProfesorResponse" type="tns:insertarReseniaProfesorResponse" />
+  <xs:element name="insertarUsuario" type="tns:insertarUsuario" />
+  <xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse" />
+  <xs:element name="listarAmigosNombreCodigo" type="tns:listarAmigosNombreCodigo" />
+  <xs:element name="listarAmigosNombreCodigoResponse" type="tns:listarAmigosNombreCodigoResponse" />
+  <xs:element name="listarCursos" type="tns:listarCursos" />
+  <xs:element name="listarCursosAsesorados" type="tns:listarCursosAsesorados" />
+  <xs:element name="listarCursosAsesoradosResponse" type="tns:listarCursosAsesoradosResponse" />
+  <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
+  <xs:element name="listarReseniasAsesor" type="tns:listarReseniasAsesor" />
+  <xs:element name="listarReseniasAsesorResponse" type="tns:listarReseniasAsesorResponse" />
+  <xs:element name="listarUsuariosNombreCodigo" type="tns:listarUsuariosNombreCodigo" />
+  <xs:element name="listarUsuariosNombreCodigoResponse" type="tns:listarUsuariosNombreCodigoResponse" />
+  <xs:element name="listarXnombreYcurso" type="tns:listarXnombreYcurso" />
+  <xs:element name="listarXnombreYcursoResponse" type="tns:listarXnombreYcursoResponse" />
+  <xs:element name="modificarUsuario" type="tns:modificarUsuario" />
+  <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
+  <xs:element name="mostrarUsuario" type="tns:mostrarUsuario" />
+  <xs:element name="mostrarUsuarioResponse" type="tns:mostrarUsuarioResponse" />
+  <xs:complexType name="hacerAdmin">
     <xs:sequence>
       <xs:element name="idUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarNotificacionesResponse">
+  <xs:complexType name="hacerAdminResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:notificacion" />
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="notificacion">
+  <xs:complexType name="listarCursosAsesorados">
     <xs:sequence>
-      <xs:element minOccurs="0" name="cursoFavorito" type="tns:curso" />
-      <xs:element minOccurs="0" name="eventoAgendado" type="tns:evento" />
-      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
-      <xs:element name="idNotificacion" type="xs:int" />
-      <xs:element name="idUsiarioNotificado" type="xs:int" />
-      <xs:element name="leido" type="xs:boolean" />
-      <xs:element minOccurs="0" name="post" type="tns:post" />
-      <xs:element name="subTipo" type="xs:int" />
-      <xs:element name="tipo" type="xs:int" />
-      <xs:element minOccurs="0" name="usuarioNotificador" type="tns:usuario" />
+      <xs:element name="idAsesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosAsesoradosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="curso">
@@ -188,59 +185,151 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="enviarMensaje">
+  <xs:complexType name="insertarAsesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asesor" type="tns:asesor" />
+      <xs:element name="fidUsuario" type="xs:int" />
+      <xs:element name="fidCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAsesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregarAmigo">
     <xs:sequence>
       <xs:element name="idUsuario1" type="xs:int" />
       <xs:element name="idUsuario2" type="xs:int" />
-      <xs:element minOccurs="0" name="contenido" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="enviarMensajeResponse">
+  <xs:complexType name="agregarAmigoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarNotificacion">
+  <xs:complexType name="listarUsuariosNombreCodigo">
     <xs:sequence>
-      <xs:element name="idUsuarioNotificado" type="xs:int" />
-      <xs:element name="tipo" type="xs:int" />
-      <xs:element name="subTipo" type="xs:int" />
-      <xs:element name="idUsuarioNotificador" type="xs:int" />
-      <xs:element name="idCursoFavorito" type="xs:int" />
-      <xs:element name="idEventoAgendado" type="xs:int" />
-      <xs:element name="idPost" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarNotificacionResponse">
+  <xs:complexType name="listarUsuariosNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarReseniaProfesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarReseniaProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarMensajesUltimos">
+  <xs:complexType name="mostrarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correoCodigo" type="xs:string" />
+      <xs:element name="isCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="esAmigo">
+    <xs:sequence>
+      <xs:element name="idUsuario1" type="xs:int" />
+      <xs:element name="idUsuario2" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="esAmigoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAmigosNombreCodigo">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAmigosNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAmigo">
+    <xs:sequence>
+      <xs:element name="idUsuario1" type="xs:int" />
+      <xs:element name="idUsuario2" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAmigoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReseniaAsesor">
+    <xs:sequence>
+      <xs:element name="idResenia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReseniaAsesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarReseniasAsesor">
+    <xs:sequence>
+      <xs:element name="idAsesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarReseniasAsesorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:resenia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursos">
     <xs:sequence>
       <xs:element name="idUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarMensajesUltimosResponse">
+  <xs:complexType name="listarCursosResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ultimoMensaje" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ultimoMensaje">
+  <xs:complexType name="modificarUsuario">
     <xs:sequence>
-      <xs:element minOccurs="0" name="amigo" type="tns:usuario" />
-      <xs:element minOccurs="0" name="mensaje" type="tns:mensaje" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarSolicitudAmistad">
-    <xs:sequence>
-      <xs:element name="idUsuarioNotificado" type="xs:int" />
-      <xs:element name="idUsuarioNotificador" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarSolicitudAmistadResponse">
+  <xs:complexType name="modificarUsuarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarXnombreYcurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarXnombreYcursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
