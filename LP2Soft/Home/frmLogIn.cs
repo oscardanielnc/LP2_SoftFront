@@ -80,5 +80,11 @@ namespace LP2Soft.Home
             if (e.KeyCode.Equals(Keys.Enter))
                 btnIngresar_Click(sender, e);
         }
+
+        private void lblOlvide_Click(object sender, EventArgs e)
+        {
+            frmRecuperarContrasenia formRecuperar = new frmRecuperarContrasenia();
+            formRecuperar.ShowDialog();
+        }
     }
 }

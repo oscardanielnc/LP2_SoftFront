@@ -46,5 +46,11 @@ namespace LP2Soft.Perfil
         {
             frmHome.abrirFormulario(new frmPerfil_EditarInfo(_usuario));
         }
+
+        private void btnEnviarCorreo_Click(object sender, EventArgs e)
+        {
+            frmPerfil_EnviarCorreo formEmail = new frmPerfil_EnviarCorreo(_usuario);
+            formEmail.ShowDialog();
+        }
     }
 }

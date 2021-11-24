@@ -53,10 +53,14 @@ namespace LP2Soft.Perfil
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.imgVineta1 = new System.Windows.Forms.PictureBox();
             this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
+            this.btnEnviarCorreo = new LP2Soft.Asesor.BotonChevere();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelAsesor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInfGeneral
@@ -246,6 +250,9 @@ namespace LP2Soft.Perfil
             // 
             this.panelAsesor.AutoSize = true;
             this.panelAsesor.BackColor = System.Drawing.SystemColors.Window;
+            this.panelAsesor.Controls.Add(this.label1);
+            this.panelAsesor.Controls.Add(this.pictureBox1);
+            this.panelAsesor.Controls.Add(this.btnEnviarCorreo);
             this.panelAsesor.Controls.Add(this.lblCalificacion);
             this.panelAsesor.Controls.Add(this.lblInfAsesor);
             this.panelAsesor.Controls.Add(this.lblPrecioHora);
@@ -290,6 +297,46 @@ namespace LP2Soft.Perfil
             this.imgVineta1.TabIndex = 10;
             this.imgVineta1.TabStop = false;
             // 
+            // btnEnviarCorreo
+            // 
+            this.btnEnviarCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEnviarCorreo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEnviarCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnEnviarCorreo.BorderRadius = 6;
+            this.btnEnviarCorreo.BorderSize = 0;
+            this.btnEnviarCorreo.FlatAppearance.BorderSize = 0;
+            this.btnEnviarCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarCorreo.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarCorreo.Location = new System.Drawing.Point(423, 51);
+            this.btnEnviarCorreo.Name = "btnEnviarCorreo";
+            this.btnEnviarCorreo.Size = new System.Drawing.Size(150, 33);
+            this.btnEnviarCorreo.TabIndex = 32;
+            this.btnEnviarCorreo.Text = "Enviar correo";
+            this.btnEnviarCorreo.TextColor = System.Drawing.Color.White;
+            this.btnEnviarCorreo.UseVisualStyleBackColor = false;
+            this.btnEnviarCorreo.Click += new System.EventHandler(this.btnEnviarCorreo_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(380, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 16);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Ponerme en contacto con el Asesor";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.book;
+            this.pictureBox1.Location = new System.Drawing.Point(354, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmPerfil_Informacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,6 +369,7 @@ namespace LP2Soft.Perfil
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +400,8 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.PictureBox btnEditar;
         private System.Windows.Forms.Panel panelAsesor;
         private System.Windows.Forms.ToolTip toolTipInfo;
+        private Asesor.BotonChevere btnEnviarCorreo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
