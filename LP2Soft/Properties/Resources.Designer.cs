@@ -663,6 +663,16 @@ namespace LP2Soft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap revision_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("revision-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RonyCueva {
             get {
                 object obj = ResourceManager.GetObject("RonyCueva", resourceCulture);
@@ -696,6 +706,16 @@ namespace LP2Soft.Properties {
         internal static System.Drawing.Bitmap search1 {
             get {
                 object obj = ResourceManager.GetObject("search1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap send_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("send-regular-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

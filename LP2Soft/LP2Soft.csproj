@@ -1211,5 +1211,11 @@
   <ItemGroup>
     <None Include="Resources\star-solid-24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revision-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-regular-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

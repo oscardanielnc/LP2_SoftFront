@@ -44,13 +44,13 @@ namespace LP2Soft.Perfil
             this.imgPerfil = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelNombre = new System.Windows.Forms.Panel();
+            this.btnAceptar = new LP2Soft.Asesor.BotonChevere();
+            this.btnRechazar = new LP2Soft.Asesor.BotonChevere();
+            this.btnCancelarSoli = new LP2Soft.Asesor.BotonChevere();
             this.btnHacerAdmin = new System.Windows.Forms.PictureBox();
             this.imgAdmin = new System.Windows.Forms.PictureBox();
             this.lblTituloNombre = new System.Windows.Forms.Label();
             this.tooltipPerfil = new System.Windows.Forms.ToolTip(this.components);
-            this.btnAceptar = new LP2Soft.Asesor.BotonChevere();
-            this.btnRechazar = new LP2Soft.Asesor.BotonChevere();
-            this.btnCancelarSoli = new LP2Soft.Asesor.BotonChevere();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
@@ -231,48 +231,6 @@ namespace LP2Soft.Perfil
             this.panelNombre.Size = new System.Drawing.Size(490, 30);
             this.panelNombre.TabIndex = 14;
             // 
-            // btnHacerAdmin
-            // 
-            this.btnHacerAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHacerAdmin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnHacerAdmin.Image = global::LP2Soft.Properties.Resources.chevrons_up_solid_24;
-            this.btnHacerAdmin.Location = new System.Drawing.Point(148, 0);
-            this.btnHacerAdmin.Name = "btnHacerAdmin";
-            this.btnHacerAdmin.Size = new System.Drawing.Size(25, 30);
-            this.btnHacerAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnHacerAdmin.TabIndex = 17;
-            this.btnHacerAdmin.TabStop = false;
-            this.tooltipPerfil.SetToolTip(this.btnHacerAdmin, "Hacer administrador");
-            this.btnHacerAdmin.Click += new System.EventHandler(this.btnHacerAdmin_Click);
-            // 
-            // imgAdmin
-            // 
-            this.imgAdmin.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.imgAdmin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.imgAdmin.Image = global::LP2Soft.Properties.Resources.badge_check_solid_24;
-            this.imgAdmin.Location = new System.Drawing.Point(123, 0);
-            this.imgAdmin.Name = "imgAdmin";
-            this.imgAdmin.Size = new System.Drawing.Size(25, 30);
-            this.imgAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAdmin.TabIndex = 16;
-            this.imgAdmin.TabStop = false;
-            this.tooltipPerfil.SetToolTip(this.imgAdmin, "Insignia de administrador");
-            // 
-            // lblTituloNombre
-            // 
-            this.lblTituloNombre.AutoSize = true;
-            this.lblTituloNombre.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloNombre.Location = new System.Drawing.Point(0, 0);
-            this.lblTituloNombre.Name = "lblTituloNombre";
-            this.lblTituloNombre.Size = new System.Drawing.Size(123, 20);
-            this.lblTituloNombre.TabIndex = 7;
-            this.lblTituloNombre.Text = "Oscar Navarro";
-            // 
-            // tooltipPerfil
-            // 
-            this.tooltipPerfil.Tag = "";
-            // 
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
@@ -338,6 +296,48 @@ namespace LP2Soft.Perfil
             this.btnCancelarSoli.UseVisualStyleBackColor = false;
             this.btnCancelarSoli.Visible = false;
             this.btnCancelarSoli.Click += new System.EventHandler(this.btnCancelarSoli_Click);
+            // 
+            // btnHacerAdmin
+            // 
+            this.btnHacerAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHacerAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnHacerAdmin.Image = global::LP2Soft.Properties.Resources.chevrons_up_solid_24;
+            this.btnHacerAdmin.Location = new System.Drawing.Point(148, 0);
+            this.btnHacerAdmin.Name = "btnHacerAdmin";
+            this.btnHacerAdmin.Size = new System.Drawing.Size(25, 30);
+            this.btnHacerAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnHacerAdmin.TabIndex = 17;
+            this.btnHacerAdmin.TabStop = false;
+            this.tooltipPerfil.SetToolTip(this.btnHacerAdmin, "Hacer administrador");
+            this.btnHacerAdmin.Click += new System.EventHandler(this.btnHacerAdmin_Click);
+            // 
+            // imgAdmin
+            // 
+            this.imgAdmin.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.imgAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imgAdmin.Image = global::LP2Soft.Properties.Resources.badge_check_solid_24;
+            this.imgAdmin.Location = new System.Drawing.Point(123, 0);
+            this.imgAdmin.Name = "imgAdmin";
+            this.imgAdmin.Size = new System.Drawing.Size(25, 30);
+            this.imgAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAdmin.TabIndex = 16;
+            this.imgAdmin.TabStop = false;
+            this.tooltipPerfil.SetToolTip(this.imgAdmin, "Insignia de administrador");
+            // 
+            // lblTituloNombre
+            // 
+            this.lblTituloNombre.AutoSize = true;
+            this.lblTituloNombre.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloNombre.Location = new System.Drawing.Point(0, 0);
+            this.lblTituloNombre.Name = "lblTituloNombre";
+            this.lblTituloNombre.Size = new System.Drawing.Size(123, 20);
+            this.lblTituloNombre.TabIndex = 7;
+            this.lblTituloNombre.Text = "Oscar Navarro";
+            // 
+            // tooltipPerfil
+            // 
+            this.tooltipPerfil.Tag = "";
             // 
             // frmPerfil
             // 
