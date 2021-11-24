@@ -18,12 +18,18 @@ namespace LP2Soft.Tarjetas
         private int _idProfesor;
         private CursosWS.CursosWSClient _daoProfesor;
         private CursosWS.profesor _profesorVer;
-        
-        
+        private BindingList<Label> _estrellas;
+
         public tarjProfesor(CursosWS.profesor profesor)
         {
             _daoProfesor = new CursosWS.CursosWSClient();
             InitializeComponent();
+            _estrellas = new BindingList<Label>();
+            _estrellas.Add(estrella1);
+            _estrellas.Add(estrella2);
+            _estrellas.Add(estrella3);
+            _estrellas.Add(estrella4);
+            _estrellas.Add(estrella5);
 
             _idProfesor = profesor.idProfesor;
             posicionarLabel(profesor);
@@ -38,9 +44,13 @@ namespace LP2Soft.Tarjetas
         private void posicionarLabel(CursosWS.profesor profesor)
         {
             lblNombre.Text = profesor.nombre;
-            lblPuntuacion.Text = profesor.calificacion.ToString();
             int tamanio = lblNombre.Size.Width;
             lblNombre.Location = new Point(((int)(160 - tamanio) / 2), 99);
+
+            float calificacion = (profesor.cantidadResenias == 0) ? 0 :
+                    (float)profesor.sumatoriaResenias / profesor.cantidadResenias;
+            pintarEstrellas(calificacion);
+            lblCal.Text = calificacion.ToString("0.00");
         }
 
         private void btnVerPerfil_Click_1(object sender, EventArgs e)
@@ -53,20 +63,18 @@ namespace LP2Soft.Tarjetas
             }
             frmPrincipal.endLoading();
         }
-
-        private void imgProfesor_Click(object sender, EventArgs e)
+        private void pintarEstrellas(float nEstrellas)
         {
-
-        }
-
-        private void lblNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPuntuacion_Click(object sender, EventArgs e)
-        {
-
+            for (float i = 0; i < 5; i++)
+            {
+                if (i < nEstrellas)
+                {
+                    if (i + 0.5 < nEstrellas)
+                        _estrellas[(int)i].ImageIndex = 1;
+                    else _estrellas[(int)i].ImageIndex = 2;
+                }
+                else _estrellas[(int)i].ImageIndex = 0;
+            }
         }
     }
 }

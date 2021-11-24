@@ -100,6 +100,7 @@ namespace LP2Soft.Perfil
             this.estrella5.Name = "estrella5";
             this.estrella5.Size = new System.Drawing.Size(34, 34);
             this.estrella5.TabIndex = 83;
+            this.estrella5.Click += new System.EventHandler(this.estrella5_Click);
             // 
             // estrella4
             // 
@@ -110,6 +111,7 @@ namespace LP2Soft.Perfil
             this.estrella4.Name = "estrella4";
             this.estrella4.Size = new System.Drawing.Size(34, 34);
             this.estrella4.TabIndex = 82;
+            this.estrella4.Click += new System.EventHandler(this.estrella4_Click);
             // 
             // estrella3
             // 
@@ -120,6 +122,7 @@ namespace LP2Soft.Perfil
             this.estrella3.Name = "estrella3";
             this.estrella3.Size = new System.Drawing.Size(34, 34);
             this.estrella3.TabIndex = 81;
+            this.estrella3.Click += new System.EventHandler(this.estrella3_Click);
             // 
             // estrella2
             // 
@@ -130,6 +133,7 @@ namespace LP2Soft.Perfil
             this.estrella2.Name = "estrella2";
             this.estrella2.Size = new System.Drawing.Size(34, 34);
             this.estrella2.TabIndex = 80;
+            this.estrella2.Click += new System.EventHandler(this.estrella2_Click);
             // 
             // estrella1
             // 
@@ -140,6 +144,7 @@ namespace LP2Soft.Perfil
             this.estrella1.Name = "estrella1";
             this.estrella1.Size = new System.Drawing.Size(34, 34);
             this.estrella1.TabIndex = 79;
+            this.estrella1.Click += new System.EventHandler(this.estrella1_Click);
             // 
             // frmCrearReseniaProfesor
             // 

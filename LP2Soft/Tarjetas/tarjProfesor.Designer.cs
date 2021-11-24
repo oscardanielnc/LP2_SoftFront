@@ -29,10 +29,18 @@ namespace LP2Soft.Tarjetas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tarjProfesor));
             this.imgProfesor = new System.Windows.Forms.PictureBox();
-            this.lblPuntuacion = new System.Windows.Forms.Label();
             this.btnVerPerfil = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.imgEstrellas = new System.Windows.Forms.ImageList(this.components);
+            this.estrella5 = new System.Windows.Forms.Label();
+            this.estrella4 = new System.Windows.Forms.Label();
+            this.estrella3 = new System.Windows.Forms.Label();
+            this.estrella2 = new System.Windows.Forms.Label();
+            this.estrella1 = new System.Windows.Forms.Label();
+            this.lblCal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfesor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,18 +53,6 @@ namespace LP2Soft.Tarjetas
             this.imgProfesor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgProfesor.TabIndex = 26;
             this.imgProfesor.TabStop = false;
-            this.imgProfesor.Click += new System.EventHandler(this.imgProfesor_Click);
-            // 
-            // lblPuntuacion
-            // 
-            this.lblPuntuacion.AutoSize = true;
-            this.lblPuntuacion.Location = new System.Drawing.Point(81, 139);
-            this.lblPuntuacion.Name = "lblPuntuacion";
-            this.lblPuntuacion.Size = new System.Drawing.Size(13, 13);
-            this.lblPuntuacion.TabIndex = 23;
-            this.lblPuntuacion.Text = "5";
-            this.lblPuntuacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPuntuacion.Click += new System.EventHandler(this.lblPuntuacion_Click);
             // 
             // btnVerPerfil
             // 
@@ -65,7 +61,7 @@ namespace LP2Soft.Tarjetas
             this.btnVerPerfil.FlatAppearance.BorderSize = 2;
             this.btnVerPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
             this.btnVerPerfil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnVerPerfil.Location = new System.Drawing.Point(49, 165);
+            this.btnVerPerfil.Location = new System.Drawing.Point(53, 168);
             this.btnVerPerfil.Name = "btnVerPerfil";
             this.btnVerPerfil.Size = new System.Drawing.Size(75, 23);
             this.btnVerPerfil.TabIndex = 24;
@@ -84,7 +80,74 @@ namespace LP2Soft.Tarjetas
             this.lblNombre.TabIndex = 25;
             this.lblNombre.Text = "Freddy Paz";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
+            // 
+            // imgEstrellas
+            // 
+            this.imgEstrellas.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgEstrellas.ImageStream")));
+            this.imgEstrellas.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgEstrellas.Images.SetKeyName(0, "star-regular-24.png");
+            this.imgEstrellas.Images.SetKeyName(1, "star-solid-24.png");
+            this.imgEstrellas.Images.SetKeyName(2, "star-half-solid-24.png");
+            // 
+            // estrella5
+            // 
+            this.estrella5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella5.ImageIndex = 0;
+            this.estrella5.ImageList = this.imgEstrellas;
+            this.estrella5.Location = new System.Drawing.Point(140, 147);
+            this.estrella5.Name = "estrella5";
+            this.estrella5.Size = new System.Drawing.Size(18, 18);
+            this.estrella5.TabIndex = 79;
+            // 
+            // estrella4
+            // 
+            this.estrella4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella4.ImageIndex = 0;
+            this.estrella4.ImageList = this.imgEstrellas;
+            this.estrella4.Location = new System.Drawing.Point(120, 147);
+            this.estrella4.Name = "estrella4";
+            this.estrella4.Size = new System.Drawing.Size(18, 18);
+            this.estrella4.TabIndex = 78;
+            // 
+            // estrella3
+            // 
+            this.estrella3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella3.ImageIndex = 0;
+            this.estrella3.ImageList = this.imgEstrellas;
+            this.estrella3.Location = new System.Drawing.Point(100, 147);
+            this.estrella3.Name = "estrella3";
+            this.estrella3.Size = new System.Drawing.Size(18, 18);
+            this.estrella3.TabIndex = 77;
+            // 
+            // estrella2
+            // 
+            this.estrella2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella2.ImageIndex = 0;
+            this.estrella2.ImageList = this.imgEstrellas;
+            this.estrella2.Location = new System.Drawing.Point(79, 147);
+            this.estrella2.Name = "estrella2";
+            this.estrella2.Size = new System.Drawing.Size(18, 18);
+            this.estrella2.TabIndex = 76;
+            // 
+            // estrella1
+            // 
+            this.estrella1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella1.ImageIndex = 0;
+            this.estrella1.ImageList = this.imgEstrellas;
+            this.estrella1.Location = new System.Drawing.Point(58, 147);
+            this.estrella1.Name = "estrella1";
+            this.estrella1.Size = new System.Drawing.Size(18, 18);
+            this.estrella1.TabIndex = 75;
+            // 
+            // lblCal
+            // 
+            this.lblCal.AutoSize = true;
+            this.lblCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCal.Location = new System.Drawing.Point(17, 150);
+            this.lblCal.Name = "lblCal";
+            this.lblCal.Size = new System.Drawing.Size(35, 15);
+            this.lblCal.TabIndex = 74;
+            this.lblCal.Text = "4.00";
             // 
             // tarjProfesor
             // 
@@ -92,8 +155,13 @@ namespace LP2Soft.Tarjetas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(180, 200);
+            this.Controls.Add(this.estrella5);
+            this.Controls.Add(this.estrella4);
+            this.Controls.Add(this.estrella3);
+            this.Controls.Add(this.estrella2);
+            this.Controls.Add(this.estrella1);
+            this.Controls.Add(this.lblCal);
             this.Controls.Add(this.imgProfesor);
-            this.Controls.Add(this.lblPuntuacion);
             this.Controls.Add(this.btnVerPerfil);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -108,8 +176,14 @@ namespace LP2Soft.Tarjetas
         #endregion
 
         private System.Windows.Forms.PictureBox imgProfesor;
-        private System.Windows.Forms.Label lblPuntuacion;
         private System.Windows.Forms.Button btnVerPerfil;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.ImageList imgEstrellas;
+        private System.Windows.Forms.Label estrella5;
+        private System.Windows.Forms.Label estrella4;
+        private System.Windows.Forms.Label estrella3;
+        private System.Windows.Forms.Label estrella2;
+        private System.Windows.Forms.Label estrella1;
+        private System.Windows.Forms.Label lblCal;
     }
 }
