@@ -35,7 +35,7 @@ namespace LP2Soft.Perfil
             lblCorreo.Text = _usuario.correo;
             // aquí viene la fecha de nacimiento
             lblFechaNacimiento.Text = _usuario.fechaNacimiento.ToString("dd MMMM yyyy");
-            rtbDescripcion.Text = _usuario.descripcion;
+            lblDescripcion.Text = _usuario.descripcion;
 
             if (_usuario.esAsesor)
             {

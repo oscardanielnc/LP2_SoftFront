@@ -44,13 +44,13 @@ namespace LP2Soft.Perfil
             this.imgPerfil = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelNombre = new System.Windows.Forms.Panel();
-            this.btnAceptar = new LP2Soft.Asesor.BotonChevere();
-            this.btnRechazar = new LP2Soft.Asesor.BotonChevere();
-            this.btnCancelarSoli = new LP2Soft.Asesor.BotonChevere();
             this.btnHacerAdmin = new System.Windows.Forms.PictureBox();
             this.imgAdmin = new System.Windows.Forms.PictureBox();
             this.lblTituloNombre = new System.Windows.Forms.Label();
             this.tooltipPerfil = new System.Windows.Forms.ToolTip(this.components);
+            this.btnAceptar = new LP2Soft.Asesor.BotonChevere();
+            this.btnRechazar = new LP2Soft.Asesor.BotonChevere();
+            this.btnCancelarSoli = new LP2Soft.Asesor.BotonChevere();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMensaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
@@ -68,7 +68,7 @@ namespace LP2Soft.Perfil
             this.panel1.Controls.Add(this.btnAmigos);
             this.panel1.Controls.Add(this.btnPublicaciones);
             this.panel1.Controls.Add(this.btnInformacion);
-            this.panel1.Location = new System.Drawing.Point(62, 221);
+            this.panel1.Location = new System.Drawing.Point(50, 221);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(700, 31);
             this.panel1.TabIndex = 10;
@@ -156,10 +156,10 @@ namespace LP2Soft.Perfil
             // panelContenido
             // 
             this.panelContenido.AutoSize = true;
-            this.panelContenido.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelContenido.Location = new System.Drawing.Point(12, 249);
+            this.panelContenido.BackColor = System.Drawing.SystemColors.Window;
+            this.panelContenido.Location = new System.Drawing.Point(1, 249);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(804, 231);
+            this.panelContenido.Size = new System.Drawing.Size(796, 231);
             this.panelContenido.TabIndex = 11;
             // 
             // imgAmigo
@@ -186,7 +186,7 @@ namespace LP2Soft.Perfil
             // 
             this.btnMensaje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMensaje.Image = global::LP2Soft.Properties.Resources.bubble;
-            this.btnMensaje.Location = new System.Drawing.Point(702, 185);
+            this.btnMensaje.Location = new System.Drawing.Point(688, 185);
             this.btnMensaje.Name = "btnMensaje";
             this.btnMensaje.Size = new System.Drawing.Size(30, 30);
             this.btnMensaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +198,7 @@ namespace LP2Soft.Perfil
             // imgPerfil
             // 
             this.imgPerfil.Image = global::LP2Soft.Properties.Resources.images;
-            this.imgPerfil.Location = new System.Drawing.Point(120, 135);
+            this.imgPerfil.Location = new System.Drawing.Point(106, 135);
             this.imgPerfil.Name = "imgPerfil";
             this.imgPerfil.Size = new System.Drawing.Size(80, 80);
             this.imgPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +208,7 @@ namespace LP2Soft.Perfil
             // pictureBox2
             // 
             this.pictureBox2.Image = global::LP2Soft.Properties.Resources.campus_pucp_cia_letras_2020_03_1920x1080_1___copia;
-            this.pictureBox2.Location = new System.Drawing.Point(92, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(78, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(640, 160);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -226,10 +226,52 @@ namespace LP2Soft.Perfil
             this.panelNombre.Controls.Add(this.imgAdmin);
             this.panelNombre.Controls.Add(this.btnAmigo);
             this.panelNombre.Controls.Add(this.lblTituloNombre);
-            this.panelNombre.Location = new System.Drawing.Point(206, 185);
+            this.panelNombre.Location = new System.Drawing.Point(192, 185);
             this.panelNombre.Name = "panelNombre";
             this.panelNombre.Size = new System.Drawing.Size(490, 30);
             this.panelNombre.TabIndex = 14;
+            // 
+            // btnHacerAdmin
+            // 
+            this.btnHacerAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHacerAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnHacerAdmin.Image = global::LP2Soft.Properties.Resources.chevrons_up_solid_24;
+            this.btnHacerAdmin.Location = new System.Drawing.Point(148, 0);
+            this.btnHacerAdmin.Name = "btnHacerAdmin";
+            this.btnHacerAdmin.Size = new System.Drawing.Size(25, 30);
+            this.btnHacerAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnHacerAdmin.TabIndex = 17;
+            this.btnHacerAdmin.TabStop = false;
+            this.tooltipPerfil.SetToolTip(this.btnHacerAdmin, "Hacer administrador");
+            this.btnHacerAdmin.Click += new System.EventHandler(this.btnHacerAdmin_Click);
+            // 
+            // imgAdmin
+            // 
+            this.imgAdmin.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.imgAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imgAdmin.Image = global::LP2Soft.Properties.Resources.badge_check_solid_24;
+            this.imgAdmin.Location = new System.Drawing.Point(123, 0);
+            this.imgAdmin.Name = "imgAdmin";
+            this.imgAdmin.Size = new System.Drawing.Size(25, 30);
+            this.imgAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAdmin.TabIndex = 16;
+            this.imgAdmin.TabStop = false;
+            this.tooltipPerfil.SetToolTip(this.imgAdmin, "Insignia de administrador");
+            // 
+            // lblTituloNombre
+            // 
+            this.lblTituloNombre.AutoSize = true;
+            this.lblTituloNombre.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloNombre.Location = new System.Drawing.Point(0, 0);
+            this.lblTituloNombre.Name = "lblTituloNombre";
+            this.lblTituloNombre.Size = new System.Drawing.Size(123, 20);
+            this.lblTituloNombre.TabIndex = 7;
+            this.lblTituloNombre.Text = "Oscar Navarro";
+            // 
+            // tooltipPerfil
+            // 
+            this.tooltipPerfil.Tag = "";
             // 
             // btnAceptar
             // 
@@ -297,54 +339,12 @@ namespace LP2Soft.Perfil
             this.btnCancelarSoli.Visible = false;
             this.btnCancelarSoli.Click += new System.EventHandler(this.btnCancelarSoli_Click);
             // 
-            // btnHacerAdmin
-            // 
-            this.btnHacerAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHacerAdmin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnHacerAdmin.Image = global::LP2Soft.Properties.Resources.chevrons_up_solid_24;
-            this.btnHacerAdmin.Location = new System.Drawing.Point(148, 0);
-            this.btnHacerAdmin.Name = "btnHacerAdmin";
-            this.btnHacerAdmin.Size = new System.Drawing.Size(25, 30);
-            this.btnHacerAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnHacerAdmin.TabIndex = 17;
-            this.btnHacerAdmin.TabStop = false;
-            this.tooltipPerfil.SetToolTip(this.btnHacerAdmin, "Hacer administrador");
-            this.btnHacerAdmin.Click += new System.EventHandler(this.btnHacerAdmin_Click);
-            // 
-            // imgAdmin
-            // 
-            this.imgAdmin.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.imgAdmin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.imgAdmin.Image = global::LP2Soft.Properties.Resources.badge_check_solid_24;
-            this.imgAdmin.Location = new System.Drawing.Point(123, 0);
-            this.imgAdmin.Name = "imgAdmin";
-            this.imgAdmin.Size = new System.Drawing.Size(25, 30);
-            this.imgAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAdmin.TabIndex = 16;
-            this.imgAdmin.TabStop = false;
-            this.tooltipPerfil.SetToolTip(this.imgAdmin, "Insignia de administrador");
-            // 
-            // lblTituloNombre
-            // 
-            this.lblTituloNombre.AutoSize = true;
-            this.lblTituloNombre.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTituloNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloNombre.Location = new System.Drawing.Point(0, 0);
-            this.lblTituloNombre.Name = "lblTituloNombre";
-            this.lblTituloNombre.Size = new System.Drawing.Size(123, 20);
-            this.lblTituloNombre.TabIndex = 7;
-            this.lblTituloNombre.Text = "Oscar Navarro";
-            // 
-            // tooltipPerfil
-            // 
-            this.tooltipPerfil.Tag = "";
-            // 
             // frmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(828, 492);
+            this.ClientSize = new System.Drawing.Size(823, 492);
             this.Controls.Add(this.panelNombre);
             this.Controls.Add(this.btnMensaje);
             this.Controls.Add(this.panelContenido);
