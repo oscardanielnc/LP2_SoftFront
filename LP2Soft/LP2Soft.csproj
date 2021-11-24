@@ -328,6 +328,12 @@
     <Compile Include="Perfil\frmCrearReseniaProfesor.Designer.cs">
       <DependentUpon>frmCrearReseniaProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Perfil\frmFiltrarPublicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmFiltrarPublicaciones.Designer.cs">
+      <DependentUpon>frmFiltrarPublicaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfil\frmPerfil_CursosAsesorados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -613,6 +619,9 @@
     <EmbeddedResource Include="Perfil\frmCrearReseniaProfesor.resx">
       <DependentUpon>frmCrearReseniaProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmFiltrarPublicaciones.resx">
+      <DependentUpon>frmFiltrarPublicaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
@@ -835,6 +844,9 @@
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarMisEventosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarMisPublicacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarPostResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -900,6 +912,9 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarMisPublicacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarReseniasAsesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -913,6 +928,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.mostrarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.postGenerico.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.recuperarContraseniaResponse.datasource">
