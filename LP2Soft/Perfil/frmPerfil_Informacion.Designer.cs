@@ -49,6 +49,9 @@ namespace LP2Soft.Perfil
             this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblPrecioHora = new System.Windows.Forms.Label();
             this.panelAsesor = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEnviarCorreo = new LP2Soft.Asesor.BotonChevere();
             this.estrella5 = new System.Windows.Forms.Label();
             this.imgEstrellas = new System.Windows.Forms.ImageList(this.components);
             this.estrella4 = new System.Windows.Forms.Label();
@@ -59,15 +62,12 @@ namespace LP2Soft.Perfil
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.imgVineta1 = new System.Windows.Forms.PictureBox();
             this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-            this.btnEnviarCorreo = new LP2Soft.Asesor.BotonChevere();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.panelAsesor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInfGeneral
@@ -263,6 +263,46 @@ namespace LP2Soft.Perfil
             this.panelAsesor.Size = new System.Drawing.Size(799, 106);
             this.panelAsesor.TabIndex = 63;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(518, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 16);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Ponerme en contacto con el Asesor";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.book;
+            this.pictureBox1.Location = new System.Drawing.Point(492, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnEnviarCorreo
+            // 
+            this.btnEnviarCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEnviarCorreo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEnviarCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnEnviarCorreo.BorderRadius = 6;
+            this.btnEnviarCorreo.BorderSize = 0;
+            this.btnEnviarCorreo.FlatAppearance.BorderSize = 0;
+            this.btnEnviarCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarCorreo.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarCorreo.Location = new System.Drawing.Point(561, 51);
+            this.btnEnviarCorreo.Name = "btnEnviarCorreo";
+            this.btnEnviarCorreo.Size = new System.Drawing.Size(150, 33);
+            this.btnEnviarCorreo.TabIndex = 32;
+            this.btnEnviarCorreo.Text = "Enviar correo";
+            this.btnEnviarCorreo.TextColor = System.Drawing.Color.White;
+            this.btnEnviarCorreo.UseVisualStyleBackColor = false;
+            this.btnEnviarCorreo.Click += new System.EventHandler(this.btnEnviarCorreo_Click);
+            // 
             // estrella5
             // 
             this.estrella5.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -279,6 +319,7 @@ namespace LP2Soft.Perfil
             this.imgEstrellas.TransparentColor = System.Drawing.Color.Transparent;
             this.imgEstrellas.Images.SetKeyName(0, "star-regular-24.png");
             this.imgEstrellas.Images.SetKeyName(1, "star-solid-24.png");
+            this.imgEstrellas.Images.SetKeyName(2, "star-half-solid-24.png");
             // 
             // estrella4
             // 
@@ -353,46 +394,6 @@ namespace LP2Soft.Perfil
             this.imgVineta1.TabIndex = 10;
             this.imgVineta1.TabStop = false;
             // 
-            // btnEnviarCorreo
-            // 
-            this.btnEnviarCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnEnviarCorreo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnEnviarCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
-            this.btnEnviarCorreo.BorderRadius = 6;
-            this.btnEnviarCorreo.BorderSize = 0;
-            this.btnEnviarCorreo.FlatAppearance.BorderSize = 0;
-            this.btnEnviarCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviarCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarCorreo.ForeColor = System.Drawing.Color.White;
-            this.btnEnviarCorreo.Location = new System.Drawing.Point(423, 51);
-            this.btnEnviarCorreo.Name = "btnEnviarCorreo";
-            this.btnEnviarCorreo.Size = new System.Drawing.Size(150, 33);
-            this.btnEnviarCorreo.TabIndex = 32;
-            this.btnEnviarCorreo.Text = "Enviar correo";
-            this.btnEnviarCorreo.TextColor = System.Drawing.Color.White;
-            this.btnEnviarCorreo.UseVisualStyleBackColor = false;
-            this.btnEnviarCorreo.Click += new System.EventHandler(this.btnEnviarCorreo_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(380, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 16);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Ponerme en contacto con el Asesor";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.book;
-            this.pictureBox1.Location = new System.Drawing.Point(354, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
@@ -433,10 +434,10 @@ namespace LP2Soft.Perfil
             this.Text = "frmPerfil_Informacion";
             this.panelAsesor.ResumeLayout(false);
             this.panelAsesor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

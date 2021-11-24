@@ -6,10 +6,8 @@
   <xs:element name="actualizarCursoxUsuarioResponse" type="tns:actualizarCursoxUsuarioResponse" />
   <xs:element name="eliminarReseniasProfesor" type="tns:eliminarReseniasProfesor" />
   <xs:element name="eliminarReseniasProfesorResponse" type="tns:eliminarReseniasProfesorResponse" />
-  <xs:element name="insertarReseniaAsesor" type="tns:insertarReseniaAsesor" />
-  <xs:element name="insertarReseniaAsesorResponse" type="tns:insertarReseniaAsesorResponse" />
-  <xs:element name="insertarReseniaProfesor" nillable="true" type="tns:insertarReseniaAsesor" />
-  <xs:element name="insertarReseniaProfesorResponse" nillable="true" type="tns:insertarReseniaAsesorResponse" />
+  <xs:element name="insertarReseniaProfesor" type="tns:insertarReseniaProfesor" />
+  <xs:element name="insertarReseniaProfesorResponse" type="tns:insertarReseniaProfesorResponse" />
   <xs:element name="listaXciclo" type="tns:listaXciclo" />
   <xs:element name="listaXcicloResponse" type="tns:listaXcicloResponse" />
   <xs:element name="listarCursoProfesor" type="tns:listarCursoProfesor" />
@@ -173,6 +171,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarProfesorXCurso">
+    <xs:sequence>
+      <xs:element name="idCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProfesorXCursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarReseniasProfesor">
     <xs:sequence>
       <xs:element name="idResenia" type="xs:int" />
@@ -183,14 +191,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarProfesorXCurso">
+  <xs:complexType name="insertarReseniaProfesor">
     <xs:sequence>
-      <xs:element name="idCurso" type="xs:int" />
+      <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarProfesorXCursoResponse">
+  <xs:complexType name="insertarReseniaProfesorResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarReseniasProfesor">
@@ -203,7 +211,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:resenia" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarReseniaAsesor">
+  <xs:complexType name="actualizarCursoxUsuario">
     <xs:sequence>
       <xs:element name="fidUsuario" type="xs:int" />
       <xs:element name="fidCurso" type="xs:int" />
@@ -211,7 +219,7 @@
       <xs:element name="favorito" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarReseniaAsesorResponse">
+  <xs:complexType name="actualizarCursoxUsuarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

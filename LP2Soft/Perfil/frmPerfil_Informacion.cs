@@ -41,8 +41,8 @@ namespace LP2Soft.Perfil
             {
                 panelAsesor.Visible = true;
                 float calificacion = (_usuario.asesor.cantidadResenias == 0) ? 0 : 
-                    _usuario.asesor.sumatoriaResenias / _usuario.asesor.cantidadResenias;
-                pintarEstrellas((int)calificacion);
+                    (float)_usuario.asesor.sumatoriaResenias / _usuario.asesor.cantidadResenias;
+                pintarEstrellas(calificacion);
                 lblCalificacion.Text = calificacion.ToString("0.00");
                 lblPrecioHora.Text = _usuario.asesor.precioPorHora.ToString("0.00");
             }
@@ -52,13 +52,17 @@ namespace LP2Soft.Perfil
                 this.Size = new Size(799, 260);
             }
         }
-        private void pintarEstrellas(int nEstrellas)
+        private void pintarEstrellas(float nEstrellas)
         {
-            for(int i=0; i<5; i++)
+            for(float i=0; i<5; i++)
             {
                 if (i < nEstrellas)
-                    _estrellas[i].ImageIndex = 1;
-                else _estrellas[i].ImageIndex = 0;
+                {
+                    if(i+0.5 < nEstrellas)
+                        _estrellas[(int)i].ImageIndex = 1;
+                    else _estrellas[(int)i].ImageIndex = 2;
+                }
+                else _estrellas[(int)i].ImageIndex = 0;
             }
         }
 
