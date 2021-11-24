@@ -171,20 +171,12 @@ namespace LP2Soft.Perfil
         {
             if (_menuSeleccionado != MenuPerfil.Cursos)
             {
-                if (_usuario.esAsesor == true)
-                {
-                    frmPrincipal.startLoading();
-                    inicializarColorBotones();
-                    btnCursos.BackColor = Color.FromArgb(28, 103, 179);
-                    _menuSeleccionado = MenuPerfil.Cursos;
-                    abrirFormulario(new frmPerfil_CursosAsesorados(_usuario));
-                    frmPrincipal.endLoading();
-                }
-                else
-                {
-                    MessageBox.Show("El usuario no es asesor", "Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                frmPrincipal.startLoading();
+                inicializarColorBotones();
+                btnCursos.BackColor = Color.FromArgb(28, 103, 179);
+                _menuSeleccionado = MenuPerfil.Cursos;
+                abrirFormulario(new frmPerfil_CursosAsesorados(_usuario));
+                frmPrincipal.endLoading();
             }
         }
 

@@ -5,78 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/LP2Soft_WebService/PublicacionesWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertar_Material">
-    <part name="parameters" element="tns:insertar_Material" />
-  </message>
-  <message name="insertar_MaterialResponse">
-    <part name="parameters" element="tns:insertar_MaterialResponse" />
-  </message>
-  <message name="descargar_material">
-    <part name="parameters" element="tns:descargar_material" />
-  </message>
-  <message name="descargar_materialResponse">
-    <part name="parameters" element="tns:descargar_materialResponse" />
-  </message>
-  <message name="eliminarComentario">
-    <part name="parameters" element="tns:eliminarComentario" />
-  </message>
-  <message name="eliminarComentarioResponse">
-    <part name="parameters" element="tns:eliminarComentarioResponse" />
-  </message>
-  <message name="insertarComentario">
-    <part name="parameters" element="tns:insertarComentario" />
-  </message>
-  <message name="insertarComentarioResponse">
-    <part name="parameters" element="tns:insertarComentarioResponse" />
-  </message>
-  <message name="listar_material_tipo_indice">
-    <part name="parameters" element="tns:listar_material_tipo_indice" />
-  </message>
-  <message name="listar_material_tipo_indiceResponse">
-    <part name="parameters" element="tns:listar_material_tipo_indiceResponse" />
-  </message>
-  <message name="insertar_postXCurso">
-    <part name="parameters" element="tns:insertar_postXCurso" />
-  </message>
-  <message name="insertar_postXCursoResponse">
-    <part name="parameters" element="tns:insertar_postXCursoResponse" />
-  </message>
-  <message name="listarEventosAgendados">
-    <part name="parameters" element="tns:listarEventosAgendados" />
-  </message>
-  <message name="listarEventosAgendadosResponse">
-    <part name="parameters" element="tns:listarEventosAgendadosResponse" />
-  </message>
-  <message name="listarEventosAgendadosFecha">
-    <part name="parameters" element="tns:listarEventosAgendadosFecha" />
-  </message>
-  <message name="listarEventosAgendadosFechaResponse">
-    <part name="parameters" element="tns:listarEventosAgendadosFechaResponse" />
-  </message>
-  <message name="listarComentarios">
-    <part name="parameters" element="tns:listarComentarios" />
-  </message>
-  <message name="listarComentariosResponse">
-    <part name="parameters" element="tns:listarComentariosResponse" />
-  </message>
-  <message name="listarMisEventos">
-    <part name="parameters" element="tns:listarMisEventos" />
-  </message>
-  <message name="listarMisEventosResponse">
-    <part name="parameters" element="tns:listarMisEventosResponse" />
-  </message>
-  <message name="modificarPost">
-    <part name="parameters" element="tns:modificarPost" />
-  </message>
-  <message name="modificarPostResponse">
-    <part name="parameters" element="tns:modificarPostResponse" />
-  </message>
-  <message name="eliminarPost">
-    <part name="parameters" element="tns:eliminarPost" />
-  </message>
-  <message name="eliminarPostResponse">
-    <part name="parameters" element="tns:eliminarPostResponse" />
-  </message>
   <message name="listarXcurso">
     <part name="parameters" element="tns:listarXcurso" />
   </message>
@@ -89,53 +17,11 @@
   <message name="eventoAgendadoResponse">
     <part name="parameters" element="tns:eventoAgendadoResponse" />
   </message>
-  <message name="aumentarLikes">
-    <part name="parameters" element="tns:aumentarLikes" />
-  </message>
-  <message name="aumentarLikesResponse">
-    <part name="parameters" element="tns:aumentarLikesResponse" />
-  </message>
-  <message name="disminuirLikes">
-    <part name="parameters" element="tns:disminuirLikes" />
-  </message>
-  <message name="disminuirLikesResponse">
-    <part name="parameters" element="tns:disminuirLikesResponse" />
-  </message>
-  <message name="desagendarEvento">
-    <part name="parameters" element="tns:desagendarEvento" />
-  </message>
-  <message name="desagendarEventoResponse">
-    <part name="parameters" element="tns:desagendarEventoResponse" />
-  </message>
-  <message name="listarPost">
-    <part name="parameters" element="tns:listarPost" />
-  </message>
-  <message name="listarPostResponse">
-    <part name="parameters" element="tns:listarPostResponse" />
-  </message>
-  <message name="agendarEvento">
-    <part name="parameters" element="tns:agendarEvento" />
-  </message>
-  <message name="agendarEventoResponse">
-    <part name="parameters" element="tns:agendarEventoResponse" />
-  </message>
-  <message name="listarEventos">
-    <part name="parameters" element="tns:listarEventos" />
-  </message>
-  <message name="listarEventosResponse">
-    <part name="parameters" element="tns:listarEventosResponse" />
-  </message>
   <message name="modificarEvento">
     <part name="parameters" element="tns:modificarEvento" />
   </message>
   <message name="modificarEventoResponse">
     <part name="parameters" element="tns:modificarEventoResponse" />
-  </message>
-  <message name="insertarPost">
-    <part name="parameters" element="tns:insertarPost" />
-  </message>
-  <message name="insertarPostResponse">
-    <part name="parameters" element="tns:insertarPostResponse" />
   </message>
   <message name="insertarEvento">
     <part name="parameters" element="tns:insertarEvento" />
@@ -149,55 +35,121 @@
   <message name="eliminarEventoResponse">
     <part name="parameters" element="tns:eliminarEventoResponse" />
   </message>
+  <message name="insertarPost">
+    <part name="parameters" element="tns:insertarPost" />
+  </message>
+  <message name="insertarPostResponse">
+    <part name="parameters" element="tns:insertarPostResponse" />
+  </message>
+  <message name="listarPost">
+    <part name="parameters" element="tns:listarPost" />
+  </message>
+  <message name="listarPostResponse">
+    <part name="parameters" element="tns:listarPostResponse" />
+  </message>
+  <message name="aumentarLikes">
+    <part name="parameters" element="tns:aumentarLikes" />
+  </message>
+  <message name="aumentarLikesResponse">
+    <part name="parameters" element="tns:aumentarLikesResponse" />
+  </message>
+  <message name="modificarPost">
+    <part name="parameters" element="tns:modificarPost" />
+  </message>
+  <message name="modificarPostResponse">
+    <part name="parameters" element="tns:modificarPostResponse" />
+  </message>
+  <message name="disminuirLikes">
+    <part name="parameters" element="tns:disminuirLikes" />
+  </message>
+  <message name="disminuirLikesResponse">
+    <part name="parameters" element="tns:disminuirLikesResponse" />
+  </message>
+  <message name="listarMisEventos">
+    <part name="parameters" element="tns:listarMisEventos" />
+  </message>
+  <message name="listarMisEventosResponse">
+    <part name="parameters" element="tns:listarMisEventosResponse" />
+  </message>
+  <message name="listarEventos">
+    <part name="parameters" element="tns:listarEventos" />
+  </message>
+  <message name="listarEventosResponse">
+    <part name="parameters" element="tns:listarEventosResponse" />
+  </message>
+  <message name="agendarEvento">
+    <part name="parameters" element="tns:agendarEvento" />
+  </message>
+  <message name="agendarEventoResponse">
+    <part name="parameters" element="tns:agendarEventoResponse" />
+  </message>
+  <message name="eliminarPost">
+    <part name="parameters" element="tns:eliminarPost" />
+  </message>
+  <message name="eliminarPostResponse">
+    <part name="parameters" element="tns:eliminarPostResponse" />
+  </message>
+  <message name="desagendarEvento">
+    <part name="parameters" element="tns:desagendarEvento" />
+  </message>
+  <message name="desagendarEventoResponse">
+    <part name="parameters" element="tns:desagendarEventoResponse" />
+  </message>
+  <message name="descargar_material">
+    <part name="parameters" element="tns:descargar_material" />
+  </message>
+  <message name="descargar_materialResponse">
+    <part name="parameters" element="tns:descargar_materialResponse" />
+  </message>
+  <message name="listarEventosAgendados">
+    <part name="parameters" element="tns:listarEventosAgendados" />
+  </message>
+  <message name="listarEventosAgendadosResponse">
+    <part name="parameters" element="tns:listarEventosAgendadosResponse" />
+  </message>
+  <message name="listarEventosAgendadosFecha">
+    <part name="parameters" element="tns:listarEventosAgendadosFecha" />
+  </message>
+  <message name="listarEventosAgendadosFechaResponse">
+    <part name="parameters" element="tns:listarEventosAgendadosFechaResponse" />
+  </message>
+  <message name="listar_material_tipo_indice">
+    <part name="parameters" element="tns:listar_material_tipo_indice" />
+  </message>
+  <message name="listar_material_tipo_indiceResponse">
+    <part name="parameters" element="tns:listar_material_tipo_indiceResponse" />
+  </message>
+  <message name="listarComentarios">
+    <part name="parameters" element="tns:listarComentarios" />
+  </message>
+  <message name="listarComentariosResponse">
+    <part name="parameters" element="tns:listarComentariosResponse" />
+  </message>
+  <message name="eliminarComentario">
+    <part name="parameters" element="tns:eliminarComentario" />
+  </message>
+  <message name="eliminarComentarioResponse">
+    <part name="parameters" element="tns:eliminarComentarioResponse" />
+  </message>
+  <message name="insertar_postXCurso">
+    <part name="parameters" element="tns:insertar_postXCurso" />
+  </message>
+  <message name="insertar_postXCursoResponse">
+    <part name="parameters" element="tns:insertar_postXCursoResponse" />
+  </message>
+  <message name="insertarComentario">
+    <part name="parameters" element="tns:insertarComentario" />
+  </message>
+  <message name="insertarComentarioResponse">
+    <part name="parameters" element="tns:insertarComentarioResponse" />
+  </message>
+  <message name="insertar_Material">
+    <part name="parameters" element="tns:insertar_Material" />
+  </message>
+  <message name="insertar_MaterialResponse">
+    <part name="parameters" element="tns:insertar_MaterialResponse" />
+  </message>
   <portType name="PublicacionesWS">
-    <operation name="insertar_Material">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialRequest" message="tns:insertar_Material" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialResponse" message="tns:insertar_MaterialResponse" />
-    </operation>
-    <operation name="descargar_material">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/descargar_materialRequest" message="tns:descargar_material" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/descargar_materialResponse" message="tns:descargar_materialResponse" />
-    </operation>
-    <operation name="eliminarComentario">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioRequest" message="tns:eliminarComentario" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioResponse" message="tns:eliminarComentarioResponse" />
-    </operation>
-    <operation name="insertarComentario">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioRequest" message="tns:insertarComentario" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioResponse" message="tns:insertarComentarioResponse" />
-    </operation>
-    <operation name="listar_material_tipo_indice">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listar_material_tipo_indiceRequest" message="tns:listar_material_tipo_indice" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listar_material_tipo_indiceResponse" message="tns:listar_material_tipo_indiceResponse" />
-    </operation>
-    <operation name="insertar_postXCurso">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_postXCursoRequest" message="tns:insertar_postXCurso" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_postXCursoResponse" message="tns:insertar_postXCursoResponse" />
-    </operation>
-    <operation name="listarEventosAgendados">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosAgendadosRequest" message="tns:listarEventosAgendados" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosAgendadosResponse" message="tns:listarEventosAgendadosResponse" />
-    </operation>
-    <operation name="listarEventosAgendadosFecha">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosAgendadosFechaRequest" message="tns:listarEventosAgendadosFecha" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosAgendadosFechaResponse" message="tns:listarEventosAgendadosFechaResponse" />
-    </operation>
-    <operation name="listarComentarios">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosRequest" message="tns:listarComentarios" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosResponse" message="tns:listarComentariosResponse" />
-    </operation>
-    <operation name="listarMisEventos">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosRequest" message="tns:listarMisEventos" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosResponse" message="tns:listarMisEventosResponse" />
-    </operation>
-    <operation name="modificarPost">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostRequest" message="tns:modificarPost" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostResponse" message="tns:modificarPostResponse" />
-    </operation>
-    <operation name="eliminarPost">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostRequest" message="tns:eliminarPost" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostResponse" message="tns:eliminarPostResponse" />
-    </operation>
     <operation name="listarXcurso">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoRequest" message="tns:listarXcurso" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarXcursoResponse" message="tns:listarXcursoResponse" />
@@ -206,37 +158,9 @@
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eventoAgendadoRequest" message="tns:eventoAgendado" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eventoAgendadoResponse" message="tns:eventoAgendadoResponse" />
     </operation>
-    <operation name="aumentarLikes">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/aumentarLikesRequest" message="tns:aumentarLikes" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/aumentarLikesResponse" message="tns:aumentarLikesResponse" />
-    </operation>
-    <operation name="disminuirLikes">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesRequest" message="tns:disminuirLikes" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesResponse" message="tns:disminuirLikesResponse" />
-    </operation>
-    <operation name="desagendarEvento">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/desagendarEventoRequest" message="tns:desagendarEvento" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/desagendarEventoResponse" message="tns:desagendarEventoResponse" />
-    </operation>
-    <operation name="listarPost">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostRequest" message="tns:listarPost" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostResponse" message="tns:listarPostResponse" />
-    </operation>
-    <operation name="agendarEvento">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/agendarEventoRequest" message="tns:agendarEvento" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/agendarEventoResponse" message="tns:agendarEventoResponse" />
-    </operation>
-    <operation name="listarEventos">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosRequest" message="tns:listarEventos" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosResponse" message="tns:listarEventosResponse" />
-    </operation>
     <operation name="modificarEvento">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarEventoRequest" message="tns:modificarEvento" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarEventoResponse" message="tns:modificarEventoResponse" />
-    </operation>
-    <operation name="insertarPost">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostRequest" message="tns:insertarPost" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostResponse" message="tns:insertarPostResponse" />
     </operation>
     <operation name="insertarEvento">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarEventoRequest" message="tns:insertarEvento" />
@@ -246,10 +170,212 @@
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarEventoRequest" message="tns:eliminarEvento" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
     </operation>
+    <operation name="insertarPost">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostRequest" message="tns:insertarPost" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarPostResponse" message="tns:insertarPostResponse" />
+    </operation>
+    <operation name="listarPost">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostRequest" message="tns:listarPost" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarPostResponse" message="tns:listarPostResponse" />
+    </operation>
+    <operation name="aumentarLikes">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/aumentarLikesRequest" message="tns:aumentarLikes" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/aumentarLikesResponse" message="tns:aumentarLikesResponse" />
+    </operation>
+    <operation name="modificarPost">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostRequest" message="tns:modificarPost" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/modificarPostResponse" message="tns:modificarPostResponse" />
+    </operation>
+    <operation name="disminuirLikes">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesRequest" message="tns:disminuirLikes" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/disminuirLikesResponse" message="tns:disminuirLikesResponse" />
+    </operation>
+    <operation name="listarMisEventos">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosRequest" message="tns:listarMisEventos" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarMisEventosResponse" message="tns:listarMisEventosResponse" />
+    </operation>
+    <operation name="listarEventos">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosRequest" message="tns:listarEventos" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosResponse" message="tns:listarEventosResponse" />
+    </operation>
+    <operation name="agendarEvento">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/agendarEventoRequest" message="tns:agendarEvento" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/agendarEventoResponse" message="tns:agendarEventoResponse" />
+    </operation>
+    <operation name="eliminarPost">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostRequest" message="tns:eliminarPost" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarPostResponse" message="tns:eliminarPostResponse" />
+    </operation>
+    <operation name="desagendarEvento">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/desagendarEventoRequest" message="tns:desagendarEvento" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/desagendarEventoResponse" message="tns:desagendarEventoResponse" />
+    </operation>
+    <operation name="descargar_material">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/descargar_materialRequest" message="tns:descargar_material" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/descargar_materialResponse" message="tns:descargar_materialResponse" />
+    </operation>
+    <operation name="listarEventosAgendados">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosAgendadosRequest" message="tns:listarEventosAgendados" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosAgendadosResponse" message="tns:listarEventosAgendadosResponse" />
+    </operation>
+    <operation name="listarEventosAgendadosFecha">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosAgendadosFechaRequest" message="tns:listarEventosAgendadosFecha" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarEventosAgendadosFechaResponse" message="tns:listarEventosAgendadosFechaResponse" />
+    </operation>
+    <operation name="listar_material_tipo_indice">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listar_material_tipo_indiceRequest" message="tns:listar_material_tipo_indice" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listar_material_tipo_indiceResponse" message="tns:listar_material_tipo_indiceResponse" />
+    </operation>
+    <operation name="listarComentarios">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosRequest" message="tns:listarComentarios" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/listarComentariosResponse" message="tns:listarComentariosResponse" />
+    </operation>
+    <operation name="eliminarComentario">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioRequest" message="tns:eliminarComentario" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/eliminarComentarioResponse" message="tns:eliminarComentarioResponse" />
+    </operation>
+    <operation name="insertar_postXCurso">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_postXCursoRequest" message="tns:insertar_postXCurso" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_postXCursoResponse" message="tns:insertar_postXCursoResponse" />
+    </operation>
+    <operation name="insertarComentario">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioRequest" message="tns:insertarComentario" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertarComentarioResponse" message="tns:insertarComentarioResponse" />
+    </operation>
+    <operation name="insertar_Material">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialRequest" message="tns:insertar_Material" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/PublicacionesWS/insertar_MaterialResponse" message="tns:insertar_MaterialResponse" />
+    </operation>
   </portType>
   <binding name="PublicacionesWSPortBinding" type="tns:PublicacionesWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertar_Material">
+    <operation name="listarXcurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eventoAgendado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPost">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPost">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="aumentarLikes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPost">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="disminuirLikes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMisEventos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEventos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agendarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPost">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="desagendarEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -259,42 +385,6 @@
       </output>
     </operation>
     <operation name="descargar_material">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarComentario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarComentario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listar_material_tipo_indice">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertar_postXCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -321,6 +411,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listar_material_tipo_indice">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarComentarios">
       <soap:operation soapAction="" />
       <input>
@@ -330,7 +429,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarMisEventos">
+    <operation name="eliminarComentario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -339,7 +438,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarPost">
+    <operation name="insertar_postXCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -348,7 +447,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarPost">
+    <operation name="insertarComentario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -357,106 +456,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarXcurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eventoAgendado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="aumentarLikes">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="disminuirLikes">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="desagendarEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPost">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agendarEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarEventos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarPost">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarEvento">
+    <operation name="insertar_Material">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
