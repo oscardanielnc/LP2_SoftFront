@@ -18,8 +18,8 @@ namespace LP2Soft.Perfil
         public frmPerfil_Informacion(UsuarioWS.usuario usuario, bool propio)
         {
             _usuario = usuario;
-            _estrellas = new BindingList<Label>();
             InitializeComponent();
+            _estrellas = new BindingList<Label>();
             _estrellas.Add(estrella1);
             _estrellas.Add(estrella2);
             _estrellas.Add(estrella3);

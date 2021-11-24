@@ -18,9 +18,18 @@ namespace LP2Soft.Tarjetas
         private CursosWS.CursosWSClient _daoReseniaC;
         private UsuarioWS.resenia _resenia;
         private CursosWS.resenia _reseniaC;
+
+        private BindingList<Label> _estrellas;
         public tarjResenia(UsuarioWS.resenia re)
         {
             InitializeComponent();
+            _estrellas = new BindingList<Label>();
+            _estrellas.Add(estrella1);
+            _estrellas.Add(estrella2);
+            _estrellas.Add(estrella3);
+            _estrellas.Add(estrella4);
+            _estrellas.Add(estrella5);
+
             _resenia = re;
             _daoResenia = new UsuarioWS.UsuariosWSClient();
             btnEliminar.Visible = false;
@@ -33,7 +42,10 @@ namespace LP2Soft.Tarjetas
             lblDescripcion.Text = re.contenido;
             lblDate.Text = re.fechaRegistro.ToString("yyyy-MM-dd HH:mm:ss");
             lblAsesor.Text = " " + re.usuarioReseniado.nombre + " " + re.usuarioReseniado.apellido;
-            calificacion.Text = re.calificacion.ToString();
+
+            pintarEstrellas(re.calificacion);
+            calificacion.Text = re.calificacion.ToString("0.00");
+
             if(frmHome.Usuario.idUsuario == re.usuario.idUsuario)
             {
                 btnEliminar.Visible = true;
@@ -75,10 +87,18 @@ namespace LP2Soft.Tarjetas
                     _daoReseniaC.eliminarReseniasProfesor(_reseniaC.idPost);
             }
         }
-
-        private void lblAsesor_Click(object sender, EventArgs e)
+        private void pintarEstrellas(float nEstrellas)
         {
-
+            for (float i = 0; i < 5; i++)
+            {
+                if (i < nEstrellas)
+                {
+                    if (i + 0.5 < nEstrellas)
+                        _estrellas[(int)i].ImageIndex = 1;
+                    else _estrellas[(int)i].ImageIndex = 2;
+                }
+                else _estrellas[(int)i].ImageIndex = 0;
+            }
         }
     }
 }

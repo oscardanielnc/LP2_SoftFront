@@ -19,11 +19,19 @@ namespace LP2Soft.Tarjetas
         private string _codigo;
         private UsuarioWS.UsuariosWSClient _daoUsuario;
         private UsuarioWS.usuario _usuarioVer;
-        private float _calificacion;
+        private BindingList<Label> _estrellas;
+
         public tarjAsesor(UsuarioWS.usuario user)
         {
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
             InitializeComponent();
+            _estrellas = new BindingList<Label>();
+            _estrellas.Add(estrella1);
+            _estrellas.Add(estrella2);
+            _estrellas.Add(estrella3);
+            _estrellas.Add(estrella4);
+            _estrellas.Add(estrella5);
+
             _codigo = user.codigoPUCP;
             posicionarLabel(user);
 
@@ -37,24 +45,26 @@ namespace LP2Soft.Tarjetas
         {
             lblNombre.Text = usuario.nombre + " " + usuario.apellido;
             int tamanio = lblNombre.Size.Width;
-            if (usuario.asesor.cantidadResenias == 0)
-            {
-                lblCal.Text = " 0.0 "; 
-            }
-            else
-            {
-                _calificacion = (float)usuario.asesor.sumatoriaResenias / (float)usuario.asesor.cantidadResenias;
-                lblCal.Text = " " + _calificacion.ToString("0.0") + " ";
-            }
             lblNombre.Location = new Point(((int)(180 - tamanio) / 2), 80);
-        }
-        private void btnVerPerfil_Click(object sender, EventArgs e)
-        {
-            _usuarioVer = _daoUsuario.mostrarUsuario(_codigo, 1);
-            if (_usuarioVer != null)
-                frmHome.abrirFormulario(new frmPerfil(_usuarioVer));
-        }
 
+            float calificacion = (usuario.asesor.cantidadResenias == 0) ? 0 :
+                    (float)usuario.asesor.sumatoriaResenias / usuario.asesor.cantidadResenias;
+            pintarEstrellas(calificacion);
+            lblCal.Text = calificacion.ToString("0.00");
+        }
+        private void pintarEstrellas(float nEstrellas)
+        {
+            for (float i = 0; i < 5; i++)
+            {
+                if (i < nEstrellas)
+                {
+                    if (i + 0.5 < nEstrellas)
+                        _estrellas[(int)i].ImageIndex = 1;
+                    else _estrellas[(int)i].ImageIndex = 2;
+                }
+                else _estrellas[(int)i].ImageIndex = 0;
+            }
+        }
         private void btnVerPerfil_Click_1(object sender, EventArgs e)
         {
             frmPrincipal.startLoading();

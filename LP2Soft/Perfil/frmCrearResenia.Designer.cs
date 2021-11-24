@@ -29,22 +29,19 @@ namespace LP2Soft.Perfil
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrearResenia));
             this.lblResenia = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.btnPublicar = new System.Windows.Forms.Button();
             this.txtContenido = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.txtCali = new System.Windows.Forms.TextBox();
+            this.imgEstrellas = new System.Windows.Forms.ImageList(this.components);
+            this.estrella5 = new System.Windows.Forms.Label();
+            this.estrella4 = new System.Windows.Forms.Label();
+            this.estrella3 = new System.Windows.Forms.Label();
+            this.estrella2 = new System.Windows.Forms.Label();
+            this.estrella1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // lblResenia
@@ -88,74 +85,79 @@ namespace LP2Soft.Perfil
             this.txtContenido.Enter += new System.EventHandler(this.txtContenido_Enter);
             this.txtContenido.Leave += new System.EventHandler(this.txtContenido_Leave);
             // 
-            // pictureBox1
+            // imgEstrellas
             // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.pictureBox1.Location = new System.Drawing.Point(168, 159);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.imgEstrellas.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgEstrellas.ImageStream")));
+            this.imgEstrellas.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgEstrellas.Images.SetKeyName(0, "star-regular-24.png");
+            this.imgEstrellas.Images.SetKeyName(1, "star-solid-24.png");
+            this.imgEstrellas.Images.SetKeyName(2, "star-half-solid-24.png");
             // 
-            // pictureBox2
+            // estrella5
             // 
-            this.pictureBox2.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.pictureBox2.Location = new System.Drawing.Point(199, 159);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.estrella5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella5.ImageIndex = 0;
+            this.estrella5.ImageList = this.imgEstrellas;
+            this.estrella5.Location = new System.Drawing.Point(269, 150);
+            this.estrella5.Name = "estrella5";
+            this.estrella5.Size = new System.Drawing.Size(34, 34);
+            this.estrella5.TabIndex = 78;
+            this.estrella5.Click += new System.EventHandler(this.estrella5_Click);
             // 
-            // pictureBox3
+            // estrella4
             // 
-            this.pictureBox3.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.pictureBox3.Location = new System.Drawing.Point(261, 159);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
+            this.estrella4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella4.ImageIndex = 0;
+            this.estrella4.ImageList = this.imgEstrellas;
+            this.estrella4.Location = new System.Drawing.Point(229, 150);
+            this.estrella4.Name = "estrella4";
+            this.estrella4.Size = new System.Drawing.Size(34, 34);
+            this.estrella4.TabIndex = 77;
+            this.estrella4.Click += new System.EventHandler(this.estrella4_Click);
             // 
-            // pictureBox4
+            // estrella3
             // 
-            this.pictureBox4.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.pictureBox4.Location = new System.Drawing.Point(230, 159);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
+            this.estrella3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella3.ImageIndex = 0;
+            this.estrella3.ImageList = this.imgEstrellas;
+            this.estrella3.Location = new System.Drawing.Point(189, 150);
+            this.estrella3.Name = "estrella3";
+            this.estrella3.Size = new System.Drawing.Size(34, 34);
+            this.estrella3.TabIndex = 76;
+            this.estrella3.Click += new System.EventHandler(this.estrella3_Click);
             // 
-            // pictureBox5
+            // estrella2
             // 
-            this.pictureBox5.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.pictureBox5.Location = new System.Drawing.Point(292, 159);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 15;
-            this.pictureBox5.TabStop = false;
+            this.estrella2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella2.ImageIndex = 0;
+            this.estrella2.ImageList = this.imgEstrellas;
+            this.estrella2.Location = new System.Drawing.Point(149, 150);
+            this.estrella2.Name = "estrella2";
+            this.estrella2.Size = new System.Drawing.Size(34, 34);
+            this.estrella2.TabIndex = 75;
+            this.estrella2.Click += new System.EventHandler(this.estrella2_Click);
             // 
-            // txtCali
+            // estrella1
             // 
-            this.txtCali.Location = new System.Drawing.Point(104, 161);
-            this.txtCali.Name = "txtCali";
-            this.txtCali.Size = new System.Drawing.Size(38, 20);
-            this.txtCali.TabIndex = 16;
+            this.estrella1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella1.ImageIndex = 0;
+            this.estrella1.ImageList = this.imgEstrellas;
+            this.estrella1.Location = new System.Drawing.Point(109, 150);
+            this.estrella1.Name = "estrella1";
+            this.estrella1.Size = new System.Drawing.Size(34, 34);
+            this.estrella1.TabIndex = 74;
+            this.estrella1.Click += new System.EventHandler(this.estrella1_Click);
             // 
             // frmCrearResenia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 206);
-            this.Controls.Add(this.txtCali);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.estrella5);
+            this.Controls.Add(this.estrella4);
+            this.Controls.Add(this.estrella3);
+            this.Controls.Add(this.estrella2);
+            this.Controls.Add(this.estrella1);
             this.Controls.Add(this.btnPublicar);
             this.Controls.Add(this.txtContenido);
             this.Controls.Add(this.lblResenia);
@@ -163,11 +165,6 @@ namespace LP2Soft.Perfil
             this.Name = "frmCrearResenia";
             this.Text = "frmCrearResenia";
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,11 +176,11 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.Button btnPublicar;
         private System.Windows.Forms.TextBox txtContenido;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox txtCali;
+        private System.Windows.Forms.ImageList imgEstrellas;
+        private System.Windows.Forms.Label estrella5;
+        private System.Windows.Forms.Label estrella4;
+        private System.Windows.Forms.Label estrella3;
+        private System.Windows.Forms.Label estrella2;
+        private System.Windows.Forms.Label estrella1;
     }
 }
