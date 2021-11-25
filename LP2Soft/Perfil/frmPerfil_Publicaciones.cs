@@ -16,7 +16,7 @@ namespace LP2Soft.Perfil
     {
         public static string fI, fF;
         public static int idCurso, flag;
-        UsuarioWS.usuario _usuario;
+        UsuarioWS.usuario _usuario = frmHome.Usuario;
         PublicacionesWS.PublicacionesWSClient _daoPost;
         BindingList<PublicacionesWS.postGenerico> _publicaciones;
         PublicacionesWS.postGenerico _postCreado;
@@ -58,7 +58,9 @@ namespace LP2Soft.Perfil
             if (_publicaciones != null)
             {
                 foreach (PublicacionesWS.postGenerico p in _publicaciones)
-                {                    
+                {
+                    p.usuario.idUsuario = frmHome.Usuario.idUsuario;
+                    p.usuario.nombre = frmHome.Usuario.nombre;
                     frmPostGeneral plantillaPost = new frmPostGeneral(p, _usuario);
                     plantillaPost.TopLevel = false;
                     plantillaPost.Dock = DockStyle.Top;

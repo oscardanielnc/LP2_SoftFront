@@ -36,10 +36,10 @@ namespace LP2Soft.Perfil
             // 
             // pnPublicaciones
             // 
-            this.pnPublicaciones.AutoSize = true;
-            this.pnPublicaciones.Location = new System.Drawing.Point(205, 95);
+            this.pnPublicaciones.AutoScroll = true;
+            this.pnPublicaciones.Location = new System.Drawing.Point(174, 83);
             this.pnPublicaciones.Name = "pnPublicaciones";
-            this.pnPublicaciones.Size = new System.Drawing.Size(400, 161);
+            this.pnPublicaciones.Size = new System.Drawing.Size(448, 473);
             this.pnPublicaciones.TabIndex = 0;
             // 
             // lblTitulo
@@ -66,10 +66,8 @@ namespace LP2Soft.Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(799, 270);
+            this.ClientSize = new System.Drawing.Size(799, 580);
             this.Controls.Add(this.btnFiltar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pnPublicaciones);

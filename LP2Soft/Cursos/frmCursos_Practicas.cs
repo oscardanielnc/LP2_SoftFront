@@ -14,7 +14,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
 {
     public partial class frmCursos_Practicas : Form
     {
-        private String[] tipoMaterial = new String[] { "Practica", "Laboratorio", "Tarea Academica", "Examenes" };
+        private String[] tipoMaterial = new String[] { "Práctica", "Laboratorio", "Tarea Académica", "Exámenes" };
         private CursosWS.curso _cursoAux;
         public frmCursos_Practicas()
         {
