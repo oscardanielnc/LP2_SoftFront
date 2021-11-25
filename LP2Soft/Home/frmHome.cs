@@ -37,8 +37,34 @@ namespace LP2Soft.Home
             _panelContenido = panelContenido;
             /*abrirFormularioHome(new frmHomePage(_usuario), MenuHome.Novedades);*/ // sección de novedades por defecto
             abrirFormularioHome(new frmPerfil(_usuario), MenuHome.Perfil);
+            generarNotificacionEventoParaHoy();
 
             actualizarInfoPantallas(usuario);
+        }
+        private void generarNotificacionEventoParaHoy()
+        {
+            try
+            {
+                PublicacionesWS.PublicacionesWSClient _daoPublicaciones = new PublicacionesWS.PublicacionesWSClient();
+                BindingList<PublicacionesWS.evento> listaEventosHoy = new BindingList < PublicacionesWS.evento > (
+                    _daoPublicaciones.listarEventosAgendadosFecha(frmHome.Usuario.idUsuario, DateTime.Now.ToString("dd-MM-yyyy")));
+
+                if (listaEventosHoy != null)
+                {
+                    NotificacionesWS.NotificacionesWSClient _daoNotificaciones = new NotificacionesWS.NotificacionesWSClient();
+                    BindingList<NotificacionesWS.notificacion> listaNotificaciones = new BindingList<NotificacionesWS.notificacion>(
+                        _daoNotificaciones.listarNotificaciones(frmHome.Usuario.idUsuario));
+                    foreach(PublicacionesWS.evento e in listaEventosHoy)
+                    {
+                        if (_daoNotificaciones.existeEventoAgendado(frmHome.Usuario.idUsuario, e.idPost) != 1)
+                            _daoNotificaciones.insertarNotificacion(frmHome.Usuario.idUsuario, 3, 0, -1, -1, e.idPost, e.idPost);
+
+                    }
+                }
+            } catch (Exception ex)
+            {
+
+            }
         }
         public static void actualizarInfoPantallas(UsuarioWS.usuario usuario)
         {

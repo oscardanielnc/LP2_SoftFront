@@ -1,4 +1,5 @@
-﻿using LP2Soft.Home;
+﻿using LP2Soft.Eventos;
+using LP2Soft.Home;
 using LP2Soft.Perfil;
 using System;
 using System.Collections.Generic;
@@ -41,7 +42,16 @@ namespace LP2Soft.Tarjetas
                 if (_notificacion.subTipo==1)
                     lblContenido.Text = "¡" + _notificacion.usuarioNotificador.nombre + " ha aceptado tu solicitud de amistad!";
                 else lblContenido.Text = _notificacion.usuarioNotificador.nombre + " te ha enviado una solicitud de amistad!";
-            } else
+            } else if(_notificacion.tipo==3)
+            {
+                if (frmHome.Usuario.foto != null)
+                {
+                    MemoryStream ms1 = new MemoryStream(frmHome.Usuario.foto);
+                    imgNotific.Image = new Bitmap(ms1);
+                }
+                lblContenido.Text = "Tienes un evento agendado para hoy: " + _notificacion.eventoAgendado.nombreDelEvento;
+            }
+            else
             {
                 if (frmHome.Usuario.foto != null)
                 {
@@ -61,6 +71,9 @@ namespace LP2Soft.Tarjetas
 
                 if (usuarioVer != null)
                     frmHome.abrirFormulario(new frmPerfil(usuarioVer));
+            } else if(_notificacion.tipo == 3)
+            {
+                frmHome.abrirFormulario(new frmEventosAgendados());
             }
             else
             {

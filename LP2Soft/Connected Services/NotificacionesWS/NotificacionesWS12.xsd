@@ -4,6 +4,8 @@
   <xs:element name="eliminarSolicitudAmistadResponse" type="tns:eliminarSolicitudAmistadResponse" />
   <xs:element name="enviarMensaje" type="tns:enviarMensaje" />
   <xs:element name="enviarMensajeResponse" type="tns:enviarMensajeResponse" />
+  <xs:element name="existeEventoAgendado" type="tns:existeEventoAgendado" />
+  <xs:element name="existeEventoAgendadoResponse" type="tns:existeEventoAgendadoResponse" />
   <xs:element name="insertarNotificacion" type="tns:insertarNotificacion" />
   <xs:element name="insertarNotificacionResponse" type="tns:insertarNotificacionResponse" />
   <xs:element name="listarMensajesUltimos" type="tns:listarMensajesUltimos" />
@@ -188,18 +190,13 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="insertarNotificacion">
+  <xs:complexType name="existeEventoAgendado">
     <xs:sequence>
-      <xs:element name="idUsuarioNotificado" type="xs:int" />
-      <xs:element name="tipo" type="xs:int" />
-      <xs:element name="subTipo" type="xs:int" />
-      <xs:element name="idUsuarioNotificador" type="xs:int" />
-      <xs:element name="idCursoFavorito" type="xs:int" />
-      <xs:element name="idEventoAgendado" type="xs:int" />
-      <xs:element name="idPost" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element name="idEvento" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarNotificacionResponse">
+  <xs:complexType name="existeEventoAgendadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -212,6 +209,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="enviarMensajeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarNotificacion">
+    <xs:sequence>
+      <xs:element name="idUsuarioNotificado" type="xs:int" />
+      <xs:element name="tipo" type="xs:int" />
+      <xs:element name="subTipo" type="xs:int" />
+      <xs:element name="idUsuarioNotificador" type="xs:int" />
+      <xs:element name="idCursoFavorito" type="xs:int" />
+      <xs:element name="idEventoAgendado" type="xs:int" />
+      <xs:element name="idPost" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarNotificacionResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

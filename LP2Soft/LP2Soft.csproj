@@ -764,6 +764,9 @@
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.enviarMensajeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.existeEventoAgendadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.insertarNotificacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
