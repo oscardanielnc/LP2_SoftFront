@@ -66,7 +66,7 @@ namespace LP2Soft.Eventos
             // 
             // pbPerfil
             // 
-            this.pbPerfil.Image = global::LP2Soft.Properties.Resources.DSC_0498;
+            this.pbPerfil.Image = global::LP2Soft.Properties.Resources.images;
             this.pbPerfil.Location = new System.Drawing.Point(15, 66);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(50, 46);
