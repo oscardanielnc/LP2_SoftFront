@@ -25,10 +25,10 @@ namespace LP2Soft.Perfil
         public frmPerfil_CursosAsesorados(UsuarioWS.usuario user)
         {
             InitializeComponent();
-            _idAsesor = user.asesor.idAsesor;
-            _usuario = user;
             if (user.esAsesor == true)
             {
+                _idAsesor = user.asesor.idAsesor;
+                _usuario = user;
                 lblNoAsesor.Visible = false;
                 _daoAsesor = new UsuarioWS.UsuariosWSClient();
                 renderizarPanel(user.idUsuario);
