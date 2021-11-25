@@ -1,60 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="eliminarSolicitudAmistad" type="tns:eliminarSolicitudAmistad" />
-  <xs:element name="eliminarSolicitudAmistadResponse" type="tns:eliminarSolicitudAmistadResponse" />
-  <xs:element name="enviarMensaje" type="tns:enviarMensaje" />
-  <xs:element name="enviarMensajeResponse" type="tns:enviarMensajeResponse" />
-  <xs:element name="insertarNotificacion" type="tns:insertarNotificacion" />
-  <xs:element name="insertarNotificacionResponse" type="tns:insertarNotificacionResponse" />
-  <xs:element name="listarMensajesUltimos" type="tns:listarMensajesUltimos" />
-  <xs:element name="listarMensajesUltimosResponse" type="tns:listarMensajesUltimosResponse" />
-  <xs:element name="listarMensajesXAmigo" type="tns:listarMensajesXAmigo" />
-  <xs:element name="listarMensajesXAmigoResponse" type="tns:listarMensajesXAmigoResponse" />
-  <xs:element name="listarNotificaciones" type="tns:listarNotificaciones" />
-  <xs:element name="listarNotificacionesResponse" type="tns:listarNotificacionesResponse" />
-  <xs:complexType name="listarMensajesXAmigo">
+  <xs:element name="MostrarCurso" type="tns:MostrarCurso" />
+  <xs:element name="MostrarCursoResponse" type="tns:MostrarCursoResponse" />
+  <xs:element name="actualizarCursoxUsuario" type="tns:actualizarCursoxUsuario" />
+  <xs:element name="actualizarCursoxUsuarioResponse" type="tns:actualizarCursoxUsuarioResponse" />
+  <xs:element name="eliminarReseniasProfesor" type="tns:eliminarReseniasProfesor" />
+  <xs:element name="eliminarReseniasProfesorResponse" type="tns:eliminarReseniasProfesorResponse" />
+  <xs:element name="insertarReseniaProfesor" type="tns:insertarReseniaProfesor" />
+  <xs:element name="insertarReseniaProfesorResponse" type="tns:insertarReseniaProfesorResponse" />
+  <xs:element name="listaXciclo" type="tns:listaXciclo" />
+  <xs:element name="listaXcicloResponse" type="tns:listaXcicloResponse" />
+  <xs:element name="listarCursoProfesor" type="tns:listarCursoProfesor" />
+  <xs:element name="listarCursoProfesorResponse" type="tns:listarCursoProfesorResponse" />
+  <xs:element name="listarProfesorXCurso" type="tns:listarProfesorXCurso" />
+  <xs:element name="listarProfesorXCursoResponse" type="tns:listarProfesorXCursoResponse" />
+  <xs:element name="listarProfesoresNombre" type="tns:listarProfesoresNombre" />
+  <xs:element name="listarProfesoresNombreResponse" type="tns:listarProfesoresNombreResponse" />
+  <xs:element name="listarReseniasProfesor" type="tns:listarReseniasProfesor" />
+  <xs:element name="listarReseniasProfesorResponse" type="tns:listarReseniasProfesorResponse" />
+  <xs:element name="mostrarProfesor" type="tns:mostrarProfesor" />
+  <xs:element name="mostrarProfesorResponse" type="tns:mostrarProfesorResponse" />
+  <xs:complexType name="mostrarProfesor">
     <xs:sequence>
-      <xs:element name="idUsuario1" type="xs:int" />
-      <xs:element name="idUsuario2" type="xs:int" />
+      <xs:element name="idProfesor" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarMensajesXAmigoResponse">
+  <xs:complexType name="mostrarProfesorResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mensaje" />
+      <xs:element minOccurs="0" name="return" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mensaje">
+  <xs:complexType name="profesor">
     <xs:sequence>
-      <xs:element minOccurs="0" name="contenido" type="xs:string" />
-      <xs:element minOccurs="0" name="fechayHora" type="xs:dateTime" />
-      <xs:element name="idDestinatario" type="xs:int" />
-      <xs:element name="idMensaje" type="xs:int" />
-      <xs:element name="idRemitente" type="xs:int" />
-      <xs:element name="leido" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarNotificaciones">
-    <xs:sequence>
-      <xs:element name="idUsuario" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarNotificacionesResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:notificacion" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="notificacion">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="cursoFavorito" type="tns:curso" />
-      <xs:element minOccurs="0" name="eventoAgendado" type="tns:evento" />
-      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
-      <xs:element name="idNotificacion" type="xs:int" />
-      <xs:element name="idUsiarioNotificado" type="xs:int" />
-      <xs:element name="leido" type="xs:boolean" />
-      <xs:element minOccurs="0" name="post" type="tns:post" />
-      <xs:element name="subTipo" type="xs:int" />
-      <xs:element name="tipo" type="xs:int" />
-      <xs:element minOccurs="0" name="usuarioNotificador" type="tns:usuario" />
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="calificacion" type="xs:float" />
+      <xs:element name="cantidadResenias" type="xs:int" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cursos" nillable="true" type="tns:curso" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idProfesor" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="portada" type="xs:base64Binary" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="resenias" nillable="true" type="tns:resenia" />
+      <xs:element name="sumatoriaResenias" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="curso">
@@ -141,22 +130,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="profesor">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element name="calificacion" type="xs:float" />
-      <xs:element name="cantidadResenias" type="xs:int" />
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="cursos" nillable="true" type="tns:curso" />
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
-      <xs:element name="idProfesor" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="portada" type="xs:base64Binary" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="resenias" nillable="true" type="tns:resenia" />
-      <xs:element name="sumatoriaResenias" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="evento">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:post">
@@ -188,59 +161,97 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="enviarMensaje">
+  <xs:complexType name="listarCursoProfesor">
     <xs:sequence>
-      <xs:element name="idUsuario1" type="xs:int" />
-      <xs:element name="idUsuario2" type="xs:int" />
-      <xs:element minOccurs="0" name="contenido" type="xs:string" />
+      <xs:element name="idProfesor" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="enviarMensajeResponse">
+  <xs:complexType name="listarCursoProfesorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProfesorXCurso">
+    <xs:sequence>
+      <xs:element name="idCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProfesorXCursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReseniasProfesor">
+    <xs:sequence>
+      <xs:element name="idResenia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReseniasProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarNotificacion">
+  <xs:complexType name="insertarReseniaProfesor">
     <xs:sequence>
-      <xs:element name="idUsuarioNotificado" type="xs:int" />
-      <xs:element name="tipo" type="xs:int" />
-      <xs:element name="subTipo" type="xs:int" />
-      <xs:element name="idUsuarioNotificador" type="xs:int" />
-      <xs:element name="idCursoFavorito" type="xs:int" />
-      <xs:element name="idEventoAgendado" type="xs:int" />
-      <xs:element name="idPost" type="xs:int" />
+      <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarNotificacionResponse">
+  <xs:complexType name="insertarReseniaProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarMensajesUltimos">
+  <xs:complexType name="listarReseniasProfesor">
     <xs:sequence>
-      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element name="idProfesor" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarMensajesUltimosResponse">
+  <xs:complexType name="listarReseniasProfesorResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ultimoMensaje" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:resenia" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ultimoMensaje">
+  <xs:complexType name="actualizarCursoxUsuario">
     <xs:sequence>
-      <xs:element minOccurs="0" name="amigo" type="tns:usuario" />
-      <xs:element minOccurs="0" name="mensaje" type="tns:mensaje" />
+      <xs:element name="fidUsuario" type="xs:int" />
+      <xs:element name="fidCurso" type="xs:int" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element name="favorito" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarSolicitudAmistad">
-    <xs:sequence>
-      <xs:element name="idUsuarioNotificado" type="xs:int" />
-      <xs:element name="idUsuarioNotificador" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarSolicitudAmistadResponse">
+  <xs:complexType name="actualizarCursoxUsuarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listaXciclo">
+    <xs:sequence>
+      <xs:element name="nivel" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listaXcicloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MostrarCurso">
+    <xs:sequence>
+      <xs:element name="idCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MostrarCursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProfesoresNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProfesoresNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
