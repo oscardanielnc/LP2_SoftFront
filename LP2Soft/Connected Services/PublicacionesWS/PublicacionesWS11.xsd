@@ -275,17 +275,7 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarXcurso">
-    <xs:sequence>
-      <xs:element name="idCurso" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarXcursoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:postGenerico" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarComentario">
+  <xs:complexType name="listarComentarios">
     <xs:sequence>
       <xs:element name="idPost" type="xs:int" />
     </xs:sequence>
@@ -311,14 +301,14 @@
       <xs:element name="indice" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="aumentarLikes">
+  <xs:complexType name="listar_material_tipo_indiceResponse">
     <xs:sequence>
-      <xs:element name="idPost" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:material" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="aumentarLikesResponse">
+  <xs:complexType name="modificarEvento">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarEventoResponse">
@@ -336,14 +326,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarMisEventos">
+  <xs:complexType name="insertar_Material">
     <xs:sequence>
-      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="material" type="tns:material" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarMisEventosResponse">
+  <xs:complexType name="insertar_MaterialResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarPost">
@@ -356,7 +346,21 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarEventosAgendados">
+  <xs:complexType name="listarPost">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPostResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:postGenerico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agendarEvento">
+    <xs:sequence>
+      <xs:element name="idevento" type="xs:int" />
+      <xs:element name="idusuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agendarEventoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -391,22 +395,20 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarEvento">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="evento" type="tns:evento" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarEventoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listar_material_tipo_indice">
+  <xs:complexType name="listarMisEventos">
     <xs:sequence>
       <xs:element name="idUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarMisEventosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEventosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
@@ -428,16 +430,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarComentarioResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarPost">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="post" type="tns:postGenerico" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarPostResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
