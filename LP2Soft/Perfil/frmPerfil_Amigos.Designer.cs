@@ -87,7 +87,7 @@ namespace LP2Soft.Perfil
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(804, 315);
+            this.ClientSize = new System.Drawing.Size(800, 315);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panelAmigos);
             this.Controls.Add(this.lblInfo);

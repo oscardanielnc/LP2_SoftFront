@@ -710,6 +710,9 @@
     <None Include="Connected Services\CursosWS\CursosWS11.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.actualizarCursoxUsuarioResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -775,6 +778,10 @@
     </None>
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.wsdl" />
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS11.wsdl" />
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS11.wsdl" />
@@ -907,6 +914,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosAsesoradosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosPostularResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosResponse.datasource">
@@ -1246,6 +1256,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revision-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-regular-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

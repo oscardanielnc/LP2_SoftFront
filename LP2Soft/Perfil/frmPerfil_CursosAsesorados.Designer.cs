@@ -31,6 +31,8 @@ namespace LP2Soft.Perfil
         {
             this.btnAniadirCurso = new System.Windows.Forms.Button();
             this.panelCursos = new System.Windows.Forms.Panel();
+            this.lblNoAsesor = new System.Windows.Forms.Label();
+            this.panelCursos.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAniadirCurso
@@ -51,21 +53,35 @@ namespace LP2Soft.Perfil
             // 
             this.panelCursos.AutoScroll = true;
             this.panelCursos.AutoScrollMargin = new System.Drawing.Size(0, 10);
-            this.panelCursos.Location = new System.Drawing.Point(87, 12);
+            this.panelCursos.Controls.Add(this.lblNoAsesor);
+            this.panelCursos.Location = new System.Drawing.Point(87, 26);
             this.panelCursos.Name = "panelCursos";
-            this.panelCursos.Size = new System.Drawing.Size(616, 179);
+            this.panelCursos.Size = new System.Drawing.Size(616, 165);
             this.panelCursos.TabIndex = 7;
+            // 
+            // lblNoAsesor
+            // 
+            this.lblNoAsesor.AutoSize = true;
+            this.lblNoAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoAsesor.Location = new System.Drawing.Point(3, 0);
+            this.lblNoAsesor.Name = "lblNoAsesor";
+            this.lblNoAsesor.Size = new System.Drawing.Size(221, 20);
+            this.lblNoAsesor.TabIndex = 46;
+            this.lblNoAsesor.Text = "Este Usuario no es asesor";
             // 
             // frmPerfil_CursosAsesorados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(799, 256);
             this.Controls.Add(this.panelCursos);
             this.Controls.Add(this.btnAniadirCurso);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfil_CursosAsesorados";
             this.Text = "frmCursosReseniados";
+            this.panelCursos.ResumeLayout(false);
+            this.panelCursos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -73,5 +89,6 @@ namespace LP2Soft.Perfil
         #endregion
         private System.Windows.Forms.Button btnAniadirCurso;
         private System.Windows.Forms.Panel panelCursos;
+        private System.Windows.Forms.Label lblNoAsesor;
     }
 }

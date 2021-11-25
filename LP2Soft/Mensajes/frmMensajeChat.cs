@@ -30,7 +30,12 @@ namespace LP2Soft.Mensajes
                 MemoryStream ms1 = new MemoryStream(_amigo.foto);
                 imgAmigo.Image = new Bitmap(ms1);
             }
+            actualizarMensajes();
 
+        }
+        private void actualizarMensajes()
+        {
+            frmPrincipal.startLoading();
             try
             {
                 _mensajes = new BindingList<NotificacionesWS.mensaje>(
@@ -41,11 +46,13 @@ namespace LP2Soft.Mensajes
                 foreach (NotificacionesWS.mensaje m in _mensajes)
                     agregarMensaje(m);
 
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 lblInfo.Visible = true;
                 lblInfo.Text = "Usted aún no tiene ningún mensaje con este usuario. Pruebe decir 'Hola :D' ";
             }
+            frmPrincipal.endLoading();
         }
 
         private void btnEnviarMensaje_Click(object sender, EventArgs e)
@@ -57,6 +64,7 @@ namespace LP2Soft.Mensajes
             {
                 try
                 {
+                    frmPrincipal.startLoading();
                     NotificacionesWS.mensaje m = new NotificacionesWS.mensaje();
                     m.idRemitente = frmHome.Usuario.idUsuario;
                     m.idDestinatario = _amigo.idUsuario;
@@ -64,9 +72,14 @@ namespace LP2Soft.Mensajes
                     m.fechayHora = DateTime.Now;
                     agregarMensaje(m);
                     _daoMensajes.enviarMensaje(m.idRemitente, m.idDestinatario, txtMensaje.Text);
-                    txtMensaje.Text = "";
+                    txtMensaje.Text = "Escribe aquí tu mensaje";
+                    txtMensaje.ForeColor = Color.Gray;
+
+                    if (lblInfo.Visible) lblInfo.Visible = false;
+                    frmPrincipal.endLoading();
                 } catch(Exception ex)
                 {
+                    frmPrincipal.endLoading();
                     MessageBox.Show("Ha ocurrido un error en el servidor al tratar de enviar el mensaje. Intentelo de nuevo más tarde",
                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -104,6 +117,11 @@ namespace LP2Soft.Mensajes
         {
             if (e.KeyCode.Equals(Keys.Enter))
                 btnEnviarMensaje_Click(sender, e);
+        }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            actualizarMensajes();
         }
     }
 }

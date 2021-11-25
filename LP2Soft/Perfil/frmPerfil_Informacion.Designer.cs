@@ -30,6 +30,7 @@ namespace LP2Soft.Perfil
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfil_Informacion));
             this.lblInfGeneral = new System.Windows.Forms.Label();
             this.lblUniversidad = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -42,25 +43,31 @@ namespace LP2Soft.Perfil
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.rtbDescripcion = new System.Windows.Forms.RichTextBox();
             this.lblInfAsesor = new System.Windows.Forms.Label();
             this.infoCalificacion = new System.Windows.Forms.Label();
             this.infoPrecio = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblPrecioHora = new System.Windows.Forms.Label();
             this.panelAsesor = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEnviarCorreo = new LP2Soft.Asesor.BotonChevere();
+            this.estrella5 = new System.Windows.Forms.Label();
+            this.imgEstrellas = new System.Windows.Forms.ImageList(this.components);
+            this.estrella4 = new System.Windows.Forms.Label();
+            this.estrella3 = new System.Windows.Forms.Label();
+            this.estrella2 = new System.Windows.Forms.Label();
+            this.estrella1 = new System.Windows.Forms.Label();
             this.imgVineta2 = new System.Windows.Forms.PictureBox();
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.imgVineta1 = new System.Windows.Forms.PictureBox();
             this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-            this.btnEnviarCorreo = new LP2Soft.Asesor.BotonChevere();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.panelAsesor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInfGeneral
@@ -183,19 +190,6 @@ namespace LP2Soft.Perfil
             this.label11.TabIndex = 23;
             this.label11.Text = "Especialidad:";
             // 
-            // rtbDescripcion
-            // 
-            this.rtbDescripcion.BackColor = System.Drawing.SystemColors.Window;
-            this.rtbDescripcion.Enabled = false;
-            this.rtbDescripcion.Location = new System.Drawing.Point(225, 173);
-            this.rtbDescripcion.Name = "rtbDescripcion";
-            this.rtbDescripcion.ReadOnly = true;
-            this.rtbDescripcion.Size = new System.Drawing.Size(523, 71);
-            this.rtbDescripcion.TabIndex = 24;
-            this.rtbDescripcion.Text = "Soy estudiante de 7mo ciclo con gran interés en el desarrollo de aplicaciones.\nMi" +
-    " especialidad son los cursos de programación. Domino Javascript, Java, C, C++, C" +
-    "#, Python, entre otros ;)";
-            // 
             // lblInfAsesor
             // 
             this.lblInfAsesor.AutoSize = true;
@@ -229,10 +223,10 @@ namespace LP2Soft.Perfil
             // lblCalificacion
             // 
             this.lblCalificacion.AutoSize = true;
-            this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalificacion.Location = new System.Drawing.Point(207, 48);
             this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(31, 15);
+            this.lblCalificacion.Size = new System.Drawing.Size(32, 16);
             this.lblCalificacion.TabIndex = 30;
             this.lblCalificacion.Text = "4.58";
             // 
@@ -253,6 +247,11 @@ namespace LP2Soft.Perfil
             this.panelAsesor.Controls.Add(this.label1);
             this.panelAsesor.Controls.Add(this.pictureBox1);
             this.panelAsesor.Controls.Add(this.btnEnviarCorreo);
+            this.panelAsesor.Controls.Add(this.estrella5);
+            this.panelAsesor.Controls.Add(this.estrella4);
+            this.panelAsesor.Controls.Add(this.estrella3);
+            this.panelAsesor.Controls.Add(this.estrella2);
+            this.panelAsesor.Controls.Add(this.estrella1);
             this.panelAsesor.Controls.Add(this.lblCalificacion);
             this.panelAsesor.Controls.Add(this.lblInfAsesor);
             this.panelAsesor.Controls.Add(this.lblPrecioHora);
@@ -263,6 +262,104 @@ namespace LP2Soft.Perfil
             this.panelAsesor.Name = "panelAsesor";
             this.panelAsesor.Size = new System.Drawing.Size(799, 106);
             this.panelAsesor.TabIndex = 63;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(518, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 16);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Ponerme en contacto con el Asesor";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.book;
+            this.pictureBox1.Location = new System.Drawing.Point(492, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnEnviarCorreo
+            // 
+            this.btnEnviarCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEnviarCorreo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEnviarCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnEnviarCorreo.BorderRadius = 6;
+            this.btnEnviarCorreo.BorderSize = 0;
+            this.btnEnviarCorreo.FlatAppearance.BorderSize = 0;
+            this.btnEnviarCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarCorreo.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarCorreo.Location = new System.Drawing.Point(561, 51);
+            this.btnEnviarCorreo.Name = "btnEnviarCorreo";
+            this.btnEnviarCorreo.Size = new System.Drawing.Size(150, 33);
+            this.btnEnviarCorreo.TabIndex = 32;
+            this.btnEnviarCorreo.Text = "Enviar correo";
+            this.btnEnviarCorreo.TextColor = System.Drawing.Color.White;
+            this.btnEnviarCorreo.UseVisualStyleBackColor = false;
+            this.btnEnviarCorreo.Click += new System.EventHandler(this.btnEnviarCorreo_Click);
+            // 
+            // estrella5
+            // 
+            this.estrella5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella5.ImageIndex = 0;
+            this.estrella5.ImageList = this.imgEstrellas;
+            this.estrella5.Location = new System.Drawing.Point(359, 44);
+            this.estrella5.Name = "estrella5";
+            this.estrella5.Size = new System.Drawing.Size(20, 20);
+            this.estrella5.TabIndex = 68;
+            // 
+            // imgEstrellas
+            // 
+            this.imgEstrellas.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgEstrellas.ImageStream")));
+            this.imgEstrellas.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgEstrellas.Images.SetKeyName(0, "star-regular-24.png");
+            this.imgEstrellas.Images.SetKeyName(1, "star-solid-24.png");
+            this.imgEstrellas.Images.SetKeyName(2, "star-half-solid-24.png");
+            // 
+            // estrella4
+            // 
+            this.estrella4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella4.ImageIndex = 0;
+            this.estrella4.ImageList = this.imgEstrellas;
+            this.estrella4.Location = new System.Drawing.Point(333, 43);
+            this.estrella4.Name = "estrella4";
+            this.estrella4.Size = new System.Drawing.Size(20, 20);
+            this.estrella4.TabIndex = 67;
+            // 
+            // estrella3
+            // 
+            this.estrella3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella3.ImageIndex = 0;
+            this.estrella3.ImageList = this.imgEstrellas;
+            this.estrella3.Location = new System.Drawing.Point(307, 43);
+            this.estrella3.Name = "estrella3";
+            this.estrella3.Size = new System.Drawing.Size(20, 20);
+            this.estrella3.TabIndex = 66;
+            // 
+            // estrella2
+            // 
+            this.estrella2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella2.ImageIndex = 0;
+            this.estrella2.ImageList = this.imgEstrellas;
+            this.estrella2.Location = new System.Drawing.Point(281, 43);
+            this.estrella2.Name = "estrella2";
+            this.estrella2.Size = new System.Drawing.Size(20, 20);
+            this.estrella2.TabIndex = 65;
+            // 
+            // estrella1
+            // 
+            this.estrella1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella1.ImageIndex = 0;
+            this.estrella1.ImageList = this.imgEstrellas;
+            this.estrella1.Location = new System.Drawing.Point(255, 43);
+            this.estrella1.Name = "estrella1";
+            this.estrella1.Size = new System.Drawing.Size(20, 20);
+            this.estrella1.TabIndex = 64;
             // 
             // imgVineta2
             // 
@@ -297,45 +394,16 @@ namespace LP2Soft.Perfil
             this.imgVineta1.TabIndex = 10;
             this.imgVineta1.TabStop = false;
             // 
-            // btnEnviarCorreo
+            // lblDescripcion
             // 
-            this.btnEnviarCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnEnviarCorreo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnEnviarCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
-            this.btnEnviarCorreo.BorderRadius = 6;
-            this.btnEnviarCorreo.BorderSize = 0;
-            this.btnEnviarCorreo.FlatAppearance.BorderSize = 0;
-            this.btnEnviarCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviarCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarCorreo.ForeColor = System.Drawing.Color.White;
-            this.btnEnviarCorreo.Location = new System.Drawing.Point(423, 51);
-            this.btnEnviarCorreo.Name = "btnEnviarCorreo";
-            this.btnEnviarCorreo.Size = new System.Drawing.Size(150, 33);
-            this.btnEnviarCorreo.TabIndex = 32;
-            this.btnEnviarCorreo.Text = "Enviar correo";
-            this.btnEnviarCorreo.TextColor = System.Drawing.Color.White;
-            this.btnEnviarCorreo.UseVisualStyleBackColor = false;
-            this.btnEnviarCorreo.Click += new System.EventHandler(this.btnEnviarCorreo_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(380, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 16);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Ponerme en contacto con el Asesor";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LP2Soft.Properties.Resources.book;
-            this.pictureBox1.Location = new System.Drawing.Point(354, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(222, 174);
+            this.lblDescripcion.MaximumSize = new System.Drawing.Size(500, 0);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(85, 15);
+            this.lblDescripcion.TabIndex = 64;
+            this.lblDescripcion.Text = "descripción ....";
             // 
             // frmPerfil_Informacion
             // 
@@ -343,10 +411,10 @@ namespace LP2Soft.Perfil
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(804, 356);
+            this.ClientSize = new System.Drawing.Size(800, 356);
+            this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.panelAsesor);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.rtbDescripcion);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -366,10 +434,10 @@ namespace LP2Soft.Perfil
             this.Text = "frmPerfil_Informacion";
             this.panelAsesor.ResumeLayout(false);
             this.panelAsesor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,7 +458,6 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RichTextBox rtbDescripcion;
         private System.Windows.Forms.PictureBox imgVineta2;
         private System.Windows.Forms.Label lblInfAsesor;
         private System.Windows.Forms.Label infoCalificacion;
@@ -403,5 +470,12 @@ namespace LP2Soft.Perfil
         private Asesor.BotonChevere btnEnviarCorreo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ImageList imgEstrellas;
+        private System.Windows.Forms.Label estrella5;
+        private System.Windows.Forms.Label estrella4;
+        private System.Windows.Forms.Label estrella3;
+        private System.Windows.Forms.Label estrella2;
+        private System.Windows.Forms.Label estrella1;
+        private System.Windows.Forms.Label lblDescripcion;
     }
 }

@@ -20,7 +20,13 @@ namespace LP2Soft.Perfil
         public frmPerfil_Resenias(UsuarioWS.usuario asesor)
         {
             InitializeComponent();
+            lblNoresenia.Visible = false;
+            lblNoAsesor.Visible = false;
             _asesor = asesor;
+            if(_asesor.esAsesor == false)
+            {
+                lblNoAsesor.Visible = true;
+            }
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
             _resenias = new BindingList<UsuarioWS.resenia>();
             renderizarResenias(_asesor);
@@ -54,8 +60,7 @@ namespace LP2Soft.Perfil
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("El usuario asesor no cuenta con reseñas por el momento", "Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lblNoresenia.Visible = true;
                 }
 
             }

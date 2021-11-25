@@ -23,6 +23,8 @@
   <xs:element name="listarCursos" type="tns:listarCursos" />
   <xs:element name="listarCursosAsesorados" type="tns:listarCursosAsesorados" />
   <xs:element name="listarCursosAsesoradosResponse" type="tns:listarCursosAsesoradosResponse" />
+  <xs:element name="listarCursosPostular" type="tns:listarCursosPostular" />
+  <xs:element name="listarCursosPostularResponse" type="tns:listarCursosPostularResponse" />
   <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
   <xs:element name="listarMisPublicaciones" type="tns:listarMisPublicaciones" />
   <xs:element name="listarMisPublicacionesResponse" type="tns:listarMisPublicacionesResponse" />
@@ -189,6 +191,14 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="listarCursosPostular">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCursosPostularResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarAsesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="asesor" type="tns:asesor" />
@@ -223,16 +233,6 @@
       <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarReseniaProfesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
@@ -241,6 +241,16 @@
   <xs:complexType name="insertarReseniaProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="esAmigo">
@@ -264,6 +274,27 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMisPublicaciones">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element name="idCurso" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaI" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaF" type="xs:string" />
+      <xs:element name="flag" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMisPublicacionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:postGenerico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="postGenerico">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:post">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="eliminarAmigo">
     <xs:sequence>
