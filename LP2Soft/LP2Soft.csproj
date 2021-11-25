@@ -414,6 +414,12 @@
     <Compile Include="Tarjetas\tarjMaterial.Designer.cs">
       <DependentUpon>tarjMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarjetas\tarjReporteAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarjetas\tarjReporteAsesor.Designer.cs">
+      <DependentUpon>tarjReporteAsesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tarjetas\tarjResenia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -663,6 +669,9 @@
     <EmbeddedResource Include="Tarjetas\tarjProfesor.resx">
       <DependentUpon>tarjProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjReporteAsesor.resx">
+      <DependentUpon>tarjReporteAsesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjResenia.resx">
       <DependentUpon>tarjResenia.cs</DependentUpon>
     </EmbeddedResource>
@@ -853,6 +862,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.esAmigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.generarReporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.hacerAdminResponse.datasource">
@@ -1201,6 +1213,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

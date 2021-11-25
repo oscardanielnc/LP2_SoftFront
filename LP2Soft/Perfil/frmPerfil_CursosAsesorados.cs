@@ -11,18 +11,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2Soft.Tarjetas;
+using System.IO;
 
 namespace LP2Soft.Perfil
 {
     public partial class frmPerfil_CursosAsesorados : Form
     {
+        private byte[] arreglo;
+        private int _idAsesor;
         private UsuarioWS.UsuariosWSClient _daoAsesor;
+        private UsuarioWS.usuario _usuario;
         private BindingList<UsuarioWS.curso> _cursosAsesorados;
         public frmPerfil_CursosAsesorados(UsuarioWS.usuario user)
         {
             InitializeComponent();
+            _idAsesor = user.asesor.idAsesor;
+            _usuario = user;
             _daoAsesor = new UsuarioWS.UsuariosWSClient();
             renderizarPanel(user.idUsuario);
+            
         }
         private void renderizarPanel(int idUsuario)
         {
@@ -59,6 +66,12 @@ namespace LP2Soft.Perfil
         {
             frmPostularAsesor fromPostular = new frmPostularAsesor();
             fromPostular.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tarjReporteAsesor formReporte = new tarjReporteAsesor(_usuario);
+            formReporte.ShowDialog();
         }
     }
 }

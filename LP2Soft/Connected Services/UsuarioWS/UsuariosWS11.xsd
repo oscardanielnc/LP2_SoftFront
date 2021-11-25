@@ -8,6 +8,8 @@
   <xs:element name="eliminarReseniaAsesorResponse" type="tns:eliminarReseniaAsesorResponse" />
   <xs:element name="esAmigo" type="tns:esAmigo" />
   <xs:element name="esAmigoResponse" type="tns:esAmigoResponse" />
+  <xs:element name="generarReporte" type="tns:generarReporte" />
+  <xs:element name="generarReporteResponse" type="tns:generarReporteResponse" />
   <xs:element name="hacerAdmin" type="tns:hacerAdmin" />
   <xs:element name="hacerAdminResponse" type="tns:hacerAdminResponse" />
   <xs:element name="insertarAsesor" type="tns:insertarAsesor" />
@@ -217,16 +219,6 @@
       <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarReseniaAsesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
@@ -235,6 +227,16 @@
   <xs:complexType name="insertarReseniaAsesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="esAmigo">
@@ -318,6 +320,16 @@
   <xs:complexType name="insertarUsuarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporte">
+    <xs:sequence>
+      <xs:element name="idAsesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarXnombreYcurso">
