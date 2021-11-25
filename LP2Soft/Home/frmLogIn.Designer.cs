@@ -38,6 +38,7 @@ namespace LP2Soft.Home
             this.txtCorreoCodigo = new System.Windows.Forms.TextBox();
             this.lblInicioSesion = new System.Windows.Forms.Label();
             this.btnNuevoUsuario = new System.Windows.Forms.PictureBox();
+            this.lblOlvide = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevoUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@ namespace LP2Soft.Home
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 374);
+            this.label1.Location = new System.Drawing.Point(174, 389);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 15);
             this.label1.TabIndex = 7;
@@ -55,7 +56,7 @@ namespace LP2Soft.Home
             // 
             this.lblNuevaCuentaInfo.AutoSize = true;
             this.lblNuevaCuentaInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNuevaCuentaInfo.Location = new System.Drawing.Point(47, 257);
+            this.lblNuevaCuentaInfo.Location = new System.Drawing.Point(73, 278);
             this.lblNuevaCuentaInfo.Name = "lblNuevaCuentaInfo";
             this.lblNuevaCuentaInfo.Size = new System.Drawing.Size(265, 15);
             this.lblNuevaCuentaInfo.TabIndex = 6;
@@ -129,7 +130,7 @@ namespace LP2Soft.Home
             // 
             this.btnNuevoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoUsuario.Image = global::LP2Soft.Properties.Resources.customers_icon_3;
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(161, 291);
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(161, 306);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
             this.btnNuevoUsuario.Size = new System.Drawing.Size(80, 80);
             this.btnNuevoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,12 +138,24 @@ namespace LP2Soft.Home
             this.btnNuevoUsuario.TabStop = false;
             this.btnNuevoUsuario.Click += new System.EventHandler(this.btnNuevoUsuario_Click);
             // 
+            // lblOlvide
+            // 
+            this.lblOlvide.AutoSize = true;
+            this.lblOlvide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOlvide.Location = new System.Drawing.Point(130, 235);
+            this.lblOlvide.Name = "lblOlvide";
+            this.lblOlvide.Size = new System.Drawing.Size(142, 15);
+            this.lblOlvide.TabIndex = 8;
+            this.lblOlvide.Text = "Olvidé mi contraseña";
+            this.lblOlvide.Click += new System.EventHandler(this.lblOlvide_Click);
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(400, 440);
+            this.Controls.Add(this.lblOlvide);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNuevoUsuario);
             this.Controls.Add(this.lblNuevaCuentaInfo);
@@ -171,5 +184,6 @@ namespace LP2Soft.Home
         private System.Windows.Forms.TextBox txtCorreoCodigo;
         private System.Windows.Forms.Label lblInicioSesion;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblOlvide;
     }
 }

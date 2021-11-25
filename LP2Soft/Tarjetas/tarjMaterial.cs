@@ -27,7 +27,7 @@ namespace LP2Soft.Tarjetas
             _material = u;
             btnMaterial.Text = u.nombreArchivo;
             lblNota.Text = u.nota;
-            lblPropietario.Text =  frmHome.Usuario.apellido;
+            lblPropietario.Text = u.usuario.nombre + " " + u.usuario.apellido;
             int pos = u.profesor.nombre.IndexOf(" ");
             lblNombreProfesor.Text = u.profesor.nombre.Substring(0,pos);
         }

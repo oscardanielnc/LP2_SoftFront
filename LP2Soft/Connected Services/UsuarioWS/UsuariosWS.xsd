@@ -23,6 +23,8 @@
   <xs:element name="listarCursos" type="tns:listarCursos" />
   <xs:element name="listarCursosAsesorados" type="tns:listarCursosAsesorados" />
   <xs:element name="listarCursosAsesoradosResponse" type="tns:listarCursosAsesoradosResponse" />
+  <xs:element name="listarCursosPostular" type="tns:listarCursosPostular" />
+  <xs:element name="listarCursosPostularResponse" type="tns:listarCursosPostularResponse" />
   <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
   <xs:element name="listarReseniasAsesor" type="tns:listarReseniasAsesor" />
   <xs:element name="listarReseniasAsesorResponse" type="tns:listarReseniasAsesorResponse" />
@@ -34,6 +36,8 @@
   <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
   <xs:element name="mostrarUsuario" type="tns:mostrarUsuario" />
   <xs:element name="mostrarUsuarioResponse" type="tns:mostrarUsuarioResponse" />
+  <xs:element name="recuperarContrasenia" type="tns:recuperarContrasenia" />
+  <xs:element name="recuperarContraseniaResponse" type="tns:recuperarContraseniaResponse" />
   <xs:complexType name="hacerAdmin">
     <xs:sequence>
       <xs:element name="idUsuario" type="xs:int" />
@@ -44,12 +48,10 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursosAsesorados">
-    <xs:sequence>
-      <xs:element name="idAsesor" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="listarCursosPostular">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarCursosAsesoradosResponse">
+  <xs:complexType name="listarCursosPostularResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
@@ -184,6 +186,16 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="listarCursosAsesorados">
+    <xs:sequence>
+      <xs:element name="idAsesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosAsesoradosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarAsesor">
     <xs:sequence>
@@ -322,14 +334,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="generarReporte">
+  <xs:complexType name="recuperarContrasenia">
     <xs:sequence>
-      <xs:element name="idAsesor" type="xs:int" />
+      <xs:element minOccurs="0" name="codigoPUCP" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="generarReporteResponse">
+  <xs:complexType name="recuperarContraseniaResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarXnombreYcurso">

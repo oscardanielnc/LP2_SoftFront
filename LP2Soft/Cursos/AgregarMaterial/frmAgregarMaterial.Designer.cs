@@ -51,6 +51,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.cboSemestre = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ofdArchivo = new System.Windows.Forms.OpenFileDialog();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.flpCargarMaterial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -277,11 +278,23 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             this.ofdArchivo.FileName = "openFileDialog1";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox1.Location = new System.Drawing.Point(287, 179);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(40, 17);
+            this.checkBox1.TabIndex = 23;
+            this.checkBox1.Text = "No";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // frmAgregarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 375);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboSemestre);
             this.Controls.Add(this.cboCiclo);
@@ -334,5 +347,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.ComboBox cboSemestre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog ofdArchivo;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

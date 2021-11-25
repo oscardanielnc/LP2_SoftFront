@@ -68,7 +68,7 @@ namespace LP2Soft.Perfil
             this.panel1.Controls.Add(this.btnAmigos);
             this.panel1.Controls.Add(this.btnPublicaciones);
             this.panel1.Controls.Add(this.btnInformacion);
-            this.panel1.Location = new System.Drawing.Point(62, 221);
+            this.panel1.Location = new System.Drawing.Point(50, 221);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(700, 31);
             this.panel1.TabIndex = 10;
@@ -156,10 +156,10 @@ namespace LP2Soft.Perfil
             // panelContenido
             // 
             this.panelContenido.AutoSize = true;
-            this.panelContenido.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelContenido.Location = new System.Drawing.Point(12, 249);
+            this.panelContenido.BackColor = System.Drawing.SystemColors.Window;
+            this.panelContenido.Location = new System.Drawing.Point(1, 249);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(804, 231);
+            this.panelContenido.Size = new System.Drawing.Size(796, 231);
             this.panelContenido.TabIndex = 11;
             // 
             // imgAmigo
@@ -186,7 +186,7 @@ namespace LP2Soft.Perfil
             // 
             this.btnMensaje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMensaje.Image = global::LP2Soft.Properties.Resources.bubble;
-            this.btnMensaje.Location = new System.Drawing.Point(702, 185);
+            this.btnMensaje.Location = new System.Drawing.Point(688, 185);
             this.btnMensaje.Name = "btnMensaje";
             this.btnMensaje.Size = new System.Drawing.Size(30, 30);
             this.btnMensaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +198,7 @@ namespace LP2Soft.Perfil
             // imgPerfil
             // 
             this.imgPerfil.Image = global::LP2Soft.Properties.Resources.images;
-            this.imgPerfil.Location = new System.Drawing.Point(120, 135);
+            this.imgPerfil.Location = new System.Drawing.Point(106, 135);
             this.imgPerfil.Name = "imgPerfil";
             this.imgPerfil.Size = new System.Drawing.Size(80, 80);
             this.imgPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +208,7 @@ namespace LP2Soft.Perfil
             // pictureBox2
             // 
             this.pictureBox2.Image = global::LP2Soft.Properties.Resources.campus_pucp_cia_letras_2020_03_1920x1080_1___copia;
-            this.pictureBox2.Location = new System.Drawing.Point(92, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(78, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(640, 160);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -226,7 +226,7 @@ namespace LP2Soft.Perfil
             this.panelNombre.Controls.Add(this.imgAdmin);
             this.panelNombre.Controls.Add(this.btnAmigo);
             this.panelNombre.Controls.Add(this.lblTituloNombre);
-            this.panelNombre.Location = new System.Drawing.Point(206, 185);
+            this.panelNombre.Location = new System.Drawing.Point(192, 185);
             this.panelNombre.Name = "panelNombre";
             this.panelNombre.Size = new System.Drawing.Size(490, 30);
             this.panelNombre.TabIndex = 14;
@@ -344,7 +344,7 @@ namespace LP2Soft.Perfil
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(828, 492);
+            this.ClientSize = new System.Drawing.Size(823, 492);
             this.Controls.Add(this.panelNombre);
             this.Controls.Add(this.btnMensaje);
             this.Controls.Add(this.panelContenido);

@@ -14,7 +14,7 @@ namespace LP2Soft.Eventos
 {
     public partial class frmPostGeneral : Form
     {
-        private UsuarioWS.usuario _usuario;
+        private UsuarioWS.usuario _usuario ;
         private PublicacionesWS.postGenerico _post;
         private PublicacionesWS.comentario _comentarioCreado;
         private PublicacionesWS.postGenerico _postModificado;

@@ -19,7 +19,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         private CursosWS.curso _cursoVer;
         private int _tipo;
         private int _indice;
-        private String[] tipoMaterial = new String[] { "Practica", "Laboratorio", "Tarea Academica", "Examenes" };
+        private String[] tipoMaterial = new String[] { "Práctica", "Laboratorio", "Tarea Academica", "Exámenes" };
         private PublicacionesWS.PublicacionesWSClient _daoMaterial;
         private PublicacionesWS.material[] _lMaterial;
         public frmCursos_VerPractica()

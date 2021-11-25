@@ -30,28 +30,17 @@ namespace LP2Soft.Mensajes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMensajeChat));
-            this.imgAmigo = new System.Windows.Forms.PictureBox();
             this.panelMensajes = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.btnEnviarMensaje = new System.Windows.Forms.PictureBox();
             this.txtMensaje = new System.Windows.Forms.TextBox();
             this.lblNombreAmigo = new System.Windows.Forms.Label();
             this.toolTipMensajes = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.imgAmigo)).BeginInit();
+            this.imgAmigo = new System.Windows.Forms.PictureBox();
+            this.btnEnviarMensaje = new LP2Soft.Asesor.BotonChevere();
+            this.btnRecargar = new LP2Soft.Asesor.BotonChevere();
             this.panelMensajes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEnviarMensaje)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAmigo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // imgAmigo
-            // 
-            this.imgAmigo.Image = global::LP2Soft.Properties.Resources.images;
-            this.imgAmigo.Location = new System.Drawing.Point(12, 12);
-            this.imgAmigo.Name = "imgAmigo";
-            this.imgAmigo.Size = new System.Drawing.Size(70, 70);
-            this.imgAmigo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAmigo.TabIndex = 8;
-            this.imgAmigo.TabStop = false;
             // 
             // panelMensajes
             // 
@@ -72,19 +61,6 @@ namespace LP2Soft.Mensajes
             this.lblInfo.Size = new System.Drawing.Size(310, 16);
             this.lblInfo.TabIndex = 19;
             this.lblInfo.Text = "Se han encontrado 15 mensajes con este usuario...";
-            // 
-            // btnEnviarMensaje
-            // 
-            this.btnEnviarMensaje.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEnviarMensaje.Image = ((System.Drawing.Image)(resources.GetObject("btnEnviarMensaje.Image")));
-            this.btnEnviarMensaje.Location = new System.Drawing.Point(728, 457);
-            this.btnEnviarMensaje.Name = "btnEnviarMensaje";
-            this.btnEnviarMensaje.Size = new System.Drawing.Size(30, 30);
-            this.btnEnviarMensaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEnviarMensaje.TabIndex = 18;
-            this.btnEnviarMensaje.TabStop = false;
-            this.toolTipMensajes.SetToolTip(this.btnEnviarMensaje, "Enviar mensaje");
-            this.btnEnviarMensaje.Click += new System.EventHandler(this.btnEnviarMensaje_Click);
             // 
             // txtMensaje
             // 
@@ -108,24 +84,74 @@ namespace LP2Soft.Mensajes
             this.lblNombreAmigo.TabIndex = 12;
             this.lblNombreAmigo.Text = "Freddy Paz";
             // 
+            // imgAmigo
+            // 
+            this.imgAmigo.Image = global::LP2Soft.Properties.Resources.images;
+            this.imgAmigo.Location = new System.Drawing.Point(12, 12);
+            this.imgAmigo.Name = "imgAmigo";
+            this.imgAmigo.Size = new System.Drawing.Size(70, 70);
+            this.imgAmigo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAmigo.TabIndex = 8;
+            this.imgAmigo.TabStop = false;
+            // 
+            // btnEnviarMensaje
+            // 
+            this.btnEnviarMensaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEnviarMensaje.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEnviarMensaje.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEnviarMensaje.BorderRadius = 5;
+            this.btnEnviarMensaje.BorderSize = 0;
+            this.btnEnviarMensaje.FlatAppearance.BorderSize = 0;
+            this.btnEnviarMensaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarMensaje.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarMensaje.Image = global::LP2Soft.Properties.Resources.send_regular_24;
+            this.btnEnviarMensaje.Location = new System.Drawing.Point(728, 453);
+            this.btnEnviarMensaje.Name = "btnEnviarMensaje";
+            this.btnEnviarMensaje.Size = new System.Drawing.Size(32, 32);
+            this.btnEnviarMensaje.TabIndex = 32;
+            this.btnEnviarMensaje.TextColor = System.Drawing.Color.White;
+            this.btnEnviarMensaje.UseVisualStyleBackColor = false;
+            this.btnEnviarMensaje.Click += new System.EventHandler(this.btnEnviarMensaje_Click);
+            // 
+            // btnRecargar
+            // 
+            this.btnRecargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRecargar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRecargar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRecargar.BorderRadius = 5;
+            this.btnRecargar.BorderSize = 0;
+            this.btnRecargar.FlatAppearance.BorderSize = 0;
+            this.btnRecargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecargar.ForeColor = System.Drawing.Color.White;
+            this.btnRecargar.Image = global::LP2Soft.Properties.Resources.revision_regular_24;
+            this.btnRecargar.Location = new System.Drawing.Point(775, 23);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(36, 36);
+            this.btnRecargar.TabIndex = 31;
+            this.btnRecargar.TextColor = System.Drawing.Color.White;
+            this.btnRecargar.UseVisualStyleBackColor = false;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
+            // 
             // frmMensajeChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(823, 492);
+            this.Controls.Add(this.btnEnviarMensaje);
+            this.Controls.Add(this.btnRecargar);
             this.Controls.Add(this.lblNombreAmigo);
             this.Controls.Add(this.panelMensajes);
             this.Controls.Add(this.imgAmigo);
             this.Controls.Add(this.txtMensaje);
-            this.Controls.Add(this.btnEnviarMensaje);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMensajeChat";
             this.Text = "frmMensajeChat";
-            ((System.ComponentModel.ISupportInitialize)(this.imgAmigo)).EndInit();
             this.panelMensajes.ResumeLayout(false);
             this.panelMensajes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEnviarMensaje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAmigo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,9 +161,10 @@ namespace LP2Soft.Mensajes
         private System.Windows.Forms.PictureBox imgAmigo;
         private System.Windows.Forms.Panel panelMensajes;
         private System.Windows.Forms.TextBox txtMensaje;
-        private System.Windows.Forms.PictureBox btnEnviarMensaje;
         private System.Windows.Forms.Label lblNombreAmigo;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.ToolTip toolTipMensajes;
+        private Asesor.BotonChevere btnRecargar;
+        private Asesor.BotonChevere btnEnviarMensaje;
     }
 }

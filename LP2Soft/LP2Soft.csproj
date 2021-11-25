@@ -280,6 +280,12 @@
     <Compile Include="Home\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\frmRecuperarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\frmRecuperarContrasenia.Designer.cs">
+      <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\frmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +328,12 @@
     <Compile Include="Perfil\frmCrearReseniaProfesor.Designer.cs">
       <DependentUpon>frmCrearReseniaProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Perfil\frmFiltrarPublicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmFiltrarPublicaciones.Designer.cs">
+      <DependentUpon>frmFiltrarPublicaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfil\frmPerfil_CursosAsesorados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,6 +357,12 @@
     </Compile>
     <Compile Include="Perfil\frmPerfil_EditarInfo.Designer.cs">
       <DependentUpon>frmPerfil_EditarInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_EnviarCorreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil\frmPerfil_EnviarCorreo.Designer.cs">
+      <DependentUpon>frmPerfil_EnviarCorreo.cs</DependentUpon>
     </Compile>
     <Compile Include="Perfil\frmPerfil_Informacion.cs">
       <SubType>Form</SubType>
@@ -583,6 +601,9 @@
     <EmbeddedResource Include="Home\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home\frmRecuperarContrasenia.resx">
+      <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -604,6 +625,9 @@
     <EmbeddedResource Include="Perfil\frmCrearReseniaProfesor.resx">
       <DependentUpon>frmCrearReseniaProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmFiltrarPublicaciones.resx">
+      <DependentUpon>frmFiltrarPublicaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
@@ -615,6 +639,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil_EditarInfo.resx">
       <DependentUpon>frmPerfil_EditarInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil\frmPerfil_EnviarCorreo.resx">
+      <DependentUpon>frmPerfil_EnviarCorreo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil\frmPerfil_Informacion.resx">
       <DependentUpon>frmPerfil_Informacion.cs</DependentUpon>
@@ -684,13 +711,16 @@
     <EmbeddedResource Include="Tarjetas\tarjUsuario.resx">
       <DependentUpon>tarjUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\CursosWS\CursosWS.wsdl" />
+    <None Include="Connected Services\CursosWS\CursosWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CursosWS\CursosWS1.wsdl" />
     <None Include="Connected Services\CursosWS\CursosWS1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CursosWS\CursosWS11.wsdl" />
-    <None Include="Connected Services\CursosWS\CursosWS11.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.actualizarCursoxUsuarioResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CursosWS\LP2Soft.CursosWS.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -755,6 +785,10 @@
     <None Include="Connected Services\NotificacionesWS\LP2Soft.NotificacionesWS.ultimoMensaje1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.wsdl" />
+    <None Include="Connected Services\NotificacionesWS\NotificacionesWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.wsdl" />
     <None Include="Connected Services\NotificacionesWS\NotificacionesWS1.xsd">
       <SubType>Designer</SubType>
@@ -814,10 +848,19 @@
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarComentariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarEventosAgendadosFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarEventosAgendadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarEventosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarMisEventosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarMisPublicacionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.listarPostResponse.datasource">
@@ -841,12 +884,12 @@
     <None Include="Connected Services\PublicacionesWS\LP2Soft.PublicacionesWS.postGenerico.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.wsdl" />
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.xsd">
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.wsdl" />
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS11.wsdl" />
-    <None Include="Connected Services\PublicacionesWS\PublicacionesWS11.xsd">
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.wsdl" />
+    <None Include="Connected Services\PublicacionesWS\PublicacionesWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.agregarAmigoResponse.datasource">
@@ -885,6 +928,9 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosAsesoradosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosPostularResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -903,18 +949,21 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.mostrarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.recuperarContraseniaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.resenia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UsuarioWS\UsuariosWS1.wsdl" />
-    <None Include="Connected Services\UsuarioWS\UsuariosWS1.xsd">
+    <None Include="Connected Services\UsuarioWS\UsuariosWS.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuariosWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UsuarioWS\UsuariosWS11.wsdl" />
-    <None Include="Connected Services\UsuarioWS\UsuariosWS11.xsd">
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuariosWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -1213,6 +1262,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revision-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-regular-24.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">

@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="MostrarCurso" type="tns:MostrarCurso" />
   <xs:element name="MostrarCursoResponse" type="tns:MostrarCursoResponse" />
+  <xs:element name="actualizarCursoxUsuario" type="tns:actualizarCursoxUsuario" />
+  <xs:element name="actualizarCursoxUsuarioResponse" type="tns:actualizarCursoxUsuarioResponse" />
   <xs:element name="eliminarReseniasProfesor" type="tns:eliminarReseniasProfesor" />
   <xs:element name="eliminarReseniasProfesorResponse" type="tns:eliminarReseniasProfesorResponse" />
   <xs:element name="insertarReseniaAsesor" type="tns:insertarReseniaAsesor" />
@@ -207,6 +209,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarReseniaAsesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCursoxUsuario">
+    <xs:sequence>
+      <xs:element name="fidUsuario" type="xs:int" />
+      <xs:element name="fidCurso" type="xs:int" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element name="favorito" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCursoxUsuarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

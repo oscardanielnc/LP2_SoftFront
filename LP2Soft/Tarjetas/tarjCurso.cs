@@ -32,6 +32,9 @@ namespace LP2Soft.Tarjetas
             lblCreditos.Text = curso.creditos.ToString("0.00");
             lblNombre.Location = posicionarLabel();
 
+            if (curso.favorito) btnCorazon.ImageIndex = 1;
+            else btnCorazon.ImageIndex = 0;
+
             this.Click += new EventHandler((object sender, EventArgs e) =>  this.mostrarCurso());
             lblCodigo.Click += new EventHandler((object sender, EventArgs e) => this.mostrarCurso());
             lblNombre.Click += new EventHandler((object sender, EventArgs e) => this.mostrarCurso());
@@ -91,6 +94,7 @@ namespace LP2Soft.Tarjetas
                 cambiarColor(2);
                 frmCursos_Home.CreditosTotales += _creditos;
                 frmCursos_Home.actualizarLlbCreditos();
+                actualizarCursoXusuario();
                 actualizarEstados();
             }
             else if (frmHome.Usuario.cursos[_idCurso - 1].estado == 2)
@@ -99,8 +103,18 @@ namespace LP2Soft.Tarjetas
                 cambiarColor(1);
                 frmCursos_Home.CreditosTotales -= _creditos;
                 frmCursos_Home.actualizarLlbCreditos();
+                actualizarCursoXusuario();
                 actualizarEstados();
             }
+        }
+        private void actualizarCursoXusuario()
+        {
+            int fav = (frmHome.Usuario.cursos[_idCurso - 1].favorito) ? 1 : 0;
+            if (_daoCurso.actualizarCursoxUsuario(frmHome.Usuario.idUsuario, 
+                frmHome.Usuario.cursos[_idCurso - 1].idCurso, 
+                frmHome.Usuario.cursos[_idCurso - 1].estado, fav) != 1)
+                MessageBox.Show("Ocurrió un error actualizando de este curso",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         public void actualizarEstados()
         {
@@ -134,6 +148,23 @@ namespace LP2Soft.Tarjetas
                         frmCursos_Home.ListarTarjCursos[cursoBase.idCurso - 1].cambiarColor(frmHome.Usuario.cursos[cursoBase.idCurso - 1].estado);
                     }
                 }
+            }
+        }
+
+        private void btnCorazon_Click(object sender, EventArgs e)
+        {
+            if(btnCorazon.ImageIndex==1)
+            {
+                btnCorazon.ImageIndex = 0;
+                // quitar de favoritos
+                frmHome.Usuario.cursos[_idCurso - 1].favorito = false;
+                actualizarCursoXusuario();
+            } else
+            {
+                btnCorazon.ImageIndex = 1;
+                // agregar a favoritos
+                frmHome.Usuario.cursos[_idCurso - 1].favorito = true;
+                actualizarCursoXusuario();
             }
         }
     }

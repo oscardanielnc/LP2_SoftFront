@@ -27,9 +27,12 @@ namespace LP2Soft.Perfil
             InitializeComponent();
             _idAsesor = user.asesor.idAsesor;
             _usuario = user;
-            _daoAsesor = new UsuarioWS.UsuariosWSClient();
-            renderizarPanel(user.idUsuario);
-            
+            if (user.esAsesor == true)
+            {
+                lblNoAsesor.Visible = false;
+                _daoAsesor = new UsuarioWS.UsuariosWSClient();
+                renderizarPanel(user.idUsuario);
+            }
         }
         private void renderizarPanel(int idUsuario)
         {

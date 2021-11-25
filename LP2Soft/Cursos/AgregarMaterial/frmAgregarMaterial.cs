@@ -82,6 +82,9 @@ namespace LP2Soft.Cursos.AgregarMaterial
             _material.contenido = txtComentario.Text;
             _material.usuario = new PublicacionesWS.usuario();
             _material.usuario.idUsuario = frmHome.Usuario.idUsuario;
+            _material.usuario.nombre = frmHome.Usuario.nombre;
+            _material.usuario.apellido = frmHome.Usuario.apellido;
+
             if (checkBNo.Checked == true)
                 _material.nota = "-";
             else if (txtNota.Text == "")

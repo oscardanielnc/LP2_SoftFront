@@ -31,12 +31,7 @@ namespace LP2Soft.Tarjetas
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tarjResenia));
-            this.picStar5 = new System.Windows.Forms.PictureBox();
-            this.picStar1 = new System.Windows.Forms.PictureBox();
-            this.picStar2 = new System.Windows.Forms.PictureBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.picStar4 = new System.Windows.Forms.PictureBox();
-            this.picStar3 = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.lblDate = new System.Windows.Forms.Label();
@@ -45,44 +40,15 @@ namespace LP2Soft.Tarjetas
             this.btnEliminar = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.calificacion = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar3)).BeginInit();
+            this.imgEstrellas = new System.Windows.Forms.ImageList(this.components);
+            this.estrella5 = new System.Windows.Forms.Label();
+            this.estrella4 = new System.Windows.Forms.Label();
+            this.estrella3 = new System.Windows.Forms.Label();
+            this.estrella2 = new System.Windows.Forms.Label();
+            this.estrella1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picStar5
-            // 
-            this.picStar5.Image = ((System.Drawing.Image)(resources.GetObject("picStar5.Image")));
-            this.picStar5.Location = new System.Drawing.Point(519, 31);
-            this.picStar5.Name = "picStar5";
-            this.picStar5.Size = new System.Drawing.Size(20, 20);
-            this.picStar5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picStar5.TabIndex = 53;
-            this.picStar5.TabStop = false;
-            // 
-            // picStar1
-            // 
-            this.picStar1.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.picStar1.Location = new System.Drawing.Point(415, 31);
-            this.picStar1.Name = "picStar1";
-            this.picStar1.Size = new System.Drawing.Size(20, 20);
-            this.picStar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picStar1.TabIndex = 52;
-            this.picStar1.TabStop = false;
-            // 
-            // picStar2
-            // 
-            this.picStar2.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.picStar2.Location = new System.Drawing.Point(441, 31);
-            this.picStar2.Name = "picStar2";
-            this.picStar2.Size = new System.Drawing.Size(20, 20);
-            this.picStar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picStar2.TabIndex = 51;
-            this.picStar2.TabStop = false;
             // 
             // lblDescripcion
             // 
@@ -95,26 +61,6 @@ namespace LP2Soft.Tarjetas
             this.lblDescripcion.Text = "Gran asesor del curso de Sistemas Operativos. Se toma el tiempo de explicarte en " +
     "caso no hayas entendido correctamente y comparte gran cantidad de ejercicios par" +
     "a practicar.";
-            // 
-            // picStar4
-            // 
-            this.picStar4.Image = ((System.Drawing.Image)(resources.GetObject("picStar4.Image")));
-            this.picStar4.Location = new System.Drawing.Point(493, 31);
-            this.picStar4.Name = "picStar4";
-            this.picStar4.Size = new System.Drawing.Size(20, 20);
-            this.picStar4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picStar4.TabIndex = 49;
-            this.picStar4.TabStop = false;
-            // 
-            // picStar3
-            // 
-            this.picStar3.Image = global::LP2Soft.Properties.Resources.star_full;
-            this.picStar3.Location = new System.Drawing.Point(467, 31);
-            this.picStar3.Name = "picStar3";
-            this.picStar3.Size = new System.Drawing.Size(20, 20);
-            this.picStar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picStar3.TabIndex = 48;
-            this.picStar3.TabStop = false;
             // 
             // lblUsuario
             // 
@@ -155,7 +101,6 @@ namespace LP2Soft.Tarjetas
             this.lblAsesor.Size = new System.Drawing.Size(119, 18);
             this.lblAsesor.TabIndex = 47;
             this.lblAsesor.Text = "Oscar Navarro";
-            this.lblAsesor.Click += new System.EventHandler(this.lblAsesor_Click);
             // 
             // label1
             // 
@@ -183,28 +128,86 @@ namespace LP2Soft.Tarjetas
             // 
             this.calificacion.AutoSize = true;
             this.calificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calificacion.Location = new System.Drawing.Point(461, 60);
+            this.calificacion.Location = new System.Drawing.Point(464, 60);
             this.calificacion.Name = "calificacion";
-            this.calificacion.Size = new System.Drawing.Size(31, 18);
+            this.calificacion.Size = new System.Drawing.Size(40, 18);
             this.calificacion.TabIndex = 57;
-            this.calificacion.Text = "4.0";
+            this.calificacion.Text = "4.00";
+            // 
+            // imgEstrellas
+            // 
+            this.imgEstrellas.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgEstrellas.ImageStream")));
+            this.imgEstrellas.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgEstrellas.Images.SetKeyName(0, "star-regular-24.png");
+            this.imgEstrellas.Images.SetKeyName(1, "star-solid-24.png");
+            this.imgEstrellas.Images.SetKeyName(2, "star-half-solid-24.png");
+            // 
+            // estrella5
+            // 
+            this.estrella5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella5.ImageIndex = 0;
+            this.estrella5.ImageList = this.imgEstrellas;
+            this.estrella5.Location = new System.Drawing.Point(524, 34);
+            this.estrella5.Name = "estrella5";
+            this.estrella5.Size = new System.Drawing.Size(20, 20);
+            this.estrella5.TabIndex = 73;
+            // 
+            // estrella4
+            // 
+            this.estrella4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella4.ImageIndex = 0;
+            this.estrella4.ImageList = this.imgEstrellas;
+            this.estrella4.Location = new System.Drawing.Point(498, 33);
+            this.estrella4.Name = "estrella4";
+            this.estrella4.Size = new System.Drawing.Size(20, 20);
+            this.estrella4.TabIndex = 72;
+            // 
+            // estrella3
+            // 
+            this.estrella3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella3.ImageIndex = 0;
+            this.estrella3.ImageList = this.imgEstrellas;
+            this.estrella3.Location = new System.Drawing.Point(472, 33);
+            this.estrella3.Name = "estrella3";
+            this.estrella3.Size = new System.Drawing.Size(20, 20);
+            this.estrella3.TabIndex = 71;
+            // 
+            // estrella2
+            // 
+            this.estrella2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella2.ImageIndex = 0;
+            this.estrella2.ImageList = this.imgEstrellas;
+            this.estrella2.Location = new System.Drawing.Point(446, 33);
+            this.estrella2.Name = "estrella2";
+            this.estrella2.Size = new System.Drawing.Size(20, 20);
+            this.estrella2.TabIndex = 70;
+            // 
+            // estrella1
+            // 
+            this.estrella1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella1.ImageIndex = 0;
+            this.estrella1.ImageList = this.imgEstrellas;
+            this.estrella1.Location = new System.Drawing.Point(420, 33);
+            this.estrella1.Name = "estrella1";
+            this.estrella1.Size = new System.Drawing.Size(20, 20);
+            this.estrella1.TabIndex = 69;
             // 
             // tarjResenia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScrollMargin = new System.Drawing.Size(5, 5);
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(660, 150);
+            this.Controls.Add(this.estrella5);
+            this.Controls.Add(this.estrella4);
+            this.Controls.Add(this.estrella3);
+            this.Controls.Add(this.estrella2);
+            this.Controls.Add(this.estrella1);
             this.Controls.Add(this.calificacion);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.picStar5);
-            this.Controls.Add(this.picStar1);
-            this.Controls.Add(this.picStar2);
             this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.picStar4);
-            this.Controls.Add(this.picStar3);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.picUsuario);
             this.Controls.Add(this.lblDate);
@@ -212,11 +215,6 @@ namespace LP2Soft.Tarjetas
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tarjResenia";
             this.Text = "tarjResenia";
-            ((System.ComponentModel.ISupportInitialize)(this.picStar5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             this.ResumeLayout(false);
@@ -225,13 +223,7 @@ namespace LP2Soft.Tarjetas
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picStar5;
-        private System.Windows.Forms.PictureBox picStar1;
-        private System.Windows.Forms.PictureBox picStar2;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.PictureBox picStar4;
-        private System.Windows.Forms.PictureBox picStar3;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.PictureBox picUsuario;
         private System.Windows.Forms.Label lblDate;
@@ -240,5 +232,11 @@ namespace LP2Soft.Tarjetas
         private System.Windows.Forms.PictureBox btnEliminar;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label calificacion;
+        private System.Windows.Forms.ImageList imgEstrellas;
+        private System.Windows.Forms.Label estrella5;
+        private System.Windows.Forms.Label estrella4;
+        private System.Windows.Forms.Label estrella3;
+        private System.Windows.Forms.Label estrella2;
+        private System.Windows.Forms.Label estrella1;
     }
 }

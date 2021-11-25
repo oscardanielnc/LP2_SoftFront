@@ -113,7 +113,6 @@ namespace LP2Soft.Cursos
         {
             frmHome.abrirFormulario(new frmCalculadorNotas());
         }
-
     }
     
 }

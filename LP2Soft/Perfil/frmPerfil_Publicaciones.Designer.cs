@@ -29,25 +29,48 @@ namespace LP2Soft.Perfil
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelPost1 = new System.Windows.Forms.Panel();
+            this.pnPublicaciones = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnFiltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panelPost1
+            // pnPublicaciones
             // 
-            this.panelPost1.AutoSize = true;
-            this.panelPost1.Location = new System.Drawing.Point(205, 12);
-            this.panelPost1.Name = "panelPost1";
-            this.panelPost1.Size = new System.Drawing.Size(400, 244);
-            this.panelPost1.TabIndex = 0;
+            this.pnPublicaciones.AutoScroll = true;
+            this.pnPublicaciones.Location = new System.Drawing.Point(174, 83);
+            this.pnPublicaciones.Name = "pnPublicaciones";
+            this.pnPublicaciones.Size = new System.Drawing.Size(448, 473);
+            this.pnPublicaciones.TabIndex = 0;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(58, 25);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(318, 29);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Historial de Publicaciones";
+            // 
+            // btnFiltar
+            // 
+            this.btnFiltar.Location = new System.Drawing.Point(549, 24);
+            this.btnFiltar.Name = "btnFiltar";
+            this.btnFiltar.Size = new System.Drawing.Size(147, 39);
+            this.btnFiltar.TabIndex = 23;
+            this.btnFiltar.Text = "Filtrar";
+            this.btnFiltar.UseVisualStyleBackColor = true;
+            this.btnFiltar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // frmPerfil_Publicaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(799, 270);
-            this.Controls.Add(this.panelPost1);
+            this.ClientSize = new System.Drawing.Size(799, 580);
+            this.Controls.Add(this.btnFiltar);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.pnPublicaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfil_Publicaciones";
             this.Text = "frmPerfil_Publicaciones";
@@ -58,6 +81,8 @@ namespace LP2Soft.Perfil
 
         #endregion
 
-        private System.Windows.Forms.Panel panelPost1;
+        private System.Windows.Forms.Panel pnPublicaciones;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnFiltar;
     }
 }
