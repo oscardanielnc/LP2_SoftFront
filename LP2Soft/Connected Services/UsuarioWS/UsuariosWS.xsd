@@ -46,12 +46,10 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursosAsesorados">
-    <xs:sequence>
-      <xs:element name="idAsesor" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="listarCursosPostular">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarCursosAsesoradosResponse">
+  <xs:complexType name="listarCursosPostularResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
@@ -187,10 +185,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="listarCursosPostular">
-    <xs:sequence />
+  <xs:complexType name="listarCursosAsesorados">
+    <xs:sequence>
+      <xs:element name="idAsesor" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursosPostularResponse">
+  <xs:complexType name="listarCursosAsesoradosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>

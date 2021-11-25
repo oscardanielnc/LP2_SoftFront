@@ -41,6 +41,7 @@ namespace LP2Soft.Eventos
             this.lblLinkZoom = new System.Windows.Forms.Label();
             this.lblZoom = new System.Windows.Forms.Label();
             this.btnAgendarEvento = new System.Windows.Forms.Button();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.lblComentarios = new System.Windows.Forms.Label();
             this.lblLinea2 = new System.Windows.Forms.Label();
             this.lblComentar = new System.Windows.Forms.Label();
@@ -58,7 +59,7 @@ namespace LP2Soft.Eventos
             this.lblFechaHoraCreacion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelEvento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
@@ -93,18 +94,16 @@ namespace LP2Soft.Eventos
             this.panelEvento.Controls.Add(this.lblFechaHoraCreacion);
             this.panelEvento.Controls.Add(this.lblNombre);
             this.panelEvento.Controls.Add(this.pbPerfil);
-            this.panelEvento.Location = new System.Drawing.Point(16, 11);
-            this.panelEvento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelEvento.Location = new System.Drawing.Point(12, 9);
             this.panelEvento.Name = "panelEvento";
-            this.panelEvento.Size = new System.Drawing.Size(502, 801);
+            this.panelEvento.Size = new System.Drawing.Size(377, 651);
             this.panelEvento.TabIndex = 10;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(79, 89);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(59, 72);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(258, 16);
             this.lblTitulo.TabIndex = 40;
@@ -113,18 +112,16 @@ namespace LP2Soft.Eventos
             // panelComentarios
             // 
             this.panelComentarios.AutoScroll = true;
-            this.panelComentarios.Location = new System.Drawing.Point(19, 652);
-            this.panelComentarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelComentarios.Location = new System.Drawing.Point(14, 530);
             this.panelComentarios.Name = "panelComentarios";
-            this.panelComentarios.Size = new System.Drawing.Size(477, 139);
+            this.panelComentarios.Size = new System.Drawing.Size(358, 113);
             this.panelComentarios.TabIndex = 39;
             // 
             // lblHoraEvento
             // 
             this.lblHoraEvento.AutoSize = true;
             this.lblHoraEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraEvento.Location = new System.Drawing.Point(132, 272);
-            this.lblHoraEvento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHoraEvento.Location = new System.Drawing.Point(99, 221);
             this.lblHoraEvento.Name = "lblHoraEvento";
             this.lblHoraEvento.Size = new System.Drawing.Size(73, 13);
             this.lblHoraEvento.TabIndex = 38;
@@ -134,8 +131,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(68, 272);
-            this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHora.Location = new System.Drawing.Point(51, 221);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(42, 13);
             this.lblHora.TabIndex = 37;
@@ -145,8 +141,7 @@ namespace LP2Soft.Eventos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(57, 245);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(43, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 36;
@@ -156,8 +151,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblFechaEvento.AutoSize = true;
             this.lblFechaEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaEvento.Location = new System.Drawing.Point(132, 245);
-            this.lblFechaEvento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaEvento.Location = new System.Drawing.Point(99, 199);
             this.lblFechaEvento.Name = "lblFechaEvento";
             this.lblFechaEvento.Size = new System.Drawing.Size(119, 13);
             this.lblFechaEvento.TabIndex = 35;
@@ -165,10 +159,9 @@ namespace LP2Soft.Eventos
             // 
             // lblLinkZoom
             // 
-            this.lblLinkZoom.Location = new System.Drawing.Point(132, 201);
-            this.lblLinkZoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLinkZoom.Location = new System.Drawing.Point(99, 163);
             this.lblLinkZoom.Name = "lblLinkZoom";
-            this.lblLinkZoom.Size = new System.Drawing.Size(311, 39);
+            this.lblLinkZoom.Size = new System.Drawing.Size(233, 32);
             this.lblLinkZoom.TabIndex = 33;
             this.lblLinkZoom.Text = "https://pucp.zoom.us/j/95248825535?pwd=aXIyY2ZReDdIVHFOVW5jekt0alJXUT09";
             // 
@@ -176,8 +169,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblZoom.AutoSize = true;
             this.lblZoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZoom.Location = new System.Drawing.Point(25, 208);
-            this.lblZoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblZoom.Location = new System.Drawing.Point(19, 169);
             this.lblZoom.Name = "lblZoom";
             this.lblZoom.Size = new System.Drawing.Size(74, 13);
             this.lblZoom.TabIndex = 32;
@@ -190,20 +182,26 @@ namespace LP2Soft.Eventos
             this.btnAgendarEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAgendarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgendarEvento.ImageList = this.imageList2;
-            this.btnAgendarEvento.Location = new System.Drawing.Point(435, 18);
-            this.btnAgendarEvento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgendarEvento.Location = new System.Drawing.Point(326, 15);
             this.btnAgendarEvento.Name = "btnAgendarEvento";
-            this.btnAgendarEvento.Size = new System.Drawing.Size(41, 36);
+            this.btnAgendarEvento.Size = new System.Drawing.Size(31, 29);
             this.btnAgendarEvento.TabIndex = 29;
+            this.toolTip1.SetToolTip(this.btnAgendarEvento, "Agendar o Desagendar");
             this.btnAgendarEvento.UseVisualStyleBackColor = false;
             this.btnAgendarEvento.Click += new System.EventHandler(this.btnAgendarEvento_Click);
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "anadir-evento.png");
+            this.imageList2.Images.SetKeyName(1, "cancelar-evento.png");
             // 
             // lblComentarios
             // 
             this.lblComentarios.AutoSize = true;
             this.lblComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComentarios.Location = new System.Drawing.Point(15, 630);
-            this.lblComentarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblComentarios.Location = new System.Drawing.Point(11, 512);
             this.lblComentarios.Name = "lblComentarios";
             this.lblComentarios.Size = new System.Drawing.Size(148, 15);
             this.lblComentarios.TabIndex = 28;
@@ -213,18 +211,16 @@ namespace LP2Soft.Eventos
             // lblLinea2
             // 
             this.lblLinea2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLinea2.Location = new System.Drawing.Point(4, 617);
-            this.lblLinea2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLinea2.Location = new System.Drawing.Point(3, 501);
             this.lblLinea2.Name = "lblLinea2";
-            this.lblLinea2.Size = new System.Drawing.Size(494, 1);
+            this.lblLinea2.Size = new System.Drawing.Size(371, 1);
             this.lblLinea2.TabIndex = 27;
             // 
             // lblComentar
             // 
             this.lblComentar.AutoSize = true;
             this.lblComentar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComentar.Location = new System.Drawing.Point(344, 588);
-            this.lblComentar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblComentar.Location = new System.Drawing.Point(258, 478);
             this.lblComentar.Name = "lblComentar";
             this.lblComentar.Size = new System.Drawing.Size(61, 15);
             this.lblComentar.TabIndex = 26;
@@ -237,10 +233,9 @@ namespace LP2Soft.Eventos
             this.btnComentar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnComentar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnComentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComentar.Location = new System.Drawing.Point(299, 585);
-            this.btnComentar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnComentar.Location = new System.Drawing.Point(224, 475);
             this.btnComentar.Name = "btnComentar";
-            this.btnComentar.Size = new System.Drawing.Size(35, 28);
+            this.btnComentar.Size = new System.Drawing.Size(26, 23);
             this.btnComentar.TabIndex = 25;
             this.btnComentar.UseVisualStyleBackColor = false;
             this.btnComentar.Click += new System.EventHandler(this.btnComentar_Click);
@@ -249,8 +244,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblMeGusta.AutoSize = true;
             this.lblMeGusta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMeGusta.Location = new System.Drawing.Point(107, 590);
-            this.lblMeGusta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMeGusta.Location = new System.Drawing.Point(80, 479);
             this.lblMeGusta.Name = "lblMeGusta";
             this.lblMeGusta.Size = new System.Drawing.Size(58, 15);
             this.lblMeGusta.TabIndex = 24;
@@ -264,10 +258,9 @@ namespace LP2Soft.Eventos
             this.btnMeGusta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMeGusta.ImageIndex = 0;
             this.btnMeGusta.ImageList = this.imageList1;
-            this.btnMeGusta.Location = new System.Drawing.Point(64, 585);
-            this.btnMeGusta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMeGusta.Location = new System.Drawing.Point(48, 475);
             this.btnMeGusta.Name = "btnMeGusta";
-            this.btnMeGusta.Size = new System.Drawing.Size(35, 28);
+            this.btnMeGusta.Size = new System.Drawing.Size(26, 23);
             this.btnMeGusta.TabIndex = 23;
             this.btnMeGusta.UseVisualStyleBackColor = false;
             this.btnMeGusta.Click += new System.EventHandler(this.btnMeGusta_Click);
@@ -286,10 +279,9 @@ namespace LP2Soft.Eventos
             this.btnComentarEstatico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnComentarEstatico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnComentarEstatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComentarEstatico.Location = new System.Drawing.Point(388, 549);
-            this.btnComentarEstatico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnComentarEstatico.Location = new System.Drawing.Point(291, 446);
             this.btnComentarEstatico.Name = "btnComentarEstatico";
-            this.btnComentarEstatico.Size = new System.Drawing.Size(35, 26);
+            this.btnComentarEstatico.Size = new System.Drawing.Size(26, 21);
             this.btnComentarEstatico.TabIndex = 22;
             this.btnComentarEstatico.UseVisualStyleBackColor = false;
             // 
@@ -297,8 +289,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblCantidadComentarios.AutoSize = true;
             this.lblCantidadComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadComentarios.Location = new System.Drawing.Point(431, 550);
-            this.lblCantidadComentarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantidadComentarios.Location = new System.Drawing.Point(323, 447);
             this.lblCantidadComentarios.Name = "lblCantidadComentarios";
             this.lblCantidadComentarios.Size = new System.Drawing.Size(21, 15);
             this.lblCantidadComentarios.TabIndex = 21;
@@ -308,8 +299,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblCantidadLikes.AutoSize = true;
             this.lblCantidadLikes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadLikes.Location = new System.Drawing.Point(68, 550);
-            this.lblCantidadLikes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantidadLikes.Location = new System.Drawing.Point(51, 447);
             this.lblCantidadLikes.Name = "lblCantidadLikes";
             this.lblCantidadLikes.Size = new System.Drawing.Size(21, 15);
             this.lblCantidadLikes.TabIndex = 20;
@@ -322,29 +312,26 @@ namespace LP2Soft.Eventos
             this.btnMeGustaEstatico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMeGustaEstatico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnMeGustaEstatico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMeGustaEstatico.Location = new System.Drawing.Point(29, 549);
-            this.btnMeGustaEstatico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMeGustaEstatico.Location = new System.Drawing.Point(22, 446);
             this.btnMeGustaEstatico.Name = "btnMeGustaEstatico";
-            this.btnMeGustaEstatico.Size = new System.Drawing.Size(31, 23);
+            this.btnMeGustaEstatico.Size = new System.Drawing.Size(23, 19);
             this.btnMeGustaEstatico.TabIndex = 18;
             this.btnMeGustaEstatico.UseVisualStyleBackColor = false;
             // 
             // lblLinea1
             // 
             this.lblLinea1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLinea1.Location = new System.Drawing.Point(4, 576);
-            this.lblLinea1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLinea1.Location = new System.Drawing.Point(3, 468);
             this.lblLinea1.Name = "lblLinea1";
-            this.lblLinea1.Size = new System.Drawing.Size(494, 1);
+            this.lblLinea1.Size = new System.Drawing.Size(371, 1);
             this.lblLinea1.TabIndex = 17;
             // 
             // pbImagen
             // 
             this.pbImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbImagen.Location = new System.Drawing.Point(72, 306);
-            this.pbImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbImagen.Location = new System.Drawing.Point(54, 249);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(353, 228);
+            this.pbImagen.Size = new System.Drawing.Size(265, 186);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 16;
             this.pbImagen.TabStop = false;
@@ -352,11 +339,10 @@ namespace LP2Soft.Eventos
             // txtDescripcionEvento
             // 
             this.txtDescripcionEvento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcionEvento.Location = new System.Drawing.Point(41, 119);
-            this.txtDescripcionEvento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcionEvento.Location = new System.Drawing.Point(31, 97);
             this.txtDescripcionEvento.Multiline = true;
             this.txtDescripcionEvento.Name = "txtDescripcionEvento";
-            this.txtDescripcionEvento.Size = new System.Drawing.Size(407, 65);
+            this.txtDescripcionEvento.Size = new System.Drawing.Size(305, 53);
             this.txtDescripcionEvento.TabIndex = 15;
             this.txtDescripcionEvento.Text = "El taller de programación";
             // 
@@ -364,8 +350,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblFechaHoraCreacion.AutoSize = true;
             this.lblFechaHoraCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHoraCreacion.Location = new System.Drawing.Point(107, 57);
-            this.lblFechaHoraCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaHoraCreacion.Location = new System.Drawing.Point(80, 46);
             this.lblFechaHoraCreacion.Name = "lblFechaHoraCreacion";
             this.lblFechaHoraCreacion.Size = new System.Drawing.Size(110, 15);
             this.lblFechaHoraCreacion.TabIndex = 11;
@@ -375,8 +360,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(107, 18);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(80, 15);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(123, 16);
             this.lblNombre.TabIndex = 9;
@@ -385,29 +369,20 @@ namespace LP2Soft.Eventos
             // pbPerfil
             // 
             this.pbPerfil.Image = global::LP2Soft.Properties.Resources.images;
-            this.pbPerfil.Location = new System.Drawing.Point(19, 18);
-            this.pbPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbPerfil.Location = new System.Drawing.Point(14, 15);
             this.pbPerfil.Name = "pbPerfil";
-            this.pbPerfil.Size = new System.Drawing.Size(67, 57);
+            this.pbPerfil.Size = new System.Drawing.Size(50, 46);
             this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPerfil.TabIndex = 4;
             this.pbPerfil.TabStop = false;
             // 
-            // imageList2
-            // 
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "anadir-evento.png");
-            this.imageList2.Images.SetKeyName(1, "cancelar-evento.png");
-            // 
             // frmPostEvento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 817);
+            this.ClientSize = new System.Drawing.Size(401, 664);
             this.Controls.Add(this.panelEvento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPostEvento";
             this.Text = "frmPostEvento";
             this.panelEvento.ResumeLayout(false);
@@ -448,5 +423,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

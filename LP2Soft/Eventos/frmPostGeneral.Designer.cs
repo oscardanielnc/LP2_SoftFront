@@ -50,6 +50,7 @@ namespace LP2Soft.Eventos
             this.lblFechaHoraCreacion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelPostGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +92,7 @@ namespace LP2Soft.Eventos
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(31, 29);
             this.btnModificar.TabIndex = 30;
+            this.toolTip1.SetToolTip(this.btnModificar, "Eliminar o Modificar\r\n\r\n");
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
@@ -307,5 +309,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Panel panelComentarios;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
