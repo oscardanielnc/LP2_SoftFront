@@ -36,6 +36,7 @@ namespace LP2Soft.Perfil
             // 
             // pnPublicaciones
             // 
+            this.pnPublicaciones.AutoSize = true;
             this.pnPublicaciones.Location = new System.Drawing.Point(205, 95);
             this.pnPublicaciones.Name = "pnPublicaciones";
             this.pnPublicaciones.Size = new System.Drawing.Size(400, 161);
