@@ -34,11 +34,11 @@ namespace LP2Soft.Eventos
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAgendarEvento = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtDescripcionEvento = new System.Windows.Forms.TextBox();
+            this.lblNombreEvento = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.lblNombreEvento = new System.Windows.Forms.Label();
-            this.txtDescripcionEvento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,7 @@ namespace LP2Soft.Eventos
             this.btnAgendarEvento.BackColor = System.Drawing.Color.Transparent;
             this.btnAgendarEvento.BackgroundImage = global::LP2Soft.Properties.Resources.anadir_evento;
             this.btnAgendarEvento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgendarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgendarEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAgendarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgendarEvento.Location = new System.Drawing.Point(242, 3);
@@ -101,6 +102,25 @@ namespace LP2Soft.Eventos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(269, 203);
             this.panel2.TabIndex = 12;
+            // 
+            // txtDescripcionEvento
+            // 
+            this.txtDescripcionEvento.Location = new System.Drawing.Point(20, 130);
+            this.txtDescripcionEvento.Multiline = true;
+            this.txtDescripcionEvento.Name = "txtDescripcionEvento";
+            this.txtDescripcionEvento.Size = new System.Drawing.Size(233, 61);
+            this.txtDescripcionEvento.TabIndex = 35;
+            this.txtDescripcionEvento.Text = "No te pierdas este 31 de Octubre ...";
+            // 
+            // lblNombreEvento
+            // 
+            this.lblNombreEvento.AutoSize = true;
+            this.lblNombreEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEvento.Location = new System.Drawing.Point(41, 55);
+            this.lblNombreEvento.Name = "lblNombreEvento";
+            this.lblNombreEvento.Size = new System.Drawing.Size(198, 16);
+            this.lblNombreEvento.TabIndex = 34;
+            this.lblNombreEvento.Text = "Fiesta de Halloween en FCI";
             // 
             // label1
             // 
@@ -129,25 +149,6 @@ namespace LP2Soft.Eventos
             this.lblFecha.Size = new System.Drawing.Size(40, 13);
             this.lblFecha.TabIndex = 31;
             this.lblFecha.Text = "Fecha:";
-            // 
-            // lblNombreEvento
-            // 
-            this.lblNombreEvento.AutoSize = true;
-            this.lblNombreEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEvento.Location = new System.Drawing.Point(41, 55);
-            this.lblNombreEvento.Name = "lblNombreEvento";
-            this.lblNombreEvento.Size = new System.Drawing.Size(198, 16);
-            this.lblNombreEvento.TabIndex = 34;
-            this.lblNombreEvento.Text = "Fiesta de Halloween en FCI";
-            // 
-            // txtDescripcionEvento
-            // 
-            this.txtDescripcionEvento.Location = new System.Drawing.Point(20, 130);
-            this.txtDescripcionEvento.Multiline = true;
-            this.txtDescripcionEvento.Name = "txtDescripcionEvento";
-            this.txtDescripcionEvento.Size = new System.Drawing.Size(233, 61);
-            this.txtDescripcionEvento.TabIndex = 35;
-            this.txtDescripcionEvento.Text = "No te pierdas este 31 de Octubre ...";
             // 
             // frmEventoProximo
             // 

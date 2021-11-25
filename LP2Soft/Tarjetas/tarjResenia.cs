@@ -18,9 +18,11 @@ namespace LP2Soft.Tarjetas
         private CursosWS.CursosWSClient _daoReseniaC;
         private UsuarioWS.resenia _resenia;
         private CursosWS.resenia _reseniaC;
+        private UsuarioWS.usuario _usuarioAsesor;
+        private CursosWS.profesor _profesor;
 
         private BindingList<Label> _estrellas;
-        public tarjResenia(UsuarioWS.resenia re)
+        public tarjResenia(UsuarioWS.resenia re, UsuarioWS.usuario usuarioAsesor)
         {
             InitializeComponent();
             _estrellas = new BindingList<Label>();
@@ -31,6 +33,7 @@ namespace LP2Soft.Tarjetas
             _estrellas.Add(estrella5);
 
             _resenia = re;
+            _usuarioAsesor = usuarioAsesor;
             _daoResenia = new UsuarioWS.UsuariosWSClient();
             btnEliminar.Visible = false;
             if (re.usuario.foto != null)
@@ -52,9 +55,17 @@ namespace LP2Soft.Tarjetas
             }
         }
 
-        public tarjResenia(CursosWS.resenia re)
+        public tarjResenia(CursosWS.resenia re, CursosWS.profesor profesor)
         {
             InitializeComponent();
+            _estrellas = new BindingList<Label>();
+            _estrellas.Add(estrella1);
+            _estrellas.Add(estrella2);
+            _estrellas.Add(estrella3);
+            _estrellas.Add(estrella4);
+            _estrellas.Add(estrella5);
+
+            _profesor = profesor;
             _reseniaC = re;
             _daoReseniaC = new CursosWS.CursosWSClient();
             btnEliminar.Visible = false;
@@ -68,7 +79,9 @@ namespace LP2Soft.Tarjetas
             lblDate.Text = re.fechaRegistro.ToString("yyyy-MM-dd HH:mm:ss");
             lblAsesor.Text = re.profesor.nombre;
             label1.Text = "Profesor: ";
-            calificacion.Text = re.calificacion.ToString();
+            pintarEstrellas(re.calificacion);
+
+            calificacion.Text = re.calificacion.ToString("0.00");
             if (frmHome.Usuario.idUsuario == re.usuario.idUsuario)
             {
                 btnEliminar.Visible = true;
@@ -82,9 +95,18 @@ namespace LP2Soft.Tarjetas
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 if (_resenia != null)
+                {
                     _daoResenia.eliminarReseniaAsesor(_resenia.idPost);
+                    _usuarioAsesor.asesor.cantidadResenias--;
+                    _usuarioAsesor.asesor.sumatoriaResenias -= _resenia.calificacion;
+                }
                 else
+                {
                     _daoReseniaC.eliminarReseniasProfesor(_reseniaC.idPost);
+                    _profesor.cantidadResenias--;
+                    _profesor.sumatoriaResenias -= _reseniaC.calificacion;
+                }
+                this.Visible = false;
             }
         }
         private void pintarEstrellas(float nEstrellas)

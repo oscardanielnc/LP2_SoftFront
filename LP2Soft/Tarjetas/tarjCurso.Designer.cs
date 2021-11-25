@@ -44,6 +44,7 @@ namespace LP2Soft.Tarjetas
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(43, 4);
             this.lblCodigo.Name = "lblCodigo";
@@ -54,6 +55,7 @@ namespace LP2Soft.Tarjetas
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(10, 30);
             this.lblNombre.MaximumSize = new System.Drawing.Size(123, 0);
@@ -65,6 +67,7 @@ namespace LP2Soft.Tarjetas
             // lblCreditos
             // 
             this.lblCreditos.AutoSize = true;
+            this.lblCreditos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreditos.Location = new System.Drawing.Point(55, 76);
             this.lblCreditos.Name = "lblCreditos";
@@ -115,6 +118,7 @@ namespace LP2Soft.Tarjetas
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnNewState);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tarjCurso";
             this.Text = "tarjeta";

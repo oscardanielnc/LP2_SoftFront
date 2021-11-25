@@ -35,7 +35,6 @@ namespace LP2Soft.Mensajes
         }
         private void actualizarMensajes()
         {
-            frmPrincipal.startLoading();
             try
             {
                 _mensajes = new BindingList<NotificacionesWS.mensaje>(
@@ -52,7 +51,6 @@ namespace LP2Soft.Mensajes
                 lblInfo.Visible = true;
                 lblInfo.Text = "Usted aún no tiene ningún mensaje con este usuario. Pruebe decir 'Hola :D' ";
             }
-            frmPrincipal.endLoading();
         }
 
         private void btnEnviarMensaje_Click(object sender, EventArgs e)
@@ -121,7 +119,9 @@ namespace LP2Soft.Mensajes
 
         private void btnRecargar_Click(object sender, EventArgs e)
         {
-            actualizarMensajes();
+            frmPrincipal.startLoading();
+            frmHome.abrirFormulario(new frmMensajeChat(_amigo));
+            frmPrincipal.endLoading();
         }
     }
 }

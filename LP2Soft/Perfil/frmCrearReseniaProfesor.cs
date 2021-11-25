@@ -63,6 +63,7 @@ namespace LP2Soft.Perfil
                 }
                 int resultado = _daoProfesor.insertarReseniaProfesor(_resenia);
                 Console.WriteLine(resultado);
+                _resenia.idPost = resultado;
                 _profesor.cantidadResenias++;
                 _profesor.sumatoriaResenias += _calificacion;
                 this.DialogResult = DialogResult.OK;

@@ -120,27 +120,35 @@ namespace LP2Soft.Eventos
             int resultado;
             if (btnAgendarEvento.ImageIndex == 0)
             {
-                btnAgendarEvento.ImageIndex = 1;
-                resultado=_daoPost.agendarEvento(_evento.idPost,frmHome.Usuario.idUsuario);
-                if (resultado == 0)
+                DialogResult result = MessageBox.Show("¿Está seguro que desea agendar este evento?",
+                "Confirmación", MessageBoxButtons.YesNo);
+                if (result == System.Windows.Forms.DialogResult.Yes)
                 {
-                    MessageBox.Show("Error al agendar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnAgendarEvento.ImageIndex = 1;
+                    resultado=_daoPost.agendarEvento(_evento.idPost,frmHome.Usuario.idUsuario);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("Error al agendar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else 
             {
-                btnAgendarEvento.ImageIndex = 0;
-                resultado=_daoPost.desagendarEvento(_evento.idPost, frmHome.Usuario.idUsuario);
-                
-                if (_formEventosA != null)
+                DialogResult result = MessageBox.Show("¿Está seguro que desea desagendar este evento?",
+                "Confirmación", MessageBoxButtons.YesNo);
+                if (result == System.Windows.Forms.DialogResult.Yes)
                 {
-                    _formEventosA.actualizarCalendario(_evento.fechaDelEvento);
-                    this.Visible = false;
-                }
-
-                if (resultado == 0)
-                {
-                    MessageBox.Show("Error al desagendar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnAgendarEvento.ImageIndex = 0;
+                    resultado=_daoPost.desagendarEvento(_evento.idPost, frmHome.Usuario.idUsuario);
+                    if (_formEventosA != null)
+                    {
+                        _formEventosA.actualizarCalendario(_evento.fechaDelEvento);
+                        this.Visible = false;
+                    }
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("Error al desagendar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

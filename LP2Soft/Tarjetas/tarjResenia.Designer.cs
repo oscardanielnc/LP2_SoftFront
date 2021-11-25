@@ -144,7 +144,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella5
             // 
-            this.estrella5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella5.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella5.ImageIndex = 0;
             this.estrella5.ImageList = this.imgEstrellas;
             this.estrella5.Location = new System.Drawing.Point(524, 34);
@@ -154,7 +154,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella4
             // 
-            this.estrella4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella4.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella4.ImageIndex = 0;
             this.estrella4.ImageList = this.imgEstrellas;
             this.estrella4.Location = new System.Drawing.Point(498, 33);
@@ -164,7 +164,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella3
             // 
-            this.estrella3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella3.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella3.ImageIndex = 0;
             this.estrella3.ImageList = this.imgEstrellas;
             this.estrella3.Location = new System.Drawing.Point(472, 33);
@@ -174,7 +174,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella2
             // 
-            this.estrella2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella2.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella2.ImageIndex = 0;
             this.estrella2.ImageList = this.imgEstrellas;
             this.estrella2.Location = new System.Drawing.Point(446, 33);
@@ -184,7 +184,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella1
             // 
-            this.estrella1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estrella1.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella1.ImageIndex = 0;
             this.estrella1.ImageList = this.imgEstrellas;
             this.estrella1.Location = new System.Drawing.Point(420, 33);

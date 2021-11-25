@@ -64,7 +64,7 @@ namespace LP2Soft.Profesor
 
         private void agregarResenia(CursosWS.resenia re)
         {
-            tarjResenia tProfesor = new tarjResenia(re);
+            tarjResenia tProfesor = new tarjResenia(re, _profesor);
             tProfesor.TopLevel = false;
             tProfesor.Dock = DockStyle.Top;
             panelResenias.Controls.Add(tProfesor);

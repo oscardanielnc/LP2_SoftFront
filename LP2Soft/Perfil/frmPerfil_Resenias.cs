@@ -67,7 +67,7 @@ namespace LP2Soft.Perfil
         }
         private void agregarResenia(UsuarioWS.resenia re)
         {
-            tarjResenia tUsuario = new tarjResenia(re);
+            tarjResenia tUsuario = new tarjResenia(re, _asesor);
             tUsuario.TopLevel = false;
             tUsuario.Dock = DockStyle.Top;
             panelResenias.Controls.Add(tUsuario);
