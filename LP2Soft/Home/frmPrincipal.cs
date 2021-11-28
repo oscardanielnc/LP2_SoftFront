@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace LP2Soft.Home
 {
@@ -20,12 +21,15 @@ namespace LP2Soft.Home
         private static Form _formActivo = null;
         private static Panel _panelPrincipal = null;
         private static Loading _loading;
+        private static Thread _hilo = null;
 
         public static void startLoading()
         {
-            if(_loading==null)
+            if (_loading==null)
             {
                 _loading = new Loading();
+                _hilo = new Thread(_loading.run);
+                _hilo.Start();
                 _loading.Show();
             }
         }

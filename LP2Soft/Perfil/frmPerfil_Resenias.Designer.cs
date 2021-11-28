@@ -30,8 +30,8 @@ namespace LP2Soft.Perfil
         private void InitializeComponent()
         {
             this.panelResenias = new System.Windows.Forms.Panel();
-            this.btnReseniar = new LP2Soft.Asesor.BotonChevere();
             this.lblNoresenia = new System.Windows.Forms.Label();
+            this.btnReseniar = new LP2Soft.Asesor.BotonChevere();
             this.lblNoAsesor = new System.Windows.Forms.Label();
             this.panelResenias.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +47,16 @@ namespace LP2Soft.Perfil
             this.panelResenias.Name = "panelResenias";
             this.panelResenias.Size = new System.Drawing.Size(709, 191);
             this.panelResenias.TabIndex = 43;
+            // 
+            // lblNoresenia
+            // 
+            this.lblNoresenia.AutoSize = true;
+            this.lblNoresenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoresenia.Location = new System.Drawing.Point(13, 11);
+            this.lblNoresenia.Name = "lblNoresenia";
+            this.lblNoresenia.Size = new System.Drawing.Size(567, 20);
+            this.lblNoresenia.TabIndex = 44;
+            this.lblNoresenia.Text = "Este Usuario no cuenta con reseñas aún. ¡Sé el primero en reseñarlo!";
             // 
             // btnReseniar
             // 
@@ -67,16 +77,6 @@ namespace LP2Soft.Perfil
             this.btnReseniar.TextColor = System.Drawing.Color.White;
             this.btnReseniar.UseVisualStyleBackColor = false;
             this.btnReseniar.Click += new System.EventHandler(this.btnReseniar_Click);
-            // 
-            // lblNoresenia
-            // 
-            this.lblNoresenia.AutoSize = true;
-            this.lblNoresenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoresenia.Location = new System.Drawing.Point(13, 11);
-            this.lblNoresenia.Name = "lblNoresenia";
-            this.lblNoresenia.Size = new System.Drawing.Size(336, 20);
-            this.lblNoresenia.TabIndex = 44;
-            this.lblNoresenia.Text = "Este Usuario no cuenta con reseñas aún";
             // 
             // lblNoAsesor
             // 

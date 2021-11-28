@@ -49,7 +49,6 @@ namespace LP2Soft.Cursos
             this.label3 = new System.Windows.Forms.Label();
             this.lblVerde = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnGrabar = new System.Windows.Forms.Button();
             this.lblCreditos = new System.Windows.Forms.Label();
             this.lblCreditosInfo = new System.Windows.Forms.Label();
             this.btnCaclculadorNotas = new System.Windows.Forms.Button();
@@ -249,7 +248,6 @@ namespace LP2Soft.Cursos
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnGrabar);
             this.panel2.Controls.Add(this.lblCreditos);
             this.panel2.Controls.Add(this.lblCreditosInfo);
             this.panel2.Controls.Add(this.btnCaclculadorNotas);
@@ -267,15 +265,6 @@ namespace LP2Soft.Cursos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(807, 466);
             this.panel2.TabIndex = 24;
-            // 
-            // btnGrabar
-            // 
-            this.btnGrabar.Location = new System.Drawing.Point(472, 24);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(65, 23);
-            this.btnGrabar.TabIndex = 27;
-            this.btnGrabar.Text = "Grabar";
-            this.btnGrabar.UseVisualStyleBackColor = true;
             // 
             // lblCreditos
             // 
@@ -345,7 +334,6 @@ namespace LP2Soft.Cursos
         private System.Windows.Forms.Button btnCiclo3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCaclculadorNotas;
-        private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Label lblCreditos;
         private System.Windows.Forms.Label lblCreditosInfo;
     }

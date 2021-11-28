@@ -57,8 +57,7 @@ namespace LP2Soft.Profesor
             }
             catch (Exception ex)
             {
-                MessageBox.Show("El profesor no cuenta con reseñas por el momento", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblNoResenias.Visible = true;
             }
         }
 
