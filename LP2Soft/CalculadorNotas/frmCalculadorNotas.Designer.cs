@@ -30,7 +30,11 @@ namespace LP2Soft.CalculadorNotas
         private void InitializeComponent()
         {
             this.panelDetalles = new System.Windows.Forms.Panel();
+            this.cboNombre = new System.Windows.Forms.ComboBox();
+            this.btnLimpiar = new LP2Soft.Asesor.BotonChevere();
             this.checkBoxEliminarNotaBaja = new System.Windows.Forms.CheckBox();
+            this.btnCalcular = new LP2Soft.Asesor.BotonChevere();
+            this.btnAgregar = new LP2Soft.Asesor.BotonChevere();
             this.lblNotaMinima = new System.Windows.Forms.Label();
             this.lblNotaMin = new System.Windows.Forms.Label();
             this.lblPromedio = new System.Windows.Forms.Label();
@@ -43,10 +47,6 @@ namespace LP2Soft.CalculadorNotas
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCalculadorNotas = new System.Windows.Forms.Label();
             this.panelNotas = new System.Windows.Forms.Panel();
-            this.cboNombre = new System.Windows.Forms.ComboBox();
-            this.btnLimpiar = new LP2Soft.Asesor.BotonChevere();
-            this.btnCalcular = new LP2Soft.Asesor.BotonChevere();
-            this.btnAgregar = new LP2Soft.Asesor.BotonChevere();
             this.panelDetalles.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,41 @@ namespace LP2Soft.CalculadorNotas
             this.panelDetalles.Size = new System.Drawing.Size(720, 164);
             this.panelDetalles.TabIndex = 16;
             // 
+            // cboNombre
+            // 
+            this.cboNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNombre.FormattingEnabled = true;
+            this.cboNombre.Items.AddRange(new object[] {
+            "Examen Parcial",
+            "Laboratorios",
+            "Prácticas",
+            "Trabajo académico",
+            "Otros"});
+            this.cboNombre.Location = new System.Drawing.Point(15, 43);
+            this.cboNombre.Name = "cboNombre";
+            this.cboNombre.Size = new System.Drawing.Size(250, 23);
+            this.cboNombre.TabIndex = 22;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnLimpiar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnLimpiar.BorderRadius = 6;
+            this.btnLimpiar.BorderSize = 0;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(465, 124);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(69, 30);
+            this.btnLimpiar.TabIndex = 34;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextColor = System.Drawing.Color.White;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // checkBoxEliminarNotaBaja
             // 
             this.checkBoxEliminarNotaBaja.AutoSize = true;
@@ -83,6 +118,46 @@ namespace LP2Soft.CalculadorNotas
             this.checkBoxEliminarNotaBaja.Size = new System.Drawing.Size(15, 14);
             this.checkBoxEliminarNotaBaja.TabIndex = 33;
             this.checkBoxEliminarNotaBaja.UseVisualStyleBackColor = true;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.White;
+            this.btnCalcular.BackgroundColor = System.Drawing.Color.White;
+            this.btnCalcular.BorderColor = System.Drawing.Color.White;
+            this.btnCalcular.BorderRadius = 6;
+            this.btnCalcular.BorderSize = 0;
+            this.btnCalcular.FlatAppearance.BorderSize = 0;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.ForeColor = System.Drawing.Color.Black;
+            this.btnCalcular.Location = new System.Drawing.Point(330, 124);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(69, 30);
+            this.btnCalcular.TabIndex = 32;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.TextColor = System.Drawing.Color.Black;
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnAgregar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnAgregar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnAgregar.BorderRadius = 6;
+            this.btnAgregar.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(196, 124);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(69, 30);
+            this.btnAgregar.TabIndex = 31;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextColor = System.Drawing.Color.White;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblNotaMinima
             // 
@@ -208,80 +283,6 @@ namespace LP2Soft.CalculadorNotas
             this.panelNotas.Name = "panelNotas";
             this.panelNotas.Size = new System.Drawing.Size(720, 225);
             this.panelNotas.TabIndex = 17;
-            // 
-            // cboNombre
-            // 
-            this.cboNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboNombre.FormattingEnabled = true;
-            this.cboNombre.Items.AddRange(new object[] {
-            "Examen Parcial",
-            "Laboratorios",
-            "Prácticas",
-            "Otros"});
-            this.cboNombre.Location = new System.Drawing.Point(15, 43);
-            this.cboNombre.Name = "cboNombre";
-            this.cboNombre.Size = new System.Drawing.Size(250, 23);
-            this.cboNombre.TabIndex = 22;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnLimpiar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnLimpiar.BorderRadius = 6;
-            this.btnLimpiar.BorderSize = 0;
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(465, 124);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(69, 30);
-            this.btnLimpiar.TabIndex = 34;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.TextColor = System.Drawing.Color.White;
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // btnCalcular
-            // 
-            this.btnCalcular.BackColor = System.Drawing.Color.White;
-            this.btnCalcular.BackgroundColor = System.Drawing.Color.White;
-            this.btnCalcular.BorderColor = System.Drawing.Color.White;
-            this.btnCalcular.BorderRadius = 6;
-            this.btnCalcular.BorderSize = 0;
-            this.btnCalcular.FlatAppearance.BorderSize = 0;
-            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.ForeColor = System.Drawing.Color.Black;
-            this.btnCalcular.Location = new System.Drawing.Point(330, 124);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(69, 30);
-            this.btnCalcular.TabIndex = 32;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.TextColor = System.Drawing.Color.Black;
-            this.btnCalcular.UseVisualStyleBackColor = false;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnAgregar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnAgregar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnAgregar.BorderRadius = 6;
-            this.btnAgregar.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(196, 124);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(69, 30);
-            this.btnAgregar.TabIndex = 31;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextColor = System.Drawing.Color.White;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmCalculadorNotas
             // 
