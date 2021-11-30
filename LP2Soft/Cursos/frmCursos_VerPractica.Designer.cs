@@ -42,9 +42,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pBLP2Practica2Compartir = new System.Windows.Forms.PictureBox();
-            this.pBLP2Practica3Compartir = new System.Windows.Forms.PictureBox();
-            this.pBLP2Practica1Compartir = new System.Windows.Forms.PictureBox();
             this.pBLP2Practica3Descargar = new System.Windows.Forms.PictureBox();
             this.pBLP2Practica2Descargar = new System.Windows.Forms.PictureBox();
             this.pBLP2Practica1Descargar = new System.Windows.Forms.PictureBox();
@@ -55,26 +52,26 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnLP2Practicas2 = new System.Windows.Forms.Button();
             this.btnLP2Practicas1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnLLP2Practica2Filtrar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pBFiltro = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia4 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia1 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia3 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.botonChevere3 = new LP2Soft.Asesor.BotonChevere();
+            this.botonChevere2 = new LP2Soft.Asesor.BotonChevere();
+            this.btnPractica = new LP2Soft.Asesor.BotonChevere();
+            this.botonChevere1 = new LP2Soft.Asesor.BotonChevere();
+            this.btnRCiclo = new LP2Soft.Asesor.BotonChevere();
+            this.btnRMaterial = new LP2Soft.Asesor.BotonChevere();
             this.panelLP2Practicas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica2Compartir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica3Compartir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica1Compartir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica3Descargar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica2Descargar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica1Descargar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBFiltro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia3)).BeginInit();
@@ -133,7 +130,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             // 
             // btnLLP2Practica2AgregarMaterial
             // 
-            this.btnLLP2Practica2AgregarMaterial.Location = new System.Drawing.Point(167, 98);
+            this.btnLLP2Practica2AgregarMaterial.Location = new System.Drawing.Point(12, 98);
             this.btnLLP2Practica2AgregarMaterial.Name = "btnLLP2Practica2AgregarMaterial";
             this.btnLLP2Practica2AgregarMaterial.Size = new System.Drawing.Size(143, 35);
             this.btnLLP2Practica2AgregarMaterial.TabIndex = 34;
@@ -177,9 +174,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.panelLP2Practicas.Controls.Add(this.pictureBox3);
             this.panelLP2Practicas.Controls.Add(this.pictureBox2);
             this.panelLP2Practicas.Controls.Add(this.pictureBox1);
-            this.panelLP2Practicas.Controls.Add(this.pBLP2Practica2Compartir);
-            this.panelLP2Practicas.Controls.Add(this.pBLP2Practica3Compartir);
-            this.panelLP2Practicas.Controls.Add(this.pBLP2Practica1Compartir);
             this.panelLP2Practicas.Controls.Add(this.pBLP2Practica3Descargar);
             this.panelLP2Practicas.Controls.Add(this.pBLP2Practica2Descargar);
             this.panelLP2Practicas.Controls.Add(this.pBLP2Practica1Descargar);
@@ -230,46 +224,10 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
-            // pBLP2Practica2Compartir
-            // 
-            this.pBLP2Practica2Compartir.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.pBLP2Practica2Compartir.Location = new System.Drawing.Point(755, 45);
-            this.pBLP2Practica2Compartir.Name = "pBLP2Practica2Compartir";
-            this.pBLP2Practica2Compartir.Size = new System.Drawing.Size(24, 24);
-            this.pBLP2Practica2Compartir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pBLP2Practica2Compartir.TabIndex = 46;
-            this.pBLP2Practica2Compartir.TabStop = false;
-            this.pBLP2Practica2Compartir.Visible = false;
-            this.pBLP2Practica2Compartir.Click += new System.EventHandler(this.pBLP2Practica2Compartir_Click);
-            // 
-            // pBLP2Practica3Compartir
-            // 
-            this.pBLP2Practica3Compartir.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.pBLP2Practica3Compartir.Location = new System.Drawing.Point(755, 85);
-            this.pBLP2Practica3Compartir.Name = "pBLP2Practica3Compartir";
-            this.pBLP2Practica3Compartir.Size = new System.Drawing.Size(24, 24);
-            this.pBLP2Practica3Compartir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pBLP2Practica3Compartir.TabIndex = 45;
-            this.pBLP2Practica3Compartir.TabStop = false;
-            this.pBLP2Practica3Compartir.Visible = false;
-            this.pBLP2Practica3Compartir.Click += new System.EventHandler(this.pBLP2Practica3Compartir_Click);
-            // 
-            // pBLP2Practica1Compartir
-            // 
-            this.pBLP2Practica1Compartir.Image = global::LP2Soft.Properties.Resources.share_alt_regular_24;
-            this.pBLP2Practica1Compartir.Location = new System.Drawing.Point(755, 5);
-            this.pBLP2Practica1Compartir.Name = "pBLP2Practica1Compartir";
-            this.pBLP2Practica1Compartir.Size = new System.Drawing.Size(24, 24);
-            this.pBLP2Practica1Compartir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pBLP2Practica1Compartir.TabIndex = 40;
-            this.pBLP2Practica1Compartir.TabStop = false;
-            this.pBLP2Practica1Compartir.Visible = false;
-            this.pBLP2Practica1Compartir.Click += new System.EventHandler(this.pBLP2Practica1Compartir_Click);
-            // 
             // pBLP2Practica3Descargar
             // 
             this.pBLP2Practica3Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.pBLP2Practica3Descargar.Location = new System.Drawing.Point(725, 85);
+            this.pBLP2Practica3Descargar.Location = new System.Drawing.Point(756, 85);
             this.pBLP2Practica3Descargar.Name = "pBLP2Practica3Descargar";
             this.pBLP2Practica3Descargar.Size = new System.Drawing.Size(24, 24);
             this.pBLP2Practica3Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -281,7 +239,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             // pBLP2Practica2Descargar
             // 
             this.pBLP2Practica2Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.pBLP2Practica2Descargar.Location = new System.Drawing.Point(725, 45);
+            this.pBLP2Practica2Descargar.Location = new System.Drawing.Point(756, 45);
             this.pBLP2Practica2Descargar.Name = "pBLP2Practica2Descargar";
             this.pBLP2Practica2Descargar.Size = new System.Drawing.Size(24, 24);
             this.pBLP2Practica2Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -293,7 +251,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             // pBLP2Practica1Descargar
             // 
             this.pBLP2Practica1Descargar.Image = global::LP2Soft.Properties.Resources.download_regular_24;
-            this.pBLP2Practica1Descargar.Location = new System.Drawing.Point(725, 5);
+            this.pBLP2Practica1Descargar.Location = new System.Drawing.Point(756, 5);
             this.pBLP2Practica1Descargar.Name = "pBLP2Practica1Descargar";
             this.pBLP2Practica1Descargar.Size = new System.Drawing.Size(24, 24);
             this.pBLP2Practica1Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -382,16 +340,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.label4.TabIndex = 40;
             this.label4.Text = "Votar";
             // 
-            // btnLLP2Practica2Filtrar
-            // 
-            this.btnLLP2Practica2Filtrar.Location = new System.Drawing.Point(9, 98);
-            this.btnLLP2Practica2Filtrar.Name = "btnLLP2Practica2Filtrar";
-            this.btnLLP2Practica2Filtrar.Size = new System.Drawing.Size(143, 35);
-            this.btnLLP2Practica2Filtrar.TabIndex = 33;
-            this.btnLLP2Practica2Filtrar.Text = "       Filtrar";
-            this.btnLLP2Practica2Filtrar.UseVisualStyleBackColor = true;
-            this.btnLLP2Practica2Filtrar.Click += new System.EventHandler(this.btnLLP2Practica2Filtrar_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -411,18 +359,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.label6.Size = new System.Drawing.Size(95, 15);
             this.label6.TabIndex = 43;
             this.label6.Text = "Nota                     ";
-            // 
-            // pBFiltro
-            // 
-            this.pBFiltro.BackColor = System.Drawing.Color.LightGray;
-            this.pBFiltro.Image = global::LP2Soft.Properties.Resources.filtrar__1_;
-            this.pBFiltro.Location = new System.Drawing.Point(51, 108);
-            this.pBFiltro.Name = "pBFiltro";
-            this.pBFiltro.Size = new System.Drawing.Size(16, 16);
-            this.pBFiltro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pBFiltro.TabIndex = 41;
-            this.pBFiltro.TabStop = false;
-            this.pBFiltro.Click += new System.EventHandler(this.pBFiltro_Click);
             // 
             // pictureLP2Practica2Referencia4
             // 
@@ -466,16 +402,20 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.botonChevere3);
+            this.panel4.Controls.Add(this.botonChevere2);
+            this.panel4.Controls.Add(this.btnPractica);
+            this.panel4.Controls.Add(this.botonChevere1);
+            this.panel4.Controls.Add(this.btnRCiclo);
+            this.panel4.Controls.Add(this.btnRMaterial);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.pBFiltro);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.panelLP2Practicas);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.btnLLP2Practica2AgregarMaterial);
-            this.panel4.Controls.Add(this.btnLLP2Practica2Filtrar);
             this.panel4.Controls.Add(this.btnLLP2Practica2Practica2);
             this.panel4.Controls.Add(this.pictureLP2Practica2Referencia4);
             this.panel4.Controls.Add(this.btnLP2Practica2Ciclo7);
@@ -490,6 +430,126 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(823, 505);
             this.panel4.TabIndex = 44;
+            // 
+            // botonChevere3
+            // 
+            this.botonChevere3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere3.BorderRadius = 6;
+            this.botonChevere3.BorderSize = 0;
+            this.botonChevere3.FlatAppearance.BorderSize = 0;
+            this.botonChevere3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere3.ForeColor = System.Drawing.Color.White;
+            this.botonChevere3.Location = new System.Drawing.Point(12, 98);
+            this.botonChevere3.Name = "botonChevere3";
+            this.botonChevere3.Size = new System.Drawing.Size(143, 36);
+            this.botonChevere3.TabIndex = 54;
+            this.botonChevere3.Text = "Agregar Material";
+            this.botonChevere3.TextColor = System.Drawing.Color.White;
+            this.botonChevere3.UseVisualStyleBackColor = false;
+            this.botonChevere3.Click += new System.EventHandler(this.botonChevere3_Click);
+            // 
+            // botonChevere2
+            // 
+            this.botonChevere2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere2.BorderRadius = 6;
+            this.botonChevere2.BorderSize = 0;
+            this.botonChevere2.FlatAppearance.BorderSize = 0;
+            this.botonChevere2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere2.ForeColor = System.Drawing.Color.White;
+            this.botonChevere2.Location = new System.Drawing.Point(50, 46);
+            this.botonChevere2.Name = "botonChevere2";
+            this.botonChevere2.Size = new System.Drawing.Size(143, 36);
+            this.botonChevere2.TabIndex = 53;
+            this.botonChevere2.Text = "Práctica";
+            this.botonChevere2.TextColor = System.Drawing.Color.White;
+            this.botonChevere2.UseVisualStyleBackColor = false;
+            this.botonChevere2.Click += new System.EventHandler(this.botonChevere2_Click);
+            // 
+            // btnPractica
+            // 
+            this.btnPractica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnPractica.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnPractica.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnPractica.BorderRadius = 6;
+            this.btnPractica.BorderSize = 0;
+            this.btnPractica.FlatAppearance.BorderSize = 0;
+            this.btnPractica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPractica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPractica.ForeColor = System.Drawing.Color.White;
+            this.btnPractica.Location = new System.Drawing.Point(580, 7);
+            this.btnPractica.Name = "btnPractica";
+            this.btnPractica.Size = new System.Drawing.Size(143, 36);
+            this.btnPractica.TabIndex = 52;
+            this.btnPractica.Text = "Práctica";
+            this.btnPractica.TextColor = System.Drawing.Color.White;
+            this.btnPractica.UseVisualStyleBackColor = false;
+            this.btnPractica.Click += new System.EventHandler(this.btnPractica_Click);
+            // 
+            // botonChevere1
+            // 
+            this.botonChevere1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere1.BorderRadius = 6;
+            this.botonChevere1.BorderSize = 0;
+            this.botonChevere1.FlatAppearance.BorderSize = 0;
+            this.botonChevere1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere1.ForeColor = System.Drawing.Color.White;
+            this.botonChevere1.Location = new System.Drawing.Point(390, 7);
+            this.botonChevere1.Name = "botonChevere1";
+            this.botonChevere1.Size = new System.Drawing.Size(143, 36);
+            this.botonChevere1.TabIndex = 51;
+            this.botonChevere1.Text = "Lenguaje de programación";
+            this.botonChevere1.TextColor = System.Drawing.Color.White;
+            this.botonChevere1.UseVisualStyleBackColor = false;
+            this.botonChevere1.Click += new System.EventHandler(this.botonChevere1_Click);
+            // 
+            // btnRCiclo
+            // 
+            this.btnRCiclo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCiclo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCiclo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRCiclo.BorderRadius = 6;
+            this.btnRCiclo.BorderSize = 0;
+            this.btnRCiclo.FlatAppearance.BorderSize = 0;
+            this.btnRCiclo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRCiclo.ForeColor = System.Drawing.Color.White;
+            this.btnRCiclo.Location = new System.Drawing.Point(200, 6);
+            this.btnRCiclo.Name = "btnRCiclo";
+            this.btnRCiclo.Size = new System.Drawing.Size(143, 35);
+            this.btnRCiclo.TabIndex = 50;
+            this.btnRCiclo.Text = "Ciclo";
+            this.btnRCiclo.TextColor = System.Drawing.Color.White;
+            this.btnRCiclo.UseVisualStyleBackColor = false;
+            this.btnRCiclo.Click += new System.EventHandler(this.btnRCiclo_Click);
+            // 
+            // btnRMaterial
+            // 
+            this.btnRMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRMaterial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRMaterial.BorderRadius = 6;
+            this.btnRMaterial.BorderSize = 0;
+            this.btnRMaterial.FlatAppearance.BorderSize = 0;
+            this.btnRMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRMaterial.ForeColor = System.Drawing.Color.White;
+            this.btnRMaterial.Location = new System.Drawing.Point(9, 7);
+            this.btnRMaterial.Name = "btnRMaterial";
+            this.btnRMaterial.Size = new System.Drawing.Size(143, 35);
+            this.btnRMaterial.TabIndex = 49;
+            this.btnRMaterial.Text = "Material";
+            this.btnRMaterial.TextColor = System.Drawing.Color.White;
+            this.btnRMaterial.UseVisualStyleBackColor = false;
+            this.btnRMaterial.Click += new System.EventHandler(this.btnRMaterial_Click);
             // 
             // frmCursos_VerPractica
             // 
@@ -506,13 +566,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica2Compartir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica3Compartir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica1Compartir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica3Descargar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica2Descargar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica1Descargar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBFiltro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLP2Practica2Referencia3)).EndInit();
@@ -548,17 +604,18 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
         private System.Windows.Forms.PictureBox pBLP2Practica3Descargar;
         private System.Windows.Forms.PictureBox pBLP2Practica2Descargar;
         private System.Windows.Forms.PictureBox pBLP2Practica1Descargar;
-        private System.Windows.Forms.PictureBox pBLP2Practica2Compartir;
-        private System.Windows.Forms.PictureBox pBLP2Practica3Compartir;
-        private System.Windows.Forms.PictureBox pBLP2Practica1Compartir;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pBFiltro;
-        private System.Windows.Forms.Button btnLLP2Practica2Filtrar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
+        private Asesor.BotonChevere btnRMaterial;
+        private Asesor.BotonChevere btnRCiclo;
+        private Asesor.BotonChevere botonChevere1;
+        private Asesor.BotonChevere btnPractica;
+        private Asesor.BotonChevere botonChevere3;
+        private Asesor.BotonChevere botonChevere2;
     }
 }

@@ -108,7 +108,8 @@ namespace LP2Soft.Eventos
             this.Controls.Add(this.pbPerfil);
             this.Controls.Add(this.lbCrearPublicacion);
             this.Name = "frmCrearPostGeneral";
-            this.Text = "frmCrearPublicacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Crear Publicación";
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -14,10 +14,8 @@
   <xs:element name="hacerAdminResponse" type="tns:hacerAdminResponse" />
   <xs:element name="insertarAsesor" type="tns:insertarAsesor" />
   <xs:element name="insertarAsesorResponse" type="tns:insertarAsesorResponse" />
-  <xs:element name="insertarReseniaAsesor" nillable="true" type="tns:insertarReseniaProfesor" />
-  <xs:element name="insertarReseniaAsesorResponse" nillable="true" type="tns:insertarReseniaProfesorResponse" />
-  <xs:element name="insertarReseniaProfesor" type="tns:insertarReseniaProfesor" />
-  <xs:element name="insertarReseniaProfesorResponse" type="tns:insertarReseniaProfesorResponse" />
+  <xs:element name="insertarReseniaAsesor" type="tns:insertarReseniaAsesor" />
+  <xs:element name="insertarReseniaAsesorResponse" type="tns:insertarReseniaAsesorResponse" />
   <xs:element name="insertarUsuario" type="tns:insertarUsuario" />
   <xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse" />
   <xs:element name="listarAmigosNombreCodigo" type="tns:listarAmigosNombreCodigo" />
@@ -224,12 +222,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarReseniaProfesor">
+  <xs:complexType name="insertarReseniaAsesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarReseniaProfesorResponse">
+  <xs:complexType name="insertarReseniaAsesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

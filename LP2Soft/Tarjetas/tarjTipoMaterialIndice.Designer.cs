@@ -52,6 +52,7 @@ namespace LP2Soft.Tarjetas
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tarjTipoMaterialIndice";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.tarjTipoMaterialIndice_Load);
             this.ResumeLayout(false);
 
         }

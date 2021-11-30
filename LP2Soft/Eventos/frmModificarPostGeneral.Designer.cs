@@ -120,7 +120,8 @@ namespace LP2Soft.Eventos
             this.Controls.Add(this.pbPerfil);
             this.Controls.Add(this.lblModificarPublicacion);
             this.Name = "frmModificarPostGeneral";
-            this.Text = "frmModificarPostGeneral";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Modificar o Eliminar Publicación";
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

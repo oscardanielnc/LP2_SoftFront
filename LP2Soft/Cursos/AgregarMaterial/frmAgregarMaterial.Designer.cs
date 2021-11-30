@@ -51,7 +51,8 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.cboSemestre = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ofdArchivo = new System.Windows.Forms.OpenFileDialog();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnRSubir = new LP2Soft.Asesor.BotonChevere();
+            this.btnRCancelar = new LP2Soft.Asesor.BotonChevere();
             this.flpCargarMaterial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,12 +108,14 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             // btnSubir
             // 
-            this.btnSubir.Location = new System.Drawing.Point(136, 324);
+            this.btnSubir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnSubir.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSubir.Location = new System.Drawing.Point(350, 12);
             this.btnSubir.Name = "btnSubir";
             this.btnSubir.Size = new System.Drawing.Size(147, 39);
             this.btnSubir.TabIndex = 5;
             this.btnSubir.Text = "Subir";
-            this.btnSubir.UseVisualStyleBackColor = true;
+            this.btnSubir.UseVisualStyleBackColor = false;
             this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
             // 
             // btnCancelar
@@ -278,24 +281,55 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             this.ofdArchivo.FileName = "openFileDialog1";
             // 
-            // checkBox1
+            // btnRSubir
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.Location = new System.Drawing.Point(287, 179);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(40, 17);
-            this.checkBox1.TabIndex = 23;
-            this.checkBox1.Text = "No";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.btnRSubir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRSubir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRSubir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRSubir.BorderRadius = 6;
+            this.btnRSubir.BorderSize = 0;
+            this.btnRSubir.FlatAppearance.BorderSize = 0;
+            this.btnRSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRSubir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRSubir.ForeColor = System.Drawing.Color.White;
+            this.btnRSubir.Location = new System.Drawing.Point(139, 325);
+            this.btnRSubir.Name = "btnRSubir";
+            this.btnRSubir.Size = new System.Drawing.Size(143, 36);
+            this.btnRSubir.TabIndex = 55;
+            this.btnRSubir.Text = "Subir";
+            this.btnRSubir.TextColor = System.Drawing.Color.White;
+            this.btnRSubir.UseVisualStyleBackColor = false;
+            this.btnRSubir.Click += new System.EventHandler(this.botonChevere1_Click);
+            // 
+            // btnRCancelar
+            // 
+            this.btnRCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCancelar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRCancelar.BorderRadius = 6;
+            this.btnRCancelar.BorderSize = 0;
+            this.btnRCancelar.FlatAppearance.BorderSize = 0;
+            this.btnRCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnRCancelar.Location = new System.Drawing.Point(415, 306);
+            this.btnRCancelar.Name = "btnRCancelar";
+            this.btnRCancelar.Size = new System.Drawing.Size(143, 36);
+            this.btnRCancelar.TabIndex = 56;
+            this.btnRCancelar.Text = "Cancelar";
+            this.btnRCancelar.TextColor = System.Drawing.Color.White;
+            this.btnRCancelar.UseVisualStyleBackColor = false;
+            this.btnRCancelar.Click += new System.EventHandler(this.btnRCancelar_Click);
             // 
             // frmAgregarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 375);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.btnRCancelar);
+            this.Controls.Add(this.btnRSubir);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSubir);
             this.Controls.Add(this.cboSemestre);
             this.Controls.Add(this.cboCiclo);
             this.Controls.Add(this.cboProfesores);
@@ -308,7 +342,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.Controls.Add(this.checkbSi);
             this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnSubir);
             this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblCalificacion);
             this.Controls.Add(this.lblSemestre);
@@ -347,6 +380,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.ComboBox cboSemestre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog ofdArchivo;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private Asesor.BotonChevere btnRSubir;
+        private Asesor.BotonChevere btnRCancelar;
     }
 }

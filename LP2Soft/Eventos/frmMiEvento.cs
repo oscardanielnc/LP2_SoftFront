@@ -25,7 +25,7 @@ namespace LP2Soft.Eventos
         {
             InitializeComponent();
             _evento = e;
-            lblNombre.Text = frmHome.Usuario.nombre;
+            lblNombre.Text = frmHome.Usuario.nombre + " " + frmHome.Usuario.apellido;
             mostrarDatos(e);
         }
 
@@ -33,6 +33,8 @@ namespace LP2Soft.Eventos
             lblFecha.Text = e.fechaRegistro.ToString("dd-MM-yyyy");
             lblTitulo.Text = e.nombreDelEvento;
             txtContenido.Text = e.contenido;
+            txtContenido.ReadOnly = true;
+            txtContenido.BackColor = Color.White;
             lblZoom.Text = e.enlaceZoom;
             lblFechaRealizacion.Text = e.fechaDelEvento.ToString("dd/MMMM/yyyy");
 
@@ -71,6 +73,7 @@ namespace LP2Soft.Eventos
                 if (_eventoModificado.idPost != -1)
                 {
                     mostrarDatos(_eventoModificado);
+                    lblFecha.Text = DateTime.Now.ToString("dd-MM-yyyy");
                 }
                 else this.Visible = false;
             }

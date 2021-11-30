@@ -250,6 +250,7 @@
     <Compile Include="Eventos\frmTendenciaMaterial.Designer.cs">
       <DependentUpon>frmTendenciaMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\Encriptador.cs" />
     <Compile Include="Home\frmBusquedaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -713,6 +714,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjTipoMaterial.resx">
       <DependentUpon>tarjTipoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarjetas\tarjTipoMaterialIndice.resx">
+      <DependentUpon>tarjTipoMaterialIndice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tarjetas\tarjUltimoMensaje.resx">
       <DependentUpon>tarjUltimoMensaje.cs</DependentUpon>

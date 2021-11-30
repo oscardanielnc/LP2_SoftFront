@@ -14,7 +14,7 @@ namespace LP2Soft.Tarjetas
 {
     public partial class tarjTipoMaterialIndice : Form
     {
-        private String[] tipoMaterial = new String[] { "Practica", "Laboratorio", "Tarea Academica", "Examenes" };
+        private String[] tipoMaterial = new String[] { "Práctica", "Laboratorio", "Tarea Academica", "Exámenes" };
         private int tipo,indice;
         private CursosWS.curso _cursoVer;
         public tarjTipoMaterialIndice()
@@ -27,7 +27,12 @@ namespace LP2Soft.Tarjetas
             tipo = auxTipo;
             indice = auxIndice;
             _cursoVer = curso;
-            btnLP2Practicas.Text = tipoMaterial[auxTipo] + indice;
+            btnLP2Practicas.Text = tipoMaterial[auxTipo]+ " "  + indice;
+        }
+
+        private void tarjTipoMaterialIndice_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnLP2Practicas_Click(object sender, EventArgs e)

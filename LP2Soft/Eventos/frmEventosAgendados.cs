@@ -44,10 +44,20 @@ namespace LP2Soft.Eventos
 
             PublicacionesWS.evento[] eventosFecha = _daoPost.listarEventosAgendadosFecha(frmHome.Usuario.idUsuario,fecha.ToString("dd-MM-yyyy"));
 
-            if (eventosFecha != null)
+            int cantidad;
+            if (eventosFecha != null) {
                 _eventosAgendadosFecha = new BindingList<PublicacionesWS.evento>(eventosFecha.ToList());
-            else
+                cantidad = _eventosAgendadosFecha.Count;
+            }
+            else {
                 _eventosAgendadosFecha = null;
+                cantidad = 0;
+            }
+
+            if (cantidad == 1)
+                lblCantidadEventos.Text = cantidad.ToString() + " evento";
+            else
+                lblCantidadEventos.Text = cantidad.ToString() + " eventos";
 
             if (_eventosAgendadosFecha != null)
             {
@@ -91,15 +101,27 @@ namespace LP2Soft.Eventos
             //MessageBox.Show(monthCalendar1.SelectionRange.Start.ToString("yyyy-MM-dd"));
             panelPublicacionesEventos.Controls.Clear();
 
-            lblEventosAgendados.Text = "Eventos Agendados para el " + monthCalendar1.SelectionRange.Start.ToString("dd/MM/yyyy");
-
             PublicacionesWS.evento[] eventosFecha = _daoPost.listarEventosAgendadosFecha(frmHome.Usuario.idUsuario, monthCalendar1.SelectionRange.Start.ToString("dd-MM-yyyy"));
 
+            int cantidad;
 
             if (eventosFecha != null)
+            {
                 _eventosAgendadosFecha = new BindingList<PublicacionesWS.evento>(eventosFecha.ToList());
+                cantidad = _eventosAgendadosFecha.Count;
+            }
             else
+            {
                 _eventosAgendadosFecha = null;
+                cantidad = 0;
+            }
+
+            lblEventosAgendados.Text = "Eventos Agendados para el " + monthCalendar1.SelectionRange.Start.ToString("dd/MM/yyyy");
+
+            if(cantidad==1)
+                lblCantidadEventos.Text = cantidad.ToString() + " evento";
+            else
+                lblCantidadEventos.Text = cantidad.ToString() + " eventos";
 
             if (_eventosAgendadosFecha != null)
             {

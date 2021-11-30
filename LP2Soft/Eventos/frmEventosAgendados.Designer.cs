@@ -33,6 +33,7 @@ namespace LP2Soft.Eventos
             this.lblCalendarioPersonal = new System.Windows.Forms.Label();
             this.panelPublicacionesEventos = new System.Windows.Forms.Panel();
             this.lblEventosAgendados = new System.Windows.Forms.Label();
+            this.lblCantidadEventos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -67,17 +68,27 @@ namespace LP2Soft.Eventos
             // 
             this.lblEventosAgendados.AutoSize = true;
             this.lblEventosAgendados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventosAgendados.Location = new System.Drawing.Point(358, 14);
+            this.lblEventosAgendados.Location = new System.Drawing.Point(366, 14);
             this.lblEventosAgendados.Name = "lblEventosAgendados";
             this.lblEventosAgendados.Size = new System.Drawing.Size(284, 20);
             this.lblEventosAgendados.TabIndex = 6;
             this.lblEventosAgendados.Text = "Eventos Agendados el 23/11/2021";
+            // 
+            // lblCantidadEventos
+            // 
+            this.lblCantidadEventos.AutoSize = true;
+            this.lblCantidadEventos.Location = new System.Drawing.Point(367, 38);
+            this.lblCantidadEventos.Name = "lblCantidadEventos";
+            this.lblCantidadEventos.Size = new System.Drawing.Size(54, 13);
+            this.lblCantidadEventos.TabIndex = 13;
+            this.lblCantidadEventos.Text = "5 eventos";
             // 
             // frmEventosAgendados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 495);
+            this.Controls.Add(this.lblCantidadEventos);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.lblEventosAgendados);
             this.Controls.Add(this.panelPublicacionesEventos);
@@ -95,5 +106,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label lblCalendarioPersonal;
         private System.Windows.Forms.Panel panelPublicacionesEventos;
         private System.Windows.Forms.Label lblEventosAgendados;
+        private System.Windows.Forms.Label lblCantidadEventos;
     }
 }

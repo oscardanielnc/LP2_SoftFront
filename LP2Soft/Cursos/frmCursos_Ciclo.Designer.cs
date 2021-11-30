@@ -39,6 +39,8 @@ namespace LP2Soft.Cursos.Ciclo7
             this.btnCiclo7LP2 = new System.Windows.Forms.Button();
             this.pictureCiclo7Referencia1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnRCiclo = new LP2Soft.Asesor.BotonChevere();
+            this.botonChevere1 = new LP2Soft.Asesor.BotonChevere();
             this.panelCiclo7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBCiclo7Sis2Descargar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBCiclo7LP2Descargar)).BeginInit();
@@ -74,6 +76,7 @@ namespace LP2Soft.Cursos.Ciclo7
             this.btnCiclo7.TabIndex = 7;
             this.btnCiclo7.Text = "Ciclo 7";
             this.btnCiclo7.UseVisualStyleBackColor = true;
+            this.btnCiclo7.Click += new System.EventHandler(this.btnCiclo7_Click);
             // 
             // btnCiclo7Sis2
             // 
@@ -145,6 +148,8 @@ namespace LP2Soft.Cursos.Ciclo7
             // panel4
             // 
             this.panel4.AutoScroll = true;
+            this.panel4.Controls.Add(this.btnRCiclo);
+            this.panel4.Controls.Add(this.botonChevere1);
             this.panel4.Controls.Add(this.panelCiclo7);
             this.panel4.Controls.Add(this.btnCiclo7);
             this.panel4.Controls.Add(this.pictureCiclo7Referencia1);
@@ -155,6 +160,46 @@ namespace LP2Soft.Cursos.Ciclo7
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(823, 505);
             this.panel4.TabIndex = 17;
+            // 
+            // btnRCiclo
+            // 
+            this.btnRCiclo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCiclo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCiclo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRCiclo.BorderRadius = 6;
+            this.btnRCiclo.BorderSize = 0;
+            this.btnRCiclo.FlatAppearance.BorderSize = 0;
+            this.btnRCiclo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRCiclo.ForeColor = System.Drawing.Color.White;
+            this.btnRCiclo.Location = new System.Drawing.Point(197, 6);
+            this.btnRCiclo.Name = "btnRCiclo";
+            this.btnRCiclo.Size = new System.Drawing.Size(143, 35);
+            this.btnRCiclo.TabIndex = 51;
+            this.btnRCiclo.Text = "Ciclo";
+            this.btnRCiclo.TextColor = System.Drawing.Color.White;
+            this.btnRCiclo.UseVisualStyleBackColor = false;
+            this.btnRCiclo.Click += new System.EventHandler(this.btnRCiclo_Click);
+            // 
+            // botonChevere1
+            // 
+            this.botonChevere1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere1.BorderRadius = 6;
+            this.botonChevere1.BorderSize = 0;
+            this.botonChevere1.FlatAppearance.BorderSize = 0;
+            this.botonChevere1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere1.ForeColor = System.Drawing.Color.White;
+            this.botonChevere1.Location = new System.Drawing.Point(6, 7);
+            this.botonChevere1.Name = "botonChevere1";
+            this.botonChevere1.Size = new System.Drawing.Size(143, 35);
+            this.botonChevere1.TabIndex = 50;
+            this.botonChevere1.Text = "Material";
+            this.botonChevere1.TextColor = System.Drawing.Color.White;
+            this.botonChevere1.UseVisualStyleBackColor = false;
+            this.botonChevere1.Click += new System.EventHandler(this.botonChevere1_Click);
             // 
             // frmCursos_Ciclo
             // 
@@ -188,5 +233,7 @@ namespace LP2Soft.Cursos.Ciclo7
         private System.Windows.Forms.PictureBox pBCiclo7LP2Descargar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCiclo7LP2;
+        private Asesor.BotonChevere botonChevere1;
+        private Asesor.BotonChevere btnRCiclo;
     }
 }

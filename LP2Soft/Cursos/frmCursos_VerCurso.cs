@@ -37,14 +37,14 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             _daoCurso = new CursosWS.CursosWSClient();
             InitializeComponent();
             AuxNivel = cursoVer.nivel;
-            btnLP2LP2.Text = cursoVer.nombre;
-
+            botonChevere1.Text = cursoVer.nombre;
+            
             lblNombreCodigo.Text = cursoVer.nombre + " (" + cursoVer.codigo + ")";
             lblCreditos.Text = cursoVer.creditos.ToString("0.00");
             lblCreditosReq.Text = cursoVer.creditosRequeridos.ToString("0.00");
             lblDescripción.Text = cursoVer.descripcion;
 
-            btnLP2Ciclo7.Text = "Ciclo " + cursoVer.nivel.ToString();
+            btnRCiclo.Text = "Ciclo " + cursoVer.nivel.ToString();
             if (cursoVer.cursosRequeridos != null)
             {
                 foreach (CursosWS.curso c in cursoVer.cursosRequeridos)
@@ -285,6 +285,21 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
                     }
                 }
             }
+        }
+
+        private void btnRMaterial_Click(object sender, EventArgs e)
+        {
+            frmHome.abrirFormulario(new frmCursos_Home(frmHome.Usuario.idUsuario));
+        }
+
+        private void btnRCiclo_Click(object sender, EventArgs e)
+        {
+            frmHome.abrirFormulario(new frmCursos_Ciclo(AuxNivel));
+        }
+
+        private void botonChevere1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
