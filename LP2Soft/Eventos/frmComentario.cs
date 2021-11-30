@@ -24,7 +24,7 @@ namespace LP2Soft.Eventos
             _post = post;
             _daoComentario = new PublicacionesWS.PublicacionesWSClient();
             _comentario = comentario;
-            lblNombre.Text = comentario.usuario.nombre;
+            lblNombre.Text = comentario.usuario.nombre + " " +comentario.usuario.apellido;
             lblComentario.Text = comentario.comentario1;
             if (comentario.usuario.idUsuario != frmHome.Usuario.idUsuario && frmHome.Usuario.esAdmin==false) btnModificar.Visible = false;
         }
@@ -35,7 +35,7 @@ namespace LP2Soft.Eventos
             _evento = post;
             _daoComentario = new PublicacionesWS.PublicacionesWSClient();
             _comentario = comentario;
-            lblNombre.Text = comentario.usuario.nombre;
+            lblNombre.Text = comentario.usuario.nombre + " " + comentario.usuario.apellido;
             lblComentario.Text = comentario.comentario1;
             if (comentario.usuario.idUsuario != frmHome.Usuario.idUsuario) btnModificar.Visible = false;
         }

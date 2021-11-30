@@ -50,7 +50,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblMisEventos.AutoSize = true;
             this.lblMisEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMisEventos.Location = new System.Drawing.Point(182, 9);
+            this.lblMisEventos.Location = new System.Drawing.Point(195, 9);
             this.lblMisEventos.Name = "lblMisEventos";
             this.lblMisEventos.Size = new System.Drawing.Size(106, 20);
             this.lblMisEventos.TabIndex = 6;

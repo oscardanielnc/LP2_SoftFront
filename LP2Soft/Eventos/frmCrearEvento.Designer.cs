@@ -290,7 +290,8 @@ namespace LP2Soft.Eventos
             this.Controls.Add(this.lblNuevoEvento);
             this.Controls.Add(this.pbImagenPublicacion);
             this.Name = "frmCrearEvento";
-            this.Text = "frmNuevoEvento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Crear Evento";
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPublicacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

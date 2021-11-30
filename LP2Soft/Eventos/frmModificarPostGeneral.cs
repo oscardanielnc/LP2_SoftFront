@@ -29,7 +29,7 @@ namespace LP2Soft.Eventos
                 MemoryStream ms1 = new MemoryStream(frmHome.Usuario.foto);
                 pbPerfil.Image = new Bitmap(ms1);
             }
-            lblNombre.Text = post.usuario.nombre;
+            lblNombre.Text = post.usuario.nombre + " " + post.usuario.apellido;
             txtContenido.Text = post.contenido;
             _daoPost = new PublicacionesWS.PublicacionesWSClient();
         }
