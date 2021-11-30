@@ -102,7 +102,8 @@ namespace LP2Soft.Perfil
 
         private void btnCambiarCon_Click(object sender, EventArgs e)
         {
-
+            frmCambiarContrasenia formContrasenia = new frmCambiarContrasenia();
+            formContrasenia.ShowDialog();
         }
     }
 }

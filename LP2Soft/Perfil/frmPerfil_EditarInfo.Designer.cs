@@ -351,7 +351,6 @@ namespace LP2Soft.Perfil
             this.btnCambiarCon.Text = "Cambiar contraseña";
             this.btnCambiarCon.TextColor = System.Drawing.Color.White;
             this.btnCambiarCon.UseVisualStyleBackColor = false;
-            this.btnCambiarCon.Visible = false;
             this.btnCambiarCon.Click += new System.EventHandler(this.btnCambiarCon_Click);
             // 
             // frmPerfil_EditarInfo
