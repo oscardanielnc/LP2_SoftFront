@@ -35,10 +35,10 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             _cursoVer = curso;
             _tipo = auxTipo;
             _indice = indice;
-            btnLP2Practica2Ciclo7.Text = "Ciclo " + curso.nivel;
-            btnLP2Practica2LP2.Text = curso.nombre;
-            btnLLP2Practica2Practicas.Text = tipoMaterial[auxTipo];
-            btnLLP2Practica2Practica2.Text = tipoMaterial[auxTipo] + " " + indice;
+            btnRCiclo.Text = "Ciclo " + curso.nivel;
+            botonChevere1.Text = curso.nombre;
+            btnPractica.Text = tipoMaterial[auxTipo];
+            botonChevere2.Text = tipoMaterial[auxTipo] + " " + indice;
             todoMaterial();
         }
 
@@ -167,6 +167,41 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             f.TopLevel = false;
             this.panel4.Controls.Add(f);
             f.Show();
+        }
+
+        private void btnRMaterial_Click(object sender, EventArgs e)
+        {
+            frmCursos_Home cursosHome = new frmCursos_Home(20186013);
+            addPanel(cursosHome);
+        }
+
+        private void btnRCiclo_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo ciclo7 = new frmCursos_Ciclo(_cursoVer.nivel);
+            addPanel(ciclo7);
+        }
+
+        private void botonChevere1_Click(object sender, EventArgs e)
+        {
+            frmCursos_VerCurso ciclo7LP2 = new frmCursos_VerCurso(_cursoVer);
+            addPanel(ciclo7LP2);
+        }
+
+        private void btnPractica_Click(object sender, EventArgs e)
+        {
+            frmCursos_Practicas practicas = new frmCursos_Practicas(_cursoVer, _tipo);
+            addPanel(practicas);
+        }
+
+        private void botonChevere3_Click(object sender, EventArgs e)
+        {
+            frmAgregarMaterial agregarMaterial = new frmAgregarMaterial(_cursoVer, _tipo, _indice);
+            agregarMaterial.ShowDialog();
+        }
+
+        private void botonChevere2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

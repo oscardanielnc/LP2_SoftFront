@@ -29,13 +29,15 @@ namespace LP2Soft.Home
                 {
                     if(txtContrasenia.Text.Equals(txtRepetirContrasenia.Text))
                     {
+                        String cad;
                         frmPrincipal.startLoading();
                         _usuario = new UsuarioWS.usuario();
                         _usuario.codigoPUCP = txtCodigo.Text;
                         _usuario.correo = txtCorreo.Text;
                         _usuario.nombre = txtNombre.Text;
                         _usuario.apellido = txtApellido.Text;
-                        _usuario.contrasenia = txtContrasenia.Text;
+                        cad = txtContrasenia.Text;
+                        _usuario.contrasenia = Encriptador.GetSHA256(cad);
                         _usuario.fechaNacimiento = dtpFechaNacimiento.Value;
                         _usuario.fechaNacimientoSpecified = true;
                         _usuario.especialidad = "Ing. Informática";

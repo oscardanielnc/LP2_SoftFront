@@ -50,6 +50,9 @@ namespace LP2Soft.Tarjetas
             }
         }
 
-        
+        private void btnMaterial_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

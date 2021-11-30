@@ -66,6 +66,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.lblCreditosReq = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTipVerCurso = new System.Windows.Forms.ToolTip(this.components);
+            this.btnRMaterial = new LP2Soft.Asesor.BotonChevere();
+            this.btnRCiclo = new LP2Soft.Asesor.BotonChevere();
+            this.botonChevere1 = new LP2Soft.Asesor.BotonChevere();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargasExtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2DescargarLibros)).BeginInit();
@@ -450,12 +453,75 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.label1.TabIndex = 31;
             this.label1.Text = "Opiniones del curso:";
             // 
+            // btnRMaterial
+            // 
+            this.btnRMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRMaterial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRMaterial.BorderRadius = 6;
+            this.btnRMaterial.BorderSize = 0;
+            this.btnRMaterial.FlatAppearance.BorderSize = 0;
+            this.btnRMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRMaterial.ForeColor = System.Drawing.Color.White;
+            this.btnRMaterial.Location = new System.Drawing.Point(15, 12);
+            this.btnRMaterial.Name = "btnRMaterial";
+            this.btnRMaterial.Size = new System.Drawing.Size(143, 35);
+            this.btnRMaterial.TabIndex = 47;
+            this.btnRMaterial.Text = "Material";
+            this.btnRMaterial.TextColor = System.Drawing.Color.White;
+            this.btnRMaterial.UseVisualStyleBackColor = false;
+            this.btnRMaterial.Click += new System.EventHandler(this.btnRMaterial_Click);
+            // 
+            // btnRCiclo
+            // 
+            this.btnRCiclo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCiclo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCiclo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRCiclo.BorderRadius = 6;
+            this.btnRCiclo.BorderSize = 0;
+            this.btnRCiclo.FlatAppearance.BorderSize = 0;
+            this.btnRCiclo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRCiclo.ForeColor = System.Drawing.Color.White;
+            this.btnRCiclo.Location = new System.Drawing.Point(206, 12);
+            this.btnRCiclo.Name = "btnRCiclo";
+            this.btnRCiclo.Size = new System.Drawing.Size(143, 35);
+            this.btnRCiclo.TabIndex = 48;
+            this.btnRCiclo.Text = "Ciclo";
+            this.btnRCiclo.TextColor = System.Drawing.Color.White;
+            this.btnRCiclo.UseVisualStyleBackColor = false;
+            this.btnRCiclo.Click += new System.EventHandler(this.btnRCiclo_Click);
+            // 
+            // botonChevere1
+            // 
+            this.botonChevere1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere1.BorderRadius = 6;
+            this.botonChevere1.BorderSize = 0;
+            this.botonChevere1.FlatAppearance.BorderSize = 0;
+            this.botonChevere1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere1.ForeColor = System.Drawing.Color.White;
+            this.botonChevere1.Location = new System.Drawing.Point(396, 12);
+            this.botonChevere1.Name = "botonChevere1";
+            this.botonChevere1.Size = new System.Drawing.Size(143, 36);
+            this.botonChevere1.TabIndex = 49;
+            this.botonChevere1.Text = "Lenguaje de programación";
+            this.botonChevere1.TextColor = System.Drawing.Color.White;
+            this.botonChevere1.UseVisualStyleBackColor = false;
+            this.botonChevere1.Click += new System.EventHandler(this.botonChevere1_Click);
+            // 
             // frmCursos_VerCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 505);
+            this.Controls.Add(this.botonChevere1);
+            this.Controls.Add(this.btnRCiclo);
+            this.Controls.Add(this.btnRMaterial);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCreditosReq);
             this.Controls.Add(this.label7);
@@ -533,5 +599,8 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         private System.Windows.Forms.Label lblCreditosReq;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTipVerCurso;
+        private Asesor.BotonChevere btnRMaterial;
+        private Asesor.BotonChevere btnRCiclo;
+        private Asesor.BotonChevere botonChevere1;
     }
 }
