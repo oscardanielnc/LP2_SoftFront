@@ -292,6 +292,12 @@
     <Compile Include="Home\frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\frmTerminosyCondiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\frmTerminosyCondiciones.Designer.cs">
+      <DependentUpon>frmTerminosyCondiciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\Loading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -606,6 +612,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\frmTerminosyCondiciones.resx">
+      <DependentUpon>frmTerminosyCondiciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -1293,6 +1302,11 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Spinner-1s-200px.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

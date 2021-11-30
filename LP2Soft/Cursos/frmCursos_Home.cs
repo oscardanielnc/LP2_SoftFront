@@ -56,6 +56,7 @@ namespace LP2Soft.Cursos
                 if(u.estado==2)
                     _creditosTotales += u.creditos;
             }
+            actualizarLlbCreditos();
         }
         public static void actualizarLlbCreditos()
         {

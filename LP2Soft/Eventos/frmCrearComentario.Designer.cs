@@ -84,7 +84,8 @@ namespace LP2Soft.Eventos
             this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.pbPerfil);
             this.Name = "frmCrearComentario";
-            this.Text = "frmComentario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Crear Comentario";
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

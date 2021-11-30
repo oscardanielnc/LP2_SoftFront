@@ -55,10 +55,12 @@ namespace LP2Soft.Eventos
         private void generarEvento(PublicacionesWS.evento e)
         {
             btnMeGusta.ImageIndex = 1;
-            lblNombre.Text = e.usuario.nombre;
+            lblNombre.Text = e.usuario.nombre + " " + e.usuario.apellido;
             lblFechaHoraCreacion.Text = e.fechaRegistro.ToString("dd-MM-yyyy");
             lblTitulo.Text = e.nombreDelEvento;
             txtDescripcionEvento.Text = e.contenido;
+            txtDescripcionEvento.ReadOnly = true;
+            txtDescripcionEvento.BackColor = Color.White;
             lblLinkZoom.Text = e.enlaceZoom;
             lblFechaEvento.Text = e.fechaDelEvento.ToString("dd/MMMM/yyyy");
             int hhi, mmi, hhf, mmf;

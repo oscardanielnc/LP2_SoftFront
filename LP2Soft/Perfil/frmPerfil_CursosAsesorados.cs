@@ -25,11 +25,17 @@ namespace LP2Soft.Perfil
         public frmPerfil_CursosAsesorados(UsuarioWS.usuario user)
         {
             InitializeComponent();
-            _idAsesor = user.asesor.idAsesor;
-            _usuario = user;
             if (user.esAsesor == true)
             {
+                _idAsesor = user.asesor.idAsesor;
+                _usuario = user;
                 lblNoAsesor.Visible = false;
+                if(frmHome.Usuario.idUsuario != user.idUsuario)
+                {
+                    btnAniadirCurso.Visible = false;
+                    btnReporte.Visible = false;
+                }
+
                 _daoAsesor = new UsuarioWS.UsuariosWSClient();
                 renderizarPanel(user.idUsuario);
             }
@@ -55,8 +61,7 @@ namespace LP2Soft.Perfil
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se han encontrado cursos asesorados por este usuario", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblNoAsesor.Visible = true;
             }
         }
         private Point generarCoordenadas(int i)

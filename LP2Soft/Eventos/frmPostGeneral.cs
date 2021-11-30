@@ -31,6 +31,8 @@ namespace LP2Soft.Eventos
         { 
 
             InitializeComponent();
+            txtContenido.ReadOnly = true;
+            txtContenido.BackColor = Color.White;
             _usuario = usuario;
             _post = pp;
             _daoPost = new PublicacionesWS.PublicacionesWSClient();
@@ -40,7 +42,7 @@ namespace LP2Soft.Eventos
             //    pbPerfil.Image = new Bitmap(ms1);
             //}
             btnMeGustaDinamico.ImageIndex = 1;
-            lblNombre.Text = pp.usuario.nombre;
+            lblNombre.Text = pp.usuario.nombre + " " +pp.usuario.apellido;
             lblFechaHoraCreacion.Text = pp.fechaRegistro.ToString("dd-MM-yyyy");
             txtContenido.Text = pp.contenido;
             lblCantidadMeGusta.Text = pp.likes.ToString();

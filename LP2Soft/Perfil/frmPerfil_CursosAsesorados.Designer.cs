@@ -32,8 +32,8 @@ namespace LP2Soft.Perfil
             this.btnAniadirCurso = new System.Windows.Forms.Button();
             this.panelCursos = new System.Windows.Forms.Panel();
             this.lblNoAsesor = new System.Windows.Forms.Label();
-            this.panelCursos.SuspendLayout();
             this.btnReporte = new System.Windows.Forms.Button();
+            this.panelCursos.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAniadirCurso
@@ -66,9 +66,9 @@ namespace LP2Soft.Perfil
             this.lblNoAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoAsesor.Location = new System.Drawing.Point(3, 0);
             this.lblNoAsesor.Name = "lblNoAsesor";
-            this.lblNoAsesor.Size = new System.Drawing.Size(221, 20);
+            this.lblNoAsesor.Size = new System.Drawing.Size(226, 20);
             this.lblNoAsesor.TabIndex = 46;
-            this.lblNoAsesor.Text = "Este Usuario no es asesor";
+            this.lblNoAsesor.Text = "Este Usuario no es asesor.";
             // 
             // btnReporte
             // 

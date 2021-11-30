@@ -21,52 +21,56 @@ namespace LP2Soft.Home
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if(!txtCodigo.Text.Equals("") && !txtCorreo.Text.Equals("") && !txtNombre.Text.Equals("")
-                 && !txtApellido.Text.Equals("") && !txtContrasenia.Text.Equals("") && !txtRepetirContrasenia.Text.Equals(""))
+            frmTerminosyCondiciones formTyC = new frmTerminosyCondiciones();
+            if (formTyC.ShowDialog() == DialogResult.OK)
             {
-                if(txtContrasenia.Text.Equals(txtRepetirContrasenia.Text))
+                if(!txtCodigo.Text.Equals("") && !txtCorreo.Text.Equals("") && !txtNombre.Text.Equals("")
+                     && !txtApellido.Text.Equals("") && !txtContrasenia.Text.Equals("") && !txtRepetirContrasenia.Text.Equals(""))
                 {
-                    frmPrincipal.startLoading();
-                    _usuario = new UsuarioWS.usuario();
-                    _usuario.codigoPUCP = txtCodigo.Text;
-                    _usuario.correo = txtCorreo.Text;
-                    _usuario.nombre = txtNombre.Text;
-                    _usuario.apellido = txtApellido.Text;
-                    _usuario.contrasenia = txtContrasenia.Text;
-                    _usuario.fechaNacimiento = dtpFechaNacimiento.Value;
-                    _usuario.fechaNacimientoSpecified = true;
-                    _usuario.especialidad = "Ing. Informática";
-                    _usuario.esAdmin = false;
-                    _usuario.esAsesor = false;
-                    _usuario.activo = true;
-                    _usuario.creditosTotales = 0;
+                    if(txtContrasenia.Text.Equals(txtRepetirContrasenia.Text))
+                    {
+                        frmPrincipal.startLoading();
+                        _usuario = new UsuarioWS.usuario();
+                        _usuario.codigoPUCP = txtCodigo.Text;
+                        _usuario.correo = txtCorreo.Text;
+                        _usuario.nombre = txtNombre.Text;
+                        _usuario.apellido = txtApellido.Text;
+                        _usuario.contrasenia = txtContrasenia.Text;
+                        _usuario.fechaNacimiento = dtpFechaNacimiento.Value;
+                        _usuario.fechaNacimientoSpecified = true;
+                        _usuario.especialidad = "Ing. Informática";
+                        _usuario.esAdmin = false;
+                        _usuario.esAsesor = false;
+                        _usuario.activo = true;
+                        _usuario.creditosTotales = 0;
 
-                    int resultado = _daoUsuario.insertarUsuario(_usuario);
-                    if(resultado < 0)
-                    {
-                        frmPrincipal.endLoading();
-                        // Falla
-                        if (resultado == -10)
-                            MessageBox.Show("Este código ya se encuentra registrado", "Warning",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        else if (resultado == -20)
-                            MessageBox.Show("Este correo ya se encuentra registrado", "Warning", 
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        else
-                            MessageBox.Show("Ocurrió un error inserperado en el servidor", "Error",
-                               MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        _usuario = null;
+                        int resultado = _daoUsuario.insertarUsuario(_usuario);
+                        if(resultado < 0)
+                        {
+                            frmPrincipal.endLoading();
+                            // Falla
+                            if (resultado == -10)
+                                MessageBox.Show("Este código ya se encuentra registrado", "Warning",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            else if (resultado == -20)
+                                MessageBox.Show("Este correo ya se encuentra registrado", "Warning", 
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            else
+                                MessageBox.Show("Ocurrió un error inserperado en el servidor", "Error",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            _usuario = null;
+                        } else
+                        {
+                            // No hay falla. Registro Exitoso
+                            _usuario.idUsuario = resultado;
+                            frmPrincipal.abrirFormulario(new frmHome(_usuario));
+                            frmPrincipal.endLoading();
+                        }
                     } else
-                    {
-                        // No hay falla. Registro Exitoso
-                        _usuario.idUsuario = resultado;
-                        frmPrincipal.abrirFormulario(new frmHome(_usuario));
-                        frmPrincipal.endLoading();
-                    }
+                        MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 } else
-                    MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else
-                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
