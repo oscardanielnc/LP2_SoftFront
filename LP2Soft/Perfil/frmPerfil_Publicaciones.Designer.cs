@@ -46,7 +46,7 @@ namespace LP2Soft.Perfil
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(58, 25);
+            this.lblTitulo.Location = new System.Drawing.Point(169, 25);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(318, 29);
             this.lblTitulo.TabIndex = 2;
@@ -54,12 +54,14 @@ namespace LP2Soft.Perfil
             // 
             // btnFiltar
             // 
-            this.btnFiltar.Location = new System.Drawing.Point(549, 24);
+            this.btnFiltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnFiltar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFiltar.Location = new System.Drawing.Point(531, 24);
             this.btnFiltar.Name = "btnFiltar";
-            this.btnFiltar.Size = new System.Drawing.Size(147, 39);
+            this.btnFiltar.Size = new System.Drawing.Size(91, 30);
             this.btnFiltar.TabIndex = 23;
             this.btnFiltar.Text = "Filtrar";
-            this.btnFiltar.UseVisualStyleBackColor = true;
+            this.btnFiltar.UseVisualStyleBackColor = false;
             this.btnFiltar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // frmPerfil_Publicaciones

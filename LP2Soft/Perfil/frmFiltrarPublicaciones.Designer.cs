@@ -108,22 +108,26 @@ namespace LP2Soft.Perfil
             // 
             // btnFiltra
             // 
+            this.btnFiltra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnFiltra.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnFiltra.Location = new System.Drawing.Point(58, 273);
             this.btnFiltra.Name = "btnFiltra";
             this.btnFiltra.Size = new System.Drawing.Size(147, 39);
             this.btnFiltra.TabIndex = 22;
             this.btnFiltra.Text = "Filtrar";
-            this.btnFiltra.UseVisualStyleBackColor = true;
+            this.btnFiltra.UseVisualStyleBackColor = false;
             this.btnFiltra.Click += new System.EventHandler(this.btnFiltra_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelar.Location = new System.Drawing.Point(244, 273);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(147, 39);
             this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dTIni
@@ -169,7 +173,8 @@ namespace LP2Soft.Perfil
             this.Controls.Add(this.lblFechaFin);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmFiltrarPublicaciones";
-            this.Text = "frmFiltrarPublicaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Filtrar Publicaciones";
             this.ResumeLayout(false);
             this.PerformLayout();
 
