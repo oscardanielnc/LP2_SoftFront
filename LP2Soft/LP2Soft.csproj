@@ -250,6 +250,7 @@
     <Compile Include="Eventos\frmTendenciaMaterial.Designer.cs">
       <DependentUpon>frmTendenciaMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\Encriptador.cs" />
     <Compile Include="Home\frmBusquedaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -956,6 +957,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarXnombreYcursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.modificarContraseniaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.modificarUsuarioResponse.datasource">
