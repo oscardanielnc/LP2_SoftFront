@@ -26,9 +26,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             InitializeComponent();
             _cursoAux = _cursoVer;
             desplegar_numero_Evaluaciones(_cursoVer, tipo);
-            btnPracticasCiclo7.Text = "Ciclo " + _cursoVer.nivel;
-            btnPracticasLP2.Text = _cursoVer.nombre;
-            btnPracticasPracticas.Text = tipoMaterial[tipo];
+            btnRCiclo.Text = "Ciclo " + _cursoVer.nivel;
+            botonChevere1.Text = _cursoVer.nombre;
+            btnPractica.Text = tipoMaterial[tipo];
         }
 
         private void desplegar_numero_Evaluaciones(CursosWS.curso _cursoVer, int tipo)
@@ -147,5 +147,27 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             f.Show();
         }
 
+        private void btnRMaterial_Click(object sender, EventArgs e)
+        {
+            frmCursos_Home cursosHome = new frmCursos_Home(20186013);
+            addPanel(cursosHome);
+        }
+
+        private void btnRCiclo_Click(object sender, EventArgs e)
+        {
+            frmCursos_Ciclo ciclo7 = new frmCursos_Ciclo(_cursoAux.nivel);
+            addPanel(ciclo7);
+        }
+
+        private void botonChevere1_Click(object sender, EventArgs e)
+        {
+            frmCursos_VerCurso ciclo7LP2 = new frmCursos_VerCurso(_cursoAux);
+            addPanel(ciclo7LP2);
+        }
+
+        private void btnPractica_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

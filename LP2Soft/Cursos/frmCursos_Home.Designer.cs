@@ -36,11 +36,6 @@ namespace LP2Soft.Cursos
             this.btnCiclo8 = new System.Windows.Forms.Button();
             this.btnCiclo7 = new System.Windows.Forms.Button();
             this.btnCiclo6 = new System.Windows.Forms.Button();
-            this.btnCiclo4 = new System.Windows.Forms.Button();
-            this.btnCiclo3 = new System.Windows.Forms.Button();
-            this.btnCiclo5 = new System.Windows.Forms.Button();
-            this.btnCiclo1 = new System.Windows.Forms.Button();
-            this.btnCiclo2 = new System.Windows.Forms.Button();
             this.lvlNoPuedeLlevar = new System.Windows.Forms.Label();
             this.lblAzul = new System.Windows.Forms.Label();
             this.lblPuedeLlevar = new System.Windows.Forms.Label();
@@ -53,6 +48,19 @@ namespace LP2Soft.Cursos
             this.lblCreditos = new System.Windows.Forms.Label();
             this.lblCreditosInfo = new System.Windows.Forms.Label();
             this.btnCaclculadorNotas = new System.Windows.Forms.Button();
+            this.botonChevere3 = new LP2Soft.Asesor.BotonChevere();
+            this.botonChevere2 = new LP2Soft.Asesor.BotonChevere();
+            this.botonChevere1 = new LP2Soft.Asesor.BotonChevere();
+            this.btn10 = new LP2Soft.Asesor.BotonChevere();
+            this.bnt9 = new LP2Soft.Asesor.BotonChevere();
+            this.btn8 = new LP2Soft.Asesor.BotonChevere();
+            this.btn7 = new LP2Soft.Asesor.BotonChevere();
+            this.btn6 = new LP2Soft.Asesor.BotonChevere();
+            this.btn5 = new LP2Soft.Asesor.BotonChevere();
+            this.btn4 = new LP2Soft.Asesor.BotonChevere();
+            this.btn3 = new LP2Soft.Asesor.BotonChevere();
+            this.btn2 = new LP2Soft.Asesor.BotonChevere();
+            this.btn1 = new LP2Soft.Asesor.BotonChevere();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -69,16 +77,21 @@ namespace LP2Soft.Cursos
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.btn10);
+            this.panel1.Controls.Add(this.bnt9);
+            this.panel1.Controls.Add(this.btn8);
+            this.panel1.Controls.Add(this.btn7);
+            this.panel1.Controls.Add(this.btn6);
+            this.panel1.Controls.Add(this.btn5);
+            this.panel1.Controls.Add(this.btn4);
+            this.panel1.Controls.Add(this.btn3);
+            this.panel1.Controls.Add(this.btn2);
+            this.panel1.Controls.Add(this.btn1);
             this.panel1.Controls.Add(this.btnCiclo10);
             this.panel1.Controls.Add(this.btnCiclo9);
             this.panel1.Controls.Add(this.btnCiclo8);
             this.panel1.Controls.Add(this.btnCiclo7);
             this.panel1.Controls.Add(this.btnCiclo6);
-            this.panel1.Controls.Add(this.btnCiclo4);
-            this.panel1.Controls.Add(this.btnCiclo3);
-            this.panel1.Controls.Add(this.btnCiclo5);
-            this.panel1.Controls.Add(this.btnCiclo1);
-            this.panel1.Controls.Add(this.btnCiclo2);
             this.panel1.Location = new System.Drawing.Point(3, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 412);
@@ -126,63 +139,13 @@ namespace LP2Soft.Cursos
             // 
             // btnCiclo6
             // 
-            this.btnCiclo6.Location = new System.Drawing.Point(750, 0);
+            this.btnCiclo6.Location = new System.Drawing.Point(749, 0);
             this.btnCiclo6.Name = "btnCiclo6";
             this.btnCiclo6.Size = new System.Drawing.Size(143, 35);
             this.btnCiclo6.TabIndex = 23;
             this.btnCiclo6.Text = "Ciclo 6";
             this.btnCiclo6.UseVisualStyleBackColor = true;
             this.btnCiclo6.Click += new System.EventHandler(this.btnCiclo6_Click);
-            // 
-            // btnCiclo4
-            // 
-            this.btnCiclo4.Location = new System.Drawing.Point(450, 0);
-            this.btnCiclo4.Name = "btnCiclo4";
-            this.btnCiclo4.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo4.TabIndex = 22;
-            this.btnCiclo4.Text = "Ciclo 4";
-            this.btnCiclo4.UseVisualStyleBackColor = true;
-            this.btnCiclo4.Click += new System.EventHandler(this.btnCiclo4_Click);
-            // 
-            // btnCiclo3
-            // 
-            this.btnCiclo3.Location = new System.Drawing.Point(300, 0);
-            this.btnCiclo3.Name = "btnCiclo3";
-            this.btnCiclo3.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo3.TabIndex = 21;
-            this.btnCiclo3.Text = "Ciclo 3";
-            this.btnCiclo3.UseVisualStyleBackColor = true;
-            this.btnCiclo3.Click += new System.EventHandler(this.btnCiclo3_Click);
-            // 
-            // btnCiclo5
-            // 
-            this.btnCiclo5.Location = new System.Drawing.Point(600, 0);
-            this.btnCiclo5.Name = "btnCiclo5";
-            this.btnCiclo5.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo5.TabIndex = 7;
-            this.btnCiclo5.Text = "Ciclo 5";
-            this.btnCiclo5.UseVisualStyleBackColor = true;
-            this.btnCiclo5.Click += new System.EventHandler(this.btnCiclo5_Click);
-            // 
-            // btnCiclo1
-            // 
-            this.btnCiclo1.Location = new System.Drawing.Point(0, 0);
-            this.btnCiclo1.Name = "btnCiclo1";
-            this.btnCiclo1.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo1.TabIndex = 6;
-            this.btnCiclo1.Text = "Ciclo 1";
-            this.btnCiclo1.UseVisualStyleBackColor = true;
-            this.btnCiclo1.Click += new System.EventHandler(this.btnCiclo1_Click);
-            // 
-            // btnCiclo2
-            // 
-            this.btnCiclo2.Location = new System.Drawing.Point(150, 0);
-            this.btnCiclo2.Name = "btnCiclo2";
-            this.btnCiclo2.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo2.TabIndex = 4;
-            this.btnCiclo2.Text = "Ciclo 2";
-            this.btnCiclo2.UseVisualStyleBackColor = true;
-            this.btnCiclo2.Click += new System.EventHandler(this.btnCiclo2_Click);
             // 
             // lvlNoPuedeLlevar
             // 
@@ -249,6 +212,9 @@ namespace LP2Soft.Cursos
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.botonChevere3);
+            this.panel2.Controls.Add(this.botonChevere2);
+            this.panel2.Controls.Add(this.botonChevere1);
             this.panel2.Controls.Add(this.btnGrabar);
             this.panel2.Controls.Add(this.lblCreditos);
             this.panel2.Controls.Add(this.lblCreditosInfo);
@@ -307,6 +273,264 @@ namespace LP2Soft.Cursos
             this.btnCaclculadorNotas.UseVisualStyleBackColor = true;
             this.btnCaclculadorNotas.Click += new System.EventHandler(this.btnCaclculadorNotas_Click);
             // 
+            // botonChevere3
+            // 
+            this.botonChevere3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere3.BorderRadius = 6;
+            this.botonChevere3.BorderSize = 0;
+            this.botonChevere3.FlatAppearance.BorderSize = 0;
+            this.botonChevere3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere3.ForeColor = System.Drawing.Color.White;
+            this.botonChevere3.Location = new System.Drawing.Point(472, 25);
+            this.botonChevere3.Name = "botonChevere3";
+            this.botonChevere3.Size = new System.Drawing.Size(65, 23);
+            this.botonChevere3.TabIndex = 53;
+            this.botonChevere3.Text = "Grabar";
+            this.botonChevere3.TextColor = System.Drawing.Color.White;
+            this.botonChevere3.UseVisualStyleBackColor = false;
+            // 
+            // botonChevere2
+            // 
+            this.botonChevere2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere2.BorderRadius = 6;
+            this.botonChevere2.BorderSize = 0;
+            this.botonChevere2.FlatAppearance.BorderSize = 0;
+            this.botonChevere2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere2.ForeColor = System.Drawing.Color.White;
+            this.botonChevere2.Location = new System.Drawing.Point(3, 2);
+            this.botonChevere2.Name = "botonChevere2";
+            this.botonChevere2.Size = new System.Drawing.Size(143, 35);
+            this.botonChevere2.TabIndex = 53;
+            this.botonChevere2.Text = "Material";
+            this.botonChevere2.TextColor = System.Drawing.Color.White;
+            this.botonChevere2.UseVisualStyleBackColor = false;
+            // 
+            // botonChevere1
+            // 
+            this.botonChevere1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere1.BorderRadius = 6;
+            this.botonChevere1.BorderSize = 0;
+            this.botonChevere1.FlatAppearance.BorderSize = 0;
+            this.botonChevere1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere1.ForeColor = System.Drawing.Color.White;
+            this.botonChevere1.Location = new System.Drawing.Point(661, 0);
+            this.botonChevere1.Name = "botonChevere1";
+            this.botonChevere1.Size = new System.Drawing.Size(143, 35);
+            this.botonChevere1.TabIndex = 53;
+            this.botonChevere1.Text = "Calculador de notas";
+            this.botonChevere1.TextColor = System.Drawing.Color.White;
+            this.botonChevere1.UseVisualStyleBackColor = false;
+            this.botonChevere1.Click += new System.EventHandler(this.botonChevere1_Click);
+            // 
+            // btn10
+            // 
+            this.btn10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn10.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btn10.BorderRadius = 6;
+            this.btn10.BorderSize = 0;
+            this.btn10.FlatAppearance.BorderSize = 0;
+            this.btn10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn10.ForeColor = System.Drawing.Color.White;
+            this.btn10.Location = new System.Drawing.Point(1350, 0);
+            this.btn10.Name = "btn10";
+            this.btn10.Size = new System.Drawing.Size(143, 33);
+            this.btn10.TabIndex = 52;
+            this.btn10.Text = "Ciclo 10";
+            this.btn10.TextColor = System.Drawing.Color.White;
+            this.btn10.UseVisualStyleBackColor = false;
+            this.btn10.Click += new System.EventHandler(this.btn10_Click);
+            // 
+            // bnt9
+            // 
+            this.bnt9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.bnt9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.bnt9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.bnt9.BorderRadius = 6;
+            this.bnt9.BorderSize = 0;
+            this.bnt9.FlatAppearance.BorderSize = 0;
+            this.bnt9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bnt9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt9.ForeColor = System.Drawing.Color.White;
+            this.bnt9.Location = new System.Drawing.Point(1200, 0);
+            this.bnt9.Name = "bnt9";
+            this.bnt9.Size = new System.Drawing.Size(143, 33);
+            this.bnt9.TabIndex = 51;
+            this.bnt9.Text = "Ciclo 9";
+            this.bnt9.TextColor = System.Drawing.Color.White;
+            this.bnt9.UseVisualStyleBackColor = false;
+            this.bnt9.Click += new System.EventHandler(this.bnt9_Click);
+            // 
+            // btn8
+            // 
+            this.btn8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btn8.BorderRadius = 6;
+            this.btn8.BorderSize = 0;
+            this.btn8.FlatAppearance.BorderSize = 0;
+            this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn8.ForeColor = System.Drawing.Color.White;
+            this.btn8.Location = new System.Drawing.Point(1050, 0);
+            this.btn8.Name = "btn8";
+            this.btn8.Size = new System.Drawing.Size(143, 33);
+            this.btn8.TabIndex = 50;
+            this.btn8.Text = "Ciclo 8";
+            this.btn8.TextColor = System.Drawing.Color.White;
+            this.btn8.UseVisualStyleBackColor = false;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
+            // 
+            // btn7
+            // 
+            this.btn7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btn7.BorderRadius = 6;
+            this.btn7.BorderSize = 0;
+            this.btn7.FlatAppearance.BorderSize = 0;
+            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn7.ForeColor = System.Drawing.Color.White;
+            this.btn7.Location = new System.Drawing.Point(900, 0);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(143, 33);
+            this.btn7.TabIndex = 49;
+            this.btn7.Text = "Ciclo 7";
+            this.btn7.TextColor = System.Drawing.Color.White;
+            this.btn7.UseVisualStyleBackColor = false;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
+            // 
+            // btn6
+            // 
+            this.btn6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btn6.BorderRadius = 6;
+            this.btn6.BorderSize = 0;
+            this.btn6.FlatAppearance.BorderSize = 0;
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6.ForeColor = System.Drawing.Color.White;
+            this.btn6.Location = new System.Drawing.Point(750, 0);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(143, 33);
+            this.btn6.TabIndex = 48;
+            this.btn6.Text = "Ciclo 6";
+            this.btn6.TextColor = System.Drawing.Color.White;
+            this.btn6.UseVisualStyleBackColor = false;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
+            // 
+            // btn5
+            // 
+            this.btn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btn5.BorderRadius = 6;
+            this.btn5.BorderSize = 0;
+            this.btn5.FlatAppearance.BorderSize = 0;
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5.ForeColor = System.Drawing.Color.White;
+            this.btn5.Location = new System.Drawing.Point(600, 0);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(143, 33);
+            this.btn5.TabIndex = 47;
+            this.btn5.Text = "Ciclo 5";
+            this.btn5.TextColor = System.Drawing.Color.White;
+            this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
+            // 
+            // btn4
+            // 
+            this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btn4.BorderRadius = 6;
+            this.btn4.BorderSize = 0;
+            this.btn4.FlatAppearance.BorderSize = 0;
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4.ForeColor = System.Drawing.Color.White;
+            this.btn4.Location = new System.Drawing.Point(450, 0);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(143, 33);
+            this.btn4.TabIndex = 46;
+            this.btn4.Text = "Ciclo 4";
+            this.btn4.TextColor = System.Drawing.Color.White;
+            this.btn4.UseVisualStyleBackColor = false;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
+            // 
+            // btn3
+            // 
+            this.btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btn3.BorderRadius = 6;
+            this.btn3.BorderSize = 0;
+            this.btn3.FlatAppearance.BorderSize = 0;
+            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3.ForeColor = System.Drawing.Color.White;
+            this.btn3.Location = new System.Drawing.Point(300, 0);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(143, 33);
+            this.btn3.TabIndex = 45;
+            this.btn3.Text = "Ciclo 3";
+            this.btn3.TextColor = System.Drawing.Color.White;
+            this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
+            // 
+            // btn2
+            // 
+            this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btn2.BorderRadius = 6;
+            this.btn2.BorderSize = 0;
+            this.btn2.FlatAppearance.BorderSize = 0;
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2.ForeColor = System.Drawing.Color.White;
+            this.btn2.Location = new System.Drawing.Point(150, 0);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(143, 33);
+            this.btn2.TabIndex = 44;
+            this.btn2.Text = "Ciclo 2";
+            this.btn2.TextColor = System.Drawing.Color.White;
+            this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
+            // 
+            // btn1
+            // 
+            this.btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btn1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btn1.BorderRadius = 6;
+            this.btn1.BorderSize = 0;
+            this.btn1.FlatAppearance.BorderSize = 0;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.ForeColor = System.Drawing.Color.White;
+            this.btn1.Location = new System.Drawing.Point(0, 0);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(143, 33);
+            this.btn1.TabIndex = 43;
+            this.btn1.Text = "Ciclo 1";
+            this.btn1.TextColor = System.Drawing.Color.White;
+            this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            // 
             // frmCursos_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,9 +550,6 @@ namespace LP2Soft.Cursos
         #endregion
         private System.Windows.Forms.Button btnMaterial;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnCiclo2;
-        private System.Windows.Forms.Button btnCiclo5;
-        private System.Windows.Forms.Button btnCiclo1;
         private System.Windows.Forms.Label lblAzul;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblVerde;
@@ -341,12 +562,23 @@ namespace LP2Soft.Cursos
         private System.Windows.Forms.Button btnCiclo8;
         private System.Windows.Forms.Button btnCiclo7;
         private System.Windows.Forms.Button btnCiclo6;
-        private System.Windows.Forms.Button btnCiclo4;
-        private System.Windows.Forms.Button btnCiclo3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCaclculadorNotas;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Label lblCreditos;
         private System.Windows.Forms.Label lblCreditosInfo;
+        private Asesor.BotonChevere btn2;
+        private Asesor.BotonChevere btn1;
+        private Asesor.BotonChevere btn10;
+        private Asesor.BotonChevere bnt9;
+        private Asesor.BotonChevere btn8;
+        private Asesor.BotonChevere btn7;
+        private Asesor.BotonChevere btn6;
+        private Asesor.BotonChevere btn5;
+        private Asesor.BotonChevere btn4;
+        private Asesor.BotonChevere btn3;
+        private Asesor.BotonChevere botonChevere1;
+        private Asesor.BotonChevere botonChevere3;
+        private Asesor.BotonChevere botonChevere2;
     }
 }

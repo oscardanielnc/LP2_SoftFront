@@ -24,7 +24,7 @@ namespace LP2Soft.Cursos.Ciclo7
         {
             InitializeComponent();
             _daoCurso = new CursosWS.CursosWSClient();
-            btnCiclo7.Text = "Cliclo " + nivel;
+            btnRCiclo.Text = "Cliclo " + nivel;
             todosCursosxNivel(nivel);
         }
 
@@ -91,6 +91,22 @@ namespace LP2Soft.Cursos.Ciclo7
             f.TopLevel = false;
             this.panel4.Controls.Add(f);
             f.Show();
+        }
+
+        private void botonChevere1_Click(object sender, EventArgs e)
+        {
+            frmCursos_Home cursosHome = new frmCursos_Home(20186013);
+            addPanel(cursosHome);
+        }
+
+        private void btnCiclo7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRCiclo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace LP2Soft.Tarjetas
     public partial class tarjTipoMaterial : Form
     {
         private CursosWS.curso _cursoVer;
-        private String[] tipoMaterial = new String[]{"Practica", "Laboratorio","Tarea Academica" , "Examenes"};
+        private String[] tipoMaterial = new String[]{"Prácticas", "Laboratorios","Tareas Académicas" , "Exámenes"};
         private int tipo;
         public tarjTipoMaterial()
         {

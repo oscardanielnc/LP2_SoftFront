@@ -40,12 +40,15 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.btnLP2Practicas3 = new System.Windows.Forms.Button();
             this.btnLP2Practicas2 = new System.Windows.Forms.Button();
             this.btnLP2Practicas1 = new System.Windows.Forms.Button();
-            this.btnPracticasCiclo7 = new System.Windows.Forms.Button();
             this.btnPracticasMaterial = new System.Windows.Forms.Button();
             this.picturePracticasReferencia1 = new System.Windows.Forms.PictureBox();
             this.picturePracticasReferencia3 = new System.Windows.Forms.PictureBox();
             this.picturePracticasReferencia2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnPractica = new LP2Soft.Asesor.BotonChevere();
+            this.botonChevere1 = new LP2Soft.Asesor.BotonChevere();
+            this.btnRCiclo = new LP2Soft.Asesor.BotonChevere();
+            this.btnRMaterial = new LP2Soft.Asesor.BotonChevere();
             this.panelLP2Practicas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica2Descargar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLP2Practica3Descargar)).BeginInit();
@@ -184,16 +187,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.btnLP2Practicas1.UseVisualStyleBackColor = true;
             this.btnLP2Practicas1.Visible = false;
             // 
-            // btnPracticasCiclo7
-            // 
-            this.btnPracticasCiclo7.Location = new System.Drawing.Point(202, 5);
-            this.btnPracticasCiclo7.Name = "btnPracticasCiclo7";
-            this.btnPracticasCiclo7.Size = new System.Drawing.Size(143, 35);
-            this.btnPracticasCiclo7.TabIndex = 23;
-            this.btnPracticasCiclo7.Text = "Ciclo 7";
-            this.btnPracticasCiclo7.UseVisualStyleBackColor = true;
-            this.btnPracticasCiclo7.Click += new System.EventHandler(this.btnPracticasCiclo7_Click);
-            // 
             // btnPracticasMaterial
             // 
             this.btnPracticasMaterial.Location = new System.Drawing.Point(11, 4);
@@ -236,9 +229,12 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnPractica);
             this.panel4.Controls.Add(this.panelLP2Practicas);
-            this.panel4.Controls.Add(this.btnPracticasCiclo7);
+            this.panel4.Controls.Add(this.botonChevere1);
+            this.panel4.Controls.Add(this.btnRCiclo);
             this.panel4.Controls.Add(this.picturePracticasReferencia1);
+            this.panel4.Controls.Add(this.btnRMaterial);
             this.panel4.Controls.Add(this.btnPracticasMaterial);
             this.panel4.Controls.Add(this.btnPracticasPracticas);
             this.panel4.Controls.Add(this.picturePracticasReferencia3);
@@ -249,6 +245,86 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(823, 505);
             this.panel4.TabIndex = 25;
+            // 
+            // btnPractica
+            // 
+            this.btnPractica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnPractica.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnPractica.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnPractica.BorderRadius = 6;
+            this.btnPractica.BorderSize = 0;
+            this.btnPractica.FlatAppearance.BorderSize = 0;
+            this.btnPractica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPractica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPractica.ForeColor = System.Drawing.Color.White;
+            this.btnPractica.Location = new System.Drawing.Point(582, 4);
+            this.btnPractica.Name = "btnPractica";
+            this.btnPractica.Size = new System.Drawing.Size(143, 36);
+            this.btnPractica.TabIndex = 51;
+            this.btnPractica.Text = "Práctica";
+            this.btnPractica.TextColor = System.Drawing.Color.White;
+            this.btnPractica.UseVisualStyleBackColor = false;
+            this.btnPractica.Click += new System.EventHandler(this.btnPractica_Click);
+            // 
+            // botonChevere1
+            // 
+            this.botonChevere1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere1.BorderRadius = 6;
+            this.botonChevere1.BorderSize = 0;
+            this.botonChevere1.FlatAppearance.BorderSize = 0;
+            this.botonChevere1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere1.ForeColor = System.Drawing.Color.White;
+            this.botonChevere1.Location = new System.Drawing.Point(392, 5);
+            this.botonChevere1.Name = "botonChevere1";
+            this.botonChevere1.Size = new System.Drawing.Size(143, 36);
+            this.botonChevere1.TabIndex = 50;
+            this.botonChevere1.Text = "Lenguaje de programación";
+            this.botonChevere1.TextColor = System.Drawing.Color.White;
+            this.botonChevere1.UseVisualStyleBackColor = false;
+            this.botonChevere1.Click += new System.EventHandler(this.botonChevere1_Click);
+            // 
+            // btnRCiclo
+            // 
+            this.btnRCiclo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCiclo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRCiclo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRCiclo.BorderRadius = 6;
+            this.btnRCiclo.BorderSize = 0;
+            this.btnRCiclo.FlatAppearance.BorderSize = 0;
+            this.btnRCiclo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRCiclo.ForeColor = System.Drawing.Color.White;
+            this.btnRCiclo.Location = new System.Drawing.Point(202, 5);
+            this.btnRCiclo.Name = "btnRCiclo";
+            this.btnRCiclo.Size = new System.Drawing.Size(143, 35);
+            this.btnRCiclo.TabIndex = 49;
+            this.btnRCiclo.Text = "Ciclo";
+            this.btnRCiclo.TextColor = System.Drawing.Color.White;
+            this.btnRCiclo.UseVisualStyleBackColor = false;
+            this.btnRCiclo.Click += new System.EventHandler(this.btnRCiclo_Click);
+            // 
+            // btnRMaterial
+            // 
+            this.btnRMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRMaterial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRMaterial.BorderRadius = 6;
+            this.btnRMaterial.BorderSize = 0;
+            this.btnRMaterial.FlatAppearance.BorderSize = 0;
+            this.btnRMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRMaterial.ForeColor = System.Drawing.Color.White;
+            this.btnRMaterial.Location = new System.Drawing.Point(12, 5);
+            this.btnRMaterial.Name = "btnRMaterial";
+            this.btnRMaterial.Size = new System.Drawing.Size(143, 35);
+            this.btnRMaterial.TabIndex = 48;
+            this.btnRMaterial.Text = "Material";
+            this.btnRMaterial.TextColor = System.Drawing.Color.White;
+            this.btnRMaterial.UseVisualStyleBackColor = false;
+            this.btnRMaterial.Click += new System.EventHandler(this.btnRMaterial_Click);
             // 
             // frmCursos_Practicas
             // 
@@ -284,7 +360,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
         private System.Windows.Forms.Button btnLP2Practicas3;
         private System.Windows.Forms.Button btnLP2Practicas2;
         private System.Windows.Forms.Button btnLP2Practicas1;
-        private System.Windows.Forms.Button btnPracticasCiclo7;
         private System.Windows.Forms.PictureBox picturePracticasReferencia1;
         private System.Windows.Forms.Button btnPracticasMaterial;
         private System.Windows.Forms.Button btnLP2Practicas4;
@@ -293,5 +368,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
         private System.Windows.Forms.PictureBox pBLP2Practica4Descargar;
         private System.Windows.Forms.PictureBox pBLP2Practica1Descargar;
         private System.Windows.Forms.Panel panel4;
+        private Asesor.BotonChevere btnRMaterial;
+        private Asesor.BotonChevere btnRCiclo;
+        private Asesor.BotonChevere btnPractica;
+        private Asesor.BotonChevere botonChevere1;
     }
 }
