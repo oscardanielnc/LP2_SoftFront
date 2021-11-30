@@ -959,6 +959,9 @@
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.listarXnombreYcursoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.modificarContraseniaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\LP2Soft.UsuarioWS.modificarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

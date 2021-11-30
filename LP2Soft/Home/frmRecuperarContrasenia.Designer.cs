@@ -63,6 +63,7 @@ namespace LP2Soft.Home
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(190, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigo_KeyDown);
             // 
             // btnEnviarCorreo
             // 
