@@ -214,7 +214,7 @@ namespace LP2Soft.Cursos
             this.panel2.Controls.Add(this.botonChevere3);
             this.panel2.Controls.Add(this.botonChevere2);
             this.panel2.Controls.Add(this.botonChevere1);
-            this.panel2.Controls.Add(this.btnGrabar);
+            //this.panel2.Controls.Add(this.btnGrabar);
             this.panel2.Controls.Add(this.lblCreditos);
             this.panel2.Controls.Add(this.lblCreditosInfo);
             this.panel2.Controls.Add(this.btnCaclculadorNotas);
