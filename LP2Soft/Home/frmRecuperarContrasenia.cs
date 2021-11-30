@@ -33,7 +33,7 @@ namespace LP2Soft.Home
             to = _user.correo;
             from = "infunablesLP2@gmail.com";
             pass = "infuLP2@";
-            mail = "Su contraseña es " + "" + _user.contrasenia + " ";
+            mail = "Su contraseña temporal es " + "" + _user.contrasenia + " ";
             subject = "Recuperación de contraseña, sistema INFunables";
             MailMessage message = new MailMessage();
             message.To.Add(to);

@@ -26,7 +26,7 @@ namespace LP2Soft.Home
             string correoCodigo = txtCorreoCodigo.Text;
             if(!correoCodigo.Equals(""))
             {
-                string password = txtContrasenia.Text;
+                string password = Encriptador.GetSHA256(txtContrasenia.Text);
                 if(!password.Equals(""))
                 {
                     int n;
