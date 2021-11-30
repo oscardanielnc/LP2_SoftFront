@@ -34,6 +34,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             _daoMaterial = new PublicacionesWS.PublicacionesWSClient();
             _cursoVer = curso;
             _tipo = auxTipo;
+            lblNombreCodigo.Text = curso.nombre + " (" + curso.codigo + ")";
             _indice = indice;
             btnRCiclo.Text = "Ciclo " + curso.nivel;
             botonChevere1.Text = curso.nombre;

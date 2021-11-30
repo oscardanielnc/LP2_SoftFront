@@ -24,6 +24,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas
         public frmCursos_Practicas(CursosWS.curso _cursoVer, int tipo)
         {
             InitializeComponent();
+            lblNombreCodigo.Text = _cursoVer.nombre + " (" + _cursoVer.codigo + ")";
             _cursoAux = _cursoVer;
             desplegar_numero_Evaluaciones(_cursoVer, tipo);
             btnRCiclo.Text = "Ciclo " + _cursoVer.nivel;
