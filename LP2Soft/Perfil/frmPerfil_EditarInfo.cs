@@ -31,7 +31,6 @@ namespace LP2Soft.Perfil
             rtbDescripcion.Text = _usuarioActual.descripcion;
             txtNombre.Text = _usuarioActual.nombre;
             txtApellido.Text = _usuarioActual.apellido;
-            txtContrasenia.Text = _usuarioActual.contrasenia;
             if (_usuarioActual.foto != null)
             {
                 MemoryStream ms1 = new MemoryStream(_usuarioActual.foto);
@@ -60,7 +59,6 @@ namespace LP2Soft.Perfil
             _usuarioModificado.correo = lblCorreo.Text; 
             _usuarioModificado.especialidad = _usuarioActual.especialidad;
             _usuarioModificado.descripcion = rtbDescripcion.Text; //
-            _usuarioModificado.contrasenia = txtContrasenia.Text; //
             _usuarioModificado.esAsesor = _usuarioActual.esAsesor;
             _usuarioModificado.esAdmin = _usuarioActual.esAdmin;
             _usuarioModificado.foto = _usuarioActual.foto; //
@@ -79,13 +77,6 @@ namespace LP2Soft.Perfil
                 frmHome.abrirFormulario(new frmPerfil(_usuarioModificado));
                 frmPrincipal.endLoading();
             }
-        }
-
-        private void btnVerContrasenia_Click(object sender, EventArgs e)
-        {
-            if (txtContrasenia.UseSystemPasswordChar)
-                txtContrasenia.UseSystemPasswordChar = false;
-            else txtContrasenia.UseSystemPasswordChar = true;
         }
 
         private void btnSubirPerfil_Click(object sender, EventArgs e)
@@ -107,6 +98,11 @@ namespace LP2Soft.Perfil
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
             }
+        }
+
+        private void btnCambiarCon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

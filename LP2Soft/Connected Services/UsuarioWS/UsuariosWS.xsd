@@ -34,6 +34,8 @@
   <xs:element name="listarUsuariosNombreCodigoResponse" type="tns:listarUsuariosNombreCodigoResponse" />
   <xs:element name="listarXnombreYcurso" type="tns:listarXnombreYcurso" />
   <xs:element name="listarXnombreYcursoResponse" type="tns:listarXnombreYcursoResponse" />
+  <xs:element name="modificarContrasenia" type="tns:modificarContrasenia" />
+  <xs:element name="modificarContraseniaResponse" type="tns:modificarContraseniaResponse" />
   <xs:element name="modificarUsuario" type="tns:modificarUsuario" />
   <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
   <xs:element name="mostrarUsuario" type="tns:mostrarUsuario" />
@@ -50,12 +52,10 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursosAsesorados">
-    <xs:sequence>
-      <xs:element name="idAsesor" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="listarCursosPostular">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarCursosAsesoradosResponse">
+  <xs:complexType name="listarCursosPostularResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
@@ -191,10 +191,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="listarCursosPostular">
-    <xs:sequence />
+  <xs:complexType name="listarCursosAsesorados">
+    <xs:sequence>
+      <xs:element name="idAsesor" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursosPostularResponse">
+  <xs:complexType name="listarCursosAsesoradosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
@@ -222,16 +224,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosNombreCodigoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarReseniaProfesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="resenia" type="tns:resenia" />
@@ -240,6 +232,16 @@
   <xs:complexType name="insertarReseniaProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreCodigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="mostrarUsuario">
@@ -260,6 +262,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="esAmigoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarContrasenia">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="newPassword" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarContraseniaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
