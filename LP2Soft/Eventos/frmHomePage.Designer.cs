@@ -82,7 +82,7 @@ namespace LP2Soft.Eventos
             // 
             this.lblPublicacionesGenerales.AutoSize = true;
             this.lblPublicacionesGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPublicacionesGenerales.Location = new System.Drawing.Point(223, 9);
+            this.lblPublicacionesGenerales.Location = new System.Drawing.Point(211, 9);
             this.lblPublicacionesGenerales.Name = "lblPublicacionesGenerales";
             this.lblPublicacionesGenerales.Size = new System.Drawing.Size(207, 20);
             this.lblPublicacionesGenerales.TabIndex = 6;

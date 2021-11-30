@@ -63,6 +63,7 @@ namespace LP2Soft.Eventos
             txtDescripcionEvento.BackColor = Color.White;
             lblLinkZoom.Text = e.enlaceZoom;
             lblFechaEvento.Text = e.fechaDelEvento.ToString("dd/MMMM/yyyy");
+            
             int hhi, mmi, hhf, mmf;
             hhi = e.horaInicio / 100;
             mmi = e.horaInicio % 100;

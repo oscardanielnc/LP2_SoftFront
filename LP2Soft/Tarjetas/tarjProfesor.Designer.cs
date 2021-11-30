@@ -56,11 +56,11 @@ namespace LP2Soft.Tarjetas
             // 
             // btnVerPerfil
             // 
-            this.btnVerPerfil.BackColor = System.Drawing.SystemColors.Window;
+            this.btnVerPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
             this.btnVerPerfil.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnVerPerfil.FlatAppearance.BorderSize = 2;
             this.btnVerPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
-            this.btnVerPerfil.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnVerPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnVerPerfil.Location = new System.Drawing.Point(53, 168);
             this.btnVerPerfil.Name = "btnVerPerfil";
             this.btnVerPerfil.Size = new System.Drawing.Size(75, 23);

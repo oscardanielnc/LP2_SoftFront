@@ -34,8 +34,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.lblSemestre = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblNota = new System.Windows.Forms.Label();
-            this.btnSubir = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.txtComentario = new System.Windows.Forms.TextBox();
             this.checkbSi = new System.Windows.Forms.CheckBox();
             this.checkBNo = new System.Windows.Forms.CheckBox();
@@ -105,28 +103,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.lblNota.Size = new System.Drawing.Size(44, 18);
             this.lblNota.TabIndex = 4;
             this.lblNota.Text = "Nota:";
-            // 
-            // btnSubir
-            // 
-            this.btnSubir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnSubir.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSubir.Location = new System.Drawing.Point(350, 12);
-            this.btnSubir.Name = "btnSubir";
-            this.btnSubir.Size = new System.Drawing.Size(147, 39);
-            this.btnSubir.TabIndex = 5;
-            this.btnSubir.Text = "Subir";
-            this.btnSubir.UseVisualStyleBackColor = false;
-            this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(335, 324);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 39);
-            this.btnCancelar.TabIndex = 6;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtComentario
             // 
@@ -312,7 +288,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.btnRCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnRCancelar.Location = new System.Drawing.Point(415, 306);
+            this.btnRCancelar.Location = new System.Drawing.Point(354, 327);
             this.btnRCancelar.Name = "btnRCancelar";
             this.btnRCancelar.Size = new System.Drawing.Size(143, 36);
             this.btnRCancelar.TabIndex = 56;
@@ -329,7 +305,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.Controls.Add(this.btnRCancelar);
             this.Controls.Add(this.btnRSubir);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSubir);
             this.Controls.Add(this.cboSemestre);
             this.Controls.Add(this.cboCiclo);
             this.Controls.Add(this.cboProfesores);
@@ -341,7 +316,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.Controls.Add(this.checkBNo);
             this.Controls.Add(this.checkbSi);
             this.Controls.Add(this.txtComentario);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblCalificacion);
             this.Controls.Add(this.lblSemestre);
@@ -363,8 +337,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.Label lblSemestre;
         private System.Windows.Forms.Label lblCalificacion;
         private System.Windows.Forms.Label lblNota;
-        private System.Windows.Forms.Button btnSubir;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtComentario;
         private System.Windows.Forms.CheckBox checkbSi;
         private System.Windows.Forms.CheckBox checkBNo;

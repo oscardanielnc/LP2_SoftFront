@@ -94,13 +94,14 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             // lblNombreCodigo
             // 
-            this.lblNombreCodigo.AutoSize = true;
+            this.lblNombreCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNombreCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCodigo.Location = new System.Drawing.Point(243, 63);
+            this.lblNombreCodigo.Location = new System.Drawing.Point(-22, 54);
             this.lblNombreCodigo.Name = "lblNombreCodigo";
-            this.lblNombreCodigo.Size = new System.Drawing.Size(314, 20);
+            this.lblNombreCodigo.Size = new System.Drawing.Size(857, 37);
             this.lblNombreCodigo.TabIndex = 14;
             this.lblNombreCodigo.Text = "Lenguaje de Programación 2 (INF248)";
+            this.lblNombreCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
 {
     public partial class frmCursos_VerCurso : Form
     {
+        private static PictureBox _imgUsuario = null;
         private string _rutaFoto = "";
         private CursosWS.CursosWSClient _daoCurso;
         private CursosWS.curso _cursoAux;
@@ -27,12 +29,15 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
         PublicacionesWS.postGenerico _postCreado;
         private static int _cantidadPost = 0;
         //
+
         public frmCursos_VerCurso()
         {
             InitializeComponent();
         }
         public frmCursos_VerCurso(CursosWS.curso cursoVer)
         {
+            
+            
             _cursoAux = cursoVer;
             _daoCurso = new CursosWS.CursosWSClient();
             InitializeComponent();
@@ -60,7 +65,11 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             //post
             _cantidadPost = 0;
             _usuario = frmHome.Usuario;
-
+            if (_usuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(_usuario.foto);
+                pbPerfil.Image = new Bitmap(ms1);
+            }
             listarPublicaciones();
             //post
             tipoMaterial(cursoVer);

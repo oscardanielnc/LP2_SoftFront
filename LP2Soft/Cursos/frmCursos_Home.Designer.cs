@@ -31,6 +31,16 @@ namespace LP2Soft.Cursos
         {
             this.btnMaterial = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn10 = new LP2Soft.Asesor.BotonChevere();
+            this.bnt9 = new LP2Soft.Asesor.BotonChevere();
+            this.btn8 = new LP2Soft.Asesor.BotonChevere();
+            this.btn7 = new LP2Soft.Asesor.BotonChevere();
+            this.btn6 = new LP2Soft.Asesor.BotonChevere();
+            this.btn5 = new LP2Soft.Asesor.BotonChevere();
+            this.btn4 = new LP2Soft.Asesor.BotonChevere();
+            this.btn3 = new LP2Soft.Asesor.BotonChevere();
+            this.btn2 = new LP2Soft.Asesor.BotonChevere();
+            this.btn1 = new LP2Soft.Asesor.BotonChevere();
             this.btnCiclo10 = new System.Windows.Forms.Button();
             this.btnCiclo9 = new System.Windows.Forms.Button();
             this.btnCiclo8 = new System.Windows.Forms.Button();
@@ -44,22 +54,12 @@ namespace LP2Soft.Cursos
             this.label3 = new System.Windows.Forms.Label();
             this.lblVerde = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblCreditos = new System.Windows.Forms.Label();
-            this.lblCreditosInfo = new System.Windows.Forms.Label();
-            this.btnCaclculadorNotas = new System.Windows.Forms.Button();
             this.botonChevere3 = new LP2Soft.Asesor.BotonChevere();
             this.botonChevere2 = new LP2Soft.Asesor.BotonChevere();
             this.botonChevere1 = new LP2Soft.Asesor.BotonChevere();
-            this.btn10 = new LP2Soft.Asesor.BotonChevere();
-            this.bnt9 = new LP2Soft.Asesor.BotonChevere();
-            this.btn8 = new LP2Soft.Asesor.BotonChevere();
-            this.btn7 = new LP2Soft.Asesor.BotonChevere();
-            this.btn6 = new LP2Soft.Asesor.BotonChevere();
-            this.btn5 = new LP2Soft.Asesor.BotonChevere();
-            this.btn4 = new LP2Soft.Asesor.BotonChevere();
-            this.btn3 = new LP2Soft.Asesor.BotonChevere();
-            this.btn2 = new LP2Soft.Asesor.BotonChevere();
-            this.btn1 = new LP2Soft.Asesor.BotonChevere();
+            this.lblCreditos = new System.Windows.Forms.Label();
+            this.lblCreditosInfo = new System.Windows.Forms.Label();
+            this.btnCaclculadorNotas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -95,230 +95,6 @@ namespace LP2Soft.Cursos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 412);
             this.panel1.TabIndex = 3;
-            // 
-            // btnCiclo10
-            // 
-            this.btnCiclo10.Location = new System.Drawing.Point(1350, 0);
-            this.btnCiclo10.Name = "btnCiclo10";
-            this.btnCiclo10.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo10.TabIndex = 27;
-            this.btnCiclo10.Text = "Ciclo 10";
-            this.btnCiclo10.UseVisualStyleBackColor = true;
-            this.btnCiclo10.Click += new System.EventHandler(this.btnCiclo10_Click);
-            // 
-            // btnCiclo9
-            // 
-            this.btnCiclo9.Location = new System.Drawing.Point(1200, 0);
-            this.btnCiclo9.Name = "btnCiclo9";
-            this.btnCiclo9.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo9.TabIndex = 26;
-            this.btnCiclo9.Text = "Ciclo 9";
-            this.btnCiclo9.UseVisualStyleBackColor = true;
-            this.btnCiclo9.Click += new System.EventHandler(this.btnCiclo9_Click);
-            // 
-            // btnCiclo8
-            // 
-            this.btnCiclo8.Location = new System.Drawing.Point(1050, 0);
-            this.btnCiclo8.Name = "btnCiclo8";
-            this.btnCiclo8.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo8.TabIndex = 25;
-            this.btnCiclo8.Text = "Ciclo 8";
-            this.btnCiclo8.UseVisualStyleBackColor = true;
-            this.btnCiclo8.Click += new System.EventHandler(this.btnCiclo8_Click);
-            // 
-            // btnCiclo7
-            // 
-            this.btnCiclo7.Location = new System.Drawing.Point(900, 0);
-            this.btnCiclo7.Name = "btnCiclo7";
-            this.btnCiclo7.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo7.TabIndex = 24;
-            this.btnCiclo7.Text = "Ciclo 7";
-            this.btnCiclo7.UseVisualStyleBackColor = true;
-            this.btnCiclo7.Click += new System.EventHandler(this.btnCiclo7_Click);
-            // 
-            // btnCiclo6
-            // 
-            this.btnCiclo6.Location = new System.Drawing.Point(749, 0);
-            this.btnCiclo6.Name = "btnCiclo6";
-            this.btnCiclo6.Size = new System.Drawing.Size(143, 35);
-            this.btnCiclo6.TabIndex = 23;
-            this.btnCiclo6.Text = "Ciclo 6";
-            this.btnCiclo6.UseVisualStyleBackColor = true;
-            this.btnCiclo6.Click += new System.EventHandler(this.btnCiclo6_Click);
-            // 
-            // lvlNoPuedeLlevar
-            // 
-            this.lvlNoPuedeLlevar.AutoSize = true;
-            this.lvlNoPuedeLlevar.Location = new System.Drawing.Point(340, 28);
-            this.lvlNoPuedeLlevar.Name = "lvlNoPuedeLlevar";
-            this.lvlNoPuedeLlevar.Size = new System.Drawing.Size(82, 13);
-            this.lvlNoPuedeLlevar.TabIndex = 23;
-            this.lvlNoPuedeLlevar.Text = "No puede llevar";
-            // 
-            // lblAzul
-            // 
-            this.lblAzul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.lblAzul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAzul.Location = new System.Drawing.Point(230, 26);
-            this.lblAzul.Name = "lblAzul";
-            this.lblAzul.Size = new System.Drawing.Size(13, 12);
-            this.lblAzul.TabIndex = 23;
-            // 
-            // lblPuedeLlevar
-            // 
-            this.lblPuedeLlevar.AutoSize = true;
-            this.lblPuedeLlevar.Location = new System.Drawing.Point(249, 27);
-            this.lblPuedeLlevar.Name = "lblPuedeLlevar";
-            this.lblPuedeLlevar.Size = new System.Drawing.Size(66, 13);
-            this.lblPuedeLlevar.TabIndex = 22;
-            this.lblPuedeLlevar.Text = "Puede llevar";
-            // 
-            // lblRojo
-            // 
-            this.lblRojo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblRojo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRojo.Location = new System.Drawing.Point(321, 27);
-            this.lblRojo.Name = "lblRojo";
-            this.lblRojo.Size = new System.Drawing.Size(13, 12);
-            this.lblRojo.TabIndex = 21;
-            // 
-            // lblAprobado
-            // 
-            this.lblAprobado.AutoSize = true;
-            this.lblAprobado.Location = new System.Drawing.Point(171, 25);
-            this.lblAprobado.Name = "lblAprobado";
-            this.lblAprobado.Size = new System.Drawing.Size(53, 13);
-            this.lblAprobado.TabIndex = 21;
-            this.lblAprobado.Text = "Aprobado";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(221)))), ((int)(((byte)(125)))));
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(152, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 12);
-            this.label3.TabIndex = 22;
-            // 
-            // lblVerde
-            // 
-            this.lblVerde.Location = new System.Drawing.Point(147, 3);
-            this.lblVerde.Name = "lblVerde";
-            this.lblVerde.Size = new System.Drawing.Size(390, 21);
-            this.lblVerde.TabIndex = 5;
-            this.lblVerde.Text = "Al dar clic en + podrá ver los cursos que podrá llevar si aprueba un curso previo" +
-    "";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.botonChevere3);
-            this.panel2.Controls.Add(this.botonChevere2);
-            this.panel2.Controls.Add(this.botonChevere1);
-            this.panel2.Controls.Add(this.lblCreditos);
-            this.panel2.Controls.Add(this.lblCreditosInfo);
-            this.panel2.Controls.Add(this.btnCaclculadorNotas);
-            this.panel2.Controls.Add(this.lvlNoPuedeLlevar);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.btnMaterial);
-            this.panel2.Controls.Add(this.lblAzul);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.lblPuedeLlevar);
-            this.panel2.Controls.Add(this.lblAprobado);
-            this.panel2.Controls.Add(this.lblRojo);
-            this.panel2.Controls.Add(this.lblVerde);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(807, 466);
-            this.panel2.TabIndex = 24;
-            // 
-            // lblCreditos
-            // 
-            this.lblCreditos.AutoSize = true;
-            this.lblCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreditos.Location = new System.Drawing.Point(583, 24);
-            this.lblCreditos.Name = "lblCreditos";
-            this.lblCreditos.Size = new System.Drawing.Size(36, 16);
-            this.lblCreditos.TabIndex = 26;
-            this.lblCreditos.Text = "0.00";
-            // 
-            // lblCreditosInfo
-            // 
-            this.lblCreditosInfo.AutoSize = true;
-            this.lblCreditosInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreditosInfo.Location = new System.Drawing.Point(561, 3);
-            this.lblCreditosInfo.Name = "lblCreditosInfo";
-            this.lblCreditosInfo.Size = new System.Drawing.Size(85, 13);
-            this.lblCreditosInfo.TabIndex = 25;
-            this.lblCreditosInfo.Text = "Total créditos";
-            // 
-            // btnCaclculadorNotas
-            // 
-            this.btnCaclculadorNotas.Location = new System.Drawing.Point(661, 2);
-            this.btnCaclculadorNotas.Name = "btnCaclculadorNotas";
-            this.btnCaclculadorNotas.Size = new System.Drawing.Size(143, 35);
-            this.btnCaclculadorNotas.TabIndex = 24;
-            this.btnCaclculadorNotas.Text = "Calculador de notas";
-            this.btnCaclculadorNotas.UseVisualStyleBackColor = true;
-            this.btnCaclculadorNotas.Click += new System.EventHandler(this.btnCaclculadorNotas_Click);
-            // 
-            // botonChevere3
-            // 
-            this.botonChevere3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.botonChevere3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.botonChevere3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
-            this.botonChevere3.BorderRadius = 6;
-            this.botonChevere3.BorderSize = 0;
-            this.botonChevere3.FlatAppearance.BorderSize = 0;
-            this.botonChevere3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonChevere3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonChevere3.ForeColor = System.Drawing.Color.White;
-            this.botonChevere3.Location = new System.Drawing.Point(472, 25);
-            this.botonChevere3.Name = "botonChevere3";
-            this.botonChevere3.Size = new System.Drawing.Size(65, 23);
-            this.botonChevere3.TabIndex = 53;
-            this.botonChevere3.Text = "Grabar";
-            this.botonChevere3.TextColor = System.Drawing.Color.White;
-            this.botonChevere3.UseVisualStyleBackColor = false;
-            // 
-            // botonChevere2
-            // 
-            this.botonChevere2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.botonChevere2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.botonChevere2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
-            this.botonChevere2.BorderRadius = 6;
-            this.botonChevere2.BorderSize = 0;
-            this.botonChevere2.FlatAppearance.BorderSize = 0;
-            this.botonChevere2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonChevere2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonChevere2.ForeColor = System.Drawing.Color.White;
-            this.botonChevere2.Location = new System.Drawing.Point(3, 2);
-            this.botonChevere2.Name = "botonChevere2";
-            this.botonChevere2.Size = new System.Drawing.Size(143, 35);
-            this.botonChevere2.TabIndex = 53;
-            this.botonChevere2.Text = "Material";
-            this.botonChevere2.TextColor = System.Drawing.Color.White;
-            this.botonChevere2.UseVisualStyleBackColor = false;
-            // 
-            // botonChevere1
-            // 
-            this.botonChevere1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.botonChevere1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.botonChevere1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
-            this.botonChevere1.BorderRadius = 6;
-            this.botonChevere1.BorderSize = 0;
-            this.botonChevere1.FlatAppearance.BorderSize = 0;
-            this.botonChevere1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonChevere1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonChevere1.ForeColor = System.Drawing.Color.White;
-            this.botonChevere1.Location = new System.Drawing.Point(661, 0);
-            this.botonChevere1.Name = "botonChevere1";
-            this.botonChevere1.Size = new System.Drawing.Size(143, 35);
-            this.botonChevere1.TabIndex = 53;
-            this.botonChevere1.Text = "Calculador de notas";
-            this.botonChevere1.TextColor = System.Drawing.Color.White;
-            this.botonChevere1.UseVisualStyleBackColor = false;
-            this.botonChevere1.Click += new System.EventHandler(this.botonChevere1_Click);
             // 
             // btn10
             // 
@@ -519,6 +295,230 @@ namespace LP2Soft.Cursos
             this.btn1.TextColor = System.Drawing.Color.White;
             this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            // 
+            // btnCiclo10
+            // 
+            this.btnCiclo10.Location = new System.Drawing.Point(1350, 0);
+            this.btnCiclo10.Name = "btnCiclo10";
+            this.btnCiclo10.Size = new System.Drawing.Size(143, 35);
+            this.btnCiclo10.TabIndex = 27;
+            this.btnCiclo10.Text = "Ciclo 10";
+            this.btnCiclo10.UseVisualStyleBackColor = true;
+            this.btnCiclo10.Click += new System.EventHandler(this.btnCiclo10_Click);
+            // 
+            // btnCiclo9
+            // 
+            this.btnCiclo9.Location = new System.Drawing.Point(1200, 0);
+            this.btnCiclo9.Name = "btnCiclo9";
+            this.btnCiclo9.Size = new System.Drawing.Size(143, 35);
+            this.btnCiclo9.TabIndex = 26;
+            this.btnCiclo9.Text = "Ciclo 9";
+            this.btnCiclo9.UseVisualStyleBackColor = true;
+            this.btnCiclo9.Click += new System.EventHandler(this.btnCiclo9_Click);
+            // 
+            // btnCiclo8
+            // 
+            this.btnCiclo8.Location = new System.Drawing.Point(1050, 0);
+            this.btnCiclo8.Name = "btnCiclo8";
+            this.btnCiclo8.Size = new System.Drawing.Size(143, 35);
+            this.btnCiclo8.TabIndex = 25;
+            this.btnCiclo8.Text = "Ciclo 8";
+            this.btnCiclo8.UseVisualStyleBackColor = true;
+            this.btnCiclo8.Click += new System.EventHandler(this.btnCiclo8_Click);
+            // 
+            // btnCiclo7
+            // 
+            this.btnCiclo7.Location = new System.Drawing.Point(900, 0);
+            this.btnCiclo7.Name = "btnCiclo7";
+            this.btnCiclo7.Size = new System.Drawing.Size(143, 35);
+            this.btnCiclo7.TabIndex = 24;
+            this.btnCiclo7.Text = "Ciclo 7";
+            this.btnCiclo7.UseVisualStyleBackColor = true;
+            this.btnCiclo7.Click += new System.EventHandler(this.btnCiclo7_Click);
+            // 
+            // btnCiclo6
+            // 
+            this.btnCiclo6.Location = new System.Drawing.Point(749, 0);
+            this.btnCiclo6.Name = "btnCiclo6";
+            this.btnCiclo6.Size = new System.Drawing.Size(143, 35);
+            this.btnCiclo6.TabIndex = 23;
+            this.btnCiclo6.Text = "Ciclo 6";
+            this.btnCiclo6.UseVisualStyleBackColor = true;
+            this.btnCiclo6.Click += new System.EventHandler(this.btnCiclo6_Click);
+            // 
+            // lvlNoPuedeLlevar
+            // 
+            this.lvlNoPuedeLlevar.AutoSize = true;
+            this.lvlNoPuedeLlevar.Location = new System.Drawing.Point(340, 28);
+            this.lvlNoPuedeLlevar.Name = "lvlNoPuedeLlevar";
+            this.lvlNoPuedeLlevar.Size = new System.Drawing.Size(82, 13);
+            this.lvlNoPuedeLlevar.TabIndex = 23;
+            this.lvlNoPuedeLlevar.Text = "No puede llevar";
+            // 
+            // lblAzul
+            // 
+            this.lblAzul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.lblAzul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAzul.Location = new System.Drawing.Point(230, 26);
+            this.lblAzul.Name = "lblAzul";
+            this.lblAzul.Size = new System.Drawing.Size(13, 12);
+            this.lblAzul.TabIndex = 23;
+            // 
+            // lblPuedeLlevar
+            // 
+            this.lblPuedeLlevar.AutoSize = true;
+            this.lblPuedeLlevar.Location = new System.Drawing.Point(249, 27);
+            this.lblPuedeLlevar.Name = "lblPuedeLlevar";
+            this.lblPuedeLlevar.Size = new System.Drawing.Size(66, 13);
+            this.lblPuedeLlevar.TabIndex = 22;
+            this.lblPuedeLlevar.Text = "Puede llevar";
+            // 
+            // lblRojo
+            // 
+            this.lblRojo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRojo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblRojo.Location = new System.Drawing.Point(321, 27);
+            this.lblRojo.Name = "lblRojo";
+            this.lblRojo.Size = new System.Drawing.Size(13, 12);
+            this.lblRojo.TabIndex = 21;
+            // 
+            // lblAprobado
+            // 
+            this.lblAprobado.AutoSize = true;
+            this.lblAprobado.Location = new System.Drawing.Point(171, 25);
+            this.lblAprobado.Name = "lblAprobado";
+            this.lblAprobado.Size = new System.Drawing.Size(53, 13);
+            this.lblAprobado.TabIndex = 21;
+            this.lblAprobado.Text = "Aprobado";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(221)))), ((int)(((byte)(125)))));
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Location = new System.Drawing.Point(152, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 12);
+            this.label3.TabIndex = 22;
+            // 
+            // lblVerde
+            // 
+            this.lblVerde.Location = new System.Drawing.Point(147, 3);
+            this.lblVerde.Name = "lblVerde";
+            this.lblVerde.Size = new System.Drawing.Size(390, 21);
+            this.lblVerde.TabIndex = 5;
+            this.lblVerde.Text = "Al dar clic en + podrá ver los cursos que podrá llevar si aprueba un curso previo" +
+    "";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.botonChevere3);
+            this.panel2.Controls.Add(this.botonChevere2);
+            this.panel2.Controls.Add(this.botonChevere1);
+            this.panel2.Controls.Add(this.lblCreditos);
+            this.panel2.Controls.Add(this.lblCreditosInfo);
+            this.panel2.Controls.Add(this.btnCaclculadorNotas);
+            this.panel2.Controls.Add(this.lvlNoPuedeLlevar);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.btnMaterial);
+            this.panel2.Controls.Add(this.lblAzul);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblPuedeLlevar);
+            this.panel2.Controls.Add(this.lblAprobado);
+            this.panel2.Controls.Add(this.lblRojo);
+            this.panel2.Controls.Add(this.lblVerde);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(807, 466);
+            this.panel2.TabIndex = 24;
+            // 
+            // botonChevere3
+            // 
+            this.botonChevere3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere3.BorderRadius = 6;
+            this.botonChevere3.BorderSize = 0;
+            this.botonChevere3.FlatAppearance.BorderSize = 0;
+            this.botonChevere3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere3.ForeColor = System.Drawing.Color.White;
+            this.botonChevere3.Location = new System.Drawing.Point(472, 25);
+            this.botonChevere3.Name = "botonChevere3";
+            this.botonChevere3.Size = new System.Drawing.Size(65, 23);
+            this.botonChevere3.TabIndex = 53;
+            this.botonChevere3.Text = "Grabar";
+            this.botonChevere3.TextColor = System.Drawing.Color.White;
+            this.botonChevere3.UseVisualStyleBackColor = false;
+            // 
+            // botonChevere2
+            // 
+            this.botonChevere2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere2.BorderRadius = 6;
+            this.botonChevere2.BorderSize = 0;
+            this.botonChevere2.FlatAppearance.BorderSize = 0;
+            this.botonChevere2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere2.ForeColor = System.Drawing.Color.White;
+            this.botonChevere2.Location = new System.Drawing.Point(3, 2);
+            this.botonChevere2.Name = "botonChevere2";
+            this.botonChevere2.Size = new System.Drawing.Size(143, 35);
+            this.botonChevere2.TabIndex = 53;
+            this.botonChevere2.Text = "Material";
+            this.botonChevere2.TextColor = System.Drawing.Color.White;
+            this.botonChevere2.UseVisualStyleBackColor = false;
+            // 
+            // botonChevere1
+            // 
+            this.botonChevere1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.botonChevere1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.botonChevere1.BorderRadius = 6;
+            this.botonChevere1.BorderSize = 0;
+            this.botonChevere1.FlatAppearance.BorderSize = 0;
+            this.botonChevere1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonChevere1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonChevere1.ForeColor = System.Drawing.Color.White;
+            this.botonChevere1.Location = new System.Drawing.Point(661, 0);
+            this.botonChevere1.Name = "botonChevere1";
+            this.botonChevere1.Size = new System.Drawing.Size(143, 35);
+            this.botonChevere1.TabIndex = 53;
+            this.botonChevere1.Text = "Calculador de notas";
+            this.botonChevere1.TextColor = System.Drawing.Color.White;
+            this.botonChevere1.UseVisualStyleBackColor = false;
+            this.botonChevere1.Click += new System.EventHandler(this.botonChevere1_Click);
+            // 
+            // lblCreditos
+            // 
+            this.lblCreditos.AutoSize = true;
+            this.lblCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreditos.Location = new System.Drawing.Point(583, 24);
+            this.lblCreditos.Name = "lblCreditos";
+            this.lblCreditos.Size = new System.Drawing.Size(36, 16);
+            this.lblCreditos.TabIndex = 26;
+            this.lblCreditos.Text = "0.00";
+            // 
+            // lblCreditosInfo
+            // 
+            this.lblCreditosInfo.AutoSize = true;
+            this.lblCreditosInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreditosInfo.Location = new System.Drawing.Point(561, 3);
+            this.lblCreditosInfo.Name = "lblCreditosInfo";
+            this.lblCreditosInfo.Size = new System.Drawing.Size(85, 13);
+            this.lblCreditosInfo.TabIndex = 25;
+            this.lblCreditosInfo.Text = "Total créditos";
+            // 
+            // btnCaclculadorNotas
+            // 
+            this.btnCaclculadorNotas.Location = new System.Drawing.Point(661, 2);
+            this.btnCaclculadorNotas.Name = "btnCaclculadorNotas";
+            this.btnCaclculadorNotas.Size = new System.Drawing.Size(143, 35);
+            this.btnCaclculadorNotas.TabIndex = 24;
+            this.btnCaclculadorNotas.Text = "Calculador de notas";
+            this.btnCaclculadorNotas.UseVisualStyleBackColor = true;
+            this.btnCaclculadorNotas.Click += new System.EventHandler(this.btnCaclculadorNotas_Click);
             // 
             // frmCursos_Home
             // 
