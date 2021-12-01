@@ -34,7 +34,7 @@ namespace LP2Soft.Eventos
             _comentario = new PublicacionesWS.comentario();
         }
 
-        private void btnPublicar_Click(object sender, EventArgs e)
+        private void btnCrearEvento_Click(object sender, EventArgs e)
         {
             _comentario.usuario = new PublicacionesWS.usuario();
             _comentario.usuario.idUsuario = frmHome.Usuario.idUsuario;
@@ -51,7 +51,7 @@ namespace LP2Soft.Eventos
                 DialogResult = DialogResult.OK;
                 _comentario.idComentario = resultado;
                 _comentarioCreado = _comentario;
-                
+
             }
             else
             {

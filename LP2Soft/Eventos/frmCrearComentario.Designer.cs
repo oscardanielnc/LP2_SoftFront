@@ -30,9 +30,9 @@ namespace LP2Soft.Eventos
         private void InitializeComponent()
         {
             this.txtComentario = new System.Windows.Forms.TextBox();
-            this.btnPublicar = new System.Windows.Forms.Button();
             this.lbComentario = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.btnCrearEvento = new LP2Soft.Asesor.BotonChevere();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,16 +43,6 @@ namespace LP2Soft.Eventos
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(328, 79);
             this.txtComentario.TabIndex = 4;
-            // 
-            // btnPublicar
-            // 
-            this.btnPublicar.Location = new System.Drawing.Point(345, 136);
-            this.btnPublicar.Name = "btnPublicar";
-            this.btnPublicar.Size = new System.Drawing.Size(75, 23);
-            this.btnPublicar.TabIndex = 5;
-            this.btnPublicar.Text = "Publicar";
-            this.btnPublicar.UseVisualStyleBackColor = true;
-            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click);
             // 
             // lbComentario
             // 
@@ -74,13 +64,33 @@ namespace LP2Soft.Eventos
             this.pbPerfil.TabIndex = 3;
             this.pbPerfil.TabStop = false;
             // 
+            // btnCrearEvento
+            // 
+            this.btnCrearEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCrearEvento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCrearEvento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnCrearEvento.BorderRadius = 6;
+            this.btnCrearEvento.BorderSize = 0;
+            this.btnCrearEvento.FlatAppearance.BorderSize = 0;
+            this.btnCrearEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearEvento.ForeColor = System.Drawing.Color.White;
+            this.btnCrearEvento.Location = new System.Drawing.Point(345, 135);
+            this.btnCrearEvento.Name = "btnCrearEvento";
+            this.btnCrearEvento.Size = new System.Drawing.Size(75, 23);
+            this.btnCrearEvento.TabIndex = 58;
+            this.btnCrearEvento.Text = "Publicar";
+            this.btnCrearEvento.TextColor = System.Drawing.Color.White;
+            this.btnCrearEvento.UseVisualStyleBackColor = false;
+            this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
+            // 
             // frmCrearComentario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 170);
+            this.Controls.Add(this.btnCrearEvento);
             this.Controls.Add(this.lbComentario);
-            this.Controls.Add(this.btnPublicar);
             this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.pbPerfil);
             this.Name = "frmCrearComentario";
@@ -96,7 +106,7 @@ namespace LP2Soft.Eventos
 
         private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.TextBox txtComentario;
-        private System.Windows.Forms.Button btnPublicar;
         private System.Windows.Forms.Label lbComentario;
+        private Asesor.BotonChevere btnCrearEvento;
     }
 }
