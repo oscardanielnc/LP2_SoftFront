@@ -32,7 +32,6 @@ namespace LP2Soft.Tarjetas
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tarjProfesor));
             this.imgProfesor = new System.Windows.Forms.PictureBox();
-            this.btnVerPerfil = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.imgEstrellas = new System.Windows.Forms.ImageList(this.components);
             this.estrella5 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@ namespace LP2Soft.Tarjetas
             this.estrella2 = new System.Windows.Forms.Label();
             this.estrella1 = new System.Windows.Forms.Label();
             this.lblCal = new System.Windows.Forms.Label();
+            this.btnVer = new LP2Soft.Asesor.BotonChevere();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfesor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,21 +53,6 @@ namespace LP2Soft.Tarjetas
             this.imgProfesor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgProfesor.TabIndex = 26;
             this.imgProfesor.TabStop = false;
-            // 
-            // btnVerPerfil
-            // 
-            this.btnVerPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnVerPerfil.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnVerPerfil.FlatAppearance.BorderSize = 2;
-            this.btnVerPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(86)))), ((int)(((byte)(171)))));
-            this.btnVerPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnVerPerfil.Location = new System.Drawing.Point(53, 168);
-            this.btnVerPerfil.Name = "btnVerPerfil";
-            this.btnVerPerfil.Size = new System.Drawing.Size(75, 23);
-            this.btnVerPerfil.TabIndex = 24;
-            this.btnVerPerfil.Text = "Ver Perfil";
-            this.btnVerPerfil.UseVisualStyleBackColor = false;
-            this.btnVerPerfil.Click += new System.EventHandler(this.btnVerPerfil_Click_1);
             // 
             // lblNombre
             // 
@@ -149,12 +134,33 @@ namespace LP2Soft.Tarjetas
             this.lblCal.TabIndex = 74;
             this.lblCal.Text = "4.00";
             // 
+            // btnVer
+            // 
+            this.btnVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnVer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnVer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnVer.BorderRadius = 6;
+            this.btnVer.BorderSize = 0;
+            this.btnVer.FlatAppearance.BorderSize = 0;
+            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer.ForeColor = System.Drawing.Color.White;
+            this.btnVer.Location = new System.Drawing.Point(49, 168);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(75, 23);
+            this.btnVer.TabIndex = 80;
+            this.btnVer.Text = "Ver Perfil";
+            this.btnVer.TextColor = System.Drawing.Color.White;
+            this.btnVer.UseVisualStyleBackColor = false;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            // 
             // tarjProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(180, 200);
+            this.Controls.Add(this.btnVer);
             this.Controls.Add(this.estrella5);
             this.Controls.Add(this.estrella4);
             this.Controls.Add(this.estrella3);
@@ -162,7 +168,6 @@ namespace LP2Soft.Tarjetas
             this.Controls.Add(this.estrella1);
             this.Controls.Add(this.lblCal);
             this.Controls.Add(this.imgProfesor);
-            this.Controls.Add(this.btnVerPerfil);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tarjProfesor";
@@ -176,7 +181,6 @@ namespace LP2Soft.Tarjetas
         #endregion
 
         private System.Windows.Forms.PictureBox imgProfesor;
-        private System.Windows.Forms.Button btnVerPerfil;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.ImageList imgEstrellas;
         private System.Windows.Forms.Label estrella5;
@@ -185,5 +189,6 @@ namespace LP2Soft.Tarjetas
         private System.Windows.Forms.Label estrella2;
         private System.Windows.Forms.Label estrella1;
         private System.Windows.Forms.Label lblCal;
+        private Asesor.BotonChevere btnVer;
     }
 }

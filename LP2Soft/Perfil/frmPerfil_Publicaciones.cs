@@ -44,6 +44,16 @@ namespace LP2Soft.Perfil
             _formActivo.Show();
         }
 
+        private void btnFiltros_Click(object sender, EventArgs e)
+        {
+            frmFiltrarPublicaciones filtro = new frmFiltrarPublicaciones();
+            if (filtro.ShowDialog() == DialogResult.OK)
+            {
+                pnPublicaciones.Controls.Clear();
+                listarPublicaciones(idCurso, fI, fF, flag);
+            }
+        }
+
         public void listarPublicaciones(int idCurso, string fechaI, string fechaF, int conCurso)
         {
             pnPublicaciones.Controls.Clear();
@@ -71,17 +81,6 @@ namespace LP2Soft.Perfil
                     _cantidadPost++;
                 }
             }
-        }
-
-        private void btnFiltrar_Click(object sender, EventArgs e)
-        {
-            frmFiltrarPublicaciones filtro = new frmFiltrarPublicaciones();
-            if (filtro.ShowDialog() == DialogResult.OK) 
-            {
-                pnPublicaciones.Controls.Clear();
-                listarPublicaciones( idCurso, fI, fF, flag);
-            }
-            
         }
     }
 }

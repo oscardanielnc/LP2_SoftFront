@@ -66,27 +66,7 @@ namespace LP2Soft.Eventos
             }
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            _evento.contenido = txtContenido.Text;
-            _evento.nombreDelEvento = txtTitulo.Text;
-            _evento.enlaceZoom = txtLinkZoom.Text;
-            _evento.fechaDelEvento = dtpFecha.Value;
-            _evento.fechaDelEventoSpecified = true;
-            _evento.horaInicio = int.Parse(tphhi.Value.ToString("HH")) * 100 + int.Parse(tpmmi.Value.ToString("mm"));
-            _evento.horaFin = int.Parse(tphhf.Value.ToString("HH")) * 100 + int.Parse(tpmmf.Value.ToString("mm"));
-
-            int resultado = _daoPost.modificarEvento(_evento);
-            if (resultado == 1) 
-            {
-                _eventoModificado = _evento;
-                DialogResult = DialogResult.OK;
-            }
-            else
-                MessageBox.Show("Error al modificar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             int resultado = _daoPost.eliminarEvento(_evento.idPost);
             if (resultado == 1)
@@ -97,6 +77,26 @@ namespace LP2Soft.Eventos
             }
             else
                 MessageBox.Show("Error el eliminar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            _evento.contenido = txtContenido.Text;
+            _evento.nombreDelEvento = txtTitulo.Text;
+            _evento.enlaceZoom = txtLinkZoom.Text;
+            _evento.fechaDelEvento = dtpFecha.Value;
+            _evento.fechaDelEventoSpecified = true;
+            _evento.horaInicio = int.Parse(tphhi.Value.ToString("HH")) * 100 + int.Parse(tpmmi.Value.ToString("mm"));
+            _evento.horaFin = int.Parse(tphhf.Value.ToString("HH")) * 100 + int.Parse(tpmmf.Value.ToString("mm"));
+
+            int resultado = _daoPost.modificarEvento(_evento);
+            if (resultado == 1)
+            {
+                _eventoModificado = _evento;
+                DialogResult = DialogResult.OK;
+            }
+            else
+                MessageBox.Show("Error al modificar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

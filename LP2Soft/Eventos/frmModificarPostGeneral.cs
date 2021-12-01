@@ -34,20 +34,7 @@ namespace LP2Soft.Eventos
             _daoPost = new PublicacionesWS.PublicacionesWSClient();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            _post.contenido = txtContenido.Text; 
-            int resultado = _daoPost.modificarPost(_post);
-            if (resultado == 1)
-            {
-                _postModificado = _post;
-                DialogResult = DialogResult.OK;
-            }
-            else
-                MessageBox.Show("Error al modificar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             int resultado = _daoPost.eliminarPost(_post);
             if (resultado == 1)
@@ -58,6 +45,19 @@ namespace LP2Soft.Eventos
             }
             else
                 MessageBox.Show("Error el eliminar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            _post.contenido = txtContenido.Text;
+            int resultado = _daoPost.modificarPost(_post);
+            if (resultado == 1)
+            {
+                _postModificado = _post;
+                DialogResult = DialogResult.OK;
+            }
+            else
+                MessageBox.Show("Error al modificar", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

@@ -58,7 +58,7 @@ namespace LP2Soft.Eventos
             _daoPost = new PublicacionesWS.PublicacionesWSClient();
         }
 
-        private void btnPublicar_Click(object sender, EventArgs e)
+        private void btnPublicar_Click_1(object sender, EventArgs e)
         {
             int resultado;
             _postGenerico.usuario.idUsuario = _usuario.idUsuario;
@@ -73,7 +73,7 @@ namespace LP2Soft.Eventos
             {
                 resultado = _daoPost.insertarPost(_postGenerico);
             }
-            else 
+            else
             {
                 resultado = _daoPost.insertar_postXCurso(_postGenerico);
             }
@@ -88,7 +88,6 @@ namespace LP2Soft.Eventos
             {
                 MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
     }
 }

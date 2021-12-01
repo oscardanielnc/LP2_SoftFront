@@ -39,7 +39,6 @@ namespace LP2Soft.Eventos
             this.label12 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnPublicar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.ofdPerfil = new System.Windows.Forms.OpenFileDialog();
@@ -51,6 +50,7 @@ namespace LP2Soft.Eventos
             this.tphhf = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.tpmmf = new System.Windows.Forms.DateTimePicker();
+            this.btnCrearEvento = new LP2Soft.Asesor.BotonChevere();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPublicacion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,16 +150,6 @@ namespace LP2Soft.Eventos
             this.label11.Size = new System.Drawing.Size(50, 16);
             this.label11.TabIndex = 39;
             this.label11.Text = "Hora :";
-            // 
-            // btnPublicar
-            // 
-            this.btnPublicar.Location = new System.Drawing.Point(336, 662);
-            this.btnPublicar.Name = "btnPublicar";
-            this.btnPublicar.Size = new System.Drawing.Size(75, 23);
-            this.btnPublicar.TabIndex = 47;
-            this.btnPublicar.Text = "Publicar";
-            this.btnPublicar.UseVisualStyleBackColor = true;
-            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click);
             // 
             // lblTitulo
             // 
@@ -263,11 +253,32 @@ namespace LP2Soft.Eventos
             this.tpmmf.Size = new System.Drawing.Size(40, 20);
             this.tpmmf.TabIndex = 56;
             // 
+            // btnCrearEvento
+            // 
+            this.btnCrearEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCrearEvento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCrearEvento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnCrearEvento.BorderRadius = 6;
+            this.btnCrearEvento.BorderSize = 0;
+            this.btnCrearEvento.FlatAppearance.BorderSize = 0;
+            this.btnCrearEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearEvento.ForeColor = System.Drawing.Color.White;
+            this.btnCrearEvento.Location = new System.Drawing.Point(322, 657);
+            this.btnCrearEvento.Name = "btnCrearEvento";
+            this.btnCrearEvento.Size = new System.Drawing.Size(75, 23);
+            this.btnCrearEvento.TabIndex = 57;
+            this.btnCrearEvento.Text = "Publicar";
+            this.btnCrearEvento.TextColor = System.Drawing.Color.White;
+            this.btnCrearEvento.UseVisualStyleBackColor = false;
+            this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
+            // 
             // frmCrearEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 692);
+            this.Controls.Add(this.btnCrearEvento);
             this.Controls.Add(this.tpmmf);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tphhf);
@@ -275,7 +286,6 @@ namespace LP2Soft.Eventos
             this.Controls.Add(this.tphhi);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnPublicar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblGuion);
             this.Controls.Add(this.label11);
@@ -310,7 +320,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnPublicar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.OpenFileDialog ofdPerfil;
@@ -322,5 +331,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.DateTimePicker tphhf;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker tpmmf;
+        private Asesor.BotonChevere btnCrearEvento;
     }
 }

@@ -35,11 +35,11 @@ namespace LP2Soft.Perfil
             this.lblCurso = new System.Windows.Forms.Label();
             this.checkbSi = new System.Windows.Forms.CheckBox();
             this.checkBNo = new System.Windows.Forms.CheckBox();
-            this.btnFiltra = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.dTIni = new System.Windows.Forms.DateTimePicker();
             this.dTFin = new System.Windows.Forms.DateTimePicker();
             this.cboCurso = new System.Windows.Forms.ComboBox();
+            this.btnFiltros = new LP2Soft.Asesor.BotonChevere();
+            this.btnCancelars = new LP2Soft.Asesor.BotonChevere();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -106,30 +106,6 @@ namespace LP2Soft.Perfil
             this.checkBNo.UseVisualStyleBackColor = true;
             this.checkBNo.CheckedChanged += new System.EventHandler(this.checkBNo_CheckedChanged_1);
             // 
-            // btnFiltra
-            // 
-            this.btnFiltra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnFiltra.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFiltra.Location = new System.Drawing.Point(58, 273);
-            this.btnFiltra.Name = "btnFiltra";
-            this.btnFiltra.Size = new System.Drawing.Size(147, 39);
-            this.btnFiltra.TabIndex = 22;
-            this.btnFiltra.Text = "Filtrar";
-            this.btnFiltra.UseVisualStyleBackColor = false;
-            this.btnFiltra.Click += new System.EventHandler(this.btnFiltra_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(244, 273);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 39);
-            this.btnCancelar.TabIndex = 23;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // dTIni
             // 
             this.dTIni.Location = new System.Drawing.Point(170, 96);
@@ -156,15 +132,55 @@ namespace LP2Soft.Perfil
             this.cboCurso.Size = new System.Drawing.Size(205, 21);
             this.cboCurso.TabIndex = 21;
             // 
+            // btnFiltros
+            // 
+            this.btnFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnFiltros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnFiltros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnFiltros.BorderRadius = 6;
+            this.btnFiltros.BorderSize = 0;
+            this.btnFiltros.FlatAppearance.BorderSize = 0;
+            this.btnFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltros.ForeColor = System.Drawing.Color.White;
+            this.btnFiltros.Location = new System.Drawing.Point(58, 288);
+            this.btnFiltros.Name = "btnFiltros";
+            this.btnFiltros.Size = new System.Drawing.Size(147, 39);
+            this.btnFiltros.TabIndex = 35;
+            this.btnFiltros.Text = "Filtrar";
+            this.btnFiltros.TextColor = System.Drawing.Color.White;
+            this.btnFiltros.UseVisualStyleBackColor = false;
+            this.btnFiltros.Click += new System.EventHandler(this.btnFiltros_Click);
+            // 
+            // btnCancelars
+            // 
+            this.btnCancelars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCancelars.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCancelars.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnCancelars.BorderRadius = 6;
+            this.btnCancelars.BorderSize = 0;
+            this.btnCancelars.FlatAppearance.BorderSize = 0;
+            this.btnCancelars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelars.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelars.ForeColor = System.Drawing.Color.White;
+            this.btnCancelars.Location = new System.Drawing.Point(244, 288);
+            this.btnCancelars.Name = "btnCancelars";
+            this.btnCancelars.Size = new System.Drawing.Size(147, 39);
+            this.btnCancelars.TabIndex = 36;
+            this.btnCancelars.Text = "Cancelar";
+            this.btnCancelars.TextColor = System.Drawing.Color.White;
+            this.btnCancelars.UseVisualStyleBackColor = false;
+            this.btnCancelars.Click += new System.EventHandler(this.btnCancelars_Click);
+            // 
             // frmFiltrarPublicaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 356);
+            this.Controls.Add(this.btnCancelars);
+            this.Controls.Add(this.btnFiltros);
             this.Controls.Add(this.dTFin);
             this.Controls.Add(this.dTIni);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnFiltra);
             this.Controls.Add(this.cboCurso);
             this.Controls.Add(this.checkBNo);
             this.Controls.Add(this.checkbSi);
@@ -186,12 +202,12 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.Label lblFechaIni;
         private System.Windows.Forms.Label lblCurso;
-        private System.Windows.Forms.Button btnFiltra;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.CheckBox checkbSi;
         private System.Windows.Forms.CheckBox checkBNo;
         private System.Windows.Forms.DateTimePicker dTIni;
         private System.Windows.Forms.DateTimePicker dTFin;
         private System.Windows.Forms.ComboBox cboCurso;
+        private Asesor.BotonChevere btnFiltros;
+        private Asesor.BotonChevere btnCancelars;
     }
 }

@@ -30,12 +30,6 @@ namespace LP2Soft.Perfil
             cboCurso.Enabled = false;
         }
 
-        
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void checkbSi_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkbSi.Checked == true)
@@ -57,7 +51,12 @@ namespace LP2Soft.Perfil
             }
         }
 
-        private void btnFiltra_Click(object sender, EventArgs e)
+        private void btnCancelars_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnFiltros_Click(object sender, EventArgs e)
         {
             dtF1 = new DateTime(dTIni.Value.Year, dTIni.Value.Month, dTIni.Value.Day);
             frmPerfil_Publicaciones.fI = dtF1.ToString("dd-MM-yyyy");

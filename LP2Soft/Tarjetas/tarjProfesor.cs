@@ -53,16 +53,6 @@ namespace LP2Soft.Tarjetas
             lblCal.Text = calificacion.ToString("0.00");
         }
 
-        private void btnVerPerfil_Click_1(object sender, EventArgs e)
-        {
-            frmPrincipal.startLoading();
-            _profesorVer = _daoProfesor.mostrarProfesor(_idProfesor);
-            if (_profesorVer != null)
-            {
-                frmHome.abrirFormulario(new frmProfesor_Perfil(_profesorVer));
-            }
-            frmPrincipal.endLoading();
-        }
         private void pintarEstrellas(float nEstrellas)
         {
             for (float i = 0; i < 5; i++)
@@ -75,6 +65,17 @@ namespace LP2Soft.Tarjetas
                 }
                 else _estrellas[(int)i].ImageIndex = 0;
             }
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.startLoading();
+            _profesorVer = _daoProfesor.mostrarProfesor(_idProfesor);
+            if (_profesorVer != null)
+            {
+                frmHome.abrirFormulario(new frmProfesor_Perfil(_profesorVer));
+            }
+            frmPrincipal.endLoading();
         }
     }
 }

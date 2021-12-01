@@ -29,7 +29,6 @@ namespace LP2Soft.Eventos
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnModificar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
@@ -41,7 +40,6 @@ namespace LP2Soft.Eventos
             this.lblModificarEvento = new System.Windows.Forms.Label();
             this.btnSubirImagen = new System.Windows.Forms.Button();
             this.pbImagenPublicacion = new System.Windows.Forms.PictureBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.tpmmf = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.tphhf = new System.Windows.Forms.DateTimePicker();
@@ -52,18 +50,10 @@ namespace LP2Soft.Eventos
             this.ofdPerfil = new System.Windows.Forms.OpenFileDialog();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnModificar = new LP2Soft.Asesor.BotonChevere();
+            this.btnEliminar = new LP2Soft.Asesor.BotonChevere();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPublicacion)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(332, 667);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 66;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label11
             // 
@@ -172,16 +162,6 @@ namespace LP2Soft.Eventos
             this.pbImagenPublicacion.TabIndex = 52;
             this.pbImagenPublicacion.TabStop = false;
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(234, 667);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 67;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
             // tpmmf
             // 
             this.tpmmf.CustomFormat = "mm";
@@ -274,11 +254,53 @@ namespace LP2Soft.Eventos
             this.lblTitulo.TabIndex = 75;
             this.lblTitulo.Text = "Título del Evento :";
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnModificar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnModificar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnModificar.BorderRadius = 6;
+            this.btnModificar.BorderSize = 0;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(332, 665);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 78;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextColor = System.Drawing.Color.White;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnEliminar.BorderRadius = 6;
+            this.btnEliminar.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(232, 665);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 77;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextColor = System.Drawing.Color.White;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
+            // 
             // frmModificarEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(429, 700);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.tpmmf);
@@ -288,8 +310,6 @@ namespace LP2Soft.Eventos
             this.Controls.Add(this.tphhi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.label12);
@@ -311,8 +331,6 @@ namespace LP2Soft.Eventos
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label12;
@@ -324,7 +342,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.TextBox txtContenido;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblModificarEvento;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DateTimePicker tpmmf;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker tphhf;
@@ -335,5 +352,7 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.OpenFileDialog ofdPerfil;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label lblTitulo;
+        private Asesor.BotonChevere btnModificar;
+        private Asesor.BotonChevere btnEliminar;
     }
 }

@@ -51,7 +51,7 @@ namespace LP2Soft.Eventos
             }
         }
 
-        private void btnPublicar_Click(object sender, EventArgs e)
+        private void btnCrearEvento_Click(object sender, EventArgs e)
         {
             _evento.contenido = txtContenido.Text;
             if (frmHome.Usuario.esAdmin == true) _evento.prioridad = 1;
@@ -60,8 +60,8 @@ namespace LP2Soft.Eventos
             _evento.enlaceZoom = txtZoom.Text;
             _evento.fechaDelEvento = dtpFecha.Value;
             _evento.fechaDelEventoSpecified = true;
-            _evento.horaInicio = int.Parse(tphhi.Value.ToString("HH"))*100 + int.Parse(tpmmi.Value.ToString("mm"));
-            _evento.horaFin = int.Parse(tphhf.Value.ToString("HH"))*100 + int.Parse(tpmmf.Value.ToString("mm"));
+            _evento.horaInicio = int.Parse(tphhi.Value.ToString("HH")) * 100 + int.Parse(tpmmi.Value.ToString("mm"));
+            _evento.horaFin = int.Parse(tphhf.Value.ToString("HH")) * 100 + int.Parse(tpmmf.Value.ToString("mm"));
 
             int resultado = _daoPost.insertarEvento(_evento);
 

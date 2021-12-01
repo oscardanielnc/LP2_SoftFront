@@ -30,12 +30,12 @@ namespace LP2Soft.Eventos
         private void InitializeComponent()
         {
             this.lblNombre = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.txtContenido = new System.Windows.Forms.TextBox();
             this.lbQueEstasPensando = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.lblModificarPublicacion = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEliminar = new LP2Soft.Asesor.BotonChevere();
+            this.btnModificar = new LP2Soft.Asesor.BotonChevere();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,16 +48,6 @@ namespace LP2Soft.Eventos
             this.lblNombre.Size = new System.Drawing.Size(109, 16);
             this.lblNombre.TabIndex = 14;
             this.lblNombre.Text = "Oscar Navarro";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(311, 273);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 13;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtContenido
             // 
@@ -99,22 +89,52 @@ namespace LP2Soft.Eventos
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(219, 273);
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnEliminar.BorderRadius = 6;
+            this.btnEliminar.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(207, 273);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 15;
+            this.btnEliminar.TabIndex = 37;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.TextColor = System.Drawing.Color.White;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnModificar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnModificar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnModificar.BorderRadius = 6;
+            this.btnModificar.BorderSize = 0;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(311, 273);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 38;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextColor = System.Drawing.Color.White;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // frmModificarPostGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 308);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtContenido);
             this.Controls.Add(this.lbQueEstasPensando);
             this.Controls.Add(this.pbPerfil);
@@ -131,11 +151,11 @@ namespace LP2Soft.Eventos
         #endregion
 
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox txtContenido;
         private System.Windows.Forms.Label lbQueEstasPensando;
         private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.Label lblModificarPublicacion;
-        private System.Windows.Forms.Button btnEliminar;
+        private Asesor.BotonChevere btnEliminar;
+        private Asesor.BotonChevere btnModificar;
     }
 }

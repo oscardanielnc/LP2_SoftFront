@@ -31,15 +31,15 @@ namespace LP2Soft.Perfil
         {
             this.pnPublicaciones = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnFiltar = new System.Windows.Forms.Button();
+            this.btnFiltros = new LP2Soft.Asesor.BotonChevere();
             this.SuspendLayout();
             // 
             // pnPublicaciones
             // 
             this.pnPublicaciones.AutoScroll = true;
-            this.pnPublicaciones.Location = new System.Drawing.Point(174, 83);
+            this.pnPublicaciones.Location = new System.Drawing.Point(174, 60);
             this.pnPublicaciones.Name = "pnPublicaciones";
-            this.pnPublicaciones.Size = new System.Drawing.Size(448, 473);
+            this.pnPublicaciones.Size = new System.Drawing.Size(448, 508);
             this.pnPublicaciones.TabIndex = 0;
             // 
             // lblTitulo
@@ -52,17 +52,25 @@ namespace LP2Soft.Perfil
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Historial de Publicaciones";
             // 
-            // btnFiltar
+            // btnFiltros
             // 
-            this.btnFiltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnFiltar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFiltar.Location = new System.Drawing.Point(531, 24);
-            this.btnFiltar.Name = "btnFiltar";
-            this.btnFiltar.Size = new System.Drawing.Size(91, 30);
-            this.btnFiltar.TabIndex = 23;
-            this.btnFiltar.Text = "Filtrar";
-            this.btnFiltar.UseVisualStyleBackColor = false;
-            this.btnFiltar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            this.btnFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnFiltros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnFiltros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnFiltros.BorderRadius = 6;
+            this.btnFiltros.BorderSize = 0;
+            this.btnFiltros.FlatAppearance.BorderSize = 0;
+            this.btnFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltros.ForeColor = System.Drawing.Color.White;
+            this.btnFiltros.Location = new System.Drawing.Point(531, 24);
+            this.btnFiltros.Name = "btnFiltros";
+            this.btnFiltros.Size = new System.Drawing.Size(91, 30);
+            this.btnFiltros.TabIndex = 34;
+            this.btnFiltros.Text = "Filtrar";
+            this.btnFiltros.TextColor = System.Drawing.Color.White;
+            this.btnFiltros.UseVisualStyleBackColor = false;
+            this.btnFiltros.Click += new System.EventHandler(this.btnFiltros_Click);
             // 
             // frmPerfil_Publicaciones
             // 
@@ -70,7 +78,7 @@ namespace LP2Soft.Perfil
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(799, 580);
-            this.Controls.Add(this.btnFiltar);
+            this.Controls.Add(this.btnFiltros);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pnPublicaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -85,6 +93,6 @@ namespace LP2Soft.Perfil
 
         private System.Windows.Forms.Panel pnPublicaciones;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnFiltar;
+        private Asesor.BotonChevere btnFiltros;
     }
 }
