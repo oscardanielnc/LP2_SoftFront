@@ -31,7 +31,6 @@ namespace LP2Soft.Perfil
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrearReseniaProfesor));
-            this.btnPublicar = new System.Windows.Forms.Button();
             this.txtContenido = new System.Windows.Forms.TextBox();
             this.lblResenia = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
@@ -41,18 +40,9 @@ namespace LP2Soft.Perfil
             this.estrella3 = new System.Windows.Forms.Label();
             this.estrella2 = new System.Windows.Forms.Label();
             this.estrella1 = new System.Windows.Forms.Label();
+            this.btnPublicar = new LP2Soft.Asesor.BotonChevere();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnPublicar
-            // 
-            this.btnPublicar.Location = new System.Drawing.Point(349, 169);
-            this.btnPublicar.Name = "btnPublicar";
-            this.btnPublicar.Size = new System.Drawing.Size(75, 23);
-            this.btnPublicar.TabIndex = 20;
-            this.btnPublicar.Text = "Publicar";
-            this.btnPublicar.UseVisualStyleBackColor = true;
-            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click);
             // 
             // txtContenido
             // 
@@ -146,22 +136,43 @@ namespace LP2Soft.Perfil
             this.estrella1.TabIndex = 79;
             this.estrella1.Click += new System.EventHandler(this.estrella1_Click);
             // 
+            // btnPublicar
+            // 
+            this.btnPublicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnPublicar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnPublicar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnPublicar.BorderRadius = 6;
+            this.btnPublicar.BorderSize = 0;
+            this.btnPublicar.FlatAppearance.BorderSize = 0;
+            this.btnPublicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPublicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPublicar.ForeColor = System.Drawing.Color.White;
+            this.btnPublicar.Location = new System.Drawing.Point(349, 162);
+            this.btnPublicar.Name = "btnPublicar";
+            this.btnPublicar.Size = new System.Drawing.Size(75, 23);
+            this.btnPublicar.TabIndex = 84;
+            this.btnPublicar.Text = "Publicar";
+            this.btnPublicar.TextColor = System.Drawing.Color.White;
+            this.btnPublicar.UseVisualStyleBackColor = false;
+            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click_1);
+            // 
             // frmCrearReseniaProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 208);
+            this.Controls.Add(this.btnPublicar);
             this.Controls.Add(this.estrella5);
             this.Controls.Add(this.estrella4);
             this.Controls.Add(this.estrella3);
             this.Controls.Add(this.estrella2);
             this.Controls.Add(this.estrella1);
-            this.Controls.Add(this.btnPublicar);
             this.Controls.Add(this.txtContenido);
             this.Controls.Add(this.lblResenia);
             this.Controls.Add(this.pbPerfil);
             this.Name = "frmCrearReseniaProfesor";
-            this.Text = "Crear Resenia Profesor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Crear Reseña Profesor";
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,7 +180,6 @@ namespace LP2Soft.Perfil
         }
 
         #endregion
-        private System.Windows.Forms.Button btnPublicar;
         private System.Windows.Forms.TextBox txtContenido;
         private System.Windows.Forms.Label lblResenia;
         private System.Windows.Forms.PictureBox pbPerfil;
@@ -179,5 +189,6 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Label estrella3;
         private System.Windows.Forms.Label estrella2;
         private System.Windows.Forms.Label estrella1;
+        private Asesor.BotonChevere btnPublicar;
     }
 }

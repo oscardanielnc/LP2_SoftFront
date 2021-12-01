@@ -42,38 +42,6 @@ namespace LP2Soft.Perfil
 
         public resenia Resenia { get => _resenia; set => _resenia = value; }
 
-        private void btnPublicar_Click(object sender, EventArgs e)
-        {
-            if (_calificacion != 0)
-            {
-                _daoProfesor = new CursosWS.CursosWSClient();
-                _resenia = new CursosWS.resenia();
-                _resenia.usuario = new CursosWS.usuario();
-                _resenia.usuario.idUsuario = frmHome.Usuario.idUsuario;
-                _resenia.profesor = _profesor;
-                _resenia.calificacion = _calificacion;
-                _resenia.contenido = txtContenido.Text;
-                if (frmHome.Usuario.esAdmin == true)
-                {
-                    _resenia.prioridad = 1;
-                }
-                else
-                {
-                    _resenia.prioridad = 0;
-                }
-                int resultado = _daoProfesor.insertarReseniaProfesor(_resenia);
-                Console.WriteLine(resultado);
-                _resenia.idPost = resultado;
-                _profesor.cantidadResenias++;
-                _profesor.sumatoriaResenias += _calificacion;
-                this.DialogResult = DialogResult.OK;
-            }else
-            {
-                MessageBox.Show("Debe brindar alguna calificación para este profesor", "Warning",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-        }
         private void estrella1_Click(object sender, EventArgs e)
         {
             _calificacion = 1;
@@ -116,6 +84,39 @@ namespace LP2Soft.Perfil
         {
             _calificacion = 5;
             pintarEstrellas(_calificacion);
+        }
+
+        private void btnPublicar_Click_1(object sender, EventArgs e)
+        {
+            if (_calificacion != 0)
+            {
+                _daoProfesor = new CursosWS.CursosWSClient();
+                _resenia = new CursosWS.resenia();
+                _resenia.usuario = new CursosWS.usuario();
+                _resenia.usuario.idUsuario = frmHome.Usuario.idUsuario;
+                _resenia.profesor = _profesor;
+                _resenia.calificacion = _calificacion;
+                _resenia.contenido = txtContenido.Text;
+                if (frmHome.Usuario.esAdmin == true)
+                {
+                    _resenia.prioridad = 1;
+                }
+                else
+                {
+                    _resenia.prioridad = 0;
+                }
+                int resultado = _daoProfesor.insertarReseniaProfesor(_resenia);
+                Console.WriteLine(resultado);
+                _resenia.idPost = resultado;
+                _profesor.cantidadResenias++;
+                _profesor.sumatoriaResenias += _calificacion;
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("Debe brindar alguna calificación para este profesor", "Warning",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
