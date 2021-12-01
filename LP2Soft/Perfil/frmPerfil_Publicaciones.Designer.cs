@@ -39,7 +39,7 @@ namespace LP2Soft.Perfil
             this.pnPublicaciones.AutoScroll = true;
             this.pnPublicaciones.Location = new System.Drawing.Point(174, 60);
             this.pnPublicaciones.Name = "pnPublicaciones";
-            this.pnPublicaciones.Size = new System.Drawing.Size(448, 508);
+            this.pnPublicaciones.Size = new System.Drawing.Size(418, 508);
             this.pnPublicaciones.TabIndex = 0;
             // 
             // lblTitulo
@@ -63,7 +63,7 @@ namespace LP2Soft.Perfil
             this.btnFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltros.ForeColor = System.Drawing.Color.White;
-            this.btnFiltros.Location = new System.Drawing.Point(531, 24);
+            this.btnFiltros.Location = new System.Drawing.Point(501, 24);
             this.btnFiltros.Name = "btnFiltros";
             this.btnFiltros.Size = new System.Drawing.Size(91, 30);
             this.btnFiltros.TabIndex = 34;
