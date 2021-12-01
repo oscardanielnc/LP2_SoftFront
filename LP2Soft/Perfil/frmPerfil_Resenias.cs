@@ -31,7 +31,10 @@ namespace LP2Soft.Perfil
             _resenias = new BindingList<UsuarioWS.resenia>();
             renderizarResenias(_asesor);
             if (asesor.idUsuario == frmHome.Usuario.idUsuario || !asesor.esAsesor)
+            {
                 btnReseniar.Visible = false;
+                panelResenias.Location = new Point(43, 22);
+            }
         }
         private void btnReseniar_Click(object sender, EventArgs e)
         {

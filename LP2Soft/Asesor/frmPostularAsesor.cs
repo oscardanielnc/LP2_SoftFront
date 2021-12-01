@@ -27,14 +27,13 @@ namespace LP2Soft.Asesor
             cboCursos.ValueMember = "idCurso";
             cboCursos.Texts = "Elegir curso";
         }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             int _flag;
             _flag = 0;
             UsuarioWS.curso _curso = cboCursos.SelectedItem as UsuarioWS.curso;
             _daoUsuario = new UsuarioWS.UsuariosWSClient();
-            
+
             if (frmHome.Usuario.esAsesor == true)
             {
                 _cursosAsesorados = null;
@@ -43,14 +42,14 @@ namespace LP2Soft.Asesor
                 int i = 0;
                 foreach (UsuarioWS.curso c in _cursosAsesorados)
                 {
-                    if(c.idCurso == _curso.idCurso)
+                    if (c.idCurso == _curso.idCurso)
                     {
                         _flag = 1;
                     }
                     i++;
                 }
             }
-            if(_flag == 0)
+            if (_flag == 0)
             {
                 _asesor = new UsuarioWS.asesor();
                 _asesor.precioPorHora = float.Parse(textBoxPrecio.Text);
@@ -62,7 +61,7 @@ namespace LP2Soft.Asesor
                 frmHome.Usuario.asesor.idAsesor = _daoUsuario.insertarAsesor(_asesor, frmHome.Usuario.idUsuario, _curso.idCurso);
                 this.Close();
             }
-            else if(_flag == 1)
+            else if (_flag == 1)
             {
                 MessageBox.Show("Ya eres asesor de este curso, intenta postulando a otro curso", "Postular como asesor", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

@@ -46,13 +46,16 @@ namespace LP2Soft.Tarjetas
             this.estrella3 = new System.Windows.Forms.Label();
             this.estrella2 = new System.Windows.Forms.Label();
             this.estrella1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDescripcion.Location = new System.Drawing.Point(32, 95);
             this.lblDescripcion.MaximumSize = new System.Drawing.Size(600, 0);
             this.lblDescripcion.Name = "lblDescripcion";
@@ -65,6 +68,7 @@ namespace LP2Soft.Tarjetas
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(79, 29);
             this.lblUsuario.Name = "lblUsuario";
@@ -85,6 +89,7 @@ namespace LP2Soft.Tarjetas
             // lblDate
             // 
             this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.Location = new System.Drawing.Point(81, 50);
             this.lblDate.Name = "lblDate";
@@ -95,6 +100,7 @@ namespace LP2Soft.Tarjetas
             // lblAsesor
             // 
             this.lblAsesor.AutoSize = true;
+            this.lblAsesor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsesor.Location = new System.Drawing.Point(112, 72);
             this.lblAsesor.Name = "lblAsesor";
@@ -105,6 +111,7 @@ namespace LP2Soft.Tarjetas
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(33, 72);
             this.label1.Name = "label1";
@@ -115,7 +122,7 @@ namespace LP2Soft.Tarjetas
             // btnEliminar
             // 
             this.btnEliminar.Image = global::LP2Soft.Properties.Resources.cross;
-            this.btnEliminar.Location = new System.Drawing.Point(628, 12);
+            this.btnEliminar.Location = new System.Drawing.Point(630, 10);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(20, 18);
             this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,6 +134,7 @@ namespace LP2Soft.Tarjetas
             // calificacion
             // 
             this.calificacion.AutoSize = true;
+            this.calificacion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.calificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calificacion.Location = new System.Drawing.Point(464, 60);
             this.calificacion.Name = "calificacion";
@@ -144,6 +152,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella5
             // 
+            this.estrella5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.estrella5.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella5.ImageIndex = 0;
             this.estrella5.ImageList = this.imgEstrellas;
@@ -154,6 +163,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella4
             // 
+            this.estrella4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.estrella4.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella4.ImageIndex = 0;
             this.estrella4.ImageList = this.imgEstrellas;
@@ -164,6 +174,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella3
             // 
+            this.estrella3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.estrella3.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella3.ImageIndex = 0;
             this.estrella3.ImageList = this.imgEstrellas;
@@ -174,6 +185,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella2
             // 
+            this.estrella2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.estrella2.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella2.ImageIndex = 0;
             this.estrella2.ImageList = this.imgEstrellas;
@@ -184,6 +196,7 @@ namespace LP2Soft.Tarjetas
             // 
             // estrella1
             // 
+            this.estrella1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.estrella1.Cursor = System.Windows.Forms.Cursors.Default;
             this.estrella1.ImageIndex = 0;
             this.estrella1.ImageList = this.imgEstrellas;
@@ -192,31 +205,41 @@ namespace LP2Soft.Tarjetas
             this.estrella1.Size = new System.Drawing.Size(20, 20);
             this.estrella1.TabIndex = 69;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Location = new System.Drawing.Point(8, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(660, 154);
+            this.panel1.TabIndex = 74;
+            // 
             // tarjResenia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScrollMargin = new System.Drawing.Size(5, 5);
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(660, 150);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(680, 170);
             this.Controls.Add(this.estrella5);
             this.Controls.Add(this.estrella4);
             this.Controls.Add(this.estrella3);
             this.Controls.Add(this.estrella2);
             this.Controls.Add(this.estrella1);
             this.Controls.Add(this.calificacion);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.picUsuario);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblAsesor);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tarjResenia";
             this.Text = "tarjResenia";
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +261,6 @@ namespace LP2Soft.Tarjetas
         private System.Windows.Forms.Label estrella3;
         private System.Windows.Forms.Label estrella2;
         private System.Windows.Forms.Label estrella1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

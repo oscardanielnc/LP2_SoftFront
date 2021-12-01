@@ -109,7 +109,7 @@ namespace LP2Soft.Home
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.picRecuperar);
             this.Name = "frmRecuperarContrasenia";
-            this.Text = "frmRecuperarContrasenia";
+            this.Text = "Recuperar Contraseña";
             ((System.ComponentModel.ISupportInitialize)(this.picRecuperar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

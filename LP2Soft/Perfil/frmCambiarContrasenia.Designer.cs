@@ -150,7 +150,7 @@ namespace LP2Soft.Perfil
             this.Controls.Add(this.textBox1);
             this.Name = "frmCambiarContrasenia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cambiar Contrasenia";
+            this.Text = "Cambiar Contraseña";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
