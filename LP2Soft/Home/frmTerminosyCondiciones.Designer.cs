@@ -112,7 +112,7 @@ namespace LP2Soft.Home
             this.Controls.Add(this.panelHeader);
             this.Name = "frmTerminosyCondiciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTerminosyCondiciones";
+            this.Text = "Terminos y Condiciones";
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();

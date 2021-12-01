@@ -154,7 +154,7 @@ namespace LP2Soft.Eventos
             this.Controls.Add(this.lblFiltros);
             this.Name = "frmFiltro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmFiltro";
+            this.Text = "Filtro";
             this.ResumeLayout(false);
             this.PerformLayout();
 
