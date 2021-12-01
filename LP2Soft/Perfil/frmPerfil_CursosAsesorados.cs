@@ -25,15 +25,15 @@ namespace LP2Soft.Perfil
         public frmPerfil_CursosAsesorados(UsuarioWS.usuario user)
         {
             InitializeComponent();
+            if(frmHome.Usuario.idUsuario != user.idUsuario || !user.esAsesor)
+            {
+                btnReporte.Visible = false;
+            }
             if (user.esAsesor == true)
             {
                 _idAsesor = user.asesor.idAsesor;
                 _usuario = user;
                 lblNoAsesor.Visible = false;
-                if(frmHome.Usuario.idUsuario != user.idUsuario || !frmHome.Usuario.esAsesor)
-                {
-                    btnReporte.Visible = false;
-                }
 
                 _daoAsesor = new UsuarioWS.UsuariosWSClient();
                 renderizarPanel(user.idUsuario);

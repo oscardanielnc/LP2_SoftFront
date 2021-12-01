@@ -141,6 +141,7 @@ namespace LP2Soft.Home
             // lblOlvide
             // 
             this.lblOlvide.AutoSize = true;
+            this.lblOlvide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblOlvide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOlvide.Location = new System.Drawing.Point(130, 235);
             this.lblOlvide.Name = "lblOlvide";
