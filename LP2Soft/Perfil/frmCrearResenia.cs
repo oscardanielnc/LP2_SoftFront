@@ -42,39 +42,6 @@ namespace LP2Soft.Perfil
 
         public resenia Resenia { get => _resenia; set => _resenia = value; }
 
-        private void btnPublicar_Click(object sender, EventArgs e)
-        {
-            if(_calificacion!=0)
-            {
-                _daoUsuario = new UsuarioWS.UsuariosWSClient();
-                _resenia = new UsuarioWS.resenia();
-                _resenia.usuario = new UsuarioWS.usuario();
-                _resenia.usuario = frmHome.Usuario;
-                _resenia.usuarioReseniado = new UsuarioWS.usuario();
-                _resenia.usuarioReseniado = _asesor;            
-                _resenia.calificacion = _calificacion;
-                _resenia.contenido = txtContenido.Text;
-                if (frmHome.Usuario.esAdmin == true)
-                {
-                    _resenia.prioridad = 1;
-                }
-                else
-                {
-                    _resenia.prioridad = 0;
-                }
-                int resultado = _daoUsuario.insertarReseniaAsesor(_resenia);
-                Console.WriteLine(resultado);
-                _resenia.idPost = resultado;
-                _asesor.asesor.cantidadResenias++;
-                _asesor.asesor.sumatoriaResenias += _calificacion;
-                this.DialogResult=DialogResult.OK;
-            } else
-            {
-                MessageBox.Show("Debe brindar alguna calificación para este asesor", "Warning",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void txtContenido_Enter(object sender, EventArgs e)
         {
             if (txtContenido.Text == "Escribe una reseña a " + _asesor.nombre + " " + _asesor.apellido)
@@ -135,6 +102,40 @@ namespace LP2Soft.Perfil
         {
             _calificacion = 5;
             pintarEstrellas(_calificacion);
+        }
+
+        private void btnPublicar_Click_1(object sender, EventArgs e)
+        {
+            if (_calificacion != 0)
+            {
+                _daoUsuario = new UsuarioWS.UsuariosWSClient();
+                _resenia = new UsuarioWS.resenia();
+                _resenia.usuario = new UsuarioWS.usuario();
+                _resenia.usuario = frmHome.Usuario;
+                _resenia.usuarioReseniado = new UsuarioWS.usuario();
+                _resenia.usuarioReseniado = _asesor;
+                _resenia.calificacion = _calificacion;
+                _resenia.contenido = txtContenido.Text;
+                if (frmHome.Usuario.esAdmin == true)
+                {
+                    _resenia.prioridad = 1;
+                }
+                else
+                {
+                    _resenia.prioridad = 0;
+                }
+                int resultado = _daoUsuario.insertarReseniaAsesor(_resenia);
+                Console.WriteLine(resultado);
+                _resenia.idPost = resultado;
+                _asesor.asesor.cantidadResenias++;
+                _asesor.asesor.sumatoriaResenias += _calificacion;
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("Debe brindar alguna calificación para este asesor", "Warning",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
