@@ -322,7 +322,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.Controls.Add(this.lblProfesor);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmAgregarMaterial";
-            this.Text = "frmAgregarMaterial";
+            this.Text = "Agregar Material";
             this.flpCargarMaterial.ResumeLayout(false);
             this.flpCargarMaterial.PerformLayout();
             this.ResumeLayout(false);

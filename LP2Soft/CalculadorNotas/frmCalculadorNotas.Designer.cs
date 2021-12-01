@@ -293,7 +293,7 @@ namespace LP2Soft.CalculadorNotas
             this.Controls.Add(this.panelDetalles);
             this.Controls.Add(this.lblCalculadorNotas);
             this.Name = "frmCalculadorNotas";
-            this.Text = "frmCalculadorNotas";
+            this.Text = "Calculador Notas";
             this.panelDetalles.ResumeLayout(false);
             this.panelDetalles.PerformLayout();
             this.ResumeLayout(false);

@@ -163,7 +163,7 @@ namespace LP2Soft.Perfil
             this.Controls.Add(this.lblResenia);
             this.Controls.Add(this.pbPerfil);
             this.Name = "frmCrearResenia";
-            this.Text = "frmCrearResenia";
+            this.Text = "Crear Resenia";
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

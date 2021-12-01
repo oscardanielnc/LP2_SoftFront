@@ -74,7 +74,7 @@ namespace LP2Soft.Home
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.imgLogo);
             this.Name = "frmLoginSingin";
-            this.Text = "frmLoginSingin";
+            this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

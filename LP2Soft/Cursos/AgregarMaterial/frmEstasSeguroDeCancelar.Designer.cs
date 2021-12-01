@@ -73,7 +73,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.Controls.Add(this.lblAceptaCancelar);
             this.Controls.Add(this.lblDeseaCancelar);
             this.Name = "frmEstasSeguroDeCancelar";
-            this.Text = "frmEstasSegruoDeCancelar";
+            this.Text = "Estas Segruo De Cancelar";
             this.ResumeLayout(false);
             this.PerformLayout();
 
