@@ -54,13 +54,13 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.pictureLP2Practica2Referencia3 = new System.Windows.Forms.PictureBox();
             this.pictureLP2Practica2Referencia2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblNombreCodigo = new System.Windows.Forms.Label();
             this.botonChevere3 = new LP2Soft.Asesor.BotonChevere();
             this.botonChevere2 = new LP2Soft.Asesor.BotonChevere();
             this.btnPractica = new LP2Soft.Asesor.BotonChevere();
             this.botonChevere1 = new LP2Soft.Asesor.BotonChevere();
             this.btnRCiclo = new LP2Soft.Asesor.BotonChevere();
             this.btnRMaterial = new LP2Soft.Asesor.BotonChevere();
-            this.lblNombreCodigo = new System.Windows.Forms.Label();
             this.panelLP2Practicas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -140,9 +140,9 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Location = new System.Drawing.Point(12, 193);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 15);
+            this.label1.Size = new System.Drawing.Size(227, 15);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Nombre                                          ";
+            this.label1.Text = "Ciclo                                                                 ";
             // 
             // label2
             // 
@@ -373,6 +373,17 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.panel4.Size = new System.Drawing.Size(823, 505);
             this.panel4.TabIndex = 44;
             // 
+            // lblNombreCodigo
+            // 
+            this.lblNombreCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNombreCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreCodigo.Location = new System.Drawing.Point(-12, 95);
+            this.lblNombreCodigo.Name = "lblNombreCodigo";
+            this.lblNombreCodigo.Size = new System.Drawing.Size(847, 39);
+            this.lblNombreCodigo.TabIndex = 55;
+            this.lblNombreCodigo.Text = "Lenguaje de Programación 2 (INF248)";
+            this.lblNombreCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // botonChevere3
             // 
             this.botonChevere3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
@@ -492,17 +503,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2.Practicas.Practica2
             this.btnRMaterial.TextColor = System.Drawing.Color.White;
             this.btnRMaterial.UseVisualStyleBackColor = false;
             this.btnRMaterial.Click += new System.EventHandler(this.btnRMaterial_Click);
-            // 
-            // lblNombreCodigo
-            // 
-            this.lblNombreCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblNombreCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCodigo.Location = new System.Drawing.Point(-12, 95);
-            this.lblNombreCodigo.Name = "lblNombreCodigo";
-            this.lblNombreCodigo.Size = new System.Drawing.Size(847, 39);
-            this.lblNombreCodigo.TabIndex = 55;
-            this.lblNombreCodigo.Text = "Lenguaje de Programación 2 (INF248)";
-            this.lblNombreCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmCursos_VerPractica
             // 
