@@ -41,7 +41,7 @@ namespace LP2Soft.Home
                 to = _user.correo;
                 from = "infunablesLP2@gmail.com";
                 pass = "infuLP2@";
-                mail = "Su contraseña temporal es: 12345 \nRecuerde cambiar su contraseña al ingresar al sistema.";
+                mail = "Su contraseña temporal es: 12345 \nRecuerde cambiar su contraseña al ingresar al sistema, ya que esta es una contraseña de respaldo.";
                 subject = "Recuperación de contraseña, sistema INFunables";
                 MailMessage message = new MailMessage();
                 message.To.Add(to);

@@ -24,6 +24,7 @@ namespace LP2Soft
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmPrincipal());
             /*Application.Run(new frmCalculadorNotas());*/
+            /*Application.Run(new Loading());*/
         }
     }
 }

@@ -33,8 +33,8 @@
             this.textBoxPrecio = new System.Windows.Forms.TextBox();
             this.lblSol = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.cboCursos = new LP2Soft.Asesor.RJComboBox();
+            this.btnSave = new LP2Soft.Asesor.BotonChevere();
             this.SuspendLayout();
             // 
             // lblPostular
@@ -86,17 +86,6 @@
             this.lblPrecio.TabIndex = 19;
             this.lblPrecio.Text = "Precio por hora:";
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(201, 257);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(113, 42);
-            this.btnGuardar.TabIndex = 22;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // cboCursos
             // 
             this.cboCursos.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -116,20 +105,40 @@
             this.cboCursos.TabIndex = 23;
             this.cboCursos.Texts = "Elegir curso";
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnSave.BorderRadius = 6;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(190, 255);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(138, 40);
+            this.btnSave.TabIndex = 24;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // frmPostularAsesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 311);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cboCursos);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.textBoxPrecio);
             this.Controls.Add(this.lblSol);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblCurso);
             this.Controls.Add(this.lblPostular);
             this.Name = "frmPostularAsesor";
-            this.Text = "frmPostularAsesor";
+            this.Text = "Postular como Asesor";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +151,7 @@
         private System.Windows.Forms.TextBox textBoxPrecio;
         private System.Windows.Forms.Label lblSol;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Button btnGuardar;
         private RJComboBox cboCursos;
+        private BotonChevere btnSave;
     }
 }

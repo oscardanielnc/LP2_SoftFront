@@ -33,10 +33,7 @@ namespace LP2Soft.Perfil
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panelGeneral = new System.Windows.Forms.Panel();
             this.lblUniversidad = new System.Windows.Forms.Label();
-            this.btnVerContrasenia = new System.Windows.Forms.PictureBox();
             this.lblInfGeneral = new System.Windows.Forms.Label();
-            this.txtContrasenia = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.imgVineta1 = new System.Windows.Forms.PictureBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.rtbDescripcion = new System.Windows.Forms.RichTextBox();
@@ -59,9 +56,9 @@ namespace LP2Soft.Perfil
             this.btnSubirPerfil = new System.Windows.Forms.PictureBox();
             this.ofdPerfil = new System.Windows.Forms.OpenFileDialog();
             this.toolTipEditarPerfil = new System.Windows.Forms.ToolTip(this.components);
+            this.btnCambiarCon = new LP2Soft.Asesor.BotonChevere();
             this.panelContenido.SuspendLayout();
             this.panelGeneral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVerContrasenia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
@@ -85,11 +82,9 @@ namespace LP2Soft.Perfil
             // 
             this.panelGeneral.AutoSize = true;
             this.panelGeneral.BackColor = System.Drawing.SystemColors.Window;
+            this.panelGeneral.Controls.Add(this.btnCambiarCon);
             this.panelGeneral.Controls.Add(this.lblUniversidad);
-            this.panelGeneral.Controls.Add(this.btnVerContrasenia);
             this.panelGeneral.Controls.Add(this.lblInfGeneral);
-            this.panelGeneral.Controls.Add(this.txtContrasenia);
-            this.panelGeneral.Controls.Add(this.label4);
             this.panelGeneral.Controls.Add(this.imgVineta1);
             this.panelGeneral.Controls.Add(this.lblCodigo);
             this.panelGeneral.Controls.Add(this.rtbDescripcion);
@@ -107,7 +102,7 @@ namespace LP2Soft.Perfil
             this.panelGeneral.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelGeneral.Location = new System.Drawing.Point(0, 0);
             this.panelGeneral.Name = "panelGeneral";
-            this.panelGeneral.Size = new System.Drawing.Size(805, 277);
+            this.panelGeneral.Size = new System.Drawing.Size(805, 284);
             this.panelGeneral.TabIndex = 63;
             // 
             // lblUniversidad
@@ -120,18 +115,6 @@ namespace LP2Soft.Perfil
             this.lblUniversidad.TabIndex = 35;
             this.lblUniversidad.Text = "PONTIFICIA UNIVERSIDAD CATÓLICA DEL PERÚ";
             // 
-            // btnVerContrasenia
-            // 
-            this.btnVerContrasenia.Image = global::LP2Soft.Properties.Resources.show_solid_24;
-            this.btnVerContrasenia.Location = new System.Drawing.Point(460, 253);
-            this.btnVerContrasenia.Name = "btnVerContrasenia";
-            this.btnVerContrasenia.Size = new System.Drawing.Size(21, 21);
-            this.btnVerContrasenia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnVerContrasenia.TabIndex = 61;
-            this.btnVerContrasenia.TabStop = false;
-            this.toolTipEditarPerfil.SetToolTip(this.btnVerContrasenia, "Ver contraseña");
-            this.btnVerContrasenia.Click += new System.EventHandler(this.btnVerContrasenia_Click);
-            // 
             // lblInfGeneral
             // 
             this.lblInfGeneral.AutoSize = true;
@@ -141,26 +124,6 @@ namespace LP2Soft.Perfil
             this.lblInfGeneral.Size = new System.Drawing.Size(147, 16);
             this.lblInfGeneral.TabIndex = 34;
             this.lblInfGeneral.Text = "Información General";
-            // 
-            // txtContrasenia
-            // 
-            this.txtContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasenia.Location = new System.Drawing.Point(214, 253);
-            this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.Size = new System.Drawing.Size(235, 21);
-            this.txtContrasenia.TabIndex = 60;
-            this.txtContrasenia.Text = "password";
-            this.txtContrasenia.UseSystemPasswordChar = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(110, 253);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 15);
-            this.label4.TabIndex = 59;
-            this.label4.Text = "Contraseña:";
             // 
             // imgVineta1
             // 
@@ -369,6 +332,27 @@ namespace LP2Soft.Perfil
             // 
             this.ofdPerfil.FileName = "ofdPerfil";
             // 
+            // btnCambiarCon
+            // 
+            this.btnCambiarCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCambiarCon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCambiarCon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnCambiarCon.BorderRadius = 5;
+            this.btnCambiarCon.BorderSize = 0;
+            this.btnCambiarCon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCambiarCon.FlatAppearance.BorderSize = 0;
+            this.btnCambiarCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarCon.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarCon.Location = new System.Drawing.Point(334, 251);
+            this.btnCambiarCon.Name = "btnCambiarCon";
+            this.btnCambiarCon.Size = new System.Drawing.Size(142, 30);
+            this.btnCambiarCon.TabIndex = 60;
+            this.btnCambiarCon.Text = "Cambiar contraseña";
+            this.btnCambiarCon.TextColor = System.Drawing.Color.White;
+            this.btnCambiarCon.UseVisualStyleBackColor = false;
+            this.btnCambiarCon.Click += new System.EventHandler(this.btnCambiarCon_Click);
+            // 
             // frmPerfil_EditarInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,7 +373,6 @@ namespace LP2Soft.Perfil
             this.panelContenido.PerformLayout();
             this.panelGeneral.ResumeLayout(false);
             this.panelGeneral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVerContrasenia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVineta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
@@ -425,12 +408,10 @@ namespace LP2Soft.Perfil
         private System.Windows.Forms.Label lblInfGeneral;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.PictureBox btnGuardar;
-        private System.Windows.Forms.TextBox txtContrasenia;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox btnVerContrasenia;
         private System.Windows.Forms.Panel panelGeneral;
         private System.Windows.Forms.PictureBox btnSubirPerfil;
         private System.Windows.Forms.OpenFileDialog ofdPerfil;
         private System.Windows.Forms.ToolTip toolTipEditarPerfil;
+        private Asesor.BotonChevere btnCambiarCon;
     }
 }

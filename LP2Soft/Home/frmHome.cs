@@ -39,6 +39,8 @@ namespace LP2Soft.Home
             abrirFormularioHome(new frmPerfil(_usuario), MenuHome.Perfil);
             generarNotificacionEventoParaHoy();
 
+            if (usuario.esAdmin) btnMisEventos.Visible = true;
+            else btnMisEventos.Visible = false;
             actualizarInfoPantallas(usuario);
         }
         private void generarNotificacionEventoParaHoy()

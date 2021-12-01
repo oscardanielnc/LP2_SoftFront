@@ -231,7 +231,7 @@ namespace LP2Soft.Perfil
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPerfil_EnviarCorreo";
-            this.Text = "frmPerfil_EnviarCorreo";
+            this.Text = "Enviar Correo Electrónico";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
