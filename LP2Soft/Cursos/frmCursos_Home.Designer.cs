@@ -54,7 +54,6 @@ namespace LP2Soft.Cursos
             this.label3 = new System.Windows.Forms.Label();
             this.lblVerde = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.botonChevere3 = new LP2Soft.Asesor.BotonChevere();
             this.botonChevere2 = new LP2Soft.Asesor.BotonChevere();
             this.botonChevere1 = new LP2Soft.Asesor.BotonChevere();
             this.lblCreditos = new System.Windows.Forms.Label();
@@ -411,7 +410,6 @@ namespace LP2Soft.Cursos
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.botonChevere3);
             this.panel2.Controls.Add(this.botonChevere2);
             this.panel2.Controls.Add(this.botonChevere1);
             this.panel2.Controls.Add(this.lblCreditos);
@@ -431,25 +429,6 @@ namespace LP2Soft.Cursos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(807, 466);
             this.panel2.TabIndex = 24;
-            // 
-            // botonChevere3
-            // 
-            this.botonChevere3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.botonChevere3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.botonChevere3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
-            this.botonChevere3.BorderRadius = 6;
-            this.botonChevere3.BorderSize = 0;
-            this.botonChevere3.FlatAppearance.BorderSize = 0;
-            this.botonChevere3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonChevere3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonChevere3.ForeColor = System.Drawing.Color.White;
-            this.botonChevere3.Location = new System.Drawing.Point(472, 25);
-            this.botonChevere3.Name = "botonChevere3";
-            this.botonChevere3.Size = new System.Drawing.Size(65, 23);
-            this.botonChevere3.TabIndex = 53;
-            this.botonChevere3.Text = "Grabar";
-            this.botonChevere3.TextColor = System.Drawing.Color.White;
-            this.botonChevere3.UseVisualStyleBackColor = false;
             // 
             // botonChevere2
             // 
@@ -566,7 +545,6 @@ namespace LP2Soft.Cursos
         private Asesor.BotonChevere btn4;
         private Asesor.BotonChevere btn3;
         private Asesor.BotonChevere botonChevere1;
-        private Asesor.BotonChevere botonChevere3;
         private Asesor.BotonChevere botonChevere2;
     }
 }

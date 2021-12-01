@@ -2,26 +2,14 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CursosWS" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/LP2Soft_WebService/CursosWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://18.213.19.215:8080/LP2Soft_WebService/CursosWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="MostrarCurso">
-    <part name="parameters" element="tns:MostrarCurso" />
+  <message name="insertarReseniaProfesor">
+    <part name="parameters" element="tns:insertarReseniaProfesor" />
   </message>
-  <message name="MostrarCursoResponse">
-    <part name="parameters" element="tns:MostrarCursoResponse" />
-  </message>
-  <message name="mostrarProfesor">
-    <part name="parameters" element="tns:mostrarProfesor" />
-  </message>
-  <message name="mostrarProfesorResponse">
-    <part name="parameters" element="tns:mostrarProfesorResponse" />
-  </message>
-  <message name="listaXciclo">
-    <part name="parameters" element="tns:listaXciclo" />
-  </message>
-  <message name="listaXcicloResponse">
-    <part name="parameters" element="tns:listaXcicloResponse" />
+  <message name="insertarReseniaProfesorResponse">
+    <part name="parameters" element="tns:insertarReseniaProfesorResponse" />
   </message>
   <message name="listarProfesorXCurso">
     <part name="parameters" element="tns:listarProfesorXCurso" />
@@ -29,35 +17,11 @@
   <message name="listarProfesorXCursoResponse">
     <part name="parameters" element="tns:listarProfesorXCursoResponse" />
   </message>
-  <message name="insertarReseniaProfesor">
-    <part name="parameters" element="tns:insertarReseniaProfesor" />
-  </message>
-  <message name="insertarReseniaProfesorResponse">
-    <part name="parameters" element="tns:insertarReseniaProfesorResponse" />
-  </message>
-  <message name="listarReseniasProfesor">
-    <part name="parameters" element="tns:listarReseniasProfesor" />
-  </message>
-  <message name="listarReseniasProfesorResponse">
-    <part name="parameters" element="tns:listarReseniasProfesorResponse" />
-  </message>
-  <message name="eliminarReseniasProfesor">
-    <part name="parameters" element="tns:eliminarReseniasProfesor" />
-  </message>
-  <message name="eliminarReseniasProfesorResponse">
-    <part name="parameters" element="tns:eliminarReseniasProfesorResponse" />
-  </message>
   <message name="actualizarCursoxUsuario">
     <part name="parameters" element="tns:actualizarCursoxUsuario" />
   </message>
   <message name="actualizarCursoxUsuarioResponse">
     <part name="parameters" element="tns:actualizarCursoxUsuarioResponse" />
-  </message>
-  <message name="listarCursoProfesor">
-    <part name="parameters" element="tns:listarCursoProfesor" />
-  </message>
-  <message name="listarCursoProfesorResponse">
-    <part name="parameters" element="tns:listarCursoProfesorResponse" />
   </message>
   <message name="listarProfesoresNombre">
     <part name="parameters" element="tns:listarProfesoresNombre" />
@@ -65,69 +29,87 @@
   <message name="listarProfesoresNombreResponse">
     <part name="parameters" element="tns:listarProfesoresNombreResponse" />
   </message>
+  <message name="eliminarReseniasProfesor">
+    <part name="parameters" element="tns:eliminarReseniasProfesor" />
+  </message>
+  <message name="eliminarReseniasProfesorResponse">
+    <part name="parameters" element="tns:eliminarReseniasProfesorResponse" />
+  </message>
+  <message name="listarCursoProfesor">
+    <part name="parameters" element="tns:listarCursoProfesor" />
+  </message>
+  <message name="listarCursoProfesorResponse">
+    <part name="parameters" element="tns:listarCursoProfesorResponse" />
+  </message>
+  <message name="listarReseniasProfesor">
+    <part name="parameters" element="tns:listarReseniasProfesor" />
+  </message>
+  <message name="listarReseniasProfesorResponse">
+    <part name="parameters" element="tns:listarReseniasProfesorResponse" />
+  </message>
+  <message name="mostrarProfesor">
+    <part name="parameters" element="tns:mostrarProfesor" />
+  </message>
+  <message name="mostrarProfesorResponse">
+    <part name="parameters" element="tns:mostrarProfesorResponse" />
+  </message>
+  <message name="MostrarCurso">
+    <part name="parameters" element="tns:MostrarCurso" />
+  </message>
+  <message name="MostrarCursoResponse">
+    <part name="parameters" element="tns:MostrarCursoResponse" />
+  </message>
+  <message name="listaXciclo">
+    <part name="parameters" element="tns:listaXciclo" />
+  </message>
+  <message name="listaXcicloResponse">
+    <part name="parameters" element="tns:listaXcicloResponse" />
+  </message>
   <portType name="CursosWS">
-    <operation name="MostrarCurso">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/MostrarCursoRequest" message="tns:MostrarCurso" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/MostrarCursoResponse" message="tns:MostrarCursoResponse" />
-    </operation>
-    <operation name="mostrarProfesor">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorRequest" message="tns:mostrarProfesor" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorResponse" message="tns:mostrarProfesorResponse" />
-    </operation>
-    <operation name="listaXciclo">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloRequest" message="tns:listaXciclo" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloResponse" message="tns:listaXcicloResponse" />
+    <operation name="insertarReseniaProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/insertarReseniaProfesorRequest" message="tns:insertarReseniaProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/insertarReseniaProfesorResponse" message="tns:insertarReseniaProfesorResponse" />
     </operation>
     <operation name="listarProfesorXCurso">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoRequest" message="tns:listarProfesorXCurso" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesorXCursoResponse" message="tns:listarProfesorXCursoResponse" />
     </operation>
-    <operation name="insertarReseniaProfesor">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/insertarReseniaProfesorRequest" message="tns:insertarReseniaProfesor" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/insertarReseniaProfesorResponse" message="tns:insertarReseniaProfesorResponse" />
-    </operation>
-    <operation name="listarReseniasProfesor">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarReseniasProfesorRequest" message="tns:listarReseniasProfesor" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarReseniasProfesorResponse" message="tns:listarReseniasProfesorResponse" />
-    </operation>
-    <operation name="eliminarReseniasProfesor">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/eliminarReseniasProfesorRequest" message="tns:eliminarReseniasProfesor" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/eliminarReseniasProfesorResponse" message="tns:eliminarReseniasProfesorResponse" />
-    </operation>
     <operation name="actualizarCursoxUsuario">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/actualizarCursoxUsuarioRequest" message="tns:actualizarCursoxUsuario" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/actualizarCursoxUsuarioResponse" message="tns:actualizarCursoxUsuarioResponse" />
-    </operation>
-    <operation name="listarCursoProfesor">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorRequest" message="tns:listarCursoProfesor" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorResponse" message="tns:listarCursoProfesorResponse" />
     </operation>
     <operation name="listarProfesoresNombre">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesoresNombreRequest" message="tns:listarProfesoresNombre" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarProfesoresNombreResponse" message="tns:listarProfesoresNombreResponse" />
     </operation>
+    <operation name="eliminarReseniasProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/eliminarReseniasProfesorRequest" message="tns:eliminarReseniasProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/eliminarReseniasProfesorResponse" message="tns:eliminarReseniasProfesorResponse" />
+    </operation>
+    <operation name="listarCursoProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorRequest" message="tns:listarCursoProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarCursoProfesorResponse" message="tns:listarCursoProfesorResponse" />
+    </operation>
+    <operation name="listarReseniasProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarReseniasProfesorRequest" message="tns:listarReseniasProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listarReseniasProfesorResponse" message="tns:listarReseniasProfesorResponse" />
+    </operation>
+    <operation name="mostrarProfesor">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorRequest" message="tns:mostrarProfesor" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/mostrarProfesorResponse" message="tns:mostrarProfesorResponse" />
+    </operation>
+    <operation name="MostrarCurso">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/MostrarCursoRequest" message="tns:MostrarCurso" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/MostrarCursoResponse" message="tns:MostrarCursoResponse" />
+    </operation>
+    <operation name="listaXciclo">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloRequest" message="tns:listaXciclo" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/CursosWS/listaXcicloResponse" message="tns:listaXcicloResponse" />
+    </operation>
   </portType>
   <binding name="CursosWSPortBinding" type="tns:CursosWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="MostrarCurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarProfesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listaXciclo">
+    <operation name="insertarReseniaProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -145,7 +127,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarReseniaProfesor">
+    <operation name="actualizarCursoxUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -154,7 +136,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarReseniasProfesor">
+    <operation name="listarProfesoresNombre">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -172,15 +154,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarCursoxUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarCursoProfesor">
       <soap:operation soapAction="" />
       <input>
@@ -190,7 +163,34 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarProfesoresNombre">
+    <operation name="listarReseniasProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="MostrarCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listaXciclo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -202,7 +202,7 @@
   </binding>
   <service name="CursosWS">
     <port name="CursosWSPort" binding="tns:CursosWSPortBinding">
-      <soap:address location="http://localhost:8080/LP2Soft_WebService/CursosWS" />
+      <soap:address location="http://18.213.19.215:8080/LP2Soft_WebService/CursosWS" />
     </port>
   </service>
 </definitions>

@@ -2,20 +2,14 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.LP2Soft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="NotificacionesWS" targetNamespace="http://services.LP2Soft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/LP2Soft_WebService/NotificacionesWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://18.213.19.215:8080/LP2Soft_WebService/NotificacionesWS?xsd=1" namespace="http://services.LP2Soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="enviarMensaje">
-    <part name="parameters" element="tns:enviarMensaje" />
+  <message name="existeEventoAgendado">
+    <part name="parameters" element="tns:existeEventoAgendado" />
   </message>
-  <message name="enviarMensajeResponse">
-    <part name="parameters" element="tns:enviarMensajeResponse" />
-  </message>
-  <message name="listarNotificaciones">
-    <part name="parameters" element="tns:listarNotificaciones" />
-  </message>
-  <message name="listarNotificacionesResponse">
-    <part name="parameters" element="tns:listarNotificacionesResponse" />
+  <message name="existeEventoAgendadoResponse">
+    <part name="parameters" element="tns:existeEventoAgendadoResponse" />
   </message>
   <message name="listarMensajesXAmigo">
     <part name="parameters" element="tns:listarMensajesXAmigo" />
@@ -23,17 +17,17 @@
   <message name="listarMensajesXAmigoResponse">
     <part name="parameters" element="tns:listarMensajesXAmigoResponse" />
   </message>
-  <message name="insertarNotificacion">
-    <part name="parameters" element="tns:insertarNotificacion" />
+  <message name="eliminarSolicitudAmistad">
+    <part name="parameters" element="tns:eliminarSolicitudAmistad" />
   </message>
-  <message name="insertarNotificacionResponse">
-    <part name="parameters" element="tns:insertarNotificacionResponse" />
+  <message name="eliminarSolicitudAmistadResponse">
+    <part name="parameters" element="tns:eliminarSolicitudAmistadResponse" />
   </message>
-  <message name="existeEventoAgendado">
-    <part name="parameters" element="tns:existeEventoAgendado" />
+  <message name="listarNotificaciones">
+    <part name="parameters" element="tns:listarNotificaciones" />
   </message>
-  <message name="existeEventoAgendadoResponse">
-    <part name="parameters" element="tns:existeEventoAgendadoResponse" />
+  <message name="listarNotificacionesResponse">
+    <part name="parameters" element="tns:listarNotificacionesResponse" />
   </message>
   <message name="listarMensajesUltimos">
     <part name="parameters" element="tns:listarMensajesUltimos" />
@@ -41,54 +35,51 @@
   <message name="listarMensajesUltimosResponse">
     <part name="parameters" element="tns:listarMensajesUltimosResponse" />
   </message>
-  <message name="eliminarSolicitudAmistad">
-    <part name="parameters" element="tns:eliminarSolicitudAmistad" />
+  <message name="insertarNotificacion">
+    <part name="parameters" element="tns:insertarNotificacion" />
   </message>
-  <message name="eliminarSolicitudAmistadResponse">
-    <part name="parameters" element="tns:eliminarSolicitudAmistadResponse" />
+  <message name="insertarNotificacionResponse">
+    <part name="parameters" element="tns:insertarNotificacionResponse" />
+  </message>
+  <message name="enviarMensaje">
+    <part name="parameters" element="tns:enviarMensaje" />
+  </message>
+  <message name="enviarMensajeResponse">
+    <part name="parameters" element="tns:enviarMensajeResponse" />
   </message>
   <portType name="NotificacionesWS">
-    <operation name="enviarMensaje">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeRequest" message="tns:enviarMensaje" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeResponse" message="tns:enviarMensajeResponse" />
-    </operation>
-    <operation name="listarNotificaciones">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
+    <operation name="existeEventoAgendado">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/existeEventoAgendadoRequest" message="tns:existeEventoAgendado" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/existeEventoAgendadoResponse" message="tns:existeEventoAgendadoResponse" />
     </operation>
     <operation name="listarMensajesXAmigo">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoRequest" message="tns:listarMensajesXAmigo" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesXAmigoResponse" message="tns:listarMensajesXAmigoResponse" />
     </operation>
-    <operation name="insertarNotificacion">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest" message="tns:insertarNotificacion" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" message="tns:insertarNotificacionResponse" />
+    <operation name="eliminarSolicitudAmistad">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadRequest" message="tns:eliminarSolicitudAmistad" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadResponse" message="tns:eliminarSolicitudAmistadResponse" />
     </operation>
-    <operation name="existeEventoAgendado">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/existeEventoAgendadoRequest" message="tns:existeEventoAgendado" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/existeEventoAgendadoResponse" message="tns:existeEventoAgendadoResponse" />
+    <operation name="listarNotificaciones">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
     </operation>
     <operation name="listarMensajesUltimos">
       <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesUltimosRequest" message="tns:listarMensajesUltimos" />
       <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/listarMensajesUltimosResponse" message="tns:listarMensajesUltimosResponse" />
     </operation>
-    <operation name="eliminarSolicitudAmistad">
-      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadRequest" message="tns:eliminarSolicitudAmistad" />
-      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/eliminarSolicitudAmistadResponse" message="tns:eliminarSolicitudAmistadResponse" />
+    <operation name="insertarNotificacion">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionRequest" message="tns:insertarNotificacion" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/insertarNotificacionResponse" message="tns:insertarNotificacionResponse" />
+    </operation>
+    <operation name="enviarMensaje">
+      <input wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeRequest" message="tns:enviarMensaje" />
+      <output wsam:Action="http://services.LP2Soft.pucp.edu.pe/NotificacionesWS/enviarMensajeResponse" message="tns:enviarMensajeResponse" />
     </operation>
   </portType>
   <binding name="NotificacionesWSPortBinding" type="tns:NotificacionesWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="enviarMensaje">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarNotificaciones">
+    <operation name="existeEventoAgendado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -106,7 +97,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarNotificacion">
+    <operation name="eliminarSolicitudAmistad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,7 +106,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="existeEventoAgendado">
+    <operation name="listarNotificaciones">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -133,7 +124,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarSolicitudAmistad">
+    <operation name="insertarNotificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="enviarMensaje">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -145,7 +145,7 @@
   </binding>
   <service name="NotificacionesWS">
     <port name="NotificacionesWSPort" binding="tns:NotificacionesWSPortBinding">
-      <soap:address location="http://localhost:8080/LP2Soft_WebService/NotificacionesWS" />
+      <soap:address location="http://18.213.19.215:8080/LP2Soft_WebService/NotificacionesWS" />
     </port>
   </service>
 </definitions>
