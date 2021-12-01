@@ -29,26 +29,11 @@ namespace LP2Soft.Perfil
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAniadirCurso = new System.Windows.Forms.Button();
             this.panelCursos = new System.Windows.Forms.Panel();
             this.lblNoAsesor = new System.Windows.Forms.Label();
             this.btnReporte = new System.Windows.Forms.Button();
             this.panelCursos.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAniadirCurso
-            // 
-            this.btnAniadirCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnAniadirCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAniadirCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAniadirCurso.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAniadirCurso.Location = new System.Drawing.Point(167, 205);
-            this.btnAniadirCurso.Name = "btnAniadirCurso";
-            this.btnAniadirCurso.Size = new System.Drawing.Size(164, 35);
-            this.btnAniadirCurso.TabIndex = 6;
-            this.btnAniadirCurso.Text = "+ Añadir nuevo curso";
-            this.btnAniadirCurso.UseVisualStyleBackColor = false;
-            this.btnAniadirCurso.Click += new System.EventHandler(this.btnAniadirCurso_Click);
             // 
             // panelCursos
             // 
@@ -76,7 +61,7 @@ namespace LP2Soft.Perfil
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReporte.Location = new System.Drawing.Point(421, 205);
+            this.btnReporte.Location = new System.Drawing.Point(313, 209);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(164, 35);
             this.btnReporte.TabIndex = 8;
@@ -92,7 +77,6 @@ namespace LP2Soft.Perfil
             this.ClientSize = new System.Drawing.Size(799, 256);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.panelCursos);
-            this.Controls.Add(this.btnAniadirCurso);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfil_CursosAsesorados";
             this.Text = "frmCursosReseniados";
@@ -103,7 +87,6 @@ namespace LP2Soft.Perfil
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAniadirCurso;
         private System.Windows.Forms.Panel panelCursos;
         private System.Windows.Forms.Label lblNoAsesor;
         private System.Windows.Forms.Button btnReporte;

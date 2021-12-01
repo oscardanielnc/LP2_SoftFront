@@ -43,7 +43,7 @@ namespace LP2Soft.Tarjetas
             }
             lblUsuario.Text = " " + re.usuario.nombre + " " + re.usuario.apellido;
             lblDescripcion.Text = re.contenido;
-            lblDate.Text = re.fechaRegistro.ToString("yyyy-MM-dd HH:mm:ss");
+            lblDate.Text = re.fechaRegistro.ToString("yyyy-MM-dd");
             lblAsesor.Text = " " + re.usuarioReseniado.nombre + " " + re.usuarioReseniado.apellido;
 
             pintarEstrellas(re.calificacion);
@@ -76,7 +76,7 @@ namespace LP2Soft.Tarjetas
             }
             lblUsuario.Text = " " + re.usuario.nombre + " " + re.usuario.apellido;
             lblDescripcion.Text = re.contenido;
-            lblDate.Text = re.fechaRegistro.ToString("yyyy-MM-dd HH:mm:ss");
+            lblDate.Text = re.fechaRegistro.ToString("yyyy-MM-dd");
             lblAsesor.Text = re.profesor.nombre;
             label1.Text = "Profesor: ";
             pintarEstrellas(re.calificacion);

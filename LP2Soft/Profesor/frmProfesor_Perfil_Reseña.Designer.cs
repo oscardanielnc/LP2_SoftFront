@@ -30,19 +30,31 @@ namespace LP2Soft.Profesor
         private void InitializeComponent()
         {
             this.panelResenias = new System.Windows.Forms.Panel();
-            this.btnReseniar = new LP2Soft.Asesor.BotonChevere();
             this.lblNoResenias = new System.Windows.Forms.Label();
+            this.btnReseniar = new LP2Soft.Asesor.BotonChevere();
             this.panelResenias.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelResenias
             // 
+            this.panelResenias.AutoSize = true;
             this.panelResenias.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelResenias.Controls.Add(this.lblNoResenias);
             this.panelResenias.Location = new System.Drawing.Point(68, 69);
             this.panelResenias.Name = "panelResenias";
             this.panelResenias.Size = new System.Drawing.Size(660, 221);
             this.panelResenias.TabIndex = 42;
+            // 
+            // lblNoResenias
+            // 
+            this.lblNoResenias.AutoSize = true;
+            this.lblNoResenias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoResenias.Location = new System.Drawing.Point(19, 20);
+            this.lblNoResenias.Name = "lblNoResenias";
+            this.lblNoResenias.Size = new System.Drawing.Size(597, 20);
+            this.lblNoResenias.TabIndex = 47;
+            this.lblNoResenias.Text = "Este profesor no cuenta con ninguna reseña. ¡Sé el primero en reseñarlo!";
+            this.lblNoResenias.Visible = false;
             // 
             // btnReseniar
             // 
@@ -64,21 +76,11 @@ namespace LP2Soft.Profesor
             this.btnReseniar.UseVisualStyleBackColor = false;
             this.btnReseniar.Click += new System.EventHandler(this.btnReseniar_Click);
             // 
-            // lblNoResenias
-            // 
-            this.lblNoResenias.AutoSize = true;
-            this.lblNoResenias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoResenias.Location = new System.Drawing.Point(19, 20);
-            this.lblNoResenias.Name = "lblNoResenias";
-            this.lblNoResenias.Size = new System.Drawing.Size(597, 20);
-            this.lblNoResenias.TabIndex = 47;
-            this.lblNoResenias.Text = "Este profesor no cuenta con ninguna reseña. ¡Sé el primero en reseñarlo!";
-            this.lblNoResenias.Visible = false;
-            // 
             // frmProfesor_Perfil_Reseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 302);
             this.Controls.Add(this.btnReseniar);
             this.Controls.Add(this.panelResenias);
@@ -88,6 +90,7 @@ namespace LP2Soft.Profesor
             this.panelResenias.ResumeLayout(false);
             this.panelResenias.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

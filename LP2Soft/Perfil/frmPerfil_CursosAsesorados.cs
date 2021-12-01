@@ -30,9 +30,8 @@ namespace LP2Soft.Perfil
                 _idAsesor = user.asesor.idAsesor;
                 _usuario = user;
                 lblNoAsesor.Visible = false;
-                if(frmHome.Usuario.idUsuario != user.idUsuario)
+                if(frmHome.Usuario.idUsuario != user.idUsuario || !frmHome.Usuario.esAsesor)
                 {
-                    btnAniadirCurso.Visible = false;
                     btnReporte.Visible = false;
                 }
 
@@ -69,11 +68,6 @@ namespace LP2Soft.Perfil
             int x = (i % 3) * 170 + 20;
             int y = ((int)i / 3) * 120 + 20;
             return new Point(x, y);
-        }
-        private void btnAniadirCurso_Click(object sender, EventArgs e)
-        {
-            frmPostularAsesor fromPostular = new frmPostularAsesor();
-            fromPostular.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
