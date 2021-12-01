@@ -322,6 +322,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.Controls.Add(this.lblProfesor);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmAgregarMaterial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Material";
             this.flpCargarMaterial.ResumeLayout(false);
             this.flpCargarMaterial.PerformLayout();

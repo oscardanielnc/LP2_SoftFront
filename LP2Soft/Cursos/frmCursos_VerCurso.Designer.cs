@@ -338,6 +338,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // 
             this.panelCrearPublicacion.BackColor = System.Drawing.Color.White;
             this.panelCrearPublicacion.Controls.Add(this.lblCrearPublicación);
+            this.panelCrearPublicacion.Controls.Add(this.pbPerfil);
             this.panelCrearPublicacion.Location = new System.Drawing.Point(188, 364);
             this.panelCrearPublicacion.Name = "panelCrearPublicacion";
             this.panelCrearPublicacion.Size = new System.Drawing.Size(297, 57);
@@ -357,7 +358,7 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             // pbPerfil
             // 
             this.pbPerfil.Image = global::LP2Soft.Properties.Resources.images;
-            this.pbPerfil.Location = new System.Drawing.Point(123, 369);
+            this.pbPerfil.Location = new System.Drawing.Point(3, 3);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(50, 46);
             this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -535,7 +536,6 @@ namespace LP2Soft.Cursos.Ciclo7.LP2
             this.Controls.Add(this.panelPublicacionesGenerales);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelCursosrequeridos);
-            this.Controls.Add(this.pbPerfil);
             this.Controls.Add(this.panelCrearPublicacion);
             this.Controls.Add(this.pictureLP2Referencia1);
             this.Controls.Add(this.btnLP2Ciclo7);

@@ -138,6 +138,7 @@
             this.Controls.Add(this.lblCurso);
             this.Controls.Add(this.lblPostular);
             this.Name = "frmPostularAsesor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Postular como Asesor";
             this.ResumeLayout(false);
             this.PerformLayout();
