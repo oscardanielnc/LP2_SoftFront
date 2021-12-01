@@ -29,12 +29,14 @@ namespace LP2Soft.Tarjetas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Descargar = new System.Windows.Forms.PictureBox();
             this.btnMaterial = new System.Windows.Forms.Button();
             this.sfdArchivo = new System.Windows.Forms.SaveFileDialog();
             this.lblNombreProfesor = new System.Windows.Forms.Label();
             this.lblNota = new System.Windows.Forms.Label();
             this.lblPropietario = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Descargar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +49,7 @@ namespace LP2Soft.Tarjetas
             this.Descargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Descargar.TabIndex = 52;
             this.Descargar.TabStop = false;
+            this.toolTip1.SetToolTip(this.Descargar, "Descargar");
             this.Descargar.Click += new System.EventHandler(this.Descargar_Click);
             // 
             // btnMaterial
@@ -115,5 +118,6 @@ namespace LP2Soft.Tarjetas
         private System.Windows.Forms.Label lblNombreProfesor;
         private System.Windows.Forms.Label lblNota;
         private System.Windows.Forms.Label lblPropietario;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
