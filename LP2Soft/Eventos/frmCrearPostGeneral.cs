@@ -60,7 +60,10 @@ namespace LP2Soft.Eventos
 
         private void btnPublicar_Click_1(object sender, EventArgs e)
         {
-            int resultado;
+
+            if (txtContenido.Text != "")
+            {
+                int resultado;
             _postGenerico.usuario.idUsuario = _usuario.idUsuario;
             if (_usuario.esAdmin == true) _postGenerico.prioridad = 1;
             else _postGenerico.prioridad = 0;
@@ -69,25 +72,32 @@ namespace LP2Soft.Eventos
             // En un usuario falta un atributo para saber si es un grupo o alumno
             //_postGenerico.prioridad = 1;
             //_postGenerico.fechaRegistro = DateTime.Now;
-            if (_idCursoAux == 0)
-            {
-                resultado = _daoPost.insertarPost(_postGenerico);
-            }
-            else
-            {
-                resultado = _daoPost.insertar_postXCurso(_postGenerico);
-            }
+            
+                if (_idCursoAux == 0)
+                {
+                    resultado = _daoPost.insertarPost(_postGenerico);
+                }
+                else
+                {
+                    resultado = _daoPost.insertar_postXCurso(_postGenerico);
+                }
 
-            if (resultado != 0)
-            {
-                _postGenerico.idPost = resultado;
-                _postCreado = _postGenerico;
-                DialogResult = DialogResult.OK;
+                if (resultado != 0)
+                {
+                    _postGenerico.idPost = resultado;
+                    _postCreado = _postGenerico;
+                    DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La publicación no tiene contenido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+   
         }
     }
 }
