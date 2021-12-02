@@ -34,7 +34,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.lblSemestre = new System.Windows.Forms.Label();
             this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblNota = new System.Windows.Forms.Label();
-            this.txtComentario = new System.Windows.Forms.TextBox();
             this.checkbSi = new System.Windows.Forms.CheckBox();
             this.checkBNo = new System.Windows.Forms.CheckBox();
             this.txtNota = new System.Windows.Forms.TextBox();
@@ -47,10 +46,9 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.cboProfesores = new System.Windows.Forms.ComboBox();
             this.cboCiclo = new System.Windows.Forms.ComboBox();
             this.cboSemestre = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.ofdArchivo = new System.Windows.Forms.OpenFileDialog();
-            this.btnRSubir = new LP2Soft.Asesor.BotonChevere();
             this.btnRCancelar = new LP2Soft.Asesor.BotonChevere();
+            this.btnRSubir = new LP2Soft.Asesor.BotonChevere();
             this.flpCargarMaterial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,14 +102,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.lblNota.TabIndex = 4;
             this.lblNota.Text = "Nota:";
             // 
-            // txtComentario
-            // 
-            this.txtComentario.Location = new System.Drawing.Point(33, 244);
-            this.txtComentario.Multiline = true;
-            this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(334, 56);
-            this.txtComentario.TabIndex = 7;
-            // 
             // checkbSi
             // 
             this.checkbSi.AutoSize = true;
@@ -138,7 +128,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(134, 193);
+            this.txtNota.Location = new System.Drawing.Point(139, 194);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(122, 20);
             this.txtNota.TabIndex = 10;
@@ -160,7 +150,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.flpCargarMaterial.Controls.Add(this.btbCargarDocs);
             this.flpCargarMaterial.Location = new System.Drawing.Point(388, 81);
             this.flpCargarMaterial.Name = "flpCargarMaterial";
-            this.flpCargarMaterial.Size = new System.Drawing.Size(221, 219);
+            this.flpCargarMaterial.Size = new System.Drawing.Size(221, 130);
             this.flpCargarMaterial.TabIndex = 15;
             // 
             // lblPDF
@@ -243,39 +233,9 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.cboSemestre.Size = new System.Drawing.Size(79, 21);
             this.cboSemestre.TabIndex = 21;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 223);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 18);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Si desea puede escribir un comentario";
-            // 
             // ofdArchivo
             // 
             this.ofdArchivo.FileName = "openFileDialog1";
-            // 
-            // btnRSubir
-            // 
-            this.btnRSubir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnRSubir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.btnRSubir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
-            this.btnRSubir.BorderRadius = 6;
-            this.btnRSubir.BorderSize = 0;
-            this.btnRSubir.FlatAppearance.BorderSize = 0;
-            this.btnRSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRSubir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRSubir.ForeColor = System.Drawing.Color.White;
-            this.btnRSubir.Location = new System.Drawing.Point(139, 325);
-            this.btnRSubir.Name = "btnRSubir";
-            this.btnRSubir.Size = new System.Drawing.Size(143, 36);
-            this.btnRSubir.TabIndex = 55;
-            this.btnRSubir.Text = "Subir";
-            this.btnRSubir.TextColor = System.Drawing.Color.White;
-            this.btnRSubir.UseVisualStyleBackColor = false;
-            this.btnRSubir.Click += new System.EventHandler(this.botonChevere1_Click);
             // 
             // btnRCancelar
             // 
@@ -288,7 +248,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.btnRCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnRCancelar.Location = new System.Drawing.Point(354, 327);
+            this.btnRCancelar.Location = new System.Drawing.Point(344, 252);
             this.btnRCancelar.Name = "btnRCancelar";
             this.btnRCancelar.Size = new System.Drawing.Size(143, 36);
             this.btnRCancelar.TabIndex = 56;
@@ -297,14 +257,33 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.btnRCancelar.UseVisualStyleBackColor = false;
             this.btnRCancelar.Click += new System.EventHandler(this.btnRCancelar_Click);
             // 
+            // btnRSubir
+            // 
+            this.btnRSubir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRSubir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.btnRSubir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(35)))), ((int)(((byte)(84)))));
+            this.btnRSubir.BorderRadius = 6;
+            this.btnRSubir.BorderSize = 0;
+            this.btnRSubir.FlatAppearance.BorderSize = 0;
+            this.btnRSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRSubir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRSubir.ForeColor = System.Drawing.Color.White;
+            this.btnRSubir.Location = new System.Drawing.Point(129, 250);
+            this.btnRSubir.Name = "btnRSubir";
+            this.btnRSubir.Size = new System.Drawing.Size(143, 36);
+            this.btnRSubir.TabIndex = 55;
+            this.btnRSubir.Text = "Subir";
+            this.btnRSubir.TextColor = System.Drawing.Color.White;
+            this.btnRSubir.UseVisualStyleBackColor = false;
+            this.btnRSubir.Click += new System.EventHandler(this.botonChevere1_Click);
+            // 
             // frmAgregarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 375);
+            this.ClientSize = new System.Drawing.Size(614, 324);
             this.Controls.Add(this.btnRCancelar);
             this.Controls.Add(this.btnRSubir);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.cboSemestre);
             this.Controls.Add(this.cboCiclo);
             this.Controls.Add(this.cboProfesores);
@@ -315,7 +294,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.checkBNo);
             this.Controls.Add(this.checkbSi);
-            this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblCalificacion);
             this.Controls.Add(this.lblSemestre);
@@ -338,7 +316,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.Label lblSemestre;
         private System.Windows.Forms.Label lblCalificacion;
         private System.Windows.Forms.Label lblNota;
-        private System.Windows.Forms.TextBox txtComentario;
         private System.Windows.Forms.CheckBox checkbSi;
         private System.Windows.Forms.CheckBox checkBNo;
         private System.Windows.Forms.TextBox txtNota;
@@ -351,7 +328,6 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private System.Windows.Forms.ComboBox cboProfesores;
         private System.Windows.Forms.ComboBox cboCiclo;
         private System.Windows.Forms.ComboBox cboSemestre;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog ofdArchivo;
         private Asesor.BotonChevere btnRSubir;
         private Asesor.BotonChevere btnRCancelar;
