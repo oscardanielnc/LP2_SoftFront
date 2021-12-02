@@ -23,6 +23,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
         private int _indice;
         private int _idCurso;
         private string _rutaArchivoPDF = "";
+        private int resultado;
         public frmAgregarMaterial()
         {
             InitializeComponent();
@@ -47,6 +48,8 @@ namespace LP2Soft.Cursos.AgregarMaterial
             cboProfesores.ValueMember = "idProfesor";
             //cboProfesores.SelectedItem = -1;
             txtNota.Enabled = false;
+            checkBNo.Checked = false;
+            checkbSi.Checked = false;
         }
 
         private void btnSubir_Click(object sender, EventArgs e)
@@ -65,9 +68,11 @@ namespace LP2Soft.Cursos.AgregarMaterial
             _material.curso = cursoAux;
             _material.tipoMaterial = _tipo + 1;
             _material.indice_tipoMaterial = _indice;
+
             if (cboSemestre.Text == "") {
                 MessageBox.Show("Agregar un semestre");
-            }else if (cboSemestre.Text == "")
+            }
+            if (cboCiclo.Text == "")
             {
                 MessageBox.Show("Agregar un ciclo");
             }
@@ -78,28 +83,37 @@ namespace LP2Soft.Cursos.AgregarMaterial
             
             //post
 
-            _material.contenido = txtComentario.Text;
+            //_material.contenido = txtComentario.Text;
             _material.usuario = new PublicacionesWS.usuario();
             _material.usuario.idUsuario = frmHome.Usuario.idUsuario;
             _material.usuario.nombre = frmHome.Usuario.nombre;
             _material.usuario.apellido = frmHome.Usuario.apellido;
 
             if (checkBNo.Checked == true)
+            {
                 _material.nota = "-";
-            else if (txtNota.Text == "")
-            {
-                MessageBox.Show("Agregar una Nota");
-            }
-            else if (20 < Int32.Parse(txtNota.Text) || 0 > Int32.Parse(txtNota.Text))
-                MessageBox.Show("Agregar una Nota entre 0 y 20");
-            else
-            {
                 _material.nombreArchivo = cboSemestre.Text + "-" + cboCiclo.Text;
                 _material.nota = txtNota.Text;
-                int resultado = _daoMaterial.insertar_Material(_material);
+                resultado = _daoMaterial.insertar_Material(_material);
                 MessageBox.Show("Se Subio satisfactoriamente");
                 this.Close();
             }
+            if (checkbSi.Checked == true) {
+                if (txtNota.Text == "")
+                {
+                    MessageBox.Show("Agregar una Nota");
+                }
+                if (20 < Int32.Parse(txtNota.Text) || 0 > Int32.Parse(txtNota.Text))
+                    MessageBox.Show("Agregar una Nota entre 0 y 20");
+                else {
+                    _material.nombreArchivo = cboSemestre.Text + "-" + cboCiclo.Text;
+                    _material.nota = txtNota.Text;
+                    resultado = _daoMaterial.insertar_Material(_material);
+                    MessageBox.Show("Se Subio satisfactoriamente");
+                    this.Close();
+
+                }
+            }     
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -170,7 +184,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             {
                 MessageBox.Show("Agregar un semestre");
             }
-            else if (cboSemestre.Text == "")
+            if (cboCiclo.Text == "")
             {
                 MessageBox.Show("Agregar un ciclo");
             }
@@ -179,10 +193,12 @@ namespace LP2Soft.Cursos.AgregarMaterial
             {
                 MessageBox.Show("Agregar un archivo PDF");
             }
-
+            if (checkBNo.Checked == false && checkbSi.Checked == false) {
+                MessageBox.Show("Elegir si tiene nota");
+            }
             //post
 
-            _material.contenido = txtComentario.Text;
+            //_material.contenido = txtComentario.Text;
             _material.usuario = new PublicacionesWS.usuario();
             _material.usuario.idUsuario = frmHome.Usuario.idUsuario;
             _material.usuario.nombre = frmHome.Usuario.nombre;
@@ -190,20 +206,31 @@ namespace LP2Soft.Cursos.AgregarMaterial
             int n;
 
             if (checkBNo.Checked == true)
+            {
                 _material.nota = "-";
-            else if (txtNota.Text == "" || !Int32.TryParse(txtNota.Text, out n))
-            {
-                MessageBox.Show("Agregar una Nota válida");
-            }
-            else if (20 < Int32.Parse(txtNota.Text) || 0 > Int32.Parse(txtNota.Text))
-                MessageBox.Show("Agregar una Nota entre 0 y 20");
-            else
-            {
                 _material.nombreArchivo = cboSemestre.Text + "-" + cboCiclo.Text;
                 _material.nota = txtNota.Text;
-                int resultado = _daoMaterial.insertar_Material(_material);
+                resultado = _daoMaterial.insertar_Material(_material);
                 MessageBox.Show("Se Subio satisfactoriamente");
                 this.Close();
+            }
+            if (checkbSi.Checked == true)
+            {
+                if (txtNota.Text == "" || !Int32.TryParse(txtNota.Text, out n))
+                {
+                    MessageBox.Show("Agregar una Nota valida");
+                }
+                if (20 < Int32.Parse(txtNota.Text) || 0 > Int32.Parse(txtNota.Text))
+                    MessageBox.Show("Agregar una Nota entre 0 y 20");
+                else
+                {
+                    _material.nombreArchivo = cboSemestre.Text + "-" + cboCiclo.Text;
+                    _material.nota = txtNota.Text;
+                    resultado = _daoMaterial.insertar_Material(_material);
+                    MessageBox.Show("Se Subio satisfactoriamente");
+                    this.Close();
+
+                }
             }
         }
 
