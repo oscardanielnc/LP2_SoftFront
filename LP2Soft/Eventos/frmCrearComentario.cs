@@ -36,26 +36,32 @@ namespace LP2Soft.Eventos
 
         private void btnCrearEvento_Click(object sender, EventArgs e)
         {
-            _comentario.usuario = new PublicacionesWS.usuario();
-            _comentario.usuario.idUsuario = frmHome.Usuario.idUsuario;
-            _comentario.post = new PublicacionesWS.postGenerico();
-            _comentario.post.idPost = _post.idPost;
-            _comentario.comentario1 = txtComentario.Text;
-
-            int resultado;
-
-            resultado = _daoComentario.insertarComentario(_comentario);
-
-            if (resultado != 0)
+            if (txtComentario.Text != "")
             {
-                DialogResult = DialogResult.OK;
-                _comentario.idComentario = resultado;
-                _comentarioCreado = _comentario;
+                _comentario.usuario = new PublicacionesWS.usuario();
+                _comentario.usuario.idUsuario = frmHome.Usuario.idUsuario;
+                _comentario.post = new PublicacionesWS.postGenerico();
+                _comentario.post.idPost = _post.idPost;
+                _comentario.comentario1 = txtComentario.Text;
 
+                int resultado;
+
+                resultado = _daoComentario.insertarComentario(_comentario);
+
+                if (resultado != 0)
+                {
+                    DialogResult = DialogResult.OK;
+                    _comentario.idComentario = resultado;
+                    _comentarioCreado = _comentario;
+
+                }
+                else
+                {
+                    MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else {
+                MessageBox.Show("Comentario sin contenido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
