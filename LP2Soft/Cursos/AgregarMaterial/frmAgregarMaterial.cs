@@ -30,6 +30,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
         }
         public frmAgregarMaterial(CursosWS.curso _cursoVer, int auxTipo, int auxIndice)
         {
+            InitializeComponent();
             _rutaArchivoPDF = null;
             _cursoAux = _cursoVer;
             _tipo = auxTipo;
@@ -38,14 +39,18 @@ namespace LP2Soft.Cursos.AgregarMaterial
             _daoMaterial = new PublicacionesWS.PublicacionesWSClient();
             _daoCurso = new CursosWS.CursosWSClient();
             _material = new PublicacionesWS.material();
-
+            
+            
             if (_listaProfesor_Curso == null)
                 _listaProfesor_Curso = _daoCurso.listarProfesorXCurso(_cursoAux.idCurso);
-            InitializeComponent();
+            
+
             Console.WriteLine(_cursoAux.idCurso);
             cboProfesores.DataSource = _listaProfesor_Curso;
             cboProfesores.DisplayMember = "nombre";
             cboProfesores.ValueMember = "idProfesor";
+            
+            this.cboProfesores.SelectedIndex = -1;
             //cboProfesores.SelectedItem = -1;
             txtNota.Enabled = false;
             checkBNo.Checked = false;
@@ -171,10 +176,18 @@ namespace LP2Soft.Cursos.AgregarMaterial
             _material.curso = new PublicacionesWS.curso();
             CursosWS.profesor profesorAux = new CursosWS.profesor();
             PublicacionesWS.curso cursoAux = new PublicacionesWS.curso();
-            profesorAux = (CursosWS.profesor)cboProfesores.SelectedItem;
-            _material.profesor.idProfesor = profesorAux.idProfesor;
-            _material.profesor.nombre = profesorAux.nombre;
-            cursoAux.idCurso = _idCurso;
+
+            if (cboProfesores.Text == "")
+            {
+                MessageBox.Show("Agregar un profesor");
+            }
+            else {
+                profesorAux = (CursosWS.profesor)cboProfesores.SelectedItem;
+                _material.profesor.idProfesor = profesorAux.idProfesor;
+                _material.profesor.nombre = profesorAux.nombre;
+                cursoAux.idCurso = _idCurso;
+            }
+            
 
             _material.idCurso = _idCurso;
             _material.curso = cursoAux;
@@ -188,6 +201,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             {
                 MessageBox.Show("Agregar un ciclo");
             }
+            
 
             if (lblPDF.Text == "Adjunte su PDF aquí -->               ")
             {

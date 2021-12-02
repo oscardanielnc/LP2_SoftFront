@@ -49,6 +49,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             this.ofdArchivo = new System.Windows.Forms.OpenFileDialog();
             this.btnRCancelar = new LP2Soft.Asesor.BotonChevere();
             this.btnRSubir = new LP2Soft.Asesor.BotonChevere();
+            this.cboProfesores.SelectedIndex = -1;
             this.flpCargarMaterial.SuspendLayout();
             this.SuspendLayout();
             // 

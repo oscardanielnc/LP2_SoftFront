@@ -26,6 +26,7 @@ namespace LP2Soft.Perfil
             cboCurso.DataSource = frmHome.Usuario.cursos;
             cboCurso.DisplayMember = "nombre";
             cboCurso.ValueMember = "idCurso";
+            this.cboCurso.SelectedIndex = -1;
             frmPerfil_Publicaciones.flag = 1;
             cboCurso.Enabled = false;
             checkbSi.Checked = false;
@@ -72,8 +73,13 @@ namespace LP2Soft.Perfil
             if (checkbSi.Checked == false && checkBNo.Checked == false)
             {
                 MessageBox.Show("Elegir si desea filtrarlo por curso");
-            }
-            else
+            }else   
+
+            if (checkBNo.Checked == true && cboCurso.Text == "")
+            {
+                DialogResult = DialogResult.OK;
+            }               
+            else 
             {
                 UsuarioWS.curso _auxCurso = cboCurso.SelectedItem as UsuarioWS.curso;
                 frmPerfil_Publicaciones.idCurso = _auxCurso.idCurso;
