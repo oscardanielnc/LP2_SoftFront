@@ -28,6 +28,8 @@ namespace LP2Soft.Perfil
             cboCurso.ValueMember = "idCurso";
             frmPerfil_Publicaciones.flag = 1;
             cboCurso.Enabled = false;
+            checkbSi.Checked = false;
+            checkBNo.Checked = false;
         }
 
         private void checkbSi_CheckedChanged_1(object sender, EventArgs e)
@@ -58,16 +60,25 @@ namespace LP2Soft.Perfil
 
         private void btnFiltros_Click(object sender, EventArgs e)
         {
+
+
+
             dtF1 = new DateTime(dTIni.Value.Year, dTIni.Value.Month, dTIni.Value.Day);
             frmPerfil_Publicaciones.fI = dtF1.ToString("dd-MM-yyyy");
 
             dtF2 = new DateTime(dTFin.Value.Year, dTFin.Value.Month, dTFin.Value.Day);
             frmPerfil_Publicaciones.fF = dtF2.ToString("dd-MM-yyyy");
 
-            UsuarioWS.curso _auxCurso = cboCurso.SelectedItem as UsuarioWS.curso;
-
-            frmPerfil_Publicaciones.idCurso = _auxCurso.idCurso;
-            DialogResult = DialogResult.OK;
+            if (checkbSi.Checked == false && checkBNo.Checked == false)
+            {
+                MessageBox.Show("Elegir si desea filtrarlo por cursos");
+            }
+            else
+            {
+                UsuarioWS.curso _auxCurso = cboCurso.SelectedItem as UsuarioWS.curso;
+                frmPerfil_Publicaciones.idCurso = _auxCurso.idCurso;
+                DialogResult = DialogResult.OK;
+            }
         }
     }
 }
