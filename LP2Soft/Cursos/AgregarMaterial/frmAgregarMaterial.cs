@@ -187,12 +187,13 @@ namespace LP2Soft.Cursos.AgregarMaterial
             _material.usuario.idUsuario = frmHome.Usuario.idUsuario;
             _material.usuario.nombre = frmHome.Usuario.nombre;
             _material.usuario.apellido = frmHome.Usuario.apellido;
+            int n;
 
             if (checkBNo.Checked == true)
                 _material.nota = "-";
-            else if (txtNota.Text == "")
+            else if (txtNota.Text == "" || !Int32.TryParse(txtNota.Text, out n))
             {
-                MessageBox.Show("Agregar una Nota");
+                MessageBox.Show("Agregar una Nota válida");
             }
             else if (20 < Int32.Parse(txtNota.Text) || 0 > Int32.Parse(txtNota.Text))
                 MessageBox.Show("Agregar una Nota entre 0 y 20");
