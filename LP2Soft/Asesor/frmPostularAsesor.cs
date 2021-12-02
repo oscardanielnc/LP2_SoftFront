@@ -29,41 +29,57 @@ namespace LP2Soft.Asesor
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            int _flag;
-            _flag = 0;
-            UsuarioWS.curso _curso = cboCursos.SelectedItem as UsuarioWS.curso;
-            _daoUsuario = new UsuarioWS.UsuariosWSClient();
+            int n;
+            if (textBoxPrecio.Text != "" && Int32.TryParse(textBoxPrecio.Text, out n))
+            {
+                if(Int32.Parse(textBoxPrecio.Text) >= 0)
+                {
+                    int _flag;
+                    _flag = 0;
+                    UsuarioWS.curso _curso = cboCursos.SelectedItem as UsuarioWS.curso;
+                    _daoUsuario = new UsuarioWS.UsuariosWSClient();
 
-            if (frmHome.Usuario.esAsesor == true)
-            {
-                _cursosAsesorados = null;
-                _cursosAsesorados = new BindingList<UsuarioWS.curso>(_daoUsuario.listarCursosAsesorados(frmHome.Usuario.idUsuario));
-                //renderizamos las tarjetas
-                int i = 0;
-                foreach (UsuarioWS.curso c in _cursosAsesorados)
-                {
-                    if (c.idCurso == _curso.idCurso)
+                    if (frmHome.Usuario.esAsesor == true)
                     {
-                        _flag = 1;
+                        _cursosAsesorados = null;
+                        _cursosAsesorados = new BindingList<UsuarioWS.curso>(_daoUsuario.listarCursosAsesorados(frmHome.Usuario.idUsuario));
+                        //renderizamos las tarjetas
+                        int i = 0;
+                        foreach (UsuarioWS.curso c in _cursosAsesorados)
+                        {
+                            if (c.idCurso == _curso.idCurso)
+                            {
+                                _flag = 1;
+                            }
+                            i++;
+                        }
                     }
-                    i++;
-                }
-            }
-            if (_flag == 0)
-            {
-                _asesor = new UsuarioWS.asesor();
-                _asesor.precioPorHora = float.Parse(textBoxPrecio.Text);
-                if (frmHome.Usuario.esAsesor == false)
+                    if (_flag == 0)
+                    {
+                        _asesor = new UsuarioWS.asesor();
+                        _asesor.precioPorHora = float.Parse(textBoxPrecio.Text);
+                        if (frmHome.Usuario.esAsesor == false)
+                        {
+                            frmHome.Usuario.esAsesor = true;
+                            frmHome.Usuario.asesor = _asesor;
+                        }
+                        frmHome.Usuario.asesor.idAsesor = _daoUsuario.insertarAsesor(_asesor, frmHome.Usuario.idUsuario, _curso.idCurso);
+                        this.Close();
+                    }
+                    else if (_flag == 1)
+                    {
+                        MessageBox.Show("Ya eres asesor de este curso, intenta postulando a otro curso", 
+                            "Postular como asesor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                } else
                 {
-                    frmHome.Usuario.esAsesor = true;
-                    frmHome.Usuario.asesor = _asesor;
+                    MessageBox.Show("El precio por hora debe ser un número no negativo",
+                            "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                frmHome.Usuario.asesor.idAsesor = _daoUsuario.insertarAsesor(_asesor, frmHome.Usuario.idUsuario, _curso.idCurso);
-                this.Close();
-            }
-            else if (_flag == 1)
+            } else
             {
-                MessageBox.Show("Ya eres asesor de este curso, intenta postulando a otro curso", "Postular como asesor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor ingrese un número válido en el precio por hora",
+                            "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
