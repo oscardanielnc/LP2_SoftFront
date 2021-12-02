@@ -203,6 +203,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             _material.usuario.idUsuario = frmHome.Usuario.idUsuario;
             _material.usuario.nombre = frmHome.Usuario.nombre;
             _material.usuario.apellido = frmHome.Usuario.apellido;
+            int n;
 
             if (checkBNo.Checked == true)
             {

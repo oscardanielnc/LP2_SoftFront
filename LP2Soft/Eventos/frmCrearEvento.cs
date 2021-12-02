@@ -53,7 +53,10 @@ namespace LP2Soft.Eventos
 
         private void btnCrearEvento_Click(object sender, EventArgs e)
         {
-            _evento.contenido = txtContenido.Text;
+            if (txtTitulo.Text != "" && txtContenido.Text != "" && dtpFecha.Value >= DateTime.Now &&
+                (int.Parse(tphhi.Value.ToString("HH")) * 100 + int.Parse(tpmmi.Value.ToString("mm"))) <= (int.Parse(tphhf.Value.ToString("HH")) * 100 + int.Parse(tpmmf.Value.ToString("mm"))))
+            {
+                _evento.contenido = txtContenido.Text;
             if (frmHome.Usuario.esAdmin == true) _evento.prioridad = 1;
             else _evento.prioridad = 0;
             _evento.nombreDelEvento = txtTitulo.Text;
@@ -62,18 +65,41 @@ namespace LP2Soft.Eventos
             _evento.fechaDelEventoSpecified = true;
             _evento.horaInicio = int.Parse(tphhi.Value.ToString("HH")) * 100 + int.Parse(tpmmi.Value.ToString("mm"));
             _evento.horaFin = int.Parse(tphhf.Value.ToString("HH")) * 100 + int.Parse(tpmmf.Value.ToString("mm"));
+            
+                int resultado = _daoPost.insertarEvento(_evento);
 
-            int resultado = _daoPost.insertarEvento(_evento);
-
-            if (resultado != 0)
-            {
-                _evento.idPost = resultado;
-                _eventoCreado = _evento;
-                DialogResult = DialogResult.OK;
+                if (resultado != 0)
+                {
+                    _evento.idPost = resultado;
+                    _eventoCreado = _evento;
+                    DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Error en el registro", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (txtTitulo.Text == "") {
+                    MessageBox.Show("Añadir un título al Evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if(txtContenido.Text == "")
+                {
+                    MessageBox.Show("Añadir contenido al Evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if(dtpFecha.Value < DateTime.Now)
+                {
+                    MessageBox.Show("Fecha del Evento anterior a hoy", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if((int.Parse(tphhi.Value.ToString("HH")) * 100 + int.Parse(tpmmi.Value.ToString("mm"))) > (int.Parse(tphhf.Value.ToString("HH")) * 100 + int.Parse(tpmmf.Value.ToString("mm"))))
+                {
+                    MessageBox.Show("Hora de inicio mayor a Hora fin", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
     }
