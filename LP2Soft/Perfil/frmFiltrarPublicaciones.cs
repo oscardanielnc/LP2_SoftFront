@@ -71,7 +71,7 @@ namespace LP2Soft.Perfil
 
             if (checkbSi.Checked == false && checkBNo.Checked == false)
             {
-                MessageBox.Show("Elegir si desea filtrarlo por cursos");
+                MessageBox.Show("Elegir si desea filtrarlo por curso");
             }
             else
             {
