@@ -216,7 +216,7 @@ namespace LP2Soft.Cursos.AgregarMaterial
             }
             if (checkbSi.Checked == true)
             {
-                if (txtNota.Text == "" || !Int32.TryParse(txtNota.Text, out n)
+                if (txtNota.Text == "" || !Int32.TryParse(txtNota.Text, out n))
                 {
                     MessageBox.Show("Agregar una Nota valida");
                 }
