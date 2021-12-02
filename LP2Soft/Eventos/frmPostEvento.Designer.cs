@@ -38,7 +38,6 @@ namespace LP2Soft.Eventos
             this.lblHora = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblFechaEvento = new System.Windows.Forms.Label();
-            this.lblLinkZoom = new System.Windows.Forms.Label();
             this.lblZoom = new System.Windows.Forms.Label();
             this.btnAgendarEvento = new System.Windows.Forms.Button();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
@@ -60,6 +59,7 @@ namespace LP2Soft.Eventos
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblLinkZoom = new System.Windows.Forms.Label();
             this.panelEvento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
@@ -156,14 +156,6 @@ namespace LP2Soft.Eventos
             this.lblFechaEvento.Size = new System.Drawing.Size(119, 13);
             this.lblFechaEvento.TabIndex = 35;
             this.lblFechaEvento.Text = "31 de Octubre del 2021";
-            // 
-            // lblLinkZoom
-            // 
-            this.lblLinkZoom.Location = new System.Drawing.Point(99, 163);
-            this.lblLinkZoom.Name = "lblLinkZoom";
-            this.lblLinkZoom.Size = new System.Drawing.Size(233, 32);
-            this.lblLinkZoom.TabIndex = 33;
-            this.lblLinkZoom.Text = "https://pucp.zoom.us/j/95248825535?pwd=aXIyY2ZReDdIVHFOVW5jekt0alJXUT09";
             // 
             // lblZoom
             // 
@@ -376,6 +368,14 @@ namespace LP2Soft.Eventos
             this.pbPerfil.TabIndex = 4;
             this.pbPerfil.TabStop = false;
             // 
+            // lblLinkZoom
+            // 
+            this.lblLinkZoom.Location = new System.Drawing.Point(99, 161);
+            this.lblLinkZoom.Name = "lblLinkZoom";
+            this.lblLinkZoom.Size = new System.Drawing.Size(233, 32);
+            this.lblLinkZoom.TabIndex = 33;
+            this.lblLinkZoom.Text = "https://pucp.zoom.us/j/95248825535?pwd=aXIyY2ZReDdIVHFOVW5jekt0alJXUT09";
+            // 
             // frmPostEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,7 +396,6 @@ namespace LP2Soft.Eventos
         #endregion
 
         private System.Windows.Forms.Panel panelEvento;
-        private System.Windows.Forms.Label lblLinkZoom;
         private System.Windows.Forms.Label lblZoom;
         private System.Windows.Forms.Button btnAgendarEvento;
         private System.Windows.Forms.Label lblComentarios;
@@ -424,5 +423,6 @@ namespace LP2Soft.Eventos
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lblLinkZoom;
     }
 }
