@@ -25,14 +25,14 @@ namespace LP2Soft.Asesor
             cboCursos.DataSource = frmHome.Usuario.cursos;
             cboCursos.DisplayMember = "nombre";
             cboCursos.ValueMember = "idCurso";
-            cboCursos.Texts = "Elegir curso";
+            cboCursos.Texts = "Administración de la Función Informática";
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             int n;
             if (textBoxPrecio.Text != "" && Int32.TryParse(textBoxPrecio.Text, out n))
             {
-                if(Int32.Parse(textBoxPrecio.Text) >= 0)
+                if (Int32.Parse(textBoxPrecio.Text) >= 0)
                 {
                     int _flag;
                     _flag = 0;
@@ -64,19 +64,23 @@ namespace LP2Soft.Asesor
                             frmHome.Usuario.asesor = _asesor;
                         }
                         frmHome.Usuario.asesor.idAsesor = _daoUsuario.insertarAsesor(_asesor, frmHome.Usuario.idUsuario, _curso.idCurso);
+                        frmHome.Usuario.asesor.precioPorHora = float.Parse(textBoxPrecio.Text);
+                        MessageBox.Show("Ya eres asesor del curso" + cboCursos.DisplayMember, "Postulación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else if (_flag == 1)
                     {
-                        MessageBox.Show("Ya eres asesor de este curso, intenta postulando a otro curso", 
+                        MessageBox.Show("Ya eres asesor de este curso, intenta postulando a otro curso",
                             "Postular como asesor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                } else
+                }
+                else
                 {
                     MessageBox.Show("El precio por hora debe ser un número no negativo",
                             "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("Por favor ingrese un número válido en el precio por hora",
                             "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);

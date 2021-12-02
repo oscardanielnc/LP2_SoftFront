@@ -34,45 +34,52 @@ namespace LP2Soft.Perfil
                     txtArchivo.Text = op.FileName;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }            
+            }
         }
 
         private void btnEnviarCorreo_Click(object sender, EventArgs e)
         {
-            string to, from, pass, mail, subject, filename;
-            to = (lblReceiverMail.Text).ToString();
-            from = (lblSenderMail.Text).ToString();
-            pass = (txtContraseña.Text).ToString();
-            mail = (txtMensaje.Text).ToString();
-            subject = (txtAsunto.Text).ToString();
-            MailMessage message = new MailMessage();
-            message.To.Add(to);
-            message.From = new MailAddress(from);
-            message.Body = mail;
-            message.Subject = subject;
-            filename = (txtArchivo.Text).ToString();
-            if (filename.Length > 0)
+            if (txtAsunto.Text == "" || txtMensaje.Text == "" || txtContraseña.Text == "")
             {
-                Attachment file = new Attachment(filename);
-                message.Attachments.Add(file);
+                MessageBox.Show("Rellene todos los campos (asunto, mensaje y contraseña)", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-            smtp.EnableSsl = true;
-            smtp.Port = 587;
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.Credentials = new NetworkCredential(from,pass);
-            try
+            else
             {
-                smtp.Send(message);
-                MessageBox.Show("Email enviado correctamente", "Email", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                string to, from, pass, mail, subject, filename;
+                to = (lblReceiverMail.Text).ToString();
+                from = (lblSenderMail.Text).ToString();
+                pass = (txtContraseña.Text).ToString();
+                mail = (txtMensaje.Text).ToString();
+                subject = (txtAsunto.Text).ToString();
+                MailMessage message = new MailMessage();
+                message.To.Add(to);
+                message.From = new MailAddress(from);
+                message.Body = mail;
+                message.Subject = subject;
+                filename = (txtArchivo.Text).ToString();
+                if (filename.Length > 0)
+                {
+                    Attachment file = new Attachment(filename);
+                    message.Attachments.Add(file);
+                }
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                smtp.EnableSsl = true;
+                smtp.Port = 587;
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.Credentials = new NetworkCredential(from, pass);
+                try
+                {
+                    smtp.Send(message);
+                    MessageBox.Show("Email enviado correctamente", "Email", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("La contraseña ingresada es incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

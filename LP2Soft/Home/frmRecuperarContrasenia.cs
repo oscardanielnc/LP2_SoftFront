@@ -23,45 +23,52 @@ namespace LP2Soft.Home
 
         private void btnEnviarCorreo_Click(object sender, EventArgs e)
         {
-            int resultado=0;
-            String newPass= "12345";
-            _daoUser = new UsuarioWS.UsuariosWSClient();
-            string codigoPUCP;
-            codigoPUCP = txtCodigo.Text;
-            _user = _daoUser.recuperarContrasenia(codigoPUCP);
-            resultado = _daoUser.modificarContrasenia(_user.idUsuario,Encriptador.GetSHA256(newPass));
-            if (resultado==0)
+            if (txtCodigo.Text == "")
             {
-                MessageBox.Show("No se pudo cambiar la contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar su código PUCP", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                // enviar el correo de recuperacion de contraseña
-                string to, from, pass, mail, subject;
-                to = _user.correo;
-                from = "infunablesLP2@gmail.com";
-                pass = "infuLP2@";
-                mail = "Su contraseña temporal es: 12345 \nRecuerde cambiar su contraseña al ingresar al sistema, ya que esta es una contraseña de respaldo.";
-                subject = "Recuperación de contraseña, sistema INFunables";
-                MailMessage message = new MailMessage();
-                message.To.Add(to);
-                message.From = new MailAddress(from);
-                message.Body = mail;
-                message.Subject = subject;
-                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                smtp.EnableSsl = true;
-                smtp.Port = 587;
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtp.Credentials = new NetworkCredential(from, pass);
-                try
+                int resultado = 0;
+                String newPass = "12345";
+                _daoUser = new UsuarioWS.UsuariosWSClient();
+                string codigoPUCP;
+                codigoPUCP = txtCodigo.Text;
+                _user = _daoUser.recuperarContrasenia(codigoPUCP);
+                resultado = _daoUser.modificarContrasenia(_user.idUsuario, Encriptador.GetSHA256(newPass));
+                if (resultado == 0)
                 {
-                    smtp.Send(message);
-                    MessageBox.Show("Contraseña enviada correctamente", "Email", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    MessageBox.Show("No se pudo cambiar la contraseña, intente ingresar un código PUCP correcto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    // enviar el correo de recuperacion de contraseña
+                    string to, from, pass, mail, subject;
+                    to = _user.correo;
+                    from = "infunablesLP2@gmail.com";
+                    pass = "infuLP2@";
+                    mail = "Su contraseña temporal es: 12345 \nRecuerde cambiar su contraseña al ingresar al sistema, ya que esta es una contraseña de respaldo.";
+                    subject = "Recuperación de contraseña, sistema INFunables";
+                    MailMessage message = new MailMessage();
+                    message.To.Add(to);
+                    message.From = new MailAddress(from);
+                    message.Body = mail;
+                    message.Subject = subject;
+                    SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                    smtp.EnableSsl = true;
+                    smtp.Port = 587;
+                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    smtp.Credentials = new NetworkCredential(from, pass);
+                    try
+                    {
+                        smtp.Send(message);
+                        MessageBox.Show("Contraseña enviada correctamente", "Email", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }
